@@ -1,10 +1,10 @@
 <template>
   <footer
-    class="bg-[#F1F0FF] text-stone-600 py-6 text-center text-sm space-y-16"
+    class="bg-[#F1F0FF] text-stone-600 pt-10 pb-5 text-center text-sm space-y-16"
   >
     <div class="flex justify-evenly">
       <div class="text-left">
-        <div class="font-bold">Luzar</div>
+        <div class="font-bold font-[Hammersmith_One]">Luzar</div>
         <div>感謝您訪問我們的網站，期待為您提供優質的服務！</div>
       </div>
       <div class="space-x-4 flex">

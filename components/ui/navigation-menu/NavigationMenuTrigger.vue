@@ -21,10 +21,10 @@ const forwardedProps = useForwardProps(delegatedProps);
 
 <template>
   <NavigationMenuTrigger
-    data-slot="navigation-menu-trigger "
+    data-slot="navigation-menu-trigger"
     v-bind="forwardedProps"
     :class="cn(navigationMenuTriggerStyle(), 'group', props.class)"
-    class="font-normal"
+    class="font-normal !bg-transparent hover:bg-transparent focus:bg-transparent hover:font-semibold cursor-pointer"
   >
     <slot />
     <ChevronDown

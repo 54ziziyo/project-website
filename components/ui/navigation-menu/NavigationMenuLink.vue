@@ -28,6 +28,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         props.class
       )
     "
+    class="font-normal bg-transparent hover:bg-transparent focus:bg-transparent hover:font-semibold"
   >
     <slot />
   </NavigationMenuLink>

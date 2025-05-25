@@ -68,17 +68,20 @@ const components: { title: string; href: string; description: string }[] = [
   <div
     :class="[
       'fixed top-0 left-0 w-full z-50 transition-all duration-300 duration-500 ease-in-out',
-      isScrolled ? 'pt-5 px-7' : 'bg-white  shadow-md py-3',
+      isScrolled ? 'pt-5 px-7' : 'bg-white shadow-md py-3',
     ]"
   >
     <div
       :class="{
-        'bg-white shadow-xl rounded-full py-2 border': isScrolled,
+        'bg-white/70 shadow-xl rounded-full py-2 border border-white/40 backdrop-blur-sm':
+          isScrolled,
       }"
       class="flex w-full max-w-7xl items-center justify-between px-[4.68rem] mx-auto"
     >
       <!-- Logo -->
-      <div class="font-extrabold text-xl">Luzar</div>
+      <div class="font-extrabold text-xl font-[Hammersmith_One] cursor-pointer">
+        Luzar
+      </div>
 
       <!-- Navigation -->
       <NavigationMenu>
@@ -195,7 +198,6 @@ const components: { title: string; href: string; description: string }[] = [
             <NavigationMenuLink
               href="/docs/introduction"
               :class="navigationMenuTriggerStyle()"
-              class="!font-normal"
             >
               常見問題
             </NavigationMenuLink>
@@ -205,7 +207,6 @@ const components: { title: string; href: string; description: string }[] = [
             <NavigationMenuLink
               href="/docs/contact"
               :class="navigationMenuTriggerStyle()"
-              class="!font-normal"
             >
               聯絡我們
             </NavigationMenuLink>
@@ -215,7 +216,9 @@ const components: { title: string; href: string; description: string }[] = [
 
       <!-- CTA Button -->
       <div>
-        <button class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full">
+        <button
+          class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full cursor-pointer"
+        >
           免費資訊
         </button>
       </div>

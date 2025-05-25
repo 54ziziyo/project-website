@@ -1,6 +1,9 @@
 <template>
-  <div class="px-[2.5rem] bg-white pt-6">
+  <div class="bg-white">
+    <Hero />
+
     <div>我是專案內容唷！</div>
+
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quia
       consequuntur, non qui adipisci odio iusto quas molestias a sequi
