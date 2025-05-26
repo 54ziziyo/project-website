@@ -1,6 +1,7 @@
 <template>
   <div class="bg-white">
     <Hero />
+    <Info />
 
     <div>我是專案內容唷！</div>
 

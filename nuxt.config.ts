@@ -14,10 +14,15 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/ui",
     "shadcn-nuxt",
+    "nuxt-lottie",
   ],
   css: ["~/assets/css/tailwind.css"],
   vite: {
     plugins: [tailwindcss()],
+  },
+  lottie: {
+    componentName: "Lottie", // 預設就是 Lottie
+    lottieFolder: "/assets/lottie", // 預設就是 assets/lottie
   },
   shadcn: {
     /**

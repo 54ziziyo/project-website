@@ -1,40 +1,51 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+</script>
 
 <template>
-  <div class="relative h-[800px] overflow-hidden">
-    <div class="absolute inset-0 bg-gradient clip-custom"></div>
-    <div class="absolute text-white top-[150px] left-[100px]">
-      <div class="space-x-1 flex items-center">
-        <span class="w-3 h-8 bg-white"></span>
-        <span class="w-2 h-8 bg-white"></span>
-        <p class="text-[32px] font-bold ml-2">匠心獨具</p>
+  <div class="relative">
+    <div class="relative h-[1100px] overflow-hidden">
+      <div class="absolute inset-0 bg-gradient clip-custom"></div>
+      <div class="absolute text-white top-[150px] left-[100px]">
+        <div class="space-x-1 flex items-center">
+          <span class="w-3 h-8 bg-white"></span>
+          <span class="w-2 h-8 bg-white"></span>
+          <p class="text-[52px] font-bold ml-2">匠心獨具</p>
+        </div>
+        <p class="text-[80px] font-bold">打造你的專屬網站</p>
+        <p class="text-[20px] font-thin mt-4 mb-8">
+          不只是設計，我們用技術與品牌力讓你的事業被看見
+        </p>
+        <button
+          class="cursor-pointer px-12 py-3 bg-white rounded-full shadow-lg text-black"
+        >
+          查看方案
+        </button>
       </div>
-      <p class="text-[52px] font-bold">打造你的專屬網站</p>
-      <p class="text-[16px] font-normal mt-4 mb-8">
-        不只是設計，我們用技術與品牌力讓你的事業被看見
-      </p>
-      <button
-        class="cursor-pointer px-7 py-3 bg-white rounded-full shadow-lg text-black"
-      >
-        查看方案
-      </button>
-    </div>
 
-    <div class="absolute right-[5%] bottom-[5%]">
-      <ClientOnly>
-        <iframe
-          class="w-[500px] h-[500px]"
-          src="https://lottie.host/embed/49e1df4a-0384-43ea-b65c-873a7718d0d7/LUKmTXVzsI.lottie"
-        ></iframe>
-      </ClientOnly>
-    </div>
+      <div class="absolute bottom-[12%] -left-[5%]">
+        <img
+          src="../assets/images/circle-dot.svg"
+          alt="circle pattern"
+          width="400"
+          height="400"
+        />
+      </div>
 
-    <div class="absolute bottom-0 -left-[15%]">
-      <img src="../assets/images/circle-dot.svg" alt="circle pattern" />
-    </div>
+      <div class="absolute top-[5%] -right-[15%] opacity-50">
+        <img src="../assets/images/circle-dot.svg" alt="circle pattern" />
+      </div>
 
-    <div class="absolute top-0 -right-[10%] opacity-50">
-      <img src="../assets/images/circle-dot.svg" alt="circle pattern" />
+      <div class="absolute right-[4%] -bottom-[0%]">
+        <client-only>
+          <Lottie name="web-animations" :width="700" :height="700" />
+        </client-only>
+      </div>
+    </div>
+    <div
+      class="absolute -bottom-[15%] z-100 text-[200px] font-bold text-[#FAFAFA] left-[110px]"
+    >
+      DEVELOP
     </div>
   </div>
 </template>
