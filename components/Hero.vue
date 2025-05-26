@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="relative">
@@ -8,8 +6,8 @@ import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
       <div class="absolute inset-0 bg-gradient clip-custom"></div>
       <div class="absolute text-white top-[150px] left-[100px]">
         <div class="space-x-1 flex items-center">
-          <span class="w-3 h-8 bg-white"></span>
-          <span class="w-2 h-8 bg-white"></span>
+          <span class="w-3 h-12 bg-white"></span>
+          <span class="w-2 h-12 bg-white"></span>
           <p class="text-[52px] font-bold ml-2">匠心獨具</p>
         </div>
         <p class="text-[80px] font-bold">打造你的專屬網站</p>
@@ -43,7 +41,7 @@ import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
       </div>
     </div>
     <div
-      class="absolute -bottom-[15%] z-100 text-[200px] font-bold text-[#FAFAFA] left-[110px]"
+      class="absolute -bottom-[10%] text-[200px] font-bold text-[#FAFAFA] left-[6.875rem] leading-none"
     >
       DEVELOP
     </div>
@@ -90,7 +88,7 @@ import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
     /* 流動的紫色、紅色、黃色 */
       radial-gradient(
         circle at var(--purple-x, 0%) var(--purple-y, 0%),
-        #a960ee,
+        #bd79feba,
         #a960ee00 50%,
         #a960ee00
       ),
@@ -105,7 +103,7 @@ import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
       #ffcb57,
       #ffca578f 70%
     );
-  animation: moveGradients 10s linear infinite;
+  animation: moveGradients 20s linear infinite;
 }
 
 .clip-custom {
@@ -123,36 +121,36 @@ import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
     --yellow-y: 100%;
   }
   20% {
-    --purple-x: 10%;
-    --purple-y: 10%;
-    --red-x: 55%;
-    --red-y: 10%;
-    --yellow-x: 90%;
-    --yellow-y: 90%;
+    --purple-x: 40%;
+    --purple-y: 40%;
+    --red-x: 70%;
+    --red-y: 30%;
+    --yellow-x: 70%;
+    --yellow-y: 40%;
   }
   40% {
-    --purple-x: 20%;
-    --purple-y: 20%;
-    --red-x: 60%;
-    --red-y: 20%;
-    --yellow-x: 80%;
-    --yellow-y: 80%;
+    --purple-x: 80%;
+    --purple-y: 80%;
+    --red-x: 30%;
+    --red-y: 60%;
+    --yellow-x: 40%;
+    --yellow-y: 10%;
   }
   60% {
-    --purple-x: 10%;
-    --purple-y: 30%;
-    --red-x: 45%;
-    --red-y: 10%;
-    --yellow-x: 90%;
-    --yellow-y: 60%;
+    --purple-x: 60%;
+    --purple-y: 20%;
+    --red-x: 80%;
+    --red-y: 80%;
+    --yellow-x: 20%;
+    --yellow-y: 80%;
   }
   80% {
-    --purple-x: 0%;
-    --purple-y: 20%;
-    --red-x: 50%;
-    --red-y: 0%;
-    --yellow-x: 100%;
-    --yellow-y: 80%;
+    --purple-x: 20%;
+    --purple-y: 60%;
+    --red-x: 20%;
+    --red-y: 20%;
+    --yellow-x: 80%;
+    --yellow-y: 20%;
   }
   100% {
     --purple-x: 0%;

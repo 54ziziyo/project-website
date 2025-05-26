@@ -2,6 +2,7 @@
   <div class="bg-white">
     <Hero />
     <Info />
+    <About />
 
     <div>我是專案內容唷！</div>
 
