@@ -26,39 +26,19 @@ onUnmounted(() => {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/components/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    title: "網站架設",
+    href: "/services/website",
+    description: "網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力。",
   },
   {
-    title: "Hover Card",
-    href: "/docs/components/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    title: "行銷服務",
+    href: "/services/marketing",
+    description: "行銷策略、社群媒體管理、內容行銷等服務，提升品牌曝光率。",
   },
   {
-    title: "Progress",
-    href: "/docs/components/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/components/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/components/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/components/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    title: "文宣設計",
+    href: "/services/design",
+    description: "設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象。",
   },
 ];
 </script>
@@ -68,13 +48,12 @@ const components: { title: string; href: string; description: string }[] = [
   <div
     :class="[
       'fixed top-0 left-0 w-full z-50 transition-all duration-300 duration-500 ease-in-out',
-      isScrolled ? 'pt-5 px-7' : 'bg-white shadow-md py-3',
+      isScrolled ? 'pt-5 px-7' : 'bg-white shadow-sm py-3',
     ]"
   >
     <div
       :class="{
-        'bg-white/70 shadow-xl rounded-full py-2 border border-white/40 backdrop-blur-sm':
-          isScrolled,
+        'bg-white shadow-xl rounded-full py-2 border': isScrolled,
       }"
       class="flex w-full max-w-7xl items-center justify-between px-[4.68rem] mx-auto"
     >
@@ -87,97 +66,16 @@ const components: { title: string; href: string; description: string }[] = [
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>關於我們</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul
-                class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]"
-              >
-                <li class="row-span-3">
-                  <NavigationMenuLink as-child>
-                    <a
-                      class="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
-                      <img
-                        src="https://www.reka-ui.com/logo.svg"
-                        class="h-6 w-6"
-                      />
-                      <div class="mb-2 mt-4 text-lg font-medium">shadcn/ui</div>
-                      <p class="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-
-                <li>
-                  <NavigationMenuLink as-child>
-                    <a
-                      href="/docs/introduction"
-                      class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
-                      <div class="text-sm font-medium leading-none">
-                        Introduction
-                      </div>
-                      <p
-                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
-                      >
-                        Re-usable components built using Radix UI and Tailwind
-                        CSS.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink as-child>
-                    <a
-                      href="/docs/installation"
-                      class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
-                      <div class="text-sm font-medium leading-none">
-                        Installation
-                      </div>
-                      <p
-                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
-                      >
-                        How to install dependencies and structure your app.
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink as-child>
-                    <a
-                      href="/docs/typography"
-                      class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
-                      <div class="text-sm font-medium leading-none">
-                        Typography
-                      </div>
-                      <p
-                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
-                      >
-                        Styles for headings, paragraphs, lists...etc
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
             <NavigationMenuTrigger>服務項目</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul
                 class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
               >
                 <li v-for="component in components" :key="component.title">
-                  <NavigationMenuLink as-child>
+                  <div as-child>
                     <a
                       :href="component.href"
-                      class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foregroun"
                     >
                       <div class="text-sm font-medium leading-none">
                         {{ component.title }}
@@ -188,7 +86,7 @@ const components: { title: string; href: string; description: string }[] = [
                         {{ component.description }}
                       </p>
                     </a>
-                  </NavigationMenuLink>
+                  </div>
                 </li>
               </ul>
             </NavigationMenuContent>
@@ -196,16 +94,101 @@ const components: { title: string; href: string; description: string }[] = [
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="/docs/introduction"
+              href="/faq"
               :class="navigationMenuTriggerStyle()"
             >
               常見問題
             </NavigationMenuLink>
           </NavigationMenuItem>
 
+          <!-- <NavigationMenuItem>
+            <NavigationMenuTrigger>部落格</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul class="grid px-6 py-2 md:w-[400px] lg:w-[500px] divide-y">
+                <li>
+                  <div>
+                    <a
+                      href="/docs/introduction"
+                      class="block select-none space-y-1 py-4 rounded-md leading-none no-underline outline-none transition-colors"
+                    >
+                      <div class="text-sm font-medium leading-none">
+                        網站架設與優化
+                      </div>
+                      <p
+                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
+                      >
+                        網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力
+                      </p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a
+                      href="/docs/installation"
+                      class="block select-none space-y-1 py-4 rounded-md leading-none no-underline outline-none transition-colors"
+                    >
+                      <div class="text-sm font-medium leading-none">
+                        行銷方案
+                      </div>
+                      <p
+                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
+                      >
+                        行銷策略、社群媒體管理、內容行銷等服務，提升品牌曝光率
+                      </p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a
+                      href="/docs/typography"
+                      class="block select-none space-y-1 py-4 rounded-md leading-none no-underline outline-none transition-colors"
+                    >
+                      <div class="text-sm font-medium leading-none">
+                        設計方案
+                      </div>
+                      <p
+                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
+                      >
+                        品牌設計、UI/UX設計等服務，打造獨特的品牌形象
+                      </p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a
+                      href="/docs/typography"
+                      class="block select-none space-y-1 py-4 rounded-md leading-none no-underline outline-none transition-colors"
+                    >
+                      <div class="text-sm font-medium leading-none">
+                        常見問題
+                      </div>
+                      <p
+                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
+                      >
+                        了解專案流程、服務內容與常見問題解答，讓你更了解我們的服務
+                      </p>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem> -->
+
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="/docs/contact"
+              href="/portfolio"
+              :class="navigationMenuTriggerStyle()"
+            >
+              作品集
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="/contact"
               :class="navigationMenuTriggerStyle()"
             >
               聯絡我們
@@ -217,11 +200,18 @@ const components: { title: string; href: string; description: string }[] = [
       <!-- CTA Button -->
       <div>
         <button
-          class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full cursor-pointer"
+          class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-2 hover:bg-[#6f6bff] transition-colors duration-300"
         >
-          免費資訊
+          <span>免費資訊</span>
+          <Icon
+            name="line-md:arrow-down"
+            width="20"
+            height="20"
+            class="rotate-270"
+          />
         </button>
       </div>
     </div>
   </div>
 </template>
+<style scoped></style>

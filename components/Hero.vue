@@ -15,7 +15,7 @@
           不只是設計，我們用技術與品牌力讓你的事業被看見
         </p>
         <button
-          class="cursor-pointer px-12 py-3 bg-white rounded-full shadow-lg text-black"
+          class="cursor-pointer px-12 py-3 bg-white rounded-full hover:shadow-lg text-black"
         >
           查看方案
         </button>

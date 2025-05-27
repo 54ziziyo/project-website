@@ -1,7 +1,7 @@
 <template>
-  <div class="relative pt-[160px]">
+  <div class="relative pt-[160px] overflow-x-clip">
     <!-- <div class="pointer-events-none absolute inset-0"> -->
-    <div class="absolute -top-[20%] -right-[60%]">
+    <div class="absolute -top-[20%] -right-[50%]">
       <img
         src="../assets/images/round-purple.svg"
         alt="circle pattern"
