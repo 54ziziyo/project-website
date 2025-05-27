@@ -4,5 +4,6 @@
     <Info />
     <About />
     <Project />
+    <AutoScrollCards />
   </div>
 </template>

@@ -6,7 +6,7 @@
       Project
     </div>
 
-    <div class="relative px-10 pb-30 flex justify-center flex-col items-center">
+    <div class="relative px-10 pb-32 flex justify-center flex-col items-center">
       <div class="mb-4 text-[#8782FF] text-[24px] font-bold">多樣化的選擇</div>
       <div class="text-[52px] font-bold leading-none mb-[32px]">
         選擇最適合你的計劃
