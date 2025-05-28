@@ -101,9 +101,9 @@ onMounted(() => {
         </div>
 
         <!-- 卡片內容 -->
-        <h3 class="font-bold text-[24px] mb-2 text-[#5B5B5B]">
+        <div class="font-bold text-[24px] mb-2 text-[#5B5B5B]">
           {{ card.title }}
-        </h3>
+        </div>
         <p class="text-[18px] text-gray-600 text-wrap">
           {{ card.description }}
         </p>
