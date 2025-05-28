@@ -1,53 +1,79 @@
 <script lang="ts" setup>
-const developRef = ref<HTMLElement | null>(null);
-const isVisible = ref(false);
+const developRef = ref<HTMLElement | null>(null); // 大標 Project
+const textRef = ref<HTMLElement | null>(null); // 文字描述部分
+const cardsRef = ref<HTMLElement | null>(null); // 卡片群組
+
+const isTitleVisible = ref(false);
+const isTextVisible = ref(false);
+const areCardsVisible = ref(false);
 
 onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          isVisible.value = true;
-          observer.disconnect(); // 只執行一次
-        }
-      });
-    },
-    {
-      threshold: 0.1,
+  const createObserver = (elRef: any, callback: () => void) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback();
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    if (elRef.value) {
+      observer.observe(elRef.value);
     }
-  );
+  };
 
-  if (developRef.value) {
-    observer.observe(developRef.value);
-  }
+  createObserver(developRef, () => (isTitleVisible.value = true));
+  createObserver(textRef, () => (isTextVisible.value = true));
+  createObserver(cardsRef, () => (areCardsVisible.value = true));
 });
 </script>
 <template>
   <div class="relative pt-[235px]">
+    <!-- 大標 -->
     <div
       ref="developRef"
       :class="[
         'absolute text-[200px] top-[0%] font-bold text-[#FAFAFA] right-[30px] leading-none',
-        isVisible ? 'slide-in-from-left' : '',
+        isTitleVisible ? 'slide-in-from-left' : '',
       ]"
     >
       Project
     </div>
 
+    <!-- 文字描述 -->
     <div class="relative px-10 pb-32 flex justify-center flex-col items-center">
-      <div class="mb-4 text-[#8782FF] text-[24px] font-bold">多樣化的選擇</div>
-      <div class="text-[52px] font-bold leading-none mb-[32px]">
-        選擇最適合你的計劃
-      </div>
-      <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]"></span>
-      <div class="text-[#5B5B5B] text-[20px] mb-1 text-center">
-        若您有活靈活現的想法想要被實現
-      </div>
-      <div class="text-[#5B5B5B] text-[20px]">
-        我們可以幫您評估，隨時歡迎詢洽！
+      <div
+        ref="textRef"
+        :class="[
+          'transition-opacity duration-700 ease-in-out',
+          isTextVisible ? 'slide-in-from-top' : 'opacity-0',
+        ]"
+      >
+        <div class="mb-4 text-[#8782FF] text-[24px] font-bold">
+          多樣化的選擇
+        </div>
+        <div class="text-[52px] font-bold leading-none mb-[32px]">
+          選擇最適合你的計劃
+        </div>
+        <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]"></span>
+        <div class="text-[#5B5B5B] text-[20px] mb-1 text-center">
+          若您有活靈活現的想法想要被實現
+        </div>
+        <div class="text-[#5B5B5B] text-[20px]">
+          我們可以幫您評估，隨時歡迎詢洽！
+        </div>
       </div>
 
-      <div class="grid grid-cols-3 space-x-4 mt-[100px]">
+      <div
+        ref="cardsRef"
+        :class="[
+          'grid grid-cols-3 space-x-4 mt-[100px] transition-opacity duration-700 ease-in-out',
+          areCardsVisible ? 'slide-in-from-bottom' : 'opacity-0',
+        ]"
+      >
         <!-- 卡片1 -->
         <div
           class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"

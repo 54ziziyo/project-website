@@ -1,3 +1,47 @@
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+
+const isTextVisible = ref(false);
+const sectionRef = ref<HTMLElement | null>(null);
+
+const isCardsVisible = ref(false);
+const cardsRef = ref<HTMLElement | null>(null);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isTextVisible.value = true;
+          observer.disconnect(); // 只觸發一次
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
+
+  if (cardsRef.value) {
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            isCardsVisible.value = true;
+            cardObserver.disconnect();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    cardObserver.observe(cardsRef.value);
+  }
+});
+</script>
 <template>
   <div class="relative pt-[100px] overflow-x-clip">
     <div class="absolute -bottom-[50%] -left-[65%]">
@@ -11,18 +55,38 @@
     </div>
 
     <div class="relative px-[6.875rem] pb-30">
-      <div class="mb-4 text-[#8782FF] text-[24px] font-bold">價值的交會點</div>
-      <div class="text-[52px] font-bold leading-none mb-8">關於我們</div>
-      <div class="text-[#5B5B5B] text-[20px] mb-4">
-        我們是一間專注於「網站整合設計 ×
-        技術實現」的工作室，由具備業界經驗的全端工程師與設計師組成。
-        我們相信，好的網站不只好看，還要好用、好操作、好維護。
-      </div>
-      <div class="text-[#5B5B5B] text-[20px]">
-        因此，我們從視覺設計、功能規劃到技術架構，都堅持一步到位。
+      <div
+        ref="sectionRef"
+        :class="[
+          ' transition-opacity duration-700',
+          isTextVisible
+            ? 'slide-in-from-top delay-1000'
+            : 'invisible-before-animate',
+        ]"
+      >
+        <div class="mb-4 text-[#8782FF] text-[24px] font-bold">
+          價值的交會點
+        </div>
+        <div class="text-[52px] font-bold leading-none mb-8">關於我們</div>
+        <div class="text-[#5B5B5B] text-[20px] mb-4">
+          我們是一間專注於「網站整合設計 ×
+          技術實現」的工作室，由具備業界經驗的全端工程師與設計師組成。
+          我們相信，好的網站不只好看，還要好用、好操作、好維護。
+        </div>
+        <div class="text-[#5B5B5B] text-[20px]">
+          因此，我們從視覺設計、功能規劃到技術架構，都堅持一步到位。
+        </div>
       </div>
 
-      <div class="grid lg:grid-cols-4 grid-cols-2 gap-8 mt-20">
+      <div
+        ref="cardsRef"
+        class="grid lg:grid-cols-4 grid-cols-2 gap-8 mt-20"
+        :class="
+          isCardsVisible
+            ? `slide-in-from-bottom delay-100}`
+            : 'invisible-before-animate'
+        "
+      >
         <!-- 卡片1 -->
         <div
           class="order-1 lg:order-1 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"

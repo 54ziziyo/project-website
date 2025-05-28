@@ -85,10 +85,40 @@ const accordionItems = [
   `,
   },
 ];
+
+const textRef = ref<HTMLElement | null>(null);
+const isTextVisible = ref(false);
+
+onMounted(() => {
+  const createObserver = (elRef: typeof textRef, callback: () => void) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback();
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    if (elRef.value) {
+      observer.observe(elRef.value);
+    }
+  };
+
+  createObserver(textRef, () => (isTextVisible.value = true));
+});
 </script>
 <template>
   <div class="relative pt-[250px] pb-[145px] overflow-x-clip">
-    <div class="px-10 pb-32 flex justify-center flex-col items-center">
+    <div
+      ref="textRef"
+      :class="[
+        'px-10 pb-32 flex justify-center flex-col items-center transition-opacity duration-700 ease-in-out',
+        isTextVisible ? 'slide-in-from-bottom' : 'opacity-0',
+      ]"
+    >
       <div class="text-[52px] font-bold leading-none mb-[32px]">常見問題</div>
       <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]"></span>
       <div class="text-[#5B5B5B] text-[20px] text-center">

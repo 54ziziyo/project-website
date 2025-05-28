@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from "vue";
 
 const cards = [
@@ -8,7 +8,6 @@ const cards = [
   },
   { title: "Google 分析", description: "設定追蹤碼、資料儀表版" },
   { title: "多國語系", description: "支援多國語言切換、拓展國際市場" },
-  { title: "網站維護", description: "內容更新、功能維護、技術支援" },
   {
     title: "Google Tag Manager",
     description: "轉換目標設定、追蹤顧客行為報告",
@@ -18,14 +17,13 @@ const cards = [
     description: "客製化表單、預約系統、行事曆串接、Email 通知等",
   },
   { title: "平台客製化功能", description: "Wix、Shopify 其他平台客製功能" },
-  { title: "網站安全性", description: "SSL 憑證、網站備份、資料保護" },
-  { title: "網站速度優化", description: "圖片壓縮、快取設定、CDN 整合" },
   { title: "網站設計與開發", description: "客製化設計、響應式網頁開發" },
 ];
 
 const duplicatedCards = [...cards, ...cards];
-
-const scrollContainer = ref(null);
+const scrollContainer = ref<HTMLElement | null>(null);
+const textRef = ref<HTMLElement | null>(null);
+const isTextVisible = ref(false);
 
 onMounted(() => {
   const container = scrollContainer.value;
@@ -34,13 +32,33 @@ onMounted(() => {
 
   function step() {
     start += speed;
-    if (start >= container.scrollWidth / 2) {
+    if (container && start >= container.scrollWidth / 2) {
       start = 0;
     }
-    container.scrollLeft = start;
+    if (container) {
+      container.scrollLeft = start;
+    }
     requestAnimationFrame(step);
   }
 
+  const createObserver = (elRef: typeof textRef, callback: () => void) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback();
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    if (elRef.value) {
+      observer.observe(elRef.value);
+    }
+  };
+
+  createObserver(textRef, () => (isTextVisible.value = true));
   requestAnimationFrame(step);
 });
 </script>
@@ -48,7 +66,13 @@ onMounted(() => {
 <template>
   <div class="overflow-hidden relative w-full gradient-p-to-y-bg py-[100px]">
     <!-- 標題區塊 -->
-    <div class="flex flex-col items-center mb-[80px]">
+    <div
+      ref="textRef"
+      :class="[
+        'flex flex-col items-center mb-[80px] transition-opacity duration-700 ease-in-out',
+        isTextVisible ? 'slide-in-from-top' : 'opacity-0',
+      ]"
+    >
       <div class="text-[52px] font-bold leading-none mb-[32px]">
         您的<span class="text-[#8782FF]">網站</span>就交給我們
       </div>
