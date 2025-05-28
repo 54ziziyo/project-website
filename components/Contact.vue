@@ -16,29 +16,29 @@ import FormContact from "./form/Contact.vue";
                 我們打造<span class="text-[#FF5157]">讓人停留的故事</span>
               </div>
             </div>
-            <div class="text-[#5B5B5B] text-[20px] mb-4">
-              十年以上網頁製作經驗，提供最佳化整合服務，量身打造符合需求的網站方案。
-            </div>
-            <div class="text-[#5B5B5B] text-[20px] mb-10">
-              填寫右側表單，我們會立即聯繫您，並依照您的需求，製作網站計劃。
-            </div>
-            <div class="flex justify-between items-center">
-              <div class="text-[#5B5B5B] text-[18px] font-semibold">
-                營業時間
+            <div class="space-y-6">
+              <div class="text-[#5B5B5B] text-[20px] mb-4">
+                十年以上網頁製作經驗，提供最佳化整合服務，量身打造符合需求的網站方案。
               </div>
-              <div class="text-[#5B5B5B] text-[18px]">平日 9:00-18:00</div>
-            </div>
-            <div class="flex justify-between items-center">
-              <div class="text-[#5B5B5B] text-[18px] font-semibold">
-                電子信箱
+              <div class="text-[#5B5B5B] text-[20px] mb-10">
+                填寫右側表單，我們會立即聯繫您，並依照您的需求，製作網站計劃。
               </div>
-              <a
-                href="mailto:54ziziyo@gmail.com"
-                class="text-[#8782FF] text-[18px]"
-                >54ziziyo@gmail.com</a
-              >
-            </div>
-            <div class="space-y-2">
+              <div class="flex justify-between items-center">
+                <div class="text-[#5B5B5B] text-[18px] font-semibold">
+                  營業時間
+                </div>
+                <div class="text-[#5B5B5B] text-[18px]">平日 9:00-18:00</div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="text-[#5B5B5B] text-[18px] font-semibold">
+                  電子信箱
+                </div>
+                <a
+                  href="mailto:54ziziyo@gmail.com"
+                  class="text-[#8782FF] text-[18px]"
+                  >54ziziyo@gmail.com</a
+                >
+              </div>
               <div class="flex justify-between items-center">
                 <div class="text-[#5B5B5B] text-[18px] font-semibold">
                   LINE ID
