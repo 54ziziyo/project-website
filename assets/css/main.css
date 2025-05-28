@@ -48,16 +48,19 @@
   animation: slideInFromBottom 1.2s ease-out forwards;
 }
 
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
+@keyframes slideFromBottom {
+  to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
-.slide-in-from-top {
-  animation: slideInFromTop 1.2s ease-out forwards;
+.slide-in-from-bottom {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideFromBottom 0.8s ease-out forwards;
+}
+
+.invisible-before-animate {
+  opacity: 0;
+  transform: translateY(40px);
 }

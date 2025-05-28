@@ -1,6 +1,31 @@
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+
+const isTextVisible = ref(false);
+const sectionRef = ref<HTMLElement | null>(null);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isTextVisible.value = true;
+          observer.disconnect(); // 只觸發一次
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
+});
+</script>
 <template>
   <div class="relative pt-[160px] overflow-x-clip">
-    <!-- <div class="pointer-events-none absolute inset-0"> -->
     <div class="absolute -top-[20%] -right-[50%]">
       <img
         src="../assets/images/round-purple.svg"
@@ -10,9 +35,16 @@
         height="1500"
       />
     </div>
-    <!-- </div> -->
 
-    <div class="relative pl-[6.875rem] pb-30">
+    <div
+      ref="sectionRef"
+      :class="[
+        'relative pl-[6.875rem] pb-30 transition-opacity duration-700',
+        isTextVisible
+          ? 'slide-in-from-bottom delay-1000'
+          : 'invisible-before-animate',
+      ]"
+    >
       <div class="mb-4 text-[#8782FF] text-[24px] font-bold">
         靈活推廣行銷不設限
       </div>
