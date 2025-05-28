@@ -97,17 +97,17 @@ const accordionItems = [
     </div>
 
     <div
-      class="absolute -left-60 top-20 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50"
+      class="absolute -left-60 top-10 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50"
     ></div>
     <div
       class="absolute left-20 top-40 w-[200px] h-[200px] rounded-full border border-gray-300 opacity-70"
     ></div>
 
     <div
-      class="absolute -left-90 bottom-15 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50"
+      class="absolute -left-90 bottom-30 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50"
     ></div>
     <div
-      class="absolute -left-30 -bottom-5 w-[200px] h-[200px] rounded-full border border-gray-300 opacity-70"
+      class="absolute -left-30 bottom-10 w-[200px] h-[200px] rounded-full border border-gray-300 opacity-70"
     ></div>
 
     <div class="absolute top-1/2 -translate-y-1/2 -right-[85%]">

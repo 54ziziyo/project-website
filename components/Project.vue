@@ -1,7 +1,35 @@
+<script lang="ts" setup>
+const developRef = ref<HTMLElement | null>(null);
+const isVisible = ref(false);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isVisible.value = true;
+          observer.disconnect(); // 只執行一次
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  if (developRef.value) {
+    observer.observe(developRef.value);
+  }
+});
+</script>
 <template>
   <div class="relative pt-[235px]">
     <div
-      class="absolute text-[200px] top-[0%] font-bold text-[#FAFAFA] right-[30px] leading-none"
+      ref="developRef"
+      :class="[
+        'absolute text-[200px] top-[0%] font-bold text-[#FAFAFA] right-[30px] leading-none',
+        isVisible ? 'slide-in-from-left' : '',
+      ]"
     >
       Project
     </div>

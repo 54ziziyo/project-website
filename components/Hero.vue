@@ -1,10 +1,63 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const scrollY = ref(0);
+const handleScroll = () => {
+  scrollY.value = window.scrollY;
+};
+
+const developRef = ref<HTMLElement | null>(null);
+const lottieRef = ref<HTMLElement | null>(null);
+const isVisible = ref(false);
+const isLottieVisible = ref(false);
+
+const heroTextRef = ref(null);
+const showHeroText = ref(false);
+
+function createObserver(target: Ref<HTMLElement | null>, callback: () => void) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          callback();
+          observer.disconnect(); // 只執行一次
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+  if (target.value) observer.observe(target.value);
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+  showHeroText.value = true;
+
+  createObserver(developRef, () => {
+    isVisible.value = true;
+  });
+
+  createObserver(lottieRef, () => {
+    isLottieVisible.value = true;
+  });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+</script>
 
 <template>
   <div class="relative overflow-x-clip">
     <div class="relative h-[1100px] overflow-hidden">
       <div class="absolute inset-0 bg-gradient clip-custom"></div>
-      <div class="absolute text-white top-[150px] left-[100px]">
+      <div
+        ref="heroTextRef"
+        :class="[
+          'absolute text-white top-[150px] left-[100px]',
+          showHeroText ? 'slide-in-from-left' : '',
+        ]"
+      >
         <div class="space-x-1 flex items-center">
           <span class="w-3 h-12 bg-white"></span>
           <span class="w-2 h-12 bg-white"></span>
@@ -21,7 +74,10 @@
         </button>
       </div>
 
-      <div class="absolute bottom-[12%] -left-[5%]">
+      <div
+        class="absolute bottom-[12%] -left-[5%]"
+        :style="{ transform: `translateY(${scrollY * 0.3}px)` }"
+      >
         <img
           src="../assets/images/circle-dot.svg"
           alt="circle pattern"
@@ -30,21 +86,34 @@
         />
       </div>
 
-      <div class="absolute top-[5%] -right-[15%] opacity-50">
+      <div
+        class="absolute top-[5%] -right-[15%] opacity-50"
+        :style="{ transform: `translateY(${scrollY * 0.5}px)` }"
+      >
         <img src="../assets/images/circle-dot.svg" alt="circle pattern" />
       </div>
 
-      <div class="absolute right-[4%] -bottom-[0%]">
+      <div
+        ref="lottieRef"
+        :class="[
+          'absolute right-[4%] -bottom-[0%]',
+          isLottieVisible ? 'slide-in-from-right' : '',
+        ]"
+      >
         <client-only>
           <Lottie name="web-animations" :width="700" :height="700" />
         </client-only>
       </div>
     </div>
-    <!-- <div
-      class="absolute -bottom-[10%] text-[200px] font-bold text-[#FAFAFA] left-24 leading-none"
+    <div
+      ref="developRef"
+      :class="[
+        'absolute -bottom-[10%] text-[200px] font-bold text-[#FAFAFA] left-24 leading-none',
+        isVisible ? 'slide-in-from-right' : '',
+      ]"
     >
       DEVELOP
-    </div> -->
+    </div>
   </div>
 </template>
 
