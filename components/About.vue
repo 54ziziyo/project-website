@@ -11,10 +11,8 @@
     </div>
 
     <div class="relative px-[6.875rem] pb-30">
-      <div class="mb-4 text-[#8782FF] text-[24px] font-bold">
-        價值與體驗的交會點
-      </div>
-      <div class="text-[52px] font-bold leading-none mb-[28px]">關於我們</div>
+      <div class="mb-4 text-[#8782FF] text-[24px] font-bold">價值的交會點</div>
+      <div class="text-[52px] font-bold leading-none mb-8">關於我們</div>
       <div class="text-[#5B5B5B] text-[20px] mb-4">
         我們是一間專注於「網站整合設計 ×
         技術實現」的工作室，由具備業界經驗的全端工程師與設計師組成。
@@ -24,7 +22,7 @@
         因此，我們從視覺設計、功能規劃到技術架構，都堅持一步到位。
       </div>
 
-      <div class="grid grid-cols-4 gap-8 mt-12">
+      <div class="grid grid-cols-4 gap-8 mt-20">
         <!-- 卡片1 -->
         <div
           class="bg-white rounded-2xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
