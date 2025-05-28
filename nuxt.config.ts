@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "nuxt-lottie",
   ],
-  css: ["~/assets/css/tailwind.css"],
+  css: ["~/assets/css/tailwind.css", "@/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
   },

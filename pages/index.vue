@@ -6,5 +6,6 @@
     <Project />
     <AutoScrollCards />
     <Faq />
+    <Contact />
   </div>
 </template>

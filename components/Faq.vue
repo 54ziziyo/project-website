@@ -87,7 +87,7 @@ const accordionItems = [
 ];
 </script>
 <template>
-  <div class="relative pt-[250px]">
+  <div class="relative pt-[250px] pb-[145px] overflow-x-clip">
     <div class="px-10 pb-32 flex justify-center flex-col items-center">
       <div class="text-[52px] font-bold leading-none mb-[32px]">常見問題</div>
       <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]"></span>
@@ -104,13 +104,13 @@ const accordionItems = [
     ></div>
 
     <div
-      class="absolute -left-90 bottom-10 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50"
+      class="absolute -left-90 bottom-15 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50"
     ></div>
     <div
-      class="absolute -left-30 -bottom-10 w-[200px] h-[200px] rounded-full border border-gray-300 opacity-70"
+      class="absolute -left-30 -bottom-5 w-[200px] h-[200px] rounded-full border border-gray-300 opacity-70"
     ></div>
 
-    <div class="absolute -bottom-70 -right-[75%]">
+    <div class="absolute top-1/2 -translate-y-1/2 -right-[85%]">
       <img
         src="../assets/images/round-purple.svg"
         alt="circle pattern"
@@ -119,6 +119,7 @@ const accordionItems = [
         height="1500"
       />
     </div>
+
     <div class="relative w-full px-[10%]">
       <Accordion type="single" collapsible :default-value="defaultValue">
         <AccordionItem

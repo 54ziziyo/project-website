@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="relative">
+  <div class="relative overflow-x-clip">
     <div class="relative h-[1100px] overflow-hidden">
       <div class="absolute inset-0 bg-gradient clip-custom"></div>
       <div class="absolute text-white top-[150px] left-[100px]">
@@ -40,11 +40,11 @@
         </client-only>
       </div>
     </div>
-    <div
-      class="absolute -bottom-[10%] text-[200px] font-bold text-[#FAFAFA] left-[6.875rem] leading-none"
+    <!-- <div
+      class="absolute -bottom-[10%] text-[200px] font-bold text-[#FAFAFA] left-24 leading-none"
     >
       DEVELOP
-    </div>
+    </div> -->
   </div>
 </template>
 

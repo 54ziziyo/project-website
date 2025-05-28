@@ -46,7 +46,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="overflow-hidden relative w-full custom-bg py-[100px]">
+  <div class="overflow-hidden relative w-full gradient-p-to-y-bg py-[100px]">
     <!-- 標題區塊 -->
     <div class="flex flex-col items-center mb-[80px]">
       <div class="text-[52px] font-bold leading-none mb-[32px]">
@@ -118,13 +118,5 @@ onMounted(() => {
 
 .animate-radar {
   animation: radar 3s ease-out infinite;
-}
-
-.custom-bg {
-  background: linear-gradient(
-    105.85deg,
-    rgba(227, 223, 255, 0.5) 27.97%,
-    rgba(255, 239, 207, 0.5) 76.29%
-  );
 }
 </style>

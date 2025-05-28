@@ -1,5 +1,5 @@
 <template>
-  <div class="relative pt-[100px]">
+  <div class="relative pt-[100px] overflow-x-clip">
     <div class="absolute -bottom-[50%] -left-[65%]">
       <img
         src="../assets/images/round-purple.svg"
@@ -22,10 +22,10 @@
         因此，我們從視覺設計、功能規劃到技術架構，都堅持一步到位。
       </div>
 
-      <div class="grid grid-cols-4 gap-8 mt-20">
+      <div class="grid lg:grid-cols-4 grid-cols-2 gap-8 mt-20">
         <!-- 卡片1 -->
         <div
-          class="bg-white rounded-2xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
+          class="order-1 lg:order-1 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
         >
           <div class="text-[#8782FF] text-base font-bold mb-1">
             兼具美感與份量
@@ -37,17 +37,19 @@
         </div>
 
         <!-- 卡片2 -->
-        <div class="rounded-2xl hover:shadow-xl shadow-lg flex flex-col">
+        <div
+          class="order-2 lg:order-2 rounded-2xl hover:shadow-xl shadow-lg flex flex-col"
+        >
           <img
             src="../assets/images/website-building.png"
             alt=""
-            class="w-full h-full object-cover rounded-2xl"
+            class="w-full h-full object-cover rounded-xl"
           />
         </div>
 
         <!-- 卡片3 -->
         <div
-          class="bg-white rounded-2xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
+          class="order-4 lg:order-3 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
         >
           <div class="text-[#8782FF] text-base font-bold mb-1">
             讓你被受眾看到
@@ -59,26 +61,30 @@
         </div>
 
         <!-- 卡片4 -->
-        <div class="rounded-2xl hover:shadow-xl shadow-lg flex flex-col">
+        <div
+          class="order-3 lg:order-4 rounded-2xl hover:shadow-xl shadow-lg flex flex-col"
+        >
           <img
             src="../assets/images/diversified-marketing.png"
             alt=""
-            class="w-full h-full object-cover rounded-2xl"
+            class="w-full h-full object-cover rounded-xl"
           />
         </div>
 
         <!-- 卡片5 -->
-        <div class="rounded-2xl hover:shadow-xl shadow-lg flex flex-col">
+        <div
+          class="order-6 lg:order-5 rounded-2xl hover:shadow-xl shadow-lg flex flex-col"
+        >
           <img
             src="../assets/images/high-quality.png"
             alt=""
-            class="w-full h-full object-cover rounded-2xl"
+            class="w-full h-full object-cover rounded-xl"
           />
         </div>
 
         <!-- 卡片6 -->
         <div
-          class="bg-white rounded-2xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
+          class="order-5 lg:order-6 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
         >
           <div class="text-[#8782FF] text-base font-bold mb-1">高CP的價值</div>
           <div class="text-xl font-bold mb-2">客製化質感</div>
@@ -88,17 +94,19 @@
         </div>
 
         <!-- 卡片7 -->
-        <div class="rounded-2xl hover:shadow-xl shadow-lg flex flex-col">
+        <div
+          class="order-7 lg:order-7 rounded-2xl hover:shadow-xl shadow-lg flex flex-col"
+        >
           <img
             src="../assets/images/brand-context.png"
             alt=""
-            class="w-full h-full object-cover rounded-2xl"
+            class="w-full h-full object-cover rounded-xl"
           />
         </div>
 
         <!-- 卡片8 -->
         <div
-          class="bg-white rounded-2xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
+          class="order-8 lg:order-8 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col gap-2"
         >
           <div class="text-[#8782FF] text-base font-bold mb-1">品牌脈絡</div>
           <div class="text-xl font-bold mb-2">解決問題</div>
