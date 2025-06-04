@@ -115,14 +115,6 @@ onBeforeUnmount(() => {
 }
 
 .bg-gradient {
-  /* 靜止的線性漸層和藍色 */
-
-  background-image: linear-gradient(172deg, #fcfcfc00 64%, #fff 64%),
-    radial-gradient(circle at 0 100%, #90e0ff, #90e0ff00 28%),
-    radial-gradient(circle at 0%, #a960ee, #a960ee00 34%, #a960ee00),
-    radial-gradient(circle at 50% 0, #ff333d, #ff333d00 60%, #ff333d00),
-    radial-gradient(circle at 100% 100%, #ffcb57, #ffcb5700 67%);
-
   /* background-image: linear-gradient(172deg, #fcfcfc23 64%, #fff 64%),
     radial-gradient(circle at 0 100%, #90e0ff, #90e0ff00 28%),
     radial-gradient(
@@ -143,6 +135,12 @@ onBeforeUnmount(() => {
       #ffca578f 70%
     );
   animation: moveGradients 20s linear infinite; */
+
+  background-image: linear-gradient(172deg, #fcfcfc00 64%, #fff 64%),
+    radial-gradient(circle at 0 100%, #90e0ff, #90e0ff00 28%),
+    radial-gradient(circle at 0%, #a960ee, #a960ee00 34%, #a960ee00),
+    radial-gradient(circle at 50% 0, #ff333d, #ff333d00 60%, #ff333d00),
+    radial-gradient(circle at 100% 100%, #ffcb57, #ffcb5700 67%);
 }
 
 .clip-custom {
