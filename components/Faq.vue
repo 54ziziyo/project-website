@@ -85,62 +85,36 @@ const accordionItems = [
   `,
   },
 ];
-
-const textRef = ref<HTMLElement | null>(null);
-const isTextVisible = ref(false);
-
-onMounted(() => {
-  const createObserver = (elRef: typeof textRef, callback: () => void) => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            callback();
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (elRef.value) {
-      observer.observe(elRef.value);
-    }
-  };
-
-  createObserver(textRef, () => (isTextVisible.value = true));
-});
 </script>
 <template>
   <div class="relative pt-[250px] pb-[145px] overflow-x-clip">
-    <div
-      ref="textRef"
-      :class="[
-        'px-10 pb-32 flex justify-center flex-col items-center transition-opacity duration-700 ease-in-out',
-        isTextVisible ? 'slide-in-from-bottom' : 'opacity-0',
-      ]"
-    >
-      <div class="text-[52px] font-bold leading-none mb-[32px]">常見問題</div>
+    <div class="px-10 pb-14 md:pb-32 flex justify-center flex-col items-center">
+      <div
+        class="text-[24px] md:text-[52px] font-bold leading-none md:mb-8 mb-4"
+      >
+        常見問題
+      </div>
       <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]"></span>
-      <div class="text-[#5B5B5B] text-[20px] text-center">
+      <div class="text-[#5B5B5B] text-[14px] md:text-[20px] text-center">
         我們提供了一些常見問題的解答，幫助您更了解我們的服務與流程
       </div>
     </div>
 
     <div
-      class="absolute -left-60 top-10 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50"
+      class="absolute -left-60 top-10 md:w-[450px] md:h-[450px] w-[300px] h-[300px] rounded-full border border-[#8782FF] opacity-50"
     ></div>
     <div
-      class="absolute left-20 top-40 w-[200px] h-[200px] rounded-full border border-gray-300 opacity-70"
+      class="absolute left-5 md:left-20 top-40 md:w-[200px] md:h-[200px] w-[100px] h-[100px] rounded-full border border-gray-300 opacity-70"
     ></div>
 
     <div
-      class="absolute -left-90 bottom-30 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50"
+      class="absolute -left-90 bottom-30 w-[450px] h-[450px] rounded-full border border-[#8782FF] opacity-50 hidden md:block"
     ></div>
     <div
-      class="absolute -left-30 bottom-10 w-[200px] h-[200px] rounded-full border border-gray-300 opacity-70"
+      class="absolute -left-30 bottom-10 w-[200px] h-[200px] rounded-full border border-gray-300 opacity-70 hidden md:block"
     ></div>
 
-    <div class="absolute top-1/2 -translate-y-1/2 -right-[85%]">
+    <div class="absolute top-1/2 -translate-y-1/2 -right-[85%] hidden md:block">
       <img
         src="../assets/images/round-purple.svg"
         alt="circle pattern"
@@ -157,11 +131,14 @@ onMounted(() => {
           :key="item.value"
           :value="item.value"
         >
-          <AccordionTrigger class="text-[20px] cursor-pointer">{{
+          <AccordionTrigger class="text-[16px] md:text-[20px] cursor-pointer">{{
             item.title
           }}</AccordionTrigger>
           <AccordionContent>
-            <div v-html="item.content" class="border-t px-4 py-6" />
+            <div
+              v-html="item.content"
+              class="border-t px-4 py-6 text-[14px] text-[#5B5B5B]"
+            />
           </AccordionContent>
         </AccordionItem>
       </Accordion>
