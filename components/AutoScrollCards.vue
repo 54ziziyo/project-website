@@ -9,7 +9,7 @@ const cards = [
   { title: "Google 分析", description: "設定追蹤碼、資料儀表版" },
   { title: "多國語系", description: "支援多國語言切換、拓展國際市場" },
   {
-    title: "Google Tag Manager",
+    title: "GTM",
     description: "轉換目標設定、追蹤顧客行為報告",
   },
   {
@@ -22,8 +22,6 @@ const cards = [
 
 const duplicatedCards = [...cards, ...cards];
 const scrollContainer = ref<HTMLElement | null>(null);
-const textRef = ref<HTMLElement | null>(null);
-const isTextVisible = ref(false);
 
 onMounted(() => {
   const container = scrollContainer.value;
@@ -41,24 +39,6 @@ onMounted(() => {
     requestAnimationFrame(step);
   }
 
-  const createObserver = (elRef: typeof textRef, callback: () => void) => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            callback();
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (elRef.value) {
-      observer.observe(elRef.value);
-    }
-  };
-
-  createObserver(textRef, () => (isTextVisible.value = true));
   requestAnimationFrame(step);
 });
 </script>
@@ -66,17 +46,15 @@ onMounted(() => {
 <template>
   <div class="overflow-hidden relative w-full gradient-p-to-y-bg py-[100px]">
     <!-- 標題區塊 -->
-    <div
-      ref="textRef"
-      :class="[
-        'flex flex-col items-center mb-[80px] transition-opacity duration-700 ease-in-out',
-        isTextVisible ? 'slide-in-from-top' : 'opacity-0',
-      ]"
-    >
-      <div class="text-[52px] font-bold leading-none mb-[32px]">
+    <div class="flex flex-col items-center mb-14 md:mb-[80px]">
+      <div
+        class="text-[24px] md:text-[52px] font-bold leading-none mb-4 md:mb-8"
+      >
         您的<span class="text-[#8782FF]">網站</span>就交給我們
       </div>
-      <div class="text-[#5B5B5B] text-[20px]">提供給您最專業的服務</div>
+      <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
+        提供給您最專業的服務
+      </div>
     </div>
 
     <!-- 滾動卡片 -->
@@ -87,10 +65,12 @@ onMounted(() => {
       <div
         v-for="(card, index) in duplicatedCards"
         :key="index"
-        class="relative w-[355px] bg-white rounded-2xl shadow-lg px-8 pt-[60px] pb-10 mx-4 flex-shrink-0 overflow-hidden"
+        class="relative w-[220px] md:w-[355px] bg-white rounded-2xl shadow-lg px-4 md:px-8 pt-14 md:pt-[60px] pb-7 md:pb-10 mx-4 flex-shrink-0 overflow-hidden"
       >
         <!-- 雷達動畫圈圈 -->
-        <div class="absolute top-[-100px] right-[-50px] w-[200px] h-[200px]">
+        <div
+          class="absolute md:top-[-100px] md:right-[-50px] md:w-[200px] md:h-[200px] h-[150px] w-[150px] -top-[50px] -right-[55px]"
+        >
           <div
             class="absolute inset-0 rounded-full bg-[#B8AEFF] opacity-30 animate-radar"
           ></div>
@@ -101,10 +81,12 @@ onMounted(() => {
         </div>
 
         <!-- 卡片內容 -->
-        <div class="font-bold text-[24px] mb-2 text-[#5B5B5B]">
+        <div
+          class="font-bold text-[20px] md:text-[24px] mb-5 md:mb-2 text-[#5B5B5B]"
+        >
           {{ card.title }}
         </div>
-        <p class="text-[18px] text-gray-600 text-wrap">
+        <p class="text-[16px] md:text-[18px] text-gray-600 text-wrap">
           {{ card.description }}
         </p>
       </div>
