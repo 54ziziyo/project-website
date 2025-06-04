@@ -33,7 +33,7 @@
               alt=""
             />
             <div class="text-[16px] md:text-[24px] font-bold">
-              專業團隊協作｜設計 × 程式的雙重保障
+              專業團隊協作｜設計 × 程式 × 行銷
             </div>
           </div>
           <div
@@ -43,7 +43,7 @@
           </div>
         </div>
 
-        <div class="space-y-[8px] md:space-y-[16px]">
+        <div class="space-y-[8px] md:space-y-[16px] md:pl-[50px]">
           <div class="flex items-center space-x-[12px] md:space-x-[24px]">
             <img
               class="w-[20px] md:w-fit"
@@ -61,7 +61,7 @@
           </div>
         </div>
 
-        <div class="space-y-[8px] md:space-y-[16px]">
+        <div class="space-y-[8px] md:space-y-[16px] md:pl-[100px]">
           <div class="flex items-center space-x-[12px] md:space-x-[24px]">
             <img
               class="w-[20px] md:w-fit"

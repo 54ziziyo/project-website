@@ -4,42 +4,8 @@ const handleScroll = () => {
   scrollY.value = window.scrollY;
 };
 
-const developRef = ref<HTMLElement | null>(null);
-const lottieRef = ref<HTMLElement | null>(null);
-const isVisible = ref(false);
-const isLottieVisible = ref(false);
-
-const heroTextRef = ref(null);
-const showHeroText = ref(false);
-
-function createObserver(target: Ref<HTMLElement | null>, callback: () => void) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          callback();
-          observer.disconnect(); // 只執行一次
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-    }
-  );
-  if (target.value) observer.observe(target.value);
-}
-
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
-  showHeroText.value = true;
-
-  createObserver(developRef, () => {
-    isVisible.value = true;
-  });
-
-  createObserver(lottieRef, () => {
-    isLottieVisible.value = true;
-  });
 });
 
 onBeforeUnmount(() => {
@@ -51,26 +17,6 @@ onBeforeUnmount(() => {
   <div class="relative overflow-x-clip">
     <div class="relative h-[600px] md:h-[1100px] overflow-hidden">
       <div class="absolute inset-0 bg-gradient clip-custom"></div>
-      <div
-        class="absolute text-white md:top-[150px] top-[60px] md:left-[100px] left-[32px]"
-      >
-        <div class="space-x-1 flex items-center">
-          <span class="md:w-3 w-2 md:h-12 h-6 bg-white"></span>
-          <span class="md:w-2 w-1 md:h-12 h-6 bg-white"></span>
-          <p class="md:text-[52px] text-[24px] font-bold md:ml-2 ml-1">
-            匠心獨具
-          </p>
-        </div>
-        <p class="text-[32px] md:text-[80px] font-bold">打造你的專屬網站</p>
-        <p class="text-[16px] md:text-[20px] md:font-thin mt-4 mb-8 pr-10">
-          不只是設計，我們用技術與品牌力讓你的事業被看見
-        </p>
-        <button
-          class="cursor-pointer md:px-12 px-10 py-2 md:py-3 bg-white rounded-full hover:shadow-lg text-black text-[14px] md:text-[20px]"
-        >
-          查看方案
-        </button>
-      </div>
 
       <div
         class="absolute -bottom-[25%] -left-[60%] md:bottom-[12%] md:-left-[5%] min-[737px]:-left-[40%] min-[480px]:-left-[50%]"
@@ -92,10 +38,33 @@ onBeforeUnmount(() => {
       </div>
 
       <div
-        class="absolute md:bottom-0 bottom-[5%] md:right-[5%] right-0 min-[480px]:bottom-[30%] min-[737px]:bottom-[15%]"
+        class="absolute text-white md:top-[150px] top-[60px] md:left-[100px] left-[32px] pr-4"
+      >
+        <div class="space-x-1 flex items-center">
+          <span class="md:w-3 w-2 md:h-12 h-6 bg-white"></span>
+          <span class="md:w-2 w-1 md:h-12 h-6 bg-white"></span>
+          <p class="md:text-[52px] text-[24px] font-bold md:ml-2 ml-1">
+            匠心獨具
+          </p>
+        </div>
+        <p class="text-[28px] md:text-[80px] font-bold">
+          量身打造的數位解決方案
+        </p>
+        <p class="text-[16px] md:text-[20px] md:font-thin mt-4 mb-8 pr-10">
+          從品牌建立、網站開發到精準行銷，提供一站式數位服務，打造讓人信賴的線上品牌
+        </p>
+        <button
+          class="cursor-pointer md:px-12 px-10 py-2 md:py-3 bg-white rounded-full hover:shadow-lg text-black text-[14px] md:text-[20px]"
+        >
+          查看方案
+        </button>
+      </div>
+
+      <div
+        class="absolute md:bottom-0 -bottom-[2%] md:right-[5%] right-0 min-[480px]:hidden lg:block"
       >
         <div
-          class="w-[300px] h-[300px] min-[480px]:w-[500px] min-[480px]:h-[500px] min-[737px]:w-[700px] min-[737px]:h-[700px]"
+          class="w-[340px] h-[340px] min-[480px]:w-[500px] min-[480px]:h-[500px] min-[737px]:w-[700px] min-[737px]:h-[700px]"
         >
           <client-only>
             <Lottie name="web-animations" />

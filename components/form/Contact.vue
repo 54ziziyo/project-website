@@ -35,7 +35,7 @@ function onSubmit() {
   <div class="space-y-6">
     <!-- 姓名 -->
     <div class="flex flex-col space-y-2">
-      <label for="name" class="text-[#5B5B5B] text-[18px] mb-2"
+      <label for="name" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
         >聯絡人姓名※</label
       >
       <input
@@ -43,7 +43,7 @@ function onSubmit() {
         id="name"
         type="text"
         placeholder="請輸入您的稱呼"
-        class="bg-white px-6 py-3 rounded-lg placeholder:text-[#A2A2A2] focus-visible:outline-none"
+        class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.name" class="text-red-500 text-sm px-2">
         {{ errors.name }}
@@ -52,7 +52,7 @@ function onSubmit() {
 
     <!-- 公司品牌 -->
     <div class="flex flex-col space-y-2">
-      <label for="brand" class="text-[#5B5B5B] text-[18px] mb-2"
+      <label for="brand" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
         >公司/品牌名稱</label
       >
       <input
@@ -60,13 +60,13 @@ function onSubmit() {
         id="brand"
         type="text"
         placeholder="請輸入您的公司/品牌名稱"
-        class="bg-white px-6 py-3 rounded-lg placeholder:text-[#A2A2A2] focus-visible:outline-none"
+        class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
     </div>
 
     <!-- 信箱 -->
     <div class="flex flex-col space-y-2">
-      <label for="mail" class="text-[#5B5B5B] text-[18px] mb-2"
+      <label for="mail" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
         >電子信箱※</label
       >
       <input
@@ -74,7 +74,7 @@ function onSubmit() {
         id="mail"
         type="email"
         placeholder="請輸入電子信箱"
-        class="bg-white px-6 py-3 rounded-lg placeholder:text-[#A2A2A2] focus-visible:outline-none"
+        class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.mail" class="text-red-500 text-sm px-2">
         {{ errors.mail }}
@@ -83,13 +83,15 @@ function onSubmit() {
 
     <!-- LINE ID -->
     <div class="flex flex-col space-y-2">
-      <label for="line" class="text-[#5B5B5B] text-[18px] mb-2">LINE ID</label>
+      <label for="line" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
+        >LINE ID</label
+      >
       <input
         v-model="form.line.value"
         id="line"
         type="text"
         placeholder="請提供您的 LINE 確保我們可以與您聯繫"
-        class="bg-white px-6 py-3 rounded-lg placeholder:text-[#A2A2A2] focus-visible:outline-none"
+        class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.line" class="text-red-500 text-sm px-2">
         {{ errors.line }}
@@ -98,7 +100,7 @@ function onSubmit() {
 
     <!-- 需求說明 -->
     <div class="flex flex-col space-y-2">
-      <label for="desc" class="text-[#5B5B5B] text-[18px] mb-2"
+      <label for="desc" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
         >需求說明※</label
       >
       <textarea
@@ -106,7 +108,7 @@ function onSubmit() {
         id="desc"
         rows="4"
         placeholder="請提供需求項目、功能等說明..."
-        class="bg-white px-6 py-3 rounded-lg placeholder:text-[#A2A2A2] focus-visible:outline-none"
+        class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       ></textarea>
       <p v-if="errors.desc" class="text-red-500 text-sm px-2">
         {{ errors.desc }}
@@ -116,33 +118,37 @@ function onSubmit() {
     <!-- 日期 -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="flex flex-col space-y-2">
-        <label for="startDate" class="text-[#5B5B5B] text-[18px] mb-2"
+        <label
+          for="startDate"
+          class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
           >預計開案日</label
         >
         <input
           v-model="form.startDate.value"
           id="startDate"
           type="date"
-          class="bg-white px-6 py-3 rounded-lg text-[#5B5B5B] focus-visible:outline-none"
+          class="bg-white px-4 py-2 md:py-3 rounded-lg text-[#5B5B5B] focus-visible:outline-none md:text-normal text-[14px]"
         />
       </div>
 
       <div class="flex flex-col space-y-2">
-        <label for="endDate" class="text-[#5B5B5B] text-[18px] mb-2"
+        <label
+          for="endDate"
+          class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
           >預計結案日</label
         >
         <input
           v-model="form.endDate.value"
           id="endDate"
           type="date"
-          class="bg-white px-6 py-3 rounded-lg text-[#5B5B5B] focus-visible:outline-none"
+          class="bg-white px-4 py-2 md:py-3 rounded-lg text-[#5B5B5B] focus-visible:outline-none md:text-normal text-[14px]"
         />
       </div>
     </div>
 
     <!-- 預算 -->
     <div class="flex flex-col space-y-2">
-      <label for="budget" class="text-[#5B5B5B] text-[18px] mb-2"
+      <label for="budget" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
         >預算範圍※</label
       >
       <input
@@ -150,7 +156,7 @@ function onSubmit() {
         id="budget"
         type="text"
         placeholder="$120,000"
-        class="bg-white px-6 py-3 rounded-lg placeholder:text-[#A2A2A2] focus-visible:outline-none"
+        class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.budget" class="text-red-500 text-sm px-2">
         {{ errors.budget }}

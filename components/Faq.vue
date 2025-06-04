@@ -87,7 +87,7 @@ const accordionItems = [
 ];
 </script>
 <template>
-  <div class="relative pt-[250px] pb-[145px] overflow-x-clip">
+  <div class="relative pt-[150px] pb-[145px] overflow-x-clip">
     <div class="px-10 pb-14 md:pb-32 flex justify-center flex-col items-center">
       <div
         class="text-[24px] md:text-[52px] font-bold leading-none md:mb-8 mb-4"

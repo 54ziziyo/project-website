@@ -3,7 +3,7 @@
   <div class="relative md:pt-[235px] pt-24">
     <!-- 大標 -->
     <div
-      class="absolute left-1/2 -translate-x-1/2 min-[480px]:text-[100px] min-[737px]:text-[120px] top-0 md:left-24 text-[70px] md:text-[200px] font-bold md:text-[#FAFAFA] md:right-[30px] leading-none text-gray-100"
+      class="absolute left-1/2 -translate-x-1/2 md:translate-x-0 min-[480px]:text-[100px] min-[737px]:text-[120px] top-0 md:left-24 text-[70px] md:text-[200px] font-bold md:text-[#FAFAFA] md:right-[30px] leading-none text-gray-100"
     >
       Project
     </div>

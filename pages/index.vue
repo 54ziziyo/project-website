@@ -5,7 +5,6 @@
     <About />
     <Project />
     <AutoScrollCards />
-    <Faq />
-    <Contact />
+    <Contact class="py-[5rem]" />
   </div>
 </template>
