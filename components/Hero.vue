@@ -52,30 +52,28 @@ onBeforeUnmount(() => {
     <div class="relative h-[1100px] overflow-hidden">
       <div class="absolute inset-0 bg-gradient clip-custom"></div>
       <div
-        ref="heroTextRef"
-        :class="[
-          'absolute text-white top-[150px] left-[100px]',
-          showHeroText ? 'slide-in-from-left' : '',
-        ]"
+        class="absolute text-white md:top-[150px] top-[140px] md:left-[100px] left-[32px]"
       >
         <div class="space-x-1 flex items-center">
-          <span class="w-3 h-12 bg-white"></span>
-          <span class="w-2 h-12 bg-white"></span>
-          <p class="text-[52px] font-bold ml-2">匠心獨具</p>
+          <span class="md:w-3 w-2 md:h-12 h-6 bg-white"></span>
+          <span class="md:w-2 w-1 md:h-12 h-6 bg-white"></span>
+          <p class="md:text-[52px] text-[24px] font-bold md:ml-2 ml-1">
+            匠心獨具
+          </p>
         </div>
-        <p class="text-[80px] font-bold">打造你的專屬網站</p>
-        <p class="text-[20px] font-thin mt-4 mb-8">
+        <p class="text-[32px] md:text-[80px] font-bold">打造你的專屬網站</p>
+        <p class="text-[16px] md:text-[20px] md:font-thin mt-4 mb-8 pr-10">
           不只是設計，我們用技術與品牌力讓你的事業被看見
         </p>
         <button
-          class="cursor-pointer px-12 py-3 bg-white rounded-full hover:shadow-lg text-black"
+          class="cursor-pointer md:px-12 px-10 py-2 md:py-3 bg-white rounded-full hover:shadow-lg text-black text-[14px] md:text-[20px]"
         >
           查看方案
         </button>
       </div>
 
       <div
-        class="absolute bottom-[12%] -left-[5%]"
+        class="absolute bottom-[15%] -left-[60%] md:bottom-[12%] md:-left-[5%] min-[737px]:-left-[40%] min-[480px]:-left-[50%]"
         :style="{ transform: `translateY(${scrollY * 0.3}px)` }"
       >
         <img
@@ -87,30 +85,27 @@ onBeforeUnmount(() => {
       </div>
 
       <div
-        class="absolute top-[5%] -right-[15%] opacity-50"
+        class="absolute top-[5vh] md:top-[15vh] -right-[80vw] md:-right-[10vw] opacity-60 pointer-events-none min-[480px]:-right-[20%]"
         :style="{ transform: `translateY(${scrollY * 0.5}px)` }"
       >
         <img src="../assets/images/circle-dot.svg" alt="circle pattern" />
       </div>
 
       <div
-        ref="lottieRef"
-        :class="[
-          'absolute right-[4%] -bottom-[0%]',
-          isLottieVisible ? 'slide-in-from-right' : '',
-        ]"
+        class="absolute md:bottom-0 bottom-[41%] md:right-[5%] right-0 min-[480px]:bottom-[30%] min-[737px]:bottom-[15%]"
       >
-        <client-only>
-          <Lottie name="web-animations" :width="700" :height="700" />
-        </client-only>
+        <div
+          class="w-[300px] h-[300px] min-[480px]:w-[500px] min-[480px]:h-[500px] min-[737px]:w-[700px] min-[737px]:h-[700px]"
+        >
+          <client-only>
+            <Lottie name="web-animations" />
+          </client-only>
+        </div>
       </div>
     </div>
+
     <div
-      ref="developRef"
-      :class="[
-        'absolute -bottom-[10%] text-[200px] font-bold text-[#FAFAFA] left-24 leading-none',
-        isVisible ? 'slide-in-from-right' : '',
-      ]"
+      class="absolute -bottom-[10%] text-[200px] font-bold text-[#FAFAFA] left-24 leading-none"
     >
       DEVELOP
     </div>

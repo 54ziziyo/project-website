@@ -6,7 +6,7 @@
     <Header />
 
     <!-- 內容區塊 -->
-    <main class="flex-1 py-[3.625rem]">
+    <main class="flex-1 md:py-[3.625rem] py-[3.25rem]">
       <slot />
     </main>
 
