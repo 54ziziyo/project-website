@@ -1,99 +1,62 @@
-<script lang="ts" setup>
-const developRef = ref<HTMLElement | null>(null); // 大標 Project
-const textRef = ref<HTMLElement | null>(null); // 文字描述部分
-const cardsRef = ref<HTMLElement | null>(null); // 卡片群組
-
-const isTitleVisible = ref(false);
-const isTextVisible = ref(false);
-const areCardsVisible = ref(false);
-
-onMounted(() => {
-  const createObserver = (elRef: any, callback: () => void) => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            callback();
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (elRef.value) {
-      observer.observe(elRef.value);
-    }
-  };
-
-  createObserver(developRef, () => (isTitleVisible.value = true));
-  createObserver(textRef, () => (isTextVisible.value = true));
-  createObserver(cardsRef, () => (areCardsVisible.value = true));
-});
-</script>
+<script lang="ts" setup></script>
 <template>
-  <div class="relative pt-[235px]">
+  <div class="relative md:pt-[235px] pt-24">
     <!-- 大標 -->
     <div
-      ref="developRef"
-      :class="[
-        'absolute text-[200px] top-[0%] font-bold text-[#FAFAFA] right-[30px] leading-none',
-        isTitleVisible ? 'slide-in-from-left' : '',
-      ]"
+      class="absolute left-1/2 -translate-x-1/2 min-[480px]:text-[100px] min-[737px]:text-[120px] top-0 md:left-24 text-[70px] md:text-[200px] font-bold md:text-[#FAFAFA] md:right-[30px] leading-none text-gray-100"
     >
       Project
     </div>
 
     <!-- 文字描述 -->
-    <div class="relative px-10 pb-32 flex justify-center flex-col items-center">
-      <div
-        ref="textRef"
-        :class="[
-          'transition-opacity duration-700 ease-in-out',
-          isTextVisible ? 'slide-in-from-top' : 'opacity-0',
-        ]"
-      >
-        <div class="mb-4 text-[#8782FF] text-[24px] font-bold">
+    <div
+      class="relative px-10 pb-32 flex justify-center flex-col items-center text-center"
+    >
+      <div>
+        <div class="mb-4 text-[#8782FF] text-[16px] md:text-[24px] font-bold">
           多樣化的選擇
         </div>
-        <div class="text-[52px] font-bold leading-none mb-[32px]">
+        <div
+          class="text-[24px] md:text-[52px] font-bold leading-none mb-[32px]"
+        >
           選擇最適合你的計劃
         </div>
         <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]"></span>
-        <div class="text-[#5B5B5B] text-[20px] mb-1 text-center">
+        <div class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-1 text-center">
           若您有活靈活現的想法想要被實現
         </div>
-        <div class="text-[#5B5B5B] text-[20px]">
+        <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
           我們可以幫您評估，隨時歡迎詢洽！
         </div>
       </div>
 
       <div
-        ref="cardsRef"
-        :class="[
-          'grid grid-cols-3 space-x-4 mt-[100px] transition-opacity duration-700 ease-in-out',
-          areCardsVisible ? 'slide-in-from-bottom' : 'opacity-0',
-        ]"
+        class="grid md:grid-cols-3 md:space-x-4 md:mt-[100px] mt-12 grid-cols-1 space-y-8"
       >
         <!-- 卡片1 -->
         <div
           class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
         >
           <div class="space-y-2">
-            <div class="text-[20px] font-bold">基礎方案</div>
-            <div class="text-[18px] text-[#5B5B5B]">
+            <div class="text-[20px] font-bold md:text-center text-start">
+              基礎方案
+            </div>
+            <div class="text-[18px] text-[#5B5B5B] md:text-center text-start">
               小型形象網站/部落格/行銷活動頁
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[40px] leading-none">＄30,000</div>
-            <span class="text-[16px] text-[#5B5B5B]">/台幣起</span>
+            <div class="text-[32px] md:text-[40px] leading-none">＄30,000</div>
+            <span class="text-[14px] md:text-[16px] text-[#5B5B5B]"
+              >/台幣起</span
+            >
           </div>
           <div
             class="text-base text-[#5B5B5B] border rounded-sm border-[#8782FF] w-full py-3 text-center cursor-pointer hover:bg-[#8782FF] hover:text-white transition-colors duration-300"
           >
             選擇方案
           </div>
-          <div class="space-y-5">
+          <div class="md:space-y-5 md:space-y-5 space-y-3">
             <div class="space-x-1 flex items-center">
               <Icon
                 name="pajamas:check-sm"
@@ -148,7 +111,7 @@ onMounted(() => {
 
         <!-- 卡片2 -->
         <div
-          class="bg-white/50 backdrop-blur-sm border-2 relative bottom-4 rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
+          class="bg-white/50 backdrop-blur-sm border-2 relative md:bottom-4 rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
         >
           <div class="space-y-2">
             <div class="font-bold flex justify-between items-center">
@@ -160,15 +123,17 @@ onMounted(() => {
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[40px] leading-none">＄60,000</div>
-            <span class="text-[16px] text-[#5B5B5B]">/台幣起</span>
+            <div class="text-[32px] md:text-[40px] leading-none">＄60,000</div>
+            <span class="text-[14px] md:text-[16px] text-[#5B5B5B]"
+              >/台幣起</span
+            >
           </div>
           <div
             class="text-base border rounded-sm hover:bg-[#6f6bff] w-full py-3 text-center cursor-pointer bg-[#8782FF] text-white transition-colors duration-300"
           >
             選擇方案
           </div>
-          <div class="space-y-5">
+          <div class="md:space-y-5 space-y-3">
             <div class="space-x-1 flex items-center">
               <Icon
                 name="pajamas:check-sm"
@@ -224,8 +189,12 @@ onMounted(() => {
           class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
         >
           <div class="space-y-2">
-            <div class="text-[20px] font-bold">旗艦方案</div>
-            <div class="text-[18px] text-[#5B5B5B]">全客製系統/大規模平台</div>
+            <div class="text-[20px] font-bold md:text-center text-start">
+              旗艦方案
+            </div>
+            <div class="text-[18px] text-[#5B5B5B] md:text-center text-start">
+              全客製系統/大規模平台
+            </div>
           </div>
           <div class="text-base flex items-end space-x-2">
             <div class="text-[32px] leading-none">依需求報價</div>
@@ -235,7 +204,7 @@ onMounted(() => {
           >
             選擇方案
           </div>
-          <div class="space-y-5">
+          <div class="md:space-y-5 space-y-3">
             <div class="space-x-1 flex items-center">
               <Icon
                 name="pajamas:check-sm"
