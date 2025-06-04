@@ -49,10 +49,10 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="relative overflow-x-clip">
-    <div class="relative h-[1100px] overflow-hidden">
+    <div class="relative h-[600px] md:h-[1100px] overflow-hidden">
       <div class="absolute inset-0 bg-gradient clip-custom"></div>
       <div
-        class="absolute text-white md:top-[150px] top-[140px] md:left-[100px] left-[32px]"
+        class="absolute text-white md:top-[150px] top-[60px] md:left-[100px] left-[32px]"
       >
         <div class="space-x-1 flex items-center">
           <span class="md:w-3 w-2 md:h-12 h-6 bg-white"></span>
@@ -73,7 +73,7 @@ onBeforeUnmount(() => {
       </div>
 
       <div
-        class="absolute bottom-[15%] -left-[60%] md:bottom-[12%] md:-left-[5%] min-[737px]:-left-[40%] min-[480px]:-left-[50%]"
+        class="absolute -bottom-[25%] -left-[60%] md:bottom-[12%] md:-left-[5%] min-[737px]:-left-[40%] min-[480px]:-left-[50%]"
         :style="{ transform: `translateY(${scrollY * 0.3}px)` }"
       >
         <img
@@ -86,13 +86,13 @@ onBeforeUnmount(() => {
 
       <div
         class="absolute top-[5vh] md:top-[15vh] -right-[80vw] md:-right-[10vw] opacity-60 pointer-events-none min-[480px]:-right-[20%]"
-        :style="{ transform: `translateY(${scrollY * 0.5}px)` }"
+        :style="{ transform: `translateY(${scrollY * 0.1}px)` }"
       >
         <img src="../assets/images/circle-dot.svg" alt="circle pattern" />
       </div>
 
       <div
-        class="absolute md:bottom-0 bottom-[41%] md:right-[5%] right-0 min-[480px]:bottom-[30%] min-[737px]:bottom-[15%]"
+        class="absolute md:bottom-0 bottom-[5%] md:right-[5%] right-0 min-[480px]:bottom-[30%] min-[737px]:bottom-[15%]"
       >
         <div
           class="w-[300px] h-[300px] min-[480px]:w-[500px] min-[480px]:h-[500px] min-[737px]:w-[700px] min-[737px]:h-[700px]"
@@ -105,7 +105,7 @@ onBeforeUnmount(() => {
     </div>
 
     <div
-      class="absolute -bottom-[10%] text-[200px] font-bold text-[#FAFAFA] left-24 leading-none"
+      class="absolute -bottom-[8%] left-8 min-[480px]:text-[100px] min-[737px]:text-[120px] md:-bottom-[10%] md:left-24 text-[70px] md:text-[200px] font-bold text-[#FAFAFA] leading-none"
     >
       DEVELOP
     </div>
