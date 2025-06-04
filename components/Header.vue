@@ -62,7 +62,7 @@ const showMenu = ref(false);
     >
       <!-- Logo -->
       <div class="font-extrabold text-xl font-[Hammersmith_One] cursor-pointer">
-        Luzar
+        <a href="/">Luzar</a>
       </div>
 
       <!-- Navigation -->
@@ -104,21 +104,21 @@ const showMenu = ref(false);
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          <!-- <NavigationMenuItem>
             <NavigationMenuLink
-              href="/portfolio"
+              href="/works"
               :class="navigationMenuTriggerStyle()"
             >
               作品集
             </NavigationMenuLink>
-          </NavigationMenuItem>
+          </NavigationMenuItem> -->
 
           <NavigationMenuItem>
             <NavigationMenuLink
               href="/contact"
               :class="navigationMenuTriggerStyle()"
             >
-              聯絡我們
+              聯繫我們
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
@@ -126,17 +126,18 @@ const showMenu = ref(false);
 
       <!-- CTA Button -->
       <div class="md:flex hidden">
-        <button
+        <a
+          href="/contact"
           class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-2 hover:bg-[#6f6bff] transition-colors duration-300"
         >
-          <span>免費資訊</span>
+          <span>Line 詢問報價</span>
           <Icon
             name="line-md:arrow-down"
             width="20"
             height="20"
             class="rotate-270"
           />
-        </button>
+        </a>
       </div>
 
       <!-- Mobile Menu Button -->

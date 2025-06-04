@@ -2,7 +2,9 @@
   <footer
     class="bg-[#F1F0FF] text-stone-600 pt-10 pb-5 text-center text-sm space-y-16"
   >
-    <div class="flex justify-evenly">
+    <div
+      class="flex md:justify-evenly flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8 mx-10 md:mx-0"
+    >
       <div class="text-left">
         <div class="font-bold font-[Hammersmith_One]">Luzar</div>
         <div>感謝您訪問我們的網站，期待為您提供優質的服務！</div>
