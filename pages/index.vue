@@ -1,6 +1,7 @@
 <template>
   <div class="bg-white">
     <Hero />
+    <Problem />
     <Info />
     <About />
     <Project />

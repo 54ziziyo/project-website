@@ -130,13 +130,7 @@ const showMenu = ref(false);
           href="/contact"
           class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-2 hover:bg-[#6f6bff] transition-colors duration-300"
         >
-          <span>Line 詢問報價</span>
-          <Icon
-            name="line-md:arrow-down"
-            width="20"
-            height="20"
-            class="rotate-270"
-          />
+          <span>加 LINE 客製化打造</span>
         </a>
       </div>
 
