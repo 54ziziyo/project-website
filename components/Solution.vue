@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <div class="relative py-[50px] md:py-[100px] overflow-x-clip">
-    <div class="absolute md:-top-[70%] -right-[70%]">
+    <div class="absolute md:-top-[20%] -right-[70%]">
       <img
         src="../assets/images/round-purple.svg"
         alt="circle pattern"

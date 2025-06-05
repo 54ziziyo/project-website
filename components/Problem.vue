@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const problemPoints = ref([
   {
-    title: "網站沒人看，改了也不知道有沒有用",
+    title: "訪客來了卻留不住",
     problems: [
       `<b>載入慢、動線差</b> → 訪客3秒就離開`,
       `<b>內容雜亂無重點</b> → 客戶看不懂你做什麼`,
@@ -27,13 +27,13 @@ const problemPoints = ref([
 ]);
 </script>
 <template>
-  <div class="md:pt-30 py-14 mx:px-20 pt-20 flex flex-col items-center">
+  <div class="md:pt-30 py-14 md:px-20 pt-20 flex flex-col items-center">
     <div
       class="text-[32px] md:text-[52px] font-bold leading-none text-center md:mb-20 mb-10"
     >
       你是否也遇到這些問題？
     </div>
-    <div class="space-y-12 w-1/2 md:divide-y-1">
+    <div class="space-y-12 md:w-1/2 md:divide-y-1">
       <div
         v-for="(item, index) in problemPoints"
         :key="index"
