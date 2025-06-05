@@ -1,41 +1,39 @@
 <script lang="ts" setup>
 const problemPoints = ref([
   {
-    title: "網站像無人商店，訪客來了卻留不住",
+    title: "網站沒人看，改了也不知道有沒有用",
     problems: [
-      `<b>載入慢＋內容無用</b> ——訪客 3 秒內就判定這網站不值得等`,
-      `<b>動線像迷宮＋廣告轟炸</b> ——找不到重點還被干擾，不跳才怪`,
-      `<b>沒有『行動呼籲』</b> ——像逛超市卻找不到結帳櫃檯，自然放棄`,
+      `<b>載入慢、動線差</b> → 訪客3秒就離開`,
+      `<b>內容雜亂無重點</b> → 客戶看不懂你做什麼`,
+      `<b>沒有行動呼籲</b> → 浪費潛在客戶`,
     ],
   },
   {
-    title: "行銷預算像丟進黑洞，看不到效果",
+    title: "行銷預算像丟進黑洞",
     problems: [
-      `<b>漏斗漏洞沒修補</b> ——從廣告點擊到成交的流失環節完全沒追蹤`,
-      `<b>數據儀表板失能</b> ——只看得到點擊數，看不到哪個環節在燒錢`,
-      `<b>沒有A/B測試機制</b> ——永遠用同一版文案賭運氣`,
+      `漏斗漏洞沒修補`,
+      `缺乏數據分析，不知道錢花去哪`,
+      `每次換廠商都要重新解釋需求`,
     ],
   },
   {
-    title: "品牌形象模糊不清，客戶記不住你",
+    title: "外包合作像短期戀愛",
     problems: [
-      `<b>競品網站拼貼對比</b> ——版型、色系、文案同質化嚴重`,
-      `<b>缺乏記憶點設計</b> ——沒有專屬 ICON、Slogan 口號或視覺錨點`,
-      `<b>價值主張不明確</b> ——客戶看完還是不知道你「特別在哪」`,
+      `<b>結案就失聯</b> → 網站上線後問題沒人管`,
+      `<b>報價不透明</b> → 同樣需求每次價格都變`,
+      `<b>缺乏長期累積</b> → 換個廠商就要從新來過`,
     ],
   },
 ]);
 </script>
 <template>
-  <div
-    class="md:pt-30 py-14 pb-[120px] mx:px-20 pt-20 flex flex-col items-center"
-  >
+  <div class="md:pt-30 py-14 mx:px-20 pt-20 flex flex-col items-center">
     <div
-      class="text-[32px] md:text-[52px] font-bold leading-none text-center mb:mb-20 mb-10"
+      class="text-[32px] md:text-[52px] font-bold leading-none text-center md:mb-20 mb-10"
     >
       你是否也遇到這些問題？
     </div>
-    <div class="space-y-12 w-[70%] md:divide-y-1">
+    <div class="space-y-12 w-1/2 md:divide-y-1">
       <div
         v-for="(item, index) in problemPoints"
         :key="index"
@@ -54,7 +52,7 @@ const problemPoints = ref([
         >
           0{{ index + 1 }}
         </div>
-        <div class="flex flex-col space-y-2 text-center md:text-left">
+        <div class="flex flex-col space-y-2 text-center md:text-left flex-1">
           <div class="text-[24px] font-bold md:mb-2 mb-4">
             {{ item.title }}
           </div>

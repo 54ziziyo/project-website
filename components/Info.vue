@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="relative md:pt-[160px] pt-[80px] overflow-x-clip">
-    <div class="absolute -top-[20%] -right-[50%]">
+  <div class="relative md:pt-[80px] pt-[80px] overflow-x-clip">
+    <div class="md:block hidden absolute -bottom-[20%] -right-[60%]">
       <img
         src="../assets/images/round-purple.svg"
         alt="circle pattern"
@@ -33,13 +33,13 @@
               alt=""
             />
             <div class="text-[16px] md:text-[24px] font-bold">
-              專業團隊協作｜設計 × 程式 × 行銷
+              全面一站式｜設計 × 程式 × 行銷
             </div>
           </div>
           <div
             class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]"
           >
-            從設計思考到技術落地，由專職設計與工程團隊分工合作，確保每個細節都不馬虎。
+            你可以依照需求選擇服務：文案寫作、數位行銷、網站技術
           </div>
         </div>
 
@@ -57,7 +57,7 @@
           <div
             class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]"
           >
-            預算有限也能擁有品質網站，從套版到客製，從靜態頁面到會員、預約系統皆可規劃。
+            預算有限也能擁有品質網站，從套版到客製，從靜態頁面到會員、預約系統皆可規劃
           </div>
         </div>
 
@@ -69,13 +69,13 @@
               alt=""
             />
             <div class="text-[16px] md:text-[24px] font-bold">
-              持續維護支援｜讓網站長期為你工作
+              長期訂閱服務｜行銷數據到網站維護
             </div>
           </div>
           <div
             class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]"
           >
-            提供網站維運、內容更新、功能延伸，讓網站不是一次性的建置，而是長期有效的資產。
+            提供網站維運、內容更新、功能延伸，讓網站不是一次性的建置，而是長期有效的資產
           </div>
         </div>
       </div>

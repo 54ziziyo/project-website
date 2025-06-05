@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
         </div>
         <p class="text-[28px] md:text-[80px] font-bold">打造會賺錢的線上門面</p>
         <p class="text-[16px] md:text-[20px] md:font-thin mt-4 mb-8 pr-10">
-          從品牌建立、網站開發到精準行銷，提供一站式數位服務，讓你的網站成為24小時金牌業務
+          從品牌建立、網站開發到數位行銷，提供一站式數位服務，讓你的網站成為24小時金牌業務
         </p>
         <button
           class="cursor-pointer md:px-12 px-10 py-2 md:py-3 bg-white rounded-full hover:shadow-lg text-black text-[14px] md:text-[20px]"
@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
     <div
       class="absolute -bottom-[8%] left-8 min-[480px]:text-[100px] min-[737px]:text-[120px] md:-bottom-[10%] md:left-24 text-[70px] md:text-[200px] font-bold text-[#FAFAFA] leading-none"
     >
-      DEVELOP
+      Problem
     </div>
   </div>
 </template>

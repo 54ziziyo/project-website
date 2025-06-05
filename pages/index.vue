@@ -2,10 +2,9 @@
   <div class="bg-white">
     <Hero />
     <Problem />
-    <Info />
-    <About />
+    <Solution />
     <Project />
-    <AutoScrollCards />
-    <Contact class="py-[5rem]" />
+    <!-- <AutoScrollCards /> -->
+    <!-- <Contact class="py-[5rem]" /> -->
   </div>
 </template>

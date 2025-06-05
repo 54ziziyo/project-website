@@ -40,6 +40,11 @@ const components: { title: string; href: string; description: string }[] = [
     href: "/services/design",
     description: "設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象。",
   },
+  {
+    title: "VIP全站客製",
+    href: "/services/all",
+    description: "提供全方位的數位服務，從網站建置到行銷推廣，滿足各種需求。",
+  },
 ];
 
 // 控制 Drawer 開關
@@ -68,6 +73,15 @@ const showMenu = ref(false);
       <!-- Navigation -->
       <NavigationMenu class="md:flex hidden">
         <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="/about"
+              :class="navigationMenuTriggerStyle()"
+            >
+              關於我們
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
           <NavigationMenuItem>
             <NavigationMenuTrigger>服務項目</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -104,6 +118,15 @@ const showMenu = ref(false);
             </NavigationMenuLink>
           </NavigationMenuItem>
 
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="/toolbox"
+              :class="navigationMenuTriggerStyle()"
+            >
+              數位工具箱
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
           <!-- <NavigationMenuItem>
             <NavigationMenuLink
               href="/works"
@@ -112,15 +135,6 @@ const showMenu = ref(false);
               作品集
             </NavigationMenuLink>
           </NavigationMenuItem> -->
-
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/contact"
-              :class="navigationMenuTriggerStyle()"
-            >
-              聯繫我們
-            </NavigationMenuLink>
-          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 
@@ -130,7 +144,7 @@ const showMenu = ref(false);
           href="/contact"
           class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-2 hover:bg-[#6f6bff] transition-colors duration-300"
         >
-          <span>加 LINE 客製化打造</span>
+          <span>立即聯繫</span>
         </a>
       </div>
 

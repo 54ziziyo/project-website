@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <div class="relative pt-[50px] md:pt-[100px] overflow-x-clip">
-    <div class="absolute md:-bottom-[50%] -left-[65%]">
+    <div class="absolute md:-top-40 md:-left-[65%] bottom-0 -right-[0%]">
       <img
         src="../assets/images/round-purple.svg"
         alt="circle pattern"
@@ -12,7 +12,7 @@
     </div>
 
     <div class="relative px-8 md:px-[6.875rem] pb-30">
-      <div>
+      <div class="text-center">
         <div
           class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold"
         >
@@ -24,12 +24,11 @@
           關於我們
         </div>
         <div class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4">
-          我們是一間專注於「網站整合設計 ×
-          技術實現」的工作室，由具備業界經驗的全端工程師與設計師組成。
-          我們相信，好的網站不只好看，還要好用、好操作、好維護。
+          專注於「網站整合設計 ×
+          技術實現」的工作室，由具備業界經驗的全端工程師與數位行銷人組成。<br />
         </div>
         <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
-          因此，我們從視覺設計、功能規劃到技術架構，都堅持一步到位。
+          我們相信，好的網站不只好看，還要好用、好操作、好維護。
         </div>
       </div>
 
