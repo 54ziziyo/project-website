@@ -3,8 +3,7 @@
     <Hero />
     <Problem />
     <Solution />
-    <Project />
-    <!-- <AutoScrollCards /> -->
-    <!-- <Contact class="py-[5rem]" /> -->
+    <TargetAudience />
+    <CustomerFeedback />
   </div>
 </template>

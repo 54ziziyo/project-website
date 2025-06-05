@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div>網頁</div>
+  <div><Project /></div>
 </template>
 
 <style></style>

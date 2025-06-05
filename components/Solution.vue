@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="relative pt-[50px] md:pt-[100px] overflow-x-clip">
+  <div class="relative py-[50px] md:py-[100px] overflow-x-clip">
     <div class="absolute md:-top-[70%] -right-[70%]">
       <img
         src="../assets/images/round-purple.svg"
@@ -46,7 +46,7 @@
         <!-- 卡片2 -->
         <div class="order-2 md:order-2 rounded-2xl flex flex-col">
           <img
-            src="../assets/images/website-building.png"
+            src="../assets/images/solution-1.jpg"
             alt=""
             class="md:w-[80%] h-full object-cover rounded-xl"
           />
@@ -72,7 +72,7 @@
         <!-- 卡片4 -->
         <div class="order-4 md:order-3 rounded-2xl flex flex-col">
           <img
-            src="../assets/images/diversified-marketing.png"
+            src="../assets/images/solution-2.jpg"
             alt=""
             class="md:w-[80%] h-full object-cover rounded-xl"
           />
@@ -98,7 +98,7 @@
         <!-- 卡片6 -->
         <div class="order-6 md:order-6 rounded-2xl flex flex-col">
           <img
-            src="../assets/images/website-building.png"
+            src="../assets/images/solution-3.webp"
             alt=""
             class="md:w-[80%] h-full object-cover rounded-xl"
           />

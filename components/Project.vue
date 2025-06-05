@@ -31,23 +31,23 @@
       </div>
 
       <div
-        class="grid md:grid-cols-3 md:space-x-4 md:mt-[100px] mt-12 grid-cols-1 space-y-8"
+        class="grid lg:grid-cols-3 md:grid-cols-2 md:gap-4 gap-0 lg:space-x-4 lg:mt-[100px] mt-12 grid-cols-1 space-y-8 md:space-y-0"
       >
         <!-- 卡片1 -->
         <div
           class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
         >
           <div class="space-y-2">
-            <div class="text-[20px] font-bold md:text-center text-start">
+            <div class="text-[20px] font-bold lg:text-center text-start">
               基礎方案
             </div>
-            <div class="text-[18px] text-[#5B5B5B] md:text-center text-start">
+            <div class="text-[18px] text-[#5B5B5B] lg:text-center text-start">
               小型形象網站/部落格/行銷活動頁
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] md:text-[40px] leading-none">＄30,000</div>
-            <span class="text-[14px] md:text-[16px] text-[#5B5B5B]"
+            <div class="text-[32px] lg:text-[40px] leading-none">＄30,000</div>
+            <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]"
               >/台幣起</span
             >
           </div>
@@ -56,7 +56,7 @@
           >
             選擇方案
           </div>
-          <div class="md:space-y-5 md:space-y-5 space-y-3">
+          <div class="lg:space-y-5 lg:space-y-5 space-y-3">
             <div class="space-x-1 flex items-center">
               <Icon
                 name="pajamas:check-sm"
@@ -111,7 +111,7 @@
 
         <!-- 卡片2 -->
         <div
-          class="bg-white/50 backdrop-blur-sm border-2 relative md:bottom-4 rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
+          class="bg-white/50 backdrop-blur-sm border-2 relative lg:bottom-4 rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
         >
           <div class="space-y-2">
             <div class="font-bold flex justify-between items-center">
@@ -123,8 +123,8 @@
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] md:text-[40px] leading-none">＄60,000</div>
-            <span class="text-[14px] md:text-[16px] text-[#5B5B5B]"
+            <div class="text-[32px] lg:text-[40px] leading-none">＄60,000</div>
+            <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]"
               >/台幣起</span
             >
           </div>
@@ -133,7 +133,7 @@
           >
             選擇方案
           </div>
-          <div class="md:space-y-5 space-y-3">
+          <div class="lg:space-y-5 space-y-3">
             <div class="space-x-1 flex items-center">
               <Icon
                 name="pajamas:check-sm"
@@ -189,10 +189,10 @@
           class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
         >
           <div class="space-y-2">
-            <div class="text-[20px] font-bold md:text-center text-start">
+            <div class="text-[20px] font-bold lg:text-center text-start">
               旗艦方案
             </div>
-            <div class="text-[18px] text-[#5B5B5B] md:text-center text-start">
+            <div class="text-[18px] text-[#5B5B5B] lg:text-center text-start">
               全客製系統/大規模平台
             </div>
           </div>
@@ -204,7 +204,7 @@
           >
             選擇方案
           </div>
-          <div class="md:space-y-5 space-y-3">
+          <div class="lg:space-y-5 space-y-3">
             <div class="space-x-1 flex items-center">
               <Icon
                 name="pajamas:check-sm"
