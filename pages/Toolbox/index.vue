@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="pt-10 pb-30">
+  <div class="pt-15 pb-40">
     <div class="w-1/3 mx-auto">
       <img src="../../assets/images/cat.png" alt="" />
     </div>
