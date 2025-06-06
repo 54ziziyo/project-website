@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="relative py-[50px] md:py-[100px] overflow-x-clip">
+  <div class="relative pb-[50px] pt-30 md:py-[100px] overflow-x-clip">
     <div class="absolute md:-top-[20%] -right-[70%]">
       <img
         src="../assets/images/round-purple.svg"
@@ -19,7 +19,7 @@
           好消息是
         </div>
         <div
-          class="text-[32px] text-center md:text-[52px] font-bold leading-[1.2] mb:mb-8 mb-6"
+          class="text-[32px] text-center md:text-[52px] font-bold leading-[1.2] mb:mb-8"
         >
           困難的問題<span class="text-[#8782FF]">我們都幫你解決了</span>
         </div>

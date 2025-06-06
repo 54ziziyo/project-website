@@ -16,7 +16,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="relative overflow-x-clip">
     <div class="relative h-[600px] md:h-[1100px] overflow-hidden">
-      <div class="absolute inset-0 bg-gradient clip-custom"></div>
+      <div class="absolute inset-0 bg-gradient clip-custom" />
 
       <div
         class="absolute -bottom-[25%] -left-[60%] md:bottom-[12%] md:-left-[5%] min-[737px]:-left-[40%] min-[480px]:-left-[50%]"
@@ -41,8 +41,8 @@ onBeforeUnmount(() => {
         class="absolute text-white md:top-[150px] top-[60px] md:left-[100px] left-[32px] pr-4"
       >
         <div class="space-x-1 flex items-center">
-          <span class="md:w-3 w-2 md:h-12 h-6 bg-white"></span>
-          <span class="md:w-2 w-1 md:h-12 h-6 bg-white"></span>
+          <span class="md:w-3 w-2 md:h-12 h-6 bg-white" />
+          <span class="md:w-2 w-1 md:h-12 h-6 bg-white" />
           <p class="md:text-[52px] text-[24px] font-bold md:ml-2 ml-1">
             從流量到成交
           </p>
@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
         <button
           class="cursor-pointer md:px-12 px-10 py-2 md:py-3 bg-white rounded-full hover:shadow-lg text-black text-[14px] md:text-[20px]"
         >
-          免費獲取流量秘笈 →
+          免費下載流量秘笈 →
         </button>
       </div>
 
