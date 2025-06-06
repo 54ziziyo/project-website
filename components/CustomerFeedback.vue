@@ -18,44 +18,44 @@ const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
 const testimonials = [
   {
     content:
-      "简报思维工坊的专业设计是我们募资成功的关键。他们提升了简报视觉效果，还帮助我们完善了故事叙述，让投资人对我们的项目更加理解及信心。",
-    author: "陈先生",
-    role: "新创公司执行长",
+      "我們子公司的手機版網頁服務一直都很難使用，後來決定重新設計介面跟規劃流程，現在用戶數提高了很多，很讚！",
+    author: "Dragon陳",
+    role: "產品經理",
     avatar: avatar1,
   },
   {
     content:
-      "简报思维工坊的专业服务让我的简报品质达到了新的高度。他们不仅在视觉设计上有卓越的表现，还帮助我优化了内容结构，使整体表现更加出色。",
-    author: "王小姐",
-    role: "行销专员",
+      "原本擔心技術溝通困難，但他們能用外行人聽得懂的語言解釋，設計和網站都比預期更早交付，還會定期主動優化！",
+    author: "Brian",
+    role: "經營日本代購",
     avatar: avatar2,
   },
   {
     content:
-      "简报思维工坊的专业设计是我们募资成功的关键。他们提升了简报视觉效果，还帮助我们完善了故事叙述，让投资人对我们的项目更加理解及信心。",
-    author: "陈先生",
-    role: "新创公司执行长",
+      "因為剛開業需要跑工廠、廠商又要做網站和行銷，要處理太多事了，所以請他們做了簡易官網和社群內容經營的部分，目前感受很用心還不錯～",
+    author: "王小姐",
+    role: "茶類品牌創辦人",
     avatar: avatar3,
   },
   {
     content:
-      "简报思维工坊的专业服务让我的简报品质达到了新的高度。他们不仅在视觉设计上有卓越的表现，还帮助我优化了内容结构，使整体表现更加出色。",
-    author: "王小姐",
-    role: "行销专员",
+      "臨時需要製作活動Landing Page和宣傳短影片，謝謝你們很專業的引導，設計的CTA按鈕讓報名人數翻倍，後續還會想繼續合作。",
+    author: "Gaga Huang",
+    role: "活動公司專案執行",
     avatar: avatar4,
   },
   {
     content:
-      "简报思维工坊的专业设计是我们募资成功的关键。他们提升了简报视觉效果，还帮助我们完善了故事叙述，让投资人对我们的项目更加理解及信心。",
-    author: "陈先生",
-    role: "新创公司执行长",
+      "訂閱了網站服務，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我，架設完後也開始有一些人詢問，曝光起來的感覺",
+    author: "攝影小蘇",
+    role: "攝影工作室",
     avatar: avatar5,
   },
   {
     content:
-      "简报思维工坊的专业服务让我的简报品质达到了新的高度。他们不仅在视觉设计上有卓越的表现，还帮助我优化了内容结构，使整体表现更加出色。",
-    author: "王小姐",
-    role: "行销专员",
+      "合作訂閱半年期網站與行銷服務後，我們更多人詢問了！甚至主動建議我們沒注意到的使用者體驗細節。",
+    author: "張小姐",
+    role: "充氣廣告公司",
     avatar: avatar6,
   },
 ];
@@ -68,9 +68,11 @@ const testimonials = [
           <div class="inline-block border px-4 py-1 rounded-full text-sm">
             真實客戶評價
           </div>
-          <h2 class="text-[32px] md:text-[52px] font-bold leading-none mt-3">
+          <div
+            class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3"
+          >
             讓我們看看別人怎麼說
-          </h2>
+          </div>
         </div>
 
         <div class="flex justify-center items-center space-x-[-10px] mb-4">
@@ -94,9 +96,9 @@ const testimonials = [
       </div>
 
       <Carousel
-        class="w-full"
+        class="w-full pb-24"
         :opts="{
-          align: 'center',
+          align: 'start',
           slidesToScroll: 1,
           loop: true,
         }"
@@ -117,7 +119,7 @@ const testimonials = [
                 class="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col"
               >
                 <p class="text-gray-600 italic mb-6 flex-grow">
-                  "{{ testimonial.content }}"
+                  {{ testimonial.content }}
                 </p>
 
                 <div class="flex items-center">
@@ -139,6 +141,80 @@ const testimonials = [
           </CarouselItem>
         </CarouselContent>
       </Carousel>
+
+      <div class="pt-24 px-4 border-t md:border-none">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1
+            class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]"
+          >
+            即時啟動，打造您的數位競爭力
+          </h1>
+          <p
+            class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center mb-16"
+          >
+            一站式數位解決方案，協助品牌高效成長<br />有網站/行銷需求，加Line即可免費諮詢
+          </p>
+        </div>
+
+        <div
+          class="max-w-4xl mx-auto rounded-xl bg-white/50 backdrop-blur-md p-12 shadow-xl border border-[#6f6bff] border-2"
+        >
+          <div class="text-left mb-8 border-b pb-8">
+            <span
+              class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded"
+              >限時優惠</span
+            >
+            <div class="text-2xl font-bold mt-4 mb-6">30分鐘免費策略規劃</div>
+
+            <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">
+              <div>
+                <div class="text-lg font-semibold mb-4">網站開發與優化</div>
+                <ul class="space-y-2 text-sm md:text-base">
+                  <li>✔ 響應式網站設計 ✔ 前端開發與架設 ✔ UI/UX優化</li>
+                  <li>✔ 電商網站建置 ✔ 效能最佳化與SEO基礎配置</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="text-lg font-semibold mb-4">長期合作方案</div>
+                <ul class="space-y-2 text-sm md:text-base">
+                  <li>✔ 社群內容規劃與貼文設計 ✔ 30-60秒短影片剪輯</li>
+                  <li>✔ Banner/廣告圖製作 ✔ SEO文章撰寫</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">
+            <div>
+              <div class="text-lg font-semibold mb-4">長期合作方案</div>
+              <ul class="space-y-2">
+                <li>📌 包月/包年制服務，享專屬優惠</li>
+                <li>📌 定期內容更新與網站維護</li>
+                <li>📌 前同事技術支援，複雜專案也能搞定</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="text-lg font-semibold mb-4">為什麼選擇我們？</div>
+              <ul class="space-y-2">
+                <li>🔹 跨領域經驗：結合行銷思維與技術實現能力</li>
+                <li>🔹 彈性合作：從單次專案到長期託管皆可洽談</li>
+                <li>🔹 透明溝通：清楚報價與進度追蹤</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex justify-center mt-12">
+            <a
+              href="#"
+              class="relative bg-[#8782FF] text-white font-semibold py-3 px-6 rounded-full hover:bg-[#6f6bff] transition btn-glow"
+            >
+              <span>預約諮詢 →</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>

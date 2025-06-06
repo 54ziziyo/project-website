@@ -62,3 +62,16 @@
   opacity: 0;
   transform: translateY(40px);
 }
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0px rgba(134, 130, 255, 0.444);
+  }
+  50% {
+    box-shadow: 0 0 15px 5px rgba(134, 130, 255, 0.431);
+  }
+}
+.btn-glow {
+  animation: pulse-glow 2s infinite;
+}
