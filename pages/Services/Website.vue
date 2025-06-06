@@ -1,6 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import AutoScrollCards from "~/components/AutoScrollCards.vue";
+</script>
 <template>
-  <div><Project /></div>
+  <div><Project /> <AutoScrollCards /></div>
 </template>
 
 <style></style>
