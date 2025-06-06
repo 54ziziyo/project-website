@@ -35,11 +35,26 @@ onUnmounted(() => {
 // 導覽項目
 const navItems = [
   { title: "首頁", href: "/" },
-  { title: "網站架設", href: "/services/website" },
-  { title: "行銷服務", href: "/services/marketing" },
-  { title: "作品集", href: "/portfolio" },
-  { title: "聯絡我們", href: "/contact" },
+  { title: "關於我們", href: "/about" },
+  {
+    title: "服務項目",
+    children: [
+      { title: "網站架設", href: "/services/website" },
+      { title: "行銷服務", href: "/services/marketing" },
+      { title: "文宣設計", href: "/services/design" },
+      { title: "VIP全站客製", href: "/services/all" },
+    ],
+  },
+  { title: "常見問題", href: "/faq" },
+  { title: "數位工具箱", href: "/toolbox" },
+  { title: "聯繫我們", href: "/contact" },
 ];
+
+const expandedIndex = ref<number | null>(null);
+
+function toggleExpand(index: number) {
+  expandedIndex.value = expandedIndex.value === index ? null : index;
+}
 </script>
 
 <template>
@@ -70,9 +85,9 @@ const navItems = [
         >
           <div class="flex justify-end items-center mb-4">
             <div
-              @click="isOpen = false"
-              aria-label="關閉選單"
               class="cursor-pointer inline-block"
+              aria-label="關閉選單"
+              @click="isOpen = false"
             >
               <svg
                 class="w-7 h-7 text-gray-800 transition-transform duration-300 active:rotate-180"
@@ -88,21 +103,56 @@ const navItems = [
               </svg>
             </div>
           </div>
-          <nav class="flex flex-col gap-4">
-            <a
-              v-for="item in navItems"
-              :key="item.title"
-              :href="item.href"
-              class="text-base font-medium hover:text-blue-600"
-              @click="isOpen = false"
-            >
-              {{ item.title }}
-            </a>
+          <nav class="flex flex-col space-y-6">
+            <div v-for="(item, index) in navItems" :key="item.title">
+              <div
+                class="flex justify-between items-center cursor-pointer text-base font-medium hover:text-blue-600"
+                @click="item.children ? toggleExpand(index) : (isOpen = false)"
+              >
+                <a v-if="!item.children" :href="item.href" class="w-full block">
+                  {{ item.title }}
+                </a>
+                <span v-else>{{ item.title }}</span>
+
+                <svg
+                  v-if="item.children"
+                  :class="[
+                    'w-4 h-4 ml-2 transition-transform duration-300',
+                    expandedIndex === index ? 'rotate-180' : '',
+                  ]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+
+              <transition name="fade-slide">
+                <div
+                  v-if="item.children && expandedIndex === index"
+                  class="pl-4 mt-4 flex flex-col space-y-4"
+                >
+                  <a
+                    v-for="child in item.children"
+                    :key="child.title"
+                    :href="child.href"
+                    class="text-sm text-gray-700 hover:text-blue-500"
+                    @click="isOpen = false"
+                  >
+                    • {{ child.title }}
+                  </a>
+                </div>
+              </transition>
+            </div>
           </nav>
         </div>
       </transition>
 
-      <div class="flex-1" @click="isOpen = false"></div>
+      <div class="flex-1" @click="isOpen = false" />
     </div>
   </transition>
 </template>
