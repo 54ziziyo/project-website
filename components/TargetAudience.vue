@@ -54,7 +54,7 @@ const targetAudiences = [
 </script>
 
 <template>
-  <div class="w-full overflow-hidden px-4 pt-10 pb-32 select-none">
+  <div class="w-full px-4 pt-10 pb-32 select-none">
     <div
       class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center"
     >
@@ -73,7 +73,7 @@ const targetAudiences = [
         loop: true,
       }"
     >
-      <CarouselContent class="-ml-0">
+      <CarouselContent>
         <CarouselItem
           v-for="(targetAudience, index) in targetAudiences"
           :key="index"
@@ -81,7 +81,7 @@ const targetAudiences = [
         >
           <div class="p-2 h-full">
             <div
-              class="bg-white p-8 rounded-xl border h-full flex flex-col space-y-4 shadow-md hover:shadow-lg transition-shadow duration-300"
+              class="bg-white hover:scale-102 p-8 rounded-xl border h-full flex flex-col space-y-4 shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               <div class="flex items-center justify-center w-full h-40">
                 <img

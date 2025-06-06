@@ -31,7 +31,7 @@
           class="order-1 md:order-1 text-center md:text-left flex flex-col md:p-5 md:gap-2 justify-center"
         >
           <div class="text-[24px] font-bold md:text-[#8782FF]">
-            全棧式輕量服務
+            全站式輕量服務
           </div>
           <div
             class="text-[16px] md:text-[28px] font-semibold mb-4 text-[#5B5B5B] mt-2 md:mt-0"
