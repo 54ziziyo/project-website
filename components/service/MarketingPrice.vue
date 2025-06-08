@@ -1,33 +1,38 @@
 <script lang="ts" setup>
 const servicesPrice = [
   {
-    title: "社群製圖",
-    highlight: "多圖貼文排版製作",
-    description: "圖文排版優化、社群品牌風格制定、色彩與字體規範、版面模擬圖",
-    price: "$1200+",
+    title: "社群發文製作",
+    highlight: "單篇貼文圖文(含圖3~4張+文案撰寫)",
+    description: "圖文排版優化、社群品牌風格制定、色彩與字體規範",
+    price: "NT$1,200元/篇起",
   },
   {
-    title: "社群代操",
-    highlight: "6 篇貼文 + 1 支短影音 + 5 組限動",
-    description: "社群內容企劃、視覺風格制定、內容產製更新、限動規劃與發布",
-    price: "$12000+",
+    title: "限時動態設計",
+    highlight: "含2-3張動態圖，統一風格設計",
+    description: "圖文排版優化、社群品牌風格制定、色彩與字體規範",
+    price: "NT$600篇/元起",
   },
   {
-    title: "短影音剪輯",
-    highlight: "依毛片語音檔進行剪輯後製",
+    title: "SEO部落格文章撰寫",
+    highlight: "依關鍵字與主題撰寫",
     description:
-      "不含拍攝服務，90秒影片剪輯後製、含特效、音效、音樂、字幕、字卡",
-    price: "$1500+",
+      "包含關鍵字研究、SEO優化、內容撰寫、內部連結和CTA行動呼籲等規劃、圖片ALT標籤設定",
+    price: "$5,000元/篇起",
   },
   {
-    title: "圖片設計",
-    highlight: "單張圖、Banner 設計",
-    description:
-      "各類尺寸之平面圖片設計，主要配合電商、蝦皮平台尺寸，提供 JPG/PNG 圖檔",
-    price: "$1200+",
+    title: "30秒內短影音剪輯(不含拍攝)",
+    highlight: "剪接、字幕、配樂",
+    description: "依毛片語音檔進行剪輯後製",
+    price: "NT$800元/組",
   },
   {
-    title: "一頁式銷售圖",
+    title: "60秒內短影音剪輯(不含拍攝)",
+    highlight: "不含拍攝服務，依毛片語音檔進行剪輯後製",
+    description: "剪輯後製、含特效、音效、音樂、字幕、字卡",
+    price: "NT$1,200元/組",
+  },
+  {
+    title: "「放去設計」一頁式銷售圖",
     highlight: "依主題及內容製圖，依需求報價",
     description: "銷售文案撰寫、視覺風格制定、色彩與字體規範、銷售頁流程設計",
     price: "$15000+",

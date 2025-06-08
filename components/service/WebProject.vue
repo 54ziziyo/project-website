@@ -193,7 +193,7 @@
               旗艦方案
             </div>
             <div class="text-[18px] text-[#5B5B5B] lg:text-center text-start">
-              全客製系統/大規模平台
+              全客製系統/中大規模平台
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">

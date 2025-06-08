@@ -4,7 +4,7 @@ const servicesPrice = [
     title: "一頁式半客製化網站",
     highlight: "模板挑選、基本修改、部署、網域綁定",
     description:
-      "使用現成的 HTML/CSS/JS 模板，依照客戶品牌簡單修改內容與顏色，不含設計稿、不含後台。",
+      "使用現成的 HTML/CSS/JS 模板，依照客戶品牌簡單修改內容與顏色，不含設計稿、不含後台(後台另報價)。",
     price: "NT$6,000元起",
     ta: "✅ 適合內容簡潔、短期活動或需要快速上線的客戶",
   },
@@ -13,15 +13,15 @@ const servicesPrice = [
     highlight: "主題挑選、內容更新、WordPress 安裝與教學、基本後台設定",
     description:
       "依客戶需求挑選 WordPress 主題，協助安裝、調整內容、設置網站後台與 SEO 基礎設定。",
-    price: "$12,000元起",
+    price: "$25,000元起",
     ta: "✅ 適合想自己更新內容、有後台需求的中小企業",
   },
   {
     title: "一頁式全客製化網站（含設計）",
     highlight: "Figma 設計 + 客製開發 + 部署",
     description:
-      "由零開始規劃版型、UI/UX 設計，並轉為 HTML/CSS/JS 程式碼，含響應式設計（RWD），不含後台。",
-    price: "NT$25,000元起",
+      "由零開始規劃版型、UI/UX 設計，並轉為 HTML/CSS/JS 程式碼，含響應式設計（RWD），不含後台(後台另報價)。",
+    price: "NT$30,000元起",
     ta: "✅ 適合注重品牌形象、想要獨特設計的客戶",
   },
   {
@@ -29,13 +29,14 @@ const servicesPrice = [
     highlight: "有後台，客戶可自行更新、擴充",
     description:
       "套用佈景主題＋客製頁面內容（首頁、關於我們、服務介紹、聯絡我們等）",
-    price: "NT$25,000+",
+    price: "NT$25,000元起",
     ta: "✅ 適合長期經營內容的中小企業、部落格",
   },
   {
     title: "多頁式全客製化網站（含設計）",
     highlight: "Figma 設計 + 客製開發 + RWD響應式 + 部署",
-    description: "使用 HTML/CSS/JS/Vue 等技術開發，不含後台",
+    description:
+      "由零開始規劃版型、UI/UX 設計，並轉為 HTML/CSS/JS 程式碼，含響應式設計（RWD），不含後台(後台另報價)。",
     price: "NT$10,000元/頁起",
     ta: "✅ 適合需要高度客製化的企業或品牌，也適合不需後台、要求高彈性的品牌頁面等",
   },
