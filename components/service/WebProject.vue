@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="relative md:pt-[235px] pt-24">
+  <div class="relative md:pt-40 pt-20">
     <!-- 大標 -->
     <div
-      class="absolute left-1/2 -translate-x-1/2 md:translate-x-0 min-[480px]:text-[100px] min-[737px]:text-[120px] top-0 md:left-24 text-[70px] md:text-[200px] font-bold md:text-[#FAFAFA] md:right-[30px] leading-none text-gray-100"
+      class="absolute left-1/2 -translate-x-1/2 md:translate-x-0 min-[480px]:text-[100px] min-[737px]:text-[120px] top-10 md:left-24 text-[70px] md:text-[200px] font-bold md:text-[#FAFAFA] md:right-[30px] leading-none text-gray-100"
     >
       Project
     </div>
@@ -21,7 +21,7 @@
         >
           選擇最適合你的計劃
         </div>
-        <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]"></span>
+        <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]" />
         <div class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-1 text-center">
           若您有活靈活現的想法想要被實現
         </div>
