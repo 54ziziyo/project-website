@@ -13,7 +13,7 @@ const services = [
       "短影音剪輯（30s～60s）",
       "社群經營與排程代發",
     ],
-    img: MedoaPlanImg,
+    img: TrainingImg,
   },
   {
     title: "平面設計",
@@ -42,7 +42,7 @@ const services = [
       "網站設計＋社群經營＋SEO寫手",
       "提供包月內容製作、數據追蹤",
     ],
-    img: TrainingImg,
+    img: MedoaPlanImg,
   },
 ];
 </script>
@@ -182,9 +182,9 @@ const services = [
           class="relative z-10 flex items-center justify-between h-full px-10"
         >
           <div>
-            <h2 class="text-2xl font-bold mb-2">用簡報將你想法完整表達</h2>
+            <h2 class="text-2xl font-bold mb-2">從品牌定位到數位落地</h2>
             <p class="text-sm text-gray-200">
-              用簡報，驅使聽眾達成你想要的行動
+              我用『行銷腦+技術力』幫你實現100%
             </p>
           </div>
 
