@@ -17,7 +17,6 @@ const cards = [
     description: "客製化表單、預約系統、行事曆串接、Email 通知等",
   },
   { title: "平台客製化功能", description: "Wix、Shopify 其他平台客製功能" },
-  { title: "網站設計與開發", description: "客製化設計、響應式網頁開發" },
 ];
 
 const duplicatedCards = [...cards, ...cards];
@@ -50,7 +49,7 @@ onMounted(() => {
       <div
         class="text-[24px] md:text-[52px] font-bold leading-none mb-4 md:mb-8"
       >
-        您的<span class="text-[#8782FF]">網站</span>就交給我們
+        您的<span class="text-[#8782FF]">網站</span>還能做到這些
       </div>
       <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
         提供給您最專業的服務
@@ -73,11 +72,9 @@ onMounted(() => {
         >
           <div
             class="absolute inset-0 rounded-full bg-[#B8AEFF] opacity-30 animate-radar"
-          ></div>
-          <div
-            class="absolute inset-6 rounded-full bg-[#B8AEFF] opacity-50"
-          ></div>
-          <div class="absolute inset-12 rounded-full bg-[#B8AEFF]"></div>
+          />
+          <div class="absolute inset-6 rounded-full bg-[#B8AEFF] opacity-50" />
+          <div class="absolute inset-12 rounded-full bg-[#B8AEFF]" />
         </div>
 
         <!-- 卡片內容 -->

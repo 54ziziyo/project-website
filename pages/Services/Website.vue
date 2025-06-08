@@ -6,7 +6,8 @@ import WebPrice from "~/components/service/WebPrice.vue";
 <template>
   <div>
     <WebPrice />
-    <WebProject /> <AutoScrollCards />
+    <AutoScrollCards />
+    <WebProject />
   </div>
 </template>
 
