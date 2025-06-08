@@ -67,7 +67,7 @@ const showMenu = ref(false);
     >
       <!-- Logo -->
       <div class="font-extrabold text-xl font-[Hammersmith_One] cursor-pointer">
-        <a href="/">zeona</a>
+        <a href="/">Zeona</a>
       </div>
 
       <!-- Navigation -->
