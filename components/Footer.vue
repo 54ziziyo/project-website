@@ -6,7 +6,7 @@
       class="flex md:justify-evenly flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8 mx-10 md:mx-0"
     >
       <div class="text-left">
-        <div class="font-bold font-[Hammersmith_One]">Luzar</div>
+        <div class="font-bold font-[Hammersmith_One]">zeona</div>
         <div>感謝您訪問我們的網站，期待為您提供優質的服務！</div>
       </div>
       <div class="space-x-4 flex">
@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="container mx-auto font-bold">
-      <p>© {{ currentYear }} Luzar. All rights reserved.</p>
+      <p>© {{ currentYear }} zeona. All rights reserved.</p>
     </div>
   </footer>
 </template>

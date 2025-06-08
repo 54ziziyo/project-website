@@ -21,14 +21,15 @@
         <div
           class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6"
         >
-          關於我們
+          想告訴你的是
         </div>
         <div class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4">
-          專注於「網站整合設計 ×
-          技術實現」的工作室，由具備業界經驗的全端工程師與數位行銷人組成。<br />
+          嗨，我是 Zeona Studio，擁有數位行銷背景、UI/UX
+          專業，目前擁有4年以上網頁前端工程經驗<br />
+          我曾在台灣知名企業擔任網站與社群營運工作，後來自學設計與開發，專注於品牌網站打造、數位行銷與內容製作
         </div>
         <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
-          我們相信，好的網站不只好看，還要好用、好操作、好維護。
+          技術與美感兼具，讓你一站式完成品牌在網路上的所有需求
         </div>
       </div>
 

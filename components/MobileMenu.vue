@@ -35,7 +35,7 @@ onUnmounted(() => {
 // 導覽項目
 const navItems = [
   { title: "首頁", href: "/" },
-  { title: "關於我們", href: "/about" },
+  { title: "關於Zeona", href: "/about" },
   {
     title: "服務項目",
     children: [
