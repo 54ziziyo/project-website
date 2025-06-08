@@ -67,7 +67,7 @@ const showMenu = ref(false);
     >
       <!-- Logo -->
       <div class="font-extrabold text-xl font-[Hammersmith_One] cursor-pointer">
-        <a href="/">Luzar</a>
+        <a href="/">zeona</a>
       </div>
 
       <!-- Navigation -->
@@ -78,7 +78,7 @@ const showMenu = ref(false);
               href="/about"
               :class="navigationMenuTriggerStyle()"
             >
-              關於我們
+              關於Zeona
             </NavigationMenuLink>
           </NavigationMenuItem>
 
