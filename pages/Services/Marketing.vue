@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import WebProject from "~/components/service/WebProject.vue";
-import AutoScrollCards from "~/components/AutoScrollCards.vue";
+import AutoScrollCards from "~/components/service/WebAutoScrollCards.vue";
 import MarketingPrice from "~/components/service/MarketingPrice.vue";
 </script>
 <template>

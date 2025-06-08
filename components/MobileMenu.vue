@@ -56,7 +56,6 @@ function toggleExpand(index: number) {
   expandedIndex.value = expandedIndex.value === index ? null : index;
 }
 </script>
-
 <template>
   <transition
     enter-active-class="transition-opacity duration-300"
@@ -68,7 +67,7 @@ function toggleExpand(index: number) {
   >
     <div
       v-if="isOpen"
-      class="fixed inset-0 z-50 bg-black/40 flex"
+      class="fixed inset-0 z-50 flex bg-white h-screen overflow-hidden"
       @click.self="isOpen = false"
     >
       <transition

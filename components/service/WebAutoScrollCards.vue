@@ -43,7 +43,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="overflow-hidden relative w-full gradient-p-to-y-bg py-[100px]">
+  <div class="overflow-hidden relative w-full gradient-p-to-y-bg py-32">
     <!-- 標題區塊 -->
     <div class="flex flex-col items-center mb-14 md:mb-[80px]">
       <div
