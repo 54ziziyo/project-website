@@ -1,18 +1,16 @@
 <script lang="ts" setup>
 const servicesPrice = [
   {
-    title: "社群發文製作",
-    highlight: "單篇貼文圖文，含3-4張圖+文案撰寫(增圖可額外加購)",
-    description:
-      "這些是針對 Facebook / Instagram（適應格式）製作的完整社群貼文內容。你提供主題、活動內容或優惠資訊，我來負責文案撰寫、圖文設計與排版。",
-    price: "NT$2,000元/篇起",
+    title: "Logo設計",
+    highlight: "含設計規劃、標準配色、基本應用圖示",
+    description: "",
+    price: "NT$8,000元起",
   },
   {
     title: "限時動態設計",
     highlight: "含2-3張動態圖，統一風格設計",
-    description:
-      "這是適合放在 Instagram / Facebook 限動的設計內容，通常會搭配主題活動、倒數、投票互動、教學類圖片等。會搭配貼文主題，也可獨立操作（例如上新提醒、快閃優惠、品牌日常等）。",
-    price: "NT$1,000篇/元起",
+    description: "圖文排版優化、社群品牌風格制定、色彩與字體規範",
+    price: "NT$600篇/元起",
   },
   {
     title: "SEO部落格文章撰寫",
@@ -33,6 +31,12 @@ const servicesPrice = [
     description: "剪輯後製、含特效、音效、音樂、字幕、字卡",
     price: "NT$1,200元/組",
   },
+  {
+    title: "一頁式網站銷售圖",
+    highlight: "依主題及內容製圖，依需求報價",
+    description: "銷售文案撰寫、視覺風格制定、色彩與字體規範、銷售頁流程設計",
+    price: "NT$10,000元起",
+  },
 ];
 </script>
 <template>
@@ -45,7 +49,7 @@ const servicesPrice = [
     <div
       class="text-[24px] md:text-[52px] font-bold leading-none mb-24 text-center"
     >
-      行銷服務設價目表
+      設計服務設價目表
     </div>
 
     <div class="space-y-12 max-w-5xl mx-auto">
@@ -58,14 +62,12 @@ const servicesPrice = [
         >
           <div>
             <div class="text-xl font-medium mb-2">{{ service.title }}</div>
-            <p class="text-sm text-gray-600 mr-20">
+            <p class="text-sm text-gray-600 font-semibold">
               {{ service.highlight }}
             </p>
-            <p class="text-sm text-gray-600 mr-20">{{ service.description }}</p>
+            <p class="text-sm text-gray-600">{{ service.description }}</p>
           </div>
-          <div class="text-xl font-bold mt-4 md:mt-0 whitespace-nowrap">
-            {{ service.price }}
-          </div>
+          <div class="text-xl font-bold mt-4 md:mt-0">{{ service.price }}</div>
         </div>
       </div>
     </div>

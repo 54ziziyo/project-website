@@ -11,9 +11,26 @@ import {
 import MobileDrawer from "../components/MobileMenu.vue";
 
 const isScrolled = ref(false);
+const isHidden = ref(false);
+
+let lastScrollY = 0;
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50;
+  const currentScrollY = window.scrollY;
+
+  // 控制 header 的 shadow / padding
+  isScrolled.value = currentScrollY > 10;
+
+  // 控制 header 隱藏與顯示
+  if (currentScrollY > lastScrollY && currentScrollY > 10) {
+    // 往下滑 & 超過一定高度才隱藏
+    isHidden.value = true;
+  } else {
+    // 往上滑或回頂部
+    isHidden.value = false;
+  }
+
+  lastScrollY = currentScrollY;
 };
 
 onMounted(() => {
@@ -28,17 +45,17 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "網站架設",
     href: "/services/website",
-    description: "網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力。",
+    description: "網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力",
   },
   {
     title: "行銷服務",
     href: "/services/marketing",
-    description: "行銷策略、社群媒體管理、內容行銷等服務，提升品牌曝光率。",
+    description: "行銷策略、社群媒體管理、內容行銷等服務，提升品牌曝光率",
   },
   {
     title: "文宣設計",
     href: "/services/design",
-    description: "設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象。",
+    description: "設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象",
   },
   {
     title: "VIP全站客製",
@@ -55,8 +72,9 @@ const showMenu = ref(false);
   <!-- Sticky Header Wrapper -->
   <div
     :class="[
-      'fixed top-0 left-0 w-full z-50 transition-all duration-300 duration-500 ease-in-out',
-      isScrolled ? 'pt-5 md:px-7 px-4' : 'bg-white shadow-sm py-3',
+      'fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out transform',
+      isScrolled ? 'pt-5 md:px-7 px-4 ' : 'bg-white shadow-sm py-3',
+      isHidden ? '-translate-y-full' : 'translate-y-0',
     ]"
   >
     <div

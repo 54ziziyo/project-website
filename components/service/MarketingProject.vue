@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="relative md:pt-40 pt-20">
+  <div class="relative md:py-40 py-20">
     <!-- 大標 -->
     <div
       class="absolute left-1/2 -translate-x-1/2 md:translate-x-0 min-[480px]:text-[100px] min-[737px]:text-[120px] top-10 md:left-24 text-[70px] md:text-[200px] font-bold md:text-[#FAFAFA] md:right-[30px] leading-none text-gray-100"
@@ -39,18 +39,16 @@
           class="bg-white/50 backdrop-blur-sm rounded-2xl hover:border-2 shadow-lg hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
         >
           <div class="space-y-2">
-            <div class="text-[20px] font-bold text-start">閃電上線包</div>
+            <div class="text-[20px] font-bold text-start">基礎行銷維運方案</div>
             <div class="text-[18px] text-[#5B5B5B] text-start">
-              新創企業團隊/品牌形象/短期行銷活動
+              新創品牌、小型帳號，社群穩定更新
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">
             <div class="text-[32px] lg:text-[40px] leading-none">
-              NT＄30,000
+              NT＄15,000
             </div>
-            <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]"
-              >/台幣起</span
-            >
+            <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">元/月</span>
           </div>
           <div
             class="text-base text-[#5B5B5B] border rounded-sm border-[#8782FF] w-full py-3 text-center cursor-pointer hover:bg-[#8782FF] hover:text-white transition-colors duration-300"
@@ -65,26 +63,8 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">半客製化一頁式網站</span>
-            </div>
-            <div class="space-x-1 flex items-center">
-              <Icon
-                name="pajamas:check-sm"
-                width="24"
-                height="24"
-                class="text-[#8782FF]"
-              />
-              <span class="ml-2 text-[#5B5B5B]">響應式設計(RWD)</span>
-            </div>
-            <div class="space-x-1 flex items-center">
-              <Icon
-                name="pajamas:check-sm"
-                width="24"
-                height="24"
-                class="text-[#8782FF]"
-              />
               <span class="ml-2 text-[#5B5B5B]"
-                >基礎SEO設定 (Meta標籤優化)</span
+                >8 篇貼文含圖文（版面設計與整體規劃）</span
               >
             </div>
             <div class="space-x-1 flex items-center">
@@ -94,7 +74,7 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">Google Analytics 安裝</span>
+              <span class="ml-2 text-[#5B5B5B]">6 組限動（含2-3張動態圖）</span>
             </div>
             <div class="space-x-1 flex items-center">
               <Icon
@@ -103,7 +83,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">一次性部署(靜態)</span>
+              <span class="ml-2 text-[#5B5B5B]"
+                >基本內容規劃（提供發文方向建議）</span
+              >
             </div>
             <div class="space-x-1 flex items-center">
               <Icon
@@ -112,7 +94,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">主機與網域代辦</span>
+              <span class="ml-2 text-[#5B5B5B]"
+                >貼文設計與文案撰寫（可額外加購＋）</span
+              >
             </div>
           </div>
         </div>
@@ -123,20 +107,18 @@
         >
           <div class="space-y-2">
             <div class="font-bold flex justify-between items-center">
-              <div class="text-[20px]">電商啟動包</div>
+              <div class="text-[20px]">穩定品牌經營方案</div>
               <span class="text-[#8782FF] text-[16px]">最受歡迎</span>
             </div>
             <div class="text-[18px] text-[#5B5B5B] text-left">
-              電商品牌、實體轉線上、服務預約系統
+              穩定經營中品牌，需要完整規劃
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">
             <div class="text-[32px] lg:text-[40px] leading-none">
-              NT＄68,000
+              NT＄25,000
             </div>
-            <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]"
-              >/台幣起</span
-            >
+            <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">元/月</span>
           </div>
           <div
             class="text-base border rounded-sm hover:bg-[#6f6bff] w-full py-3 text-center cursor-pointer bg-[#8782FF] text-white transition-colors duration-300"
@@ -151,17 +133,8 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">多頁式WordPress全功能網站</span>
-            </div>
-            <div class="space-x-1 flex items-center">
-              <Icon
-                name="pajamas:check-sm"
-                width="24"
-                height="24"
-                class="text-[#8782FF]"
-              />
               <span class="ml-2 text-[#5B5B5B]"
-                >購物車+金流串接 (綠界/Line Pay)</span
+                >12 篇貼文含圖文（版面設計與整體規劃）</span
               >
             </div>
             <div class="space-x-1 flex items-center">
@@ -171,7 +144,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">會員系統+訂單管理後台</span>
+              <span class="ml-2 text-[#5B5B5B]"
+                >10 組限動（含2-3張動態圖）</span
+              >
             </div>
             <div class="space-x-1 flex items-center">
               <Icon
@@ -180,7 +155,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">後台上架與使用教學</span>
+              <span class="ml-2 text-[#5B5B5B]"
+                >完整社群內容規劃(主題設計/發文策略)</span
+              >
             </div>
             <div class="space-x-1 flex items-center">
               <Icon
@@ -189,7 +166,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">部落格 BLOG</span>
+              <span class="ml-2 text-[#5B5B5B]"
+                >貼文設計/文案撰寫/排程發佈</span
+              >
             </div>
             <div class="space-x-1 flex items-center">
               <Icon
@@ -198,7 +177,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">主機與網域代辦</span>
+              <span class="ml-2 text-[#5B5B5B]"
+                >不含短影音剪輯（可額外加購＋）</span
+              >
             </div>
           </div>
         </div>
@@ -208,13 +189,18 @@
           class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:border-2 hover:shadow-xl relative px-8 py-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform hover:-translate-y-2"
         >
           <div class="space-y-2">
-            <div class="text-[20px] font-bold text-left">旗艦方案</div>
+            <div class="text-[20px] font-bold text-left">
+              影音＋社群整合方案
+            </div>
             <div class="text-[18px] text-[#5B5B5B] text-left">
-              全客製系統/中大規模平台
+              需要影音曝光的中小型品牌
             </div>
           </div>
-          <div class="flex space-x-2">
-            <div class="text-[28px] leading-none font-bold">依需求報價</div>
+          <div class="text-base flex items-end space-x-2">
+            <div class="text-[32px] lg:text-[40px] leading-none">
+              NT＄30,000
+            </div>
+            <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">元/月</span>
           </div>
           <div
             class="text-base text-[#5B5B5B] border rounded-sm border-[#8782FF] w-full py-3 text-center cursor-pointer hover:bg-[#8782FF] hover:text-white transition-colors duration-300"
@@ -229,17 +215,8 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">全客製化設計、開發</span>
-            </div>
-            <div class="space-x-1 flex items-center">
-              <Icon
-                name="pajamas:check-sm"
-                width="24"
-                height="24"
-                class="text-[#8782FF]"
-              />
               <span class="ml-2 text-[#5B5B5B]"
-                >例如：訂閱/權限/社群功能客製化需求</span
+                >12 篇貼文含圖文（版面設計與整體規劃）</span
               >
             </div>
             <div class="space-x-1 flex items-center">
@@ -249,7 +226,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">資料庫建置/API製作與串接</span>
+              <span class="ml-2 text-[#5B5B5B]"
+                >10 組限動（含2-3張動態圖）</span
+              >
             </div>
             <div class="space-x-1 flex items-center">
               <Icon
@@ -258,7 +237,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">專屬後台管理系統(CMS)</span>
+              <span class="ml-2 text-[#5B5B5B]">
+                2支60秒短影音剪輯（含字幕&特效）</span
+              >
             </div>
             <div class="space-x-1 flex items-center">
               <Icon
@@ -267,7 +248,9 @@
                 height="24"
                 class="text-[#8782FF]"
               />
-              <span class="ml-2 text-[#5B5B5B]">各項客製化需求</span>
+              <span class="ml-2 text-[#5B5B5B]"
+                >完整社群內容規劃、發文排程</span
+              >
             </div>
           </div>
         </div>
