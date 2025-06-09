@@ -45,9 +45,7 @@
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">
-              NT＄30,000
-            </div>
+            <div class="text-[32px] lg:text-[40px] leading-none">＄30,000</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]"
               >/台幣起</span
             >
@@ -131,9 +129,7 @@
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">
-              NT＄68,000
-            </div>
+            <div class="text-[32px] lg:text-[40px] leading-none">＄68,000</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]"
               >/台幣起</span
             >

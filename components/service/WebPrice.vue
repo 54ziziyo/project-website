@@ -69,7 +69,7 @@ const webDesignPrice = [
     title: "一頁式 UI/UX 設計(純設計)",
     highlight: "依主題及內容製圖，依需求報價",
     description: "包含 Wireframe、UI 設計、設計系統規劃與交付 Figma 檔",
-    price: "NT$8,000元/頁起",
+    price: "NT$10,000元/頁起",
     ta: " ✅ 適合已有開發者團隊、只需要視覺設計的企業",
   },
   {
@@ -257,7 +257,9 @@ const psdToHtmlPrice = [
         <p class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-10">
           PRICE LIST
         </p>
-        <div class="space-y-2 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-8">
+        <div
+          class="space-y-2 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-8 pb-12"
+        >
           <div
             v-for="(service, index) in psdToHtmlPrice"
             :key="index"
