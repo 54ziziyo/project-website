@@ -127,7 +127,7 @@
               <span class="text-[#8782FF] text-[16px]">最受歡迎</span>
             </div>
             <div class="text-[18px] text-[#5B5B5B] text-left">
-              電商品牌、實體轉線上、服務預約系統
+              電商品牌/實體轉線上/購物車系統
             </div>
           </div>
           <div class="text-base flex items-end space-x-2">

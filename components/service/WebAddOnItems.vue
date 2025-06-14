@@ -13,12 +13,12 @@ const basicAddons = [
   {
     name: "SEO 優化設定",
     description: "關鍵字優化、sitemap、meta tag 設定",
-    price: "NT$5,000元起",
+    price: "NT$3,000-5,000元/頁",
   },
   {
     name: "Google Analytics 安裝",
     description: "流量追蹤代設定",
-    price: "NT$2,000元",
+    price: "NT$1,500元",
   },
   {
     name: "多語言切換",
