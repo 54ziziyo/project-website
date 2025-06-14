@@ -36,16 +36,16 @@ const servicesPrice = [
 ];
 </script>
 <template>
-  <div class="px-6 py-24 md:px-20">
+  <div class="px-6 pt-12 md:pt-24 pb-24 md:px-20">
     <p
       class="mb-4 text-[#8782FF] text-[16px] md:text-[24px] font-bold text-center"
     >
       PRICE LIST
     </p>
     <div
-      class="text-[24px] md:text-[52px] font-bold leading-none mb-24 text-center"
+      class="text-[28px] md:text-[36px] font-bold leading-none mb-24 text-center"
     >
-      行銷服務設價目表
+      行銷服務價目表
     </div>
 
     <div class="space-y-12 max-w-5xl mx-auto">
