@@ -2,66 +2,58 @@
 const props = defineProps({
   color: {
     type: String,
-    default: "black", // 預設顏色
+    default: 'black', // 預設顏色
   },
-});
+})
 
-const dot = ref<HTMLDivElement | null>(null);
-const circle = ref<HTMLDivElement | null>(null);
+const dot = ref<HTMLDivElement | null>(null)
+const circle = ref<HTMLDivElement | null>(null)
 
-let mouseX = 0;
-let mouseY = 0;
+let mouseX = 0
+let mouseY = 0
 
-let circleX = 0;
-let circleY = 0;
+let circleX = 0
+let circleY = 0
 
 const move = (e: MouseEvent) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-};
+  mouseX = e.clientX
+  mouseY = e.clientY
+}
 
 const animate = () => {
   if (dot.value) {
-    dot.value.style.top = `${mouseY}px`;
-    dot.value.style.left = `${mouseX}px`;
+    dot.value.style.top = `${mouseY}px`
+    dot.value.style.left = `${mouseX}px`
   }
 
   if (circle.value) {
     // 緩慢逼近滑鼠座標
-    circleX += (mouseX - circleX) * 0.1;
-    circleY += (mouseY - circleY) * 0.1;
+    circleX += (mouseX - circleX) * 0.1
+    circleY += (mouseY - circleY) * 0.1
 
-    circle.value.style.top = `${circleY}px`;
-    circle.value.style.left = `${circleX}px`;
+    circle.value.style.top = `${circleY}px`
+    circle.value.style.left = `${circleX}px`
   }
 
-  requestAnimationFrame(animate);
-};
+  requestAnimationFrame(animate)
+}
 
 onMounted(() => {
-  window.addEventListener("mousemove", move);
-  animate(); // 啟動動畫循環
-});
+  window.addEventListener('mousemove', move)
+  animate() // 啟動動畫循環
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener("mousemove", move);
-});
+  window.removeEventListener('mousemove', move)
+})
 </script>
 
 <template>
   <div>
     <!-- 大圈圈 -->
-    <div
-      ref="circle"
-      :style="{ borderColor: props.color }"
-      class="cursor-circle"
-    ></div>
+    <div ref="circle" :style="{ borderColor: props.color }" class="cursor-circle"></div>
     <!-- 小點 -->
-    <div
-      ref="dot"
-      :style="{ backgroundColor: props.color }"
-      class="cursor-dot"
-    ></div>
+    <div ref="dot" :style="{ backgroundColor: props.color }" class="cursor-dot"></div>
   </div>
 </template>
 

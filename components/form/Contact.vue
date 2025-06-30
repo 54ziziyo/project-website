@@ -1,33 +1,32 @@
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
 const form = {
-  name: ref(""),
-  brand: ref(""),
-  mail: ref(""),
-  line: ref(""),
-  desc: ref(""),
-  startDate: ref(""),
-  endDate: ref(""),
-  budget: ref(""),
-};
+  name: ref(''),
+  brand: ref(''),
+  mail: ref(''),
+  line: ref(''),
+  desc: ref(''),
+  startDate: ref(''),
+  endDate: ref(''),
+  budget: ref(''),
+}
 
-const errors = ref({});
+const errors = ref({})
 
 function validate() {
-  errors.value = {};
-  if (!form.name.value) errors.value.name = "姓名為必填";
-  if (!form.mail.value || !form.mail.value.includes("@"))
-    errors.value.mail = "請輸入有效的電子信箱";
-  if (!form.desc.value) errors.value.desc = "請填寫需求說明";
-  if (!form.budget.value) errors.value.budget = "請填寫預算";
+  errors.value = {}
+  if (!form.name.value) errors.value.name = '姓名為必填'
+  if (!form.mail.value || !form.mail.value.includes('@')) errors.value.mail = '請輸入有效的電子信箱'
+  if (!form.desc.value) errors.value.desc = '請填寫需求說明'
+  if (!form.budget.value) errors.value.budget = '請填寫預算'
 
-  return Object.keys(errors.value).length === 0;
+  return Object.keys(errors.value).length === 0
 }
 
 function onSubmit() {
-  if (!validate()) return;
-  alert("表單已提交！");
+  if (!validate()) return
+  alert('表單已提交！')
 }
 </script>
 
@@ -35,9 +34,7 @@ function onSubmit() {
   <div class="space-y-6">
     <!-- 姓名 -->
     <div class="flex flex-col space-y-2">
-      <label for="name" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
-        >聯絡人姓名※</label
-      >
+      <label for="name" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">聯絡人姓名※</label>
       <input
         v-model="form.name.value"
         id="name"
@@ -52,9 +49,7 @@ function onSubmit() {
 
     <!-- 公司品牌 -->
     <div class="flex flex-col space-y-2">
-      <label for="brand" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
-        >公司/品牌名稱</label
-      >
+      <label for="brand" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">公司/品牌名稱</label>
       <input
         v-model="form.brand.value"
         id="brand"
@@ -66,9 +61,7 @@ function onSubmit() {
 
     <!-- 信箱 -->
     <div class="flex flex-col space-y-2">
-      <label for="mail" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
-        >電子信箱※</label
-      >
+      <label for="mail" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">電子信箱※</label>
       <input
         v-model="form.mail.value"
         id="mail"
@@ -83,9 +76,7 @@ function onSubmit() {
 
     <!-- LINE ID -->
     <div class="flex flex-col space-y-2">
-      <label for="line" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
-        >LINE ID</label
-      >
+      <label for="line" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">LINE ID</label>
       <input
         v-model="form.line.value"
         id="line"
@@ -100,9 +91,7 @@ function onSubmit() {
 
     <!-- 需求說明 -->
     <div class="flex flex-col space-y-2">
-      <label for="desc" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
-        >需求說明※</label
-      >
+      <label for="desc" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">需求說明※</label>
       <textarea
         v-model="form.desc.value"
         id="desc"
@@ -118,11 +107,7 @@ function onSubmit() {
     <!-- 日期 -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="flex flex-col space-y-2">
-        <label
-          for="startDate"
-          class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
-          >預計開案日</label
-        >
+        <label for="startDate" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預計開案日</label>
         <input
           v-model="form.startDate.value"
           id="startDate"
@@ -132,11 +117,7 @@ function onSubmit() {
       </div>
 
       <div class="flex flex-col space-y-2">
-        <label
-          for="endDate"
-          class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
-          >預計結案日</label
-        >
+        <label for="endDate" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預計結案日</label>
         <input
           v-model="form.endDate.value"
           id="endDate"
@@ -148,9 +129,7 @@ function onSubmit() {
 
     <!-- 預算 -->
     <div class="flex flex-col space-y-2">
-      <label for="budget" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2"
-        >預算範圍※</label
-      >
+      <label for="budget" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預算範圍※</label>
       <input
         v-model="form.budget.value"
         id="budget"

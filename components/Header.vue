@@ -7,65 +7,65 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import MobileDrawer from "../components/MobileMenu.vue";
+} from '@/components/ui/navigation-menu'
+import MobileDrawer from '../components/MobileMenu.vue'
 
-const isScrolled = ref(false);
-const isHidden = ref(false);
+const isScrolled = ref(false)
+const isHidden = ref(false)
 
-let lastScrollY = 0;
+let lastScrollY = 0
 
 const handleScroll = () => {
-  const currentScrollY = window.scrollY;
+  const currentScrollY = window.scrollY
 
   // 控制 header 的 shadow / padding
-  isScrolled.value = currentScrollY > 10;
+  isScrolled.value = currentScrollY > 10
 
   // 控制 header 隱藏與顯示
   if (currentScrollY > lastScrollY && currentScrollY > 10) {
     // 往下滑 & 超過一定高度才隱藏
-    isHidden.value = true;
+    isHidden.value = true
   } else {
     // 往上滑或回頂部
-    isHidden.value = false;
+    isHidden.value = false
   }
 
-  lastScrollY = currentScrollY;
-};
+  lastScrollY = currentScrollY
+}
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
+  window.addEventListener('scroll', handleScroll)
+})
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
+  window.removeEventListener('scroll', handleScroll)
+})
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "網站架設",
-    href: "/services/website",
-    description: "網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力",
+    title: '網站架設',
+    href: '/services/website',
+    description: '網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力',
   },
   {
-    title: "行銷服務",
-    href: "/services/marketing",
-    description: "行銷策略、社群媒體管理、內容行銷等服務，提升品牌曝光率",
+    title: '行銷服務',
+    href: '/services/marketing',
+    description: '行銷策略、社群媒體管理、內容行銷等服務，提升品牌曝光率',
   },
   {
-    title: "文宣設計",
-    href: "/services/design",
-    description: "設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象",
+    title: '文宣設計',
+    href: '/services/design',
+    description: '設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象',
   },
   {
-    title: "VIP全站客製",
-    href: "/services/all",
-    description: "提供全方位的數位服務，從網站建置到行銷推廣，滿足各種需求。",
+    title: 'VIP全站客製',
+    href: '/services/all',
+    description: '提供全方位的數位服務，從網站建置到行銷推廣，滿足各種需求。',
   },
-];
+]
 
 // 控制 Drawer 開關
-const showMenu = ref(false);
+const showMenu = ref(false)
 </script>
 
 <template>
@@ -92,20 +92,13 @@ const showMenu = ref(false);
       <NavigationMenu class="md:flex hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/about"
-              :class="navigationMenuTriggerStyle()"
-            >
-              關於Zeona
-            </NavigationMenuLink>
+            <NavigationMenuLink href="/about" :class="navigationMenuTriggerStyle()"> 關於Zeona </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuTrigger>服務項目</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul
-                class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
-              >
+              <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 <li v-for="component in components" :key="component.title">
                   <div as-child>
                     <a
@@ -115,9 +108,7 @@ const showMenu = ref(false);
                       <div class="text-sm font-medium leading-none">
                         {{ component.title }}
                       </div>
-                      <p
-                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
-                      >
+                      <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
                         {{ component.description }}
                       </p>
                     </a>
@@ -128,21 +119,11 @@ const showMenu = ref(false);
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/faq"
-              :class="navigationMenuTriggerStyle()"
-            >
-              常見問題
-            </NavigationMenuLink>
+            <NavigationMenuLink href="/faq" :class="navigationMenuTriggerStyle()"> 常見問題 </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/toolbox"
-              :class="navigationMenuTriggerStyle()"
-            >
-              數位工具箱
-            </NavigationMenuLink>
+            <NavigationMenuLink href="/toolbox" :class="navigationMenuTriggerStyle()"> 數位工具箱 </NavigationMenuLink>
           </NavigationMenuItem>
 
           <!-- <NavigationMenuItem>

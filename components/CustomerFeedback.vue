@@ -1,94 +1,76 @@
 <script setup lang="ts">
-import avatar1 from "../assets/images/avatar/avatar-1.png";
-import avatar2 from "../assets/images/avatar/avatar-2.png";
-import avatar3 from "../assets/images/avatar/avatar-3.png";
-import avatar4 from "../assets/images/avatar/avatar-4.png";
-import avatar5 from "../assets/images/avatar/avatar-5.png";
-import avatar6 from "../assets/images/avatar/avatar-6.png";
-import Autoplay from "embla-carousel-autoplay";
+import avatar1 from '../assets/images/avatar/avatar-1.png'
+import avatar2 from '../assets/images/avatar/avatar-2.png'
+import avatar3 from '../assets/images/avatar/avatar-3.png'
+import avatar4 from '../assets/images/avatar/avatar-4.png'
+import avatar5 from '../assets/images/avatar/avatar-5.png'
+import avatar6 from '../assets/images/avatar/avatar-6.png'
+import Autoplay from 'embla-carousel-autoplay'
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
 
-const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
+const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6]
 
 const testimonials = [
   {
-    content:
-      "我們子公司的手機版網頁服務一直都很難使用，後來決定重新設計介面跟規劃流程，現在用戶數提高了很多，很讚！",
-    author: "Dragon陳",
-    role: "產品經理",
+    content: '我們子公司的手機版網頁服務一直都很難使用，後來決定重新設計介面跟規劃流程，現在用戶數提高了很多，很讚！',
+    author: 'Dragon陳',
+    role: '產品經理',
     avatar: avatar1,
   },
   {
-    content:
-      "原本擔心技術溝通困難，但他們能用外行人聽得懂的語言解釋，設計和網站都比預期更早交付，還會定期主動優化！",
-    author: "Brian",
-    role: "經營日本代購",
+    content: '原本擔心技術溝通困難，但他們能用外行人聽得懂的語言解釋，設計和網站都比預期更早交付，還會定期主動優化！',
+    author: 'Brian',
+    role: '經營日本代購',
     avatar: avatar2,
   },
   {
     content:
-      "因為剛開業需要跑工廠、廠商又要做網站和行銷，要處理太多事了，所以請他們做了簡易官網和社群內容經營的部分，目前感受很用心還不錯～",
-    author: "王小姐",
-    role: "茶類品牌創辦人",
+      '因為剛開業需要跑工廠、廠商又要做網站和行銷，要處理太多事了，所以請他們做了簡易官網和社群內容經營的部分，目前感受很用心還不錯～',
+    author: '王小姐',
+    role: '茶類品牌創辦人',
     avatar: avatar3,
   },
   {
     content:
-      "臨時需要製作活動Landing Page和宣傳短影片，謝謝你們很專業的引導，設計的CTA按鈕讓報名人數翻倍，後續還會想繼續合作。",
-    author: "Gaga Huang",
-    role: "活動公司專案執行",
+      '臨時需要製作活動Landing Page和宣傳短影片，謝謝你們很專業的引導，設計的CTA按鈕讓報名人數翻倍，後續還會想繼續合作。',
+    author: 'Gaga Huang',
+    role: '活動公司專案執行',
     avatar: avatar4,
   },
   {
     content:
-      "訂閱了網站服務，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我，架設完後也開始有一些人詢問，曝光起來的感覺",
-    author: "攝影小蘇",
-    role: "攝影工作室",
+      '訂閱了網站服務，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我，架設完後也開始有一些人詢問，曝光起來的感覺',
+    author: '攝影小蘇',
+    role: '攝影工作室',
     avatar: avatar5,
   },
   {
-    content:
-      "合作訂閱半年期網站與行銷服務後，我們更多人詢問了！甚至主動建議我們沒注意到的使用者體驗細節。",
-    author: "張小姐",
-    role: "充氣廣告公司",
+    content: '合作訂閱半年期網站與行銷服務後，我們更多人詢問了！甚至主動建議我們沒注意到的使用者體驗細節。',
+    author: '張小姐',
+    role: '充氣廣告公司',
     avatar: avatar6,
   },
-];
+]
 </script>
 <template>
   <div class="w-full">
     <section class="gradient-p-to-y-bg py-24 px-4">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-6">
-          <div class="inline-block border px-4 py-1 rounded-full text-sm">
-            真實客戶評價
-          </div>
-          <div
-            class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3"
-          >
+          <div class="inline-block border px-4 py-1 rounded-full text-sm">真實客戶評價</div>
+          <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3">
             讓我們看看別人怎麼說
           </div>
         </div>
 
         <div class="flex justify-center items-center space-x-[-10px] mb-4">
-          <img
-            v-for="item in avatars"
-            :key="item"
-            :src="item"
-            class="w-12 h-12 rounded-full border-2 border-white"
-          />
+          <img v-for="item in avatars" :key="item" :src="item" class="w-12 h-12 rounded-full border-2 border-white" />
         </div>
 
         <div class="text-center mb-6">
           <p class="text-sm">服務體驗評分</p>
-          <div
-            class="flex justify-center items-center gap-1 text-yellow-400 text-xl"
-          >
+          <div class="flex justify-center items-center gap-1 text-yellow-400 text-xl">
             <span v-for="i in 5" :key="i">★</span>
             <span class="ml-2">5.0</span>
           </div>
@@ -115,9 +97,7 @@ const testimonials = [
             class="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
           >
             <div class="p-4 h-full select-none">
-              <div
-                class="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col"
-              >
+              <div class="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col">
                 <p class="text-gray-600 italic mb-6 flex-grow">
                   {{ testimonial.content }}
                 </p>
@@ -144,14 +124,10 @@ const testimonials = [
 
       <div class="pt-24 px-4 border-t md:border-none">
         <div class="max-w-4xl mx-auto text-center">
-          <h1
-            class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]"
-          >
+          <h1 class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]">
             即時啟動，打造您的數位競爭力
           </h1>
-          <p
-            class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center mb-16"
-          >
+          <p class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center mb-16">
             一站式數位解決方案，協助品牌高效成長<br />有網站/行銷需求，加Line即可免費諮詢
           </p>
         </div>
@@ -160,10 +136,7 @@ const testimonials = [
           class="max-w-4xl mx-auto rounded-xl bg-white/50 backdrop-blur-md p-12 shadow-xl border border-[#6f6bff] border-2"
         >
           <div class="text-left mb-8 border-b pb-8">
-            <span
-              class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded"
-              >限時優惠</span
-            >
+            <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">限時優惠</span>
             <div class="text-2xl font-bold mt-4 mb-6">30分鐘免費策略規劃</div>
 
             <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">

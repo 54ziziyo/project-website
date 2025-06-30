@@ -1,24 +1,16 @@
 <script lang="ts" setup>
-import FormContact from "./form/Contact.vue";
+import FormContact from './form/Contact.vue'
 </script>
 <template>
   <div class="relative overflow-x-clip">
     <div class="md:px-[3%]">
-      <div
-        class="md:pt-[100px] pb-[120px] gradient-p-to-y-bg rounded-2xl md:px-[5%] pt-[50px] px-8"
-      >
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 space-y-0 lg:space-x-[70px] items-start"
-        >
+      <div class="md:pt-[100px] pb-[120px] gradient-p-to-y-bg rounded-2xl md:px-[5%] pt-[50px] px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 space-y-0 lg:space-x-[70px] items-start">
           <div class="flex flex-col justify-center space-y-4">
-            <div class="text-[32px] md:text-[52px] mb-4 md:mb-[40px] font-bold">
-              聯繫我們
-            </div>
+            <div class="text-[32px] md:text-[52px] mb-4 md:mb-[40px] font-bold">聯繫我們</div>
             <div class="text-[18px] md:text-[28px] font-bold">
               <div>不只設計網站</div>
-              <div class="mb-4 mb:mb-6">
-                我們打造<span class="text-[#FF5157]">讓人停留的故事</span>
-              </div>
+              <div class="mb-4 mb:mb-6">我們打造<span class="text-[#FF5157]">讓人停留的故事</span></div>
             </div>
             <div class="space-y-6">
               <div class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-4">
@@ -28,36 +20,18 @@ import FormContact from "./form/Contact.vue";
                 填寫右側表單，我們會立即聯繫您，並依照您的需求，製作網站計劃。
               </div>
               <div class="flex justify-between items-center">
-                <div
-                  class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold"
-                >
-                  營業時間
-                </div>
-                <div class="text-[#5B5B5B] text-[16px] md:text-[18px]">
-                  平日 9:00-18:00
-                </div>
+                <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">營業時間</div>
+                <div class="text-[#5B5B5B] text-[16px] md:text-[18px]">平日 9:00-18:00</div>
               </div>
               <div class="flex justify-between items-center">
-                <div
-                  class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold"
-                >
-                  電子信箱
-                </div>
-                <a
-                  href="mailto:54ziziyo@gmail.com"
-                  class="text-[#8782FF] text-[16px] md:text-[18px]"
+                <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">電子信箱</div>
+                <a href="mailto:54ziziyo@gmail.com" class="text-[#8782FF] text-[16px] md:text-[18px]"
                   >54ziziyo@gmail.com</a
                 >
               </div>
               <div class="flex justify-between items-center">
-                <div
-                  class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold"
-                >
-                  LINE ID
-                </div>
-                <a
-                  href="https://line.me/ti/p/0ULHLMUbkQ"
-                  class="text-[#8782FF] text-[16px] md:text-[18px]"
+                <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">LINE ID</div>
+                <a href="https://line.me/ti/p/0ULHLMUbkQ" class="text-[#8782FF] text-[16px] md:text-[18px]"
                   >0980-191-031</a
                 >
               </div>

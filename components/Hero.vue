@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-const scrollY = ref(0);
+const scrollY = ref(0)
 const handleScroll = () => {
-  scrollY.value = window.scrollY;
-};
+  scrollY.value = window.scrollY
+}
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
+  window.addEventListener('scroll', handleScroll)
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
@@ -22,12 +22,7 @@ onBeforeUnmount(() => {
         class="absolute -bottom-[25%] -left-[60%] md:bottom-[12%] md:-left-[5%] min-[737px]:-left-[40%] min-[480px]:-left-[50%]"
         :style="{ transform: `translateY(${scrollY * 0.3}px)` }"
       >
-        <img
-          src="../assets/images/circle-dot.svg"
-          alt="circle pattern"
-          width="400"
-          height="400"
-        />
+        <img src="../assets/images/circle-dot.svg" alt="circle pattern" width="400" height="400" />
       </div>
 
       <div
@@ -37,15 +32,11 @@ onBeforeUnmount(() => {
         <img src="../assets/images/circle-dot.svg" alt="circle pattern" />
       </div>
 
-      <div
-        class="absolute text-white md:top-[150px] top-[60px] md:left-[100px] left-[32px] pr-4"
-      >
+      <div class="absolute text-white md:top-[150px] top-[60px] md:left-[100px] left-[32px] pr-4">
         <div class="space-x-1 flex items-center">
           <span class="md:w-3 w-2 md:h-12 h-6 bg-white" />
           <span class="md:w-2 w-1 md:h-12 h-6 bg-white" />
-          <p class="md:text-[52px] text-[24px] font-bold md:ml-2 ml-1">
-            從流量到成交
-          </p>
+          <p class="md:text-[52px] text-[24px] font-bold md:ml-2 ml-1">從流量到成交</p>
         </div>
         <p class="text-[28px] md:text-[80px] font-bold">打造會賺錢的線上門面</p>
         <p class="text-[16px] md:text-[20px] md:font-thin mt-4 mb-8 pr-10">
@@ -58,9 +49,7 @@ onBeforeUnmount(() => {
         </button>
       </div>
 
-      <div
-        class="absolute md:bottom-0 -bottom-[2%] md:right-[5%] right-0 min-[480px]:hidden lg:block"
-      >
+      <div class="absolute md:bottom-0 -bottom-[2%] md:right-[5%] right-0 min-[480px]:hidden lg:block">
         <div
           class="w-[340px] h-[340px] min-[480px]:w-[500px] min-[480px]:h-[500px] min-[737px]:w-[700px] min-[737px]:h-[700px]"
         >
@@ -82,32 +71,32 @@ onBeforeUnmount(() => {
 <style scoped>
 /* 定義自訂屬性（部分瀏覽器需支援） */
 @property --red-x {
-  syntax: "<percentage>";
+  syntax: '<percentage>';
   inherits: true;
   initial-value: 50%;
 }
 @property --red-y {
-  syntax: "<percentage>";
+  syntax: '<percentage>';
   inherits: true;
   initial-value: 0%;
 }
 @property --purple-x {
-  syntax: "<percentage>";
+  syntax: '<percentage>';
   inherits: true;
   initial-value: 0%;
 }
 @property --purple-y {
-  syntax: "<percentage>";
+  syntax: '<percentage>';
   inherits: true;
   initial-value: 0%;
 }
 @property --yellow-x {
-  syntax: "<percentage>";
+  syntax: '<percentage>';
   inherits: true;
   initial-value: 100%;
 }
 @property --yellow-y {
-  syntax: "<percentage>";
+  syntax: '<percentage>';
   inherits: true;
   initial-value: 100%;
 }
@@ -134,8 +123,8 @@ onBeforeUnmount(() => {
     );
   animation: moveGradients 20s linear infinite; */
 
-  background-image: linear-gradient(172deg, #fcfcfc00 64%, #fff 64%),
-    radial-gradient(circle at 0 100%, #90e0ff, #90e0ff00 28%),
+  background-image:
+    linear-gradient(172deg, #fcfcfc00 64%, #fff 64%), radial-gradient(circle at 0 100%, #90e0ff, #90e0ff00 28%),
     radial-gradient(circle at 0%, #a960ee, #a960ee00 34%, #a960ee00),
     radial-gradient(circle at 50% 0, #ff333d, #ff333d00 60%, #ff333d00),
     radial-gradient(circle at 100% 100%, #ffcb57, #ffcb5700 67%);

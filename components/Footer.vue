@@ -1,7 +1,5 @@
 <template>
-  <footer
-    class="bg-[#F1F0FF] text-stone-600 pt-10 pb-5 text-center text-sm space-y-16"
-  >
+  <footer class="bg-[#F1F0FF] text-stone-600 pt-10 pb-5 text-center text-sm space-y-16">
     <div
       class="flex md:justify-evenly flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8 mx-10 md:mx-0"
     >
@@ -43,5 +41,5 @@
 </template>
 
 <script setup>
-const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear()
 </script>
