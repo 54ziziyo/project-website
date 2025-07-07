@@ -9,7 +9,7 @@
       <div class="flex justify-center flex-col items-center">
         <div class="mb-2 md:mb-4 text-[#5B5B5B] text-[16px] md:text-[16px] md:text-[24px] font-bold">好消息是</div>
         <div class="text-[32px] text-center md:text-[52px] font-bold leading-[1.2] mb:mb-8">
-          困難的問題<span class="text-[#8782FF]">我們都幫你解決了</span>
+          困難的問題<br class="md:hidden" /><span class="text-[#8782FF]">我們都幫你解決了</span>
         </div>
       </div>
 

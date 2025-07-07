@@ -45,7 +45,7 @@ onBeforeUnmount(() => {
         <button
           class="cursor-pointer md:px-12 px-10 py-2 md:py-3 bg-white rounded-full hover:shadow-lg text-black text-[14px] md:text-[20px]"
         >
-          免費下載流量秘笈 →
+          免費下載網站秘笈 →
         </button>
       </div>
 

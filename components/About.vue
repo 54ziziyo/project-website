@@ -8,13 +8,13 @@
     <div class="relative px-8 md:px-[6.875rem] pb-30">
       <div class="text-center">
         <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">價值的交會點</div>
-        <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6">想告訴你的是</div>
-        <div class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4">
-          嗨，我是 Zeona Studio，擁有數位行銷背景、UI/UX 專業，目前擁有4年以上網頁前端工程經驗<br />
-          我曾在台灣知名企業擔任網站與社群營運工作，後來自學設計與開發，專注於品牌網站打造、數位行銷與內容製作
-        </div>
-        <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
-          技術與美感兼具，讓你一站式完成品牌在網路上的所有需求
+        <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-12 mb-8">想告訴你的是</div>
+        <div class="text-[#5B5B5B] text-[14px] md:text-[16px] mb-4">
+          嗨，我是 Zeona Studio，專注於網頁設計與前端開發，擁有四年以上專業經驗
+          <br />
+          我熟悉網站規劃、UI/UX、SEO基礎與數位行銷內容，能協助品牌打造兼具美感與效能的網站
+          <br />
+          歡迎聊聊你的想法，我會用最適合你的方式，協助品牌在線上脫穎而出！
         </div>
       </div>
 
