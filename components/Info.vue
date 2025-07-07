@@ -6,6 +6,12 @@ import DesignImg from '../assets/images/info/web-design.png'
 
 const services = [
   {
+    title: '網站設計與開發',
+    items: ['UI/UX 設計', '網站前端開發', '後端串接 API、部署上線', '可額外加購：GA數據、SEO優化等'],
+    img: WebDevImg,
+  },
+
+  {
     title: '數位行銷',
     items: ['社群貼文設計與文案撰寫', 'SEO 關鍵字部落格撰寫', '短影音剪輯（30s～60s）', '社群經營與排程代發'],
     img: TrainingImg,
@@ -14,11 +20,6 @@ const services = [
     title: '平面設計',
     items: ['LOGO 與品牌標準字設計', '活動主視覺 / 海報 / EDM', 'LINE 選單設計、社群圖卡', '名片、DM、產品包裝設計'],
     img: DesignImg,
-  },
-  {
-    title: '網站設計與開發',
-    items: ['UI/UX 設計', '網站前端開發', '後端串接 API、部署上線', '可額外加購：GA數據、SEO優化等'],
-    img: WebDevImg,
   },
   {
     title: '打包方案',

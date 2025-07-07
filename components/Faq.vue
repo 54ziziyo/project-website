@@ -350,12 +350,12 @@ const currentFaqs = computed(() => allFaqs[selectedCategory.value])
     </div>
 
     <!-- 分類切換按鈕 -->
-    <div class="flex justify-center gap-4 mb-10">
+    <div class="flex justify-center gap-4 mb-12">
       <button
         v-for="cat in categories"
         :key="cat.value"
         :class="[
-          'px-6 py-2 rounded-lg border transition-all cursor-pointer',
+          'px-6 py-2 rounded-lg border transition-all cursor-pointer text-sm',
           selectedCategory === cat.value
             ? 'text-[#8782FF]  font-bold  border-[#8782FF] border'
             : 'bg-white  text-[#5B5B5B] border-[#CCC]',

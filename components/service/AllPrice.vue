@@ -6,7 +6,7 @@ const aProject = [
     description: '讓你的品牌社群經營一次到位，持續累積曝光與互動',
   },
   {
-    title: '半客製化網站',
+    title: '一頁式半客製化網站',
     highlight: '模板挑選、基本修改、部署/網域代辦與綁定',
     description:
       ' • 使用現成的 HTML/CSS/JS 模板，依照客戶品牌簡單修改內容與顏色<br/>• 網站部署與伺服器網域代辦服務<br/>• 不含設計稿、不含後台',
