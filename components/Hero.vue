@@ -64,7 +64,7 @@ onBeforeUnmount(() => {
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
-              <button class="px-12 py-4 bg-white text-black font-bold text-lg rounded-full transition-all hover:scale-105 hover:shadow-xl active:scale-95">
+              <button class="px-12 py-4 bg-white text-black font-bold text-lg rounded-full transition-all hover:scale-105 hover:shadow-xl active:scale-95 cursor-pointer">
                 免費下載網站秘笈 →
               </button>
               <!-- <button class="px-12 py-4 border border-white/40 text-white font-semibold text-lg rounded-full backdrop-blur-sm hover:bg-white/10 transition-all active:scale-95">
