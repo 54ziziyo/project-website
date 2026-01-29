@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import avatar1 from '../assets/images/avatar/avatar-1.png'
 import avatar2 from '../assets/images/avatar/avatar-2.png'
 import avatar3 from '../assets/images/avatar/avatar-3.png'
@@ -8,6 +9,36 @@ import avatar6 from '../assets/images/avatar/avatar-6.png'
 import Autoplay from 'embla-carousel-autoplay'
 
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
+
+const isVisible = ref(false)
+const cardVisible = ref(false)
+const sectionRef = ref(null)
+const cardRef = ref(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        isVisible.value = true
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.2 })
+
+  if (sectionRef.value) observer.observe(sectionRef.value)
+
+  // 為卡片區域單獨設置觀察
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        cardVisible.value = true
+        cardObserver.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.2 })
+
+  if (cardRef.value) cardObserver.observe(cardRef.value)
+})
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6]
 
@@ -54,21 +85,21 @@ const testimonials = [
 ]
 </script>
 <template>
-  <div class="w-full">
+  <div ref="sectionRef" class="w-full">
     <section class="gradient-p-to-y-bg py-24 px-4">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-6">
-          <div class="inline-block border px-4 py-1 rounded-full text-sm">真實客戶評價</div>
-          <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3">
+          <div class="inline-block border px-4 py-1 rounded-full text-sm transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">真實客戶評價</div>
+          <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3 transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
             讓我們看看別人怎麼說
           </div>
         </div>
 
-        <div class="flex justify-center items-center space-x-[-10px] mb-4">
+        <div class="flex justify-center items-center space-x-[-10px] mb-4 transition-all duration-1000 transform" :class="[isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']">
           <img v-for="item in avatars" :key="item" :src="item" class="w-12 h-12 rounded-full border-2 border-white" />
         </div>
 
-        <div class="text-center mb-6">
+        <div class="text-center mb-6 transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
           <p class="text-sm">服務體驗評分</p>
           <div class="flex justify-center items-center gap-1 text-yellow-400 text-xl">
             <span v-for="i in 5" :key="i">★</span>
@@ -123,7 +154,7 @@ const testimonials = [
       </Carousel>
 
       <div class="pt-24 px-4 border-t md:border-none">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
           <h1 class="font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]" style="font-size: clamp(24px, 5vw, 52px)">
             即時啟動，打造您的數位競爭力
           </h1>
@@ -133,7 +164,8 @@ const testimonials = [
         </div>
 
         <div
-          class="max-w-4xl mx-auto rounded-xl bg-white/50 backdrop-blur-md p-12 shadow-xl border border-[#6f6bff] border-2"
+          ref="cardRef"
+          class="max-w-4xl mx-auto rounded-xl bg-white/50 backdrop-blur-md p-12 shadow-xl border border-[#6f6bff] border-2 transition-all duration-1000 transform" :class="[cardVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
           <div class="text-left mb-8 border-b pb-8">
             <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">限時優惠</span>
@@ -179,12 +211,12 @@ const testimonials = [
           </div>
 
           <div class="flex justify-center mt-12">
-            <a
-              href="#"
+            <NuxtLink
+              to="/Contact"
               class="relative bg-[#8782FF] text-white font-semibold py-3 px-6 rounded-full hover:bg-[#6f6bff] transition btn-glow"
             >
               <span>預約諮詢 →</span>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
