@@ -81,7 +81,7 @@ const showMenu = ref(false)
       :class="{
         'bg-white shadow-xl rounded-full py-2 border': isScrolled,
       }"
-      class="flex w-full max-w-7xl items-center justify-between md:px-[4.68rem] px-5 mx-auto"
+      class="flex w-full max-w-7xl items-center justify-between md:px-10 px-5 mx-auto"
     >
       <!-- Logo -->
       <div class="font-extrabold text-xl font-[Hammersmith_One] cursor-pointer">

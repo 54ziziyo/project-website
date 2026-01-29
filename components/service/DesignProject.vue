@@ -31,7 +31,7 @@
             <div class="text-[18px] text-[#5B5B5B] text-start">電商小店、個人品牌</div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">NT＄8,800/月</div>
+            <div class="text-[24px] xl:text-[32px] leading-none">NT＄8,800/月</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B] line-through">NT$11,400</span>
           </div>
           <div
@@ -67,7 +67,7 @@
             <div class="text-[18px] text-[#5B5B5B] text-left">新創公司、實體店家</div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">NT$18,000/月</div>
+            <div class="text-[24px] xl:text-[32px] leading-none">NT$18,000/月</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B] line-through">NT$23,500</span>
           </div>
           <div

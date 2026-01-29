@@ -124,11 +124,11 @@ const testimonials = [
 
       <div class="pt-24 px-4 border-t md:border-none">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]">
+          <h1 class="font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]" style="font-size: clamp(24px, 5vw, 52px)">
             即時啟動，打造您的數位競爭力
           </h1>
           <p class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center mb-16">
-            一站式數位解決方案，協助品牌高效成長<br />有網站/行銷需求，加Line即可免費諮詢
+            一站式數位解決方案，協助品牌高效成長<br />有網站/行銷需求，加 Line 即可免費諮詢
           </p>
         </div>
 
@@ -137,7 +137,7 @@ const testimonials = [
         >
           <div class="text-left mb-8 border-b pb-8">
             <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">限時優惠</span>
-            <div class="text-2xl font-bold mt-4 mb-6">30分鐘免費策略規劃</div>
+            <div class="text-2xl font-bold mt-4 mb-6">15分鐘免費策略規劃</div>
 
             <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">
               <div>

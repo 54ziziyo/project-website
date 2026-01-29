@@ -31,7 +31,7 @@
             <div class="text-[18px] text-[#5B5B5B] text-start">新創品牌、小型帳號，社群穩定更新</div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">NT＄15,000</div>
+            <div class="text-[24px] xl:text-[32px] leading-none">NT＄15,000</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">元/月</span>
           </div>
           <div
@@ -71,7 +71,7 @@
             <div class="text-[18px] text-[#5B5B5B] text-left">穩定經營中品牌，需要完整規劃</div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">NT＄25,000</div>
+            <div class="text-[24px] xl:text-[32px] leading-none">NT＄25,000</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">元/月</span>
           </div>
           <div
@@ -112,7 +112,7 @@
             <div class="text-[18px] text-[#5B5B5B] text-left">需要影音曝光的中小型品牌</div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">NT＄30,000</div>
+            <div class="text-[24px] xl:text-[32px] leading-none">NT＄30,000</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">元/月</span>
           </div>
           <div
