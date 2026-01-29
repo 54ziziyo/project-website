@@ -212,7 +212,7 @@ const testimonials = [
 
           <div class="flex justify-center mt-12">
             <NuxtLink
-              to="/Contact"
+              to="/contact"
               class="relative bg-[#8782FF] text-white font-semibold py-3 px-6 rounded-full hover:bg-[#6f6bff] transition btn-glow"
             >
               <span>預約諮詢 →</span>

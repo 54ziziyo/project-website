@@ -122,18 +122,18 @@ const showMenu = ref(false)
             <NavigationMenuLink href="/faq" :class="navigationMenuTriggerStyle()"> 常見問題 </NavigationMenuLink>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <NavigationMenuLink href="/toolbox" :class="navigationMenuTriggerStyle()"> 數位工具箱 </NavigationMenuLink>
-          </NavigationMenuItem>
-
           <!-- <NavigationMenuItem>
+            <NavigationMenuLink href="/toolbox" :class="navigationMenuTriggerStyle()"> 數位工具箱 </NavigationMenuLink>
+          </NavigationMenuItem> -->
+
+          <NavigationMenuItem>
             <NavigationMenuLink
               href="/works"
               :class="navigationMenuTriggerStyle()"
             >
               作品集
             </NavigationMenuLink>
-          </NavigationMenuItem> -->
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 
