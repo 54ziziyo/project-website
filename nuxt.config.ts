@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     'shadcn-nuxt',
     'nuxt-lottie',
+    '@nuxtjs/device',
   ],
   css: ['~/assets/css/tailwind.css', '@/assets/css/main.css'],
   vite: {
