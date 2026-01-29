@@ -31,7 +31,7 @@
             <div class="text-[18px] text-[#5B5B5B] text-start">新創企業團隊/品牌形象/短期行銷活動</div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">NT＄30,000</div>
+            <div class="text-[24px] xl:text-[32px] leading-none">NT＄30,000</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">/台幣起</span>
           </div>
           <div
@@ -79,7 +79,7 @@
             <div class="text-[18px] text-[#5B5B5B] text-left">電商品牌/實體轉線上/購物車系統</div>
           </div>
           <div class="text-base flex items-end space-x-2">
-            <div class="text-[32px] lg:text-[40px] leading-none">NT＄68,000</div>
+            <div class="text-[24px] xl:text-[32px] leading-none">NT＄68,000</div>
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">/台幣起</span>
           </div>
           <div
