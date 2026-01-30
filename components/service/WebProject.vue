@@ -42,11 +42,11 @@
           <div class="lg:space-y-5 lg:space-y-5 space-y-3">
             <div class="space-x-1 flex items-center">
               <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">半客製化一頁式網站</span>
+              <span class="ml-2 text-[#5B5B5B]">半客製化一頁式網站(限單頁)</span>
             </div>
             <div class="space-x-1 flex items-center">
               <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">響應式設計(RWD)</span>
+              <span class="ml-2 text-[#5B5B5B]">RWD響應式設計(區塊限制5個內)</span>
             </div>
             <div class="space-x-1 flex items-center">
               <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />

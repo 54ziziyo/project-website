@@ -29,8 +29,8 @@ const basicAddons = [
 const advancedAddons = [
   // 原始項目
   {
-    name: '動畫特效升級',
-    description: '加入 Lottie 精緻動畫或 WebGL 互動效果',
+    name: '動畫特效',
+    description: '基礎 Lottie 動畫，WebGL 互動另議',
     price: 'NT$10,000元起',
     compatible: '全客製化網站',
   },
@@ -68,6 +68,18 @@ const advancedAddons = [
   },
 
   // 新增：功能模組類
+  {
+    name: '串接數據服務',
+    description: '串接第三方資料整合（如：Google 日曆、即時匯率、地圖資訊等）',
+    price: '另外報價',
+    compatible: '全客製化網站/WordPress',
+  },
+  {
+    name: '自動化流程串接',
+    description: '自動化通知與跨平台整合（如：LINE Notify、簡訊通知、Slack 提醒）',
+    price: '另外報價',
+    compatible: '全客製化服務',
+  },
   {
     name: '進階表單系統',
     description: '多步驟表單、檔案上傳、條件式邏輯跳題',
