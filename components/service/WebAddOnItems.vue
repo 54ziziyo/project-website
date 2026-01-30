@@ -2,12 +2,12 @@
 const basicAddons = [
   {
     name: '網域 & 主機代管',
-    description: '代購網域 + 基本主機部署（1年）',
+    description: '代購網域、基本主機部署、HTTPS 安全加密憑證 SSL(1年)',
     price: 'NT$6,000元/年起',
   },
   {
-    name: 'SSL 憑證',
-    description: '安裝 HTTPS 安全憑證',
+    name: 'SSL 進階商用憑證',
+    description: '若有特殊商務需求，才需要額外加購',
     price: 'NT$1,500元/年起',
   },
   {
@@ -22,7 +22,7 @@ const basicAddons = [
   },
   {
     name: '多語言切換',
-    description: '新增英文/日文等語言版本',
+    description: '新增英文/日文等語言版本 (不含翻譯稿費用)',
     price: 'NT$15,000元/語系',
   },
 ]

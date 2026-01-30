@@ -50,10 +50,15 @@ const multiPagePrice = [
 const webDesignPrice = [
   {
     title: '一頁式 UI/UX 設計(純設計)',
-    highlight: '依主題及內容製圖，依需求報價',
-    description: '包含 Wireframe、UI 設計、設計系統規劃與交付 Figma 檔',
-    price: 'NT$10,000元起',
+    highlight: '精準品牌視覺規劃，按區塊量化報價',
+    description: '包含使用者流程梳理、Wireframe、視覺 UI 設計、設計系統 (Design System) 規範與 Figma 原始檔交付', 
+    price: 'NT$10,000 元起',
     ta: ' ✅ 適合已有開發者團隊、只需要視覺設計的企業',
+    features: [
+      '內含 5 個內容區塊 (Section) 設計',
+      '加購區塊：NT$2,000 / 區塊',
+      '包含行動端 RWD 適配設計'
+    ]
   },
   {
     title: '網站設計系統 + Wireframe 套案(純設計)',
@@ -82,7 +87,7 @@ const psdToHtmlPrice = [
     ],
   },
   {
-    title: 'Vue.js 動態前端切版',
+    title: '動態前端切版',
     subtitles: [
       {
         subtitle: '價格範圍',
@@ -183,7 +188,7 @@ const psdToHtmlPrice = [
           class="flex flex-col md:flex-row justify-between items-start md:items-center pb-8"
           :class="{ 'border-b': index !== webDesignPrice.length - 1 }"
         >
-          <div class="space-y-2">
+          <div class="space-y-3">
             <div class="text-xl font-medium mb-2">{{ service.title }}</div>
             <p class="text-sm text-gray-600 font-semibold">
               {{ service.highlight }}
@@ -191,6 +196,9 @@ const psdToHtmlPrice = [
             <p class="text-sm text-gray-600 pr-8">
               {{ service.description }}
             </p>
+            <ul v-if="service.features" class="mt-1 space-y-1 text-sm text-[#4B5563] list-disc list-inside">
+              <li v-for="(feature, fIndex) in service.features" :key="fIndex">{{ feature }}</li>
+            </ul>
             <div class="text-sm text-gray-600">{{ service.ta }}</div>
           </div>
           <div class="text-xl font-bold mt-4 md:mt-0">{{ service.price }}</div>
