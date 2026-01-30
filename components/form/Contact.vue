@@ -1,4 +1,13 @@
-<script setup>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+type Grecaptcha = {
+  ready: (cb: () => void) => void
+  execute: (siteKey: string, options: { action: string }) => Promise<string>
+}
+
+const recaptchaSiteKey = '6LezflssAAAAAAyrX2klGOA-XG6g7Kj2cgY9oiEz'
+
 const form = {
   name: ref(''),
   brand: ref(''),
@@ -10,21 +19,148 @@ const form = {
   budget: ref(''),
 }
 
-const errors = ref({})
+const errors = ref<Record<string, string>>({})
+const isSubmitting = ref(false)
+const statusMessage = ref<{ type: 'success' | 'error' | '' ; text: string }>({ type: '', text: '' })
+const toastVisible = ref(false)
+let toastTimer: number | null = null
 
-function validate() {
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const budgetRegex = /^[0-9,\-~\s]+$/
+
+const loadRecaptcha = () => {
+  return new Promise<Grecaptcha>((resolve, reject) => {
+    const existing = (window as any).grecaptcha as Grecaptcha | undefined
+    if (existing) {
+      existing.ready(() => resolve(existing))
+      return
+    }
+
+    const script = document.createElement('script')
+    script.src = `https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`
+    script.async = true
+    script.defer = true
+    script.onload = () => {
+      const grecaptcha = (window as any).grecaptcha as Grecaptcha | undefined
+      if (!grecaptcha) {
+        reject(new Error('reCAPTCHA 載入失敗'))
+        return
+      }
+      grecaptcha.ready(() => resolve(grecaptcha))
+    }
+    script.onerror = () => reject(new Error('reCAPTCHA 載入失敗'))
+    document.head.appendChild(script)
+  })
+}
+
+const validate = () => {
   errors.value = {}
-  if (!form.name.value) errors.value.name = '姓名為必填'
-  if (!form.mail.value || !form.mail.value.includes('@')) errors.value.mail = '請輸入有效的電子信箱'
-  if (!form.desc.value) errors.value.desc = '請填寫需求說明'
-  if (!form.budget.value) errors.value.budget = '請填寫預算'
+
+  const name = form.name.value.trim()
+  const mail = form.mail.value.trim()
+  const line = form.line.value.trim()
+  const desc = form.desc.value.trim()
+  const budget = form.budget.value.trim()
+  const start = form.startDate.value
+  const end = form.endDate.value
+
+  if (!name) errors.value.name = '姓名為必填'
+
+  if (!mail || !emailRegex.test(mail)) {
+    errors.value.mail = '請輸入有效的電子信箱'
+  }
+
+  if (!desc || desc.length < 10) {
+    errors.value.desc = '請至少填寫 10 字的需求說明'
+  }
+
+  if (!budget) {
+    errors.value.budget = '請填寫預算'
+  } else if (!budgetRegex.test(budget)) {
+    errors.value.budget = '僅允許數字、逗號、-、~'
+  }
+
+  if (line && line.length < 3) {
+    errors.value.line = 'LINE ID 長度需大於 3'
+  }
+
+  if (start && end && new Date(end) < new Date(start)) {
+    errors.value.endDate = '結案日不可早於開案日'
+  }
 
   return Object.keys(errors.value).length === 0
 }
 
-function onSubmit() {
+const showToast = (type: 'success' | 'error', text: string) => {
+  statusMessage.value = { type, text }
+  toastVisible.value = true
+  if (toastTimer) {
+    window.clearTimeout(toastTimer)
+  }
+  toastTimer = window.setTimeout(() => {
+    toastVisible.value = false
+  }, 3200)
+}
+
+const onSubmit = async () => {
   if (!validate()) return
-  alert('表單已提交！')
+  isSubmitting.value = true
+
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwbSt3nyNmYePhPTXzNjLuJnbHnS7h7b6fvegfFQ1j1rH8bBFIQfLO-pcfs4-FPIeEs/exec' 
+
+  // 1. 取得 reCAPTCHA Token
+  let token = ''
+  try {
+    const grecaptcha = await loadRecaptcha()
+    token = await grecaptcha.execute(recaptchaSiteKey, { action: 'contact' })
+  } catch (err) {
+    showToast('error', 'reCAPTCHA 載入失敗，請稍後再試。')
+    isSubmitting.value = false
+    return
+  }
+
+  // 2. 💡 關鍵修正：改用 URLSearchParams 避開 CORS 預檢
+  const formData = new URLSearchParams()
+  formData.append('name', form.name.value)
+  formData.append('brand', form.brand.value)
+  formData.append('mail', form.mail.value)
+  formData.append('line', form.line.value)
+  formData.append('desc', form.desc.value)
+  formData.append('startDate', form.startDate.value)
+  formData.append('endDate', form.endDate.value)
+  formData.append('budget', form.budget.value)
+  formData.append('recaptchaToken', token)
+
+  try {
+    // 3. 💡 關鍵修正：移除 headers，改用 no-cors
+    await fetch(scriptUrl, {
+      method: 'POST',
+      mode: 'no-cors', 
+      body: formData, // 直接傳送 formData
+    })
+
+    // 在 no-cors 模式下，我們無法讀取回應內容
+    // 只要沒噴 catch，通常代表資料已送達 Google 伺服器
+    showToast('success', '感謝諮詢！資料已成功送出。')
+    resetForm()
+  } catch (err) {
+    console.error('送出失敗:', err)
+    showToast('error', '送出失敗，請檢查網路。')
+  } finally {
+    isSubmitting.value = false
+  }
+}
+
+// 輔助函式：清空表單
+const resetForm = () => {
+  form.name.value = ''
+  form.brand.value = ''
+  form.mail.value = ''
+  form.line.value = ''
+  form.desc.value = ''
+  form.startDate.value = ''
+  form.endDate.value = ''
+  form.budget.value = ''
 }
 </script>
 
@@ -122,6 +258,9 @@ function onSubmit() {
           type="date"
           class="bg-white px-4 py-2 md:py-3 rounded-lg text-[#5B5B5B] focus-visible:outline-none md:text-normal text-[14px]"
         />
+        <p v-if="errors.endDate" class="text-red-500 text-sm px-2">
+          {{ errors.endDate }}
+        </p>
       </div>
     </div>
 
@@ -142,10 +281,41 @@ function onSubmit() {
 
     <!-- 送出按鈕 -->
     <button
-      class="mt-10 w-full py-4 text-[#8782FF] border border-[#8782FF] rounded-xl cursor-pointer flex items-center justify-center hover:bg-[#8782FF] hover:text-white transition-colors duration-300"
+      class="mt-10 w-full py-4 text-white bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] shadow-lg shadow-[#8d80ff4d] rounded-xl cursor-pointer flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-[#8d80ff59] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+      :disabled="isSubmitting"
       @click="onSubmit"
     >
-      送出表單
+      <span v-if="isSubmitting" class="flex items-center gap-2">
+        <span class="h-5 w-5 border-2 border-white/40 border-t-white rounded-full animate-spin" aria-hidden="true"></span>
+        送出中...
+      </span>
+      <span v-else>送出表單</span>
     </button>
+
+    <transition name="fade-slide">
+      <div
+        v-if="toastVisible && statusMessage.type"
+        class="fixed bottom-6 right-6 z-50 max-w-xs rounded-2xl px-4 py-3 text-sm shadow-xl backdrop-blur bg-white/90 border border-white/60 md:right-10 md:bottom-10"
+        :class="statusMessage.type === 'success' ? 'text-green-700' : 'text-red-600'"
+      >
+        <div class="font-semibold mb-1 flex items-center gap-2">
+          <span class="h-2.5 w-2.5 rounded-full" :class="statusMessage.type === 'success' ? 'bg-green-500' : 'bg-red-500'"></span>
+          {{ statusMessage.type === 'success' ? '已送出' : '送出失敗' }}
+        </div>
+        <p class="leading-relaxed text-[#4A4A4A]">{{ statusMessage.text }}</p>
+      </div>
+    </transition>
   </div>
 </template>
+
+<style scoped>
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.25s ease;
+}
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
+}
+</style>
