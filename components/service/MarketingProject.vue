@@ -59,7 +59,7 @@ const marketingPlans = [
         <p class="text-[#5B5B5B] text-[14px] md:text-[20px]">我可以幫您評估，隨時歡迎詢洽！</p>
       </div>
 
-      <div class="grid w-full md:px-20 lg:grid-cols-3 md:grid-cols-2 lg:mt-[100px] mt-12 grid-cols-1 gap-8 lg:gap-6 items-start">
+      <div class="grid w-full md:px-20 lg:grid-cols-3 md:grid-cols-2 lg:mt-[100px] mt-12 grid-cols-1 gap-16 lg:gap-6 items-start">
         
         <div
           v-for="plan in marketingPlans"

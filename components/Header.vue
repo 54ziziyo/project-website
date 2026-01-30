@@ -57,11 +57,11 @@ const components: { title: string; href: string; description: string }[] = [
     href: '/services/design',
     description: '設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象',
   },
-  // {
-  //   title: 'VIP全站客製',
-  //   href: '/services/all',
-  //   description: '提供全方位的數位服務，從網站建置到行銷推廣，滿足各種需求。',
-  // },
+  {
+    title: '整合服務',
+    href: '/services/all',
+    description: '提供全方位的數位服務，從網站建置到行銷推廣，滿足各種需求。',
+  },
 ]
 
 // 控制 Drawer 開關

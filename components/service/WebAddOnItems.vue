@@ -117,32 +117,35 @@ const advancedAddons = [
 <template>
   <div class="relative px-4 flex justify-center flex-col items-center text-center">
     <div class="md:px-20 w-full mb-32 space-y-32 lg:pb-40 lg:space-y-40">
-      <!-- 基礎加購項目 -->
+      
       <div>
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">基礎加購項目</div>
         <div class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-10">針對客製化方案</div>
+        
         <div class="overflow-x-auto shadow-md rounded-md border">
-          <table class="w-full">
+          <table class="w-full min-w-[600px]">
             <thead class="border-b bg-[#F1F0FF]">
               <tr>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider">
+                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">
                   加購項目
                 </th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider">說明</th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider">
-                  價格(實際價格以評估後的報價為主)
+                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                  說明
+                </th>
+                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                  價格 (實際價格以評估後的報價為主)
                 </th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-gray-200">
+            <tbody class="divide-y divide-gray-200 text-sm md:text-base">
               <tr v-for="(item, index) in basicAddons" :key="'basic-' + index" class="hover:bg-[#F1F0FF]/30">
-                <td class="px-6 py-4 font-medium text-gray-900">
+                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap min-w-[150px]">
                   {{ item.name }}
                 </td>
-                <td class="px-6 py-4 text-gray-600">
+                <td class="px-6 py-4 text-gray-600 text-left min-w-[300px]">
                   {{ item.description }}
                 </td>
-                <td class="px-6 py-4 font-semibold">
+                <td class="px-6 py-4 font-semibold whitespace-nowrap min-w-[150px]">
                   {{ item.price }}
                 </td>
               </tr>
@@ -151,43 +154,31 @@ const advancedAddons = [
         </div>
       </div>
 
-      <!-- 進階功能加購 -->
       <div>
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">進階功能加購項目</div>
         <div class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-10">針對客製化方案</div>
         <div class="overflow-x-auto shadow-md rounded-md border">
-          <table class="w-full">
+          <table class="w-full min-w-[800px]">
             <thead class="border-b bg-[#F1F0FF]">
               <tr>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider">
-                  加購項目
-                </th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider">說明</th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider">
-                  價格(實際價格以評估後的報價為主)
-                </th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider">
-                  搭配方案
-                </th>
+                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">加購項目</th>
+                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">說明</th>
+                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">價格</th>
+                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">搭配方案</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200">
               <tr v-for="(item, index) in advancedAddons" :key="'advanced-' + index" class="hover:bg-[#F1F0FF]/30">
-                <td class="px-6 py-4 font-medium text-gray-900">
-                  {{ item.name }}
-                </td>
-                <td class="px-6 py-4 text-gray-600">
-                  {{ item.description }}
-                </td>
-                <td class="px-6 py-4 font-semibold">
-                  {{ item.price }}
-                </td>
-                <td class="px-6 py-4 text-gray-600">{{ item.compatible }}</td>
+                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ item.name }}</td>
+                <td class="px-6 py-4 text-gray-600 text-left min-w-[300px]">{{ item.description }}</td>
+                <td class="px-6 py-4 font-semibold whitespace-nowrap">{{ item.price }}</td>
+                <td class="px-6 py-4 text-gray-600 whitespace-nowrap">{{ item.compatible }}</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
+
     </div>
   </div>
 </template>

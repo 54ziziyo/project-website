@@ -61,7 +61,7 @@ const websitePlans = [
         <p class="text-[#5B5B5B] text-[14px] md:text-[20px]">我可以幫您評估，隨時歡迎詢洽！</p>
       </div>
 
-      <div class="grid w-full max-w-7xl lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:mt-[120px] mt-12 gap-8 md:gap-6 items-stretch">
+      <div class="grid w-full max-w-7xl lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:mt-[120px] mt-12 gap-10 md:gap-6 items-stretch">
         <div
           v-for="plan in websitePlans"
           :key="plan.title"
