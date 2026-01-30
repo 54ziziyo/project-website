@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import avatar1 from '../assets/images/avatar/avatar-1.png'
 import avatar2 from '../assets/images/avatar/avatar-2.png'
 import avatar3 from '../assets/images/avatar/avatar-3.png'
@@ -44,7 +43,7 @@ const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6]
 
 const testimonials = [
   {
-    content: '我們子公司的手機版網頁服務一直都很難使用，後來決定重新設計介面跟規劃流程，現在用戶數提高了很多，很讚！',
+    content: '我子公司的手機版網頁服務一直都很難使用，後來決定重新設計介面跟規劃流程，現在用戶數提高了很多，很讚！',
     author: 'Dragon陳',
     role: '產品經理',
     avatar: avatar1,
@@ -71,13 +70,13 @@ const testimonials = [
   },
   {
     content:
-      '訂閱了網站服務，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我們，架設完後也開始有一些人詢問，曝光起來的感覺',
+      '訂閱了網站服務，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我，架設完後也開始有一些人詢問，曝光起來的感覺',
     author: '攝影小蘇',
     role: '攝影工作室',
     avatar: avatar5,
   },
   {
-    content: '合作訂閱半年期網站與行銷服務後，我們更多人詢問了！甚至主動建議我們沒注意到的使用者體驗細節。',
+    content: '合作訂閱半年期網站與行銷服務後，我更多人詢問了！甚至主動建議我沒注意到的使用者體驗細節。',
     author: '張小姐',
     role: '充氣廣告公司',
     avatar: avatar6,
@@ -91,7 +90,7 @@ const testimonials = [
         <div class="text-center mb-6">
           <div class="inline-block border px-4 py-1 rounded-full text-sm transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">真實客戶評價</div>
           <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3 transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
-            讓我們看看別人怎麼說
+            讓我看看別人怎麼說
           </div>
         </div>
 
@@ -168,8 +167,9 @@ const testimonials = [
           class="max-w-4xl mx-auto rounded-xl bg-white/50 backdrop-blur-md p-12 shadow-xl border border-[#6f6bff] border-2 transition-all duration-1000 transform" :class="[cardVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
           <div class="text-left mb-8 border-b pb-8">
-            <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">限時優惠</span>
-            <div class="text-2xl font-bold mt-4 mb-6">15分鐘免費策略規劃</div>
+            <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">搶先預約</span>
+            <div class="text-2xl font-bold mt-4 mb-1">💬 預約 15 分鐘免費諮詢</div>
+            <p class="text-xs text-[#5B5B5B] mb-6">※ 每日限額一位，名額有限。</p>
 
             <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">
               <div>
@@ -201,7 +201,7 @@ const testimonials = [
             </div>
 
             <div>
-              <div class="text-lg font-semibold mb-4">為什麼選擇我們？</div>
+              <div class="text-lg font-semibold mb-4">為什麼選擇我？</div>
               <ul class="space-y-2">
                 <li>🔹 跨領域經驗：結合行銷思維與技術實現能力</li>
                 <li>🔹 彈性合作：從單次專案到長期託管皆可洽談</li>

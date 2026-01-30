@@ -26,7 +26,7 @@ const multiPagePrice = [
   {
     title: '多頁式 WordPress 網站',
     highlight: '有後台，客戶可自行更新、擴充',
-    description: '套用佈景主題＋客製頁面內容（首頁、關於我們、服務介紹、聯絡我們等）',
+    description: '套用佈景主題＋客製頁面內容（首頁、關於我、服務介紹、聯絡我等）',
     price: 'NT$45,000元起',
     ta: '✅ 適合長期經營內容的中小企業、部落格',
   },
@@ -101,7 +101,7 @@ const psdToHtmlPrice = [
 ]
 </script>
 <template>
-  <div class="px-6 pt-12 md:pt-24 pb-32 md:px-20 md:space-y-20 space-y-10 relative overflow-x-clip">
+  <div class="px-6 pt-24 md:pt-32 pb-24 md:px-20 md:space-y-20 space-y-10 relative overflow-x-clip">
     <div class="absolute top-0 left-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />
     <div class="absolute top-[50%] right-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />
     <div class="absolute top-[80%] left-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />

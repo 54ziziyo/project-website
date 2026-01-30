@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-
 const form = {
   name: ref(''),
   brand: ref(''),
@@ -36,8 +34,8 @@ function onSubmit() {
     <div class="flex flex-col space-y-2">
       <label for="name" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">聯絡人姓名※</label>
       <input
-        v-model="form.name.value"
         id="name"
+        v-model="form.name.value"
         type="text"
         placeholder="請輸入您的稱呼"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
@@ -51,8 +49,8 @@ function onSubmit() {
     <div class="flex flex-col space-y-2">
       <label for="brand" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">公司/品牌名稱</label>
       <input
-        v-model="form.brand.value"
         id="brand"
+        v-model="form.brand.value"
         type="text"
         placeholder="請輸入您的公司/品牌名稱"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
@@ -63,8 +61,8 @@ function onSubmit() {
     <div class="flex flex-col space-y-2">
       <label for="mail" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">電子信箱※</label>
       <input
-        v-model="form.mail.value"
         id="mail"
+        v-model="form.mail.value"
         type="email"
         placeholder="請輸入電子信箱"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
@@ -78,10 +76,10 @@ function onSubmit() {
     <div class="flex flex-col space-y-2">
       <label for="line" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">LINE ID</label>
       <input
-        v-model="form.line.value"
         id="line"
+        v-model="form.line.value"
         type="text"
-        placeholder="請提供您的 LINE 確保我們可以與您聯繫"
+        placeholder="請提供您的 LINE 確保我可以與您聯繫"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.line" class="text-red-500 text-sm px-2">
@@ -93,8 +91,8 @@ function onSubmit() {
     <div class="flex flex-col space-y-2">
       <label for="desc" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">需求說明※</label>
       <textarea
-        v-model="form.desc.value"
         id="desc"
+        v-model="form.desc.value"
         rows="4"
         placeholder="請提供需求項目、功能等說明..."
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
@@ -109,8 +107,8 @@ function onSubmit() {
       <div class="flex flex-col space-y-2">
         <label for="startDate" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預計開案日</label>
         <input
-          v-model="form.startDate.value"
           id="startDate"
+          v-model="form.startDate.value"
           type="date"
           class="bg-white px-4 py-2 md:py-3 rounded-lg text-[#5B5B5B] focus-visible:outline-none md:text-normal text-[14px]"
         />
@@ -119,8 +117,8 @@ function onSubmit() {
       <div class="flex flex-col space-y-2">
         <label for="endDate" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預計結案日</label>
         <input
-          v-model="form.endDate.value"
           id="endDate"
+          v-model="form.endDate.value"
           type="date"
           class="bg-white px-4 py-2 md:py-3 rounded-lg text-[#5B5B5B] focus-visible:outline-none md:text-normal text-[14px]"
         />
@@ -131,8 +129,8 @@ function onSubmit() {
     <div class="flex flex-col space-y-2">
       <label for="budget" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預算範圍※</label>
       <input
-        v-model="form.budget.value"
         id="budget"
+        v-model="form.budget.value"
         type="text"
         placeholder="$120,000"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
@@ -144,8 +142,8 @@ function onSubmit() {
 
     <!-- 送出按鈕 -->
     <button
-      @click="onSubmit"
       class="mt-10 w-full py-4 text-[#8782FF] border border-[#8782FF] rounded-xl cursor-pointer flex items-center justify-center hover:bg-[#8782FF] hover:text-white transition-colors duration-300"
+      @click="onSubmit"
     >
       送出表單
     </button>

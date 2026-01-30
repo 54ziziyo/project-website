@@ -81,7 +81,7 @@ const cProject = [
 ]
 </script>
 <template>
-  <div class="px-6 pt-12 md:pt-24 pb-32 md:px-20 md:space-y-20 space-y-10 relative overflow-x-clip">
+  <div class="px-6 pt-24 md:pt-32 pb-24 md:px-20 md:space-y-20 space-y-10 relative overflow-x-clip">
     <div class="absolute top-0 left-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />
     <div class="absolute top-[50%] right-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />
     <div class="absolute top-[80%] left-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />

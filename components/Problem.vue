@@ -1,35 +1,34 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
-
 const problemPoints = ref([
   {
-    title: '訪客來了卻留不住',
+    title: '網站做了，客人看一眼就跑',
     problems: [
-      `<b>載入慢、動線差</b> → 訪客 3 秒就離開`,
-      `<b>內容雜亂無重點</b> → 客戶看不懂你做什麼`,
-      `<b>沒有行動呼籲</b> → 浪費潛在客戶`,
+      { label: '載入慢還跑版', desc: '訪客 3 秒就離開' },
+      { label: '內容雜亂無重點', desc: '客戶看不懂你做什麼' },
+      { label: '看起來很陽春', desc: '被懷疑是詐騙網站' },
     ],
   },
   {
     title: '行銷預算像丟進黑洞',
     problems: [
-      `<b>漏斗漏洞沒修補</b> → 轉換率持續低下`,
-      `<b>缺乏數據分析</b> → 不知道錢花去哪`,
-      `<b>需求斷層</b> → 每次換廠商都要重新解釋`,
+      { label: '漏斗漏洞沒修補', desc: '轉換率持續低下' },
+      { label: '缺乏數據分析', desc: '不知道錢花去哪' },
+      { label: '需求斷層', desc: '每次換廠商都要重新解釋' },
     ],
   },
   {
     title: '外包合作像短期戀愛',
     problems: [
-      `<b>結案就失聯</b> → 上線後問題沒人管`,
-      `<b>報價不透明</b> → 同樣需求每次價格都變`,
-      `<b>缺乏長期累積</b> → 換個廠商就要重新來過`,
+      { label: '報價不透明', desc: '同樣需求每次價格都變' },
+      { label: '缺乏長期累積', desc: '換個廠商就要重新來過' },
+      { label: '市場在變競爭對手在跑', desc: '你的網站卻停在原地' },
     ],
   },
 ])
 
 const observerItems = ref<HTMLElement[]>([])
 const activeIndexes = ref<Set<number>>(new Set())
+const isMobile = ref(false)
 
 const dotColors =[ 'text-[#8782FF]', 'text-[#ff333d]', 'text-[#ff804a]']
 
@@ -44,6 +43,16 @@ onMounted(() => {
   }, { threshold: 0.1 })
 
   observerItems.value.forEach(item => observer.observe(item))
+
+  const updateMobile = () => {
+    isMobile.value = window.matchMedia('(max-width: 639px)').matches
+  }
+  updateMobile()
+  window.addEventListener('resize', updateMobile, { passive: true })
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('resize', updateMobile)
+  })
 })
 </script>
 
@@ -98,15 +107,20 @@ onMounted(() => {
               <div 
                 v-for="(prob, pIndex) in item.problems" 
                 :key="pIndex"
-                class="flex items-start justify-center md:justify-start gap-3 text-gray-500 text-lg"
+                class="flex items-start justify-start gap-3 text-gray-500 text-lg"
               >
                 <span 
-                  class="flex items-center justify-center h-[1.6em] flex-shrink-0"
+                  class="flex items-center justify-start h-[1.6em] flex-shrink-0"
                   :class="dotColors[index % 3]"
                 >
                   <span class="text-[10px]">●</span>
                 </span>
-                <span class="leading-relaxed" v-html="prob"></span>
+                <span class="leading-relaxed text-start">
+                  <b>{{ prob.label }}</b>
+                  <span v-if="isMobile"><br /></span>
+                  <span v-else> </span>
+                  → {{ prob.desc }}
+                </span>
               </div>
             </div>
           </div>

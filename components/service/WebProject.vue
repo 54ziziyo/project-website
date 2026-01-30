@@ -15,7 +15,7 @@
         <div class="text-[28px] md:text-[52px] font-bold leading-none mb-[32px]">選擇最適合你的計劃</div>
         <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]" />
         <div class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-1 text-center">若您有活靈活現的想法想要被實現</div>
-        <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">我們可以幫您評估，隨時歡迎詢洽！</div>
+        <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">我可以幫您評估，隨時歡迎詢洽！</div>
       </div>
 
       <!-- 方案卡片 -->

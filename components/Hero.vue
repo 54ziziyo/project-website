@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-
 const scrollY = ref(0)
 const isLoaded = ref(false)
 
@@ -35,7 +33,7 @@ onBeforeUnmount(() => {
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center w-full py-16 lg:py-0">
           
           <div 
-            class="lg:col-span-7 transition-all duration-1000 transform text-center lg:text-left pt-20 lg:pt-0"
+            class="lg:col-span-7 transition-all duration-1000 transform text-center lg:text-left pt-4 sm:pt-20 lg:pt-0"
             :class="[isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
           >
             <div class="flex justify-center lg:justify-start mb-8 pt-4 lg:pt-0">
@@ -58,8 +56,8 @@ onBeforeUnmount(() => {
             </h1>
 
             <p class="text-white/85 text-base md:text-xl max-w-2xl mt-8 mb-12 leading-relaxed font-normal mx-auto lg:mx-0">
-              結合 <span class="text-white font-bold border-b-2 border-white/40 pb-1">品牌敘事</span> 與 
-              <span class="text-white font-bold border-b-2 border-white/40 pb-1">頂尖技術</span>，
+              結合 <span class="text-white font-bold border-b-2 border-white/40 pb-1">網頁開發與設計</span>、 
+              <span class="text-white font-bold border-b-2 border-white/40 pb-1">數位行銷</span>，
               讓網站成為你最強的 24 小時業務員。
             </p>
 
@@ -67,9 +65,9 @@ onBeforeUnmount(() => {
               <button class="px-12 py-4 bg-white text-black font-bold text-lg rounded-full transition-all hover:scale-105 hover:shadow-xl active:scale-95 cursor-pointer">
                 免費下載網站秘笈 →
               </button>
-              <button class="px-12 py-4 border border-white/40 text-white font-semibold text-lg rounded-full backdrop-blur-sm hover:bg-white/10 transition-all active:scale-95">
+              <NuxtLink to="/works" class="px-12 py-4 border border-white/40 text-white font-semibold text-lg rounded-full backdrop-blur-sm hover:bg-white/10 transition-all active:scale-95">
                 觀看案例
-              </button>
+              </NuxtLink>
             </div>
           </div>
 
@@ -101,7 +99,6 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-/* 核心：恢復原本代碼中的 @property 設定，讓漸層能夠動起來 */
 @property --red-x { syntax: '<percentage>'; inherits: true; initial-value: 50%; }
 @property --red-y { syntax: '<percentage>'; inherits: true; initial-value: 0%; }
 @property --purple-x { syntax: '<percentage>'; inherits: true; initial-value: 0%; }

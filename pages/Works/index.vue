@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted, computed, watch, nextTick } from 'vue'
-// 引入外部資料與類型定義
 import { portfolios, categories } from '~/data/portfolios'
 
 // 裝置偵測
@@ -99,7 +97,7 @@ onMounted(() => {
               <h3 class="text-2xl font-black text-gray-900 mb-3 transition-colors tracking-tight">{{ portfolio.title }}</h3>
               <p class="text-gray-500 text-base mb-4 line-clamp-2 leading-relaxed font-light">{{ portfolio.shortDesc }}</p>
 
-              <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span v-for="tech in portfolio.techStack.slice(0, 3)" :key="tech" class="px-3 py-1 bg-gray-50 text-gray-400 text-xs rounded-full border border-gray-100 hover:border-[#8782FF] hover:text-[#8782FF] transition-all">{{ tech }}</span>
                 <span v-if="portfolio.techStack.length > 3" class="text-gray-300 text-xs self-center">...</span>
               </div>
@@ -140,7 +138,7 @@ onMounted(() => {
           class="text-gray-500 text-lg md:text-xl mb-10 transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          Zeona Studio 已幫助多個品牌實現數位轉型。讓我們一起為你的品牌創造成果。
+          Zeona Studio 已幫助多個品牌實現數位轉型。讓我一起為你的品牌創造成果。
         </p>
         <NuxtLink
           to="/Contact"

@@ -4,7 +4,7 @@ const servicesPrice = [
     title: '社群發文製作',
     highlight: '單篇貼文圖文，含3-4張圖+文案撰寫(增圖可額外加購)',
     description:
-      '這些是針對 Facebook / Instagram（適應格式）製作的完整社群貼文內容。你提供主題、活動內容或優惠資訊，我們來負責文案撰寫、圖文設計與排版。',
+      '這些是針對 Facebook / Instagram（適應格式）製作的完整社群貼文內容。你提供主題、活動內容或優惠資訊，我來負責文案撰寫、圖文設計與排版。',
     price: 'NT$2,000元/篇起',
   },
   {
@@ -35,7 +35,7 @@ const servicesPrice = [
 ]
 </script>
 <template>
-  <div class="px-6 pt-12 md:pt-24 pb-24 md:px-20">
+  <div class="px-6 py-24 md:px-20">
     <p class="mb-4 text-[#8782FF] text-[16px] md:text-[24px] font-bold text-center">PRICE LIST</p>
     <div class="text-[28px] md:text-[36px] font-bold leading-none mb-24 text-center">行銷服務價目表</div>
 

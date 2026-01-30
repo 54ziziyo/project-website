@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import img1 from '../assets/images/targetAudience/business-plan.svg'
 import img2 from '../assets/images/targetAudience/digital-nomad.svg'
 import img3 from '../assets/images/targetAudience/marketing.svg'
@@ -83,7 +82,7 @@ const targetAudiences = [
       class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center md:mb-16 mb-8 transition-all duration-1000 transform"
       :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
     >
-      如果有的話，我們的服務會相當適合你
+      如果有的話，我的服務會相當適合你
     </div>
     <Carousel
       class="w-full md:px-15 px-12 relative"

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
-
 const isVisible = ref(false)
 const sectionRef = ref(null)
 const activeCards = ref(new Set())
@@ -28,7 +26,7 @@ onMounted(() => {
 <template>
   <div ref="sectionRef" class="relative pb-[50px] pt-30 md:py-[120px] overflow-x-clip bg-white font-sans">
     
-    <div class="absolute md:-top-[20%] -right-[70%]">
+    <div class="absolute md:-top-[20%] -right-[70%] pointer-events-none">
       <img src="../assets/images/round-purple.svg" alt="circle pattern" class="max-w-none" width="1500" height="1500" />
     </div>
 
@@ -41,7 +39,7 @@ onMounted(() => {
         <h2 class="text-[clamp(24px,5vw,52px)] text-center font-black leading-[1.2] text-gray-900">
           困難的問題<br class="md:hidden" />
           <span class="text-[#8782FF] whitespace-nowrap">
-            我們都幫你解決了
+            我都幫你解決了
           </span>
         </h2>
         <div class="w-16 h-1.5 bg-[#8782FF] mt-12 rounded-full"></div>
@@ -55,7 +53,7 @@ onMounted(() => {
         >
           <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">01. 全站式輕量服務</div>
           <div class="text-[20px] md:text-[28px] font-extrabold mb-4 text-[#333] leading-snug">
-            我們從技術到行銷<br />提供完整輕解決方案
+            我從技術到行銷<br />提供完整輕解決方案
           </div>
           <div class="text-[#5B5B5B] text-base md:text-lg leading-relaxed">
             適合品牌行銷、中小型電商與企業，讓您告別瑣碎的溝通，專注於品牌成長。
@@ -98,7 +96,7 @@ onMounted(() => {
             長期的合作<br />不必每次都從新開始
           </div>
           <div class="text-[#5B5B5B] text-base md:text-lg leading-relaxed">
-            收費固定，讓我們更懂您的品牌需求。不再擔心每個月需要重新報價，有效控制浮動的營運成本。
+            收費固定，讓我更懂您的品牌需求。不再擔心每個月需要重新報價，有效控制浮動的營運成本。
           </div>
         </div>
 

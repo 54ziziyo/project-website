@@ -31,7 +31,7 @@ const allFaqs: Record<Category, Faq[]> = {
       value: 'item-2',
       title: '網站預算有限，還有辦法做網站嗎？',
       content:
-        '當然沒問題！<br/>我們可依您的預算規劃合適的建站方案，像是模板網站、單頁式網站、分期付款等，協助小資創業或新品牌順利起步。',
+        '當然沒問題！<br/>我可依您的預算規劃合適的建站方案，像是模板網站、單頁式網站、分期付款等，協助小資創業或新品牌順利起步。',
     },
     {
       value: 'budget',
@@ -59,18 +59,18 @@ const allFaqs: Record<Category, Faq[]> = {
     {
       value: 'item-3',
       title: '網站完成後可以自己更新嗎？',
-      content: '可以，我們會使用方便操作的 CMS 後台系統，並提供線上教學或操作影片，協助您後續自行更新網站內容。',
+      content: '可以，我會使用方便操作的 CMS 後台系統，並提供線上教學或操作影片，協助您後續自行更新網站內容。',
     },
     {
       value: 'item-4',
       title: '網站架設完成後，之後還會有維護嗎？如果後來突然壞掉怎麼辦？',
       content:
-        '我們提供免費的 1 個月技術協助，後續如需長期維護，可選擇維護方案，包含內容更新、系統安全檢查、備份與技術支援等。',
+        '我提供免費的 1 個月技術協助，後續如需長期維護，可選擇維護方案，包含內容更新、系統安全檢查、備份與技術支援等。',
     },
     {
       value: 'item-5',
-      title: '主機伺服器和網域是什麼？我們要自己處理嗎？',
-      content: '如果您已有主機與網域可協助設定，若沒有，我們也可協助代為購買與設定，讓您無需煩惱技術細節。',
+      title: '主機伺服器和網域是什麼？我要自己處理嗎？',
+      content: '如果您已有主機與網域可協助設定，若沒有，我也可協助代為購買與設定，讓您無需煩惱技術細節。',
     },
     {
       value: 'item-6',
@@ -84,15 +84,15 @@ const allFaqs: Record<Category, Faq[]> = {
     },
     {
       value: 'item-8',
-      title: '可以幫我們接 GA 分析、SEO 嗎？',
+      title: '可以幫我接 GA 分析、SEO 嗎？',
       content:
-        '可以！我們可協助安裝 Google Analytics 分析、基本 SEO 設定（如 meta 標籤、關鍵字、網站地圖）等，幫助提升搜尋曝光率。',
+        '可以！我可協助安裝 Google Analytics 分析、基本 SEO 設定（如 meta 標籤、關鍵字、網站地圖）等，幫助提升搜尋曝光率。',
     },
     {
       value: 'item-9',
       title: '報價會報多久？',
       content:
-        '在我們釐清您的網站需求、功能與預算後，通常會在 2～5 個工作日內提供完整報價與合作內容。若有特殊需求或加購功能，時間可能略有延長，會事先與您確認。',
+        '在我釐清您的網站需求、功能與預算後，通常會在 2～5 個工作日內提供完整報價與合作內容。若有特殊需求或加購功能，時間可能略有延長，會事先與您確認。',
     },
     //   {
     //     value: "tech-stack",
@@ -162,7 +162,7 @@ const allFaqs: Record<Category, Faq[]> = {
       value: 'seo-article',
       title: 'SEO 文章如何確保關鍵字效果？',
       content:
-        '我們會執行以下步驟：<br/>（1) 關鍵字研究（搜尋量/競爭度分析） <br/>（2) 內容結構優化（H2/H3 標籤） <br/>（3) 內部連結規劃 <br/>（4) 圖片 ALT 標籤設定。完成後提供關鍵字排名追蹤建議。',
+        '我會執行以下步驟：<br/>（1) 關鍵字研究（搜尋量/競爭度分析） <br/>（2) 內容結構優化（H2/H3 標籤） <br/>（3) 內部連結規劃 <br/>（4) 圖片 ALT 標籤設定。完成後提供關鍵字排名追蹤建議。',
     },
     {
       value: 'seo-price',
@@ -194,7 +194,7 @@ const allFaqs: Record<Category, Faq[]> = {
     {
       value: 'schedule',
       title: '發文排程如何安排？',
-      content: '我們會根據您的產業特性，建議最佳發文時段（例：電商適合晚間 8-10 點），並於每月初提供內容日曆確認。',
+      content: '我會根據您的產業特性，建議最佳發文時段（例：電商適合晚間 8-10 點），並於每月初提供內容日曆確認。',
     },
 
     // 加購與客製化
@@ -207,7 +207,7 @@ const allFaqs: Record<Category, Faq[]> = {
     {
       value: 'custom-plan',
       title: '沒有適合的方案怎麼辦？',
-      content: '歡迎聯繫我們討論客製化報價！提供「需求表單」勾選項目後，將於 1-3 個工作天提供專屬方案。',
+      content: '歡迎聯繫我討論客製化報價！提供「需求表單」勾選項目後，將於 1-3 個工作天提供專屬方案。',
     },
     {
       value: 'payment',
@@ -248,7 +248,7 @@ const allFaqs: Record<Category, Faq[]> = {
       value: 'banner-size',
       title: '社群Banner的建議尺寸？',
       content:
-        'FB封面：1200x630px<br/>IG貼文：1080x1080px<br/>蝦皮主圖：800x800px。<br/><br/>我們會依平台自動調整，無需擔心尺寸問題。',
+        'FB封面：1200x630px<br/>IG貼文：1080x1080px<br/>蝦皮主圖：800x800px。<br/><br/>我會依平台自動調整，無需擔心尺寸問題。',
     },
     {
       value: 'dynamic-fee',
@@ -339,13 +339,13 @@ const currentFaqs = computed(() => allFaqs[selectedCategory.value])
 </script>
 
 <template>
-  <div class="relative pt-24 pb-40 overflow-x-clip">
+  <div class="relative pt-24 md:pt-32 pb-24 overflow-x-clip">
     <!-- Header -->
     <div class="px-10 flex justify-center flex-col items-center">
       <div class="text-[28px] md:text-[36px] font-bold leading-none text-center mb-6">常見問題</div>
       <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]" />
-      <div class="ttext-gray-600 text-[16px] md:text-[20px] text-center md:mb-10">
-        我們提供了一些常見問題的解答，幫助您更了解我們的服務與流程
+      <div class="text-gray-600 text-[16px] md:text-[20px] text-center mb-4 md:mb-10">
+        我提供了一些常見問題的解答，幫助您更了解我的服務與流程
       </div>
     </div>
 

@@ -5,18 +5,18 @@
     >
       <div class="text-left">
         <div class="font-bold font-[Hammersmith_One]">Zeona</div>
-        <div>感謝您訪問我們的網站，期待為您提供優質的服務！</div>
+        <div>感謝您訪問我的網站，期待為您提供優質的服務！</div>
       </div>
       <div class="space-x-4 flex">
         <div class="space-y-2 flex flex-col">
-          <div>關於我們</div>
+          <div>關於我</div>
           <div>服務項目</div>
           <div>常見問題</div>
         </div>
         <div class="space-y-2 flex flex-col">
           <div>隱私政策</div>
           <div>使用條款</div>
-          <div>聯繫我們</div>
+          <div>聯繫我</div>
         </div>
       </div>
       <div class="space-y-2 flex flex-col">

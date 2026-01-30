@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, watch, onUnmounted } from 'vue'
-
 const props = defineProps<{
   modelValue: boolean
 }>()
@@ -42,13 +40,13 @@ const navItems = [
       { title: '網站架設', href: '/services/website' },
       { title: '行銷服務', href: '/services/marketing' },
       { title: '文宣設計', href: '/services/design' },
-      { title: 'VIP全站客製', href: '/services/all' },
+      // { title: 'VIP全站客製', href: '/services/all' },
     ],
   },
   { title: '常見問題', href: '/faq' },
   { title: '作品集', href: '/works' },
   // { title: '數位工具箱', href: '/toolbox' },
-  { title: '聯繫我們', href: '/contact' },
+  { title: '聯繫我', href: '/contact' },
 ]
 
 const expandedIndex = ref<number | null>(null)

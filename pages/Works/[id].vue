@@ -141,8 +141,8 @@ onMounted(() => {
 
         <div class="bg-gradient-to-br from-[#8782FF]/10 to-[#6f6bff]/10 py-16 rounded-2xl text-center transition-all duration-1000 transform delay-500" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
           <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">想要打造類似的專案？</h2>
-          <p class="text-gray-600 mb-8 max-w-xl mx-auto px-4">讓 Zeona Studio 協助您實現數位夢想，從設計到開發，我們提供一站式服務。</p>
-          <NuxtLink to="/Contact" class="inline-block bg-[#8782FF] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-lg">立即聯繫我們</NuxtLink>
+          <p class="text-gray-600 mb-8 max-w-xl mx-auto px-4">讓 Zeona Studio 協助您實現數位夢想，從設計到開發，我提供一站式服務。</p>
+          <NuxtLink to="/Contact" class="inline-block bg-[#8782FF] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-lg">立即聯繫我</NuxtLink>
         </div>
       </div>
     </div>
