@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="relative pt-[50px] md:pt-[100px] overflow-x-clip">
+  <div class="relative pt-24 md:pt-32 pb-20 overflow-x-clip">
     <div class="absolute md:-top-40 md:-left-[65%] bottom-0 -right-[0%]">
       <img src="../assets/images/round-purple.svg" alt="circle pattern" class="max-w-none" width="1500" height="1500" />
     </div>
@@ -10,11 +10,11 @@
         <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">價值的交會點</div>
         <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-12 mb-8">想告訴你的是</div>
         <div class="text-[#5B5B5B] text-[14px] md:text-[16px] mb-4">
-          嗨，我是 Zeona Studio，專注於網頁設計與前端開發，擁有四年以上專業經驗
+          嗨，我們是 Zeona Studio，專注於網頁設計與前端開發，擁有五年以上專業經驗
           <br />
-          我熟悉網站規劃、UI/UX、SEO基礎與數位行銷內容，能協助品牌打造兼具美感與效能的網站
+          我們熟悉網站規劃、UI/UX、SEO基礎與數位行銷內容，能協助品牌打造兼具美感與效能的網站
           <br />
-          歡迎聊聊你的想法，我會用最適合你的方式，協助品牌在線上脫穎而出！
+          歡迎聊聊你的想法，我們會用最適合你的方式，協助品牌在線上脫穎而出！
         </div>
       </div>
 

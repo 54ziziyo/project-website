@@ -39,22 +39,41 @@
           >
             選擇方案
           </div>
-          <div class="lg:space-y-5 lg:space-y-5 space-y-3">
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">8 篇貼文含圖文（版面設計與整體規劃）</span>
+          <div class="lg:space-y-5 space-y-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-0.5">
+                <Icon name="pajamas:check-sm" width="20" height="20" class="text-[#8782FF]" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start">
+                8 篇貼文含圖文（版面設計與整體規劃）
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">6 組限動（含2-3張動態圖）</span>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-0.5">
+                <Icon name="pajamas:check-sm" width="20" height="20" class="text-[#8782FF]" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start">
+                6 組限動（含2-3張動態圖）
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">基本內容規劃（提供發文方向建議）</span>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-0.5">
+                <Icon name="pajamas:check-sm" width="20" height="20" class="text-[#8782FF]" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start">
+                基本內容規劃（提供發文方向建議）
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">貼文設計與文案撰寫（可額外加購＋）</span>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-0.5">
+                <Icon name="pajamas:check-sm" width="20" height="20" class="text-[#8782FF]" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start">
+                貼文設計與文案撰寫（可額外加購）
+              </span>
             </div>
           </div>
         </div>
@@ -66,7 +85,7 @@
           <div class="space-y-2">
             <div class="font-bold flex justify-between items-center">
               <div class="text-[20px]">穩定品牌經營方案</div>
-              <span class="text-[#8782FF] text-[16px]">最受歡迎</span>
+              <!-- <span class="text-[#8782FF] text-[16px]">最受歡迎</span> -->
             </div>
             <div class="text-[18px] text-[#5B5B5B] text-left">穩定經營中品牌，需要完整規劃</div>
           </div>
@@ -79,26 +98,51 @@
           >
             選擇方案
           </div>
-          <div class="lg:space-y-5 space-y-3">
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">12 篇貼文含圖文（版面設計與整體規劃）</span>
+          <div class="lg:space-y-6 space-y-4">
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                12 篇貼文含圖文（版面設計與整體規劃）
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">10 組限動（含2-3張動態圖）</span>
+
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                10 組限動（含 2-3 張動態圖）
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">完整社群內容規劃(主題設計/發文策略)</span>
+
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                完整社群內容規劃 (主題設計 / 發文策略)
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">貼文設計/文案撰寫/排程發佈</span>
+
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                貼文設計 / 文案撰寫 / 排程發佈
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">不含短影音剪輯（可額外加購＋）</span>
+
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                不含短影音剪輯（可額外加購＋）
+              </span>
             </div>
           </div>
         </div>
@@ -120,22 +164,41 @@
           >
             選擇方案
           </div>
-          <div class="lg:space-y-5 space-y-3">
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">12 篇貼文含圖文（版面設計與整體規劃）</span>
+          <div class="lg:space-y-6 space-y-4">
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                12 篇貼文含圖文（版面設計與整體規劃）
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">10 組限動（含2-3張動態圖）</span>
+
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                10 組限動（含 2-3 張動態圖）
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]"> 2支60秒短影音剪輯（含字幕&特效）</span>
+
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                2 支 60 秒短影音剪輯（含字幕 & 特效）
+              </span>
             </div>
-            <div class="space-x-1 flex items-center">
-              <Icon name="pajamas:check-sm" width="24" height="24" class="text-[#8782FF]" />
-              <span class="ml-2 text-[#5B5B5B]">完整社群內容規劃、發文排程</span>
+
+            <div class="flex items-start group/item">
+              <div class="flex-shrink-0 mt-1 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+                <Icon name="pajamas:check-sm" class="text-[#8782FF] w-full h-full" />
+              </div>
+              <span class="ml-3 text-[#5B5B5B] text-sm md:text-base leading-relaxed text-start tracking-wide">
+                完整社群內容規劃、發文排程
+              </span>
             </div>
           </div>
         </div>

@@ -84,7 +84,7 @@ const allFaqs: Record<Category, Faq[]> = {
     },
     {
       value: 'item-8',
-      title: '可以幫我接 GA 分析、SEO 嗎？',
+      title: '可以幫我們接 GA 分析、SEO 嗎？',
       content:
         '可以！我們可協助安裝 Google Analytics 分析、基本 SEO 設定（如 meta 標籤、關鍵字、網站地圖）等，幫助提升搜尋曝光率。',
     },

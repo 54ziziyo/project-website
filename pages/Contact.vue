@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="md:py-10 p-4">
+  <div class="pt-24 md:pt-32 pb-16 p-4">
     <Contact />
   </div>
 </template>

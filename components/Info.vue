@@ -42,7 +42,7 @@ const services = [
         <p class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">服務項目與流程</p>
         <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6">可以怎麼幫助你？</div>
         <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
-          我提供客製化的一站式數位服務<br />特別適合剛起步的新創品牌、個人工作室、小型企業
+          我們提供客製化的一站式數位服務<br />特別適合剛起步的新創品牌、個人工作室、小型企業
         </div>
       </div>
 
@@ -67,7 +67,7 @@ const services = [
     </section>
 
     <section class="relative pl-8 md:pl-[6.875rem] md:pt-40 py-30 transition-opacity duration-700">
-      <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[24px] font-bold">為什麼選擇我呢？</div>
+      <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[24px] font-bold">為什麼選擇我們呢？</div>
       <div class="text-[24px] md:text-[52px] font-bold leading-none mb-8 md:mb-[80px]">量身打造品牌門面</div>
       <div class="space-y-[32px] md:space-y-[60px]">
         <div class="space-y-[8px] md:space-y-[16px]">
@@ -76,7 +76,7 @@ const services = [
             <div class="text-[16px] md:text-[24px] font-bold pr-8">全面一站式｜設計 × 技術 × 行銷整合力</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
-            我不只會做設計與前端開發，更懂得行銷的邏輯，協助品牌真正產生「價值」與「轉換」
+            我們不只會做設計與前端開發，更懂得行銷的邏輯，協助品牌真正產生「價值」與「轉換」
           </div>
         </div>
 
@@ -86,7 +86,7 @@ const services = [
             <div class="text-[16px] md:text-[24px] font-bold pr-8">高彈性客製方案｜一對一深度服務，靈活彈性調整</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
-            不論是剛起步的品牌或已經營一段時間的企業，我都會依照你的目標與預算，給出最合適的建議與內容規劃
+            不論是剛起步的品牌或已經營一段時間的企業，我們都會依照你的目標與預算，給出最合適的建議與內容規劃
           </div>
         </div>
 
@@ -114,7 +114,7 @@ const services = [
         <div class="relative z-10 flex items-center justify-between h-full px-10">
           <div>
             <h2 class="text-2xl font-bold mb-2">從品牌定位到數位落地</h2>
-            <p class="text-sm text-gray-200">我用『行銷腦+技術力』幫你實現100%</p>
+            <p class="text-sm text-gray-200">我們用『行銷腦+技術力』幫你實現100%</p>
           </div>
 
           <div class="text-center text-[#F1F0FF]">
@@ -129,7 +129,7 @@ const services = [
       <div class="max-w-4xl text-center">
         <h2 class="text-[24px] md:text-[32px] font-bold mb-4">想了解更多嗎？讓我們聊聊吧！</h2>
         <p class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-12">
-          無論你是新創品牌還是小型企業，我都能提供量身打造的解決方案
+          無論你是新創品牌還是小型企業，我們都能提供量身打造的解決方案
           <br />
           讓你的品牌在數位世界中脫穎而出
         </p>
@@ -138,7 +138,7 @@ const services = [
             href="/contact"
             class="animate-bounce font-semibold py-3 px-6 rounded-full text-white text-sm bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-2 hover:bg-[#6f6bff] transition-colors duration-300"
           >
-            <span>我要免費諮詢 →</span>
+            <span>我們要免費諮詢 →</span>
           </a>
         </button>
       </div>
