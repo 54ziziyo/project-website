@@ -122,7 +122,7 @@ const psdToHtmlPrice = [
     <!-- One page website price -->
     <div class="space-y-12 max-w-7xl mx-auto">
       <div
-        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-4 py-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
+        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative p-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
       >
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">一頁式網站架設</div>
         <p class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-10">PRICE LIST</p>
@@ -150,7 +150,7 @@ const psdToHtmlPrice = [
     <!-- multi page website price -->
     <div class="space-y-12 max-w-7xl mx-auto">
       <div
-        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-4 py-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
+        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative p-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
       >
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">多頁式網站架設</div>
         <p class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-10">PRICE LIST</p>
@@ -178,7 +178,7 @@ const psdToHtmlPrice = [
     <!-- Website Design price -->
     <div class="space-y-12 max-w-7xl mx-auto">
       <div
-        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-4 py-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
+        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative p-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
       >
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">網站設計</div>
         <p class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-10">PRICE LIST</p>
@@ -210,7 +210,7 @@ const psdToHtmlPrice = [
 
     <div class="space-y-12 max-w-7xl mx-auto">
       <div
-        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-4 py-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
+        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative p-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
       >
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">網站切版</div>
         <p class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-10">PRICE LIST</p>

@@ -95,7 +95,7 @@ const cProject = [
     <!-- A Project -->
     <div class="space-y-12 max-w-7xl mx-auto">
       <div
-        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-4 py-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
+        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative p-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
       >
         <div class="flex flex-row justify-between items-top">
           <div class="text-[24px] md:text-[28px] font-bold leading-none">品牌起步包</div>
@@ -125,7 +125,7 @@ const cProject = [
     <!-- B Project -->
     <div class="space-y-12 max-w-7xl mx-auto">
       <div
-        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-4 py-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
+        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative p-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
       >
         <div class="flex flex-row justify-between items-top">
           <div class="text-[24px] md:text-[28px] font-bold leading-none">成長經營包</div>
@@ -155,7 +155,7 @@ const cProject = [
     <!-- C Project -->
     <div class="space-y-12 max-w-7xl mx-auto">
       <div
-        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative px-4 py-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
+        class="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl relative p-8 md:p-20 md:pb-12 flex flex-col space-y-[28px] border border-[#8782FF] duration-300 transform"
       >
         <div class="flex flex-row justify-between items-top">
           <div class="text-[24px] md:text-[28px] font-bold leading-none">品牌旗艦包</div>

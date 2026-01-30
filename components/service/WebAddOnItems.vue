@@ -116,7 +116,7 @@ const advancedAddons = [
 </script>
 <template>
   <div class="relative px-4 flex justify-center flex-col items-center text-center">
-    <div class="md:px-20 w-full py-40 space-y-28">
+    <div class="md:px-20 w-full mb-32 space-y-32 lg:pb-40 lg:space-y-40">
       <!-- 基礎加購項目 -->
       <div>
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">基礎加購項目</div>
