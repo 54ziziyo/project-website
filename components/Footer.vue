@@ -9,14 +9,14 @@
       </div>
       <div class="space-x-4 flex">
         <div class="space-y-2 flex flex-col">
-          <div>關於我</div>
-          <div>服務項目</div>
-          <div>常見問題</div>
+          <NuxtLink to="/About" class="hover:text-[#8782FF] transition">關於我</NuxtLink>
+          <NuxtLink to="/Services/All" class="hover:text-[#8782FF] transition">服務項目</NuxtLink>
+          <NuxtLink to="/Faq" class="hover:text-[#8782FF] transition">常見問題</NuxtLink>
         </div>
         <div class="space-y-2 flex flex-col">
-          <div>隱私政策</div>
-          <div>使用條款</div>
-          <div>聯繫我</div>
+          <NuxtLink to="/Privacy" class="hover:text-[#8782FF] transition">隱私政策</NuxtLink>
+          <NuxtLink to="/Terms" class="hover:text-[#8782FF] transition">使用條款</NuxtLink>
+          <NuxtLink to="/Contact" class="hover:text-[#8782FF] transition">聯繫我</NuxtLink>
         </div>
       </div>
       <div class="space-y-2 flex flex-col">
@@ -26,11 +26,17 @@
         </div>
         <div class="flex space-x-2">
           <div>電子信箱</div>
-          <div>54ziziyo@gmail.com</div>
+          <a href="mailto:54ziziyo@gmail.com" class="hover:text-[#8782FF] transition">54ziziyo@gmail.com</a>
         </div>
         <div class="flex space-x-2">
           <div>LINE ID</div>
-          <div>0980191031</div>
+          <a
+            href="https://line.me/ti/p/@768viuqz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-[#8782FF] transition"
+            >@768viuqz</a
+          >
         </div>
       </div>
     </div>

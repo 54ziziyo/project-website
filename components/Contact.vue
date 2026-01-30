@@ -26,13 +26,19 @@ import FormContact from './form/Contact.vue'
               </div>
               <div class="flex justify-between items-center">
                 <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">電子信箱</div>
-                <a href="mailto:54ziziyo@gmail.com" class="text-[#8782FF] text-[16px] md:text-[18px]"
+                <a
+                  href="mailto:54ziziyo@gmail.com"
+                  class="text-[#8782FF] text-[16px] md:text-[18px] hover:text-[#6f6bff] transition-colors"
                   >54ziziyo@gmail.com</a
                 >
               </div>
               <div class="flex justify-between items-center">
                 <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">LINE ID</div>
-                <a href="https://lin.ee/Tt7Apjc" target="_blank" rel="noopener noreferrer" class="text-[#8782FF] text-[16px] md:text-[18px]"
+                <a
+                  href="https://lin.ee/Tt7Apjc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-[#8782FF] text-[16px] md:text-[18px] hover:text-[#6f6bff] transition-colors"
                   >@768viuqz</a
                 >
               </div>
