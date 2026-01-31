@@ -43,17 +43,17 @@ onUnmounted(() => {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: '網站架設',
+    title: '網站開發',
     href: '/services/website',
     description: '網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力',
   },
   {
-    title: '行銷服務',
+    title: '行銷推廣',
     href: '/services/marketing',
     description: '行銷策略、社群媒體管理、內容行銷等服務，提升品牌曝光率',
   },
   {
-    title: '文宣設計',
+    title: '視覺設計',
     href: '/services/design',
     description: '設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象',
   },

@@ -75,7 +75,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'luxetravel',
     title: 'Luxe Travel 歐洲旅遊平台',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '頂級歐洲旅遊規劃服務',
     description: `Luxe Travel 是專精於歐洲度假的頂級旅遊規劃平台。提供多元化的旅遊服務，包括精選團體旅遊、客製化自由行和豪華郵輪，旨在滿足旅客對完美旅程的所有嚮往。<br /><br />在各大旅遊論壇上獲得了卓越的聲譽和好評。至今已幫助多名旅客實現探索歐洲的夢想，並為數百對新人打造難忘的蜜月之旅。`,
     features: ['精選團體旅遊方案', '客製化自由行規劃', '豪華郵輪行程', 'SEO 優化與搜尋排名', '響應式設計體驗'],
@@ -87,7 +87,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'levert',
     title: 'Levert 益生菌電商平台',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '專業保健品線上購物體驗',
     description: `Levert 益生菌提供無縫的線上購物體驗，具備專屬會員計畫、直覺化的產品預覽和簡化的結帳流程。<br/><br/>品牌堅定承諾打造真正有效的美容保健品，不含人工色素、香料或甜味劑，為消費者帶來最純淨的健康選擇。`,
     features: ['電商購物車', '直覺化產品瀏覽', '簡化結帳流程', '產品輪播展示', 'API 整合串接'],
@@ -129,7 +129,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'fantasi',
     title: 'Fantasi 創作者交流平台',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '創作者與粉絲的獨特交流空間',
     description: `Fantasi.one 是一個專為創作者與粉絲打造的獨特交流空間，創作者可以在平台上分享精彩的影片內容。<br/><br/>粉絲則可透過訂閱或單次購買的方式，取得專屬的獨家內容存取權限。平台致力於建立創作者與粉絲之間更緊密的連結，讓創作價值得到更好的實現。`,
     features: [
@@ -150,7 +150,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'vida-creator-platform',
     title: 'Vida 創作者平台',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '創作者主導的互動訂閱平台',
     description: `VIDA 是一個以創作者為中心的平台，提供粉絲觀看、評論功能，創作者可透過「設定付款」或「天數訂閱」功能吸引流量並變現。`,
     features: ['訂閱制付費功能', '創作者天數訂閱方案', '多語系支援 (Vue-i18n)', '內容包裝與推廣邏輯'],
@@ -163,7 +163,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'freelance',
     title: 'Zeona Studio 官方網站',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '一站式數位服務平台',
     description: `Zeona 提供一站式數位服務，涵蓋品牌建立、網站開發與數位行銷。從 0 到 1，我提供多種量身定制的方案，滿足顧客需求。無論是初創品牌還是成熟企業，我都能協助您在數位世界中建立強大的品牌形象。`,
     features: [
@@ -181,7 +181,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'photographer-studio',
     title: '攝影工作室作品集網站',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '互動式影像作品展示平台',
     description: `為攝影師量身打造的作品集網站。首頁具備互動效果，使用者只需懸停在項目縮略圖上即可預覽影片內容。系統使用 Google Sheets 作為輕量化 CMS，讓攝影師無需維護複雜後台即可即時更新內容。`,
     features: [
@@ -199,7 +199,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'taiwan-travel-guide',
     title: '台灣旅遊景點指南',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '實作最新技術的互動地圖',
     description: `積極實踐新技術的 Side Project。具備導航篩選功能，讓訪客能輕鬆搜尋景點資訊。整合地圖圖資並可加入我的最愛清單，提供直覺的台灣地理位置查詢體驗。`,
     features: [
@@ -231,7 +231,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-reels-hud',
     title: '【短影片】HUD 抬頭顯示器',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '影片截至2026年2月1日，達成 1,006,822 觀看',
     description: `這篇 Reels 專注於展示產品特色細節，並產生話題性與觀看者互動。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -254,7 +254,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-reels-arai-neko',
     title: '【短影片】Arai 貓貓安全帽',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '影片截至2026年2月1日，達成 311,560 觀看',
     description: `這篇 Reels 專注於展示產品特色細節，將「價格資訊」或「商品詳情」當作誘餌，吸引潛在客戶主動留下資訊，藉此收集有效潛在客戶名單。<br /><br />
     將公開平台的流量引導至私密的私訊對話框，建立自己的「私域流量池」，方便後續進行長期的追蹤與銷售。
@@ -281,7 +281,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-reels-electronic-dimming',
     title: '【短影片】電子調光防霧鏡片',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '影片截至2026年2月1日，達成 256,703 觀看',
     description: `這篇 Reels 專注於展示產品特色細節，將「價格資訊」或「商品詳情」當作誘餌，吸引潛在客戶主動留下資訊，藉此收集有效潛在客戶名單。<br /><br />
     將公開平台的流量引導至私密的私訊對話框，建立自己的「私域流量池」，方便後續進行長期的追蹤與銷售。
@@ -307,7 +307,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-post-93-white',
     title: '【社群貼文】93 預購消息',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '文章截至2026年2月1日，達成 238,493 觀看',
     description: `這篇文章專注於展示新產品售價與預購，提供客人購買服務。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -329,7 +329,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-post-x15-valion',
     title: '【社群貼文】X15 停產撤回',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '文章截至2026年2月1日，達成 229,249 觀看',
     description: `這篇文章專注於即時消息洞察，了解行業最新資訊並發布大家注重的關鍵點。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -350,7 +350,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-reels-shoei-helmet-bag',
     title: '【短影片】SHOEI 安全帽包',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '影片截至2026年2月1日，達成 177,092 觀看',
     description: `這篇 Reels 專注於展示產品特色細節，將「價格資訊」或「商品詳情」當作誘餌，吸引潛在客戶主動留下資訊，藉此收集有效潛在客戶名單。<br /><br />
     將公開平台的流量引導至私密的私訊對話框，建立自己的「私域流量池」，方便後續進行長期的追蹤與銷售。
@@ -377,7 +377,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-reels-fearless',
     title: '【短影片】SHOEI Fearless',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '影片截至2026年2月1日，達成 112,814 觀看',
     description: `這篇 Reels 專注於展示產品特色細節，將「價格資訊」或「商品詳情」當作誘餌，吸引潛在客戶主動留下資訊，藉此收集有效潛在客戶名單。<br /><br />
     將公開平台的流量引導至私密的私訊對話框，建立自己的「私域流量池」，方便後續進行長期的追蹤與銷售。
@@ -404,7 +404,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-post-2026-x15-price',
     title: '【社群貼文】2026 X15',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '文章截至2026年2月1日，達成 103,586 觀看',
     description: `這篇文章專注於展示新產品售價與預購，提供客人購買服務。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -426,7 +426,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-post-2025-shoei-z8-price',
     title: '【社群貼文】2025 SHOEI Z8',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '文章截至2026年2月1日，達成 91,710 觀看',
     description: `這篇文章專注於展示新產品售價與預購，提供客人購買服務。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -449,7 +449,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-post-Marquez9-pre-order',
     title: '【社群貼文】Marquez9 消息',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '文章截至2026年2月1日，達成 74,653 觀看',
     description: `這篇文章專注於即時消息洞察，了解行業最新資訊並發布大家注重的關鍵點。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -471,7 +471,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-reels-damper',
     title: '【短影片】車身減震拉桿',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '影片截至2026年2月1日，達成 48,436 觀看',
     description: `這篇 Reels 專注於展示功能細節，並產生話題性與觀看者互動。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -493,7 +493,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-reels-elevate',
     title: '【短影片】小個子墊高神器',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '影片截至2026年2月1日，達成 33,480 觀看',
     description: `這篇 Reels 專注於展示產品特色細節，並產生話題性與觀看者互動。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -515,7 +515,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'roml-life-reels-bike-parking',
     title: '【短影片】日本機車停車資訊',
-    category: '行銷營運',
+    category: '行銷推廣',
     shortDesc: '影片截至2026年2月1日，達成 5,256 觀看',
     description: `這篇 Reels 專注於分享日本停車資訊。<br /><br />
     此則未投放任何廣告，根據後台數據顯示（如下圖）：<br />
@@ -536,7 +536,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'one-click-car-bg',
     title: '一鍵叫車後台管理系統',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '設備與租戶管理中心',
     description: `專為內部管理人員設計，用於設定租戶與設備機器。系統支援設定多種叫車服務，如「掃碼叫車」、「Inline 串接」等後台參數設定。`,
     features: ['租戶權限管理', '設備狀態監控', '後台參數設定', 'QR Code 叫車管理', '設計規範系統 (Design Guideline)'],
@@ -548,7 +548,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'corporate-signing-web',
     title: '企業簽單形象官網',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '電子乘車券服務入口',
     description: `解決企業對員工交通差旅的管理需求，並提供成員電子乘車券服務。透過形象官網，讓企業用戶了解數位簽單之服務。`,
     features: [
@@ -566,7 +566,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'one-click-car',
     title: '一鍵叫車平板應用',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '實體店面快速叫車解決方案',
     description: `台灣大車隊與餐廳、百貨、住宅及超商合作，在樓層安裝叫車機，協助不熟悉 App 的長者或臨時需求的顧客。此 Android 應用程式基於 Lenovo 平板開發，透過內嵌網頁實現快速更新與部署，與後台平台保持即時聯繫。`,
     features: ['Android 平板應用開發', '內嵌網頁串接技術', '快速叫車流程優化', '多租戶權限設備管理'],
@@ -579,7 +579,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'qrcode-scan-call',
     title: 'QR Code 掃碼叫車服務',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '無 App 乘客的快速叫車方案',
     description: `佈署於車站、餐廳與商辦入口，為未下載叫車 App 的乘客提供掃碼即用的服務。提供多套 ColorStyle.css 供不同企業選擇，並進行 A/B 測試比較傳統風格與現代風格的使用者反饋。`,
     features: [
@@ -597,7 +597,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'enterprise-management',
     title: '企業簽單後台管理系統',
-    category: '網站架設',
+    category: '網站開發',
     shortDesc: '企業交通費用集中管理平台',
     description: `「企業簽單後台管理系統」讓業主能集中管理員工差旅，清楚查看每趟行程的地點、時間與費用，簡化報支流程。`,
     features: [
@@ -616,7 +616,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'one-id-login',
     title: 'One ID 統一登入系統',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '集團共享帳號驗證中心',
     description: `新一代會員系統「OneID」，為集團提供統一的註冊、登入、授權與驗證入口。透過共享帳號機制，整合集團內各項服務的登入介面與驗證流程。`,
     features: [
@@ -635,7 +635,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'jieyijia-webview',
     title: '潔衣家 Webview 手機版',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '55688 App 生活密碼購物優化',
     description: `針對潔衣家官方網站進行行動裝置優化，讓 55688 APP 使用者能流暢購買洗衣服務。從流程規劃、畫面設計到前端切版與後端串接皆一手包辦，大幅提升購物體驗。`,
     features: [
@@ -653,4 +653,4 @@ export const portfolios: Portfolio[] = [
   },
 ]
 
-export const categories = ['全部', '網站架設', '行銷營運', '文宣設計']
+export const categories = ['全部', '網站開發', '行銷推廣', '視覺設計']

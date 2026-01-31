@@ -26,9 +26,9 @@ const navItems = [
     sub: '服務項目',
     no: '03',
     children: [
-      { title: '󠁯・ 網站架設', href: '/services/website' },
-      { title: '󠁯・ 行銷服務', href: '/services/marketing' },
-      { title: '󠁯・ 文宣設計', href: '/services/design' },
+      { title: '󠁯・ 網站開發', href: '/services/website' },
+      { title: '󠁯・ 行銷推廣', href: '/services/marketing' },
+      { title: '󠁯・ 視覺設計', href: '/services/design' },
       // { title: '󠁯・ 整合服務', href: '/services/all' },
     ],
   },
