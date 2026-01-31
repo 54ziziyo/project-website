@@ -22,7 +22,7 @@
       <div class="space-y-2 flex flex-col">
         <div class="flex space-x-2">
           <div>營業時間</div>
-          <div>平日 9:00-18:00</div>
+          <div>平日 10:00-18:00</div>
         </div>
         <div class="flex space-x-2">
           <div>電子信箱</div>

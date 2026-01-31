@@ -13,313 +13,218 @@ interface Faq {
 const allFaqs: Record<Category, Faq[]> = {
   web: [
     {
-      value: 'process',
+      value: 'web-process',
       title: '網站從洽談到上線的完整流程是什麼？',
       content: `
-  <ol class="list-decimal pl-5 space-y-2">
-    <li><strong>預約諮詢</strong>：填寫需求表單，提供行業別、預算、參考網站範例。</li>
-    <li><strong>需求確認</strong>：1-2個工作日內線上會議，釐清功能與頁面架構。</li>
-    <li><strong>報價與簽約</strong>：2-5個工作日提供報價書，簽約後收取50%訂金。</li>
-    <li><strong>設計階段</strong>：1-3週完成設計稿（含2次修改）。<br><span class="text-gray-600">*急件可縮短至7天（+20%費用）</span></li>
-    <li><strong>開發與測試</strong>：2-5週完成功能開發，提供測試站修正。</li>
-    <li><strong>上線與教學</strong>：部署網站，交付操作手冊與教學影片，並收取尾款。</li>
-  </ol>
-  <p class="mt-4">💡 <strong>全程溝通工具</strong>：Figma（設計審核）、Google Meet（會議）。</p>
-  `,
+        <ol class="list-decimal pl-5 space-y-2">
+          <li><strong>需求諮詢</strong>：填寫表單提供參考範例與初步預算。</li>
+          <li><strong>報價與簽約</strong>：確認功能後提供報價單，簽約後需支付 <strong>50% 專案訂金</strong>。</li>
+          <li><strong>啟動排程</strong>：<span class="font-bold">訂金確認入帳後，專案將正式進入製作時程排程。</span></li>
+          <li><strong>視覺與開發</strong>：依據排程進行 UI 設計與前端開發，期間提供測試連結確認進度。</li>
+          <li><strong>驗收與結清</strong>：於測試環境確認無誤後結清尾款。</li>
+          <li><strong>部署上線</strong>：確認尾款入帳後，正式部署至伺服器上線。</li>
+        </ol>
+      `,
     },
     {
-      value: 'item-2',
-      title: '網站預算有限，還有辦法做網站嗎？',
-      content:
-        '當然沒問題！<br/>我可依您的預算規劃合適的建站方案，像是模板網站、單頁式網站、分期付款等，協助小資創業或新品牌順利起步。',
-    },
-    {
-      value: 'budget',
-      title: '預算有限的情況下，有哪些低成本建站選擇？',
+      value: 'web-schedule-delay',
+      title: '如果因為我的資料準備不及，會影響專案進度嗎？',
       content: `
-  <table class="w-full border mt-2">
-    <tr class="bg-gray-50">
-      <th class="p-2 border text-left">方案</th>
-      <th class="p-2 border text-left">適合對象</th>
-      <th class="p-2 border text-left">價格範圍</th>
-    </tr>
-    <tr>
-      <td class="p-2 border">半客製化一頁式網站</td>
-      <td class="p-2 border">短期活動、個人品牌</td>
-      <td class="p-2 border">NT$8,000起</td>
-    </tr>
-    <tr>
-      <td class="p-2 border">WordPress 模板網站</td>
-      <td class="p-2 border">中小企業、部落格</td>
-      <td class="p-2 border">NT$25,000起</td>
-    </tr>
-  </table>
-  `,
+        為了確保每個案件的品質與交付時間，我會於合約中載明<strong>「資料提供期限」</strong>。<br/><br/>
+        若因客戶端資料（如文字、圖片、授權碼）延遲提供超過預定時程，原定上線日期將依據實際延遲天數順延；若延遲嚴重導致影響後續其他案場排程，專案可能需重新排隊或支付額外的「重啟排程費用」。
+      `,
     },
     {
-      value: 'item-3',
-      title: '網站完成後可以自己更新嗎？',
-      content: '可以，我會使用方便操作的 CMS 後台系統，並提供線上教學或操作影片，協助您後續自行更新網站內容。',
+      value: 'web-maintenance',
+      title: '網站完成後有提供後續維護服務嗎？',
+      content: `
+        我提供上線後 <strong>1 個月的「前端技術協助」</strong>（針對原有功能的 Bug 或排版異常進行免費修復）。<br/><br/>
+        如有長期代管需求，可尋洽「定期維護」報價。
+      `,
     },
     {
-      value: 'item-4',
-      title: '網站架設完成後，之後還會有維護嗎？如果後來突然壞掉怎麼辦？',
+      value: 'web-repair-quote',
+      title: '如果網站後來「壞掉」或是需要「版本更新」怎麼辦？',
+      content: `
+        若發生非開發因素之失效（如：瀏覽器更新導致不相容、第三方套件停止支援、自行更動原始碼等）：<br/>
+        1. <strong>維護客戶</strong>：將優先處理，若涉及架構異動將提供優惠報價。<br/>
+        2. <strong>非維護客戶</strong>：將依技術難度與修復工時，進行<strong>專案制另外報價</strong>。
+      `,
+    },
+    {
+      value: 'web-self-update',
+      title: '網站完成後可以自己更新內容嗎？',
       content:
-        '我提供免費的 1 個月技術協助，後續如需長期維護，可選擇維護方案，包含內容更新、系統安全檢查、備份與技術支援等。',
+        '若方案包含內容管理系統（CMS），我會提供教學協助您自行更新文字與圖片；若為純前端網頁，後續修改將按件或按工時計費。',
     },
     {
-      value: 'item-5',
+      value: 'web-domain-hosting',
       title: '主機伺服器和網域是什麼？我要自己處理嗎？',
-      content: '如果您已有主機與網域可協助設定，若沒有，我也可協助代為購買與設定，讓您無需煩惱技術細節。',
-    },
-    {
-      value: 'item-6',
-      title: '網站會支援其他裝置嗎？如手機、平板？',
-      content: '會的，所有網站皆採響應式設計（RWD），可自動適應手機、平板與電腦等不同裝置。',
-    },
-    {
-      value: 'item-7',
-      title: '網站需要多久時間製作？',
-      content: '依據網站複雜程度而定，簡易網站約 3～4 週，進階功能網站如電商或會員系統或更客製化網站，需經過評估。',
-    },
-    {
-      value: 'item-8',
-      title: '可以幫我接 GA 分析、SEO 嗎？',
       content:
-        '可以！我可協助安裝 Google Analytics 分析、基本 SEO 設定（如 meta 標籤、關鍵字、網站地圖）等，幫助提升搜尋曝光率。',
+        '如果您已有主機可提供權限協助設定；若無，我也能代辦部署。請注意，主機與網域屬於每年需續費之租借費用，需按時繳納以確保網站持續運作。',
     },
     {
-      value: 'item-9',
-      title: '報價會報多久？',
+      value: 'web-seo-ga',
+      title: '可以幫我安裝 Google Analytics 分析或 SEO 嗎？',
       content:
-        '在我釐清您的網站需求、功能與預算後，通常會在 2～5 個工作日內提供完整報價與合作內容。若有特殊需求或加購功能，時間可能略有延長，會事先與您確認。',
-    },
-    //   {
-    //     value: "tech-stack",
-    //     title: "網站開發使用哪些技術？",
-    //     content: `
-    // <ul class="list-disc pl-5 space-y-1">
-    //   <li><strong>前端</strong>：HTML5/CSS3、JavaScript（Vue.js/React）、RWD設計</li>
-    //   <li><strong>後端</strong>：WordPress/Node.js（依需求選用）</li>
-    //   <li><strong>資料庫</strong>：MySQL、Firebase（簡易會員系統）</li>
-    //   <li><strong>部署</strong>：AWS LightSail、Vercel、或客戶指定主機</li>
-    // </ul>
-    // `,
-    //   },
-    {
-      value: 'add-ons',
-      title: '常見加購項目有哪些？價格如何計算？',
-      content: `
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-    <div class="border p-3 rounded-lg">
-      <h4 class="font-bold">基礎加購</h4>
-      <ul class="list-disc pl-5 mt-1 text-sm">
-        <li>多語系支援：NT$15,000/語系</li>
-        <li>GA4 安裝：NT$2,000</li>
-        <li>SSL 憑證：NT$1,500/年</li>
-      </ul>
-    </div>
-    <div class="border p-3 rounded-lg">
-      <h4 class="font-bold">進階功能</h4>
-      <ul class="list-disc pl-5 mt-1 text-sm">
-        <li>電商金流串接：NT$15,000起</li>
-        <li>會員系統：NT$25,000起</li>
-        <li>動畫特效：NT$10,000起</li>
-      </ul>
-    </div>
-  </div>
-  `,
+        '我提供加購服務，包含 GA4 數據監測、Google Search Console 登錄及基本 SEO 優化（Meta 標籤與網站地圖），幫助提升搜尋曝光率。',
     },
     {
-      value: 'seo-maintenance',
-      title: '網站上線後如何提升SEO？有維護建議嗎？',
+      value: 'web-revision-limit',
+      title: '專案進行中可以無限次修改嗎？',
       content: `
-  <p><strong>SEO 基礎服務</strong>（含在部分方案）：</p>
-  <ul class="list-disc pl-5 mt-1">
-    <li>Meta標籤優化</li>
-    <li>網站速度優化</li>
-    <li>行動裝置相容性檢測</li>
-  </ul>
-  `,
+        為了確保專案如期交付，<strong>設計階段包含 2 次調整機會</strong>；前端開發階段則以確定的設計稿為基準進行產製。<br/><br/>
+        若於開發中途要求更動已確認的設計，或在驗收階段提出非原始需求範圍的功能調整，將視為「新增需求」並依工時另行報價。
+      `,
+    },
+    {
+      value: 'web-post-launch-edit',
+      title: '網站驗收完畢並上線後，發現想改字或換圖怎麼辦？',
+      content: `
+        <strong>專案部署上線即視為正式驗收完畢。</strong><br/><br/>
+        上線後若有文字微調或更換圖片之需求，若您有購買維護方案，將依合約內容處理；若無，則視更動幅度採「按件計費」或「工時計費」。建議在測試連結階段進行最終細緻校對，以確保正式版之正確性。
+      `,
     },
   ],
   marketing: [
-    // 社群貼文相關
     {
-      value: 'social-post',
-      title: '單篇社群貼文包含哪些內容？',
-      content:
-        '每篇貼文含 3-4 張設計圖 + 文案撰寫（依主題優化），可額外加購增圖或調整版型。適用 FB/IG 平台，確保格式兼容。',
+      value: 'marketing-process-payment',
+      title: '行銷服務的合作流程與付款方式？',
+      content: `
+        <ol class="list-decimal pl-5 space-y-2">
+          <li><strong>需求溝通</strong>：討論產品資訊、風格與目標。</li>
+          <li><strong>簽約與訂金</strong>：<span class="font-bold">支付 50% 訂金後啟動案件</span>；包月方案則採全額預付制。</li>
+          <li><strong>內容提案</strong>：若有訂閱長期服務，每月初提供「內容日曆」與發文主題規劃，確認後進入製作。若無則以單案方式進行內容製作。</li>
+          <li><strong>成品交付</strong>：按進度交付並提供 2 次微調修正。</li>
+          <li><strong>結案與續約</strong>：<span class="font-bold">尾款結清後交付檔案</span>；包月續約應於期末 15 日前確認。</li>
+        </ol>
+      `,
     },
     {
-      value: 'story-design',
-      title: '限時動態設計的交付檔格式？',
-      content: '提供 JPG/PNG/GIF 檔（依需求），建議尺寸 1080x1920px。若需加入互動功能（如投票、問答），請提前告知。',
-    },
-
-    // SEO 相關
-    {
-      value: 'seo-article',
-      title: 'SEO 文章如何確保關鍵字效果？',
-      content:
-        '我會執行以下步驟：<br/>（1) 關鍵字研究（搜尋量/競爭度分析） <br/>（2) 內容結構優化（H2/H3 標籤） <br/>（3) 內部連結規劃 <br/>（4) 圖片 ALT 標籤設定。完成後提供關鍵字排名追蹤建議。',
+      value: 'marketing-assets-liability',
+      title: '如果我沒有素材怎麼辦？提供素材有什麼要注意的？',
+      content: `
+        服務<strong>不含實地拍攝</strong>。客戶需自行確保提供之素材（照片、Logo、字體）已獲商用授權，<span class="font-bold">若產生版權糾紛由客戶端承擔全額法律責任</span>。<br/><br/>
+        若因客戶延遲提供素材導致當月無法如期發文，<strong>該篇額度視同放棄，不得折現退款或遞延至次月。</strong>
+      `,
     },
     {
-      value: 'seo-price',
-      title: 'SEO 文章和一般部落格文章差在哪呢？',
-      content:
-        '一般部落格以品牌觀點為主，SEO文章則需平衡『讀者需求』與『搜尋意圖』。<br/>SEO文章包含「策略性撰寫」與「長期效益」，需研究產業趨勢、分析競爭對手，並優化內容結構。<br/>相較一般文案，SEO 文章能持續帶來自然流量。',
-    },
-
-    // 影音剪輯相關
-    {
-      value: 'short-video',
-      title: '短影音剪輯是否含字幕與配樂？',
-      content:
-        '60秒內剪輯已包含基礎字幕、配樂、音效及轉場特效；30秒剪輯則含字幕與配樂。<br/>所有配樂均符合社群平台版權規範，避免遭下架風險，如需專業配音或商用版權音樂，需額外報價。',
+      value: 'marketing-performance-claim',
+      title: '可以保證觸及率、追蹤人數或業績成長嗎？',
+      content: `
+        我提供專業的「內容製作與策略佈局」。由於社群演算法與市場變因為不可控因素，<strong>不保證任何具體數字成效。</strong><br/><br/>
+        所有費用均為「專業勞務製作費」，而非「成效保證金」，不接受因數據未達預期而要求退費或扣款。<br/><br/>
+        若因社群平台（如 FB/IG）官方政策更動、帳號遭無預警停權或演算法大規模更新導致之影響，我方不負賠償責任。
+      `,
     },
     {
-      value: 'video-format',
-      title: '剪輯後的影音交付格式？',
-      content: '提供 MP4 檔（1080p），可依需求輸出橫式（16:9）或直式（9:16）。',
-    },
-
-    // 包月方案相關
-    {
-      value: 'monthly-plan',
-      title: '包月方案可否調整內容數量？',
-      content:
-        '可依需求增減服務項目，例如：貼文數量升級，越多篇越便宜、追加短影音(按照需求報價)。<br/>最低月費為 NT$15,000 起。',
+      value: 'marketing-revision-rules',
+      title: '貼文或影音成品可以修改幾次？',
+      content: `
+        每項成品包含 <strong>2 次免費微調</strong>（如文字修正、局部排版）。<br/><br/>
+        若涉及「風格重新設定」、「腳本大改」或「定稿發布後要求修改」，將視為新專案另外報價。
+      `,
     },
     {
-      value: 'schedule',
-      title: '發文排程如何安排？',
-      content: '我會根據您的產業特性，建議最佳發文時段（例：電商適合晚間 8-10 點），並於每月初提供內容日曆確認。',
-    },
-
-    // 加購與客製化
-    {
-      value: 'extra-service',
-      title: '哪些服務可額外加購？',
-      content:
-        '常見加購項目：<br/>（1) 貼文增圖（+NT$300/張） <br/>（2) 動態貼文設計（+NT$500/篇） <br/>（3) 短影音拍攝（另報價） <br/>（4) 數據分析報告（+NT$2,000/月）。',
+      value: 'marketing-urgent-fee',
+      title: '如有急稿（急件）該如何處理？',
+      content: `
+        若需求時程短於該項目的平均工作天（如：ㄈLogo < 5天、Banner < 2天），將額外收取 30% - 50% 的急件處理費，並視當下排程決定是否承接。
+      `,
     },
     {
-      value: 'custom-plan',
-      title: '沒有適合的方案怎麼辦？',
-      content: '歡迎聯繫我討論客製化報價！提供「需求表單」勾選項目後，將於 1-3 個工作天提供專屬方案。',
+      value: 'marketing-ownership',
+      title: '製作出的圖文/影音原始檔（編輯檔）可以提供給我嗎？',
+      content: `
+        交付成果為最終發布檔（JPG/MP4）。未註明買斷者，<strong>不提供編輯檔（AI、PR 專案檔）</strong>。<br/><br/>
+        若需索取原始編輯檔，需額外支付 <strong>專案總金額 50% 之版權轉讓費</strong>。未經授權不得轉售或提供予第三方使用。
+      `,
     },
     {
-      value: 'payment',
-      title: '付款方式和合約如何簽訂？',
-      content:
-        '支援銀行轉帳/線上支付，單次專案需付50%訂金；包月方案採季付（享5%折扣）。合約以電子簽署確認，可提供範本預覽。',
+      value: 'marketing-communication',
+      title: '關於專案溝通與聯繫的時間限制？',
+      content: `
+        服務時間為 <strong>週一至週五 10:00 - 18:00</strong>。非作業時間訊息將於下個工作日回覆。除帳號遭盜等重大危機外，請尊重非辦公時間之休息與作業空間。
+      `,
     },
     {
-      value: 'revision',
-      title: '成品可修改幾次？如何提出意見？',
-      content:
-        '每項成品包含2次免費修改（需於交付後7天內提出），額外修改依工時報價。<br/>議透過Google文件/線上表單標註具體意見。',
-    },
-    {
-      value: 'urgent',
-      title: '有急件需求該如何處理？',
-      content:
-        '急件需+30%費用，請提前告知需求檔期。<br/>包月客戶可優先排程，但單日最多處理2篇貼文或1支影音以確保品質。',
+      value: 'marketing-seo-duration',
+      title: 'SEO 文章寫完後，多久會看到搜尋排名提升？',
+      content: `
+        SEO 為長期投資，通常需 3-6 個月逐漸見效。我提供關鍵字研究與佈局，但<strong>不保證特定關鍵字必能排名首頁</strong>。
+      `,
     },
   ],
   design: [
-    // Logo設計相關
     {
-      value: 'logo-process',
-      title: 'Logo設計流程需要多久？',
-      content:
-        '通常需 7-10 個工作天，包含：<br/>（1) 需求溝通 <br/>（2) 初稿提案（3款） <br/>（3) 2次修改 <br/>（4) 最終交付（AI/EPS/PNG檔）。<br/><br/>急件可加購縮短至5天內（+20%費用）。',
+      value: 'design-process',
+      title: '設計專案的合作流程與付款方式？',
+      content: `
+        <ol class="list-decimal pl-5 space-y-2">
+          <li><strong>需求確認</strong>：討論風格偏好並確認設計規格。</li>
+          <li><strong>簽約與訂金</strong>：<span class="font-bold">支付 50% 訂金後，專案正式啟動排程。</span></li>
+          <li><strong>初稿提案</strong>：依專案性質提供 1-3 款風格提案。</li>
+          <li><strong>細節微調</strong>：包含 2 次免費微調（如顏色、位置調整）。</li>
+          <li><strong>尾款與交付</strong>：<span class="font-bold">結清 50% 尾款後，交付最終格式檔案。</span></li>
+        </ol>
+      `,
     },
     {
-      value: 'logo-usage',
-      title: 'Logo設計包含哪些應用檔案？',
-      content:
-        '交付：<br/>（1) 彩色/單色版 <br/>（2) 標準字組合 <br/>（3) 橫式/直式排版 <br/>（4) 檔案格式（.AI/.EPS/.PNG）。<br/><br/>如需名片、信封等應用設計可額外報價。',
-    },
-
-    // 社群視覺相關
-    {
-      value: 'banner-size',
-      title: '社群Banner的建議尺寸？',
-      content:
-        'FB封面：1200x630px<br/>IG貼文：1080x1080px<br/>蝦皮主圖：800x800px。<br/><br/>我會依平台自動調整，無需擔心尺寸問題。',
+      value: 'design-revision-rules',
+      title: '關於修改次數與範圍的限制？',
+      content: `
+        每項成品包含 2 次微調額度。若微調後仍有需求，將按次收取專案總額 15-20% 的修改費。<br/><br/>
+        <span class="text-[#8782FF] font-bold">💡 提醒：</span>若要求的更動偏離原本討論之風格（如打掉重練），將視為新專案重新報價。設計稿經確認定稿後，任何後續更動皆需額外付費。
+      `,
     },
     {
-      value: 'dynamic-fee',
-      title: '動態設計的「+30%費用」包含哪些效果？',
-      content: '基礎動態含：文字浮入、簡單轉場、元素微動畫。<br/>若需複雜特效（如粒子動畫、3D旋轉），需另報價。',
-    },
-
-    // 印刷與輸出
-    {
-      value: 'print-file',
-      title: '印刷檔的「+NT$500」是什麼？',
-      content:
-        '此費用包含：<br/>（1) CMYK色彩校正 <br/>（2) 出血設定（3mm） <br/>（3) 300dpi高解析檔 <br/>（4) 提供PDF印刷專用檔。',
-    },
-
-    // LINE選單設計
-    {
-      value: 'line-template',
-      title: 'LINE選單設計會提供可編輯的模板嗎？',
-      content:
-        '交付PSD/AI檔（需另+NT$1,000），或直接提供JPG/PNG檔。<br/>建議非設計師客戶選擇「代客上架服務」（+NT$800）。',
-    },
-
-    // EDM設計
-    {
-      value: 'edm-rwd',
-      title: 'EDM的RWD設計支援哪些郵件系統？',
-      content:
-        '相容於Gmail、Outlook、Apple Mail等主流客戶端，並通過Mailchimp/Benchmark測試。<br/>特殊需求（如互動式按鈕）需提前告知。',
-    },
-
-    // 懶人包/資訊圖表
-    {
-      value: 'infographic-format',
-      title: '動態網頁版懶人包如何交付？',
-      content:
-        '提供：<br/>（1) 靜態JPG預覽圖 <br/>（2) HTML+CSS檔（可嵌入網站） <br/>（3) 動態GIF展示（如需互動功能需另報價）。',
-    },
-
-    // UI/UX設計
-    {
-      value: 'ui-deliverables',
-      title: 'UI/UX設計的「Figma交付」包含哪些權限？',
-      content:
-        '提供可編輯的Figma原檔，含元件庫（Components）與設計規範（Style Guide）。<br/>企業客戶可選「團隊協作權限」（+NT$3,000）。',
-    },
-
-    // 網站設計系統
-    {
-      value: 'design-system',
-      title: '網站設計系統的「Wireframe 5頁內」是指？',
-      content: '包含首頁+4個核心頁面（如產品頁/關於頁/聯絡頁）的線框稿。<br/>超出頁數按NT$2,000/頁計費。',
-    },
-
-    // 簡報設計
-    {
-      value: 'ppt-animation',
-      title: '簡報動畫的「+50%」包含哪些類型？',
-      content:
-        '基礎動畫：文字/圖片淡入<br/>進階動畫（+50%）：路徑移動、互動式觸發、數據圖表動態化<br/>過場特效另計（+NT$200/頁）',
-    },
-    // 通用問題
-    {
-      value: 'revision',
-      title: '成品不滿意可以修改嗎？',
-      content: '每項服務包含2次免費修改（需於交付後7日內提出），額外修改依工時計費（NT$500/小時）。',
+      value: 'design-proofreading', // 💡 新增：校對責任歸屬（極重要！）
+      title: '如果成品上線或印刷後發現「字打錯」怎麼辦？',
+      content: `
+        在交付過程中，<span class="font-bold">「文字校對」由客戶負最終確認責任。</span><br/><br/>
+        請務必在定稿前仔細檢查所有文案、電話、網址等內容。若成品經客戶確認定稿後才發現文字錯誤，後續產生的修改工時或印刷損失，我方不負賠償責任。
+      `,
     },
     {
-      value: 'payment',
-      title: '付款方式和合約如何進行？',
-      content: '單次專案付50%訂金，尾款於交付前結清；包套服務可分期。<br/>合約電子簽署，明確定義交付項目與時程。',
+      value: 'design-color-difference', // 💡 新增：色差免責聲明
+      title: '為什麼設計稿在手機看和電腦看顏色不一樣？',
+      content: `
+        因各顯示器（手機、電腦螢幕）顯色技術不同，存在 10-15% 的色差屬於正常範圍。<br/><br/>
+        若有印刷需求，強烈建議加購<strong>「印刷檔優化服務（+NT$500）」</strong>，我將進行 CMYK 色彩校正。若客戶自行使用 RGB 網頁圖檔進行印刷導致之嚴重色差，我方恕不負責。
+      `,
+    },
+    {
+      value: 'design-copyright-liability', // 💡 新增：素材侵權免責
+      title: '我可以提供網路找的照片請妳放在設計裡嗎？',
+      content: `
+        可以，但<span class="font-bold">客戶需自行確保所提供素材（照片、字體、Logo）已獲得商用授權。</span><br/><br/>
+        若因客戶提供之素材產生版權糾紛，相關法律責任由客戶端全額承擔。若需代為購買商用圖庫，費用將另行報價。
+      `,
+    },
+    {
+      value: 'design-ownership',
+      title: '設計完成後的版權與原始檔歸屬？',
+      content: `
+        全額付清尾款後，客戶享有成品之永久使用權。我方保有作品之發表權與展示權（作為作品集使用）。<br/><br/>
+        <span class="text-[#8782FF] font-bold">關於原始檔：</span>交付不含編輯檔（AI/PSD/Figma）。如需買斷可編輯原始檔，需另支付<strong>專案總金額 50% 之版權轉讓費</strong>。
+      </span>
+      `,
+    },
+    {
+      value: 'design-cancel-policy',
+      title: '如果專案執行一半想終止合約，可以退費嗎？',
+      content: `
+        1. <strong>初稿提案前</strong>：退還 20% 訂金。<br/>
+        2. <strong>初稿提案後</strong>：<span class="font-bold">訂金全額不予退還</span>，客戶亦不可使用已提案之任何設計草案。<br/><br/>
+        此舉是為了保障已投入的創意發想與產製工時，敬請見諒。
+      `,
+    },
+    {
+      value: 'design-urgent-fee',
+      title: '急件設計如何計費？',
+      content: `
+        若需求時程短於該項目的平均工作天（如：Logo < 5天、Banner < 2天），將額外收取 <strong>30% - 50% 的急件處理費</strong>，並視當下排程決定是否承接。
+      `,
     },
   ],
 }

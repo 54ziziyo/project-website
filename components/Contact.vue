@@ -14,15 +14,13 @@ import FormContact from './form/Contact.vue'
             </div>
             <div class="space-y-6">
               <div class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-4">
-                請填寫表單，我會在 24 小時內回覆你<br>
+                請填寫表單，我會在 24 小時內回覆你<br />
                 我們可以先聊聊你的需求，看看怎麼做最適合你
               </div>
-              <div class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-10">
-                不用擔心被推銷，我會給你最誠實的建議 💬
-              </div>
+              <div class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-10">不用擔心被推銷，我會給你最誠實的建議 💬</div>
               <div class="flex justify-between items-center">
                 <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">營業時間</div>
-                <div class="text-[#5B5B5B] text-[16px] md:text-[18px]">平日 9:00-18:00</div>
+                <div class="text-[#5B5B5B] text-[16px] md:text-[18px]">平日 10:00-18:00</div>
               </div>
               <div class="flex justify-between items-center">
                 <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">電子信箱</div>
@@ -55,7 +53,7 @@ import FormContact from './form/Contact.vue'
               >
                 <Icon name="lsicon:service-filled" width="24" height="24" />
                 <span>前往 LINE 線上客服</span>
-            </a>
+              </a>
             </div>
           </div>
           <div class="flex flex-col md:pt-[118px] pt-[80px]">
