@@ -3,10 +3,27 @@ import { portfolios, categories } from '~/data/portfolios'
 
 // 裝置偵測
 const { isDesktop } = useDevice()
+const route = useRoute()
+const router = useRouter()
 
 const isVisible = ref(false)
 const activeCards = ref(new Set())
-const selectedCategory = ref('全部')
+const selectedCategory = ref(
+  typeof route.query.category === 'string' && categories.includes(route.query.category) ? route.query.category : '全部',
+)
+const categoryQuery = computed(() => (selectedCategory.value === '全部' ? {} : { category: selectedCategory.value }))
+const setCategory = (category: string) => {
+  selectedCategory.value = category
+  const nextQuery: Record<string, string | string[] | undefined> = { ...route.query }
+
+  if (category === '全部') {
+    delete nextQuery.category
+  } else {
+    nextQuery.category = category
+  }
+
+  router.replace({ query: nextQuery })
+}
 
 // 篩選邏輯
 const filteredPortfolios = computed(() => {
@@ -78,7 +95,7 @@ onMounted(() => {
               ? 'bg-[#8782FF] text-white shadow-lg'
               : 'bg-white text-gray-700 border border-gray-300 hover:border-[#8782FF] hover:text-[#8782FF]',
           ]"
-          @click="selectedCategory = category"
+          @click="setCategory(category)"
         >
           {{ category }}
         </button>
@@ -95,7 +112,7 @@ onMounted(() => {
             :class="[activeCards.has(index) ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
           >
             <NuxtLink
-              :to="portfolio.link"
+              :to="{ path: portfolio.link, query: categoryQuery }"
               class="relative mb-8 rounded-xl overflow-hidden bg-gray-100 aspect-[4/3] shadow-sm group-hover:shadow-xl transition-all duration-500"
             >
               <img
@@ -104,18 +121,6 @@ onMounted(() => {
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-102"
                 loading="lazy"
               />
-
-              <!-- <div v-if="portfolio.instagramEmbed" class="absolute inset-0 flex items-center justify-center">
-                <div
-                  class="w-16 h-16 bg-[#8782FF]/80 backdrop-blur-md rounded-full flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300"
-                >
-                  <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.333-5.89a1.5 1.5 0 000-2.538L6.3 2.841z"
-                    />
-                  </svg>
-                </div>
-              </div> -->
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
@@ -145,7 +150,10 @@ onMounted(() => {
               </div>
 
               <div v-if="isDesktop" class="mt-2 block overflow-hidden">
-                <div class="group/link flex items-center justify-end gap-3 h-8">
+                <NuxtLink
+                  :to="{ path: portfolio.link, query: categoryQuery }"
+                  class="group/link flex items-center justify-end gap-3 h-8"
+                >
                   <div class="overflow-hidden">
                     <div
                       class="text-[#8782FF] font-black text-[11px] tracking-[0.2em] transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"
@@ -158,7 +166,7 @@ onMounted(() => {
                     style="width: 0; min-width: 0"
                     :class="['group-hover:flex-grow group-hover:w-full']"
                   ></span>
-                </div>
+                </NuxtLink>
               </div>
             </div>
           </div>

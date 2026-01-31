@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { portfolios } from '~/data/portfolios'
+import { portfolios, categories } from '~/data/portfolios'
 
 definePageMeta({
   key: (route) => route.fullPath,
@@ -11,6 +11,20 @@ const isVisible = ref(false)
 const currentPortfolio = computed(() => {
   const id = route.params.id as string
   return portfolios.find((p) => p.id === id) || null
+})
+
+const backLink = computed(() => {
+  const queryCategory = route.query.category
+  const resolvedCategory =
+    typeof queryCategory === 'string' && categories.includes(queryCategory)
+      ? queryCategory
+      : currentPortfolio.value?.category
+
+  if (resolvedCategory && categories.includes(resolvedCategory) && resolvedCategory !== '全部') {
+    return { path: '/Works', query: { category: resolvedCategory } }
+  }
+
+  return { path: '/Works' }
 })
 
 onMounted(() => {
@@ -25,7 +39,7 @@ onMounted(() => {
     <div class="px-8 md:px-12 mb-8">
       <div class="max-w-6xl mx-auto">
         <NuxtLink
-          to="/Works"
+          :to="backLink"
           class="inline-flex items-center text-gray-600 hover:text-[#8782FF] transition-colors duration-300"
         >
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,7 +55,7 @@ onMounted(() => {
         <h1 class="text-4xl font-bold text-gray-900 mb-4">找不到此作品</h1>
         <p class="text-gray-600 mb-8">抱歉，您查找的作品不存在或已被移除。</p>
         <NuxtLink
-          to="/Works"
+          :to="backLink"
           class="inline-block bg-[#8782FF] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#6f6bff] transition-all duration-300"
         >
           返回作品集
