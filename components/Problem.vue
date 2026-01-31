@@ -85,13 +85,14 @@ onMounted(() => {
           :style="{ transitionDelay: `${index * 150}ms` }"
         >
           
-          <div class="flex-shrink-0 flex justify-center md:justify-start md:w-[160px]">
+          <div class="flex-shrink-0 flex justify-center md:justify-start md:w-[180px] px-4 overflow-visible">
             <div
-              class="text-7xl md:text-[110px] font-black leading-none select-none transition-all duration-800 group-hover:scale-110 group-hover:opacity-100 opacity-80 italic"
+              class="text-7xl md:text-[110px] font-black leading-none select-none transition-all duration-700 group-hover:scale-110 group-hover:opacity-100 opacity-80 italic"
               style="
                 -webkit-text-stroke: 1px #a6a09b;
                 color: transparent;
                 font-family: 'Inter', sans-serif;
+                padding-right: 0.1em; 
               "
             >
               0{{ index + 1 }}

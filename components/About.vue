@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
         <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">價值的交會點</div>
         <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-12 mb-8">想告訴你的是</div>
         <div class="text-[#5B5B5B] text-[14px] md:text-[16px] mb-4">
-          嗨，我是 Zeona Studio，擁有 5 年以上資深前端開發與數位行銷背景。
+          嗨，我是 Zeona Studio，擁有 5 年以上網站開發與數位行銷背景。
           <br />
           擅長將複雜的技術轉化為直覺的品牌體驗，協助新創與中小企業建立兼具美感與高效能的線上競爭力。
           <br />
