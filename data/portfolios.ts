@@ -252,6 +252,33 @@ export const portfolios: Portfolio[] = [
     instagramEmbed: 'DLcX9Yzyv95',
   },
   {
+    id: 'roml-life-reels-arai-neko',
+    title: '【短影片】Arai 貓貓安全帽',
+    category: '行銷營運',
+    shortDesc: '影片截至2026年2月1日，達成 311,560 觀看',
+    description: `這篇 Reels 專注於展示產品特色細節，將「價格資訊」或「商品詳情」當作誘餌，吸引潛在客戶主動留下資訊，藉此收集有效潛在客戶名單。<br /><br />
+    將公開平台的流量引導至私密的私訊對話框，建立自己的「私域流量池」，方便後續進行長期的追蹤與銷售。<br /><br />
+    這種「在對話中成交」的手法，能大幅降低顧客跳轉到外部官網時產生的流失率。
+。<br /><br />
+    根據後台數據顯示（下圖）：<br />
+    1. 觀看數：突破 311,560 次。<br />
+    2. 轉換率：帶動 + 507 位追蹤。<br />
+    3. 互動率：16,304 次，顯示內容具有高度轉發價值。<br />
+    4. 平均觀看時間： 7 秒。<br />
+    5. 分享次數：6,408 次。<br />
+    6. 儲存次數：588 次。<br />
+    7. 評論數：652 則。
+    `,
+    features: ['特色商品介紹', '第三方工具自動回覆', '數據導向腳本', '後台數據追蹤分析'],
+    techStack: ['ManyChat ', 'CapCut', 'Strategy Planning', 'Instagram Edits'],
+    image:
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/600209016_1118381913568907_5962086777417431337_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzc4ODE0MjIxNTQ3NTM2NDg2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=s61Jx9QiqpUQ7kNvwHIDH3z&_nc_oc=Adnqp0oggteB0rKQMWnJuqyzaJvCJAu6h1dYfYPD4pZ8sYNYqtzU1WiwksFq3vAPJ5U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=qtKs4Dd9ugNTA0xSCh2s-Q&oh=00_AftclbXERawqu4rJELEiaw1lSdgn1xcXKTe_P4wEvdOWqw&oe=698436B6',
+    dataScreenshots: [romlReelsAraiNeko1, romlReelsAraiNeko2, romlReelsAraiNeko3],
+    link: '/works/roml-life-reels-arai-neko',
+    websiteLink: 'https://www.instagram.com/reel/DSSL0ZIEgQE/',
+    instagramEmbed: 'DSSL0ZIEgQE',
+  },
+  {
     id: 'roml-life-reels-electronic-dimming',
     title: '【短影片】電子調光防霧鏡片',
     category: '行銷營運',
@@ -276,6 +303,49 @@ export const portfolios: Portfolio[] = [
     link: '/works/roml-life-reels-electronic-dimming',
     websiteLink: 'https://www.instagram.com/reel/DTc_BubAZWQ/',
     instagramEmbed: 'DTc_BubAZWQ',
+  },
+  {
+    id: 'roml-life-post-93-white',
+    title: '【社群貼文】93 預購消息',
+    category: '行銷營運',
+    shortDesc: '文章截至2026年2月1日，達成 238,493 觀看',
+    description: `這篇文章專注於展示新產品售價與預購，提供客人購買服務。<br /><br />
+    根據後台數據顯示（下圖）：<br />
+    1. 觀看數：突破 238,493 次。<br />
+    2. 轉換率：帶動 117 位追蹤。<br />
+    3. 按讚數：2,464 次<br />
+    4. 互動率：4,524 次<br />
+    5. 分享次數：1,869 次。<br />
+    `,
+    features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
+    techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
+    image:
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/587787659_18300027937250820_7406361695499187455_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=Mzc3NDg2OTIzODUxMjI1NjMyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=yCGB5Yk15lIQ7kNvwFqfSBu&_nc_oc=Adn6dUBUr9SJ5za9KjCOyg2l45rX9AkXxCkEEVDHUc3O4PbtgzQ6hxlhvjpqoANr-mg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=l1YyRIYhAIYii3fUDAUKsA&oh=00_AfvUeJfa-Yf3EFPPazUiVaiN3Dv68U5PbHYIHDdMWvaLtQ&oe=6984100D',
+    dataScreenshots: [romlPost93White1, romlPost93White2, romlPost93White3],
+    link: '/works/roml-life-post-93-white',
+    websiteLink: 'https://www.instagram.com/reel/DRjB5SSkgJE/',
+    instagramEmbed: 'DRjB5SSkgJE',
+  },
+  {
+    id: 'roml-life-post-x15-valion',
+    title: '【社群貼文】X15 停產撤回',
+    category: '行銷營運',
+    shortDesc: '文章截至2026年2月1日，達成 229,249 觀看',
+    description: `這篇文章專注於即時消息洞察，了解行業最新資訊並發布大家注重的關鍵點。<br /><br />
+    根據後台數據顯示（下圖）：<br />
+    1. 觀看數：突破 229,249 次。<br />
+    2. 轉換率：帶動 20 位追蹤。<br />
+    3. 互動率：597 次<br />
+    4. 分享次數：267 次。<br />
+    `,
+    features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
+    techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
+    image:
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/571801566_18295298098250820_3465781322117408831_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=Mzc1MTEzMzQ1Nzg5NzYzMjU4OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyODB4MTI4MC5zZHIuQzMifQ%3D%3D&_nc_ohc=sWNIMltBl7MQ7kNvwEmZIg4&_nc_oc=Adl6LOReIKnrNT0ygELowIMdBUc8GSN9H4EdoC4TKX9fh3V3CYqSa1vl4n0RaBhuGqI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=f2tcfCcERazDLINxKygngQ&oh=00_AfucA9YBMMiE32gBIoyvAfSOuk7477CTsoaZSWa-X2LPFQ&oe=69843B63',
+    dataScreenshots: [romlPostX15Valion1, romlPostX15Valion2, romlPostX15Valion3],
+    link: '/works/roml-life-post-x15-valion',
+    websiteLink: 'https://www.instagram.com/reel/DQOtAQEEuMn/',
+    instagramEmbed: 'DQOtAQEEuMn',
   },
   {
     id: 'roml-life-reels-shoei-helmet-bag',
@@ -305,33 +375,6 @@ export const portfolios: Portfolio[] = [
     instagramEmbed: 'DRgy4tHEsdD',
   },
   {
-    id: 'roml-life-reels-arai-neko',
-    title: '【短影片】Arai 貓貓安全帽',
-    category: '行銷營運',
-    shortDesc: '影片截至2026年2月1日，達成 311,560 觀看',
-    description: `這篇 Reels 專注於展示產品特色細節，將「價格資訊」或「商品詳情」當作誘餌，吸引潛在客戶主動留下資訊，藉此收集有效潛在客戶名單。<br /><br />
-    將公開平台的流量引導至私密的私訊對話框，建立自己的「私域流量池」，方便後續進行長期的追蹤與銷售。<br /><br />
-    這種「在對話中成交」的手法，能大幅降低顧客跳轉到外部官網時產生的流失率。
-。<br /><br />
-    根據後台數據顯示（下圖）：<br />
-    1. 觀看數：突破 311,560 次。<br />
-    2. 轉換率：帶動 + 507 位追蹤。<br />
-    3. 互動率：16,304 次，顯示內容具有高度轉發價值。<br />
-    4. 平均觀看時間： 7 秒。<br />
-    5. 分享次數：6,408 次。<br />
-    6. 儲存次數：588 次。<br />
-    7. 評論數：652 則。
-    `,
-    features: ['特色商品介紹', '第三方工具自動回覆', '數據導向腳本', '後台數據追蹤分析'],
-    techStack: ['ManyChat ', 'CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/600209016_1118381913568907_5962086777417431337_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzc4ODE0MjIxNTQ3NTM2NDg2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=s61Jx9QiqpUQ7kNvwHIDH3z&_nc_oc=Adnqp0oggteB0rKQMWnJuqyzaJvCJAu6h1dYfYPD4pZ8sYNYqtzU1WiwksFq3vAPJ5U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=qtKs4Dd9ugNTA0xSCh2s-Q&oh=00_AftclbXERawqu4rJELEiaw1lSdgn1xcXKTe_P4wEvdOWqw&oe=698436B6',
-    dataScreenshots: [romlReelsAraiNeko1, romlReelsAraiNeko2, romlReelsAraiNeko3],
-    link: '/works/roml-life-reels-arai-neko',
-    websiteLink: 'https://www.instagram.com/reel/DSSL0ZIEgQE/',
-    instagramEmbed: 'DSSL0ZIEgQE',
-  },
-  {
     id: 'roml-life-reels-fearless',
     title: '【短影片】SHOEI Fearless',
     category: '行銷營運',
@@ -359,93 +402,6 @@ export const portfolios: Portfolio[] = [
     instagramEmbed: 'DLhrxWxyAjn',
   },
   {
-    id: 'roml-life-reels-bike-parking',
-    title: '【短影片】日本機車停車資訊',
-    category: '行銷營運',
-    shortDesc: '影片截至2026年2月1日，達成 5,256 觀看',
-    description: `這篇 Reels 專注於分享日本停車資訊。<br /><br />
-    根據後台數據顯示（下圖）：<br />
-    1. 觀看數：突破 5,256 次。<br />
-    2. 轉換率：帶動 10 位追蹤。<br />
-    3. 互動率：190 次。<br />
-    4. 平均觀看時間：達 14 秒。<br />
-    `,
-    features: ['日本資訊分享', '數據導向腳本', '後台數據追蹤分析'],
-    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/523968381_18283777156250820_7474935429761357768_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=MzY4NTE5MjIzOTg2Njc3NzQ4MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MjU2MC5zZHIuQzIifQ%3D%3D&_nc_ohc=-9BMdw7DXLMQ7kNvwFf5VVh&_nc_oc=Adl9f3c3-j_WFBX2SIHv4BTBnjH2UpnK3P-WVb0UqJV9iEYbSmroqAFOq7lmP8EMXNc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=XePawuj2iVnAT57Yl3rGmQ&oh=00_Afu6_z6-JywsW_X-C1x1V0uR8BRKklsYtT9ztEqhBoDV5g&oe=69842037',
-    dataScreenshots: [romlReelsBikeParking1, romlReelsBikeParking2, romlReelsBikeParking3],
-    link: '/works/roml-life-reels-bike-parking',
-    websiteLink: 'https://www.instagram.com/reel/DMkbtEySQ-J/',
-    instagramEmbed: 'DMkbtEySQ-J',
-  },
-  {
-    id: 'roml-life-reels-elevate',
-    title: '【短影片】小個子墊高神器',
-    category: '行銷營運',
-    shortDesc: '影片截至2026年2月1日，達成 33,480 觀看',
-    description: `這篇 Reels 專注於展示產品特色細節，並產生話題性與觀看者互動。<br /><br />
-    根據後台數據顯示（下圖）：<br />
-    1. 觀看數：突破 33,480 次。<br />
-    2. 轉換率：帶動 13 位追蹤。<br />
-    3. 互動率：1,120 次，顯示內容具有高度轉發價值。<br />
-    4. 平均觀看時間：達 17 秒，顯示內容吸引力強。<br />
-    5. 分享次數：675 次。<br />
-    `,
-    features: ['特色商品介紹', '數據導向腳本', '後台數據追蹤分析'],
-    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/503580395_1075097591384279_8109923717898699051_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=MzY2MDcxMzAyNTc4MDMzODAzMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=7NZmtkHe9GcQ7kNvwGi3nkd&_nc_oc=Adl-E1RnVUS1ueqttmkhVSBeDMGd0wW48iGyvWcXZ75xJtO_D2FMIyDp2cBRXWZ7MM8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=T1_McBK8rIQOIa3IL8aDvQ&oh=00_AfvjL3PBKE-k-bkgS-iJENTVHQ82yT2HSVN8l9w0lABiJQ&oe=698426A2',
-    dataScreenshots: [romlReelsElevate1, romlReelsElevate2, romlReelsElevate3],
-    link: '/works/roml-life-reels-elevate',
-    websiteLink: 'https://www.instagram.com/reel/DLNdxoGSE1w/',
-    instagramEmbed: 'DLNdxoGSE1w',
-  },
-  {
-    id: 'roml-life-reels-damper',
-    title: '【短影片】車身減震拉桿',
-    category: '行銷營運',
-    shortDesc: '影片截至2026年2月1日，達成 48,436 觀看',
-    description: `這篇 Reels 專注於展示功能細節，並產生話題性與觀看者互動。<br /><br />
-    根據後台數據顯示（下圖）：<br />
-    1. 觀看數：突破 48,436 次。<br />
-    2. 轉換率：帶動 53 位追蹤。<br />
-    3. 互動率：783 次。<br />
-    4. 平均觀看時間：達 15 秒。<br />
-    5. 分享次數：139 次。<br />
-    `,
-    features: ['特色商品介紹', '數據導向腳本', '後台數據追蹤分析'],
-    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/518717728_18282306091250820_2465015438347671627_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzY3NTA1MjY5MjM0ODcxODY0Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MjU2MC5zZHIuQzMifQ%3D%3D&_nc_ohc=TPr1XQKKgSEQ7kNvwEUS6qB&_nc_oc=Adm89rryYqozNnASAQ4EthAiDuxA931W1vQiRhNa80zdwSTu-DgoOWhDinGbFXVMgug&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=vF57erJIPjBo8B1YBO-ZKg&oh=00_AfsWb0crYqnJrtCBmgO5ZH-84MWs68_d-QDOX5jg9Op2Eg&oe=69841F7D',
-    dataScreenshots: [romlReelsDamper1, romlReelsDamper2, romlReelsDamper3],
-    link: '/works/roml-life-reels-damper',
-    websiteLink: 'https://www.instagram.com/reel/DMAaPPSSc4y/',
-    instagramEmbed: 'DMAaPPSSc4y',
-  },
-  {
-    id: 'roml-life-post-93-white',
-    title: '【社群貼文】93 預購消息',
-    category: '行銷營運',
-    shortDesc: '文章截至2026年2月1日，達成 238,493 觀看',
-    description: `這篇文章專注於展示新產品售價與預購，提供客人購買服務。<br /><br />
-    根據後台數據顯示（下圖）：<br />
-    1. 觀看數：突破 238,493 次。<br />
-    2. 轉換率：帶動 117 位追蹤。<br />
-    3. 按讚數：2,464 次<br />
-    4. 互動率：4,524 次<br />
-    5. 分享次數：1,869 次。<br />
-    `,
-    features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
-    techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/587787659_18300027937250820_7406361695499187455_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=Mzc3NDg2OTIzODUxMjI1NjMyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=yCGB5Yk15lIQ7kNvwFqfSBu&_nc_oc=Adn6dUBUr9SJ5za9KjCOyg2l45rX9AkXxCkEEVDHUc3O4PbtgzQ6hxlhvjpqoANr-mg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=l1YyRIYhAIYii3fUDAUKsA&oh=00_AfvUeJfa-Yf3EFPPazUiVaiN3Dv68U5PbHYIHDdMWvaLtQ&oe=6984100D',
-    dataScreenshots: [romlPost93White1, romlPost93White2, romlPost93White3],
-    link: '/works/roml-life-post-93-white',
-    websiteLink: 'https://www.instagram.com/reel/DRjB5SSkgJE/',
-    instagramEmbed: 'DRjB5SSkgJE',
-  },
-  {
     id: 'roml-life-post-2026-x15-price',
     title: '【社群貼文】2026 X15',
     category: '行銷營運',
@@ -466,28 +422,6 @@ export const portfolios: Portfolio[] = [
     link: '/works/roml-life-post-2026-x15-price',
     websiteLink: 'https://www.instagram.com/reel/DUCkgJ9kwZ3/',
     instagramEmbed: 'DUCkgJ9kwZ3',
-  },
-  {
-    id: 'roml-life-post-Marquez9-pre-order',
-    title: '【社群貼文】Marquez9 消息',
-    category: '行銷營運',
-    shortDesc: '文章截至2026年2月1日，達成 74,653 觀看',
-    description: `這篇文章專注於即時消息洞察，了解行業最新資訊並發布大家注重的關鍵點。<br /><br />
-    根據後台數據顯示（下圖）：<br />
-    1. 觀看數：突破 74,653 次。<br />
-    2. 轉換率：帶動 37 位追蹤。<br />
-    3. 按讚數：1,211 次<br />
-    4. 互動率：2,021 次<br />
-    5. 分享次數：736 次。<br />
-    `,
-    features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
-    techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/603885226_18302704657250820_6770991902417855223_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzc5NDM5Njg2MTg0NDA3MzY0OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=eX9CPkWij3UQ7kNvwEHFvpb&_nc_oc=AdmxXbB2VOJFLXBVUDGZIV_PLscIFTYvaDBHCVhUQDfZ0hW0ifZApFS0wD7fyJo711U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=CtSKdeAxiico3w9Bdv7eog&oh=00_AfvctsNWj6YsnAuIj-4bjtnAnixQ7Ha940x6BtZs4CeGHQ&oe=69840C38',
-    dataScreenshots: [romlPostMarquez9PreOrder1, romlPostMarquez9PreOrder2, romlPostMarquez9PreOrder3],
-    link: '/works/roml-life-post-Marquez9-pre-order',
-    websiteLink: 'https://www.instagram.com/reel/DSoZ9mSEomO/',
-    instagramEmbed: 'DSoZ9mSEomO',
   },
   {
     id: 'roml-life-post-2025-shoei-z8-price',
@@ -513,25 +447,92 @@ export const portfolios: Portfolio[] = [
     instagramEmbed: 'DLw-4dCSB6l',
   },
   {
-    id: 'roml-life-post-x15-valion',
-    title: '【社群貼文】X15 停產撤回',
+    id: 'roml-life-post-Marquez9-pre-order',
+    title: '【社群貼文】Marquez9 消息',
     category: '行銷營運',
-    shortDesc: '文章截至2026年2月1日，達成 229,249 觀看',
+    shortDesc: '文章截至2026年2月1日，達成 74,653 觀看',
     description: `這篇文章專注於即時消息洞察，了解行業最新資訊並發布大家注重的關鍵點。<br /><br />
     根據後台數據顯示（下圖）：<br />
-    1. 觀看數：突破 229,249 次。<br />
-    2. 轉換率：帶動 20 位追蹤。<br />
-    3. 互動率：597 次<br />
-    4. 分享次數：267 次。<br />
+    1. 觀看數：突破 74,653 次。<br />
+    2. 轉換率：帶動 37 位追蹤。<br />
+    3. 按讚數：1,211 次<br />
+    4. 互動率：2,021 次<br />
+    5. 分享次數：736 次。<br />
     `,
     features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
     techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
     image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/571801566_18295298098250820_3465781322117408831_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=Mzc1MTEzMzQ1Nzg5NzYzMjU4OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyODB4MTI4MC5zZHIuQzMifQ%3D%3D&_nc_ohc=sWNIMltBl7MQ7kNvwEmZIg4&_nc_oc=Adl6LOReIKnrNT0ygELowIMdBUc8GSN9H4EdoC4TKX9fh3V3CYqSa1vl4n0RaBhuGqI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=f2tcfCcERazDLINxKygngQ&oh=00_AfucA9YBMMiE32gBIoyvAfSOuk7477CTsoaZSWa-X2LPFQ&oe=69843B63',
-    dataScreenshots: [romlPostX15Valion1, romlPostX15Valion2, romlPostX15Valion3],
-    link: '/works/roml-life-post-x15-valion',
-    websiteLink: 'https://www.instagram.com/reel/DQOtAQEEuMn/',
-    instagramEmbed: 'DQOtAQEEuMn',
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/603885226_18302704657250820_6770991902417855223_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzc5NDM5Njg2MTg0NDA3MzY0OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=eX9CPkWij3UQ7kNvwEHFvpb&_nc_oc=AdmxXbB2VOJFLXBVUDGZIV_PLscIFTYvaDBHCVhUQDfZ0hW0ifZApFS0wD7fyJo711U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=CtSKdeAxiico3w9Bdv7eog&oh=00_AfvctsNWj6YsnAuIj-4bjtnAnixQ7Ha940x6BtZs4CeGHQ&oe=69840C38',
+    dataScreenshots: [romlPostMarquez9PreOrder1, romlPostMarquez9PreOrder2, romlPostMarquez9PreOrder3],
+    link: '/works/roml-life-post-Marquez9-pre-order',
+    websiteLink: 'https://www.instagram.com/reel/DSoZ9mSEomO/',
+    instagramEmbed: 'DSoZ9mSEomO',
+  },
+  {
+    id: 'roml-life-reels-damper',
+    title: '【短影片】車身減震拉桿',
+    category: '行銷營運',
+    shortDesc: '影片截至2026年2月1日，達成 48,436 觀看',
+    description: `這篇 Reels 專注於展示功能細節，並產生話題性與觀看者互動。<br /><br />
+    根據後台數據顯示（下圖）：<br />
+    1. 觀看數：突破 48,436 次。<br />
+    2. 轉換率：帶動 53 位追蹤。<br />
+    3. 互動率：783 次。<br />
+    4. 平均觀看時間：達 15 秒。<br />
+    5. 分享次數：139 次。<br />
+    `,
+    features: ['特色商品介紹', '數據導向腳本', '後台數據追蹤分析'],
+    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
+    image:
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/518717728_18282306091250820_2465015438347671627_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzY3NTA1MjY5MjM0ODcxODY0Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MjU2MC5zZHIuQzMifQ%3D%3D&_nc_ohc=TPr1XQKKgSEQ7kNvwEUS6qB&_nc_oc=Adm89rryYqozNnASAQ4EthAiDuxA931W1vQiRhNa80zdwSTu-DgoOWhDinGbFXVMgug&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=vF57erJIPjBo8B1YBO-ZKg&oh=00_AfsWb0crYqnJrtCBmgO5ZH-84MWs68_d-QDOX5jg9Op2Eg&oe=69841F7D',
+    dataScreenshots: [romlReelsDamper1, romlReelsDamper2, romlReelsDamper3],
+    link: '/works/roml-life-reels-damper',
+    websiteLink: 'https://www.instagram.com/reel/DMAaPPSSc4y/',
+    instagramEmbed: 'DMAaPPSSc4y',
+  },
+  {
+    id: 'roml-life-reels-elevate',
+    title: '【短影片】抬升防磨塊分享',
+    category: '行銷營運',
+    shortDesc: '影片截至2026年2月1日，達成 33,480 觀看',
+    description: `這篇 Reels 著重於抬升防磨塊的性能分享，並以數據呈現內容。<br /><br />
+    根據後台數據顯示（下圖）：<br />
+    1. 觀看數：突破 33,480 次。<br />
+    2. 轉換率：帶動 24 位追蹤。<br />
+    3. 互動率：1,102 次。<br />
+    4. 平均觀看時間：達 21 秒。<br />
+    5. 分享次數：130 次。<br />
+    6. 儲存次數：55 次。<br />
+    `,
+    features: ['特色商品介紹', '數據導向腳本', '後台數據追蹤分析'],
+    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
+    image:
+      'https://scontent-tpe1-1.cdninstagram.com/v/t39.30808-6/428560063_122118848538741553_231258400263399413_n.jpg?stp=dst-jpg_e15&_nc_cat=100&ig_cache_key=MzMyMDk5MzUzODk4NjQ4NzE0NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=18de74&_nc_ohc=WbJX-9tmshEQ7kNvwHkxklM&_nc_oc=AdhMuixV7XhJcqzJjZfMUdf83hT_DmE3aiQUIUmUVS0PmP0mBOHV6zUj1TTXt6vdXb0&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=eCHkSYP3mcHn8VgXVZ9Jfg&oh=00_Afvh4oYgCZW1Dih1aYib5XLI6Q8ZBnGyVSt6hQ48L7rk9Q&oe=6962EB0B',
+    dataScreenshots: [romlReelsElevate1, romlReelsElevate2, romlReelsElevate3],
+    link: '/works/roml-life-reels-elevate',
+    websiteLink: 'https://www.instagram.com/reel/C3ePOw9Jtdh/',
+    instagramEmbed: 'C3ePOw9Jtdh',
+  },
+  {
+    id: 'roml-life-reels-bike-parking',
+    title: '【短影片】日本機車停車資訊',
+    category: '行銷營運',
+    shortDesc: '影片截至2026年2月1日，達成 5,256 觀看',
+    description: `這篇 Reels 專注於分享日本停車資訊。<br /><br />
+    根據後台數據顯示（下圖）：<br />
+    1. 觀看數：突破 5,256 次。<br />
+    2. 轉換率：帶動 10 位追蹤。<br />
+    3. 互動率：190 次。<br />
+    4. 平均觀看時間：達 14 秒。<br />
+    `,
+    features: ['日本資訊分享', '數據導向腳本', '後台數據追蹤分析'],
+    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
+    image:
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/523968381_18283777156250820_7474935429761357768_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=MzY4NTE5MjIzOTg2Njc3NzQ4MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MjU2MC5zZHIuQzIifQ%3D%3D&_nc_ohc=-9BMdw7DXLMQ7kNvwFf5VVh&_nc_oc=Adl9f3c3-j_WFBX2SIHv4BTBnjH2UpnK3P-WVb0UqJV9iEYbSmroqAFOq7lmP8EMXNc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=XePawuj2iVnAT57Yl3rGmQ&oh=00_Afu6_z6-JywsW_X-C1x1V0uR8BRKklsYtT9ztEqhBoDV5g&oe=69842037',
+    dataScreenshots: [romlReelsBikeParking1, romlReelsBikeParking2, romlReelsBikeParking3],
+    link: '/works/roml-life-reels-bike-parking',
+    websiteLink: 'https://www.instagram.com/reel/DMkbtEySQ-J/',
+    instagramEmbed: 'DMkbtEySQ-J',
   },
   {
     id: 'one-click-car-bg',

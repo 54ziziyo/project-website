@@ -181,7 +181,14 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="mt-12 mb-16">
+        <div
+          v-if="
+            currentPortfolio.category === '行銷營運' &&
+            currentPortfolio.dataScreenshots &&
+            currentPortfolio.dataScreenshots.length > 0
+          "
+          class="mt-12 mb-16"
+        >
           <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
             <span class="w-2 h-6 bg-[#8782FF] rounded mr-3"></span>
             數據實證 (Insights)
