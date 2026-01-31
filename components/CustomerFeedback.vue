@@ -15,26 +15,32 @@ const sectionRef = ref(null)
 const cardRef = ref(null)
 
 onMounted(() => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        isVisible.value = true
-        observer.unobserve(entry.target)
-      }
-    })
-  }, { threshold: 0.2 })
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isVisible.value = true
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.2 },
+  )
 
   if (sectionRef.value) observer.observe(sectionRef.value)
 
   // 為卡片區域單獨設置觀察
-  const cardObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        cardVisible.value = true
-        cardObserver.unobserve(entry.target)
-      }
-    })
-  }, { threshold: 0.2 })
+  const cardObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          cardVisible.value = true
+          cardObserver.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.2 },
+  )
 
   if (cardRef.value) cardObserver.observe(cardRef.value)
 })
@@ -44,41 +50,41 @@ const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6]
 const testimonials = [
   {
     content: '我子公司的手機版網頁服務一直都很難使用，後來決定重新設計介面跟規劃流程，現在用戶數提高了很多，很讚！',
-    author: 'Dragon陳',
+    author: 'Gon陳',
     role: '產品經理',
     avatar: avatar1,
   },
   {
     content: '原本擔心技術溝通困難，但他們能用外行人聽得懂的語言解釋，設計和網站都比預期更早交付，還會定期主動優化！',
-    author: 'Brian',
-    role: '經營日本代購',
+    author: 'Mr. 周',
+    role: '日本重機人身部品代購',
     avatar: avatar2,
   },
   {
     content:
       '因為剛開業需要跑工廠、廠商又要做網站和行銷，要處理太多事了，所以請他們做了簡易官網和社群內容經營的部分，目前感受很用心還不錯～',
-    author: '王小姐',
-    role: '茶類品牌創辦人',
+    author: '汪小姐',
+    role: '飲品新創',
     avatar: avatar3,
   },
   {
     content:
       '臨時需要製作活動Landing Page和宣傳短影片，謝謝你們很專業的引導，設計的CTA按鈕讓報名人數翻倍，後續還會想繼續合作。',
-    author: 'Gaga Huang',
+    author: 'Gee Huang',
     role: '活動公司專案執行',
     avatar: avatar4,
   },
   {
     content:
       '訂閱了網站服務，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我，架設完後也開始有一些人詢問，曝光起來的感覺',
-    author: '攝影小蘇',
+    author: '攝影小書',
     role: '攝影工作室',
     avatar: avatar5,
   },
   {
     content: '合作訂閱半年期網站與行銷服務後，我更多人詢問了！甚至主動建議我沒注意到的使用者體驗細節。',
-    author: '張小姐',
-    role: '充氣廣告公司',
+    author: '章小姐',
+    role: '廣告公司',
     avatar: avatar6,
   },
 ]
@@ -88,17 +94,31 @@ const testimonials = [
     <section class="gradient-p-to-y-bg py-24 px-4">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-6">
-          <div class="inline-block border px-4 py-1 rounded-full text-sm transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">真實客戶評價</div>
-          <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3 transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
+          <div
+            class="inline-block border px-4 py-1 rounded-full text-sm transition-all duration-1000 transform"
+            :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
+          >
+            真實客戶評價
+          </div>
+          <div
+            class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3 transition-all duration-1000 transform"
+            :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
+          >
             讓我看看別人怎麼說
           </div>
         </div>
 
-        <div class="flex justify-center items-center space-x-[-10px] mb-4 transition-all duration-1000 transform" :class="[isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']">
+        <div
+          class="flex justify-center items-center space-x-[-10px] mb-4 transition-all duration-1000 transform"
+          :class="[isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
+        >
           <img v-for="item in avatars" :key="item" :src="item" class="w-12 h-12 rounded-full border-2 border-white" />
         </div>
 
-        <div class="text-center mb-6 transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
+        <div
+          class="text-center mb-6 transition-all duration-1000 transform"
+          :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
+        >
           <p class="text-sm">服務體驗評分</p>
           <div class="flex justify-center items-center gap-1 text-yellow-400 text-xl">
             <span v-for="i in 5" :key="i">★</span>
@@ -153,8 +173,14 @@ const testimonials = [
       </Carousel>
 
       <div class="pt-24 px-4 border-t md:border-none">
-        <div class="max-w-4xl mx-auto text-center transition-all duration-1000 transform" :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
-          <h1 class="font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]" style="font-size: clamp(24px, 5vw, 52px)">
+        <div
+          class="max-w-4xl mx-auto text-center transition-all duration-1000 transform"
+          :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
+        >
+          <h1
+            class="font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]"
+            style="font-size: clamp(24px, 5vw, 52px)"
+          >
             即時啟動，打造您的數位競爭力
           </h1>
           <p class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center mb-16">
@@ -164,7 +190,8 @@ const testimonials = [
 
         <div
           ref="cardRef"
-          class="max-w-4xl mx-auto rounded-xl bg-white/50 backdrop-blur-md p-12 shadow-xl border border-[#6f6bff] border-2 transition-all duration-1000 transform" :class="[cardVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
+          class="max-w-4xl mx-auto rounded-xl bg-white/50 backdrop-blur-md p-12 shadow-xl border border-[#6f6bff] border-2 transition-all duration-1000 transform"
+          :class="[cardVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
           <div class="text-left mb-8 border-b pb-8">
             <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">搶先預約</span>

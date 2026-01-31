@@ -492,26 +492,25 @@ export const portfolios: Portfolio[] = [
   },
   {
     id: 'roml-life-reels-elevate',
-    title: '【短影片】抬升防磨塊分享',
+    title: '【短影片】小個子墊高神器',
     category: '行銷營運',
     shortDesc: '影片截至2026年2月1日，達成 33,480 觀看',
-    description: `這篇 Reels 著重於抬升防磨塊的性能分享，並以數據呈現內容。<br /><br />
+    description: `這篇 Reels 專注於展示產品特色細節，並產生話題性與觀看者互動。<br /><br />
     根據後台數據顯示（下圖）：<br />
     1. 觀看數：突破 33,480 次。<br />
-    2. 轉換率：帶動 24 位追蹤。<br />
-    3. 互動率：1,102 次。<br />
-    4. 平均觀看時間：達 21 秒。<br />
-    5. 分享次數：130 次。<br />
-    6. 儲存次數：55 次。<br />
+    2. 轉換率：帶動 13 位追蹤。<br />
+    3. 互動率：1,120 次，顯示內容具有高度轉發價值。<br />
+    4. 平均觀看時間：達 17 秒，顯示內容吸引力強。<br />
+    5. 分享次數：675 次。<br />
     `,
     features: ['特色商品介紹', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
     image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t39.30808-6/428560063_122118848538741553_231258400263399413_n.jpg?stp=dst-jpg_e15&_nc_cat=100&ig_cache_key=MzMyMDk5MzUzODk4NjQ4NzE0NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=18de74&_nc_ohc=WbJX-9tmshEQ7kNvwHkxklM&_nc_oc=AdhMuixV7XhJcqzJjZfMUdf83hT_DmE3aiQUIUmUVS0PmP0mBOHV6zUj1TTXt6vdXb0&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=eCHkSYP3mcHn8VgXVZ9Jfg&oh=00_Afvh4oYgCZW1Dih1aYib5XLI6Q8ZBnGyVSt6hQ48L7rk9Q&oe=6962EB0B',
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/503580395_1075097591384279_8109923717898699051_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=MzY2MDcxMzAyNTc4MDMzODAzMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=7NZmtkHe9GcQ7kNvwGi3nkd&_nc_oc=Adl-E1RnVUS1ueqttmkhVSBeDMGd0wW48iGyvWcXZ75xJtO_D2FMIyDp2cBRXWZ7MM8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=T1_McBK8rIQOIa3IL8aDvQ&oh=00_AfvjL3PBKE-k-bkgS-iJENTVHQ82yT2HSVN8l9w0lABiJQ&oe=698426A2',
     dataScreenshots: [romlReelsElevate1, romlReelsElevate2, romlReelsElevate3],
     link: '/works/roml-life-reels-elevate',
-    websiteLink: 'https://www.instagram.com/reel/C3ePOw9Jtdh/',
-    instagramEmbed: 'C3ePOw9Jtdh',
+    websiteLink: 'https://www.instagram.com/reel/DLNdxoGSE1w/',
+    instagramEmbed: 'DLNdxoGSE1w',
   },
   {
     id: 'roml-life-reels-bike-parking',
