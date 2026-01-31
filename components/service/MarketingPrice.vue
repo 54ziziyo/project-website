@@ -5,55 +5,55 @@ const servicesPrice = [
     highlight: '全方位圖文規劃，含 3-4 張圖 + 專業文案',
     description: '專為 FB/IG 演算法設計的圖文內容。包含品牌語調規劃、專業排版設計。',
     price: '2,000',
-    unit: '篇起'
+    unit: '篇起',
   },
   {
     title: '限時動態互動設計',
     highlight: '高互動率風格設計，含 2-3 張動態視覺',
     description: '適合導購、活動倒數或投票互動。強化視覺吸睛度，提升帳號觸及與轉換。',
     price: '1,200',
-    unit: '篇起'
+    unit: '篇起',
   },
   {
     title: 'SEO 部落格內容行銷',
     highlight: '數據驅動撰文，內含關鍵字研究與 SEO 佈局',
     description: '含 1,500 字內文章、內外連結規劃、圖片 ALT 設定及 Meta Description 優化，全面提升搜尋排名。',
     price: '5,000',
-    unit: '篇起'
+    unit: '篇起',
   },
   {
     title: '基礎短影音剪輯 (30s)',
     highlight: '精準字幕、節奏剪接、適合社群推廣',
     description: '依提供之素材進行剪接，包含基礎調色、音效與符合平台規範之格式輸出。',
     price: '1,000',
-    unit: '組起'
+    unit: '組起',
   },
   {
     title: '進階短影音剪輯 (60s)',
     highlight: '含綜藝字卡、動態特效與轉場',
     description: '適合產品介紹或品牌故事。包含更豐富的視覺效果處理與背景音樂混音。',
     price: '2,000',
-    unit: '組起'
-  }
+    unit: '組起',
+  },
 ]
 </script>
 
 <template>
   <div class="relative px-6 py-24 md:py-32 md:px-20 overflow-hidden">
     <div class="absolute pointer-events-none -z-10 opacity-30 top-0 left-0">
-      <img 
-        src="@/assets/images/round-purple.svg" 
-        alt="circle pattern" 
-        class="max-w-none transform -translate-x-1/2 -translate-y-1/4" 
-        width="1500" 
+      <img
+        src="@/assets/images/round-purple.svg"
+        alt="circle pattern"
+        class="max-w-none transform -translate-x-1/2 -translate-y-1/4"
+        width="1500"
       />
     </div>
 
-    <div class="relative z-10 mb-20">
-      <p class="mb-4 text-[#8782FF] text-[16px] md:text-[20px] font-bold text-center tracking-widest uppercase">Price List</p>
-      <div class="text-[32px] md:text-[42px] font-bold leading-tight text-center text-[#2D2D2D]">
-        行銷服務價目表
-      </div>
+    <div class="relative z-10 mb-10 md:mb-20">
+      <p class="mb-4 text-[#8782FF] text-[16px] md:text-[20px] font-bold text-center tracking-widest uppercase">
+        Price List
+      </p>
+      <div class="text-[32px] md:text-[42px] font-bold leading-tight text-center text-[#2D2D2D]">行銷服務價目表</div>
       <div class="w-12 h-1 bg-[#8782FF] mx-auto mt-6 rounded-full"></div>
     </div>
 
@@ -65,16 +65,18 @@ const servicesPrice = [
           class="group flex flex-col md:flex-row justify-between items-start md:items-center p-6 md:p-8 rounded-3xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-[#8782ff15] border border-transparent hover:border-[#8782ff20]"
         >
           <div class="flex items-start md:pr-10">
-            <span class="hidden md:block text-[24px] font-black text-[#8782ff9e] mr-6 mt-1 group-hover:text-[#8782FF] transition-colors">
+            <span
+              class="hidden md:block text-[24px] font-black text-[#8782ff9e] mr-6 mt-1 group-hover:text-[#8782FF] transition-colors"
+            >
               {{ (index + 1).toString().padStart(2, '0') }}
             </span>
-            
+
             <div>
               <div class="text-xl font-bold mb-2 text-[#333] flex items-center">
                 {{ service.title }}
                 <span class="ml-3 h-[1px] w-0 group-hover:w-8 bg-[#8782FF] transition-all duration-500"></span>
               </div>
-              <p class="text-[15px] font-semibold  mb-2 opacity-90">
+              <p class="text-[15px] font-semibold mb-2 opacity-90">
                 {{ service.highlight }}
               </p>
               <p class="text-sm text-gray-400 leading-relaxed max-w-2xl group-hover:text-gray-600 transition-colors">

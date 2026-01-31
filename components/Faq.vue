@@ -178,7 +178,7 @@ const allFaqs: Record<Category, Faq[]> = {
       `,
     },
     {
-      value: 'design-proofreading', // 💡 新增：校對責任歸屬（極重要！）
+      value: 'design-proofreading',
       title: '如果成品上線或印刷後發現「字打錯」怎麼辦？',
       content: `
         在交付過程中，<span class="font-bold">「文字校對」由客戶負最終確認責任。</span><br/><br/>
@@ -186,7 +186,7 @@ const allFaqs: Record<Category, Faq[]> = {
       `,
     },
     {
-      value: 'design-color-difference', // 💡 新增：色差免責聲明
+      value: 'design-color-difference',
       title: '為什麼設計稿在手機看和電腦看顏色不一樣？',
       content: `
         因各顯示器（手機、電腦螢幕）顯色技術不同，存在 10-15% 的色差屬於正常範圍。<br/><br/>
@@ -194,7 +194,7 @@ const allFaqs: Record<Category, Faq[]> = {
       `,
     },
     {
-      value: 'design-copyright-liability', // 💡 新增：素材侵權免責
+      value: 'design-copyright-liability',
       title: '我可以提供網路找的照片請妳放在設計裡嗎？',
       content: `
         可以，但<span class="font-bold">客戶需自行確保所提供素材（照片、字體、Logo）已獲得商用授權。</span><br/><br/>
@@ -229,60 +229,131 @@ const allFaqs: Record<Category, Faq[]> = {
   ],
 }
 
-// 類別列表（顯示用）
 const categories = [
   { value: 'web', label: '網站開發' },
   { value: 'marketing', label: '行銷推廣' },
   { value: 'design', label: '設計視覺' },
 ] as const
 
-// 當前選取的類別
 const selectedCategory = ref<Category>('web')
-
-// 根據選取的類別取得對應 FAQ
 const currentFaqs = computed(() => allFaqs[selectedCategory.value])
+
+const categoryRefs = ref<Record<string, HTMLElement | null>>({})
+const indicatorStyle = ref<{ width: string; transform: string }>({ width: '0px', transform: 'translateX(0px)' })
+
+const updateIndicator = () => {
+  const el = categoryRefs.value[selectedCategory.value]
+  if (!el) return
+
+  // 取得按鈕的寬度與相對於父容器的距離
+  const { offsetWidth, offsetLeft } = el
+
+  indicatorStyle.value = {
+    width: `${offsetWidth}px`,
+    // 使用 transform 來達成平滑滑動，起始點由 left-0 決定
+    transform: `translateX(${offsetLeft}px)`,
+  }
+}
+
+onMounted(() => {
+  nextTick(updateIndicator)
+  window.addEventListener('resize', updateIndicator)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateIndicator)
+})
+
+watch(selectedCategory, () => nextTick(updateIndicator))
 </script>
 
 <template>
-  <div class="relative pt-24 md:pt-32 pb-24 overflow-x-clip">
-    <!-- Header -->
-    <div class="px-10 flex justify-center flex-col items-center">
-      <div class="text-[28px] md:text-[36px] font-bold leading-none text-center mb-6">常見問題</div>
-      <span class="h-[1px] w-[70px] bg-[#A2A2A2] mb-[20px]" />
-      <div class="text-gray-600 text-[16px] md:text-[20px] text-center mb-4 md:mb-10">
-        我提供了一些常見問題的解答，幫助您更了解我的服務與流程
+  <div class="relative pt-24 md:pt-32 pb-24 overflow-hidden bg-gray-50/50">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#8782FF]/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#8782FF]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="px-6 md:px-10 flex justify-center flex-col items-center mb-10 relative z-10">
+      <div class="text-[28px] md:text-[42px] font-black leading-tight text-center text-[#2D2D2D] mb-4">常見問題</div>
+      <div class="h-1.5 w-12 bg-[#8782FF] rounded-full mb-6"></div>
+      <p class="text-gray-500 text-sm md:text-lg text-center max-w-2xl leading-relaxed">
+        這裡整理了關於服務流程、費用與合作細節的說明。
+        <br class="hidden md:block" />建立清楚的共識，是專業合作的第一步。
+      </p>
+    </div>
+
+    <div class="flex justify-center px-4 mb-10 relative z-10">
+      <div
+        class="relative flex bg-white p-1.5 rounded-2xl shadow-sm border border-gray-200 overflow-x-auto no-scrollbar max-w-full"
+      >
+        <span
+          class="absolute top-1.5 bottom-1.5 left-0 bg-[#8782FF] rounded-xl shadow-md transition-all duration-300 ease-out pointer-events-none"
+          :style="indicatorStyle"
+          aria-hidden="true"
+        ></span>
+        <button
+          v-for="cat in categories"
+          :key="cat.value"
+          :ref="(el) => (categoryRefs[cat.value] = el)"
+          :class="[
+            'relative z-10 px-6 py-2.5 rounded-xl transition-all duration-300 text-sm md:text-base font-bold whitespace-nowrap cursor-pointer',
+            selectedCategory === cat.value ? 'text-white' : 'text-gray-500 hover:text-[#8782FF]',
+          ]"
+          @click="selectedCategory = cat.value"
+        >
+          {{ cat.label }}
+        </button>
       </div>
     </div>
 
-    <!-- 分類切換按鈕 -->
-    <div class="flex justify-center gap-4 mb-12">
-      <button
-        v-for="cat in categories"
-        :key="cat.value"
-        :class="[
-          'px-6 py-2 rounded-lg border transition-all cursor-pointer text-sm',
-          selectedCategory === cat.value
-            ? 'text-[#8782FF]  font-bold  border-[#8782FF] border'
-            : 'bg-white  text-[#5B5B5B] border-[#CCC]',
-        ]"
-        @click="selectedCategory = cat.value"
-      >
-        {{ cat.label }}
-      </button>
+    <div class="max-w-4xl mx-auto px-4 md:px-6 relative z-10">
+      <div class="space-y-4">
+        <Accordion type="single" collapsible :default-value="currentFaqs[0]?.value" class="w-full">
+          <AccordionItem
+            v-for="item in currentFaqs"
+            :key="item.value"
+            :value="item.value"
+            class="bg-white border border-gray-200 rounded-2xl mb-4 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <AccordionTrigger class="px-6 py-5 text-left hover:no-underline group">
+              <span
+                class="text-[16px] md:text-lg font-bold text-gray-800 group-hover:text-[#8782FF] transition-colors leading-snug pr-4"
+              >
+                {{ item.title }}
+              </span>
+            </AccordionTrigger>
+
+            <AccordionContent>
+              <div class="px-6 pb-6 pt-2 border-t border-gray-50">
+                <div
+                  class="text-[14px] md:text-[16px] text-gray-600 leading-7 font-normal faq-content"
+                  v-html="item.content"
+                />
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </div>
 
-    <!-- FAQ Accordion -->
-    <div class="relative w-full px-[10%]">
-      <Accordion type="single" collapsible :default-value="currentFaqs[0]?.value">
-        <AccordionItem v-for="item in currentFaqs" :key="item.value" :value="item.value">
-          <AccordionTrigger class="text-[16px] md:text-[20px] cursor-pointer">
-            {{ item.title }}
-          </AccordionTrigger>
-          <AccordionContent>
-            <div class="border-t px-4 py-6 text-[14px] text-[#5B5B5B]" v-html="item.content" />
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+    <div class="mt-20 text-center px-6">
+      <p class="text-gray-400 text-sm mb-4">還有其他疑問嗎？</p>
+      <NuxtLink
+        to="/Contact"
+        class="text-[#8782FF] font-bold border-b-2 border-[#8782FF] pb-1 hover:text-[#6f6bff] hover:border-[#6f6bff] transition-all"
+      >
+        直接與我連繫談談
+      </NuxtLink>
     </div>
   </div>
 </template>
+
+<style scoped>
+/* 隱藏捲動條但維持功能 (切換鈕用) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>

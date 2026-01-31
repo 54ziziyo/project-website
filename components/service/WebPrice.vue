@@ -51,14 +51,10 @@ const webDesignPrice = [
   {
     title: '一頁式 UI/UX 設計(純設計)',
     highlight: '精準品牌視覺規劃，按區塊量化報價',
-    description: '包含使用者流程梳理、Wireframe、視覺 UI 設計、設計系統 (Design System) 規範與 Figma 原始檔交付', 
+    description: '包含使用者流程梳理、Wireframe、視覺 UI 設計、設計系統 (Design System) 規範與 Figma 原始檔交付',
     price: 'NT$10,000 元起',
     ta: ' ✅ 適合已有開發者團隊、只需要視覺設計的企業',
-    features: [
-      '內含 5 個內容區塊 (Section) 設計',
-      '加購區塊：NT$2,000 / 區塊',
-      '包含行動端 RWD 適配設計'
-    ]
+    features: ['內含 5 個內容區塊 (Section) 設計', '加購區塊：NT$2,000 / 區塊', '包含行動端 RWD 適配設計'],
   },
   {
     title: '網站設計系統 + Wireframe 套案(純設計)',
@@ -106,7 +102,7 @@ const psdToHtmlPrice = [
 ]
 </script>
 <template>
-  <div class="px-6 pt-24 md:pt-32 pb-24 md:px-20 md:space-y-20 space-y-10 relative overflow-x-clip">
+  <div class="px-6 pt-28 md:pt-32 pb-24 md:px-20 md:space-y-20 space-y-10 relative overflow-x-clip">
     <div class="absolute top-0 left-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />
     <div class="absolute top-[50%] right-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />
     <div class="absolute top-[80%] left-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />
@@ -114,7 +110,7 @@ const psdToHtmlPrice = [
     <div class="flex flex-col items-center mb-10 space-y-4">
       <div class="text-[28px] md:text-[36px] font-bold leading-none text-center mb-6">網站開發服務</div>
       <div class="w-12 h-1 bg-[#8782FF] rounded-full" />
-      <p class="text-gray-600 text-[16px] md:text-[20px] text-center md:mb-10">
+      <p class="text-gray-600 text-[16px] md:text-[20px] text-center md:mb-4">
         網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力
       </p>
     </div>

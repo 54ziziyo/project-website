@@ -73,7 +73,7 @@ onMounted(() => {
           <span>數位競爭力</span>
         </h1>
         <p
-          class="text-[#5B5B5B] text-[14px] md:text-[18px] mb-8 max-w-2xl mx-auto transition-all duration-1000 transform"
+          class="text-[#5B5B5B] text-[14px] md:text-[18px] max-w-2xl mx-auto transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
           從網站設計、行銷策略到品牌視覺，Zeona Studio 協助企業實現數位轉型，創造真實的商業成果。
