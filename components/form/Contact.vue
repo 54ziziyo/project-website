@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 type Grecaptcha = {
   ready: (cb: () => void) => void
   execute: (siteKey: string, options: { action: string }) => Promise<string>
 }
 
 const recaptchaSiteKey = '6LezflssAAAAAAyrX2klGOA-XG6g7Kj2cgY9oiEz'
+const route = useRoute()
 
 const form = {
   name: ref(''),
@@ -21,12 +20,29 @@ const form = {
 
 const errors = ref<Record<string, string>>({})
 const isSubmitting = ref(false)
-const statusMessage = ref<{ type: 'success' | 'error' | '' ; text: string }>({ type: '', text: '' })
+const statusMessage = ref<{ type: 'success' | 'error' | ''; text: string }>({ type: '', text: '' })
 const toastVisible = ref(false)
 let toastTimer: number | null = null
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const budgetRegex = /^[0-9,\-~\s]+$/
+
+const applyPrefill = (prefill?: string | string[]) => {
+  if (typeof prefill === 'string' && prefill.trim()) {
+    form.desc.value = prefill
+  }
+}
+
+onMounted(() => {
+  applyPrefill(route.query.prefill)
+})
+
+watch(
+  () => route.query.prefill,
+  (val) => {
+    applyPrefill(val)
+  },
+)
 
 const loadRecaptcha = () => {
   return new Promise<Grecaptcha>((resolve, reject) => {
@@ -106,7 +122,8 @@ const onSubmit = async () => {
   if (!validate()) return
   isSubmitting.value = true
 
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwbSt3nyNmYePhPTXzNjLuJnbHnS7h7b6fvegfFQ1j1rH8bBFIQfLO-pcfs4-FPIeEs/exec' 
+  const scriptUrl =
+    'https://script.google.com/macros/s/AKfycbwbSt3nyNmYePhPTXzNjLuJnbHnS7h7b6fvegfFQ1j1rH8bBFIQfLO-pcfs4-FPIeEs/exec'
 
   // 1. 取得 reCAPTCHA Token
   let token = ''
@@ -135,7 +152,7 @@ const onSubmit = async () => {
     // 3. 💡 關鍵修正：移除 headers，改用 no-cors
     await fetch(scriptUrl, {
       method: 'POST',
-      mode: 'no-cors', 
+      mode: 'no-cors',
       body: formData, // 直接傳送 formData
     })
 
@@ -286,7 +303,10 @@ const resetForm = () => {
       @click="onSubmit"
     >
       <span v-if="isSubmitting" class="flex items-center gap-2">
-        <span class="h-5 w-5 border-2 border-white/40 border-t-white rounded-full animate-spin" aria-hidden="true"></span>
+        <span
+          class="h-5 w-5 border-2 border-white/40 border-t-white rounded-full animate-spin"
+          aria-hidden="true"
+        ></span>
         送出中...
       </span>
       <span v-else>送出表單</span>
@@ -299,7 +319,10 @@ const resetForm = () => {
         :class="statusMessage.type === 'success' ? 'text-green-700' : 'text-red-600'"
       >
         <div class="font-semibold mb-1 flex items-center gap-2">
-          <span class="h-2.5 w-2.5 rounded-full" :class="statusMessage.type === 'success' ? 'bg-green-500' : 'bg-red-500'"></span>
+          <span
+            class="h-2.5 w-2.5 rounded-full"
+            :class="statusMessage.type === 'success' ? 'bg-green-500' : 'bg-red-500'"
+          ></span>
           {{ statusMessage.type === 'success' ? '已送出' : '送出失敗' }}
         </div>
         <p class="leading-relaxed text-[#4A4A4A]">{{ statusMessage.text }}</p>

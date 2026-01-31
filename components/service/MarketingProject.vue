@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// 💡 將方案內容抽離成資料陣列，代碼更簡潔好維護
+const router = useRouter()
 const marketingPlans = [
   {
     title: '基礎行銷包',
@@ -42,6 +42,28 @@ const marketingPlans = [
     ],
   },
 ]
+
+const formatPrice = (price: string, unit?: string) => {
+  const unitText = unit ? ` ${unit}` : ''
+  const hasCurrency = /NT[$＄]/.test(price)
+  return `${hasCurrency ? price : `NT$${price}`}${unitText}`
+}
+
+const handleSelect = (plan: (typeof marketingPlans)[number]) => {
+  const featureLines = plan.features.map((feature) => `- ${feature}`).join('\n')
+  const priceLine = formatPrice(plan.price, plan.unit)
+  const prefill = [
+    `想詢問「行銷方案｜${plan.title}」`,
+    `適用場景：${plan.subtitle}`,
+    `預估方案：${priceLine}`,
+    '需求重點：',
+    featureLines,
+  ]
+    .filter(Boolean)
+    .join('\n')
+
+  router.push({ path: '/Contact', query: { prefill } })
+}
 </script>
 
 <template>
@@ -96,16 +118,18 @@ const marketingPlans = [
             <span class="text-[14px] lg:text-[16px] text-[#5B5B5B]">{{ plan.unit }}</span>
           </div>
 
-          <div
+          <button
+            type="button"
             class="text-base font-bold py-3 text-center cursor-pointer transition-all duration-300 active:scale-95 border border-[#8782FF]"
             :class="
               plan.isPopular
                 ? 'bg-[#8782FF] text-white rounded-xl shadow-md hover:bg-[#6f6bff]'
                 : 'text-[#8782FF] rounded-lg hover:bg-[#8782FF] hover:text-white'
             "
+            @click="handleSelect(plan)"
           >
             選擇方案
-          </div>
+          </button>
 
           <div class="space-y-4">
             <div v-for="feature in plan.features" :key="feature" class="flex items-start text-start">

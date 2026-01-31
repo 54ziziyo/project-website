@@ -5,7 +5,8 @@ import DesignPrice from '~/components/service/DesignPrice.vue'
 <template>
   <div>
     <DesignPrice />
-    <!-- <DesignProject /> -->
+    <!-- 暫時隱藏 DesignProject 勿刪 -->
+    <!-- <DesignProject />  -->
   </div>
 </template>
 
