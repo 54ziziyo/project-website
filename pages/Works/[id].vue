@@ -71,8 +71,26 @@ onMounted(() => {
             class="transition-all duration-1000 transform delay-200"
             :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
           >
-            <div class="rounded-2xl overflow-hidden shadow-2xl">
-              <img :src="currentPortfolio.image" :alt="currentPortfolio.title" class="w-full h-auto object-cover" />
+            <div class="rounded-2xl overflow-hidden shadow-2xl bg-white">
+              <div v-if="currentPortfolio.instagramEmbed" class="flex justify-center p-4">
+                <iframe
+                  :src="`https://www.instagram.com/reel/${currentPortfolio.instagramEmbed}/embed`"
+                  width="100%"
+                  height="600"
+                  frameborder="0"
+                  scrolling="no"
+                  allowtransparency="true"
+                  allow="encrypted-media"
+                  class="rounded-xl"
+                ></iframe>
+              </div>
+
+              <img
+                v-else
+                :src="currentPortfolio.image"
+                :alt="currentPortfolio.title"
+                class="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
@@ -161,6 +179,25 @@ onMounted(() => {
               </a>
             </div>
           </div>
+        </div>
+
+        <div class="mt-12 mb-16">
+          <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+            <span class="w-2 h-6 bg-[#8782FF] rounded mr-3"></span>
+            數據實證 (Insights)
+          </h2>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div
+              v-for="(img, idx) in currentPortfolio.dataScreenshots"
+              :key="idx"
+              class="rounded-2xl overflow-hidden border border-[#8782FF]/10 shadow-lg hover:shadow-[#8782FF]/20 transition-shadow duration-500"
+            >
+              <img :src="img" class="w-full h-auto object-cover" alt="Insight Data" />
+            </div>
+          </div>
+
+          <p class="mt-4 text-xs text-gray-400 italic">* 數據取自專業主面板與洞察報告。</p>
         </div>
 
         <div

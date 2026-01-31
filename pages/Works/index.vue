@@ -104,12 +104,25 @@ onMounted(() => {
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-102"
                 loading="lazy"
               />
+
+              <!-- <div v-if="portfolio.instagramEmbed" class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="w-16 h-16 bg-[#8782FF]/80 backdrop-blur-md rounded-full flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300"
+                >
+                  <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.333-5.89a1.5 1.5 0 000-2.538L6.3 2.841z"
+                    />
+                  </svg>
+                </div>
+              </div> -->
+
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
               >
-                <span class="bg-white/90 backdrop-blur-md text-[#8782FF] px-4 py-1 rounded-full text-xs font-bold">{{
-                  portfolio.category
-                }}</span>
+                <span class="bg-white/90 backdrop-blur-md text-[#8782FF] px-4 py-1 rounded-full text-xs font-bold">
+                  {{ portfolio.category }}
+                </span>
               </div>
             </NuxtLink>
 
