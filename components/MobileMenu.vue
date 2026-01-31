@@ -29,7 +29,7 @@ const navItems = [
       { title: '󠁯・ 網站架設', href: '/services/website' },
       { title: '󠁯・ 行銷服務', href: '/services/marketing' },
       { title: '󠁯・ 文宣設計', href: '/services/design' },
-      { title: '󠁯・ 整合服務', href: '/services/all' },
+      // { title: '󠁯・ 整合服務', href: '/services/all' },
     ],
   },
   { title: 'FAQ', href: '/faq', sub: '常見問題', no: '04' },
@@ -151,7 +151,7 @@ function toggleExpand(index: number) {
           <transition name="list-slide">
             <div
               v-if="item.children && expandedIndex === index"
-              class="mt-6 grid grid-cols-2 gap-x-4 gap-y-6 border-t border-gray-400 pt-6 relative z-30"
+              class="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 border-t border-gray-400 pt-6 relative z-30"
             >
               <NuxtLink
                 v-for="child in item.children"

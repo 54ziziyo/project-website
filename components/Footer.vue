@@ -10,7 +10,7 @@
       <div class="space-x-4 flex">
         <div class="space-y-2 flex flex-col">
           <NuxtLink to="/About" class="hover:text-[#8782FF] transition">關於我</NuxtLink>
-          <NuxtLink to="/Services/All" class="hover:text-[#8782FF] transition">服務項目</NuxtLink>
+          <NuxtLink to="/Services/website" class="hover:text-[#8782FF] transition">服務項目</NuxtLink>
           <NuxtLink to="/Faq" class="hover:text-[#8782FF] transition">常見問題</NuxtLink>
         </div>
         <div class="space-y-2 flex flex-col">
