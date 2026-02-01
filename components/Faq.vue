@@ -265,6 +265,40 @@ onBeforeUnmount(() => {
 })
 
 watch(selectedCategory, () => nextTick(updateIndicator))
+const scrollContainer = ref<HTMLElement | null>(null)
+const showLeftGradient = ref(false)
+const showRightGradient = ref(true)
+
+// 監聽滾動事件，判斷遮罩顯示
+const handleScroll = () => {
+  if (!scrollContainer.value) return
+  const { scrollLeft, scrollWidth, clientWidth } = scrollContainer.value
+
+  // 加上 1px 的 buffer 以應對瀏覽器計算誤差
+  showLeftGradient.value = scrollLeft > 5
+  showRightGradient.value = scrollLeft + clientWidth < scrollWidth - 5
+}
+
+// 點擊類別時自動滾動到該選項（優化體驗）
+const scrollToActive = () => {
+  const activeEl = categoryRefs.value[selectedCategory.value]
+  if (activeEl && scrollContainer.value) {
+    activeEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+  }
+}
+
+watch(selectedCategory, () => {
+  nextTick(updateIndicator)
+  scrollToActive()
+})
+
+onMounted(() => {
+  nextTick(() => {
+    updateIndicator()
+    handleScroll() // 初始化檢查一次
+  })
+  window.addEventListener('resize', updateIndicator)
+})
 </script>
 
 <template>
