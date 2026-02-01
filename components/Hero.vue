@@ -2,80 +2,18 @@
 const scrollY = ref(0)
 const isLoaded = ref(false)
 const guideModalOpen = ref(false)
-const guideForm = {
-  name: ref(''),
-  email: ref(''),
-}
-const guideErrors = ref<{ name?: string; email?: string }>({})
-const guideStatus = ref<'idle' | 'submitting' | 'sent'>('idle')
-const bodyLockClass = 'modal-lock'
 
 const handleScroll = () => {
   scrollY.value = window.scrollY
 }
 
-const handleKeydown = (event: KeyboardEvent) => {
-  if (event.key === 'Escape') {
-    guideModalOpen.value = false
-  }
-}
-
-const validateGuide = () => {
-  guideErrors.value = {}
-
-  if (!guideForm.name.value.trim()) {
-    guideErrors.value.name = '請填寫姓名'
-  }
-
-  const email = guideForm.email.value.trim()
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!email || !emailRegex.test(email)) {
-    guideErrors.value.email = '請輸入有效電子信箱'
-  }
-
-  return Object.keys(guideErrors.value).length === 0
-}
-
-const submitGuide = () => {
-  if (!validateGuide()) return
-  guideStatus.value = 'submitting'
-  window.setTimeout(() => {
-    guideStatus.value = 'sent'
-    guideModalOpen.value = false
-    guideForm.name.value = ''
-    guideForm.email.value = ''
-    window.setTimeout(() => {
-      guideStatus.value = 'idle'
-    }, 1200)
-  }, 500)
-}
-
-const openGuideModal = () => {
-  guideModalOpen.value = true
-}
-
-const closeGuideModal = () => {
-  guideModalOpen.value = false
-}
-
-watch(guideModalOpen, (open) => {
-  if (open) {
-    document.body.classList.add(bodyLockClass)
-  } else {
-    document.body.classList.remove(bodyLockClass)
-  }
-})
-
 onMounted(() => {
   isLoaded.value = true
   window.addEventListener('scroll', handleScroll)
-  window.addEventListener('keydown', handleKeydown)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
-  window.removeEventListener('keydown', handleKeydown)
-  document.body.classList.remove(bodyLockClass)
 })
 </script>
 
@@ -131,7 +69,7 @@ onBeforeUnmount(() => {
             <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
               <button
                 class="px-12 py-4 bg-white text-black font-bold text-lg rounded-full transition-all hover:scale-105 hover:shadow-xl active:scale-95 cursor-pointer"
-                @click="openGuideModal"
+                @click="guideModalOpen = true"
               >
                 免費領取攻略秘笈 →
               </button>
@@ -180,83 +118,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <Teleport to="body">
-      <transition name="fade-modal">
-        <div
-          v-if="guideModalOpen"
-          class="fixed inset-0 z-[120] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4 md:px-6"
-          @click.self="closeGuideModal"
-        >
-          <div
-            class="relative w-full max-w-[520px] bg-white/95 rounded-3xl shadow-2xl border border-white/60 overflow-hidden modal-pop"
-          >
-            <div class="absolute inset-0 bg-gradient-to-br from-[#f3f4ff] via-white to-[#fdf3ff] opacity-90" />
-            <div class="relative z-10 p-6 md:p-8 space-y-6">
-              <div class="flex items-start justify-between gap-4">
-                <div class="flex-1 min-w-0">
-                  <p class="text-xs uppercase tracking-[0.25em] text-[#7A7DFE] font-bold mb-2">guide</p>
-                  <h3 class="text-2xl md:text-3xl font-black text-[#1f1f1f] leading-tight">免費領取攻略秘笈</h3>
-                  <p class="text-sm md:text-base text-[#5B5B5B] mt-2 leading-relaxed">
-                    整合網站開發、行銷設計的實戰地圖，填寫資料即可獲得下載連結。
-                  </p>
-                </div>
-                <button
-                  class="h-10 w-10 flex-none cursor-pointer rounded-full bg-black/5 flex items-center justify-center text-[#4a4a4a] hover:bg-black/10 transition"
-                  aria-label="關閉視窗"
-                  @click="closeGuideModal"
-                >
-                  ✕
-                </button>
-              </div>
-
-              <div class="space-y-4">
-                <div class="flex flex-col space-y-2">
-                  <label class="text-[#5B5B5B] text-sm md:text-base font-medium">姓名</label>
-                  <input
-                    v-model="guideForm.name.value"
-                    type="text"
-                    placeholder="請輸入您的姓名"
-                    class="bg-white px-4 py-3 rounded-xl placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm border border-[#ececff] shadow-sm"
-                  />
-                  <p v-if="guideErrors.name" class="text-red-500 text-sm px-1">{{ guideErrors.name }}</p>
-                </div>
-
-                <div class="flex flex-col space-y-2">
-                  <label class="text-[#5B5B5B] text-sm md:text-base font-medium">電子信箱</label>
-                  <input
-                    v-model="guideForm.email.value"
-                    type="email"
-                    placeholder="請輸入電子信箱"
-                    class="bg-white px-4 py-3 rounded-xl placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm border border-[#ececff] shadow-sm"
-                  />
-                  <p v-if="guideErrors.email" class="text-red-500 text-sm px-1">{{ guideErrors.email }}</p>
-                </div>
-              </div>
-
-              <div class="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-                <div class="text-xs text-[#8a8a8a] leading-relaxed">
-                  點擊送出即同意接收攻略秘笈，資訊僅用於提供下載連結。
-                </div>
-                <button
-                  class="w-full flex-none cursor-pointer md:w-auto px-8 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
-                  :disabled="guideStatus === 'submitting'"
-                  @click="submitGuide"
-                >
-                  <span v-if="guideStatus === 'submitting'" class="flex items-center gap-2">
-                    <span
-                      class="h-5 w-5 border-2 border-white/40 border-t-white rounded-full animate-spin"
-                      aria-hidden="true"
-                    />
-                    傳送中...
-                  </span>
-                  <span v-else>送出</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </transition>
-    </Teleport>
+    <GuideModal v-model:open="guideModalOpen" />
   </section>
 </template>
 
@@ -370,11 +232,6 @@ onBeforeUnmount(() => {
 
 .modal-pop {
   animation: modal-pop 0.22s ease;
-}
-
-:global(body.modal-lock) {
-  overflow: hidden;
-  touch-action: none;
 }
 
 @keyframes modal-pop {
