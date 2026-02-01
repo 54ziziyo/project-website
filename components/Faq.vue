@@ -235,11 +235,44 @@ const categories = [
   { value: 'design', label: '設計視覺' },
 ] as const
 
+const route = useRoute()
+const router = useRouter()
+
 const selectedCategory = ref<Category>('web')
+const activeAccordion = ref('')
 const currentFaqs = computed(() => allFaqs[selectedCategory.value])
 
 const categoryRefs = ref<Record<string, HTMLElement | null>>({})
 const indicatorStyle = ref<{ width: string; transform: string }>({ width: '0px', transform: 'translateX(0px)' })
+
+const getFaqValues = (category: Category) => allFaqs[category].map((faq) => faq.value)
+
+const normalizeCategory = (raw: unknown): Category => {
+  if (typeof raw === 'string') {
+    const match = categories.find((cat) => cat.value === raw)
+    if (match) return match.value
+  }
+  return 'web'
+}
+
+const applyRouteState = () => {
+  const normalizedCategory = normalizeCategory(route.query.category)
+  selectedCategory.value = normalizedCategory
+
+  const values = getFaqValues(normalizedCategory)
+  const queryFaq = typeof route.query.faq === 'string' ? route.query.faq : ''
+  activeAccordion.value = values.includes(queryFaq) ? queryFaq : values[0] || ''
+}
+
+const setCategory = (category: Category) => {
+  selectedCategory.value = category
+  const values = getFaqValues(category)
+  if (!values.includes(activeAccordion.value)) {
+    activeAccordion.value = values[0] || ''
+  }
+}
+
+applyRouteState()
 
 const updateIndicator = () => {
   const el = categoryRefs.value[selectedCategory.value]
@@ -265,6 +298,26 @@ onBeforeUnmount(() => {
 })
 
 watch(selectedCategory, () => nextTick(updateIndicator))
+
+watch(
+  [selectedCategory, activeAccordion],
+  () => {
+    const query: Record<string, string> = {}
+    query.category = selectedCategory.value
+    if (activeAccordion.value) query.faq = activeAccordion.value
+    router.replace({ query })
+  },
+  { immediate: true },
+)
+
+watch(
+  () => route.query,
+  () => {
+    applyRouteState()
+  },
+)
+
+applyRouteState()
 const scrollContainer = ref<HTMLElement | null>(null)
 const showLeftGradient = ref(false)
 const showRightGradient = ref(true)
@@ -332,7 +385,7 @@ onMounted(() => {
             'relative z-10 px-6 py-2.5 rounded-xl transition-all duration-300 text-sm md:text-base font-bold whitespace-nowrap cursor-pointer',
             selectedCategory === cat.value ? 'text-white' : 'text-gray-500 hover:text-[#8782FF]',
           ]"
-          @click="selectedCategory = cat.value"
+          @click="setCategory(cat.value)"
         >
           {{ cat.label }}
         </button>
@@ -341,7 +394,7 @@ onMounted(() => {
 
     <div class="max-w-4xl mx-auto px-4 md:px-6 relative z-10">
       <div class="space-y-4">
-        <Accordion type="single" collapsible :default-value="currentFaqs[0]?.value" class="w-full">
+        <Accordion v-model="activeAccordion" type="single" collapsible class="w-full">
           <AccordionItem
             v-for="item in currentFaqs"
             :key="item.value"

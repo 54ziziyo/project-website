@@ -35,7 +35,7 @@ const projectPackages = [
     services: [
       {
         title: '半年成長經營包',
-        highlight: '首月 NT$120,000，含多頁式網站製作與進階行銷',
+        highlight: '首月 NT$200,000，含多頁式網站製作與進階行銷',
         desc: '網站＋社群＋內容整合，適合已有穩定營收、需提升專業轉化率的品牌。',
       },
       {

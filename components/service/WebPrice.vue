@@ -42,7 +42,7 @@ const multiPagePrice = [
     title: '多頁式全客製化網站（含設計）',
     highlight: 'Figma 設計 + 客製開發 + RWD響應式 + 部署',
     description: '由零開始規劃版型、UI/UX 設計，並轉為 HTML/CSS/JS 程式碼，含響應式設計（RWD），不含後台(後台另報價)。',
-    price: 'NT$120,000元起',
+    price: 'NT$200,000元起',
     ta: '✅ 適合需要高度客製化的企業或品牌，也適合不需後台、要求高彈性的品牌頁面等',
   },
 ]
