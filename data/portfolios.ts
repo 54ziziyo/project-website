@@ -25,7 +25,7 @@ export interface Portfolio {
 export const portfolios: Portfolio[] = [
   {
     id: 'luxetravel',
-    title: 'Luxe Travel 歐洲旅遊平台',
+    title: 'Luxe Travel 旅遊平台',
     category: '網站開發',
     shortDesc: '頂級歐洲旅遊規劃服務',
     description: `Luxe Travel 是專精於歐洲度假的頂級旅遊規劃平台。提供多元化的旅遊服務，包括精選團體旅遊、客製化自由行和豪華郵輪，旨在滿足旅客對完美旅程的所有嚮往。<br /><br />在各大旅遊論壇上獲得了卓越的聲譽和好評。至今已幫助多名旅客實現探索歐洲的夢想，並為數百對新人打造難忘的蜜月之旅。<br/>※ 本案為任職於則式之前端工程師作品`,
@@ -61,7 +61,7 @@ export const portfolios: Portfolio[] = [
   },
   {
     id: 'funlooker',
-    title: 'Funlooker 全球夜生活指南',
+    title: 'Funlooker 媒合交友平台',
     category: '網站開發',
     shortDesc: '探索全球夜生活的最佳平台',
     description: `Funlooker 是一個全球夜生活指南平台，幫助使用者探索世界各地的酒吧、俱樂部、派對和獨特的娛樂場所，包括伴遊服務和專屬體驗。<br/><br/>無論是旅行者還是當地居民，都能在這裡找到從主流社交場所到各個娛樂的全方位資訊。<br />※ 本案為任職於德騏期間之作品`,
