@@ -62,7 +62,7 @@ const servicesPrice = [
         <div
           v-for="(service, index) in servicesPrice"
           :key="index"
-          class="group flex flex-col md:flex-row justify-between items-start md:items-center p-6 md:p-8 rounded-3xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-[#8782ff15] border border-transparent hover:border-[#8782ff20]"
+          class="group flex flex-col md:flex-row justify-between items-start md:items-center p-6 md:p-8 rounded-3xl transition-all duration-300 bg-[#8782ff05] border-[#8782ff25] shadow-sm md:bg-transparent md:border-transparent md:shadow-none md:hover:bg-white md:hover:shadow-xl md:hover:shadow-[#8782ff15] md:hover:border-[#8782ff20]"
         >
           <div class="flex items-start md:pr-10">
             <span
