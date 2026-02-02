@@ -104,21 +104,20 @@ onBeforeUnmount(() => {
                 class="absolute inset-0 rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden"
                 style="transform: translate3d(0, 0, 0); -webkit-backface-visibility: hidden"
               >
-                <div class="absolute inset-0 bg-white/40" />
-
                 <div
-                  class="absolute inset-0 border transition-all duration-500"
+                  class="absolute inset-0 rounded-[3rem] border transition-all duration-300"
                   :class="[
                     isInAppBrowser
-                      ? 'bg-white/40 border-white/60 shadow-none'
-                      : 'bg-white/20 backdrop-blur-2xl border-white/40',
+                      ? 'bg-[#FDF3FF] border-[#8782ff30] shadow-none'
+                      : 'bg-white/10 border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)]',
                   ]"
-                  style="
-                    -webkit-backdrop-filter: blur(30px);
-                    backdrop-filter: blur(30px);
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                  "
+                  :style="{
+                    backdropFilter: isInAppBrowser ? 'none' : 'blur(30px)',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translate3d(0, 0, 0)',
+                    webkitBackfaceVisibility: 'hidden',
+                    webkitBackdropFilter: isInAppBrowser ? 'none' : 'blur(30px)',
+                  }"
                 />
               </div>
 
