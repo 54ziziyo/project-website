@@ -30,19 +30,23 @@ const observerItems = ref<HTMLElement[]>([])
 const activeIndexes = ref<Set<number>>(new Set())
 const isMobile = ref(false)
 
-const dotColors =[ 'text-[#8782FF]', 'text-[#ff333d]', 'text-[#ff804a]']
+const rawColors = ['#8782FF', '#ff333d', '#ff804a']
+const dotColors = rawColors.map((c) => `text-[${c}]`)
 
 onMounted(() => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const index = Number((entry.target as HTMLElement).dataset.index)
-        activeIndexes.value.add(index)
-      }
-    })
-  }, { threshold: 0.1 })
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = Number((entry.target as HTMLElement).dataset.index)
+          activeIndexes.value.add(index)
+        }
+      })
+    },
+    { threshold: 0.1 },
+  )
 
-  observerItems.value.forEach(item => observer.observe(item))
+  observerItems.value.forEach((item) => observer.observe(item))
 
   const updateMobile = () => {
     isMobile.value = window.matchMedia('(max-width: 639px)').matches
@@ -61,13 +65,11 @@ onMounted(() => {
     <div class="absolute top-1/4 -right-10 w-96 h-96 bg-gray-50 rounded-full blur-[120px] -z-10 opacity-70" />
 
     <div class="container mx-auto px-6 flex flex-col items-center">
-      <div 
+      <div
         class="relative mb-24 md:mb-36 text-center transition-all duration-1000 transform"
         :class="[activeIndexes.size > 0 ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
       >
-        <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-          你是否也遇到這些問題？
-        </h2>
+        <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">你是否也遇到這些問題？</h2>
         <div class="w-16 h-1.5 bg-gradient-to-r from-[#8782FF] via-[#ff333d] to-[#ffe3a8] mx-auto rounded-full" />
       </div>
 
@@ -77,14 +79,10 @@ onMounted(() => {
           :key="index"
           ref="observerItems"
           :data-index="index"
-          class="group relative flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-20 p-8 md:p-12 rounded-[2.5rem] 
-          transition-all duration-300 transform border border-transparent hover:border-gray-100 hover:bg-gray-100 bg-gray-50/60"
-          :class="[
-            activeIndexes.has(index) ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0',
-          ]"
+          class="group relative flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-20 p-8 md:p-12 rounded-[2.5rem] transition-all duration-300 transform border border-transparent hover:border-gray-100 hover:bg-gray-100 bg-gray-50/60"
+          :class="[activeIndexes.has(index) ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0']"
           :style="{ transitionDelay: `${index * 150}ms` }"
         >
-          
           <div class="flex-shrink-0 flex justify-center md:justify-start md:w-[180px] px-4 overflow-visible">
             <div
               class="text-7xl md:text-[110px] font-black leading-none select-none transition-all duration-700 group-hover:scale-110 group-hover:opacity-100 opacity-80 italic"
@@ -92,7 +90,7 @@ onMounted(() => {
                 -webkit-text-stroke: 1px #a6a09b;
                 color: transparent;
                 font-family: 'Inter', sans-serif;
-                padding-right: 0.1em; 
+                padding-right: 0.1em;
               "
             >
               0{{ index + 1 }}
@@ -103,17 +101,14 @@ onMounted(() => {
             <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800 tracking-tight">
               {{ item.title }}
             </h3>
-            
+
             <div class="space-y-4">
-              <div 
-                v-for="(prob, pIndex) in item.problems" 
+              <div
+                v-for="(prob, pIndex) in item.problems"
                 :key="pIndex"
                 class="flex items-start justify-start gap-3 text-gray-500 text-lg"
               >
-                <span 
-                  class="flex items-center justify-start h-[1.6em] flex-shrink-0"
-                  :class="dotColors[index % 3]"
-                >
+                <span class="flex items-center justify-start h-[1.6em] flex-shrink-0" :class="dotColors[index % 3]">
                   <span class="text-[10px]">●</span>
                 </span>
                 <span class="leading-relaxed text-start">
@@ -126,9 +121,20 @@ onMounted(() => {
             </div>
           </div>
 
-          <div class="hidden xl:block absolute right-10 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-3 transition-all duration-500">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff333d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
+          <div
+            class="hidden xl:block absolute right-20 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-3 transition-all duration-500"
+          >
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              :stroke="rawColors[index % 3]"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </div>
         </div>
