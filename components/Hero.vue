@@ -88,9 +88,15 @@ onBeforeUnmount(() => {
           >
             <div
               class="relative w-full max-w-[340px] md:max-w-[460px] px-8 md:(px-10 py-2)flex items-center justify-center animate-float"
+              :class="{ 'animate-float': isLoaded }"
             >
               <div
                 class="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-[3rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
+                style="
+                  -webkit-backdrop-filter: blur(64px); /* 💡 確保 Safari 支援 */
+                  backface-visibility: hidden; /* 💡 減少渲染抖動 */
+                  transform: translateZ(0);
+                "
               />
 
               <div class="relative z-10 w-full aspect-square flex items-center justify-center overflow-hidden">
@@ -203,6 +209,7 @@ onBeforeUnmount(() => {
   width: 100% !important;
   height: 100% !important;
   margin: 0 !important;
+  transform: translate3d(0, 0, 0);
 }
 
 @keyframes float {
