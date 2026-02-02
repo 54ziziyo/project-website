@@ -67,7 +67,7 @@ const handleSelect = (plan: (typeof marketingPlans)[number]) => {
 </script>
 
 <template>
-  <div class="relative md:py-40 py-32 overflow-hidden">
+  <div class="relative md:pt-20 md:pb-40 py-32 overflow-hidden">
     <div
       class="absolute left-1/2 -translate-x-1/2 md:translate-x-0 min-[480px]:text-[100px] min-[737px]:text-[120px] top-10 md:left-24 text-[70px] md:text-[200px] font-bold md:text-[#FAFAFA] leading-none text-gray-100 opacity-50"
     >

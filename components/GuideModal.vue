@@ -1,6 +1,17 @@
 <script setup lang="ts">
 const open = defineModel<boolean>('open', { default: false })
 
+type Grecaptcha = {
+  ready: (cb: () => void) => void
+  execute: (siteKey: string, options: { action: string }) => Promise<string>
+}
+
+const recaptchaSiteKey = '6LezflssAAAAAAyrX2klGOA-XG6g7Kj2cgY9oiEz'
+const scriptUrl =
+  'https://script.google.com/macros/s/AKfycbwbSt3nyNmYePhPTXzNjLuJnbHnS7h7b6fvegfFQ1j1rH8bBFIQfLO-pcfs4-FPIeEs/exec'
+const guideUrl = 'https://zeona-studio--89izure.gamma.site/'
+const storageKey = 'guide-submission-v1'
+
 const form = {
   name: ref(''),
   email: ref(''),
@@ -11,6 +22,53 @@ const status = ref<'idle' | 'submitting' | 'sent'>('idle')
 const bodyLockClass = 'modal-lock'
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+const loadRecaptcha = () => {
+  return new Promise<Grecaptcha>((resolve, reject) => {
+    const existing = (window as any).grecaptcha as Grecaptcha | undefined
+    if (existing) {
+      existing.ready(() => resolve(existing))
+      return
+    }
+
+    const script = document.createElement('script')
+    script.src = `https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`
+    script.async = true
+    script.defer = true
+    script.onload = () => {
+      const grecaptcha = (window as any).grecaptcha as Grecaptcha | undefined
+      if (!grecaptcha) {
+        reject(new Error('reCAPTCHA 載入失敗'))
+        return
+      }
+      grecaptcha.ready(() => resolve(grecaptcha))
+    }
+    script.onerror = () => reject(new Error('reCAPTCHA 載入失敗'))
+    document.head.appendChild(script)
+  })
+}
+
+const submitToContact = async () => {
+  const grecaptcha = await loadRecaptcha()
+  const token = await grecaptcha.execute(recaptchaSiteKey, { action: 'guide' })
+
+  const formData = new URLSearchParams()
+  formData.append('name', form.name.value)
+  formData.append('brand', '')
+  formData.append('mail', form.email.value)
+  formData.append('line', '')
+  formData.append('desc', '領取攻略秘笈')
+  formData.append('startDate', '')
+  formData.append('endDate', '')
+  formData.append('budget', '0')
+  formData.append('recaptchaToken', token)
+
+  await fetch(scriptUrl, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: formData,
+  })
+}
 
 const validate = () => {
   errors.value = {}
@@ -27,18 +85,23 @@ const validate = () => {
   return Object.keys(errors.value).length === 0
 }
 
-const submit = () => {
+const submit = async () => {
   if (!validate()) return
   status.value = 'submitting'
-  window.setTimeout(() => {
+
+  try {
+    await submitToContact()
     status.value = 'sent'
-    close()
-    form.name.value = ''
-    form.email.value = ''
-    window.setTimeout(() => {
-      status.value = 'idle'
-    }, 1200)
-  }, 500)
+    const payload = JSON.stringify({ name: form.name.value, email: form.email.value })
+    window.localStorage.setItem(storageKey, payload)
+  } catch (err) {
+    console.error('送出失敗', err)
+    status.value = 'idle'
+  }
+}
+
+const openGuide = () => {
+  window.open(guideUrl, '_blank', 'noopener')
 }
 
 const close = () => {
@@ -50,6 +113,26 @@ const handleKeydown = (event: KeyboardEvent) => {
     close()
   }
 }
+
+const hydrateFromStorage = () => {
+  if (typeof window === 'undefined') return
+  try {
+    const raw = window.localStorage.getItem(storageKey)
+    if (!raw) return
+    const parsed = JSON.parse(raw) as { name?: string; email?: string }
+    if (parsed.name) form.name.value = parsed.name
+    if (parsed.email) form.email.value = parsed.email
+    if (parsed.name || parsed.email) {
+      status.value = 'sent'
+    }
+  } catch (err) {
+    console.error('hydrate storage error', err)
+  }
+}
+
+onMounted(() => {
+  hydrateFromStorage()
+})
 
 watch(open, (isOpen) => {
   if (isOpen) {
@@ -85,7 +168,7 @@ onBeforeUnmount(() => {
                 <p class="text-xs uppercase tracking-[0.25em] text-[#7A7DFE] font-bold mb-2">guide</p>
                 <h3 class="text-2xl md:text-3xl font-black text-[#1f1f1f] leading-tight">免費領取攻略秘笈</h3>
                 <p class="text-sm md:text-base text-[#5B5B5B] mt-2 leading-relaxed">
-                  整合網站開發、行銷設計的實戰地圖，填寫資料即可獲得下載連結。
+                  整合網站開發、行銷設計的實戰地圖，填寫資料即可獲得連結。
                 </p>
               </div>
               <button
@@ -97,47 +180,59 @@ onBeforeUnmount(() => {
               </button>
             </div>
 
-            <div class="space-y-4">
-              <div class="flex flex-col space-y-2">
-                <label class="text-[#5B5B5B] text-sm md:text-base font-medium">姓名</label>
-                <input
-                  v-model="form.name.value"
-                  type="text"
-                  placeholder="請輸入您的姓名"
-                  class="bg-white px-4 py-3 rounded-xl placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm border border-[#ececff] shadow-sm"
-                />
-                <p v-if="errors.name" class="text-red-500 text-sm px-1">{{ errors.name }}</p>
+            <div v-if="status !== 'sent'" class="space-y-6">
+              <div class="space-y-4">
+                <div class="flex flex-col space-y-2">
+                  <label class="text-[#5B5B5B] text-sm md:text-base font-medium">姓名</label>
+                  <input
+                    v-model="form.name.value"
+                    type="text"
+                    placeholder="請輸入您的姓名"
+                    class="bg-white px-4 py-3 rounded-xl placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm border border-[#ececff] shadow-sm"
+                  />
+                  <p v-if="errors.name" class="text-red-500 text-sm px-1">{{ errors.name }}</p>
+                </div>
+
+                <div class="flex flex-col space-y-2">
+                  <label class="text-[#5B5B5B] text-sm md:text-base font-medium">電子信箱</label>
+                  <input
+                    v-model="form.email.value"
+                    type="email"
+                    placeholder="請輸入電子信箱"
+                    class="bg-white px-4 py-3 rounded-xl placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm border border-[#ececff] shadow-sm"
+                  />
+                  <p v-if="errors.email" class="text-red-500 text-sm px-1">{{ errors.email }}</p>
+                </div>
               </div>
 
-              <div class="flex flex-col space-y-2">
-                <label class="text-[#5B5B5B] text-sm md:text-base font-medium">電子信箱</label>
-                <input
-                  v-model="form.email.value"
-                  type="email"
-                  placeholder="請輸入電子信箱"
-                  class="bg-white px-4 py-3 rounded-xl placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm border border-[#ececff] shadow-sm"
-                />
-                <p v-if="errors.email" class="text-red-500 text-sm px-1">{{ errors.email }}</p>
+              <div class="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+                <div class="text-xs text-[#8a8a8a] leading-relaxed">
+                  點擊送出即同意接收攻略秘笈，送出後會顯示下載按鈕。
+                </div>
+                <button
+                  class="w-full flex-none cursor-pointer md:w-auto px-8 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                  :disabled="status === 'submitting'"
+                  @click="submit"
+                >
+                  <span v-if="status === 'submitting'" class="flex items-center gap-2">
+                    <span
+                      class="h-5 w-5 border-2 border-white/40 border-t-white rounded-full animate-spin"
+                      aria-hidden="true"
+                    />
+                    傳送中...
+                  </span>
+                  <span v-else>送出</span>
+                </button>
               </div>
             </div>
 
-            <div class="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-              <div class="text-xs text-[#8a8a8a] leading-relaxed">
-                點擊送出即同意接收攻略秘笈，資訊僅用於提供下載連結。
-              </div>
+            <div v-else class="space-y-4 text-center">
+              <p class="text-base text-[#4a4a4a] font-semibold">資料已送出，點擊下方按鈕閱讀完整地圖</p>
               <button
-                class="w-full flex-none cursor-pointer md:w-auto px-8 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
-                :disabled="status === 'submitting'"
-                @click="submit"
+                class="w-full px-6 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition-all"
+                @click="openGuide"
               >
-                <span v-if="status === 'submitting'" class="flex items-center gap-2">
-                  <span
-                    class="h-5 w-5 border-2 border-white/40 border-t-white rounded-full animate-spin"
-                    aria-hidden="true"
-                  />
-                  傳送中...
-                </span>
-                <span v-else>送出</span>
+                📖 點此閱讀 (免費) →
               </button>
             </div>
           </div>
