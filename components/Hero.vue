@@ -2,13 +2,23 @@
 const scrollY = ref(0)
 const isLoaded = ref(false)
 const guideModalOpen = ref(false)
+const isInAppBrowser = ref(false) // 💡 用於標記是否為內建瀏覽器
 
 const handleScroll = () => {
   scrollY.value = window.scrollY
 }
 
+const checkBrowser = () => {
+  if (import.meta.client) {
+    const ua = navigator.userAgent || navigator.vendor || (window as any).opera
+    // 💡 檢測常見的內建瀏覽器標籤
+    isInAppBrowser.value = /Instagram|FBAN|FBAV|Line/i.test(ua)
+  }
+}
+
 onMounted(() => {
   isLoaded.value = true
+  checkBrowser() // 💡 掛載時執行檢測
   window.addEventListener('scroll', handleScroll)
 })
 
@@ -87,17 +97,30 @@ onBeforeUnmount(() => {
             :class="[isLoaded ? 'scale-100 opacity-100' : 'scale-90 opacity-0']"
           >
             <div
-              class="relative w-full max-w-[340px] md:max-w-[460px] px-8 md:(px-10 py-2)flex items-center justify-center animate-float"
+              class="relative w-full max-w-[340px] md:max-w-[460px] px-8 flex items-center justify-center"
               :class="{ 'animate-float': isLoaded }"
             >
               <div
-                class="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-[3rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
-                style="
-                  -webkit-backdrop-filter: blur(64px); /* 💡 確保 Safari 支援 */
-                  backface-visibility: hidden; /* 💡 減少渲染抖動 */
-                  transform: translateZ(0);
-                "
-              />
+                class="absolute inset-0 rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden"
+                style="transform: translate3d(0, 0, 0); -webkit-backface-visibility: hidden"
+              >
+                <div class="absolute inset-0 bg-white/40" />
+
+                <div
+                  class="absolute inset-0 border transition-all duration-500"
+                  :class="[
+                    isInAppBrowser
+                      ? 'bg-white/40 border-white/60 shadow-none'
+                      : 'bg-white/20 backdrop-blur-2xl border-white/40',
+                  ]"
+                  style="
+                    -webkit-backdrop-filter: blur(30px);
+                    backdrop-filter: blur(30px);
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                  "
+                />
+              </div>
 
               <div class="relative z-10 w-full aspect-square flex items-center justify-center overflow-hidden">
                 <client-only>
@@ -237,7 +260,6 @@ onBeforeUnmount(() => {
 .fade-modal-leave-to {
   opacity: 0;
 }
-
 .modal-pop {
   animation: modal-pop 0.22s ease;
 }
