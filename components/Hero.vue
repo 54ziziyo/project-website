@@ -207,18 +207,19 @@ onBeforeUnmount(() => {
 
 @keyframes float {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0px) translateZ(0);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-15px) translateZ(0);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0px) translateZ(0);
   }
 }
 
 .animate-float {
   animation: float 5s ease-in-out infinite;
+  will-change: transform;
 }
 
 .fade-modal-enter-active,

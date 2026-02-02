@@ -229,10 +229,10 @@ onBeforeUnmount(() => {
             <div v-else class="space-y-4 text-center">
               <p class="text-base text-[#4a4a4a] font-semibold">資料已送出，點擊下方按鈕閱讀完整地圖</p>
               <button
-                class="w-full px-6 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition-all"
+                class="w-full px-6 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition-all cursor-pointer"
                 @click="openGuide"
               >
-                📖 點此閱讀 (免費) →
+                📖 點此閱讀 →
               </button>
             </div>
           </div>

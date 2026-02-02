@@ -8,15 +8,20 @@
         <div>感謝您訪問我的網站，期待為您提供優質的服務！</div>
       </div>
       <div class="space-x-4 flex">
-        <div class="space-y-2 flex flex-col">
-          <NuxtLink to="/About" class="hover:text-[#8782FF] transition">關於我</NuxtLink>
-          <NuxtLink to="/Services/website" class="hover:text-[#8782FF] transition">服務項目</NuxtLink>
-          <NuxtLink to="/Faq" class="hover:text-[#8782FF] transition">常見問題</NuxtLink>
+        <div class="space-y-2 flex flex-col items-start">
+          <NuxtLink to="/about" class="hover:text-[#8782FF] transition">關於我</NuxtLink>
+          <NuxtLink to="/faq" class="hover:text-[#8782FF] transition">常見問題</NuxtLink>
+          <NuxtLink to="/works" class="hover:text-[#8782FF] transition">作品集</NuxtLink>
         </div>
-        <div class="space-y-2 flex flex-col">
-          <NuxtLink to="/Privacy" class="hover:text-[#8782FF] transition">隱私政策</NuxtLink>
-          <NuxtLink to="/Terms" class="hover:text-[#8782FF] transition">使用條款</NuxtLink>
-          <NuxtLink to="/Contact" class="hover:text-[#8782FF] transition">聯繫我</NuxtLink>
+        <div class="space-y-2 flex flex-col items-start">
+          <NuxtLink to="/privacy" class="hover:text-[#8782FF] transition">隱私政策</NuxtLink>
+          <NuxtLink to="/terms" class="hover:text-[#8782FF] transition">使用條款</NuxtLink>
+          <NuxtLink to="/contact" class="hover:text-[#8782FF] transition">聯繫我</NuxtLink>
+        </div>
+        <div class="space-y-2 flex flex-col items-start">
+          <NuxtLink to="/services/website" class="hover:text-[#8782FF] transition">網站開發</NuxtLink>
+          <NuxtLink to="/services/marketing" class="hover:text-[#8782FF] transition">行銷推廣</NuxtLink>
+          <NuxtLink to="/services/design" class="hover:text-[#8782FF] transition">視覺設計</NuxtLink>
         </div>
       </div>
       <div class="space-y-2 flex flex-col">

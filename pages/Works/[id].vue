@@ -227,10 +227,10 @@ onMounted(() => {
         >
           <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">想要打造類似的專案？</h2>
           <p class="text-gray-600 mb-8 max-w-xl mx-auto px-4">
-            讓 Zeona Studio 協助您實現數位夢想，從設計到開發，我提供一站式服務。
+            讓 Zeona Studio 協助您實現數位夢想，從設計到開發，提供一站式服務。
           </p>
           <NuxtLink
-            to="/Contact"
+            to="/contact"
             class="inline-block bg-[#8782FF] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-lg"
             >立即聯繫我</NuxtLink
           >
