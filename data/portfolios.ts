@@ -564,7 +564,7 @@ export const portfolios: Portfolio[] = [
       '表單驗證機制',
       '產品特色輪播展示',
     ],
-    techStack: ['Adobe XD', 'HTML', 'CSS', 'jQuery', 'Rellax.js', 'Wow.js', 'FB Pixel', 'GA'],
+    techStack: ['Bootstrap', 'Rellax.js', 'Wow.js', 'Adobe XD', 'HTML', 'CSS', 'jQuery', 'FB Pixel', 'GA'],
     image: getImageUrl('ticketInfo_dev.jpeg'),
     link: '/works/corporate-signing-web',
     websiteLink: 'https://www.taiwantaxi.com.tw/businesspayment',
