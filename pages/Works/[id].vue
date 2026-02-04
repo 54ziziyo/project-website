@@ -21,10 +21,10 @@ const backLink = computed(() => {
       : currentPortfolio.value?.category
 
   if (resolvedCategory && categories.includes(resolvedCategory) && resolvedCategory !== '全部') {
-    return { path: '/Works', query: { category: resolvedCategory } }
+    return { path: '/works', query: { category: resolvedCategory } }
   }
 
-  return { path: '/Works' }
+  return { path: '/works' }
 })
 
 onMounted(() => {
