@@ -13,6 +13,8 @@ npm install
 # pnpm
 pnpm install
 
+pnpm reset
+
 # yarn
 yarn install
 

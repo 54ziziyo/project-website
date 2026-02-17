@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "reset": "rm -rf node_modules && pnpm install"
   },
   "dependencies": {
     "@nuxt/eslint": "^1.4.1",
