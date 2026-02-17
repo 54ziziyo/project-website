@@ -10,14 +10,14 @@ const servicesPrice = [
   {
     title: '單張社群圖 / Banner 設計',
     highlight: '各平台尺寸客製化（FB/IG/蝦皮等）',
-    description: '高品質靜態設計。💡 如需動態 GIF 另加 30% 費用。',
+    description: '高品質靜態設計。※ 如需動態 GIF 另加 30% 費用。',
     price: '1,200',
     unit: '元起',
   },
   {
     title: '海報 / 活動視覺設計',
     highlight: '客製主視覺，含應用構圖',
-    description: '適合大型活動、展覽推廣。💡 需印刷檔另加 NT$500。',
+    description: '適合大型活動、展覽推廣。※ 需印刷檔另加 NT$500。',
     price: '3,000',
     unit: '元起',
   },
@@ -31,7 +31,7 @@ const servicesPrice = [
   {
     title: 'EDM 活動頁設計',
     highlight: '行銷導向版型，含 RWD 響應式規劃',
-    description: '含視覺設計與 HTML 格式導出。💡 需由客戶提供文案。',
+    description: '含視覺設計與 HTML 格式導出。※ 需由客戶提供文案。',
     price: '4,000',
     unit: '元起',
   },
@@ -45,7 +45,7 @@ const servicesPrice = [
   {
     title: 'UI/UX 設計（單頁）',
     highlight: 'Wireframe + UI 設計 + Figma 交付',
-    description: '含基礎互動原型。💡 複雜功能、後台系統另行報價。',
+    description: '含基礎互動原型。※ 複雜功能、後台系統另行報價。',
     price: '10,000',
     unit: '元/頁起',
   },
@@ -59,7 +59,7 @@ const servicesPrice = [
   {
     title: '簡報設計 (PPT / Keynote)',
     highlight: '依頁數與風格客製，提升簡報說服力',
-    description: '基礎版 $300/頁。💡 含動畫 (過場/路徑/互動) 加收 50%。',
+    description: '基礎版 $300/頁。※ 含動畫 (過場/路徑/互動) 加收 50%。',
     price: '300',
     unit: '元/頁起',
   },

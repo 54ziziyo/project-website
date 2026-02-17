@@ -232,7 +232,7 @@ const allFaqs: Record<Category, Faq[]> = {
 const categories = [
   { value: 'web', label: '網站開發' },
   { value: 'marketing', label: '行銷推廣' },
-  { value: 'design', label: '設計視覺' },
+  { value: 'design', label: '視覺設計' },
 ] as const
 
 const route = useRoute()

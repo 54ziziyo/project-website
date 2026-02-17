@@ -29,7 +29,7 @@ const navItems = [
       { title: '󠁯・ 網站開發', href: '/services/website' },
       { title: '󠁯・ 行銷推廣', href: '/services/marketing' },
       { title: '󠁯・ 視覺設計', href: '/services/design' },
-      // { title: '󠁯・ 整合服務', href: '/services/all' },
+      { title: '󠁯・ 整合服務', href: '/services/all' },
     ],
   },
   { title: 'FAQ', href: '/faq', sub: '常見問題', no: '04' },

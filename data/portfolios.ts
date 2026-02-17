@@ -229,7 +229,7 @@ export const portfolios: Portfolio[] = [
     features: ['特色商品介紹', '第三方工具自動回覆', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['ManyChat ', 'CapCut', 'Strategy Planning', 'Instagram Edits'],
     image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/600209016_1118381913568907_5962086777417431337_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzc4ODE0MjIxNTQ3NTM2NDg2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=s61Jx9QiqpUQ7kNvwHIDH3z&_nc_oc=Adnqp0oggteB0rKQMWnJuqyzaJvCJAu6h1dYfYPD4pZ8sYNYqtzU1WiwksFq3vAPJ5U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=qtKs4Dd9ugNTA0xSCh2s-Q&oh=00_AftclbXERawqu4rJELEiaw1lSdgn1xcXKTe_P4wEvdOWqw&oe=698436B6',
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/600209016_1118381913568907_5962086777417431337_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzc4ODE0MjIxNTQ3NTM2NDg2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=mheowQAh8hUQ7kNvwG24BZI&_nc_oc=Adm5yEZqvxLN5ljNn9LvTHnFD-9-j5tElvQZV8r5ijHPj4xKmscFv5y4lqCP0ButsY8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=goNAzWbKRzStcd52kr1_cA&oh=00_AfujMQHQbtZXGxL0VUaN2kEjJo_RP7DUT5PBRLlpLWM1pA&oe=6999F776',
     dataScreenshots: [
       getImageUrl('roml-life-reels-arai-neko_01.jpg'),
       getImageUrl('roml-life-reels-arai-neko_02.jpg'),
@@ -259,7 +259,7 @@ export const portfolios: Portfolio[] = [
     features: ['特色商品介紹', '第三方工具自動回覆', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['BotBonnie ', 'CapCut', 'Strategy Planning', 'Instagram Edits'],
     image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/615891746_872182862329933_2923751492766694805_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=110&ig_cache_key=MzgwOTE5NjU4MDM0MzQ4NTg0MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=9AWgMK5Z6ZEQ7kNvwHpVg4j&_nc_oc=AdmTtjnbuTzjA2tI7kuqlropbNk7BGn_nv5I8iS3xYDcRWc22KxwRvvAgzx51Ipurjo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=BG0T81agWRM9wly58Vr5NA&oh=00_Afs_0I_gKlZRTg74VYkFc2WkmzdjEw1hZN9hZgywq0sZEQ&oe=69844E43',
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/615891746_872182862329933_2923751492766694805_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=110&ig_cache_key=MzgwOTE5NjU4MDM0MzQ4NTg0MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=X3jiYFHFvuEQ7kNvwGBCp1S&_nc_oc=AdlSYhLMU8E9OsrS8_qPzEpr0v4ErTeqtZJFjoOTKwvP-U1SuyMqCHxUmH3HgKGcB2M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=u0um_7ZhwyXQ87FUg11bDw&oh=00_AfvZmadbcnpEpT9HLXquQ0qtSSQcAAkAqCGfva319gz9fg&oe=6999D6C3',
     dataScreenshots: [
       getImageUrl('roml-life-reels-electronic-dimming_01.jpg'),
       getImageUrl('roml-life-reels-electronic-dimming_02.jpg'),
@@ -285,7 +285,7 @@ export const portfolios: Portfolio[] = [
     features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
     techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
     image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/587787659_18300027937250820_7406361695499187455_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=Mzc3NDg2OTIzODUxMjI1NjMyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=yCGB5Yk15lIQ7kNvwFqfSBu&_nc_oc=Adn6dUBUr9SJ5za9KjCOyg2l45rX9AkXxCkEEVDHUc3O4PbtgzQ6hxlhvjpqoANr-mg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=l1YyRIYhAIYii3fUDAUKsA&oh=00_AfvUeJfa-Yf3EFPPazUiVaiN3Dv68U5PbHYIHDdMWvaLtQ&oe=6984100D',
+      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/587787659_18300027937250820_7406361695499187455_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=Mzc3NDg2OTIzODUxMjI1NjMyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=ynny3kLM9NIQ7kNvwH2DpIr&_nc_oc=AdliSX-EMs5d2prTyXau-qXOp5rYNsrU81ydh3b2GROmSmBmVDvTTEQIZt_r1bamlfI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=3RiTebMkfGZs4xkcvA0v_Q&oh=00_AftyXJWKtCOSejOgouA_UT765BdwlCotByjeqLNeaDXvSA&oe=6999D0CD',
     dataScreenshots: [
       getImageUrl('roml-life-post-93-white_01.jpg'),
       getImageUrl('roml-life-post-93-white_02.jpg'),
@@ -309,8 +309,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
     techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/571801566_18295298098250820_3465781322117408831_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=Mzc1MTEzMzQ1Nzg5NzYzMjU4OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyODB4MTI4MC5zZHIuQzMifQ%3D%3D&_nc_ohc=sWNIMltBl7MQ7kNvwEmZIg4&_nc_oc=Adl6LOReIKnrNT0ygELowIMdBUc8GSN9H4EdoC4TKX9fh3V3CYqSa1vl4n0RaBhuGqI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=f2tcfCcERazDLINxKygngQ&oh=00_AfucA9YBMMiE32gBIoyvAfSOuk7477CTsoaZSWa-X2LPFQ&oe=69843B63',
+    image: getImageUrl('roml-life-post-x15-valion_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-post-x15-valion_01.jpg'),
       getImageUrl('roml-life-post-x15-valion_02.jpg'),
@@ -340,8 +339,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['特色商品介紹', '第三方工具自動回覆', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['BotBonnie ', 'CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/588077052_1483816362912189_1705714752995936222_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ig_cache_key=Mzc3NDI0MDI4Njc4OTc4MTMxNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=-Aa3fkbHciYQ7kNvwGgvMdl&_nc_oc=AdnvilT66CNiRDAln4q6vAsSnHJ51R68gVt2wXFelAeQdnfsd7kXj5-RN8gvOSMIB4o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=m9-2DNiug-HQclaFer9YNg&oh=00_AfuygO-C1WoI6zl1jLgTG4PH2HcoLoJfn9miKws_oBs6RQ&oe=69842EE0',
+    image: getImageUrl('roml-life-reels-shoei-helmet-bag_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-reels-shoei-helmet-bag_01.jpg'),
       getImageUrl('roml-life-reels-shoei-helmet-bag_02.jpg'),
@@ -372,8 +370,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['特色商品介紹', '第三方工具自動回覆', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['ManyChat ', 'CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.75761-15/514915671_18281067643250820_1069311716476630565_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&ig_cache_key=MzY2NjQwNDA3OTM2ODE0NTEyNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MjU2MC5zZHIuQzMifQ%3D%3D&_nc_ohc=pqVNZFyy35gQ7kNvwEURI8d&_nc_oc=AdmzuX2JaA4aq0m1wsu7Sx2dA8FSYREiCpVI0X7mfQnr5xadTKj4tMliPwXa5PwzT5E&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=CtupHVnxRIZVqlkA7ub2Ow&oh=00_AfujzGYKIDRvykKTeOQwNGlwwwRnQexDIoMlz2rpFI-Qxw&oe=69842EAD',
+    image: getImageUrl('roml-life-reels-fearless_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-reels-fearless_01.jpg'),
       getImageUrl('roml-life-reels-fearless_02.jpg'),
@@ -398,8 +395,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
     techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/622704882_18306196228250820_219446141875307859_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ig_cache_key=MzgxOTUzNzM4NjAyODg3MDk0Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=rF5c3Pa1NmgQ7kNvwFhsNOm&_nc_oc=AdnuG-nJIY0Bp5EPHD78YkHqDT7d-8hD1j7cjkWjC6JHHKZn3ESRqmzSnZjlWvHESqk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=Ml9mxlNKEd2MVUu7ckvb8g&oh=00_AfsNr8GSh9yjGVsXObKu_lr515XBb0eza0QW28zaSiLECg&oe=698444AE',
+    image: getImageUrl('roml-life-post-2026-x15-price_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-post-2026-x15-price_01.jpg'),
       getImageUrl('roml-life-post-2026-x15-price_02.jpg'),
@@ -425,8 +421,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['特色商品介紹', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/516280273_18281681974250820_5220020617825884959_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=MzY3MDcxMDI0NTA3MDE4NDk2NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=c2mhuEYihqcQ7kNvwH2wWCG&_nc_oc=AdkQvCMU4B5zZrXT_xpMAi6-3Miofd_wa9LsRhWwDVoCK5EnJV6Pt-DxdsutGS1qYvo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=TKi8YoEFxZDVxwa2KGXoVQ&oh=00_AfsXS4HkH3fVja7SxrH1kIDNQZ8C8j9CQEolBi3MZbaRrA&oe=69841FE7',
+    image: getImageUrl('roml-life-post-2025-shoei-z8-price_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-post-2025-shoei-z8-price_01.jpg'),
       getImageUrl('roml-life-post-2025-shoei-z8-price_02.jpg'),
@@ -451,12 +446,11 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
     techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/603885226_18302704657250820_6770991902417855223_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mzc5NDM5Njg2MTg0NDA3MzY0OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=eX9CPkWij3UQ7kNvwEHFvpb&_nc_oc=AdmxXbB2VOJFLXBVUDGZIV_PLscIFTYvaDBHCVhUQDfZ0hW0ifZApFS0wD7fyJo711U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=CtSKdeAxiico3w9Bdv7eog&oh=00_AfvctsNWj6YsnAuIj-4bjtnAnixQ7Ha940x6BtZs4CeGHQ&oe=69840C38',
+    image: getImageUrl('roml-life-post-Marquez9-pre-order_main.jpg'),
     dataScreenshots: [
-      getImageUrl('roml-life-post-marquez9-pre-order_01.jpg'),
-      getImageUrl('roml-life-post-marquez9-pre-order_02.jpg'),
-      getImageUrl('roml-life-post-marquez9-pre-order_03.jpg'),
+      getImageUrl('roml-life-post-Marquez9-pre-order_01.jpg'),
+      getImageUrl('roml-life-post-Marquez9-pre-order_02.jpg'),
+      getImageUrl('roml-life-post-Marquez9-pre-order_03.jpg'),
     ],
     link: '/works/roml-life-post-Marquez9-pre-order',
     websiteLink: 'https://www.instagram.com/reel/DSoZ9mSEomO/',
@@ -477,8 +471,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['特色商品介紹', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/518717728_18282306091250820_2465015438347671627_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzY3NTA1MjY5MjM0ODcxODY0Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MjU2MC5zZHIuQzMifQ%3D%3D&_nc_ohc=TPr1XQKKgSEQ7kNvwEUS6qB&_nc_oc=Adm89rryYqozNnASAQ4EthAiDuxA931W1vQiRhNa80zdwSTu-DgoOWhDinGbFXVMgug&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=vF57erJIPjBo8B1YBO-ZKg&oh=00_AfsWb0crYqnJrtCBmgO5ZH-84MWs68_d-QDOX5jg9Op2Eg&oe=69841F7D',
+    image: getImageUrl('roml-life-reels-damper_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-reels-damper_01.jpg'),
       getImageUrl('roml-life-reels-damper_02.jpg'),
@@ -503,8 +496,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['特色商品介紹', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/503580395_1075097591384279_8109923717898699051_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=MzY2MDcxMzAyNTc4MDMzODAzMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=7NZmtkHe9GcQ7kNvwGi3nkd&_nc_oc=Adl-E1RnVUS1ueqttmkhVSBeDMGd0wW48iGyvWcXZ75xJtO_D2FMIyDp2cBRXWZ7MM8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=T1_McBK8rIQOIa3IL8aDvQ&oh=00_AfvjL3PBKE-k-bkgS-iJENTVHQ82yT2HSVN8l9w0lABiJQ&oe=698426A2',
+    image: getImageUrl('roml-life-reels-elevate_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-reels-elevate_01.jpg'),
       getImageUrl('roml-life-reels-elevate_02.jpg'),
@@ -529,7 +521,7 @@ export const portfolios: Portfolio[] = [
     features: ['日本資訊分享', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
     image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/523968381_18283777156250820_7474935429761357768_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=MzY4NTE5MjIzOTg2Njc3NzQ4MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MjU2MC5zZHIuQzIifQ%3D%3D&_nc_ohc=-9BMdw7DXLMQ7kNvwFf5VVh&_nc_oc=Adl9f3c3-j_WFBX2SIHv4BTBnjH2UpnK3P-WVb0UqJV9iEYbSmroqAFOq7lmP8EMXNc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=XePawuj2iVnAT57Yl3rGmQ&oh=00_Afu6_z6-JywsW_X-C1x1V0uR8BRKklsYtT9ztEqhBoDV5g&oe=69842037',
+      getImageUrl('roml-life-reels-bike-parking_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-reels-bike-parking_01.jpg'),
       getImageUrl('roml-life-reels-bike-parking_02.jpg'),
