@@ -116,7 +116,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'freelance',
     title: 'Zeona Studio 官方網站',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '一站式數位服務平台',
     description: `Zeona 提供一站式數位服務，涵蓋品牌建立、網站開發與數位行銷。從 0 到 1，我提供多種量身定制的方案，滿足顧客需求。無論是初創品牌還是成熟企業，我都能協助您在數位世界中建立強大的品牌形象。`,
     features: [
@@ -520,8 +520,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['日本資訊分享', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      getImageUrl('roml-life-reels-bike-parking_main.jpg'),
+    image: getImageUrl('roml-life-reels-bike-parking_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-reels-bike-parking_01.jpg'),
       getImageUrl('roml-life-reels-bike-parking_02.jpg'),
@@ -546,7 +545,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'corporate-signing-web',
     title: '企業簽單形象官網',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '電子乘車券服務入口',
     description: `解決企業對員工交通差旅的管理需求，並提供成員電子乘車券服務。透過形象官網，讓企業用戶了解數位簽單之服務。`,
     features: [
@@ -577,7 +576,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'qrcode-scan-call',
     title: 'QR Code 掃碼叫車服務',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '無 App 乘客的快速叫車方案',
     description: `佈署於車站、餐廳與商辦入口，為未下載叫車 App 的乘客提供掃碼即用的服務。提供多套 ColorStyle.css 供不同企業選擇，並進行 A/B 測試比較傳統風格與現代風格的使用者反饋。`,
     features: [
@@ -614,7 +613,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'one-id-login',
     title: 'One ID 統一登入系統',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '集團共享帳號驗證中心',
     description: `新一代會員系統「OneID」，為集團提供統一的註冊、登入、授權與驗證入口。透過共享帳號機制，整合集團內各項服務的登入介面與驗證流程。`,
     features: [
@@ -633,7 +632,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'jieyijia-webview',
     title: '潔衣家 Webview 手機版',
-    category: '文宣設計',
+    category: '視覺設計',
     shortDesc: '55688 App 生活密碼購物優化',
     description: `針對潔衣家官方網站進行行動裝置優化，讓 55688 APP 使用者能流暢購買洗衣服務。從流程規劃、畫面設計到前端切版與後端串接皆一手包辦，大幅提升購物體驗。`,
     features: [
@@ -651,4 +650,4 @@ export const portfolios: Portfolio[] = [
   },
 ]
 
-export const categories = ['全部', '網站架設', '行銷營運', '文宣設計']
+export const categories = ['全部', '網站架設', '行銷營運', '視覺設計']
