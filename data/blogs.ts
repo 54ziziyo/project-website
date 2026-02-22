@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['ChatGPT', 'AI 寫作', '內容行銷', '品牌文案'],
     excerpt:
       '學會正確使用 ChatGPT 撰寫品牌文案與部落格文章。掌握 Prompt 技巧、內容校驗流程，讓 AI 成為你的最佳寫作夥伴。',
-    coverImage: 'https://images.unsplash.com/photo-1684163761883-8a2a tried-and-true?w=800&h=450&fit=crop',
+    coverImage: 'https://media.cnn.com/api/v1/images/stellar/prod/231130081802-chatgpt-logo.jpg',
     author: 'Zeona Studio',
     publishedAt: '2026-02-12',
     updatedAt: '2026-02-12',
@@ -150,7 +150,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['AI 繪圖', 'Midjourney', 'DALL-E', '品牌設計', '視覺設計'],
     excerpt:
       '深入了解如何運用 Midjourney、DALL-E 等 AI 圖片生成工具，加速品牌視覺設計流程，從概念發想到最終成品的完整工作流。',
-    coverImage: 'https://images.unsplash.com/photo-1686191128892-3b37add4c844?w=800&h=450&fit=crop',
+    coverImage: 'https://cdn.prod.website-files.com/6705f4b15aee7ca914fff083/68fa58711d5c332f19c29f63_image%20(1).png',
     author: 'Zeona Studio',
     publishedAt: '2026-02-05',
     updatedAt: '2026-02-05',
