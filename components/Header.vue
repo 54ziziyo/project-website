@@ -129,6 +129,10 @@ const showMenu = ref(false)
           <NavigationMenuItem>
             <NavigationMenuLink href="/works" :class="navigationMenuTriggerStyle()"> 作品集 </NavigationMenuLink>
           </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink href="/blog" :class="navigationMenuTriggerStyle()"> 部落格 </NavigationMenuLink>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 

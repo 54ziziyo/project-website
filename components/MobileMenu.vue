@@ -34,7 +34,8 @@ const navItems = [
   },
   { title: 'FAQ', href: '/faq', sub: '常見問題', no: '04' },
   { title: 'Works', href: '/works', sub: '作品集', no: '05' },
-  { title: 'Contact', href: '/contact', sub: '聯繫我', no: '06' },
+  { title: 'Blog', href: '/blog', sub: '部落格', no: '06' },
+  { title: 'Contact', href: '/contact', sub: '聯繫我', no: '07' },
 ]
 
 function toggleExpand(index: number) {
