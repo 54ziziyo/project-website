@@ -166,8 +166,6 @@ onMounted(() => {
               {{ currentPost.category }}
             </NuxtLink>
             <span class="text-gray-400 text-sm">{{ formatDate(currentPost.publishedAt) }}</span>
-            <span class="text-gray-300">·</span>
-            <span class="text-gray-400 text-sm">{{ currentPost.readingTime }} 分鐘閱讀</span>
           </div>
 
           <!-- 標題 -->
@@ -192,7 +190,7 @@ onMounted(() => {
           </div>
 
           <!-- 作者資訊 -->
-          <div class="flex items-center gap-3 pb-8 border-b border-gray-100">
+          <!-- <div class="flex items-center gap-3 pb-8 border-b border-gray-100">
             <div class="w-10 h-10 rounded-full bg-[#8782FF]/20 flex items-center justify-center">
               <span class="text-[#8782FF] font-bold text-sm">Z</span>
             </div>
@@ -200,7 +198,7 @@ onMounted(() => {
               <p class="font-semibold text-gray-900 text-sm">{{ currentPost.author }}</p>
               <p class="text-gray-400 text-xs">品牌數位轉型專家</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -281,8 +279,6 @@ onMounted(() => {
             <div class="p-6">
               <div class="flex items-center gap-3 text-xs text-gray-400 mb-3">
                 <span>{{ formatDate(post.publishedAt) }}</span>
-                <span>·</span>
-                <span>{{ post.readingTime }} 分鐘閱讀</span>
               </div>
               <h3
                 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#8782FF] transition-colors"

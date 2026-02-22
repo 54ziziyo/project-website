@@ -204,7 +204,7 @@ function toggleExpand(index: number) {
   display: none; /* Chrome, Safari */
 }
 
-/* 💡 修正 2：妳最愛的動態模糊與漸層 */
+/* 💡 修正 2：你最愛的動態模糊與漸層 */
 .blur-fade-enter-active,
 .blur-fade-leave-active {
   transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);

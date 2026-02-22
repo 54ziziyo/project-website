@@ -195,7 +195,7 @@ const allFaqs: Record<Category, Faq[]> = {
     },
     {
       value: 'design-copyright-liability',
-      title: '我可以提供網路找的照片請妳放在設計裡嗎？',
+      title: '我可以提供網路找的照片請你放在設計裡嗎？',
       content: `
         可以，但<span class="font-bold">客戶需自行確保所提供素材（照片、字體、Logo）已獲得商用授權。</span><br/><br/>
         若因客戶提供之素材產生版權糾紛，相關法律責任由客戶端全額承擔。若需代為購買商用圖庫，費用將另行報價。
