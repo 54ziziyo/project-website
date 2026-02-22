@@ -46,7 +46,7 @@ onBeforeUnmount(() => {
       <img src="../assets/images/round-purple.svg" alt="circle pattern" class="max-w-none" width="1500" height="1500" />
     </div>
 
-    <div class="relative px-8 md:px-[6.875rem] pb-30">
+    <div class="relative px-8 pb-30 max-w-6xl mx-auto">
       <div
         ref="headerRef"
         class="text-center transition-all duration-700"

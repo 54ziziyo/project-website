@@ -30,7 +30,7 @@ onMounted(() => {
       <img src="../assets/images/round-purple.svg" alt="circle pattern" class="max-w-none" width="1500" height="1500" />
     </div>
 
-    <div class="relative z-10 px-8 md:px-[6.875rem]">
+    <div class="relative z-10 px-8 md:px-[6.875rem] max-w-6xl mx-auto">
       <div 
         class="flex justify-center flex-col items-center mb-16 md:mb-24 transition-all duration-1000 transform"
         :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"

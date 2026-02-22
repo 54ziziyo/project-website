@@ -198,7 +198,7 @@ onBeforeUnmount(() => {
       class="flex justify-center items-center py-40 px-10 transition-all duration-700"
       :class="visibleSections.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
     >
-      <div class="max-w-4xl text-center">
+      <div class="max-w-6xl text-center">
         <h2 class="text-[24px] md:text-[32px] font-bold mb-4">想了解更多嗎？讓我聊聊吧！</h2>
         <p class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-12">
           無論你是新創品牌還是小型企業，我都能提供量身打造的解決方案

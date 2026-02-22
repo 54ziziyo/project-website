@@ -57,7 +57,7 @@ const servicesPrice = [
       <div class="w-12 h-1 bg-[#8782FF] mx-auto mt-6 rounded-full"></div>
     </div>
 
-    <div class="max-w-5xl mx-auto relative z-10">
+    <div class="max-w-6xl mx-auto relative z-10">
       <div class="grid gap-6">
         <div
           v-for="(service, index) in servicesPrice"
@@ -76,7 +76,7 @@ const servicesPrice = [
                 {{ service.title }}
                 <span class="ml-3 h-[1px] w-0 group-hover:w-8 bg-[#8782FF] transition-all duration-500"></span>
               </div>
-              <p class="text-[15px] font-semibold mb-2 opacity-90">
+              <p class="text-[15px] font-semibold mb-2">
                 {{ service.highlight }}
               </p>
               <p class="text-sm text-gray-400 leading-relaxed max-w-2xl group-hover:text-gray-600 transition-colors">

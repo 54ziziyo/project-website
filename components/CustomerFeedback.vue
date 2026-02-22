@@ -92,7 +92,7 @@ const testimonials = [
 <template>
   <div ref="sectionRef" class="w-full">
     <section class="gradient-p-to-y-bg py-24 px-4">
-      <div class="max-w-5xl mx-auto">
+      <div class="max-w-6xl mx-auto">
         <div class="text-center mb-6">
           <div
             class="inline-block border px-4 py-1 rounded-full text-sm transition-all duration-1000 transform"
@@ -174,7 +174,7 @@ const testimonials = [
 
       <div class="pt-24 px-4 border-t md:border-none">
         <div
-          class="max-w-4xl mx-auto text-center transition-all duration-1000 transform"
+          class="max-w-6xl mx-auto text-center transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
           <h1

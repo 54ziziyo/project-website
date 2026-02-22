@@ -116,23 +116,28 @@ const advancedAddons = [
 </script>
 <template>
   <div class="relative px-4 flex justify-center flex-col items-center text-center">
-    <div class="md:px-20 w-full mb-32 space-y-32 lg:pb-40 lg:space-y-40">
-      
+    <div class="max-w-6xl mx-auto w-full px-6 md:px-12 mb-32 space-y-32 lg:pb-40 lg:space-y-40">
       <div>
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">基礎加購項目</div>
         <div class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-10">針對客製化方案</div>
-        
+
         <div class="overflow-x-auto shadow-md rounded-md border">
           <table class="w-full min-w-[600px]">
             <thead class="border-b bg-[#F1F0FF]">
               <tr>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                <th
+                  class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap"
+                >
                   加購項目
                 </th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                <th
+                  class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap"
+                >
                   說明
                 </th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                <th
+                  class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap"
+                >
                   價格 (實際價格以評估後的報價為主)
                 </th>
               </tr>
@@ -161,10 +166,26 @@ const advancedAddons = [
           <table class="w-full min-w-[800px]">
             <thead class="border-b bg-[#F1F0FF]">
               <tr>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">加購項目</th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">說明</th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">價格</th>
-                <th class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap">搭配方案</th>
+                <th
+                  class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap"
+                >
+                  加購項目
+                </th>
+                <th
+                  class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap"
+                >
+                  說明
+                </th>
+                <th
+                  class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap"
+                >
+                  價格
+                </th>
+                <th
+                  class="px-6 py-4 text-center text-xs font-medium text-gray-700 uppercase tracking-wider whitespace-nowrap"
+                >
+                  搭配方案
+                </th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200">
@@ -178,7 +199,6 @@ const advancedAddons = [
           </table>
         </div>
       </div>
-
     </div>
   </div>
 </template>

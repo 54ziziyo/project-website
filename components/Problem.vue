@@ -73,7 +73,7 @@ onMounted(() => {
         <div class="w-16 h-1.5 bg-gradient-to-r from-[#8782FF] via-[#ff333d] to-[#ffe3a8] mx-auto rounded-full" />
       </div>
 
-      <div class="w-full max-w-4xl space-y-10">
+      <div class="w-full max-w-6xl space-y-10">
         <div
           v-for="(item, index) in problemPoints"
           :key="index"
