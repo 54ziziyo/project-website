@@ -23,6 +23,10 @@
           <NuxtLink to="/services/marketing" class="hover:text-[#8782FF] transition">行銷推廣</NuxtLink>
           <NuxtLink to="/services/design" class="hover:text-[#8782FF] transition">視覺設計</NuxtLink>
         </div>
+        <div class="space-y-2 flex flex-col items-start">
+          <NuxtLink to="/services/all" class="hover:text-[#8782FF] transition">整合服務</NuxtLink>
+          <NuxtLink to="/blog" class="hover:text-[#8782FF] transition">部落格</NuxtLink>
+        </div>
       </div>
       <div class="space-y-2 flex flex-col">
         <div class="flex space-x-2">

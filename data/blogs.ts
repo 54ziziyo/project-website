@@ -867,6 +867,11 @@ export function getRecommendedPosts(currentId: string, limit = 3): BlogPost[] {
   return [...sameCategoryPosts, ...otherPosts].slice(0, limit)
 }
 
+// 依標籤取得文章
+export function getPostsByTag(tag: string): BlogPost[] {
+  return blogPosts.filter((post) => post.tags.includes(tag))
+}
+
 // 搜尋文章
 export function searchPosts(keyword: string): BlogPost[] {
   const lowerKeyword = keyword.toLowerCase()

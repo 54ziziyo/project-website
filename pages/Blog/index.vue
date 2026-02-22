@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { blogPosts, blogCategories, getPostsByCategory, searchPosts, allTags, type BlogPost } from '~/data/blogs'
+import {
+  blogPosts,
+  blogCategories,
+  getPostsByCategory,
+  getPostsByTag,
+  searchPosts,
+  allTags,
+  type BlogPost,
+} from '~/data/blogs'
 
 const route = useRoute()
 const router = useRouter()
@@ -40,18 +48,68 @@ const selectedCategory = ref(
     ? route.query.category
     : '全部',
 )
+const selectedTag = ref((route.query.tag as string) || '')
 const currentPage = ref(Number(route.query.page) || 1)
 const postsPerPage = 6
 
+// 可捲動分類標籤
+const tabScrollerRef = ref<HTMLElement | null>(null)
+const mobileTabScrollerRef = ref<HTMLElement | null>(null)
+const canScrollLeft = ref(false)
+const canScrollRight = ref(false)
+const mobileCanScrollLeft = ref(false)
+const mobileCanScrollRight = ref(false)
+
+const checkScrollState = (el: HTMLElement | null, setLeft: (v: boolean) => void, setRight: (v: boolean) => void) => {
+  if (!el) return
+  setLeft(el.scrollLeft > 2)
+  setRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 2)
+}
+
+const updateDesktopScroll = () => {
+  checkScrollState(
+    tabScrollerRef.value,
+    (v) => (canScrollLeft.value = v),
+    (v) => (canScrollRight.value = v),
+  )
+}
+
+const updateMobileScroll = () => {
+  checkScrollState(
+    mobileTabScrollerRef.value,
+    (v) => (mobileCanScrollLeft.value = v),
+    (v) => (mobileCanScrollRight.value = v),
+  )
+}
+
+const scrollTabs = (direction: 'left' | 'right', el: HTMLElement | null) => {
+  if (!el) return
+  const amount = 160
+  el.scrollBy({ left: direction === 'left' ? -amount : amount, behavior: 'smooth' })
+}
+
+const scrollDesktop = (direction: 'left' | 'right') => {
+  scrollTabs(direction, tabScrollerRef.value)
+}
+
+const scrollMobile = (direction: 'left' | 'right') => {
+  scrollTabs(direction, mobileTabScrollerRef.value)
+}
+
+// 所有分類標籤（含全部 + 標籤）
+const allCategoryTabs = computed(() => {
+  return [...blogCategories, ...allTags] as string[]
+})
+
 // 篩選邏輯
 const filteredPosts = computed<BlogPost[]>(() => {
-  let result: BlogPost[]
   if (searchQuery.value.trim()) {
-    result = searchPosts(searchQuery.value.trim())
-  } else {
-    result = getPostsByCategory(selectedCategory.value)
+    return searchPosts(searchQuery.value.trim())
   }
-  return result
+  if (selectedTag.value) {
+    return getPostsByTag(selectedTag.value)
+  }
+  return getPostsByCategory(selectedCategory.value)
 })
 
 // 分頁
@@ -73,17 +131,57 @@ const recommendedTopics = computed(() => {
   return blogCategories.filter((c) => c !== '全部')
 })
 
+// 當前選中的標籤文字（用於判斷高亮）
+const activeTab = computed(() => {
+  if (searchQuery.value.trim()) return ''
+  if (selectedTag.value) return selectedTag.value
+  return selectedCategory.value
+})
+
+// 篩選結果描述
+const filterDescription = computed(() => {
+  if (searchQuery.value.trim()) return ''
+  if (selectedTag.value) return selectedTag.value
+  if (selectedCategory.value !== '全部') return selectedCategory.value
+  return ''
+})
+
 // URL 同步
 const updateQuery = () => {
   const query: Record<string, string> = {}
   if (searchQuery.value.trim()) query.q = searchQuery.value.trim()
-  if (selectedCategory.value !== '全部') query.category = selectedCategory.value
+  if (selectedCategory.value !== '全部' && !selectedTag.value) query.category = selectedCategory.value
+  if (selectedTag.value) query.tag = selectedTag.value
   if (currentPage.value > 1) query.page = String(currentPage.value)
   router.replace({ query })
 }
 
+const selectTab = (tab: string) => {
+  searchQuery.value = ''
+  currentPage.value = 1
+  // 判斷是分類還是標籤
+  const isCat = (blogCategories as readonly string[]).includes(tab)
+  if (isCat) {
+    selectedCategory.value = tab
+    selectedTag.value = ''
+  } else {
+    selectedTag.value = tab
+    selectedCategory.value = '全部'
+  }
+  updateQuery()
+}
+
 const setCategory = (category: string) => {
   selectedCategory.value = category
+  selectedTag.value = ''
+  searchQuery.value = ''
+  currentPage.value = 1
+  updateQuery()
+}
+
+const setTag = (tag: string) => {
+  selectedTag.value = tag
+  selectedCategory.value = '全部'
   searchQuery.value = ''
   currentPage.value = 1
   updateQuery()
@@ -93,6 +191,7 @@ const handleSearch = () => {
   currentPage.value = 1
   if (searchQuery.value.trim()) {
     selectedCategory.value = '全部'
+    selectedTag.value = ''
   }
   updateQuery()
 }
@@ -100,6 +199,13 @@ const handleSearch = () => {
 const clearSearch = () => {
   searchQuery.value = ''
   handleSearch()
+}
+
+const clearTagFilter = () => {
+  selectedTag.value = ''
+  selectedCategory.value = '全部'
+  currentPage.value = 1
+  updateQuery()
 }
 
 const goToPage = (page: number) => {
@@ -115,11 +221,17 @@ const formatDate = (dateStr: string) => {
   return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`
 }
 
-// 動畫
+// 動畫 & 捲動偵測
 onMounted(() => {
   setTimeout(() => {
     isVisible.value = true
   }, 100)
+
+  // 初始化捲動狀態
+  nextTick(() => {
+    updateDesktopScroll()
+    updateMobileScroll()
+  })
 
   watch(
     paginatedPosts,
@@ -141,24 +253,23 @@ onMounted(() => {
 <template>
   <div class="w-full pt-28 md:pt-32 pb-20 font-sans bg-white">
     <!-- Hero Section -->
-    <div class="px-6 md:px-12 mb-8 md:mb-10">
+    <div class="px-6 md:px-12 mb-8 md:mb-16">
       <div class="max-w-6xl mx-auto text-center">
         <h1
-          class="font-bold leading-none mb-4 text-center flex flex-col gap-2"
-          style="font-size: clamp(28px, 5vw, 48px)"
+          class="font-bold leading-none mb-4 text-center flex justify-center"
+          style="font-size: clamp(20px, 4vw, 36px)"
           :class="[
             'transition-all duration-1000 transform',
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
           ]"
         >
-          <span class="text-[#6f6bff]">數位知識</span>
-          <span>部落格</span>
+          <span class="text-[#6f6bff]">數位知識</span><span>部落格</span>
         </h1>
         <p
           class="text-[#5B5B5B] text-sm md:text-lg max-w-2xl mx-auto transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          從 AI 技術、行銷策略到網站開發，Zeona Studio 為你帶來最實用的數位知識與趨勢洞察。
+          從 AI 技術、行銷策略到網站開發，為你帶來最實用的數位知識與趨勢洞察
         </p>
       </div>
     </div>
@@ -168,10 +279,9 @@ onMounted(() => {
       <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
         <!-- ========== 左側文章列表 ========== -->
         <div class="flex-1 min-w-0">
-          <!-- 分類標籤列（僅行動版顯示） -->
-          <div class="lg:hidden mb-8">
-            <!-- 行動版搜尋 -->
-            <div class="relative mb-4">
+          <!-- 行動版搜尋（僅行動版顯示） -->
+          <div class="lg:hidden mb-4">
+            <div class="relative">
               <input
                 v-model="searchQuery"
                 type="text"
@@ -202,19 +312,112 @@ onMounted(() => {
                 </svg>
               </button>
             </div>
-            <div class="flex flex-wrap gap-2">
+          </div>
+
+          <!-- ===== 可捲動分類標籤（行動版） ===== -->
+          <div class="lg:hidden relative mb-8">
+            <!-- 左遮罩 + 箭頭 -->
+            <div
+              v-show="mobileCanScrollLeft"
+              class="absolute left-0 top-0 bottom-0 z-10 flex items-center pointer-events-none"
+            >
+              <div class="h-full w-12 bg-gradient-to-r from-white to-transparent"></div>
               <button
-                v-for="category in blogCategories"
-                :key="category"
-                :class="[
-                  'px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300',
-                  selectedCategory === category && !searchQuery.trim()
-                    ? 'bg-[#8782FF] text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200',
-                ]"
-                @click="setCategory(category)"
+                class="absolute left-0 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
+                @click="scrollMobile('left')"
               >
-                {{ category }}
+                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+            </div>
+            <!-- 標籤捲動容器 -->
+            <div
+              ref="mobileTabScrollerRef"
+              class="flex gap-2 overflow-x-auto scrollbar-hide scroll-smooth px-1 py-1"
+              @scroll="updateMobileScroll"
+            >
+              <button
+                v-for="tab in allCategoryTabs"
+                :key="tab"
+                :class="[
+                  'flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap',
+                  activeTab === tab ? 'bg-[#8782FF] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200',
+                ]"
+                @click="selectTab(tab)"
+              >
+                {{ tab }}
+              </button>
+            </div>
+            <!-- 右遮罩 + 箭頭 -->
+            <div
+              v-show="mobileCanScrollRight"
+              class="absolute right-0 top-0 bottom-0 z-10 flex items-center pointer-events-none"
+            >
+              <div class="h-full w-12 bg-gradient-to-l from-white to-transparent"></div>
+              <button
+                class="absolute right-0 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
+                @click="scrollMobile('right')"
+              >
+                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- ===== 可捲動分類標籤（桌面版） ===== -->
+          <div class="hidden lg:block relative mb-8 border-b border-gray-200 pb-4">
+            <!-- 左遮罩 + 箭頭 -->
+            <div
+              v-show="canScrollLeft"
+              class="absolute left-0 top-0 bottom-0 z-10 flex items-center pointer-events-none"
+              style="bottom: 16px"
+            >
+              <div class="h-full w-14 bg-gradient-to-r from-white to-transparent"></div>
+              <button
+                class="absolute left-0 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors border border-gray-100"
+                @click="scrollDesktop('left')"
+              >
+                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+            </div>
+            <!-- 標籤捲動容器 -->
+            <div
+              ref="tabScrollerRef"
+              class="flex gap-1 overflow-x-auto scrollbar-hide scroll-smooth py-1"
+              @scroll="updateDesktopScroll"
+            >
+              <button
+                v-for="tab in allCategoryTabs"
+                :key="tab"
+                :class="[
+                  'flex-shrink-0 px-4 py-1.5 text-sm font-medium transition-all duration-300 rounded-full whitespace-nowrap',
+                  activeTab === tab
+                    ? 'text-[#8782FF] bg-[#8782FF]/10 font-semibold'
+                    : 'text-gray-500 hover:text-gray-800 hover:bg-gray-100',
+                ]"
+                @click="selectTab(tab)"
+              >
+                {{ tab }}
+              </button>
+            </div>
+            <!-- 右遮罩 + 箭頭 -->
+            <div
+              v-show="canScrollRight"
+              class="absolute right-0 top-0 bottom-0 z-10 flex items-center pointer-events-none"
+              style="bottom: 16px"
+            >
+              <div class="h-full w-14 bg-gradient-to-l from-white to-transparent"></div>
+              <button
+                class="absolute right-0 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors border border-gray-100"
+                @click="scrollDesktop('right')"
+              >
+                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
               </button>
             </div>
           </div>
@@ -227,20 +430,17 @@ onMounted(() => {
             </p>
           </div>
 
-          <!-- 分類標籤列（桌面版在左側頂部） -->
-          <div class="hidden lg:flex items-center gap-1 mb-8 border-b border-gray-200 pb-4">
+          <!-- 標籤 / 分類篩選提示 -->
+          <div v-if="filterDescription && !searchQuery.trim()" class="mb-6 flex items-center gap-2">
+            <p class="text-gray-500 text-sm">
+              目前篩選：<span class="text-[#8782FF] font-semibold">{{ filterDescription }}</span>
+              <span class="text-gray-400">（{{ filteredPosts.length }} 篇文章）</span>
+            </p>
             <button
-              v-for="category in blogCategories"
-              :key="category"
-              :class="[
-                'px-4 py-1.5 text-sm font-medium transition-all duration-300 rounded-full',
-                selectedCategory === category && !searchQuery.trim()
-                  ? 'text-[#8782FF] bg-[#8782FF]/10 font-semibold'
-                  : 'text-gray-500 hover:text-gray-800 hover:bg-gray-100',
-              ]"
-              @click="setCategory(category)"
+              class="text-xs text-gray-400 hover:text-[#8782FF] underline underline-offset-2 transition-colors"
+              @click="clearTagFilter"
             >
-              {{ category }}
+              清除篩選
             </button>
           </div>
 
@@ -449,7 +649,7 @@ onMounted(() => {
                   :key="topic"
                   :class="[
                     'px-4 py-2 rounded-full text-sm transition-all duration-300',
-                    selectedCategory === topic && !searchQuery.trim()
+                    selectedCategory === topic && !selectedTag && !searchQuery.trim()
                       ? 'bg-[#8782FF] text-white font-semibold'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-medium',
                   ]"
@@ -460,20 +660,26 @@ onMounted(() => {
               </div>
             </div>
 
-            <!-- 常用標籤 -->
+            <!-- 熱門標籤 -->
             <div>
               <h3 class="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <span class="w-1 h-5 bg-[#8782FF] rounded-full"></span>
                 熱門標籤
               </h3>
               <div class="flex flex-wrap gap-2">
-                <span
+                <button
                   v-for="tag in allTags.slice(0, 10)"
                   :key="tag"
-                  class="px-3 py-1.5 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100 hover:border-[#8782FF] hover:text-[#8782FF] transition-all cursor-pointer"
+                  :class="[
+                    'px-3 py-1.5 text-xs rounded-full border transition-all cursor-pointer',
+                    selectedTag === tag
+                      ? 'bg-[#8782FF] text-white border-[#8782FF] font-semibold'
+                      : 'bg-gray-50 text-gray-500 border-gray-100 hover:border-[#8782FF] hover:text-[#8782FF]',
+                  ]"
+                  @click="setTag(tag)"
                 >
                   {{ tag }}
-                </span>
+                </button>
               </div>
             </div>
           </div>
@@ -511,3 +717,14 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+/* 隱藏捲軸 */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+</style>
