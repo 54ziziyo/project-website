@@ -224,10 +224,14 @@ const formatDate = (dateStr: string) => {
 }
 
 // 相對時間（「X 天前」）
+// 將日期字串解析為當地日期（避免 UTC 午夜造成的時區偏移問題）
 const formatRelativeTime = (dateStr: string) => {
-  const diff = Date.now() - new Date(dateStr).getTime()
-  const days = Math.floor(diff / 86400000)
-  if (days === 0) return '今天'
+  const [year, month, day] = dateStr.split('T')[0].split('-').map(Number)
+  const now = new Date()
+  const nowDate = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  const pubDate = new Date(year, month - 1, day)
+  const days = Math.round((nowDate.getTime() - pubDate.getTime()) / 86400000)
+  if (days <= 0) return '今天'
   if (days < 7) return `${days} 天前`
   if (days < 30) return `${Math.floor(days / 7)} 週前`
   if (days < 365) return `${Math.floor(days / 30)} 個月前`
