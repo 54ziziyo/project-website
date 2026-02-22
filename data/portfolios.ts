@@ -228,8 +228,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['特色商品介紹', '第三方工具自動回覆', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['ManyChat ', 'CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/600209016_1118381913568907_5962086777417431337_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzc4ODE0MjIxNTQ3NTM2NDg2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=mheowQAh8hUQ7kNvwG24BZI&_nc_oc=Adm5yEZqvxLN5ljNn9LvTHnFD-9-j5tElvQZV8r5ijHPj4xKmscFv5y4lqCP0ButsY8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=goNAzWbKRzStcd52kr1_cA&oh=00_AfujMQHQbtZXGxL0VUaN2kEjJo_RP7DUT5PBRLlpLWM1pA&oe=6999F776',
+    image: getImageUrl('roml-life-reels-arai-neko_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-reels-arai-neko_01.jpg'),
       getImageUrl('roml-life-reels-arai-neko_02.jpg'),
@@ -258,8 +257,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['特色商品介紹', '第三方工具自動回覆', '數據導向腳本', '後台數據追蹤分析'],
     techStack: ['BotBonnie ', 'CapCut', 'Strategy Planning', 'Instagram Edits'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.71878-15/615891746_872182862329933_2923751492766694805_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=110&ig_cache_key=MzgwOTE5NjU4MDM0MzQ4NTg0MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=X3jiYFHFvuEQ7kNvwGBCp1S&_nc_oc=AdlSYhLMU8E9OsrS8_qPzEpr0v4ErTeqtZJFjoOTKwvP-U1SuyMqCHxUmH3HgKGcB2M&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=u0um_7ZhwyXQ87FUg11bDw&oh=00_AfvZmadbcnpEpT9HLXquQ0qtSSQcAAkAqCGfva319gz9fg&oe=6999D6C3',
+    image: getImageUrl('roml-life-reels-electronic-dimming_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-reels-electronic-dimming_01.jpg'),
       getImageUrl('roml-life-reels-electronic-dimming_02.jpg'),
@@ -284,8 +282,7 @@ export const portfolios: Portfolio[] = [
     `,
     features: ['最新消息', '新聞洞察', '後台數據追蹤分析'],
     techStack: ['Adobe Photoshop', 'Background Removal', 'Instagram'],
-    image:
-      'https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/587787659_18300027937250820_7406361695499187455_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=Mzc3NDg2OTIzODUxMjI1NjMyMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=ynny3kLM9NIQ7kNvwH2DpIr&_nc_oc=AdliSX-EMs5d2prTyXau-qXOp5rYNsrU81ydh3b2GROmSmBmVDvTTEQIZt_r1bamlfI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=3RiTebMkfGZs4xkcvA0v_Q&oh=00_AftyXJWKtCOSejOgouA_UT765BdwlCotByjeqLNeaDXvSA&oe=6999D0CD',
+    image: getImageUrl('roml-life-post-93-white_main.jpg'),
     dataScreenshots: [
       getImageUrl('roml-life-post-93-white_01.jpg'),
       getImageUrl('roml-life-post-93-white_02.jpg'),
