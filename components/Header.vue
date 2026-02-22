@@ -92,7 +92,7 @@ const showMenu = ref(false)
       <NavigationMenu class="md:flex hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/about" :class="navigationMenuTriggerStyle()"> 關於Zeona </NavigationMenuLink>
+            <NavigationMenuLink href="/about" :class="navigationMenuTriggerStyle()"> 關於我 </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
