@@ -96,9 +96,9 @@ const scrollMobile = (direction: 'left' | 'right') => {
   scrollTabs(direction, mobileTabScrollerRef.value)
 }
 
-// 所有分類標籤（含全部 + 標籤）
+// 分類標籤（僅主分類，不含標籤，避免過多）
 const allCategoryTabs = computed(() => {
-  return [...blogCategories, ...allTags] as string[]
+  return [...blogCategories] as string[]
 })
 
 // 篩選邏輯
@@ -219,6 +219,17 @@ const goToPage = (page: number) => {
 const formatDate = (dateStr: string) => {
   const d = new Date(dateStr)
   return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`
+}
+
+// 相對時間（「X 天前」）
+const formatRelativeTime = (dateStr: string) => {
+  const diff = Date.now() - new Date(dateStr).getTime()
+  const days = Math.floor(diff / 86400000)
+  if (days === 0) return '今天'
+  if (days < 7) return `${days} 天前`
+  if (days < 30) return `${Math.floor(days / 7)} 週前`
+  if (days < 365) return `${Math.floor(days / 30)} 個月前`
+  return `${Math.floor(days / 365)} 年前`
 }
 
 // 動畫 & 捲動偵測
@@ -456,14 +467,13 @@ onMounted(() => {
               <div class="flex gap-5 md:gap-8">
                 <!-- 文字內容 -->
                 <div class="flex-1 min-w-0 flex flex-col">
-                  <!-- 作者 & 分類 -->
-                  <div class="flex items-center gap-2 mb-2.5">
-                    <div class="w-6 h-6 rounded-full bg-[#8782FF]/20 flex items-center justify-center flex-shrink-0">
-                      <span class="text-[#8782FF] font-bold text-[10px]">Z</span>
-                    </div>
-                    <span class="text-sm text-gray-700 font-medium">{{ post.author }}</span>
-                    <span class="text-gray-300 text-xs">in</span>
-                    <span class="text-sm text-[#8782FF] font-medium">{{ post.category }}</span>
+                  <!-- 分類 pill -->
+                  <div class="mb-2">
+                    <span
+                      class="inline-block px-2.5 py-0.5 bg-[#8782FF]/10 text-[#8782FF] text-xs font-semibold rounded-full"
+                    >
+                      {{ post.category }}
+                    </span>
                   </div>
 
                   <!-- 標題 -->
@@ -478,18 +488,19 @@ onMounted(() => {
                     {{ post.excerpt }}
                   </p>
 
-                  <!-- 底部資訊 -->
-                  <div class="flex items-center gap-3 mt-auto">
-                    <span class="text-xs text-gray-400">{{ formatDate(post.publishedAt) }}</span>
+                  <!-- 底部資訊：相對時間 + 可點擊標籤 -->
+                  <div class="flex items-center gap-2 mt-auto flex-wrap">
+                    <span class="text-xs text-gray-400">{{ formatRelativeTime(post.publishedAt) }}</span>
                     <span class="text-gray-200">·</span>
-                    <span class="text-xs text-gray-400">{{ post.readingTime }} 分鐘閱讀</span>
-                    <span
-                      v-for="tag in post.tags.slice(0, 1)"
+                    <span class="text-xs text-gray-400">{{ formatDate(post.publishedAt) }}</span>
+                    <button
+                      v-for="tag in post.tags.slice(0, 2)"
                       :key="tag"
-                      class="hidden sm:inline-block ml-1 px-2.5 py-0.5 bg-gray-100 text-gray-500 text-xs rounded-full"
+                      class="hidden sm:inline-block px-2.5 py-0.5 bg-gray-100 text-gray-500 text-xs rounded-full hover:bg-[#8782FF]/10 hover:text-[#8782FF] transition-all"
+                      @click.prevent.stop="setTag(tag)"
                     >
                       {{ tag }}
-                    </span>
+                    </button>
                   </div>
                 </div>
 
