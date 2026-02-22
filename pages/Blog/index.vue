@@ -167,6 +167,7 @@ const selectTab = (tab: string) => {
   } else {
     selectedTag.value = tab
     selectedCategory.value = '全部'
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   updateQuery()
 }
@@ -185,6 +186,7 @@ const setTag = (tag: string) => {
   searchQuery.value = ''
   currentPage.value = 1
   updateQuery()
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 const handleSearch = () => {
@@ -262,13 +264,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full pt-28 md:pt-32 pb-20 font-sans bg-white">
+  <div class="w-full pt-28 md:pt-32 font-sans bg-white">
     <!-- Hero Section -->
     <div class="px-6 md:px-12 mb-8 md:mb-16">
       <div class="max-w-6xl mx-auto text-center">
         <h1
           class="font-bold leading-none mb-4 text-center flex justify-center"
-          style="font-size: clamp(20px, 4vw, 36px)"
+          style="font-size: clamp(24px, 4.5vw, 36px)"
           :class="[
             'transition-all duration-1000 transform',
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
@@ -455,7 +457,7 @@ onMounted(() => {
             </button>
           </div>
 
-          <!-- 文章列表 - Medium 風格 -->
+          <!-- 文章列表 -->
           <div class="divide-y divide-gray-100">
             <NuxtLink
               v-for="(post, index) in paginatedPosts"
@@ -630,18 +632,27 @@ onMounted(() => {
                       {{ String(index + 1).padStart(2, '0') }}
                     </span>
                     <div class="flex-1 min-w-0">
-                      <div class="flex items-center gap-1.5 mb-1">
-                        <div class="w-4 h-4 rounded-full bg-[#8782FF]/20 flex items-center justify-center">
-                          <span class="text-[#8782FF] font-bold text-[7px]">Z</span>
+                      <!-- 標籤 pills + 右側白色遮罩 -->
+                      <div class="relative mb-1.5 overflow-hidden">
+                        <div class="flex gap-1 flex-nowrap">
+                          <span
+                            v-for="tag in post.tags"
+                            :key="tag"
+                            class="flex-shrink-0 inline-block px-2 py-0.5 bg-[#8782FF]/10 text-[#8782FF] text-[10px] font-semibold rounded-full leading-relaxed"
+                          >
+                            {{ tag }}
+                          </span>
                         </div>
-                        <span class="text-xs text-gray-500">{{ post.author }}</span>
+                        <div
+                          class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none"
+                        ></div>
                       </div>
                       <h4
                         class="text-sm font-bold text-gray-900 line-clamp-2 group-hover:text-[#8782FF] transition-colors leading-snug"
                       >
                         {{ post.title }}
                       </h4>
-                      <span class="text-xs text-gray-400 mt-1 block">{{ formatDate(post.publishedAt) }}</span>
+                      <span class="text-xs text-gray-400 mt-1 block">{{ formatRelativeTime(post.publishedAt) }}</span>
                     </div>
                   </div>
                 </NuxtLink>
