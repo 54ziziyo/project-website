@@ -31,7 +31,7 @@ const multiPagePrice = [
     ta: '✅ 適合長期經營內容的中小企業、部落格',
   },
   {
-    title: '電商購物車網站',
+    title: 'WordPress 電商購物車網站',
     highlight: '完整購物功能 + 會員系統 + 金物流串接 + RWD響應式',
     description:
       '包含產品管理、購物車、會員系統、訂單管理、庫存管理、金流物流串接、促銷活動等完整電商功能，含響應式設計（RWD）及後台管理系統。',
@@ -41,9 +41,9 @@ const multiPagePrice = [
   {
     title: '多頁式全客製化網站（含設計）',
     highlight: 'Figma 設計 + 客製開發 + RWD響應式 + 部署',
-    description: '由零開始規劃版型、UI/UX 設計，並轉為 HTML/CSS/JS 程式碼，含響應式設計（RWD），不含後台(後台另報價)。',
-    price: 'NT$200,000元起',
-    ta: '✅ 適合需要高度客製化的企業或品牌，也適合不需後台、要求高彈性的品牌頁面等',
+    description: '由零開始規劃版型、UI/UX 設計，並轉為 HTML/CSS/JS 程式碼，含響應式設計（RWD），含後台。',
+    price: '依需求報價',
+    ta: '✅ 適合需要高度客製化的企業或品牌，也適合需後台、要求高彈性的品牌頁面等',
   },
 ]
 
