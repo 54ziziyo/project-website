@@ -425,7 +425,7 @@ onMounted(() => {
     <div class="mt-20 text-center px-6">
       <p class="text-gray-400 text-sm mb-4">還有其他疑問嗎？</p>
       <NuxtLink
-        to="/Contact"
+        to="/contact"
         class="text-[#8782FF] font-bold border-b-2 border-[#8782FF] pb-1 hover:text-[#6f6bff] hover:border-[#6f6bff] transition-all"
       >
         直接與我連繫談談

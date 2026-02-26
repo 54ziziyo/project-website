@@ -49,7 +49,10 @@
       </div>
 
       <div class="text-center">
-        <NuxtLink to="/Contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#8782FF] text-white shadow-lg hover:shadow-xl transition">
+        <NuxtLink
+          to="/contact"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#8782FF] text-white shadow-lg hover:shadow-xl transition"
+        >
           前往聯繫
         </NuxtLink>
       </div>

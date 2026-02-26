@@ -4,9 +4,7 @@
       <header class="space-y-3 text-center">
         <p class="text-[#8782FF] font-semibold">服務條款</p>
         <h1 class="text-3xl md:text-4xl font-bold text-[#1F2937]">使用本網站與合作前須知</h1>
-        <p class="text-[#4B5563] text-base md:text-lg">
-          請閱讀以下條款，了解使用本網站及與我合作時的基本約定與責任。
-        </p>
+        <p class="text-[#4B5563] text-base md:text-lg">請閱讀以下條款，了解使用本網站及與我合作時的基本約定與責任。</p>
       </header>
 
       <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-md border border-[#E5E7EB] p-6 md:p-10 space-y-8">
@@ -41,17 +39,24 @@
 
         <section class="space-y-3">
           <h2 class="text-xl font-semibold text-[#1F2937]">5. 責任限制</h2>
-          <p class="text-[#4B5563]">對於第三方服務（如主機、網域、金物流等）造成的停機或損失不負責，但會協助排查與溝通。</p>
+          <p class="text-[#4B5563]">
+            對於第三方服務（如主機、網域、金物流等）造成的停機或損失不負責，但會協助排查與溝通。
+          </p>
         </section>
 
         <section class="space-y-3">
           <h2 class="text-xl font-semibold text-[#1F2937]">6. 條款更新</h2>
-          <p class="text-[#4B5563]">條款可能因服務調整而更新，更新後將於本站發布。若有重大變更，會以合適方式通知合作客戶。</p>
+          <p class="text-[#4B5563]">
+            條款可能因服務調整而更新，更新後將於本站發布。若有重大變更，會以合適方式通知合作客戶。
+          </p>
         </section>
       </div>
 
       <div class="text-center">
-        <NuxtLink to="/Contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#8782FF] text-white shadow-lg hover:shadow-xl transition">
+        <NuxtLink
+          to="/contact"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#8782FF] text-white shadow-lg hover:shadow-xl transition"
+        >
           需要更多說明？聯繫我
         </NuxtLink>
       </div>
