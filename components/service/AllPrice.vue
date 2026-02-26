@@ -71,11 +71,11 @@ const terms = [
   <div class="px-6 pt-24 md:pt-32 pb-24 md:px-20 space-y-20 relative overflow-x-clip bg-white">
     <div class="flex flex-col items-center mb-10 space-y-4 z-10">
       <p class="text-[#8782FF] font-bold tracking-widest uppercase">Bundle Packages</p>
-      <h1 class="text-[32px] md:text-[42px] font-bold text-[#2D2D2D] text-center">一條龍整合服務</h1>
+      <h2 class="text-[32px] md:text-[42px] font-bold text-[#2D2D2D] text-center">品牌整合服務</h2>
       <div class="w-12 h-1.5 bg-[#8782FF] rounded-full" />
-      <p class="text-gray-500 text-center max-w-2xl mt-4">
+      <h1 class="text-gray-600 text-[16px] md:text-[20px] text-center md:mb-4">
         針對不同階段的品牌需求，將網站建置與長期行銷深度結合。<br />一次到位，讓您的品牌不僅「上線」，更能「持續成長」。
-      </p>
+      </h1>
     </div>
 
     <div v-for="pkg in projectPackages" :key="pkg.title" class="max-w-7xl mx-auto mb-20">

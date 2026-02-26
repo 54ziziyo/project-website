@@ -61,14 +61,9 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Zeona Studio 提供全客製化網站開發、UI/UX 設計、SEO 優化與數位行銷服務，為品牌打造兼具美學與獲客能力的數位門面。',
+            'Zeona Studio 專注於提供全客製化網頁設計與開發，結合深度 UI/UX 設計思維，為品牌打造兼具美學與高轉換率的數位門面。我們整合專業 SEO 優化與精準數位行銷策略，確保網站不僅視覺吸睛，更能有效提升搜尋排名、創造獲客實力。從品牌形象建立到技術開發，Zeona 提供一站式數位轉型解決方案，助您精準觸及目標受眾，達成業績持續增長的商業目標。',
         },
-        {
-          name: 'keywords',
-          content:
-            '網頁設計公司, 台北網頁開發, 品牌數位轉型, 客製化網站, UI UX設計, SEO行銷策略, 社群媒體經營, 短影音剪輯服務, 數位品牌行銷, 高轉換網站製作, AEO優化, AI搜尋優化',
-        },
-        // AEO / AI 搜尋優化 meta
+        // AEO / AI 搜尋優化 meta (移除過時的 keywords meta tag)
         { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
         { name: 'author', content: 'Zeona Studio' },
         { name: 'publisher', content: 'Zeona Studio' },

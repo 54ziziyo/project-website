@@ -9,7 +9,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Zeona Studio 數位行銷服務：SEO 搜尋引擎優化、社群媒體經營、內容行銷策略、短影音製作。用數據驅動的行銷思維，協助品牌提升線上曝光與轉換率。',
+        'Zeona Studio 專業數位行銷服務：SEO 搜尋引擎優化、社群媒體經營、內容行銷策略、短影音製作。用數據驅動的行銷思維，協助品牌提升線上曝光與轉換率，讓您的品牌被更多目標客群看見。',
     },
     { property: 'og:title', content: '數位行銷服務 | Zeona Studio - SEO、社群經營專家' },
     { property: 'og:description', content: '數據驅動的行銷策略，讓您的品牌被更多人看見。' },

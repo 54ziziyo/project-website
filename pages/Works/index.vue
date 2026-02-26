@@ -8,11 +8,13 @@ useHead({
     {
       name: 'description',
       content:
-        '瀏覽 Zeona Studio 精選作品集：企業官網設計、品牌形象網站、電商平台開發、數位行銷案例。了解我們如何協助客戶打造高轉換率的數位門面。',
+        '瀏覽 Zeona Studio 精選作品集：企業官網設計、品牌形象網站、電商平台開發、數位行銷案例。了解我們如何協助客戶打造高轉換率的數位門面，從規劃到上線的完整案例分享。',
     },
     { property: 'og:title', content: '作品集 | Zeona Studio - 案例展示' },
     { property: 'og:description', content: '精選網站開發與數位行銷案例，展現專業實力。' },
     { property: 'og:url', content: 'https://zeona.vercel.app/works' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
   ],
   link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/works' }],
   script: [
@@ -94,7 +96,7 @@ onMounted(() => {
   <div class="w-full pt-32 pb-20 font-sans">
     <div class="px-8 md:px-12 mb-10">
       <div class="max-w-6xl mx-auto text-center">
-        <h1
+        <h2
           class="font-bold leading-none mb-6 text-center flex flex-col gap-3"
           style="font-size: clamp(32px, 5vw, 52px)"
           :class="[
@@ -104,13 +106,13 @@ onMounted(() => {
         >
           <span class="text-[#6f6bff]">一起來為品牌打造</span>
           <span>數位競爭力</span>
-        </h1>
-        <p
+        </h2>
+        <h1
           class="text-[#5B5B5B] text-[14px] md:text-[18px] max-w-2xl mx-auto transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          從網站設計、行銷策略到品牌視覺，Zeona Studio 協助企業實現數位轉型，創造真實的商業成果。
-        </p>
+          從網站設計、行銷策略到品牌視覺<br />Zeona Studio 協助企業實現數位轉型，創造真實的商業成果
+        </h1>
       </div>
     </div>
 
@@ -147,12 +149,17 @@ onMounted(() => {
             <NuxtLink
               :to="{ path: portfolio.link, query: categoryQuery }"
               class="relative mb-8 rounded-xl overflow-hidden bg-gray-100 aspect-[4/3] shadow-sm group-hover:shadow-xl transition-all duration-500"
+              :title="`查看 ${portfolio.title} 專案詳情`"
             >
               <img
                 :src="portfolio.image"
-                :alt="portfolio.title"
+                :alt="`${portfolio.title} - ${portfolio.shortDesc}`"
+                :title="`${portfolio.title} | ${portfolio.category}`"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-102"
-                loading="lazy"
+                width="600"
+                height="450"
+                :loading="index < 3 ? 'eager' : 'lazy'"
+                :fetchpriority="index < 3 ? 'high' : 'auto'"
               />
 
               <div

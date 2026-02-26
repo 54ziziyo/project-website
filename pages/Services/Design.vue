@@ -9,7 +9,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Zeona Studio 視覺設計服務：品牌識別設計、LOGO 設計、社群貼文素材、行銷 Banner 製作。打造一致且令人印象深刻的品牌視覺形象。',
+        'Zeona Studio 專業視覺設計服務：品牌識別設計、LOGO 設計、社群貼文素材、行銷 Banner 製作、UI/UX 介面設計、LINE 圖文選單。從品牌規劃到視覺執行，為您打造一致且令人印象深刻的品牌視覺形象，讓品牌在市場中脫穎而出。',
     },
     { property: 'og:title', content: '視覺設計服務 | Zeona Studio - 品牌設計專家' },
     { property: 'og:description', content: '專業視覺設計，為您的品牌建立獨特形象。' },

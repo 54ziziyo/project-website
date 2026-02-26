@@ -362,10 +362,10 @@ onMounted(() => {
     <div class="px-6 md:px-10 flex justify-center flex-col items-center mb-10 relative z-10">
       <div class="text-[28px] md:text-[42px] font-black leading-tight text-center text-[#2D2D2D] mb-4">常見問題</div>
       <div class="h-1.5 w-12 bg-[#8782FF] rounded-full mb-6"></div>
-      <p class="text-gray-500 text-sm md:text-lg text-center max-w-2xl leading-relaxed">
-        這裡整理了關於服務流程、費用與合作細節的說明。
+      <h1 class="text-gray-500 text-sm md:text-lg text-center max-w-2xl leading-relaxed">
+        這裡整理了關於服務流程、費用與合作細節的說明
         <br class="hidden md:block" />建立清楚的共識，是專業合作的第一步。
-      </p>
+      </h1>
     </div>
 
     <div class="flex justify-center px-4 mb-10 relative z-10">

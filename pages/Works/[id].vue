@@ -13,6 +13,33 @@ const currentPortfolio = computed(() => {
   return portfolios.find((p) => p.id === id) || null
 })
 
+// 動態 SEO
+useHead(() => {
+  if (!currentPortfolio.value) {
+    return {
+      title: '找不到作品 | Zeona Studio',
+      meta: [{ name: 'description', content: '您查找的作品不存在或已被移除。' }],
+    }
+  }
+
+  const portfolio = currentPortfolio.value
+  return {
+    title: `${portfolio.title} | Zeona Studio 作品集`,
+    meta: [
+      {
+        name: 'description',
+        content: `${portfolio.title} | Zeona Studio 作品集- ${portfolio.shortDesc}。${portfolio.category}專案，使用技術：${portfolio.techStack.slice(0, 10).join('、')}。查看 Zeona Studio 如何協助客戶打造數位門面。`,
+      },
+      { property: 'og:title', content: `${portfolio.title} | Zeona Studio 作品集` },
+      { property: 'og:description', content: `${portfolio.shortDesc}。查看完整專案介紹與成果展示。` },
+      { property: 'og:url', content: `https://zeona.vercel.app/works/${portfolio.id}` },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:image', content: portfolio.image },
+    ],
+    link: [{ rel: 'canonical', href: `https://zeona.vercel.app/works/${portfolio.id}` }],
+  }
+})
+
 const backLink = computed(() => {
   const queryCategory = route.query.category
   const resolvedCategory =
@@ -72,9 +99,10 @@ onMounted(() => {
           <div class="inline-block bg-[#8782FF] text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
             {{ currentPortfolio.category }}
           </div>
-          <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 class="hidden">{{ currentPortfolio.title }} | Zeona Studio 作品集</h1>
+          <div class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             {{ currentPortfolio.title }}
-          </h1>
+          </div>
           <p class="text-xl text-gray-600">
             {{ currentPortfolio.shortDesc }}
           </p>
@@ -102,9 +130,13 @@ onMounted(() => {
               <img
                 v-else
                 :src="currentPortfolio.image"
-                :alt="currentPortfolio.title"
+                :alt="`${currentPortfolio.title} - ${currentPortfolio.shortDesc}`"
+                :title="`${currentPortfolio.title} | ${currentPortfolio.category} 作品展示`"
                 class="w-full h-auto object-cover"
-                loading="lazy"
+                width="800"
+                height="600"
+                loading="eager"
+                fetchpriority="high"
               />
             </div>
           </div>
@@ -208,7 +240,15 @@ onMounted(() => {
               :key="idx"
               class="rounded-2xl overflow-hidden border border-[#8782FF]/10 shadow-lg hover:shadow-[#8782FF]/20 transition-shadow duration-500"
             >
-              <img :src="img" class="w-full h-auto object-cover" :alt="`${currentPortfolio.title} 數據分析截圖 ${idx + 1}`" loading="lazy" />
+              <img
+                :src="img"
+                class="w-full h-auto object-cover"
+                :alt="`${currentPortfolio.title} 數據分析截圖 ${idx + 1}`"
+                :title="`${currentPortfolio.title} 成效數據 ${idx + 1}`"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -219,7 +259,7 @@ onMounted(() => {
           class="bg-gradient-to-br from-[#8782FF]/10 to-[#6f6bff]/10 py-16 rounded-2xl text-center transition-all duration-1000 transform delay-500"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">想要打造類似的專案？</h2>
+          <div class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">想要打造類似的專案？</div>
           <p class="text-gray-600 mb-8 max-w-xl mx-auto px-4">
             讓 Zeona Studio 協助您實現數位夢想，從設計到開發，提供一站式服務。
           </p>

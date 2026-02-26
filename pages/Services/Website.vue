@@ -11,7 +11,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Zeona Studio 提供全客製化網站開發服務，從 UI/UX 設計到後端系統整合，打造高效能、高轉換率的品牌官網。支援 RWD 響應式設計、SEO 優化、CMS 內容管理系統。',
+        'Zeona Studio 提供全客製化網站開發服務：從 UI/UX 介面設計、品牌官網建置到後端系統整合，打造高效能、高轉換率的品牌網站。支援 RWD 響應式設計、SEO 優化、WordPress 架設、CMS 內容管理系統，為您打造 24 小時不間斷的線上業務引擎。',
     },
     { property: 'og:title', content: '網站開發服務 | Zeona Studio - 全客製化網頁設計' },
     { property: 'og:description', content: '從設計到開發，為您打造 24 小時不間斷的線上業務引擎。' },

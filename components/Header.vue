@@ -85,14 +85,20 @@ const showMenu = ref(false)
     >
       <!-- Logo -->
       <div class="font-extrabold text-xl font-[Hammersmith_One] cursor-pointer">
-        <a href="/">Zeona</a>
+        <a href="/" title="Zeona Studio 首頁 - 網站設計與社群行銷">Zeona</a>
       </div>
 
       <!-- Navigation -->
       <NavigationMenu class="md:flex hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/about" :class="navigationMenuTriggerStyle()"> 關於我 </NavigationMenuLink>
+            <NavigationMenuLink
+              href="/about"
+              title="關於 Zeona Studio - 認識我們的服務與理念"
+              :class="navigationMenuTriggerStyle()"
+            >
+              關於我
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
@@ -103,6 +109,7 @@ const showMenu = ref(false)
                   <div as-child>
                     <a
                       :href="component.href"
+                      :title="component.title + ' - ' + component.description"
                       class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foregroun"
                     >
                       <div class="text-sm font-medium leading-none">
@@ -119,7 +126,13 @@ const showMenu = ref(false)
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink href="/faq" :class="navigationMenuTriggerStyle()"> 常見問題 </NavigationMenuLink>
+            <NavigationMenuLink
+              href="/faq"
+              title="常見問題 FAQ - 網站開發與行銷服務疑問解答"
+              :class="navigationMenuTriggerStyle()"
+            >
+              常見問題
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <!-- <NavigationMenuItem>
@@ -127,11 +140,23 @@ const showMenu = ref(false)
           </NavigationMenuItem> -->
 
           <NavigationMenuItem>
-            <NavigationMenuLink href="/works" :class="navigationMenuTriggerStyle()"> 作品集 </NavigationMenuLink>
+            <NavigationMenuLink
+              href="/works"
+              title="作品集 - 網站開發與行銷案例展示"
+              :class="navigationMenuTriggerStyle()"
+            >
+              作品集
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink href="/blog" :class="navigationMenuTriggerStyle()"> 部落格 </NavigationMenuLink>
+            <NavigationMenuLink
+              href="/blog"
+              title="部落格 - AI、行銷與網站開發教學"
+              :class="navigationMenuTriggerStyle()"
+            >
+              部落格
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
@@ -140,6 +165,7 @@ const showMenu = ref(false)
       <div class="md:flex hidden">
         <a
           href="/contact"
+          title="聯繫我們 - 免費諮詢網站設計與行銷服務"
           class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-2 hover:bg-[#6f6bff] transition-colors duration-300"
         >
           <span>立即聯繫</span>

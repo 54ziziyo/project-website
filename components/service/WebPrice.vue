@@ -108,11 +108,11 @@ const psdToHtmlPrice = [
     <div class="absolute top-[80%] left-0 w-[10%] h-[10%] bg-[#8782FF] rounded-full blur-[120px] opacity-40" />
 
     <div class="flex flex-col items-center mb-10 space-y-4">
-      <div class="text-[28px] md:text-[36px] font-bold leading-none text-center mb-6">網站開發服務</div>
+      <h2 class="text-[28px] md:text-[36px] font-bold leading-none text-center mb-6">網站開發服務</h2>
       <div class="w-12 h-1 bg-[#8782FF] rounded-full" />
-      <p class="text-gray-600 text-[16px] md:text-[20px] text-center md:mb-4">
-        網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力
-      </p>
+      <h1 class="text-gray-600 text-[16px] md:text-[20px] text-center md:mb-4">
+        全客製化網站設計與開發服務、品牌形象官網、電商平台<br />WordPress 網站架設、SEO/GEO 優化一站搞定
+      </h1>
     </div>
 
     <!-- One page website price -->

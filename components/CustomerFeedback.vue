@@ -112,7 +112,16 @@ const testimonials = [
           class="flex justify-center items-center space-x-[-10px] mb-4 transition-all duration-1000 transform"
           :class="[isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
-          <img v-for="(item, index) in avatars" :key="item" :src="item" :alt="`客戶頭像 ${index + 1}`" class="w-12 h-12 rounded-full border-2 border-white" width="48" height="48" />
+          <img
+            v-for="(item, index) in avatars"
+            :key="item"
+            :src="item"
+            :alt="`客戶頭像 ${index + 1}`"
+            :title="`Zeona Studio 客戶評價 ${index + 1}`"
+            class="w-12 h-12 rounded-full border-2 border-white"
+            width="48"
+            height="48"
+          />
         </div>
 
         <div
@@ -156,6 +165,7 @@ const testimonials = [
                   <img
                     :src="testimonial.avatar"
                     :alt="testimonial.author + ' 頭像'"
+                    :title="testimonial.author + ' - 客戶評價'"
                     class="w-12 h-12 rounded-full object-cover mr-4"
                     width="48"
                     height="48"

@@ -106,6 +106,7 @@ const targetAudiences = [
                 <img 
                   :src="targetAudience.img"
                   :alt="targetAudience.title + ' - 目標客群插圖'"
+                  :title="targetAudience.title + ' | Zeona Studio'"
                   class="max-h-full max-w-full object-contain"
                   width="200"
                   height="200"

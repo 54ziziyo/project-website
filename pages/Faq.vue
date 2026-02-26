@@ -6,7 +6,7 @@ useHead({
     {
       name: 'description',
       content:
-        '查看 Zeona Studio 常見問題解答：網站開發流程、行銷服務付款方式、設計修改規則、SEO 優化週期等，快速找到您需要的答案。',
+        '查看 Zeona Studio 常見問題解答：網站開發流程與時程、行銷服務付款方式、設計修改規則、SEO 優化週期、WordPress 架設與維護等，常見疑問一次解答，快速找到您需要的答案。',
     },
     { property: 'og:title', content: '常見問題 FAQ | Zeona Studio - 服務疑問解答' },
     { property: 'og:description', content: '從網站開發到數位行銷，一次解答您的所有疑問。' },

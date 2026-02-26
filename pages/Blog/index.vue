@@ -18,7 +18,8 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: '探索 Zeona Studio 部落格，獲取 AI 人工智慧、數位行銷策略、網站開發技術的最新教學與趨勢分析。',
+      content:
+        '探索 Zeona Studio 數位知識部落格：深入淺出的 AI 人工智慧應用教學、網站設計與開發、數位行銷策略實戰指南。從 SEO 優化、社群經營到前端技術分享，助你掌握自動化工具與數位轉型關鍵，為品牌打造高效能的成長藍圖與實用技術解決方案。',
     },
     {
       name: 'keywords',
@@ -27,7 +28,8 @@ useHead({
     { property: 'og:title', content: '部落格 | Zeona Studio - AI、行銷與網站開發教學' },
     {
       property: 'og:description',
-      content: '探索 AI、數位行銷與網站開發的最新教學文章，助你掌握數位趨勢。',
+      content:
+        '探索 Zeona Studio 數位知識部落格：深入淺出的 AI 人工智慧應用教學、網站設計與開發、數位行銷策略實戰指南。從 SEO 優化、社群經營到前端技術分享，助你掌握自動化工具與數位轉型關鍵，為品牌打造高效能的成長藍圖與實用技術解決方案。',
     },
     { property: 'og:type', content: 'blog' },
     { property: 'og:url', content: 'https://zeona.vercel.app/blog' },
@@ -272,22 +274,22 @@ onMounted(() => {
     <!-- Hero Section -->
     <div class="px-6 md:px-12 mb-8 md:mb-16">
       <div class="max-w-6xl mx-auto text-center">
-        <h1
-          class="font-bold leading-none mb-4 text-center flex justify-center"
+        <h2
+          class="font-bold leading-[1.25] mb-4 text-center flex justify-center flex flex-col gap-x-2"
           style="font-size: clamp(24px, 4.5vw, 36px)"
           :class="[
             'transition-all duration-1000 transform',
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
           ]"
         >
-          <span class="text-[#6f6bff]">數位知識</span><span>部落格</span>
-        </h1>
-        <p
+          <span class="text-[#6f6bff]">AI、行銷與網站開發</span><span>數位知識部落格</span>
+        </h2>
+        <h1
           class="text-[#5B5B5B] text-sm md:text-lg max-w-2xl mx-auto transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
           從 AI 技術、行銷策略到網站開發，為你帶來最實用的數位知識與趨勢洞察
-        </p>
+        </h1>
       </div>
     </div>
 
@@ -516,9 +518,12 @@ onMounted(() => {
                 >
                   <img
                     :src="post.coverImage"
-                    :alt="post.title"
+                    :alt="`${post.title} - ${post.category}`"
+                    :title="`閱讀 ${post.title}`"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
+                    width="160"
+                    height="112"
+                    :loading="index < 3 ? 'eager' : 'lazy'"
                   />
                 </div>
               </div>

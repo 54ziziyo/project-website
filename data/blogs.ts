@@ -52,7 +52,7 @@ export const blogPosts: BlogPost[] = [
       <p>這是我一位長期合作客戶（重機人身部品零售商）老闆最近分享的原話。當時我建議老闆在結帳時多問一句客人從哪得知品牌，沒想到得到的答案既驚訝又令人振奮：<strong>品牌已經成功進入了 AI 的「信任圈」。</strong></p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1583912736562-6086dedde74b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1583912736562-6086dedde74b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1583912736562-6086dedde74b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=450&fit=crop" alt="Motorcycle Gear Store" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1583912736562-6086dedde74b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1583912736562-6086dedde74b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1583912736562-6086dedde74b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=450&fit=crop" alt="Motorcycle Gear Store" width="687" height="450" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       </div>
 
       <h2>決策路徑：從「搜尋」變為「推薦」</h2>
@@ -77,7 +77,7 @@ export const blogPosts: BlogPost[] = [
       <p>我們確保官網、社群、Google 地圖評論與外部媒體報導的資訊高度吻合。當 AI 在全網抓取資料時，會因為資訊的一致性而將品牌判定為「高權威、可信度高」。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&auto=format&fit=crop" alt="Workflow and Consistency" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&auto=format&fit=crop" alt="Workflow and Consistency" width="1200" height="800" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <hr>
@@ -123,7 +123,7 @@ export const blogPosts: BlogPost[] = [
       <p>當每個人都能用 AI 一鍵生成文章時，「內容過剩」成為了最大的問題。2026 年的搜尋引擎（如 SearchGPT 與 Google）更看重內容的 <strong>E-E-A-T（經驗、專業、權威、信任）</strong>。現在的關鍵不再是「如何產出內容」，而是「如何讓 AI 寫出不像 AI 寫的文章」。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&auto=format&fit=crop" alt="Creative Content Writing with AI" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&auto=format&fit=crop" alt="Creative Content Writing with AI" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       </div>
 
       <h2>拒絕生硬：2026 進階 Prompt 策略</h2>
@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
       <p>文章不能只有文字。透過 AI 生成圖表、資訊圖（Infographic）甚至是短影音腳本，並嵌入文中，能大幅提高用戶停留時間。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://www.slideteam.net/media/catalog/product/cache/1280x720/s/e/seo_strategies_analytics_and_reporting_ppt_powerpoint_presentation_gallery_deck_slide01.jpg" alt="SEO Strategy and Analytics" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://www.slideteam.net/media/catalog/product/cache/1280x720/s/e/seo_strategies_analytics_and_reporting_ppt_powerpoint_presentation_gallery_deck_slide01.jpg" alt="SEO Strategy and Analytics" width="1280" height="720" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <h3>第三維：智慧化內部連結優化</h3>
@@ -194,7 +194,7 @@ export const blogPosts: BlogPost[] = [
       <p>在 2026 年，SEO 的定義已經被重新書寫。傳統的關鍵字堆砌已失效，現在我們面臨的是 <strong>AEO (Answer Engine Optimization，答案引擎優化)</strong>。當使用者在搜尋框輸入問題，AI 會直接彙整網路上最可信的資料給出答案。你的網站是成為那個「被引用的權威」，還是消失在背景雜訊中？</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop" alt="AI Search and SEO Analytics" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop" alt="AI Search and SEO Analytics" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
         <p style="font-size: 0.9em; color: #666; margin-top: 10px;">圖 1：2026 年透過 AI 儀表板監控「AI 引用佔有率」</p>
       </div>
 
@@ -236,7 +236,7 @@ export const blogPosts: BlogPost[] = [
       <p>2026 年有 40% 的搜尋透過語音完成。優化長句子的對話式標題，例如：「我該如何聯絡日本機車零件代理商？」而非單純的關鍵字「日本機車代理」。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://media.awoo.ai/live/wp-content/uploads/2026-GEO-trends.jpg" alt="Data Science and SEO" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://media.awoo.ai/live/wp-content/uploads/2026-GEO-trends.jpg" alt="Data Science and SEO" width="1200" height="675" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <h2>結論：AI 時代，信任比流量更貴</h2>
@@ -339,7 +339,7 @@ export const blogPosts: BlogPost[] = [
       <p>過去我們習慣根據螢幕寬度（Viewport）切換樣式，但在現代 Web 開發中，組件化開發才是主流。<br /><strong>Container Queries (容器查詢)</strong> 的普及，讓你能夠根據「組件被放在哪裡」來定義樣式，而不是整個視窗的大小。這讓組件真正實現了隨處可用（Portable）。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&auto=format&fit=crop" alt="Responsive UI Design on Different Devices" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&auto=format&fit=crop" alt="Responsive UI Design on Different Devices" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       </div>
 
       <h2>實戰技巧：從 Figma 轉出高品質響應式代碼</h2>
@@ -435,7 +435,7 @@ export const blogPosts: BlogPost[] = [
       <p>現代使用者的收件匣充滿了雜訊。如果你還在對所有名單寄送同樣的內容，那被標記為垃圾郵件只是時間問題。成功的 Email 行銷核心在於：<strong>在正確的時間，把正確的內容，寄給正確的人。</strong>這就是自動化工作流（Workflow）的職責。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=1200&auto=format&fit=crop" alt="Email Marketing Automation Concept" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=1200&auto=format&fit=crop" alt="Email Marketing Automation Concept" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       </div>
 
       <h2>實作工具：主流自動化平台官方指南</h2>
@@ -478,7 +478,7 @@ export const blogPosts: BlogPost[] = [
       <p>當客戶累積消費達一定金額，自動化系統應自動為其打上「VIP」標籤，並寄送專屬的私密優惠信。<strong>這種優越感是提高回購率的核心。</strong></p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop" alt="Marketing Data and Strategy" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop" alt="Marketing Data and Strategy" width="1200" height="800" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <hr>
@@ -551,7 +551,7 @@ export const blogPosts: BlogPost[] = [
       <p>利用 AI 生成一張風格母本圖，包含配色、光影與材質。在 Midjourney 中使用 <code>--sref [母本圖網址]</code>，確保後續產出的社群貼文與官網圖片具備一致性。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&auto=format&fit=crop" alt="Graphic Design Tools and Workspace" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&auto=format&fit=crop" alt="Graphic Design Tools and Workspace" width="1200" height="800" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <h3>步驟二：向量化與商業落地</h3>
@@ -592,7 +592,7 @@ export const blogPosts: BlogPost[] = [
       <p>「這篇文章發出去，到底賺了多少錢？」如果你還無法回答這個問題，你的內容行銷就只是在消耗預算。在精準投放成本不斷攀升的今天，內容必須被視為一種<strong>數位資產</strong>。好的內容不僅能持續產生自然流量，更能在決策路徑中縮短客戶的猶豫期。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=1200&auto=format&fit=crop" alt="Marketing ROI Analysis" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=1200&auto=format&fit=crop" alt="Marketing ROI Analysis" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       </div>
 
       <h2>實作工具：數據追蹤與歸因官方指南</h2>
@@ -631,7 +631,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>公式：ROI = (內容輔助成交額 - 內容生產與分發成本) / 生產與分發成本。</strong></p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://plus.unsplash.com/premium_photo-1661382019197-94d5edb38186?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1200&auto=format&fit=crop" alt="Marketing Strategy Board" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://plus.unsplash.com/premium_photo-1661382019197-94d5edb38186?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1200&auto=format&fit=crop" alt="Marketing Strategy Board" width="1172" height="780" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <hr>
@@ -673,7 +673,7 @@ export const blogPosts: BlogPost[] = [
       <p>在 AI 時代，網頁的效能與 SEO 結構比以往更重要。<br />Nuxt 3 憑藉其強大的 <strong>SSR (伺服器端渲染)</strong> 與 <strong>Nitro 引擎</strong>，不僅讓開發者能以 Vue 的邏輯處理後端 API，更提供了極致的邊緣運算能力。對於像你這樣追求效率的開發者，Nuxt 3 是將創意轉化為生產力的最佳工具。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=1200&auto=format&fit=crop" alt="Coding and Web Development" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=1200&auto=format&fit=crop" alt="Coding and Web Development" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       </div>
 
       <h2>實作指南：官方文件與資源連結</h2>
@@ -724,7 +724,7 @@ export const blogPosts: BlogPost[] = [
       <p>Nuxt 3 提供的 <code>useSeoMeta</code> 讓 SEO 設定變得極其簡單且動態。配合結構化資料 (Schema.org)，你可以確保你的 Nuxt 應用在 2026 年的 AI 搜尋引擎中具備極高的識別度。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=1200&auto=format&fit=crop" alt="Advanced Server Architecture" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=1200&auto=format&fit=crop" alt="Advanced Server Architecture" width="1200" height="800" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <hr>
@@ -773,7 +773,7 @@ export const blogPosts: BlogPost[] = [
       <p>在資訊爆炸的滑動時代，使用者的注意力只剩下不到 3 秒。2026 年的短影音行銷已經從「隨手拍」進化到「精準計算」。透過 <strong>AI 輔助創意</strong>，我們能在人力不增加的情況下，實現橫跨 Instagram Reels、TikTok、YouTube Shorts 的多平台矩陣經營。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://plus.unsplash.com/premium_photo-1683492749168-ee69f4d90193?q=80&w=784&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=450&fit=crop" alt="Social Media Video Strategy" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="https://plus.unsplash.com/premium_photo-1683492749168-ee69f4d90193?q=80&w=784&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=450&fit=crop" alt="Social Media Video Strategy" width="784" height="523" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
       </div>
 
       <h2>實作工具：2026 AI 影音生產線官方連結</h2>
@@ -811,7 +811,7 @@ export const blogPosts: BlogPost[] = [
       <p>不要只是說「謝謝觀看」。你的 CTA 應該是為了觸發算法，例如：「留言『+1』拿完整清單」或「你更喜歡 A 還是 B？留言告訴我」。<strong>留言數是影片被推薦進入流量池的關鍵指標。</strong></p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1540655037529-dec987208707?q=80&w=1221&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1200&auto=format&fit=crop" alt="Video Editing and Production" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://images.unsplash.com/photo-1540655037529-dec987208707?q=80&w=1221&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1200&auto=format&fit=crop" alt="Video Editing and Production" width="1221" height="814" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <hr>
@@ -854,7 +854,7 @@ export const blogPosts: BlogPost[] = [
       <p>在網路攻擊日益精準的今天，傳統的防火牆早已不足以支撐。一次安全事件不僅意味著個資外洩，更可能導致品牌信任度的永久崩塌。根據最新資安報告，導入 <strong>零信任 (Zero Trust)</strong> 架構的企業，能有效降低 80% 的滲透風險。作為開發者或經營者，你必須建立從前端到後端的全方位防禦。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&auto=format&fit=crop" alt="Network Security and Cyber Defense" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&auto=format&fit=crop" alt="Network Security and Cyber Defense" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
       </div>
 
       <h2>實戰必備：官方資安文件與掃描工具</h2>
@@ -907,7 +907,7 @@ export const blogPosts: BlogPost[] = [
       <p>假設你的伺服器隨時會被入侵。將資料庫帳號權限縮減至最小（例如：僅能 Select 不能 Drop），並對所有的 API 請求進行強制認證。這能確保即便一個組件失效，整座城堡依然穩固。</p>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&auto=format&fit=crop" alt="Encrypted Data Concept" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&auto=format&fit=crop" alt="Encrypted Data Concept" width="1200" height="800" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <hr>
@@ -939,7 +939,7 @@ export const blogPosts: BlogPost[] = [
       <p>過去我們習慣問 AI 問題，但在 2026 年，領先的中小企業已經進入了 <strong>AI Agent (自主智能體)</strong> 時代。這些 AI 不僅會回答你，還會主動操作軟體、發送郵件、核對庫存並完成結帳。對於資源有限的中小企業來說，這意味著你可以擁有一支不眠不休的專業團隊。</p>
 
       <div style="text-align: center; margin: 20px 0;">
-        <img src="https://community.sap.com/legacyfs/online/storage/blog_attachments/2022/08/2022-08-29_13-22-44.jpg" alt="AI Data Analysis and Workflow" style="max-width: 100%; border-radius: 8px;">
+        <img src="https://community.sap.com/legacyfs/online/storage/blog_attachments/2022/08/2022-08-29_13-22-44.jpg" alt="AI Data Analysis and Workflow" width="800" height="450" style="max-width: 100%; border-radius: 8px;">
         <p style="font-size: 0.8em; color: #666;">圖 1：2026 現代企業的數據與 AI 自動化核心架構</p>
       </div>
 
@@ -972,7 +972,7 @@ export const blogPosts: BlogPost[] = [
       <p>給予 AI 一個產品亮點，它能自動生成符合 Threads、Instagram、小紅書不同風格的貼文，並自動排程發佈，實現「一人公司」也能有高頻率的社群曝光。</p>
       
       <div style="text-align: center; margin: 20px 0;">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop" alt="Digital Marketing Automation" style="max-width: 100%; border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop" alt="Digital Marketing Automation" width="1200" height="800" style="max-width: 100%; border-radius: 8px;">
         <p style="font-size: 0.8em; color: #666;">圖 2：AI 自動化生成的內容行銷排程</p>
       </div>
 
@@ -1064,7 +1064,7 @@ export const blogPosts: BlogPost[] = [
       </ol>
 
       <div style="text-align: center; margin: 25px 0;">
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop" alt="AI Strategy and Team Collaboration" style="max-width: 100%; border-radius: 12px;">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop" alt="AI Strategy and Team Collaboration" width="1200" height="800" style="max-width: 100%; border-radius: 12px;">
       </div>
 
       <hr>

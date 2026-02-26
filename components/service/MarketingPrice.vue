@@ -44,6 +44,7 @@ const servicesPrice = [
       <img
         src="@/assets/images/round-purple.svg"
         alt="裝飾圓形圖案"
+        title="Zeona Studio 網站裝飾元素"
         class="max-w-none transform -translate-x-1/2 -translate-y-1/4"
         width="1500"
         height="1500"
@@ -55,7 +56,10 @@ const servicesPrice = [
         Price List
       </p>
       <div class="text-[32px] md:text-[42px] font-bold leading-tight text-center text-[#2D2D2D]">行銷服務價目表</div>
-      <div class="w-12 h-1 bg-[#8782FF] mx-auto mt-6 rounded-full"></div>
+      <div class="w-12 h-1 bg-[#8782FF] mx-auto my-6 rounded-full"></div>
+      <h1 class="text-gray-600 text-[16px] md:text-[20px] text-center md:mb-4">
+        包月社群行銷、內容行銷、短影音製作等專業服務<br />助你打造持續成長的品牌聲量與影響力
+      </h1>
     </div>
 
     <div class="max-w-6xl mx-auto relative z-10">

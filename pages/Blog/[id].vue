@@ -211,9 +211,12 @@ onMounted(() => {
           <div class="rounded-2xl overflow-hidden shadow-xl">
             <img
               :src="currentPost.coverImage"
-              :alt="currentPost.title"
+              :alt="`${currentPost.title} - ${currentPost.category} 文章封面`"
+              :title="currentPost.title"
               class="w-full h-auto aspect-[16/9] object-cover"
-              loading="lazy"
+              width="1200"
+              height="675"
+              fetchpriority="high"
             />
           </div>
         </div>
@@ -269,8 +272,11 @@ onMounted(() => {
             <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
               <img
                 :src="post.coverImage"
-                :alt="post.title"
+                :alt="`${post.title} - ${post.category}`"
+                :title="`閱讀推薦文章：${post.title}`"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                width="400"
+                height="225"
                 loading="lazy"
               />
               <div class="absolute top-4 left-4 bg-[#8782FF] text-white px-3 py-1 rounded-full text-xs font-bold">

@@ -6,7 +6,7 @@ useHead({
     {
       name: 'description',
       content:
-        '瀏覽 Zeona Studio 完整服務方案：全客製化網站開發、數位行銷策略、品牌視覺設計。一站式數位服務，為您的品牌打造競爭優勢。',
+        '瀏覽 Zeona Studio 完整服務方案：全客製化網站開發、SEO 優化、數位行銷策略、品牌視覺設計。一站式數位服務，從網站建置到社群行銷，為您的品牌打造線上競爭優勢，讓您的事業 24 小時不間斷運作。',
     },
     { property: 'og:title', content: '服務項目總覽 | Zeona Studio - 數位服務方案' },
     { property: 'og:description', content: '從網站到行銷，一站式數位解決方案助您品牌成長。' },

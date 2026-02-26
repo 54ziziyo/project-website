@@ -6,11 +6,14 @@ useHead({
     {
       name: 'description',
       content:
-        '立即聯繫 Zeona Studio，獲取免費 15 分鐘品牌數位化諮詢。無論是網站開發、SEO 優化或數位行銷，我們為您量身打造最適合的解決方案。',
+        '立即聯繫 Zeona Studio，獲取免費 15 分鐘品牌數位化諮詢。無論是客製化網站開發、SEO 搜尋優化或社群行銷策略，我們為您量身打造最適合的數位解決方案。讓專業團隊協助您的品牌在數位世界脫穎而出，實現線上曝光與業績增長。填寫表單或直接撥打電話，開始您的數位轉型之旅！',
     },
     { property: 'og:title', content: '聯繫我們 | Zeona Studio - 免費諮詢品牌數位轉型方案' },
     { property: 'og:description', content: '立即預約免費諮詢，讓專業團隊協助您的品牌在數位世界脫穎而出。' },
     { property: 'og:url', content: 'https://zeona.vercel.app/contact' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
+    { name: 'theme-color', content: '#8782FF' },
   ],
   link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/contact' }],
   script: [

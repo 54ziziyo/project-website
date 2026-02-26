@@ -43,7 +43,14 @@ onBeforeUnmount(() => {
 <template>
   <div class="relative pt-24 md:pt-32 pb-20 overflow-x-clip">
     <div class="absolute md:-top-40 md:-left-[65%] bottom-0 -right-[0%]">
-      <img src="../assets/images/round-purple.svg" alt="circle pattern" class="max-w-none" width="1500" height="1500" />
+      <img
+        src="../assets/images/round-purple.svg"
+        alt="裝飾圓形圖案"
+        title="Zeona Studio 網站裝飾元素"
+        class="max-w-none"
+        width="1500"
+        height="1500"
+      />
     </div>
 
     <div class="relative px-8 pb-30 max-w-6xl mx-auto">
@@ -90,6 +97,7 @@ onBeforeUnmount(() => {
           <img
             src="../assets/images/website-building.png"
             alt="網站建置服務 - 品牌官網開發與 UI 設計"
+            title="專業網站建置服務"
             class="w-full h-full object-cover rounded-xl"
             width="400"
             height="300"
@@ -119,6 +127,7 @@ onBeforeUnmount(() => {
           <img
             src="../assets/images/diversified-marketing.png"
             alt="多元行銷服務 - SEO 優化與社群經營"
+            title="數位行銷與社群經營服務"
             class="w-full h-full object-cover rounded-xl"
             width="400"
             height="300"
@@ -134,7 +143,8 @@ onBeforeUnmount(() => {
         >
           <img
             src="../assets/images/high-quality.png"
-            alt="高品質客製化設計 - 独特品牌視覺"
+            alt="高品質客製化設計 - 獨特品牌視覺"
+            title="客製化品牌設計服務"
             class="w-full h-full object-cover rounded-xl"
             width="400"
             height="300"
@@ -164,6 +174,7 @@ onBeforeUnmount(() => {
           <img
             src="../assets/images/brand-context.png"
             alt="品牌脈絡規劃 - 數位策略建置"
+            title="品牌策略規劃服務"
             class="w-full h-full object-cover rounded-xl"
             width="400"
             height="300"

@@ -13,10 +13,10 @@ import FormContact from './form/Contact.vue'
               <div class="mb-4 mb:mb-6">讓我們聊聊如何<span class="text-[#FF5157]">把它變成真的</span></div>
             </div>
             <div class="space-y-6">
-              <div class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-4">
+              <h1 class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-4">
                 請填寫表單，我會在 24 小時內回覆你<br />
                 我們可以先聊聊你的需求，看看怎麼做最適合你
-              </div>
+              </h1>
               <div class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-10">不用擔心被推銷，我會給你最誠實的建議 💬</div>
               <div class="flex justify-between items-center">
                 <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">營業時間</div>
@@ -26,6 +26,7 @@ import FormContact from './form/Contact.vue'
                 <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">電子信箱</div>
                 <a
                   href="mailto:54ziziyo@gmail.com"
+                  title="寄送電子郵件給 Zeona Studio"
                   class="text-[#8782FF] text-[16px] md:text-[18px] hover:text-[#6f6bff] transition-colors"
                   >54ziziyo@gmail.com</a
                 >
@@ -36,6 +37,7 @@ import FormContact from './form/Contact.vue'
                   href="https://lin.ee/Tt7Apjc"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="透過 LINE 聯繫 Zeona Studio"
                   class="text-[#8782FF] text-[16px] md:text-[18px] hover:text-[#6f6bff] transition-colors"
                   >@768viuqz</a
                 >
@@ -49,6 +51,7 @@ import FormContact from './form/Contact.vue'
                 href="https://lin.ee/Tt7Apjc"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="前往 LINE 線上客服 - 即時諮詢服務"
                 class="px-10 py-4 text-white bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-4 hover:bg-[#6f6bff] transition-colors duration-300"
               >
                 <Icon name="lsicon:service-filled" width="24" height="24" />
