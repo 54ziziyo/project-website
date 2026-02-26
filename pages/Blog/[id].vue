@@ -30,10 +30,16 @@ useHead(() => {
   return {
     title: post.seo.title,
     meta: [
-      { name: 'description', content: post.seo.description },
+      {
+        name: 'description',
+        content: (post.title + ' - ' + post.seo.description + ' | Zeona Studio 部落格').slice(0, 170),
+      },
       { name: 'keywords', content: post.seo.keywords },
       { property: 'og:title', content: post.seo.title },
-      { property: 'og:description', content: post.seo.description },
+      {
+        property: 'og:description',
+        content: (post.title + ' - ' + post.seo.description + ' | Zeona Studio 部落格').slice(0, 170),
+      },
       { property: 'og:type', content: 'article' },
       { property: 'og:url', content: `https://zeona.vercel.app/blog/${post.id}` },
       { property: 'og:image', content: post.seo.ogImage },
