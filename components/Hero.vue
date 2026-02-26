@@ -42,7 +42,7 @@ onBeforeUnmount(() => {
       <div class="container mx-auto px-12 relative z-20 flex-1 flex items-center">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center w-full py-16 lg:py-0">
           <div
-            class="lg:col-span-7 transition-all duration-1000 transform text-center lg:text-left pt-4 sm:pt-20 lg:pt-0"
+            class="lg:col-span-7 transition-all duration-1000 transform text-center lg:text-left pt-10 sm:pt-20 lg:pt-0"
             :class="[isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
           >
             <div class="flex justify-center lg:justify-start mb-8 pt-4 lg:pt-0">
