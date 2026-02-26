@@ -6,7 +6,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Zeona Studio 提供全客製化網站開發、UI/UX 設計、SEO 優化與數位行銷服務。結合美學與技術，為您打造 24 小時不間斷的線上業務引擎。',
+        'Zeona Studio：擁有 5 年以上網站開發與數位行銷經驗，專注於全客製化網站設計、UI/UX 介面規劃、品牌官網建置與社群行銷服務。我們協助新創公司與中小企業打造兼具美感與高效能的線上品牌，從網站規劃、視覺設計到社群經營一站搞定，讓您的品牌 24 小時持續曝光獲客。',
     },
   ],
   link: [{ rel: 'canonical', href: 'https://zeona.vercel.app' }],

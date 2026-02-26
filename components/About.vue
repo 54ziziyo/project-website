@@ -52,8 +52,12 @@ onBeforeUnmount(() => {
         class="text-center transition-all duration-700"
         :class="visibleHeader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
       >
-        <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">價值的交會點</div>
-        <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-12 mb-8">想告訴你的是</div>
+        <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">
+          關於 Zeona Studio
+        </div>
+        <h1 class="text-[24px] md:text-[52px] font-bold leading-[1.25] mb:mb-12 mb-8">
+          專業網站設計開發 × 社群行銷<br />您的<span class="text-[#8782FF]">品牌成長夥伴</span>
+        </h1>
         <div class="text-[#5B5B5B] text-[14px] md:text-[16px] mb-4">
           嗨，我是 Zeona Studio，擁有 5 年以上網站開發與數位行銷背景。
           <br />
@@ -83,7 +87,14 @@ onBeforeUnmount(() => {
           class="order-2 lg:order-2 rounded-2xl hover:shadow-xl shadow-lg flex flex-col transition-all duration-700 transform"
           :class="visibleCards.has(1) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img src="../assets/images/website-building.png" alt="網站建置服務 - 品牌官網開發與 UI 設計" class="w-full h-full object-cover rounded-xl" width="400" height="300" loading="lazy" />
+          <img
+            src="../assets/images/website-building.png"
+            alt="網站建置服務 - 品牌官網開發與 UI 設計"
+            class="w-full h-full object-cover rounded-xl"
+            width="400"
+            height="300"
+            loading="lazy"
+          />
         </div>
 
         <!-- 卡片3 -->
@@ -105,7 +116,14 @@ onBeforeUnmount(() => {
           class="order-3 lg:order-4 rounded-2xl hover:shadow-xl shadow-lg flex flex-col transition-all duration-700 transform"
           :class="visibleCards.has(3) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img src="../assets/images/diversified-marketing.png" alt="多元行銷服務 - SEO 優化與社群經營" class="w-full h-full object-cover rounded-xl" width="400" height="300" loading="lazy" />
+          <img
+            src="../assets/images/diversified-marketing.png"
+            alt="多元行銷服務 - SEO 優化與社群經營"
+            class="w-full h-full object-cover rounded-xl"
+            width="400"
+            height="300"
+            loading="lazy"
+          />
         </div>
 
         <!-- 卡片5 -->
@@ -114,7 +132,14 @@ onBeforeUnmount(() => {
           class="order-6 lg:order-5 rounded-2xl hover:shadow-xl shadow-lg flex flex-col transition-all duration-700 transform"
           :class="visibleCards.has(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img src="../assets/images/high-quality.png" alt="高品質客製化設計 - 独特品牌視覺" class="w-full h-full object-cover rounded-xl" width="400" height="300" loading="lazy" />
+          <img
+            src="../assets/images/high-quality.png"
+            alt="高品質客製化設計 - 独特品牌視覺"
+            class="w-full h-full object-cover rounded-xl"
+            width="400"
+            height="300"
+            loading="lazy"
+          />
         </div>
 
         <!-- 卡片6 -->
@@ -136,7 +161,14 @@ onBeforeUnmount(() => {
           class="order-7 lg:order-7 rounded-2xl hover:shadow-xl shadow-lg flex flex-col transition-all duration-700 transform"
           :class="visibleCards.has(6) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img src="../assets/images/brand-context.png" alt="品牌脈絡規劃 - 數位策略建置" class="w-full h-full object-cover rounded-xl" width="400" height="300" loading="lazy" />
+          <img
+            src="../assets/images/brand-context.png"
+            alt="品牌脈絡規劃 - 數位策略建置"
+            class="w-full h-full object-cover rounded-xl"
+            width="400"
+            height="300"
+            loading="lazy"
+          />
         </div>
 
         <!-- 卡片8 -->
