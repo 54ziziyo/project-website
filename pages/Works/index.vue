@@ -1,6 +1,39 @@
 <script setup lang="ts">
 import { portfolios, categories } from '~/data/portfolios'
 
+// SEO 優化 - 作品集頁面
+useHead({
+  title: '作品集 | Zeona Studio - 網站開發與數位行銷案例展示',
+  meta: [
+    {
+      name: 'description',
+      content:
+        '瀏覽 Zeona Studio 精選作品集：企業官網設計、品牌形象網站、電商平台開發、數位行銷案例。了解我們如何協助客戶打造高轉換率的數位門面。',
+    },
+    { property: 'og:title', content: '作品集 | Zeona Studio - 案例展示' },
+    { property: 'og:description', content: '精選網站開發與數位行銷案例，展現專業實力。' },
+    { property: 'og:url', content: 'https://zeona.vercel.app/works' },
+  ],
+  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/works' }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'Zeona Studio 作品集',
+        description: '網站開發與數位行銷案例展示',
+        url: 'https://zeona.vercel.app/works',
+        mainEntity: {
+          '@type': 'ItemList',
+          name: '精選作品',
+          numberOfItems: portfolios.length,
+        },
+      }),
+    },
+  ],
+})
+
 // 裝置偵測
 const { isDesktop } = useDevice()
 const route = useRoute()

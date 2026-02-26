@@ -1,2 +1,32 @@
+# Zeona Studio - robots.txt
+# 針對 Google、Bing、AI 搜尋引擎（ChatGPT, Perplexity, Claude）優化
+
 User-Agent: *
-Disallow:
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/
+
+# Sitemap 位置
+Sitemap: https://zeona.vercel.app/sitemap.xml
+
+# Google AI Overview / SGE
+User-Agent: Google-Extended
+Allow: /
+
+# GPTBot (OpenAI)
+User-Agent: GPTBot
+Allow: /
+
+# Claude (Anthropic)
+User-Agent: anthropic-ai
+Allow: /
+User-Agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-Agent: PerplexityBot
+Allow: /
+
+# Bing AI
+User-Agent: bingbot
+Allow: /
