@@ -104,8 +104,11 @@ const targetAudiences = [
             >
               <div class="flex items-center justify-center w-full h-48 md:h-56 overflow-hidden">
                 <img 
-                  :src="targetAudience.img" 
-                  class="max-h-full max-w-full object-contain" 
+                  :src="targetAudience.img"
+                  :alt="targetAudience.title + ' - 目標客群插圖'"
+                  class="max-h-full max-w-full object-contain"
+                  width="200"
+                  height="200"
                   loading="lazy"
                 />
               </div>

@@ -213,6 +213,7 @@ onMounted(() => {
               :src="currentPost.coverImage"
               :alt="currentPost.title"
               class="w-full h-auto aspect-[16/9] object-cover"
+              loading="lazy"
             />
           </div>
         </div>

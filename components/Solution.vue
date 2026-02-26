@@ -64,7 +64,7 @@ onMounted(() => {
           class="mb-8 md:mb-0 solution-card order-2 rounded-2xl overflow-hidden shadow-xl transition-all duration-1000 delay-200 transform"
           :class="[activeCards.has(1) ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
-          <img src="../assets/images/solution-1.jpg" alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl" />
+          <img src="../assets/images/solution-1.jpg" alt="全站式輕量服務 - 技術到行銷完整解決方案" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl" width="600" height="400" loading="lazy" />
         </div>
 
         <div 
@@ -84,7 +84,7 @@ onMounted(() => {
           class="mb-8 md:mb-0 solution-card order-4 md:order-3 rounded-2xl overflow-hidden shadow-xl transition-all duration-1000 delay-200 transform"
           :class="[activeCards.has(3) ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
-          <img src="../assets/images/solution-2.jpg" alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl" />
+          <img src="../assets/images/solution-2.jpg" alt="數據驅動調整 - 網站健康度檢測報告" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl" width="600" height="400" loading="lazy" />
         </div>
 
         <div 
@@ -104,7 +104,7 @@ onMounted(() => {
           class="mb-8 md:mb-0 solution-card order-6 rounded-2xl overflow-hidden shadow-xl transition-all duration-1000 delay-200 transform"
           :class="[activeCards.has(5) ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
-          <img src="../assets/images/solution-3.webp" alt="" class=" w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl" />
+          <img src="../assets/images/solution-3.webp" alt="訂閱制長期合作 - 固定收費品牌經營" class=" w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl" width="600" height="400" loading="lazy" />
         </div>
 
       </div>

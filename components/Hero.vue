@@ -60,11 +60,14 @@ onBeforeUnmount(() => {
             </div>
 
             <h1 class="text-white leading-[1.2] tracking-tight">
-              <span class="block text-3xl md:text-5xl lg:text-4xl xl:text-6xl font-light mb-4">打造會賺錢的</span>
-              <span
-                class="block text-5xl md:text-7xl lg:text-6xl xl:text-[90px] font-extrabold drop-shadow-2xl uppercase"
+              <span class="block text-3xl md:text-5xl lg:text-4xl xl:text-6xl font-light mb-4"
+                >從網站設計到社群經營</span
               >
-                線上數位門面
+              <span class="block text-4xl md:text-6xl lg:text-5xl xl:text-[70px] font-extrabold drop-shadow-2xl">
+                一站式數位服務
+              </span>
+              <span class="block text-2xl md:text-4xl lg:text-3xl xl:text-5xl font-medium mt-4 text-white/90">
+                讓品牌持續曝光變現
               </span>
             </h1>
 

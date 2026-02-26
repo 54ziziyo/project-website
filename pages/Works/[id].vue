@@ -104,6 +104,7 @@ onMounted(() => {
                 :src="currentPortfolio.image"
                 :alt="currentPortfolio.title"
                 class="w-full h-auto object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -207,7 +208,7 @@ onMounted(() => {
               :key="idx"
               class="rounded-2xl overflow-hidden border border-[#8782FF]/10 shadow-lg hover:shadow-[#8782FF]/20 transition-shadow duration-500"
             >
-              <img :src="img" class="w-full h-auto object-cover" alt="Insight Data" />
+              <img :src="img" class="w-full h-auto object-cover" :alt="`${currentPortfolio.title} 數據分析截圖 ${idx + 1}`" loading="lazy" />
             </div>
           </div>
 

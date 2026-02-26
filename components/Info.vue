@@ -114,7 +114,7 @@ onBeforeUnmount(() => {
           class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 py-8 transition-all duration-700 border hover:scale-105 transform"
           :class="visibleCards.has(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img :src="item.img" alt="Icon" class="mx-auto h-12 mb-4" />
+          <img :src="item.img" :alt="item.title + ' 服務圖示'" class="mx-auto h-12 mb-4" width="48" height="48" />
           <div class="text-lg font-bold mb-2">{{ item.title }}</div>
           <ul class="list-disc list-inside text-sm text-gray-500 mt-1 text-left">
             <li>{{ item.items[0] }}</li>
@@ -136,7 +136,7 @@ onBeforeUnmount(() => {
       <div class="space-y-[32px] md:space-y-[60px]">
         <div class="space-y-[8px] md:space-y-[16px]">
           <div class="flex items-center space-x-[12px] md:space-x-[24px]">
-            <img class="w-[20px] md:w-fit" src="../assets/images/project-team.svg" alt="" />
+            <img class="w-[20px] md:w-fit" src="../assets/images/project-team.svg" alt="團隊合作圖示" width="30" height="30" />
             <div class="text-[16px] md:text-[24px] font-bold pr-8">全面一站式｜設計 × 技術 × 行銷整合力</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
@@ -146,7 +146,7 @@ onBeforeUnmount(() => {
 
         <div class="space-y-[8px] md:space-y-[16px] md:pl-[50px]">
           <div class="flex items-center space-x-[12px] md:space-x-[24px]">
-            <img class="w-[20px] md:w-fit" src="../assets/images/custom-project.svg" alt="" />
+            <img class="w-[20px] md:w-fit" src="../assets/images/custom-project.svg" alt="客製化專案圖示" width="30" height="30" />
             <div class="text-[16px] md:text-[24px] font-bold pr-8">高彈性客製方案｜一對一深度服務，靈活彈性調整</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
@@ -156,7 +156,7 @@ onBeforeUnmount(() => {
 
         <div class="space-y-[8px] md:space-y-[16px] md:pl-[100px]">
           <div class="flex items-center space-x-[12px] md:space-x-[24px]">
-            <img class="w-[20px] md:w-fit" src="../assets/images/ongoing-maintenance.svg" alt="" />
+            <img class="w-[20px] md:w-fit" src="../assets/images/ongoing-maintenance.svg" alt="長期維護服務圖示" width="30" height="30" />
             <div class="text-[16px] md:text-[24px] font-bold pr-8">長期訂閱服務｜合作透明、流程清楚、溝通快速</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
@@ -174,8 +174,11 @@ onBeforeUnmount(() => {
       <div class="relative w-full md:rounded-2xl overflow-hidden bg-gray-500 text-white" style="height: 200px">
         <img
           src="../assets/images/solution-3.webp"
-          alt="背景圖"
+          alt="Zeona Studio 品牌行銷服務背景圖"
           class="absolute inset-0 w-full h-full object-cover opacity-50"
+          width="1200"
+          height="200"
+          loading="lazy"
         />
         <div class="absolute inset-0 bg-black/40" />
 

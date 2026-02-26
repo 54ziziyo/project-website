@@ -112,7 +112,7 @@ const testimonials = [
           class="flex justify-center items-center space-x-[-10px] mb-4 transition-all duration-1000 transform"
           :class="[isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
-          <img v-for="item in avatars" :key="item" :src="item" class="w-12 h-12 rounded-full border-2 border-white" />
+          <img v-for="(item, index) in avatars" :key="item" :src="item" :alt="`客戶頭像 ${index + 1}`" class="w-12 h-12 rounded-full border-2 border-white" width="48" height="48" />
         </div>
 
         <div
@@ -155,8 +155,11 @@ const testimonials = [
                 <div class="flex items-center">
                   <img
                     :src="testimonial.avatar"
-                    :alt="testimonial.author"
+                    :alt="testimonial.author + ' 頭像'"
                     class="w-12 h-12 rounded-full object-cover mr-4"
+                    width="48"
+                    height="48"
+                    loading="lazy"
                   />
 
                   <div>
@@ -177,12 +180,12 @@ const testimonials = [
           class="max-w-6xl mx-auto text-center transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          <h1
+          <h2
             class="font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]"
             style="font-size: clamp(24px, 5vw, 52px)"
           >
             即時啟動，打造您的數位競爭力
-          </h1>
+          </h2>
           <p class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center mb-16">
             一站式數位解決方案，協助品牌高效成長<br />有網站/行銷需求，加 Line 即可免費諮詢
           </p>

@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
           class="order-2 lg:order-2 rounded-2xl hover:shadow-xl shadow-lg flex flex-col transition-all duration-700 transform"
           :class="visibleCards.has(1) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img src="../assets/images/website-building.png" alt="" class="w-full h-full object-cover rounded-xl" />
+          <img src="../assets/images/website-building.png" alt="網站建置服務 - 品牌官網開發與 UI 設計" class="w-full h-full object-cover rounded-xl" width="400" height="300" loading="lazy" />
         </div>
 
         <!-- 卡片3 -->
@@ -105,7 +105,7 @@ onBeforeUnmount(() => {
           class="order-3 lg:order-4 rounded-2xl hover:shadow-xl shadow-lg flex flex-col transition-all duration-700 transform"
           :class="visibleCards.has(3) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img src="../assets/images/diversified-marketing.png" alt="" class="w-full h-full object-cover rounded-xl" />
+          <img src="../assets/images/diversified-marketing.png" alt="多元行銷服務 - SEO 優化與社群經營" class="w-full h-full object-cover rounded-xl" width="400" height="300" loading="lazy" />
         </div>
 
         <!-- 卡片5 -->
@@ -114,7 +114,7 @@ onBeforeUnmount(() => {
           class="order-6 lg:order-5 rounded-2xl hover:shadow-xl shadow-lg flex flex-col transition-all duration-700 transform"
           :class="visibleCards.has(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img src="../assets/images/high-quality.png" alt="" class="w-full h-full object-cover rounded-xl" />
+          <img src="../assets/images/high-quality.png" alt="高品質客製化設計 - 独特品牌視覺" class="w-full h-full object-cover rounded-xl" width="400" height="300" loading="lazy" />
         </div>
 
         <!-- 卡片6 -->
@@ -136,7 +136,7 @@ onBeforeUnmount(() => {
           class="order-7 lg:order-7 rounded-2xl hover:shadow-xl shadow-lg flex flex-col transition-all duration-700 transform"
           :class="visibleCards.has(6) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <img src="../assets/images/brand-context.png" alt="" class="w-full h-full object-cover rounded-xl" />
+          <img src="../assets/images/brand-context.png" alt="品牌脈絡規劃 - 數位策略建置" class="w-full h-full object-cover rounded-xl" width="400" height="300" loading="lazy" />
         </div>
 
         <!-- 卡片8 -->
