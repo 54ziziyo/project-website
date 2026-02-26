@@ -490,7 +490,7 @@ onMounted(() => {
                   </h2>
 
                   <!-- 摘要（桌面才顯示） -->
-                  <p class="hidden md:block text-gray-500 text-sm mb-3 line-clamp-2 leading-relaxed">
+                  <p class="text-gray-500 text-sm mb-3 line-clamp-2 leading-relaxed">
                     {{ post.excerpt }}
                   </p>
 
