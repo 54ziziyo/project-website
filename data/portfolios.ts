@@ -97,8 +97,8 @@ export const portfolios: Portfolio[] = [
     image: getImageUrl('fantasi_pro.png'),
     link: '/works/fantasi',
     websiteLink: 'https://www.fantasigloble.com',
-    flowchartLink:
-      'https://www.figma.com/file/W14AyPCjUNNQXD0vGJGbqa/Wireframe?type=whiteboard&node-id=0%3A1&t=lvUa01celevNQyTo-1',
+    // flowchartLink:
+    //   'https://www.figma.com/file/W14AyPCjUNNQXD0vGJGbqa/Wireframe?type=whiteboard&node-id=0%3A1&t=lvUa01celevNQyTo-1',
   },
   {
     id: 'vida-creator-platform',
@@ -111,7 +111,7 @@ export const portfolios: Portfolio[] = [
     image: getImageUrl('vida_dev.png'),
     link: '/works/vida-creator-platform',
     websiteLink: 'https://vida.pub',
-    flowchartLink: 'https://www.figma.com/file/Uyyom25m2tINK3BKYmxohF/Vida?type=whiteboard&node-id=0%3A1',
+    // flowchartLink: 'https://www.figma.com/file/Uyyom25m2tINK3BKYmxohF/Vida?type=whiteboard&node-id=0%3A1',
   },
   {
     id: 'freelance',
