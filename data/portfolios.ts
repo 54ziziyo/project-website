@@ -26,6 +26,24 @@ export interface Portfolio {
 
 export const portfolios: Portfolio[] = [
   {
+    id: 'hogan-tech-reels-typeless2',
+    title: '【短影片】Typeless業配Ⅱ',
+    category: '行銷營運',
+    shortDesc: 'Typeless 介紹影片',
+    description: `這篇 Reels 專注於製作業配內容。<br /><br />
+    1. 業配專案策略規劃：深度解析品牌需求，產出具備高轉化率的創意腳本。<br />
+    2. 社群文案撰寫：根據平台屬性調校內容語調，優化受眾參與度。<br />
+    3. 全場景影像拍攝：獨立完成運鏡設計、燈光佈置與動態捕捉，確保畫面層次感。<br />
+    4. 動態影像剪輯與節奏掌控：流暢處理素材，運用進階轉場技巧提升敘事邏輯。<br />
+    `,
+    features: ['腳本規劃', '拍攝剪輯', '業配文案撰寫'],
+    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
+    image: getImageUrl('hogan-tech-reels-typeless2_main.jpg'),
+    link: '/works/hogan-tech-reels-typeless2',
+    websiteLink: 'https://www.instagram.com/p/DWFtYFHDwP6/',
+    instagramEmbed: 'DWFtYFHDwP6',
+  },
+  {
     id: 'luxetravel',
     title: 'Luxe Travel 歐洲旅遊平台',
     category: '網站架設',
@@ -567,7 +585,7 @@ export const portfolios: Portfolio[] = [
     techStack: ['Figma', 'HTML', 'CSS', 'Bootstrap', 'JavaScript', 'RWD'],
     image: getImageUrl('oneCallCar_des.jpeg'),
     link: '/works/one-click-car',
-    websiteLink: '#',
+    websiteLink: 'https://www.appdemostore.com/embed?id=5122270743232512',
   },
 
   {
@@ -586,7 +604,7 @@ export const portfolios: Portfolio[] = [
     techStack: ['jQuery', 'Bootstrap', 'UI/UX', 'Lottie Animations', 'RWD', 'Figma', 'HTML', 'SCSS'],
     image: getImageUrl('qrcode_des.jpeg'),
     link: '/works/qrcode-scan-call',
-    websiteLink: '#',
+    websiteLink: 'https://www.55688taxi.com/uploads/1/2/3/3/123323210/230915qrcode-1_orig.png',
   },
   {
     id: 'enterprise-management',
