@@ -44,6 +44,42 @@ export const portfolios: Portfolio[] = [
     instagramEmbed: 'DWFtYFHDwP6',
   },
   {
+    id: 'lunn-yan-reels-serena-eggroll',
+    title: '【短影片】喜年來蛋捲',
+    category: '行銷營運',
+    shortDesc: '喜年來蛋捲介紹影片',
+    description: `這篇 Reels 專注於製作業配內容。<br /><br />
+    1. 業配專案策略規劃：深度解析品牌需求，產出具備高轉化率的創意腳本。<br />
+    2. 社群文案撰寫：根據平台屬性調校內容語調，優化受眾參與度。<br />
+    3. 全場景影像拍攝：獨立完成運鏡設計、燈光佈置與動態捕捉，確保畫面層次感。<br />
+    4. 動態影像剪輯與節奏掌控：流暢處理素材，運用進階轉場技巧提升敘事邏輯。<br />
+    `,
+    features: ['腳本規劃', '拍攝剪輯', '業配文案撰寫'],
+    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
+    image: getImageUrl('lunn-yan-reels-serena-eggroll_main.jpg'),
+    link: '/works/lunn-yan-reels-serena-eggroll',
+    websiteLink: 'https://www.instagram.com/p/DPOczgVEzih/',
+    instagramEmbed: 'DPOczgVEzih',
+  },
+  {
+    id: 'lunn-yan-reels-harry-potter',
+    title: '【短影片】哈利波特體驗',
+    category: '行銷營運',
+    shortDesc: '哈利波特新店面體驗影片',
+    description: `這篇 Reels 專注於製作體驗內容。<br /><br />
+    1. 體驗策略規劃：介紹哈利波特新開店面的創意腳本。<br />
+    2. 社群文案撰寫：根據平台屬性調校內容語調，優化受眾參與度。<br />
+    3. 全場景影像拍攝：獨立完成運鏡設計、燈光佈置與動態捕捉，確保畫面層次感。<br />
+    4. 動態影像剪輯與節奏掌控：流暢處理素材，運用進階轉場技巧提升敘事邏輯。<br />
+    `,
+    features: ['腳本規劃', '拍攝剪輯', '業配文案撰寫'],
+    techStack: ['CapCut', 'Strategy Planning', 'Instagram Edits'],
+    image: getImageUrl('lunn-yan-reels-harry-potter_main.jpg'),
+    link: '/works/lunn-yan-reels-harry-potter',
+    websiteLink: 'https://www.instagram.com/p/DPv06WwkyGI/',
+    instagramEmbed: 'DPv06WwkyGI',
+  },
+  {
     id: 'luxetravel',
     title: 'Luxe Travel 歐洲旅遊平台',
     category: '網站架設',
