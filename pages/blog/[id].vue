@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getPostById, getRecommendedPosts, blogCategories } from '~/data/blogs'
+import { type BlogPost } from '~/data/blogs'
 
 definePageMeta({
   key: (route) => route.fullPath,
@@ -8,14 +8,21 @@ definePageMeta({
 const route = useRoute()
 const isVisible = ref(false)
 
-const currentPost = computed(() => {
-  const id = route.params.id as string
-  return getPostById(id) || null
-})
+const { data: currentPost } = await useAsyncData<BlogPost>(
+  `blog-${route.params.id}`,
+  () => $fetch<BlogPost>(`/api/blogs/${route.params.id}`),
+)
+
+// 推薦文章：取同分類的其他文章
+const { data: allPosts } = await useAsyncData<BlogPost[]>('blogs', () =>
+  $fetch<BlogPost[]>('/api/blogs'),
+)
 
 const recommendedPosts = computed(() => {
-  if (!currentPost.value) return []
-  return getRecommendedPosts(currentPost.value.id, 3)
+  if (!currentPost.value || !allPosts.value) return []
+  return allPosts.value
+    .filter((p) => p.id !== currentPost.value!.id && p.category === currentPost.value!.category)
+    .slice(0, 3)
 })
 
 // 動態 SEO

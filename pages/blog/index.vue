@@ -1,13 +1,39 @@
 <script setup lang="ts">
-import {
-  blogPosts,
-  blogCategories,
-  getPostsByCategory,
-  getPostsByTag,
-  searchPosts,
-  allTags,
-  type BlogPost,
-} from '~/data/blogs'
+import { blogCategories, type BlogPost } from '~/data/blogs'
+
+const { data: blogPosts } = await useAsyncData<BlogPost[]>(
+  'blogs',
+  () => $fetch<BlogPost[]>('/api/blogs'),
+  { default: () => [] as BlogPost[] },
+)
+
+const allTags = computed(() => {
+  const tagCount = new Map<string, number>()
+  ;(blogPosts.value || []).forEach((p) =>
+    p.tags.forEach((t) => tagCount.set(t, (tagCount.get(t) || 0) + 1)),
+  )
+  return [...tagCount.entries()].sort((a, b) => b[1] - a[1]).map(([tag]) => tag)
+})
+
+function getPostsByCategory(category: string): BlogPost[] {
+  const posts = blogPosts.value || []
+  if (category === '全部') return posts
+  return posts.filter((p) => p.category === category)
+}
+
+function getPostsByTag(tag: string): BlogPost[] {
+  return (blogPosts.value || []).filter((p) => p.tags.includes(tag))
+}
+
+function searchPosts(query: string): BlogPost[] {
+  const q = query.toLowerCase()
+  return (blogPosts.value || []).filter(
+    (p) =>
+      p.title.toLowerCase().includes(q) ||
+      p.excerpt.toLowerCase().includes(q) ||
+      p.tags.some((t) => t.toLowerCase().includes(q)),
+  )
+}
 
 const route = useRoute()
 const router = useRouter()

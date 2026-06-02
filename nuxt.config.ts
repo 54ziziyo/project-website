@@ -5,6 +5,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    notionToken: process.env.NOTION_TOKEN,
+    notionDatabaseId: process.env.NOTION_DATABASE_ID,
+  },
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
