@@ -9,6 +9,7 @@ export interface BlogPost {
   author: string
   publishedAt: string
   updatedAt: string
+  featured?: boolean
   seo: {
     title: string
     description: string
