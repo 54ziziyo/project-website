@@ -97,24 +97,14 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
       ],
       link: [
+        { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+        { rel: 'preconnect', href: 'https://www.google-analytics.com' },
+        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'canonical', href: 'https://zeona.vercel.app' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       ],
       script: [
-        // Google Analytics (gtag.js)
-        {
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-5QEVXM0T57',
-          async: true,
-        },
-        {
-          innerHTML: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5QEVXM0T57');
-          `,
-        },
         // Organization Schema (JSON-LD) - AEO 優化
         {
           type: 'application/ld+json',

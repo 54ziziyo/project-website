@@ -2,27 +2,35 @@
 const scrollY = ref(0)
 const isLoaded = ref(false)
 const guideModalOpen = ref(false)
-const isInAppBrowser = ref(false) // 💡 用於標記是否為內建瀏覽器
+const isInAppBrowser = ref(false)
 
+// 使用 SSR-aware 裝置偵測，手機版不載入 Lottie（節省 JS 解析效能）
+const { isMobileOrTablet } = useDevice()
+
+let rafId: number | null = null
 const handleScroll = () => {
-  scrollY.value = window.scrollY
+  if (rafId !== null) return
+  rafId = requestAnimationFrame(() => {
+    scrollY.value = window.scrollY
+    rafId = null
+  })
 }
 
 const checkBrowser = () => {
   if (import.meta.client) {
     const ua = navigator.userAgent || navigator.vendor || (window as any).opera
-    // 💡 檢測常見的內建瀏覽器標籤
     isInAppBrowser.value = /Instagram|FBAN|FBAV|Line/i.test(ua)
   }
 }
 
 onMounted(() => {
   isLoaded.value = true
-  checkBrowser() // 💡 掛載時執行檢測
-  window.addEventListener('scroll', handleScroll)
+  checkBrowser()
+  window.addEventListener('scroll', handleScroll, { passive: true })
 })
 
 onBeforeUnmount(() => {
+  if (rafId !== null) cancelAnimationFrame(rafId)
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
@@ -126,7 +134,7 @@ onBeforeUnmount(() => {
 
               <div class="relative z-10 w-full aspect-square flex items-center justify-center overflow-hidden">
                 <client-only>
-                  <Lottie name="web-animations" class="transform scale-[1.3] md:scale-[1.5]" />
+                  <Lottie v-if="!isMobileOrTablet" name="web-animations" class="transform scale-[1.3] md:scale-[1.5]" />
                 </client-only>
               </div>
             </div>
@@ -193,6 +201,21 @@ onBeforeUnmount(() => {
     radial-gradient(circle at var(--yellow-x) var(--yellow-y), #ffe3a8, #fffdf9 50%);
   background-color: #ffffff;
   animation: moveGradients 10s linear infinite;
+}
+
+@media (max-width: 1023px) {
+  .bg-gradient-animated {
+    animation-duration: 20s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-gradient-animated {
+    animation: none;
+  }
+  .animate-float {
+    animation: none;
+  }
 }
 
 @keyframes moveGradients {
