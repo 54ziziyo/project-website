@@ -61,14 +61,14 @@ onBeforeUnmount(() => {
       >
         <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">關於我</div>
         <h1 class="text-[24px] md:text-[52px] font-bold leading-[1.25] mb:mb-12 mb-8">
-          我用 AI 經營品牌<br />也把工具分享給<span class="text-[#8782FF]">每一個你</span>
+          我是 Zeona 的創辦人<br />行銷、設計、前端，<span class="text-[#8782FF]">一個人全包</span>
         </h1>
-        <div class="text-[#5B5B5B] text-[14px] md:text-[16px] mb-4">
-          嗨，我是經營 Zeona 的個人創作者，擅長把網站開發、設計與數位行銷結合 AI 與自動化。
+        <div class="text-[#5B5B5B] text-[14px] md:text-[16px] mb-4 leading-relaxed">
+          我同時是行銷人、設計師，也是前端工程師。能同時處理這麼多面向的業務，不是因為我天生比別人有時間，而是因為我大量使用 AI 與自動化工具。
           <br />
-          我相信在 AI 時代，一個人也能做出過去需要整個團隊才能完成的事——行銷、設計、文案、網站與內容，都能做得更快更好。
+          我的最終目標，是打造一個 100% 幫我自動營運的 AI 系統——讓 AI 幫我跑行銷輪播、寫部落格、做視覺設計。
           <br />
-          我把實戰中在用的工具、提示詞與模板整理成數位工具箱分享給你；需要更進階的客製化開發，我也能直接幫你打造。
+          在這個探索的過程中，我把最實用、能真正落地賺錢的模板與工具包整理在「數位工具箱」。我走過的捷徑，你現在可以直接複製。
         </div>
       </div>
 

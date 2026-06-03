@@ -69,22 +69,23 @@ onBeforeUnmount(() => {
 
             <div class="text-white leading-[1.2] tracking-tight">
               <span class="hidden text-3xl md:text-5xl lg:text-4xl xl:text-6xl font-light mb-4"
-                >用 AI 加速你的品牌</span
+                >AI 與數位工具的時代</span
               >
               <span class="block text-4xl md:text-6xl lg:text-5xl xl:text-[70px] drop-shadow-2xl">
-                用 AI，把專業變簡單
+                你不需要大團隊
               </span>
               <span class="block text-2xl md:text-4xl lg:text-3xl xl:text-5xl font-medium mt-4 text-white/90">
-                一個人，也能做出行銷與內容
+                只需要一套好工具
               </span>
             </div>
 
             <h1
               class="text-white/85 text-base md:text-xl max-w-2xl mt-8 mb-12 leading-relaxed font-normal mx-auto lg:mx-0"
             >
-              我把自己在用的 <span class="text-white font-bold border-b-2 border-white/40 pb-1">AI 工具、提示詞與模板</span>
-              整理成數位工具箱分享給你。 需要更進階的
-              <span class="text-white font-bold border-b-2 border-white/40 pb-1">客製化開發</span>，我也能幫你打造。
+              Zeona 提供即套即用的
+              <span class="text-white font-bold border-b-2 border-white/40 pb-1">數位工具箱、提示詞與自動化範本</span>，
+              幫你把重複的行銷、設計、文案與網站架設全面自動化。 需求更複雜？我們也提供一對一的
+              <span class="text-white font-bold border-b-2 border-white/40 pb-1">客製化軟體開發與 AI 系統串接</span>。
             </h1>
 
             <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
