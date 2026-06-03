@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "about": "關於我",
+    "services": "服務項目",
+    "servicesSoftware": "軟體開發",
+    "servicesSoftwareDesc": "網站、AI 工具、LINE 機器人、自動化流程等客製化軟體開發服務",
+    "servicesDesign": "視覺設計",
+    "servicesDesignDesc": "設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象",
+    "faq": "常見問題",
+    "toolbox": "數位工具箱",
+    "works": "作品集",
+    "blog": "部落格",
+    "contact": "立即聯繫"
+  },
+  "hero": {
+    "badge": "AI Powered Toolkit",
+    "kicker": "AI 與數位工具的時代",
+    "title1": "你不需要大團隊",
+    "title2": "只需要一套好工具",
+    "bodyPre": "Zeona 提供即套即用的",
+    "bodyToolkit": "數位工具箱、提示詞與自動化範本",
+    "bodyMid": "，幫你把重複的行銷、設計、文案與網站架設全面自動化。需求更複雜？我們也提供一對一的",
+    "bodyCustom": "客製化軟體開發與 AI 系統串接",
+    "bodyPost": "。",
+    "ctaToolbox": "逛數位工具箱 →",
+    "ctaGuide": "免費領取攻略秘笈"
+  }
+}

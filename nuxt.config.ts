@@ -24,7 +24,23 @@ export default defineNuxtConfig({
     'nuxt-lottie',
     '@nuxtjs/device',
     '@nuxtjs/sitemap',
+    '@nuxtjs/i18n',
   ],
+
+  // 多語系：中文為預設（網址不變），英文走 /en/
+  i18n: {
+    defaultLocale: 'zh-TW',
+    strategy: 'prefix_except_default',
+    locales: [
+      { code: 'zh-TW', language: 'zh-TW', name: '中文', file: 'zh-TW.json' },
+      { code: 'en', language: 'en-US', name: 'EN', file: 'en.json' },
+    ],
+    // 不自動依瀏覽器語言轉址，避免使用者被無預期導去英文版
+    detectBrowserLanguage: false,
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
+  },
 
   // 網站基本 URL（sitemap 需要）
   site: {

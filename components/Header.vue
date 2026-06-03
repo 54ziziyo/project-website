@@ -41,18 +41,22 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-const components: { title: string; href: string; description: string }[] = [
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
+
+const components = computed(() => [
   {
-    title: '軟體開發',
-    href: '/services/website',
-    description: '網站、AI 工具、LINE 機器人、自動化流程等客製化軟體開發服務',
+    title: t('nav.servicesSoftware'),
+    href: localePath('/services/website'),
+    description: t('nav.servicesSoftwareDesc'),
   },
   {
-    title: '視覺設計',
-    href: '/services/design',
-    description: '設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象',
+    title: t('nav.servicesDesign'),
+    href: localePath('/services/design'),
+    description: t('nav.servicesDesignDesc'),
   },
-]
+])
 
 // 控制 Drawer 開關
 const showMenu = ref(false)
@@ -75,7 +79,7 @@ const showMenu = ref(false)
     >
       <!-- Logo -->
       <div class="font-extrabold text-xl font-[Hammersmith_One] cursor-pointer">
-        <a href="/" title="Zeona Studio 首頁 - 網站設計與社群行銷">Zeona</a>
+        <a :href="localePath('/')" title="Zeona Studio 首頁 - 網站設計與社群行銷">Zeona</a>
       </div>
 
       <!-- Navigation -->
@@ -83,16 +87,16 @@ const showMenu = ref(false)
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="/about"
+              :href="localePath('/about')"
               title="關於 Zeona Studio - 認識我們的服務與理念"
               :class="navigationMenuTriggerStyle()"
             >
-              關於我
+              {{ $t('nav.about') }}
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>服務項目</NavigationMenuTrigger>
+            <NavigationMenuTrigger>{{ $t('nav.services') }}</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 <li v-for="component in components" :key="component.title">
@@ -117,48 +121,63 @@ const showMenu = ref(false)
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="/faq"
+              :href="localePath('/faq')"
               title="常見問題 FAQ - 軟體開發與行銷服務疑問解答"
               :class="navigationMenuTriggerStyle()"
             >
-              常見問題
+              {{ $t('nav.faq') }}
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink href="/toolbox" :class="navigationMenuTriggerStyle()"> 數位工具箱 </NavigationMenuLink>
+            <NavigationMenuLink :href="localePath('/toolbox')" :class="navigationMenuTriggerStyle()">
+              {{ $t('nav.toolbox') }}
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="/works"
+              :href="localePath('/works')"
               title="作品集 - 網站開發與行銷案例展示"
               :class="navigationMenuTriggerStyle()"
             >
-              作品集
+              {{ $t('nav.works') }}
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="/blog"
+              :href="localePath('/blog')"
               title="部落格 - AI、行銷與網站開發教學"
               :class="navigationMenuTriggerStyle()"
             >
-              部落格
+              {{ $t('nav.blog') }}
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 
-      <!-- CTA Button -->
-      <div class="md:flex hidden">
+      <!-- 語言切換 + CTA Button -->
+      <div class="md:flex hidden items-center gap-4">
+        <div class="flex items-center gap-1 text-sm font-semibold">
+          <NuxtLink
+            :to="switchLocalePath('zh-TW')"
+            :class="locale === 'zh-TW' ? 'text-[#8782FF]' : 'text-gray-400 hover:text-[#8782FF]'"
+            >中</NuxtLink
+          >
+          <span class="text-gray-300">/</span>
+          <NuxtLink
+            :to="switchLocalePath('en')"
+            :class="locale === 'en' ? 'text-[#8782FF]' : 'text-gray-400 hover:text-[#8782FF]'"
+            >EN</NuxtLink
+          >
+        </div>
         <a
-          href="/contact"
-          title="聯繫我們 - 免費諮詢網站設計與行銷服務"
+          :href="localePath('/contact')"
+          title="聯繫我 - 填寫表單聊聊你的需求"
           class="px-5 py-2 text-white text-sm bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-2 hover:bg-[#6f6bff] transition-colors duration-300"
         >
-          <span>立即聯繫</span>
+          <span>{{ $t('nav.contact') }}</span>
         </a>
       </div>
 

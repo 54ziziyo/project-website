@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "servicesSoftware": "Software Dev",
+    "servicesSoftwareDesc": "Custom software development: websites, AI tools, LINE bots, automation and more",
+    "servicesDesign": "Design",
+    "servicesDesignDesc": "Design packages, branding and UI/UX to build a distinctive brand identity",
+    "faq": "FAQ",
+    "toolbox": "Toolbox",
+    "works": "Work",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "AI Powered Toolkit",
+    "kicker": "The era of AI & digital tools",
+    "title1": "You don't need a big team",
+    "title2": "Just the right tools",
+    "bodyPre": "Zeona gives you ready-to-use",
+    "bodyToolkit": "digital toolkits, prompts and automation templates",
+    "bodyMid": " to automate your repetitive marketing, design, copywriting and website work. Need something more complex? We also offer one-on-one",
+    "bodyCustom": "custom software development & AI integration",
+    "bodyPost": ".",
+    "ctaToolbox": "Explore the Toolbox →",
+    "ctaGuide": "Get the free playbook"
+  }
+}

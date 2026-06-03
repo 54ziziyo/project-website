@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const localePath = useLocalePath()
+
 const scrollY = ref(0)
 const isLoaded = ref(false)
 const guideModalOpen = ref(false)
@@ -62,44 +64,45 @@ onBeforeUnmount(() => {
                   <span class="w-1.5 h-4 bg-white/50 rounded-full animate-pulse [animation-delay:0.3s]" />
                 </div>
                 <p class="text-xs md:text-sm font-bold tracking-[0.2em] text-white uppercase">
-                  AI Powered Toolkit
+                  {{ $t('hero.badge') }}
                 </p>
               </div>
             </div>
 
             <div class="text-white leading-[1.2] tracking-tight">
-              <span class="hidden text-3xl md:text-5xl lg:text-4xl xl:text-6xl font-light mb-4"
-                >AI 與數位工具的時代</span
-              >
+              <span class="hidden text-3xl md:text-5xl lg:text-4xl xl:text-6xl font-light mb-4">{{
+                $t('hero.kicker')
+              }}</span>
               <span class="block text-4xl md:text-6xl lg:text-5xl xl:text-[70px] drop-shadow-2xl">
-                你不需要大團隊
+                {{ $t('hero.title1') }}
               </span>
               <span class="block text-2xl md:text-4xl lg:text-3xl xl:text-5xl font-medium mt-4 text-white/90">
-                只需要一套好工具
+                {{ $t('hero.title2') }}
               </span>
             </div>
 
             <h1
               class="text-white/85 text-base md:text-xl max-w-2xl mt-8 mb-12 leading-relaxed font-normal mx-auto lg:mx-0"
             >
-              Zeona 提供即套即用的
-              <span class="text-white font-bold border-b-2 border-white/40 pb-1">數位工具箱、提示詞與自動化範本</span>，
-              幫你把重複的行銷、設計、文案與網站架設全面自動化。 需求更複雜？我們也提供一對一的
-              <span class="text-white font-bold border-b-2 border-white/40 pb-1">客製化軟體開發與 AI 系統串接</span>。
+              {{ $t('hero.bodyPre') }}
+              <span class="text-white font-bold border-b-2 border-white/40 pb-1">{{ $t('hero.bodyToolkit') }}</span>
+              {{ $t('hero.bodyMid') }}
+              <span class="text-white font-bold border-b-2 border-white/40 pb-1">{{ $t('hero.bodyCustom') }}</span
+              >{{ $t('hero.bodyPost') }}
             </h1>
 
             <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
               <NuxtLink
-                to="/toolbox"
+                :to="localePath('/toolbox')"
                 class="px-12 py-4 bg-white text-black font-bold text-lg rounded-full transition-all hover:scale-105 hover:shadow-xl active:scale-95 cursor-pointer text-center"
               >
-                逛數位工具箱 →
+                {{ $t('hero.ctaToolbox') }}
               </NuxtLink>
               <button
                 class="px-12 py-4 border border-white/40 text-white font-semibold text-lg rounded-full backdrop-blur-sm hover:bg-white/10 transition-all active:scale-95 cursor-pointer"
                 @click="guideModalOpen = true"
               >
-                免費領取攻略秘笈
+                {{ $t('hero.ctaGuide') }}
               </button>
             </div>
           </div>
