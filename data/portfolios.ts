@@ -82,7 +82,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'luxetravel',
     title: 'Luxe Travel 歐洲旅遊平台',
-    category: '網站架設',
+    category: '軟體開發',
     shortDesc: '頂級歐洲旅遊規劃服務',
     description: `Luxe Travel 是專精於歐洲度假的頂級旅遊規劃平台。提供多元化的旅遊服務，包括精選團體旅遊、客製化自由行和豪華郵輪，旨在滿足旅客對完美旅程的所有嚮往。<br /><br />在各大旅遊論壇上獲得了卓越的聲譽和好評。至今已幫助多名旅客實現探索歐洲的夢想，並為數百對新人打造難忘的蜜月之旅。`,
     features: ['精選團體旅遊方案', '客製化自由行規劃', '豪華郵輪行程', 'SEO 優化與搜尋排名', '響應式設計體驗'],
@@ -94,7 +94,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'levert',
     title: 'Levert 益生菌電商平台',
-    category: '網站架設',
+    category: '軟體開發',
     shortDesc: '專業保健品線上購物體驗',
     description: `Levert 益生菌提供無縫的線上購物體驗，具備專屬會員計畫、直覺化的產品預覽和簡化的結帳流程。<br/><br/>品牌堅定承諾打造真正有效的美容保健品，不含人工色素、香料或甜味劑，為消費者帶來最純淨的健康選擇。`,
     features: ['電商購物車', '直覺化產品瀏覽', '簡化結帳流程', '產品輪播展示', 'API 整合串接'],
@@ -106,7 +106,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'miniclub',
     title: 'Miniclub 旅遊服務平台',
-    category: '品牌官網',
+    category: '軟體開發',
     shortDesc: '專業顧問旅遊規劃服務',
     description: `體驗兩全其美的旅遊方式——完整的行程彈性與專業團體旅遊的可靠便利，專業顧問為你打造專屬旅遊，省去訂房和駕駛的麻煩。<br/><br/>透過最完整精緻的導遊服務，致力為顧客提供最輕鬆、最享受的旅遊體驗。`,
     features: ['彈性客製化行程', '專車接送服務', '專業顧問規劃', 'SEO 搜尋優化', '響應式網頁設計'],
@@ -118,7 +118,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'funlooker',
     title: 'Funlooker 全球夜生活指南',
-    category: '品牌官網',
+    category: '軟體開發',
     shortDesc: '探索全球夜生活的最佳平台',
     description: `Funlooker 是一個全球夜生活指南平台，幫助使用者探索世界各地的酒吧、俱樂部、派對和獨特的娛樂場所，包括伴遊服務和專屬體驗。<br/><br/>無論是旅行者還是當地居民，都能在這裡找到從主流社交場所到各個娛樂的全方位資訊。`,
     features: [
@@ -134,30 +134,9 @@ export const portfolios: Portfolio[] = [
     websiteLink: 'https://funlooker.co',
   },
   {
-    id: 'fantasi',
-    title: 'Fantasi 創作者交流平台',
-    category: '網站架設',
-    shortDesc: '創作者與粉絲的獨特交流空間',
-    description: `Fantasi.one 是一個專為創作者與粉絲打造的獨特交流空間，創作者可以在平台上分享精彩的影片內容。<br/><br/>粉絲則可透過訂閱或單次購買的方式，取得專屬的獨家內容存取權限。平台致力於建立創作者與粉絲之間更緊密的連結，讓創作價值得到更好的實現。`,
-    features: [
-      '此網站為成人網站, 禁止未滿 18 歲進入',
-      '創作者內容管理系統',
-      '訂閱制與單次購買功能',
-      '多語系支援 (Vue-i18n)',
-      '會員管理與認證系統',
-      '安全的金流整合',
-    ],
-    techStack: ['vue-gtm', 'vee-validate', 'Pinia', 'Vue-i18n', 'Vue-router', 'Figma', 'SCSS', 'Vue', 'Axios'],
-    image: getImageUrl('fantasi_pro.png'),
-    link: '/works/fantasi',
-    websiteLink: 'https://www.fantasigloble.com',
-    // flowchartLink:
-    //   'https://www.figma.com/file/W14AyPCjUNNQXD0vGJGbqa/Wireframe?type=whiteboard&node-id=0%3A1&t=lvUa01celevNQyTo-1',
-  },
-  {
     id: 'vida-creator-platform',
     title: 'Vida 創作者平台',
-    category: '網站架設',
+    category: '軟體開發',
     shortDesc: '創作者主導的互動訂閱平台',
     description: `VIDA 是一個以創作者為中心的平台，提供粉絲觀看、評論功能，創作者可透過「設定付款」或「天數訂閱」功能吸引流量並變現。`,
     features: ['訂閱制付費功能', '創作者天數訂閱方案', '多語系支援 (Vue-i18n)', '內容包裝與推廣邏輯'],
@@ -188,7 +167,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'photographer-studio',
     title: '攝影工作室作品集網站',
-    category: '網站架設',
+    category: '軟體開發',
     shortDesc: '互動式影像作品展示平台',
     description: `為攝影師量身打造的作品集網站。首頁具備互動效果，使用者只需懸停在項目縮略圖上即可預覽影片內容。系統使用 Google Sheets 作為輕量化 CMS，讓攝影師無需維護複雜後台即可即時更新內容。`,
     features: [
@@ -206,7 +185,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'taiwan-travel-guide',
     title: '台灣旅遊景點指南',
-    category: '網站架設',
+    category: '軟體開發',
     shortDesc: '實作最新技術的互動地圖',
     description: `積極實踐新技術的 Side Project。具備導航篩選功能，讓訪客能輕鬆搜尋景點資訊。整合地圖圖資並可加入我的最愛清單，提供直覺的台灣地理位置查詢體驗。`,
     features: [
@@ -584,7 +563,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'one-click-car-bg',
     title: '一鍵叫車後台管理系統',
-    category: '網站架設',
+    category: '軟體開發',
     shortDesc: '設備與租戶管理中心',
     description: `專為內部管理人員設計，用於設定租戶與設備機器。系統支援設定多種叫車服務，如「掃碼叫車」、「Inline 串接」等後台參數設定。`,
     features: ['租戶權限管理', '設備狀態監控', '後台參數設定', 'QR Code 叫車管理', '設計規範系統 (Design Guideline)'],
@@ -614,7 +593,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'one-click-car',
     title: '一鍵叫車平板應用',
-    category: '網站架設',
+    category: '軟體開發',
     shortDesc: '實體店面快速叫車解決方案',
     description: `台灣大車隊與餐廳、百貨、住宅及超商合作，在樓層安裝叫車機，協助不熟悉 App 的長者或臨時需求的顧客。此 Android 應用程式基於 Lenovo 平板開發，透過內嵌網頁實現快速更新與部署，與後台平台保持即時聯繫。`,
     features: ['Android 平板應用開發', '內嵌網頁串接技術', '快速叫車流程優化', '多租戶權限設備管理'],
@@ -645,7 +624,7 @@ export const portfolios: Portfolio[] = [
   {
     id: 'enterprise-management',
     title: '企業簽單後台管理系統',
-    category: '網站架設',
+    category: '軟體開發',
     shortDesc: '企業交通費用集中管理平台',
     description: `「企業簽單後台管理系統」讓業主能集中管理員工差旅，清楚查看每趟行程的地點、時間與費用，簡化報支流程。`,
     features: [
@@ -699,6 +678,27 @@ export const portfolios: Portfolio[] = [
     websiteLink: 'https://www.tww.com.tw/Main/Index_m',
     flowchartLink: 'https://www.figma.com/file/x2LsP0yc67IJKEivlWNGWK/潔衣家?type=whiteboard&node-id=0%3A1',
   },
+  {
+    id: 'fantasi',
+    title: 'Fantasi 創作者交流平台',
+    category: '軟體開發',
+    shortDesc: '創作者與粉絲的獨特交流空間',
+    description: `Fantasi.one 是一個專為創作者與粉絲打造的獨特交流空間，創作者可以在平台上分享精彩的影片內容。<br/><br/>粉絲則可透過訂閱或單次購買的方式，取得專屬的獨家內容存取權限。平台致力於建立創作者與粉絲之間更緊密的連結，讓創作價值得到更好的實現。`,
+    features: [
+      '此網站為成人網站, 禁止未滿 18 歲進入',
+      '創作者內容管理系統',
+      '訂閱制與單次購買功能',
+      '多語系支援 (Vue-i18n)',
+      '會員管理與認證系統',
+      '安全的金流整合',
+    ],
+    techStack: ['vue-gtm', 'vee-validate', 'Pinia', 'Vue-i18n', 'Vue-router', 'Figma', 'SCSS', 'Vue', 'Axios'],
+    image: getImageUrl('fantasi_pro.png'),
+    link: '/works/fantasi',
+    websiteLink: 'https://www.fantasigloble.com',
+    // flowchartLink:
+    //   'https://www.figma.com/file/W14AyPCjUNNQXD0vGJGbqa/Wireframe?type=whiteboard&node-id=0%3A1&t=lvUa01celevNQyTo-1',
+  },
 ]
 
-export const categories = ['全部', '網站架設', '行銷營運', '視覺設計']
+export const categories = ['全部', '軟體開發', '行銷營運', '視覺設計']
