@@ -57,12 +57,12 @@ onMounted(() => {
           class="solution-card order-1 flex flex-col justify-center text-center md:text-left transition-all duration-1000 transform"
           :class="[activeCards.has(0) ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0']"
         >
-          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">01. 全站式輕量服務</div>
+          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">01. 現成工具直接套用</div>
           <div class="text-[20px] md:text-[28px] font-extrabold mb-4 text-[#333] leading-snug">
-            我從技術到行銷<br />提供完整輕解決方案
+            不用從零開始<br />套上模板就能用
           </div>
           <div class="text-[#5B5B5B] text-base md:text-lg leading-relaxed">
-            適合品牌行銷、中小型電商與企業，讓您告別瑣碎的溝通，專注於品牌成長。
+            數位工具箱裡有現成的 AI 提示詞、模板與素材包，挑了就能用，幫你跨過「不知道怎麼開始」的門檻。
           </div>
         </div>
 
@@ -72,8 +72,8 @@ onMounted(() => {
         >
           <img
             src="../assets/images/solution-1.jpg"
-            alt="全站式輕量服務 - 技術到行銷完整解決方案"
-            title="一站式數位服務方案"
+            alt="現成 AI 工具與模板 - 套版就能用"
+            title="數位工具箱模板與素材"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl"
             width="600"
             height="400"
@@ -85,12 +85,12 @@ onMounted(() => {
           class="solution-card order-3 md:order-4 flex flex-col justify-center text-center md:text-left transition-all duration-1000 transform"
           :class="[activeCards.has(2) ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0']"
         >
-          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">02. 可驗證的調整</div>
+          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">02. 可複製的 AI 流程</div>
           <div class="text-[20px] md:text-[28px] font-extrabold mb-4 text-[#333] leading-snug">
-            用數據說真話的成長夥伴
+            把好結果變成穩定產出
           </div>
           <div class="text-[#5B5B5B] text-base md:text-lg leading-relaxed">
-            提供透明化的「網站健康度體檢報告」，用第三方工具呈現真實數據，並根據市場反應動態調整經營方向。
+            我把實戰中驗證過的提示詞與步驟整理成可複製的流程，照著做就能穩定產出，不再每次靠運氣。
           </div>
         </div>
 
@@ -100,8 +100,8 @@ onMounted(() => {
         >
           <img
             src="../assets/images/solution-2.jpg"
-            alt="數據驅動調整 - 網站健康度檢測報告"
-            title="數據分析與優化服務"
+            alt="可複製的 AI 流程 - 穩定產出內容"
+            title="AI 工作流程與提示詞"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl"
             width="600"
             height="400"
@@ -113,12 +113,12 @@ onMounted(() => {
           class="solution-card order-5 flex flex-col justify-center text-center md:text-left transition-all duration-1000 transform"
           :class="[activeCards.has(4) ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0']"
         >
-          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">03. 訂閱制更放心</div>
+          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">03. 做不來也有我</div>
           <div class="text-[20px] md:text-[28px] font-extrabold mb-4 text-[#333] leading-snug">
-            長期的合作<br />不必每次都從新開始
+            需要客製<br />直接交給我就好
           </div>
           <div class="text-[#5B5B5B] text-base md:text-lg leading-relaxed">
-            收費固定，讓我更懂您的品牌需求。不再擔心每個月需要重新報價，有效控制浮動的營運成本。
+            想要更進階的網站、AI 工具或自動化流程，做不來的部分可以直接找我客製，省下自己摸索的時間。
           </div>
         </div>
 
@@ -128,8 +128,8 @@ onMounted(() => {
         >
           <img
             src="../assets/images/solution-3.webp"
-            alt="訂閱制長期合作 - 固定收費品牌經營"
-            title="訂閱制品牌經營服務"
+            alt="客製化開發 - 網站、AI 工具與自動化"
+            title="客製化軟體開發服務"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 rounded-xl"
             width="600"
             height="400"

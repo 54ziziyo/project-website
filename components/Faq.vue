@@ -14,75 +14,78 @@ const allFaqs: Record<Category, Faq[]> = {
   web: [
     {
       value: 'web-process',
-      title: '網站從洽談到上線的完整流程是什麼？',
+      title: '軟體開發從洽談到交付的完整流程是什麼？',
       content: `
-        <ol class="list-decimal pl-5 space-y-2">
-          <li><strong>需求諮詢</strong>：填寫表單提供參考範例與初步預算。</li>
-          <li><strong>報價與簽約</strong>：確認功能後提供報價單，簽約後需支付 <strong>50% 專案訂金</strong>。</li>
-          <li><strong>啟動排程</strong>：<span class="font-bold">訂金確認入帳後，專案將正式進入製作時程排程。</span></li>
-          <li><strong>視覺與開發</strong>：依據排程進行 UI 設計與前端開發，期間提供測試連結確認進度。</li>
-          <li><strong>驗收與結清</strong>：於測試環境確認無誤後結清尾款。</li>
-          <li><strong>部署上線</strong>：確認尾款入帳後，正式部署至伺服器上線。</li>
+        無論是網站、AI 工具、LINE 機器人或自動化流程，流程大致如下：
+        <ol class="list-decimal pl-5 space-y-2 mt-3">
+          <li><strong>需求諮詢</strong>：說明你的目標、使用情境與初步預算，提供參考範例。</li>
+          <li><strong>需求確認與報價</strong>：釐清功能規格與串接範圍後，提供報價單與時程。</li>
+          <li><strong>簽約與訂金</strong>：確認規格後簽約，需支付 <strong>50% 專案訂金</strong>。</li>
+          <li><strong>啟動排程</strong>：<span class="font-bold">訂金入帳後，專案正式進入開發排程。</span></li>
+          <li><strong>開發與測試</strong>：依排程進行開發，期間提供測試環境或 Demo 確認進度。</li>
+          <li><strong>驗收與結清</strong>：於測試環境確認功能無誤後結清尾款。</li>
+          <li><strong>部署與交付</strong>：確認尾款入帳後，正式部署上線或交付系統。</li>
         </ol>
       `,
     },
     {
-      value: 'web-schedule-delay',
-      title: '如果因為我的資料準備不及，會影響專案進度嗎？',
+      value: 'web-quote',
+      title: '為什麼客製化軟體一定要先評估才能報價？',
       content: `
-        為了確保每個案件的品質與交付時間，我會於合約中載明<strong>「資料提供期限」</strong>。<br/><br/>
-        若因客戶端資料（如文字、圖片、授權碼）延遲提供超過預定時程，原定上線日期將依據實際延遲天數順延；若延遲嚴重導致影響後續其他案場排程，專案可能需重新排隊或支付額外的「重啟排程費用」。
+        客製化開發沒有固定售價，費用會依<strong>功能規格、系統複雜度、串接的第三方服務數量與預估工時</strong>而有明顯差異。<br/><br/>
+        因此需先了解你的完整需求才能提供準確報價。<span class="font-bold">提供的需求描述、參考範例與範圍越清楚，報價就越精準</span>；報價單與規格經雙方確認並簽約後，即作為開發與驗收的依據。
+      `,
+    },
+    {
+      value: 'web-third-party',
+      title: 'AI 工具、LINE 機器人或自動化會用到第三方服務，費用與穩定性怎麼算？',
+      content: `
+        這類專案通常需串接第三方平台（如 OpenAI / Claude API、LINE Messaging API、Make / n8n、雲端主機等）。<br/><br/>
+        <strong>1. 費用：</strong>第三方服務的訂閱費、API 用量費與授權費<span class="font-bold">由客戶自行負擔</span>，並依各平台實際計價。<br/>
+        <strong>2. 不可控因素：</strong>若因第三方平台<strong>調整政策、變更或停用 API、調漲費用、服務中斷或帳號遭該平台停權</strong>等非我方可控之情況，導致功能受影響，我方不負賠償責任，但會協助評估替代方案（可能涉及額外工時報價）。<br/>
+        <strong>3. 建議：</strong>客製方案會盡量保留調整彈性，以因應平台變動。
+      `,
+    },
+    {
+      value: 'web-scope-change',
+      title: '專案進行中可以一直追加或修改需求嗎？',
+      content: `
+        為確保如期交付，<strong>規格確認後即作為開發基準</strong>；若有介面設計，設計階段包含 <strong>2 次調整機會</strong>。<br/><br/>
+        若於開發中途<strong>更動已確認的規格</strong>，或在驗收階段提出<strong>原始需求範圍以外的新功能</strong>，將視為「新增需求」，依工時另行報價並調整時程。
+      `,
+    },
+    {
+      value: 'web-schedule-delay',
+      title: '如果我的資料或帳號權限準備不及，會影響進度嗎？',
+      content: `
+        為確保品質與交付時間，我會於合約中載明<strong>「資料提供期限」</strong>。<br/><br/>
+        若因客戶端資料（如文字、圖片、串接所需的帳號權限、API 金鑰、授權碼）延遲提供超過預定時程，原定交付日期將依<strong>實際延遲天數順延</strong>；若延遲嚴重影響後續其他專案排程，可能需重新排隊或支付額外的「重啟排程費用」。
       `,
     },
     {
       value: 'web-maintenance',
-      title: '網站完成後有提供後續維護服務嗎？',
+      title: '系統上線後有提供維護或保固嗎？',
       content: `
-        我提供上線後 <strong>1 個月的「前端技術協助」</strong>（針對原有功能的 Bug 或排版異常進行免費修復）。<br/><br/>
-        如有長期代管需求，可尋洽「定期維護」報價。
+        交付後提供 <strong>1 個月的技術協助</strong>，針對<strong>原有功能</strong>的 Bug 或異常進行免費修復。<br/><br/>
+        以下情況<span class="font-bold">不在免費範圍內</span>：新增功能、內容/規格變更、因第三方平台或環境更新（如套件停止支援、API 變更、自行更動原始碼）所造成之失效。<br/><br/>
+        如有長期需求，可另洽「定期維護」報價；維護客戶將優先處理並享優惠，非維護客戶則依技術難度與工時專案報價。
       `,
     },
     {
-      value: 'web-repair-quote',
-      title: '如果網站後來「壞掉」或是需要「版本更新」怎麼辦？',
+      value: 'web-ownership',
+      title: '程式原始碼、帳號與系統的版權歸屬？',
       content: `
-        若發生非開發因素之失效（如：瀏覽器更新導致不相容、第三方套件停止支援、自行更動原始碼等）：<br/>
-        1. <strong>維護客戶</strong>：將優先處理，若涉及架構異動將提供優惠報價。<br/>
-        2. <strong>非維護客戶</strong>：將依技術難度與修復工時，進行<strong>專案制另外報價</strong>。
+        <strong>結清全額尾款後</strong>，系統管理權限、客製化開發之原始碼與內容版權歸客戶所有。<br/><br/>
+        我方保有將本案作為<strong>作品集展示</strong>之權利（不含機密資料）。所使用之第三方套件、框架與服務，依其<strong>各自的授權條款</strong>規範。尾款結清前，相關權限與原始碼不予轉移。
       `,
     },
     {
-      value: 'web-self-update',
-      title: '網站完成後可以自己更新內容嗎？',
-      content:
-        '若方案包含內容管理系統（CMS），我會提供教學協助您自行更新文字與圖片；若為純前端網頁，後續修改將按件或按工時計費。',
-    },
-    {
-      value: 'web-domain-hosting',
-      title: '主機伺服器和網域是什麼？我要自己處理嗎？',
-      content:
-        '如果您已有主機可提供權限協助設定；若無，我也能代辦部署。請注意，主機與網域屬於每年需續費之租借費用，需按時繳納以確保網站持續運作。',
-    },
-    {
-      value: 'web-seo-ga',
-      title: '可以幫我安裝 Google Analytics 分析或 SEO 嗎？',
-      content:
-        '我提供加購服務，包含 GA4 數據監測、Google Search Console 登錄及基本 SEO 優化（Meta 標籤與網站地圖），幫助提升搜尋曝光率。',
-    },
-    {
-      value: 'web-revision-limit',
-      title: '專案進行中可以無限次修改嗎？',
+      value: 'web-ai-disclaimer',
+      title: 'AI 工具的產出與成效有保證嗎？',
       content: `
-        為了確保專案如期交付，<strong>設計階段包含 2 次調整機會</strong>；前端開發階段則以確定的設計稿為基準進行產製。<br/><br/>
-        若於開發中途要求更動已確認的設計，或在驗收階段提出非原始需求範圍的功能調整，將視為「新增需求」並依工時另行報價。
-      `,
-    },
-    {
-      value: 'web-post-launch-edit',
-      title: '網站驗收完畢並上線後，發現想改字或換圖怎麼辦？',
-      content: `
-        <strong>專案部署上線即視為正式驗收完畢。</strong><br/><br/>
-        上線後若有文字微調或更換圖片之需求，若您有購買維護方案，將依合約內容處理；若無，則視更動幅度採「按件計費」或「工時計費」。建議在測試連結階段進行最終細緻校對，以確保正式版之正確性。
+        AI 模型的回覆具<strong>機率性與不確定性</strong>，可能產生不準確或不預期的內容，<span class="font-bold">最終結果仍需由使用者審閱與把關</span>。<br/><br/>
+        我提供的是 AI 工具的<strong>開發與整合服務</strong>，不保證特定的準確率、業績或營運成效，產出亦<strong>不應作為法律、醫療、財務等專業領域的最終判斷依據</strong>。<br/><br/>
+        涉及資料蒐集、儲存與個資之應用，雙方將於合約中約定使用範圍與責任，客戶須確保其使用方式符合相關法規。
       `,
     },
   ],
@@ -230,7 +233,7 @@ const allFaqs: Record<Category, Faq[]> = {
 }
 
 const categories = [
-  { value: 'web', label: '網站開發' },
+  { value: 'web', label: '軟體開發' },
   { value: 'marketing', label: '行銷推廣' },
   { value: 'design', label: '視覺設計' },
 ] as const

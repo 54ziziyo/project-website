@@ -76,13 +76,13 @@ const testimonials = [
   },
   {
     content:
-      '訂閱了網站服務，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我，架設完後也開始有一些人詢問，曝光起來的感覺',
+      '請他們幫我做了網站，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我，架設完後也開始有一些人詢問，曝光起來的感覺很好',
     author: '攝影小書',
     role: '攝影工作室',
     avatar: avatar5,
   },
   {
-    content: '合作訂閱半年期網站與行銷服務後，我更多人詢問了！甚至主動建議我沒注意到的使用者體驗細節。',
+    content: '合作了網站與行銷服務後，更多人來詢問我了！甚至主動建議我沒注意到的使用者體驗細節。',
     author: '章小姐',
     role: '廣告公司',
     avatar: avatar6,
@@ -194,10 +194,10 @@ const testimonials = [
             class="font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]"
             style="font-size: clamp(24px, 5vw, 52px)"
           >
-            即時啟動，打造您的數位競爭力
+            想自己做，也想做得更好嗎？
           </h2>
           <p class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center mb-16">
-            一站式數位解決方案，協助品牌高效成長<br />有網站/行銷需求，加 Line 即可免費諮詢
+            從現成的工具模板到客製化服務，總有一種方式適合你<br />填寫表單留下需求，我會盡快與你聯繫
           </p>
         </div>
 
@@ -207,24 +207,24 @@ const testimonials = [
           :class="[cardVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
           <div class="text-left mb-8 border-b pb-8">
-            <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">搶先預約</span>
-            <div class="text-2xl font-bold mt-4 mb-1">💬 預約 15 分鐘免費諮詢</div>
-            <p class="text-xs text-[#5B5B5B] mb-6">※ 每日限額一位，名額有限。</p>
+            <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">即買即用</span>
+            <div class="text-2xl font-bold mt-4 mb-1">🧰 數位工具箱</div>
+            <p class="text-xs text-[#5B5B5B] mb-6">※ 永久下載，工具箱會不斷上架新商品。</p>
 
             <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">
               <div>
-                <div class="text-lg font-semibold mb-4">網站開發與優化</div>
+                <div class="text-lg font-semibold mb-4">現成工具，馬上能用</div>
                 <ul class="space-y-2 text-sm md:text-base">
-                  <li>✔ 響應式網站設計 ✔ 前端開發與架設 ✔ UI/UX優化</li>
-                  <li>✔ 電商網站建置 ✔ 效能最佳化與SEO基礎配置</li>
+                  <li>✔ AI 提示詞包 ✔ 行銷／設計模板</li>
+                  <li>✔ 套版素材工具包 ✔ 即買即用、永久下載</li>
                 </ul>
               </div>
 
               <div>
-                <div class="text-lg font-semibold mb-4">長期合作方案</div>
+                <div class="text-lg font-semibold mb-4">持續更新的內容</div>
                 <ul class="space-y-2 text-sm md:text-base">
-                  <li>✔ 社群內容規劃與貼文設計 ✔ 30-60秒短影片剪輯</li>
-                  <li>✔ Banner/廣告圖製作 ✔ SEO文章撰寫</li>
+                  <li>✔ 部落格定期更新 AI／行銷教學</li>
+                  <li>✔ 工具箱不斷推出新商品</li>
                 </ul>
               </div>
             </div>
@@ -232,11 +232,11 @@ const testimonials = [
 
           <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">
             <div>
-              <div class="text-lg font-semibold mb-4">長期合作方案</div>
+              <div class="text-lg font-semibold mb-4">做不來，交給我客製</div>
               <ul class="space-y-2">
-                <li>📌 包月/包年制服務，享專屬優惠</li>
-                <li>📌 定期內容更新與網站維護</li>
-                <li>📌 前同事技術支援，複雜專案也能搞定</li>
+                <li>📌 網站、AI 工具、LINE 機器人、自動化開發</li>
+                <li>📌 視覺設計與社群行銷</li>
+                <li>📌 客製化專案依需求報價</li>
               </ul>
             </div>
 
@@ -244,18 +244,24 @@ const testimonials = [
               <div class="text-lg font-semibold mb-4">為什麼選擇我？</div>
               <ul class="space-y-2">
                 <li>🔹 跨領域經驗：結合行銷思維與技術實現能力</li>
-                <li>🔹 彈性合作：從單次專案到長期託管皆可洽談</li>
+                <li>🔹 彈性合作：從現成工具到客製專案都可以</li>
                 <li>🔹 透明溝通：清楚報價與進度追蹤</li>
               </ul>
             </div>
           </div>
 
-          <div class="flex justify-center mt-12">
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
             <NuxtLink
-              to="/contact"
+              to="/toolbox"
               class="relative bg-[#8782FF] text-white font-semibold py-3 px-6 rounded-full hover:bg-[#6f6bff] transition btn-glow"
             >
-              <span>預約諮詢 →</span>
+              <span>逛數位工具箱 →</span>
+            </NuxtLink>
+            <NuxtLink
+              to="/contact"
+              class="font-semibold py-3 px-6 rounded-full border border-[#8782FF] text-[#8782FF] hover:bg-[#8782FF] hover:text-white transition"
+            >
+              <span>填寫表單聯繫我</span>
             </NuxtLink>
           </div>
         </div>

@@ -59,18 +59,16 @@ onBeforeUnmount(() => {
         class="text-center transition-all duration-700"
         :class="visibleHeader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
       >
-        <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">
-          關於 Zeona Studio
-        </div>
+        <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">關於我</div>
         <h1 class="text-[24px] md:text-[52px] font-bold leading-[1.25] mb:mb-12 mb-8">
-          專業網站設計開發 × 社群行銷<br />您的<span class="text-[#8782FF]">品牌成長夥伴</span>
+          我用 AI 經營品牌<br />也把工具分享給<span class="text-[#8782FF]">每一個你</span>
         </h1>
         <div class="text-[#5B5B5B] text-[14px] md:text-[16px] mb-4">
-          嗨，我是 Zeona Studio，擁有 5 年以上網站開發與數位行銷背景。
+          嗨，我是經營 Zeona 的個人創作者，擅長把網站開發、設計與數位行銷結合 AI 與自動化。
           <br />
-          擅長將複雜的技術轉化為直覺的品牌體驗，協助新創與中小企業建立兼具美感與高效能的線上競爭力。
+          我相信在 AI 時代，一個人也能做出過去需要整個團隊才能完成的事——行銷、設計、文案、網站與內容，都能做得更快更好。
           <br />
-          歡迎聊聊你的想法，我會用最適合你的方式，協助品牌在線上脫穎而出！
+          我把實戰中在用的工具、提示詞與模板整理成數位工具箱分享給你；需要更進階的客製化開發，我也能直接幫你打造。
         </div>
       </div>
 

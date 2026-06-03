@@ -159,7 +159,7 @@ const onSubmit = async () => {
 
     // 在 no-cors 模式下，我們無法讀取回應內容
     // 只要沒噴 catch，通常代表資料已送達 Google 伺服器
-    showToast('success', '感謝諮詢！資料已成功送出。')
+    showToast('success', '感謝填寫！我會盡快與你聯繫。')
     showBookingModal.value = true
     resetForm()
   } catch (err) {
@@ -334,23 +334,25 @@ const resetForm = () => {
     <transition name="fade-slide">
       <div v-if="showBookingModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
         <div class="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl text-center space-y-4">
-          <h3 class="text-xl md:text-2xl font-black text-[#1f1f1f] leading-tight">免費諮詢</h3>
-          <p class="text-base text-[#4A4A4A] leading-relaxed">請選取你方便預約的時間，愛你唷～</p>
+          <h3 class="text-xl md:text-2xl font-black text-[#1f1f1f] leading-tight">送出成功 🎉</h3>
+          <p class="text-base text-[#4A4A4A] leading-relaxed">
+            感謝你的填寫！我會在 24 小時內回覆你。<br />想更快聊聊，也可以直接加我 LINE～
+          </p>
           <a
-            href="https://calendar.app.google/aomdVkZWGen2bsWj9"
+            href="https://lin.ee/Tt7Apjc"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition"
             @click="showBookingModal = false"
           >
-            前往預約
+            加 LINE 聊聊
           </a>
           <button
             type="button"
             class="text-sm text-[#5B5B5B] underline hover:text-[#7A7DFE]"
             @click="showBookingModal = false"
           >
-            忍痛拒絕 ෆ˃ ˄ ˂̥̥
+            我知道了
           </button>
         </div>
       </div>

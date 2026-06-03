@@ -26,16 +26,16 @@
           <NuxtLink to="/terms" title="使用條款 - Zeona Studio 服務條款" class="hover:text-[#8782FF] transition"
             >使用條款</NuxtLink
           >
-          <NuxtLink to="/contact" title="聯繫我們 - 免費諮詢網站設計與行銷服務" class="hover:text-[#8782FF] transition"
+          <NuxtLink to="/contact" title="聯繫我 - 填寫表單聊聊你的需求" class="hover:text-[#8782FF] transition"
             >聯繫我</NuxtLink
           >
         </div>
         <div class="space-y-2 flex flex-col items-start">
           <NuxtLink
             to="/services/website"
-            title="網站開發服務 - 全客製化網頁設計與開發"
+            title="軟體開發服務 - 客製化網站、AI 工具與自動化開發"
             class="hover:text-[#8782FF] transition"
-            >網站開發</NuxtLink
+            >軟體開發</NuxtLink
           >
           <NuxtLink
             to="/services/marketing"

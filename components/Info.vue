@@ -100,7 +100,7 @@ onBeforeUnmount(() => {
         <p class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">服務項目與流程</p>
         <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6">可以怎麼幫助你？</div>
         <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
-          我提供客製化的一站式數位服務<br />特別適合剛起步的新創品牌、個人工作室、小型企業
+          想自己動手，我有現成的數位工具箱；想交給我，也能提供客製化的一站式服務<br />從個人創作者到剛起步的品牌與小型企業都適合
         </div>
       </div>
 
@@ -185,7 +185,7 @@ onBeforeUnmount(() => {
               width="30"
               height="30"
             />
-            <div class="text-[16px] md:text-[24px] font-bold pr-8">長期訂閱服務｜合作透明、流程清楚、溝通快速</div>
+            <div class="text-[16px] md:text-[24px] font-bold pr-8">彈性合作方案｜流程清楚、報價透明、溝通快速</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
             你將清楚知道每一階段該交付什麼、何時完成，所有內容與成本明確透明，合作起來沒有壓力
@@ -233,19 +233,26 @@ onBeforeUnmount(() => {
       <div class="max-w-6xl text-center">
         <h2 class="text-[24px] md:text-[32px] font-bold mb-4">想了解更多嗎？讓我聊聊吧！</h2>
         <p class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-12">
-          無論你是新創品牌還是小型企業，我都能提供量身打造的解決方案
+          想自己動手，可以先逛逛數位工具箱；想交給我，我也能提供量身打造的解決方案
           <br />
           讓你的品牌在數位世界中脫穎而出
         </p>
-        <button>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <a
+            href="/toolbox"
+            title="逛數位工具箱 - AI 提示詞、模板與素材"
+            class="font-semibold py-3 px-6 rounded-full text-white text-sm bg-[#8782FF] cursor-pointer hover:bg-[#6f6bff] transition-colors duration-300"
+          >
+            逛數位工具箱 →
+          </a>
           <a
             href="/contact"
-            title="免費諮詢網站設計與行銷服務"
-            class="animate-bounce font-semibold py-3 px-6 rounded-full text-white text-sm bg-[#8782FF] rounded-full cursor-pointer flex items-center space-x-2 hover:bg-[#6f6bff] transition-colors duration-300"
+            title="填寫表單聯繫我 - 客製化軟體開發與設計行銷服務"
+            class="font-semibold py-3 px-6 rounded-full text-[#8782FF] text-sm border border-[#8782FF] cursor-pointer hover:bg-[#8782FF] hover:text-white transition-colors duration-300"
           >
-            <span>我要免費諮詢 →</span>
+            填寫表單聯繫我
           </a>
-        </button>
+        </div>
       </div>
     </section>
   </div>

@@ -6,15 +6,15 @@ import WebAddOnItems from '~/components/service/WebAddOnItems.vue'
 
 // SEO 優化 - 網站開發服務頁面
 useHead({
-  title: '網站開發服務 | Zeona Studio - 全客製化網頁設計與開發方案',
+  title: '軟體開發服務 | Zeona Studio - 客製化網站、AI 工具、LINE 機器人與自動化開發',
   meta: [
     {
       name: 'description',
       content:
-        'Zeona Studio 提供全客製化網站開發服務：從 UI/UX 介面設計、品牌官網建置到後端系統整合，打造高效能、高轉換率的品牌網站。支援 RWD 響應式設計、SEO 優化、WordPress 架設、CMS 內容管理系統，為您打造 24 小時不間斷的線上業務引擎。',
+        'Zeona Studio 提供客製化軟體開發服務：網站系統、AI 工具（ChatGPT / Claude API 整合、RAG 知識庫）、LINE 機器人與自動化流程開發，以及網站架設、UI/UX 設計、WordPress 與電商建置。客製化專案皆依需求評估報價，歡迎私訊洽談。',
     },
-    { property: 'og:title', content: '網站開發服務 | Zeona Studio - 全客製化網頁設計' },
-    { property: 'og:description', content: '從設計到開發，為您打造 24 小時不間斷的線上業務引擎。' },
+    { property: 'og:title', content: '軟體開發服務 | Zeona Studio - 客製化網站、AI 工具與自動化開發' },
+    { property: 'og:description', content: '網站、AI 工具、LINE 機器人、自動化流程，依需求量身打造。' },
     { property: 'og:url', content: 'https://zeona.vercel.app/services/website' },
   ],
   link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/services/website' }],
@@ -24,14 +24,14 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: '網站開發服務',
+        name: '軟體開發服務',
         provider: {
           '@type': 'Organization',
           name: 'Zeona Studio',
         },
-        description: '全客製化網站開發，從 UI/UX 設計到後端系統整合',
+        description: '客製化軟體開發：網站系統、AI 工具、LINE 機器人、自動化流程與網站架設',
         areaServed: { '@type': 'Country', name: 'Taiwan' },
-        serviceType: 'Web Development',
+        serviceType: 'Software Development',
         offers: {
           '@type': 'AggregateOffer',
           priceCurrency: 'TWD',

@@ -780,7 +780,7 @@ GoodNotes 5 / Notability / Noteshelf`,
     category: 'Prompt 提示詞',
     price: 599,
     originalPrice: 799,
-    description: '從 0 到有個人品牌的完整 AI 工具包。IG Bio、內容支柱、30 天發文計劃、部落格提示詞、電子報模板，一包搞定。',
+    description: '從 0 到有個人品牌的完整 AI 工具包。IG Bio、內容支柱、IG 內容點子庫、部落格提示詞、電子報模板、30 天執行行事曆，一包搞定。',
     fullDescription: `「我想建立個人品牌，但不知道從哪裡開始。」
 
 這包是為你設計的。
@@ -790,9 +790,9 @@ GoodNotes 5 / Notability / Noteshelf`,
 • 個人品牌定位工作表（4 個問題找到你的差異化）
 • Highlights 分類建議 + 封面設計提示詞
 
-📅 30 天 IG 發文計劃
-• 每天的主題方向（依你的定位自動填入）
-• 對應的 ChatGPT 提示詞（直接生成文案初稿）
+💡 IG 內容點子庫
+• 16 個發文主題，依內容支柱（價值／趨勢／故事）分類
+• 每個點子都附格式建議與對應的 ChatGPT 提示詞
 • 最佳發文時間建議
 
 ✍️ 部落格文章提示詞包（20 個）
@@ -814,7 +814,7 @@ GoodNotes 5 / Notability / Noteshelf`,
     coverImage: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=600&fit=crop',
     features: [
       'IG Bio + 內容定位 AI 提示詞工具',
-      '30 天 IG 發文計劃（含每日提示詞）',
+      'IG 內容點子庫（依內容支柱分類＋提示詞）',
       '部落格文章生成提示詞 20 個',
       '5 種電子報格式模板',
       '30 天執行行事曆（從 0 到 1000 粉路徑）',

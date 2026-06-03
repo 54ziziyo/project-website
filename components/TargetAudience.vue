@@ -49,7 +49,7 @@ const targetAudiences = [
     title: '正在數位轉型的傳統企業',
     content_1: '希望線下轉線上，找專業團隊',
     content_2: '需要長期顧問與技術支援',
-    content_3: '重視訂閱制與透明報價',
+    content_3: '重視透明報價與長期技術支援',
 
     img: img3,
   },

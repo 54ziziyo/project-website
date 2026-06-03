@@ -43,24 +43,14 @@ onUnmounted(() => {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: '網站開發',
+    title: '軟體開發',
     href: '/services/website',
-    description: '網站架設、SEO優化、網站維護等服務，讓你的網站更具競爭力',
-  },
-  {
-    title: '行銷推廣',
-    href: '/services/marketing',
-    description: '行銷策略、社群媒體管理、內容行銷等服務，提升品牌曝光率',
+    description: '網站、AI 工具、LINE 機器人、自動化流程等客製化軟體開發服務',
   },
   {
     title: '視覺設計',
     href: '/services/design',
     description: '設計方案、品牌設計、UI/UX設計等服務，打造獨特的品牌形象',
-  },
-  {
-    title: '整合服務',
-    href: '/services/all',
-    description: '提供全方位的數位服務，從網站建置到行銷推廣，滿足各種需求。',
   },
 ]
 
@@ -128,7 +118,7 @@ const showMenu = ref(false)
           <NavigationMenuItem>
             <NavigationMenuLink
               href="/faq"
-              title="常見問題 FAQ - 網站開發與行銷服務疑問解答"
+              title="常見問題 FAQ - 軟體開發與行銷服務疑問解答"
               :class="navigationMenuTriggerStyle()"
             >
               常見問題

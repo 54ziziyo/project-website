@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 // SEO 優化 - 聯繫頁面
 useHead({
-  title: '聯繫我們 | Zeona Studio - 免費諮詢品牌數位轉型方案',
+  title: '聯繫我 | Zeona Studio - 填寫表單，聊聊你的需求',
   meta: [
     {
       name: 'description',
       content:
-        '立即聯繫 Zeona Studio，獲取免費 15 分鐘品牌數位化諮詢。無論是客製化網站開發、SEO 搜尋優化或社群行銷策略，我們為您量身打造最適合的數位解決方案。讓專業團隊協助您的品牌在數位世界脫穎而出，實現線上曝光與業績增長。填寫表單或直接撥打電話，開始您的數位轉型之旅！',
+        '想聊聊你的需求嗎？填寫表單留下資料，我會在 24 小時內回覆你。無論是客製化軟體開發（網站、AI 工具、LINE 機器人、自動化）、網站架設或設計行銷服務，都能依需求量身規劃；也歡迎加 LINE 直接聊聊。',
     },
-    { property: 'og:title', content: '聯繫我們 | Zeona Studio - 免費諮詢品牌數位轉型方案' },
-    { property: 'og:description', content: '立即預約免費諮詢，讓專業團隊協助您的品牌在數位世界脫穎而出。' },
+    { property: 'og:title', content: '聯繫我 | Zeona Studio - 填寫表單，聊聊你的需求' },
+    { property: 'og:description', content: '填寫表單留下需求，我會盡快與你聯繫，也可以加 LINE 直接聊聊。' },
     { property: 'og:url', content: 'https://zeona.vercel.app/contact' },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
@@ -23,7 +23,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
         name: '聯繫 Zeona Studio',
-        description: '免費諮詢品牌數位轉型方案',
+        description: '填寫表單聯繫，洽談客製化軟體開發、網站架設與設計行銷服務',
         url: 'https://zeona.vercel.app/contact',
         mainEntity: {
           '@type': 'Organization',

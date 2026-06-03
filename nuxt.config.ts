@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     notionToken: process.env.NOTION_TOKEN,
     notionDatabaseId: process.env.NOTION_DATABASE_ID,
+    // Gumroad 付費門檻
+    gumroadProductId: process.env.GUMROAD_PRODUCT_ID,
+    kitSecret: process.env.KIT_SECRET,
   },
 
   modules: [
@@ -31,7 +34,13 @@ export default defineNuxtConfig({
   // Sitemap 配置
   sitemap: {
     // 排除不需要索引的頁面
-    exclude: ['/api/**'],
+    exclude: ['/api/**', '/kit/**'],
+  },
+
+  // 舊網址轉址（避免外部既有連結 404）
+  routeRules: {
+    '/ai-personal-brand-kit.html': { redirect: '/kit/ai-personal-brand' },
+    '/ai-personal-brand-kit': { redirect: '/kit/ai-personal-brand' },
   },
   css: ['~/assets/css/tailwind.css', '@/assets/css/main.css'],
   vite: {
@@ -54,7 +63,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Zeona Studio | 品牌數位轉型首選：全客製化網頁開發、SEO 視覺設計與精準數位行銷解決方案',
+      title: 'Zeona Studio | AI 數位工具箱與客製化開發：一個人也能做出專業行銷與內容',
       htmlAttrs: {
         lang: 'zh-TW',
       },
@@ -66,7 +75,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Zeona Studio 專注於提供全客製化網頁設計與開發，結合深度 UI/UX 設計思維，為品牌打造兼具美學與高轉換率的數位門面。我們整合專業 SEO 優化與精準數位行銷策略，確保網站不僅視覺吸睛，更能有效提升搜尋排名、創造獲客實力。從品牌形象建立到技術開發，Zeona 提供一站式數位轉型解決方案，助您精準觸及目標受眾，達成業績持續增長的商業目標。',
+            'Zeona Studio：用 AI 與自動化經營品牌，把實戰中的 AI 提示詞、模板與素材工具整理成數位工具箱分享給你，讓一個人也能快速做出專業的行銷、設計與內容。需要更進階的客製化軟體開發（網站、AI 工具、LINE 機器人、自動化）、網站架設與設計行銷服務，也能依需求量身打造。',
         },
         // AEO / AI 搜尋優化 meta (移除過時的 keywords meta tag)
         { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
@@ -75,12 +84,12 @@ export default defineNuxtConfig({
         { name: 'generator', content: 'Nuxt 3' },
         // Open Graph / FB 強化
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Zeona Studio 品牌數位轉型專家' },
-        { property: 'og:title', content: 'Zeona Studio | 打造具備美學與獲客能力的數位門面' },
+        { property: 'og:site_name', content: 'Zeona Studio' },
+        { property: 'og:title', content: 'Zeona Studio | AI 數位工具箱與客製化開發' },
         {
           property: 'og:description',
           content:
-            '想提升品牌競爭力？我們結合 Nuxt 尖端網頁技術與數據驅動的行銷思維，為您打造高度靈活性與客製化的網站方案。立即領取品牌數位化實戰攻略。',
+            '用 AI 工具與模板，一個人也能做出專業內容；需要客製化開發與設計行銷，也能依需求打造。立即逛逛數位工具箱。',
         },
         { property: 'og:url', content: 'https://zeona.vercel.app' },
         { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
@@ -92,8 +101,8 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@zeonastudio' },
         { name: 'twitter:creator', content: '@zeonastudio' },
-        { name: 'twitter:title', content: 'Zeona Studio | 品牌數位轉型首選' },
-        { name: 'twitter:description', content: '結合美學、技術與 SEO 的全客製化網站開發服務' },
+        { name: 'twitter:title', content: 'Zeona Studio | AI 數位工具箱與客製化開發' },
+        { name: 'twitter:description', content: '用 AI 與工具模板，一個人也能做出專業行銷與內容' },
         { name: 'twitter:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
       ],
       link: [
@@ -116,7 +125,7 @@ export default defineNuxtConfig({
             url: 'https://zeona.vercel.app',
             logo: 'https://zeona.vercel.app/logo.png',
             description:
-              'Zeona Studio 提供全客製化網站開發、UI/UX 設計、SEO 優化與數位行銷服務，協助品牌打造高轉換率的數位門面。',
+              'Zeona Studio：用 AI 與自動化經營品牌，提供數位工具箱（AI 提示詞、模板、素材）與客製化軟體開發、網站架設、設計行銷服務。',
             foundingDate: '2024',
             sameAs: [],
             contactPoint: {
@@ -128,7 +137,7 @@ export default defineNuxtConfig({
               '@type': 'Country',
               name: 'Taiwan',
             },
-            serviceType: ['網站開發', 'UI/UX 設計', 'SEO 優化', '數位行銷', '品牌設計'],
+            serviceType: ['數位工具箱', '客製化軟體開發', 'AI 工具開發', '網站架設', 'UI/UX 設計', '數位行銷'],
           }),
         },
         // WebSite Schema with SearchAction - AEO 優化
@@ -139,7 +148,7 @@ export default defineNuxtConfig({
             '@type': 'WebSite',
             name: 'Zeona Studio',
             url: 'https://zeona.vercel.app',
-            description: '品牌數位轉型首選：全客製化網頁開發、SEO 視覺設計與精準數位行銷解決方案',
+            description: 'AI 數位工具箱與客製化開發：一個人也能做出專業行銷與內容',
             publisher: {
               '@type': 'Organization',
               name: 'Zeona Studio',

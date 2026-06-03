@@ -62,44 +62,44 @@ onBeforeUnmount(() => {
                   <span class="w-1.5 h-4 bg-white/50 rounded-full animate-pulse [animation-delay:0.3s]" />
                 </div>
                 <p class="text-xs md:text-sm font-bold tracking-[0.2em] text-white uppercase">
-                  Digital Branding Expert
+                  AI Powered Toolkit
                 </p>
               </div>
             </div>
 
             <div class="text-white leading-[1.2] tracking-tight">
               <span class="hidden text-3xl md:text-5xl lg:text-4xl xl:text-6xl font-light mb-4"
-                >從網站設計到社群經營</span
+                >用 AI 加速你的品牌</span
               >
               <span class="block text-4xl md:text-6xl lg:text-5xl xl:text-[70px] drop-shadow-2xl">
-                一站式數位服務
+                用 AI，把專業變簡單
               </span>
               <span class="block text-2xl md:text-4xl lg:text-3xl xl:text-5xl font-medium mt-4 text-white/90">
-                讓品牌持續曝光變現
+                一個人，也能做出行銷與內容
               </span>
             </div>
 
             <h1
               class="text-white/85 text-base md:text-xl max-w-2xl mt-8 mb-12 leading-relaxed font-normal mx-auto lg:mx-0"
             >
-              結合 <span class="text-white font-bold border-b-2 border-white/40 pb-1">網頁開發與設計</span>、
-              <span class="text-white font-bold border-b-2 border-white/40 pb-1">數位行銷</span>， 讓網站成為你最強的 24
-              小時業務員。
+              我把自己在用的 <span class="text-white font-bold border-b-2 border-white/40 pb-1">AI 工具、提示詞與模板</span>
+              整理成數位工具箱分享給你。 需要更進階的
+              <span class="text-white font-bold border-b-2 border-white/40 pb-1">客製化開發</span>，我也能幫你打造。
             </h1>
 
             <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
+              <NuxtLink
+                to="/toolbox"
+                class="px-12 py-4 bg-white text-black font-bold text-lg rounded-full transition-all hover:scale-105 hover:shadow-xl active:scale-95 cursor-pointer text-center"
+              >
+                逛數位工具箱 →
+              </NuxtLink>
               <button
-                class="px-12 py-4 bg-white text-black font-bold text-lg rounded-full transition-all hover:scale-105 hover:shadow-xl active:scale-95 cursor-pointer"
+                class="px-12 py-4 border border-white/40 text-white font-semibold text-lg rounded-full backdrop-blur-sm hover:bg-white/10 transition-all active:scale-95 cursor-pointer"
                 @click="guideModalOpen = true"
               >
-                免費領取攻略秘笈 →
+                免費領取攻略秘笈
               </button>
-              <NuxtLink
-                to="/works"
-                class="px-12 py-4 border border-white/40 text-white font-semibold text-lg rounded-full backdrop-blur-sm hover:bg-white/10 transition-all active:scale-95"
-              >
-                查看作品
-              </NuxtLink>
             </div>
           </div>
 
