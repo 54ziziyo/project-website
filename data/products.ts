@@ -823,7 +823,7 @@ GoodNotes 5 / Notability / Noteshelf`,
 裡面的提示詞都是實際經營驗證、能直接產出可發布內容的版本，不是那種「複製貼上卻生不出東西」的空泛範本。搭配清楚的內容支柱與穩定的發文節奏，前 30 天有機會累積 250–500 粉（依領域與執行而定）。
 
 ────────────────
-📂 格式：PDF + Notion｜購買後永久下載`,
+📂 取得方式：購買後以專屬序號解鎖線上版，永久存取、提示詞可一鍵複製`,
     coverImage: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=600&fit=crop',
     features: [
       'IG 帳號建立：Bio 提示詞＋品牌定位工作表',
@@ -833,7 +833,7 @@ GoodNotes 5 / Notability / Noteshelf`,
       '30 天執行行事曆（0→1000 粉路徑）',
     ],
     purchaseUrl: 'https://gumroad.com',
-    fileType: 'PDF + Notion',
+    fileType: '線上閱讀版（序號解鎖）',
     tags: ['個人品牌', 'IG', '電子報', '部落格', 'ChatGPT'],
     isNew: true,
     status: 'coming-soon',
