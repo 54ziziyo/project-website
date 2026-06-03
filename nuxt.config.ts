@@ -42,6 +42,12 @@ export default defineNuxtConfig({
     '/ai-personal-brand-kit.html': { redirect: '/kit/ai-personal-brand' },
     '/ai-personal-brand-kit': { redirect: '/kit/ai-personal-brand' },
   },
+
+  // 關閉 app manifest，消除 dev 冷啟動時 Vite 對 #app-manifest 的 pre-transform 解析錯誤
+  // （本站路由轉址走 Nitro 伺服器層，不依賴 client app manifest）
+  experimental: {
+    appManifest: false,
+  },
   css: ['~/assets/css/tailwind.css', '@/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
