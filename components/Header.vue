@@ -135,9 +135,9 @@ const showMenu = ref(false)
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          <!-- <NavigationMenuItem>
+          <NavigationMenuItem>
             <NavigationMenuLink href="/toolbox" :class="navigationMenuTriggerStyle()"> 數位工具箱 </NavigationMenuLink>
-          </NavigationMenuItem> -->
+          </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuLink
