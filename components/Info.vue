@@ -6,25 +6,24 @@ import DesignImg from '../assets/images/info/web-design.png'
 
 const services = [
   {
-    title: '網站設計與開發',
-    items: ['UI/UX 設計', '網站前端開發', '後端串接 API、部署上線', '可額外加購：GA數據、SEO優化等'],
-    img: WebDevImg,
+    title: '數位工具箱',
+    items: ['即套即用模板與套版素材', 'AI 提示詞包', '可重複使用的內容範本', '即買即用、永久下載'],
+    img: MedoaPlanImg,
   },
-
   {
-    title: '數位行銷',
-    items: ['社群貼文設計與文案撰寫', 'SEO 關鍵字部落格撰寫', '短影音剪輯（30s～60s）', '社群經營與排程代發'],
+    title: 'AI ＆ 自動化',
+    items: ['AI 工具與助理開發', 'LINE 機器人', '行銷／文案／設計自動化流程', '把重複工作交給 AI'],
     img: TrainingImg,
   },
   {
-    title: '平面設計',
-    items: ['LOGO 與品牌標準字設計', '活動主視覺 / 海報 / EDM', 'LINE 選單設計、社群圖卡', '名片、DM、產品包裝設計'],
-    img: DesignImg,
+    title: '網站與軟體開發',
+    items: ['UI/UX 設計', '網站前端開發', '後端串接 API、部署上線', '可額外加購：GA數據、SEO優化等'],
+    img: WebDevImg,
   },
   {
-    title: '打包方案',
-    items: ['建立風格視覺＋行銷素材製作', '網站設計＋社群經營＋SEO寫手', '提供包月內容製作、數據追蹤'],
-    img: MedoaPlanImg,
+    title: '設計與行銷',
+    items: ['品牌視覺 / LOGO 設計', '社群圖文與短影音', 'SEO 內容與部落格', '社群經營與排程代發'],
+    img: DesignImg,
   },
 ]
 
