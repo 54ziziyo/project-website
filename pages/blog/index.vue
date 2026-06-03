@@ -765,13 +765,13 @@ onMounted(() => {
           class="text-gray-500 text-lg md:text-xl mb-10 transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          從網站建置到行銷策略，Zeona Studio 為你提供一站式數位解決方案。
+          用 AI 與現成工具，一個人也能把行銷、內容與網站做起來。逛數位工具箱，或需要客製就聯繫我。
         </p>
         <NuxtLink
           to="/contact"
           class="inline-block bg-[#8782FF] text-white font-bold py-4 px-10 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 active:scale-95"
         >
-          預約免費諮詢
+          聯繫我
         </NuxtLink>
       </div>
     </div>

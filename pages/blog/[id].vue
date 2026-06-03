@@ -323,13 +323,13 @@ onMounted(() => {
           需要專業的<span class="text-[#8782FF]">數位服務</span>嗎？
         </h2>
         <p class="text-gray-500 text-lg md:text-xl mb-10">
-          從網站建置到行銷推廣，Zeona Studio 為你量身打造最合適的方案。
+          從即套即用的數位工具箱，到客製化軟體開發與 AI 系統串接，Zeona 都能幫你。
         </p>
         <NuxtLink
           to="/contact"
           class="inline-block bg-[#8782FF] text-white font-bold py-4 px-10 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 active:scale-95"
         >
-          預約免費諮詢
+          聯繫我
         </NuxtLink>
       </div>
     </div>
