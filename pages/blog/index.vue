@@ -38,31 +38,24 @@ function searchPosts(query: string): BlogPost[] {
 const route = useRoute()
 const router = useRouter()
 
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const { catLabel, bTitle, bExcerpt } = useLocalizedContent()
+
 // SEO
-useHead({
-  title: '部落格 | Zeona Studio - AI、行銷與網站開發教學',
+useHead(() => ({
+  title: t('blog.metaTitle'),
   meta: [
-    {
-      name: 'description',
-      content:
-        '探索 Zeona Studio 數位知識部落格：深入淺出的 AI 人工智慧應用教學、網站設計與開發、數位行銷策略實戰指南。從 SEO 優化、社群經營到前端技術分享，助你掌握自動化工具與數位轉型關鍵，為品牌打造高效能的成長藍圖與實用技術解決方案。',
-    },
-    {
-      name: 'keywords',
-      content: 'AI教學, 數位行銷, 網站開發, SEO優化, 部落格, Zeona Studio',
-    },
-    { property: 'og:title', content: '部落格 | Zeona Studio - AI、行銷與網站開發教學' },
-    {
-      property: 'og:description',
-      content:
-        '探索 Zeona Studio 數位知識部落格：深入淺出的 AI 人工智慧應用教學、網站設計與開發、數位行銷策略實戰指南。從 SEO 優化、社群經營到前端技術分享，助你掌握自動化工具與數位轉型關鍵，為品牌打造高效能的成長藍圖與實用技術解決方案。',
-    },
+    { name: 'description', content: t('blog.metaDesc') },
+    { name: 'keywords', content: t('blog.keywords') },
+    { property: 'og:title', content: t('blog.metaTitle') },
+    { property: 'og:description', content: t('blog.metaDesc') },
     { property: 'og:type', content: 'blog' },
     { property: 'og:url', content: 'https://zeona.vercel.app/blog' },
     { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
   ],
   link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/blog' }],
-})
+}))
 
 // 動畫控制
 const isVisible = ref(false)
@@ -248,9 +241,12 @@ const goToPage = (page: number) => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-// 格式化日期
+// 格式化日期（依語系）
 const formatDate = (dateStr: string) => {
   const d = new Date(dateStr)
+  if (locale.value === 'en') {
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+  }
   return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`
 }
 
@@ -262,11 +258,11 @@ const formatRelativeTime = (dateStr: string) => {
   const nowDate = new Date(now.getFullYear(), now.getMonth(), now.getDate())
   const pubDate = new Date(year, month - 1, day)
   const days = Math.round((nowDate.getTime() - pubDate.getTime()) / 86400000)
-  if (days <= 0) return '今天'
-  if (days < 7) return `${days} 天前`
-  if (days < 30) return `${Math.floor(days / 7)} 週前`
-  if (days < 365) return `${Math.floor(days / 30)} 個月前`
-  return `${Math.floor(days / 365)} 年前`
+  if (days <= 0) return t('blog.today')
+  if (days < 7) return t('blog.daysAgo', { n: days })
+  if (days < 30) return t('blog.weeksAgo', { n: Math.floor(days / 7) })
+  if (days < 365) return t('blog.monthsAgo', { n: Math.floor(days / 30) })
+  return t('blog.yearsAgo', { n: Math.floor(days / 365) })
 }
 
 // 動畫 & 捲動偵測
@@ -311,13 +307,13 @@ onMounted(() => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
           ]"
         >
-          <span class="text-[#6f6bff]">AI、行銷與網站開發</span><span>數位知識部落格</span>
+          <span class="text-[#6f6bff]">{{ t('blog.heading1') }}</span><span>{{ t('blog.heading2') }}</span>
         </h2>
         <h1
           class="text-[#5B5B5B] text-sm md:text-lg max-w-2xl mx-auto transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          從 AI 技術、行銷策略到網站開發，為你帶來最實用的數位知識與趨勢洞察
+          {{ t('blog.sub') }}
         </h1>
       </div>
     </div>
@@ -333,7 +329,7 @@ onMounted(() => {
               <input
                 v-model="searchQuery"
                 type="text"
-                placeholder="搜尋文章..."
+                :placeholder="t('blog.searchPlaceholder')"
                 class="w-full pl-10 pr-10 py-2.5 rounded-full border border-gray-200 bg-gray-50 text-gray-800 text-sm focus:outline-none focus:border-[#8782FF] focus:ring-2 focus:ring-[#8782FF]/20 transition-all"
                 @keyup.enter="handleSearch"
               />
@@ -394,7 +390,7 @@ onMounted(() => {
                 ]"
                 @click="selectTab(tab)"
               >
-                {{ tab }}
+                {{ catLabel(tab) }}
               </button>
             </div>
             <!-- 右遮罩 + 箭頭 -->
@@ -449,7 +445,7 @@ onMounted(() => {
                 ]"
                 @click="selectTab(tab)"
               >
-                {{ tab }}
+                {{ catLabel(tab) }}
               </button>
             </div>
             <!-- 右遮罩 + 箭頭 -->
@@ -473,22 +469,21 @@ onMounted(() => {
           <!-- 搜尋結果提示 -->
           <div v-if="searchQuery.trim()" class="mb-6">
             <p class="text-gray-500 text-sm">
-              搜尋「<span class="text-[#8782FF] font-semibold">{{ searchQuery }}</span
-              >」共找到 <span class="font-semibold">{{ filteredPosts.length }}</span> 篇文章
+              {{ t('blog.searchResult', { q: searchQuery, n: filteredPosts.length }) }}
             </p>
           </div>
 
           <!-- 標籤 / 分類篩選提示 -->
           <div v-if="filterDescription && !searchQuery.trim()" class="mb-6 flex items-center gap-2">
             <p class="text-gray-500 text-sm">
-              目前篩選：<span class="text-[#8782FF] font-semibold">{{ filterDescription }}</span>
-              <span class="text-gray-400">（{{ filteredPosts.length }} 篇文章）</span>
+              {{ t('blog.filtering') }}<span class="text-[#8782FF] font-semibold">{{ catLabel(filterDescription) }}</span>
+              <span class="text-gray-400">{{ t('blog.count', { n: filteredPosts.length }) }}</span>
             </p>
             <button
               class="text-xs text-gray-400 hover:text-[#8782FF] underline underline-offset-2 transition-colors"
               @click="clearTagFilter"
             >
-              清除篩選
+              {{ t('blog.clearFilter') }}
             </button>
           </div>
 
@@ -497,7 +492,7 @@ onMounted(() => {
             <NuxtLink
               v-for="(post, index) in paginatedPosts"
               :key="post.id"
-              :to="`/blog/${post.id}`"
+              :to="localePath(`/blog/${post.id}`)"
               class="group block py-7 first:pt-0 transition-all duration-700 transform"
               :class="[activeItems.has(index) ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0']"
             >
@@ -509,7 +504,7 @@ onMounted(() => {
                     <span
                       class="inline-block px-2.5 py-0.5 bg-[#8782FF]/10 text-[#8782FF] text-xs font-semibold rounded-full"
                     >
-                      {{ post.category }}
+                      {{ catLabel(post.category) }}
                     </span>
                   </div>
 
@@ -517,12 +512,12 @@ onMounted(() => {
                   <h2
                     class="text-lg md:text-xl font-bold text-gray-900 mb-1.5 line-clamp-2 group-hover:text-[#8782FF] transition-colors leading-snug tracking-tight"
                   >
-                    {{ post.title }}
+                    {{ bTitle(post) }}
                   </h2>
 
                   <!-- 摘要（桌面才顯示） -->
                   <p class="text-gray-500 text-sm mb-3 line-clamp-2 leading-relaxed">
-                    {{ post.excerpt }}
+                    {{ bExcerpt(post) }}
                   </p>
 
                   <!-- 底部資訊：相對時間 + 可點擊標籤 -->
@@ -547,8 +542,8 @@ onMounted(() => {
                 >
                   <img
                     :src="post.coverImage"
-                    :alt="`${post.title} - ${post.category}`"
-                    :title="`閱讀 ${post.title}`"
+                    :alt="`${bTitle(post)} - ${catLabel(post.category)}`"
+                    :title="bTitle(post)"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     width="160"
                     height="112"
@@ -562,8 +557,8 @@ onMounted(() => {
           <!-- 空結果 -->
           <div v-if="filteredPosts.length === 0" class="text-center py-20">
             <div class="text-5xl mb-5">📝</div>
-            <p class="text-gray-400 text-lg mb-2">找不到相關文章</p>
-            <p class="text-gray-300 text-sm">試試其他關鍵字或分類吧</p>
+            <p class="text-gray-400 text-lg mb-2">{{ t('blog.notFound') }}</p>
+            <p class="text-gray-300 text-sm">{{ t('blog.notFoundSub') }}</p>
           </div>
 
           <!-- 分頁 -->
@@ -623,7 +618,7 @@ onMounted(() => {
                 <input
                   v-model="searchQuery"
                   type="text"
-                  placeholder="搜尋文章..."
+                  :placeholder="t('blog.searchPlaceholder')"
                   class="w-full pl-10 pr-10 py-2.5 rounded-full border border-gray-200 bg-gray-50 text-gray-800 text-sm focus:outline-none focus:border-[#8782FF] focus:ring-2 focus:ring-[#8782FF]/20 transition-all"
                   @keyup.enter="handleSearch"
                 />
@@ -656,13 +651,13 @@ onMounted(() => {
             <div>
               <h3 class="text-base font-bold text-gray-900 mb-5 flex items-center gap-2">
                 <span class="w-1 h-5 bg-[#8782FF] rounded-full"></span>
-                精選文章
+                {{ t('blog.featured') }}
               </h3>
               <div class="space-y-5">
                 <NuxtLink
                   v-for="(post, index) in featuredPosts"
                   :key="post.id"
-                  :to="`/blog/${post.id}`"
+                  :to="localePath(`/blog/${post.id}`)"
                   class="group block"
                 >
                   <div class="flex items-start gap-3">
@@ -688,7 +683,7 @@ onMounted(() => {
                       <h4
                         class="text-sm font-bold text-gray-900 line-clamp-2 group-hover:text-[#8782FF] transition-colors leading-snug"
                       >
-                        {{ post.title }}
+                        {{ bTitle(post) }}
                       </h4>
                       <span class="text-xs text-gray-400 mt-1 block">{{ formatRelativeTime(post.publishedAt) }}</span>
                     </div>
@@ -701,7 +696,7 @@ onMounted(() => {
             <div>
               <h3 class="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <span class="w-1 h-5 bg-[#8782FF] rounded-full"></span>
-                推薦主題
+                {{ t('blog.recommendedTopics') }}
               </h3>
               <div class="flex flex-wrap gap-2">
                 <button
@@ -715,7 +710,7 @@ onMounted(() => {
                   ]"
                   @click="setCategory(topic)"
                 >
-                  {{ topic }}
+                  {{ catLabel(topic) }}
                 </button>
               </div>
             </div>
@@ -724,7 +719,7 @@ onMounted(() => {
             <div>
               <h3 class="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <span class="w-1 h-5 bg-[#8782FF] rounded-full"></span>
-                熱門標籤
+                {{ t('blog.hotTags') }}
               </h3>
               <div class="flex flex-wrap gap-2">
                 <button
@@ -759,19 +754,19 @@ onMounted(() => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
           ]"
         >
-          想讓品牌也能<span class="text-[#8782FF]">脫穎而出</span>？
+          {{ t('blog.indexCtaPre') }}<span class="text-[#8782FF]">{{ t('blog.indexCtaHi') }}</span>{{ t('blog.indexCtaPost') }}
         </h2>
         <p
           class="text-gray-500 text-lg md:text-xl mb-10 transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          用 AI 與現成工具，一個人也能把行銷、內容與網站做起來。逛數位工具箱，或需要客製就聯繫我。
+          {{ t('blog.indexCtaSub') }}
         </p>
         <NuxtLink
-          to="/contact"
+          :to="localePath('/contact')"
           class="inline-block bg-[#8782FF] text-white font-bold py-4 px-10 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 active:scale-95"
         >
-          聯繫我
+          {{ t('blog.indexCtaBtn') }}
         </NuxtLink>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type BlogPost } from '~/data/blogs'
+import { blogCategories, type BlogPost } from '~/data/blogs'
 
 definePageMeta({
   key: (route) => route.fullPath,
@@ -7,6 +7,10 @@ definePageMeta({
 
 const route = useRoute()
 const isVisible = ref(false)
+
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const { catLabel, bTitle, bExcerpt } = useLocalizedContent()
 
 const { data: currentPost } = await useAsyncData<BlogPost>(
   `blog-${route.params.id}`,
@@ -29,7 +33,7 @@ const recommendedPosts = computed(() => {
 useHead(() => {
   if (!currentPost.value) {
     return {
-      title: '找不到文章 | Zeona Studio',
+      title: t('blog.detail.notFoundTitle') + ' | Zeona Studio',
     }
   }
 
@@ -107,6 +111,9 @@ useHead(() => {
 // 格式化日期
 const formatDate = (dateStr: string) => {
   const d = new Date(dateStr)
+  if (locale.value === 'en') {
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+  }
   return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`
 }
 
@@ -118,9 +125,9 @@ const backLink = computed(() => {
     blogCategories.includes(queryCategory as (typeof blogCategories)[number]) &&
     queryCategory !== '全部'
   ) {
-    return { path: '/blog', query: { category: queryCategory } }
+    return { path: localePath('/blog'), query: { category: queryCategory } }
   }
-  return { path: '/blog' }
+  return { path: localePath('/blog') }
 })
 
 onMounted(() => {
@@ -142,7 +149,7 @@ onMounted(() => {
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
-          <span>返回部落格</span>
+          <span>{{ t('blog.detail.back') }}</span>
         </NuxtLink>
       </div>
     </div>
@@ -151,13 +158,13 @@ onMounted(() => {
     <div v-if="!currentPost" class="px-8 md:px-12">
       <div class="max-w-4xl mx-auto text-center py-20">
         <div class="text-6xl mb-6">📝</div>
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">找不到此文章</h1>
-        <p class="text-gray-600 mb-8">抱歉，您查找的文章不存在或已被移除。</p>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ t('blog.detail.notFoundTitle') }}</h1>
+        <p class="text-gray-600 mb-8">{{ t('blog.detail.notFoundDesc') }}</p>
         <NuxtLink
-          to="/blog"
+          :to="localePath('/blog')"
           class="inline-block bg-[#8782FF] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#6f6bff] transition-all duration-300"
         >
-          返回部落格
+          {{ t('blog.detail.back') }}
         </NuxtLink>
       </div>
     </div>
@@ -173,10 +180,10 @@ onMounted(() => {
           <!-- 分類標籤 -->
           <div class="flex items-center gap-3 mb-6">
             <NuxtLink
-              :to="{ path: '/blog', query: { category: currentPost.category } }"
+              :to="{ path: localePath('/blog'), query: { category: currentPost.category } }"
               class="bg-[#8782FF] text-white px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-[#6f6bff] transition-colors"
             >
-              {{ currentPost.category }}
+              {{ catLabel(currentPost.category) }}
             </NuxtLink>
             <span class="text-gray-400 text-sm">{{ formatDate(currentPost.publishedAt) }}</span>
           </div>
@@ -269,12 +276,12 @@ onMounted(() => {
     <!-- 推薦文章 -->
     <div v-if="currentPost && recommendedPosts.length > 0" class="px-8 md:px-12 mb-16">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">推薦閱讀</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">{{ t('blog.detail.recommended') }}</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <NuxtLink
             v-for="(post, index) in recommendedPosts"
             :key="post.id"
-            :to="`/blog/${post.id}`"
+            :to="localePath(`/blog/${post.id}`)"
             class="group block rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500 transform"
             :class="[
               'transition-all duration-700',
@@ -285,15 +292,15 @@ onMounted(() => {
             <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
               <img
                 :src="post.coverImage"
-                :alt="`${post.title} - ${post.category}`"
-                :title="`閱讀推薦文章：${post.title}`"
+                :alt="`${bTitle(post)} - ${catLabel(post.category)}`"
+                :title="bTitle(post)"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 width="400"
                 height="225"
                 loading="lazy"
               />
               <div class="absolute top-4 left-4 bg-[#8782FF] text-white px-3 py-1 rounded-full text-xs font-bold">
-                {{ post.category }}
+                {{ catLabel(post.category) }}
               </div>
             </div>
             <div class="p-6">
@@ -303,10 +310,10 @@ onMounted(() => {
               <h3
                 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#8782FF] transition-colors"
               >
-                {{ post.title }}
+                {{ bTitle(post) }}
               </h3>
               <p class="text-gray-500 text-sm line-clamp-2 leading-relaxed">
-                {{ post.excerpt }}
+                {{ bExcerpt(post) }}
               </p>
             </div>
           </NuxtLink>
@@ -320,16 +327,16 @@ onMounted(() => {
         class="mx-auto text-center bg-gradient-to-br from-[#8782FF]/10 to-[#6f6bff]/10 p-12 md:p-20 rounded-[3rem] shadow-sm"
       >
         <h2 class="font-black leading-tight mb-6 text-[32px] md:text-[48px] text-gray-900 tracking-tighter">
-          需要專業的<span class="text-[#8782FF]">數位服務</span>嗎？
+          {{ t('blog.detail.ctaPre') }}<span class="text-[#8782FF]">{{ t('blog.detail.ctaHi') }}</span>{{ t('blog.detail.ctaPost') }}
         </h2>
         <p class="text-gray-500 text-lg md:text-xl mb-10">
-          從即套即用的數位工具箱，到客製化軟體開發與 AI 系統串接，Zeona 都能幫你。
+          {{ t('blog.detail.ctaSub') }}
         </p>
         <NuxtLink
-          to="/contact"
+          :to="localePath('/contact')"
           class="inline-block bg-[#8782FF] text-white font-bold py-4 px-10 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 active:scale-95"
         >
-          聯繫我
+          {{ t('blog.detail.ctaBtn') }}
         </NuxtLink>
       </div>
     </div>
