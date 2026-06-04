@@ -9,11 +9,11 @@
       </div>
       <div class="space-x-4 flex">
         <div class="space-y-2 flex flex-col items-start">
-          <NuxtLink :to="localePath('/about')" :title="t('footer.about')" class="hover:text-[#8782FF] transition">{{
-            t('footer.about')
-          }}</NuxtLink>
           <NuxtLink :to="localePath('/faq')" :title="t('footer.faq')" class="hover:text-[#8782FF] transition">{{
             t('footer.faq')
+          }}</NuxtLink>
+          <NuxtLink :to="localePath('/about')" :title="t('footer.about')" class="hover:text-[#8782FF] transition">{{
+            t('footer.about')
           }}</NuxtLink>
           <NuxtLink :to="localePath('/works')" :title="t('footer.works')" class="hover:text-[#8782FF] transition">{{
             t('footer.works')
@@ -38,24 +38,10 @@
             >{{ t('footer.software') }}</NuxtLink
           >
           <NuxtLink
-            :to="localePath('/services/marketing')"
-            :title="t('footer.marketing')"
-            class="hover:text-[#8782FF] transition"
-            >{{ t('footer.marketing') }}</NuxtLink
-          >
-          <NuxtLink
             :to="localePath('/services/design')"
             :title="t('footer.design')"
             class="hover:text-[#8782FF] transition"
             >{{ t('footer.design') }}</NuxtLink
-          >
-        </div>
-        <div class="space-y-2 flex flex-col items-start">
-          <NuxtLink
-            :to="localePath('/services/all')"
-            :title="t('footer.allServices')"
-            class="hover:text-[#8782FF] transition"
-            >{{ t('footer.allServices') }}</NuxtLink
           >
           <NuxtLink :to="localePath('/blog')" :title="t('footer.blog')" class="hover:text-[#8782FF] transition">{{
             t('footer.blog')
@@ -64,15 +50,8 @@
       </div>
       <div class="space-y-2 flex flex-col">
         <div class="flex space-x-2">
-          <div>{{ t('footer.hours') }}</div>
-          <div>{{ t('footer.hoursVal') }}</div>
-        </div>
-        <div class="flex space-x-2">
           <div>{{ t('footer.email') }}</div>
-          <a
-            href="mailto:54ziziyo@gmail.com"
-            title="54ziziyo@gmail.com"
-            class="hover:text-[#8782FF] transition"
+          <a href="mailto:54ziziyo@gmail.com" title="54ziziyo@gmail.com" class="hover:text-[#8782FF] transition"
             >54ziziyo@gmail.com</a
           >
         </div>

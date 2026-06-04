@@ -22,10 +22,6 @@ const { t } = useI18n()
               </h1>
               <div class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-10">{{ t('contact.noPush') }}</div>
               <div class="flex justify-between items-center">
-                <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">{{ t('contact.hours') }}</div>
-                <div class="text-[#5B5B5B] text-[16px] md:text-[18px]">{{ t('contact.hoursVal') }}</div>
-              </div>
-              <div class="flex justify-between items-center">
                 <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">{{ t('contact.email') }}</div>
                 <a
                   href="mailto:54ziziyo@gmail.com"
