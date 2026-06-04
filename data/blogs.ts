@@ -31,6 +31,132 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'geo-optimization-complete-guide-2026',
+    title: 'GEO 是什麼？2026 生成引擎最佳化完整教學：7 步驟讓 ChatGPT、Perplexity 主動推薦你（附提示詞）',
+    category: '品牌行銷策略',
+    tags: ['GEO', '生成引擎最佳化', 'AI搜尋優化', 'ChatGPT行銷', 'SEO'],
+    excerpt:
+      '當客人不再 Google、直接問 AI「推薦哪一間」，你的品牌出現在答案裡了嗎？這是一份可以直接照做的 GEO 教學：7 個步驟＋可複製提示詞，讓 ChatGPT、Perplexity、Google AI 主動把你列入推薦清單。建議收藏。',
+    coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop',
+    author: 'Zeona Studio',
+    publishedAt: '2026-06-04',
+    updatedAt: '2026-06-04',
+    featured: true,
+    seo: {
+      title: 'GEO 是什麼？2026 生成引擎最佳化完整教學（附提示詞）| Zeona Studio',
+      description:
+        'GEO（生成引擎最佳化）完整教學：搞懂 GEO 與 SEO 差異，用 7 個可照做的步驟與可複製提示詞，讓 ChatGPT、Perplexity、Google AI Overviews 主動推薦你的品牌。',
+      keywords: 'GEO, 生成引擎最佳化, Generative Engine Optimization, AI搜尋優化, AEO, ChatGPT行銷, Perplexity, SEO 2026',
+      ogImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.8;"><strong>一句話定義：GEO（Generative Engine Optimization，生成引擎最佳化）</strong>是讓你的內容更容易被 ChatGPT、Perplexity、Gemini、Google AI Overviews 等「生成式 AI」<strong>理解、信任並主動引用</strong>的優化方法。簡單說——SEO 是讓你被「搜尋到」，GEO 是讓你被 AI「推薦出去」。</p>
+
+      <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
+        <strong>TL;DR（懶人包）：</strong>想被 AI 推薦，你的內容要做到三件事——<strong>講清楚（結構化）、可信任（有數據與來源）、好引用（一段就能回答問題）</strong>。本文用 7 步驟帶你做完，每步都附可直接複製的提示詞。
+      </blockquote>
+
+      <h2>為什麼 2026 你一定要懂 GEO？</h2>
+      <p>使用者的決策路徑已經改變。過去是「Google 關鍵字 → 逐一點開比較」，現在越來越多人是：</p>
+      <blockquote style="background:#f9fafb;border-left:5px solid #8782FF;padding:15px 20px;margin:20px 0;border-radius:0 8px 8px 0;">
+        <strong>直接問 AI「推薦哪幾個？」 ➔ AI 整理出一份清單 ➔ 從清單裡挑 ➔ 下單</strong>
+      </blockquote>
+      <p>關鍵在於：<strong>如果 AI 的答案裡沒有你，你連被比較的機會都沒有。</strong>據 2026 年多家行銷媒體統計，已有約 <strong>85% 的行銷人</strong>把 AI 工具納入日常工作流（三年前僅 61%），連 Surfer 這類老牌 SEO 工具都在 2026 年把策略主軸轉向「AI Search Optimization」。這不是未來式，是進行式。</p>
+
+      <h2>GEO 與 SEO 有什麼不同？</h2>
+      <div style="overflow-x:auto;margin:20px 0;">
+      <table style="width:100%;border-collapse:collapse;font-size:15px;">
+        <thead>
+          <tr style="background:#f1f0ff;">
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">面向</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">SEO（搜尋引擎最佳化）</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">GEO（生成引擎最佳化）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>目標</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">排在 Google 第一頁</td><td style="padding:12px;border:1px solid #e5e7eb;">被 AI 列入推薦答案</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>使用者動作</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">點擊連結</td><td style="padding:12px;border:1px solid #e5e7eb;">直接看 AI 給的結論</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>勝出關鍵</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">關鍵字、外鏈、頁面速度</td><td style="padding:12px;border:1px solid #e5e7eb;">結構清楚、可被引用、有可信來源</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>內容形式</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">長文、關鍵字密度</td><td style="padding:12px;border:1px solid #e5e7eb;">明確定義、問答、條列、數據</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>好消息是：<strong>GEO 不是要你打掉 SEO 重練。</strong>兩者高度互補——把既有內容「重新整理成 AI 好讀好引用的樣子」，就是 GEO 的起手式。</p>
+
+      <hr>
+
+      <h2>GEO 實作 7 步驟（可直接照做）</h2>
+
+      <h3>步驟 1️⃣：先搞懂 AI 會「引用」什麼樣的內容</h3>
+      <p>生成式 AI 在回答問題時，傾向引用<strong>「能直接回答問題、有明確事實、來源可信」</strong>的段落。所以你的每一篇內容都該先問自己：「如果有人拿這個主題去問 AI，我這段文字能不能被直接拿來當答案？」</p>
+      <p>先用這個提示詞，盤點你的主題被問到的真實問題：</p>
+      <div style="background:#0f172a;color:#e2e8f0;padding:16px 20px;border-radius:10px;font-size:14px;line-height:1.75;margin:16px 0;white-space:pre-wrap;">你是我的 GEO 內容策略師。我的品牌是「[填入品牌/產業]」，目標客群是「[填入]」。
+請列出目標客群在做購買決策前，最可能拿去問 ChatGPT 的 15 個真實問題，
+並依「資訊型／比較型／決策型」分類，標出哪些最可能帶來成交。</div>
+
+      <h3>步驟 2️⃣：把內容「結構化」——定義先行、一段一重點</h3>
+      <p>AI 偏好結構清楚的內容。請遵守三個原則：</p>
+      <ol style="line-height:1.9;">
+        <li><strong>定義先行：</strong>文章/段落開頭就用一句話把結論講完（像本文最上方那樣），AI 最愛擷取這種句子。</li>
+        <li><strong>一段一重點：</strong>不要把五件事塞進一段。每段聚焦一個可被獨立引用的觀念。</li>
+        <li><strong>善用標題與條列：</strong>用 H2／H3 切出清楚層級，重點用編號或項目符號列出。</li>
+      </ol>
+
+      <h3>步驟 3️⃣：加入「問答式（FAQ）」內容</h3>
+      <p>這是 GEO 的高 CP 值招式。把客戶最常問的問題，用「問題當標題、答案第一句就講重點」的格式寫出來——這幾乎就是 AI 答案的現成原料。</p>
+      <div style="background:#0f172a;color:#e2e8f0;padding:16px 20px;border-radius:10px;font-size:14px;line-height:1.75;margin:16px 0;white-space:pre-wrap;">根據以下主題，幫我寫 5 組 FAQ 問答。
+主題：[填入]
+要求：每個答案第一句先直接給結論（40 字內），再補充說明；
+語氣專業、可信、不浮誇，避免「最好、第一」這類無法驗證的字眼。</div>
+
+      <h3>步驟 4️⃣：放進「可驗證的事實與數據」</h3>
+      <p>AI 為了避免幻覺，會更願意引用<strong>有具體數字、年份、來源</strong>的內容。把「我們很專業」改成「服務 120+ 品牌、平均上線時間 14 天」。沒有數據時，至少標明資訊來源或時間點。</p>
+
+      <h3>步驟 5️⃣：補上結構化資料（Schema / JSON-LD）</h3>
+      <p>結構化資料是「寫給機器看的內容說明書」，能大幅提升被正確理解與引用的機率。對品牌官網，至少補上這三種：</p>
+      <ul style="line-height:1.9;">
+        <li><strong>Organization：</strong>品牌名稱、Logo、服務項目、聯絡方式。</li>
+        <li><strong>Article / BlogPosting：</strong>每篇文章的標題、作者、發布時間。</li>
+        <li><strong>FAQPage：</strong>把步驟 3 的問答標記起來，讓 AI 直接吃進去。</li>
+      </ul>
+      <p>（這部分若你不熟程式，這正是可以交給工程協助的環節——文末有資源。）</p>
+
+      <h3>步驟 6️⃣：建立「品牌一致性」與信任訊號（E-E-A-T）</h3>
+      <p>AI 會交叉比對多個來源來判斷一個品牌是否「可信」。所以請確保：品牌名稱、定位、服務說明，在<strong>官網、社群、Google 商家、第三方介紹</strong>都一致。被越多可信來源用一致的方式描述，AI 越敢推薦你。</p>
+
+      <h3>步驟 7️⃣：監測——直接「問 AI 你自己」</h3>
+      <p>GEO 的好處是回饋很直接：打開 ChatGPT、Perplexity、Gemini，用客戶的口吻問問看。</p>
+      <div style="background:#0f172a;color:#e2e8f0;padding:16px 20px;border-radius:10px;font-size:14px;line-height:1.75;margin:16px 0;white-space:pre-wrap;">我想找「[你的產業/服務]」，請推薦幾個口碑好的選擇，並說明推薦理由與資訊來源。</div>
+      <p>如果答案裡沒有你 → 回到步驟 2～5 補強；如果有你但描述不準 → 修正官網對應內容。每 4～6 週重測一次，持續迭代。</p>
+
+      <hr>
+
+      <h2>常見問題 FAQ</h2>
+      <h3>Q：GEO 多久會看到效果？</h3>
+      <p>通常需要 <strong>1～3 個月</strong>，視 AI 模型的資料更新頻率與你內容的可信度而定。它和 SEO 一樣是長期投資，不是開關。</p>
+      <h3>Q：小品牌、沒預算也能做 GEO 嗎？</h3>
+      <p>可以。GEO 比 SEO 更吃「內容品質與結構」而非廣告預算。一個人用對方法與提示詞，就能把現有內容重新整理成 AI 友善版本。</p>
+      <h3>Q：GEO 會取代 SEO 嗎？</h3>
+      <p>不會取代，是疊加。SEO 顧 Google 傳統搜尋，GEO 顧 AI 問答，兩者都要做，且大部分工作可以共用。</p>
+
+      <hr>
+
+      <h2>📌 GEO 收藏級檢查清單</h2>
+      <ul style="line-height:2;">
+        <li>☐ 每篇內容開頭都有「一句話結論」</li>
+        <li>☐ 客戶常問的問題都做成了 FAQ</li>
+        <li>☐ 內容有具體數字、年份或來源</li>
+        <li>☐ 官網補上 Organization / Article / FAQPage 結構化資料</li>
+        <li>☐ 品牌描述在各平台一致</li>
+        <li>☐ 每月用 AI 問一次「推薦清單」自我檢測</li>
+      </ul>
+
+      <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
+        <strong>不想自己從零開始？</strong>我把這套 GEO 流程用到的提示詞與內容範本，整理在 <a href="/toolbox" style="color:#8782FF;font-weight:bold;">數位工具箱</a> 裡，挑了就能套用；想看真實成效，也可以讀這篇 <a href="/blog/case-study-motorbike-geo-success" style="color:#8782FF;font-weight:bold;">重機部品 GEO 實戰案例</a>。需要把結構化資料與官網一次做到位，歡迎 <a href="/contact" style="color:#8782FF;font-weight:bold;">直接聊聊</a>。
+      </blockquote>
+    `,
+  },
+  {
     id: 'case-study-motorbike-geo-success',
     title: '「是 ChatGPT 推薦你們的！」從重機人身部品案例，看生成引擎最佳化 GEO 的真實轉化力',
     category: '品牌行銷策略',
