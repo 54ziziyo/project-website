@@ -192,3 +192,304 @@ export const blogEn: Record<string, { title: string; excerpt: string }> = {
       'If AI feels useless, it’s because you haven’t mastered the right conversation formula. Learn 2026’s strongest prompt-design thinking — from structure to 5 hands-on examples.',
   },
 }
+
+// 商品內頁長文（fullDescription）＋功能列表（features）英文版
+export const productDetailEn: Record<string, { fullDescription: string; features: string[] }> = {
+  'workplace-chatgpt-50-scenarios': {
+    fullDescription: `Ever open ChatGPT and have no idea how to talk to it?
+
+This prompt pack is the "workplace AI cheat sheet" built for professionals.
+
+All 50 scenarios come from real work situations, each with:
+✅ A complete prompt (ready to paste)
+✅ A real output example (so you know what to expect)
+✅ Tweaking tips (how to make it your own style)
+
+Departments covered:
+• Marketing/Social: copy, campaign planning, competitor analysis
+• PM/Product: PRD writing, user stories, requirement specs
+• Sales/Support: client proposals, cold outreach emails, complaint-handling scripts
+• HR: recruiting JDs, staff announcements, exit-interview questions
+• Everyone: weekly reports, email polishing, meeting summaries, self-reviews
+
+Buy it and you can start using it tonight.`,
+    features: [
+      '50 copy-paste workplace prompts',
+      'A real output example for every scenario',
+      'Covers Marketing, PM, Sales, HR and more',
+      'Includes a "make AI sound more human" guide',
+      'Lifetime download, free updates forever',
+    ],
+  },
+  'short-video-script-pack': {
+    fullDescription: `If you don't grab people in the first 3 seconds, nothing after matters.
+
+This pack solves the hardest parts of short video: "how to open" and "how to tell the story."
+
+Includes:
+
+🎣 Golden opening hooks (by theme)
+• Knowledge opener: "99% of people don't know…"
+• Controversy opener: "You've been doing this wrong"
+• Emotional opener: "I've never told you this…"
+• List opener: "5 ways to…"
+• Question opener: "Have you ever…"
+
+📋 Script frameworks
+1. Tutorial: problem → steps → result
+2. Story: conflict → twist → ending
+3. Contrast: Before → After → method
+4. Controversy: claim → counter → stance
+5. List: number → expand → action
+
+🤖 ChatGPT prompt templates
+Drop in your topic and generate a full first-draft script in 30 seconds.`,
+    features: [
+      'Categorized golden opening hooks',
+      'Ready-to-use script frameworks',
+      'ChatGPT prompts: full script in 30 seconds',
+      'Includes a "which hook fits which topic" guide',
+      'Written for a real, on-the-ground voice',
+    ],
+  },
+  'threads-hook-formula-200': {
+    fullDescription: `The Threads algorithm cares about one thing: whether your first line makes people want to reply.
+
+This library collects 200 tested opening formulas across 10 strategy types:
+
+🔥 Controversy triggers: make people compelled to push back or defend
+💡 Knowledge shocks: make people feel they learned something and want to share
+😂 Relatable rants: make people think "exactly" and comment
+🎯 Prophecy/challenge: make people want to see what happens next
+😮 Counter-intuitive: make people question what they thought they knew
+📊 Number shocks: concrete numbers that make people stop
+💬 Question prompts: make people compelled to answer
+🔗 Story openers: one line that makes people read on
+⚡ Urgency: make people feel they'll miss out if they don't act now
+👑 Identity: a sense of belonging — "only people like us get this"
+
+Each formula comes with a usage example + the type of account it suits.`,
+    features: [
+      '200 tested Threads opening formulas',
+      '10 reach-strategy categories to pick from',
+      'A real example for every formula',
+      'Fits any account type (personal/brand/newcomer)',
+      'Drives engagement with no follower base needed',
+    ],
+  },
+  'adhd-focus-digital-journal': {
+    fullDescription: `Too many things in a day — and just planning eats up your time instead of actually doing.
+
+This is built for people who get distracted easily and struggle to start.
+
+Design philosophy:
+• See only one page per day
+• Just one main task area
+• Everything non-essential is hidden
+
+Core features:
+🎯 Today's One Thing
+• Forces you to pick the single most important thing
+• Mark it done for an instant sense of achievement
+
+📍 Quick-capture area
+• Dump whatever pops into your head, no categorizing needed
+• Spend 5 minutes each night turning it into tasks
+
+⏱️ Pomodoro integration
+• Built-in 25-minute timer link
+• Auto-logs each completed Pomodoro
+
+🌙 Daily review (3 questions, 2 minutes)
+• Best thing today?
+• Tomorrow's one goal?
+• One line to remember today?`,
+    features: [
+      'Distraction-free minimal UI — one page a day',
+      '“Today’s One Thing” forces prioritization',
+      'Quick-capture: dump thoughts the moment they appear',
+      'Pomodoro integration + auto-logging',
+    ],
+  },
+  'freelancer-client-tracker-notion': {
+    fullDescription: `Freelancers fear two things most: forgetting to chase payment, and losing track of which project they're on.
+
+This CRM makes your freelance business run like a company:
+
+👥 Client database
+• Each client's contact info, history and payment habits
+• Tag "great client ⭐" and "blacklist 🚫"
+• Auto-calculates total deals with each client
+
+📋 Project tracking board
+• Kanban view: inquiry → proposal → in progress → payment → done
+• Deadline countdown alerts for each project
+• Attachments, references and revision logs all in one place
+
+💰 Finance dashboard
+• Expected vs. actual income this month
+• Accounts receivable (who hasn't paid!)
+• Monthly income trend line chart
+• Income source analysis by client and by type
+
+📄 Quote generator
+• Enter line items and it totals automatically
+• Export a PDF to clients in one click (with your brand logo)
+
+📑 Contract archive
+• All contracts managed in one place
+• Reminders for key terms`,
+    features: [
+      'Client database: contacts, blacklist tags, total deals',
+      'Kanban tracking: from inquiry to payment',
+      'Finance dashboard: receivables, monthly income trend',
+      'Quote generator: auto-total, one-click PDF export',
+      'Includes a 30-minute getting-started guide',
+    ],
+  },
+  'dark-mode-personal-brand-canva': {
+    fullDescription: `Quality isn't "designed" — it's decided by color and type.
+This Canva template set has every layout you'll use on IG:
+
+📱 IG post series
+• 1:1 square posts (knowledge, price announcements, results showcase)
+• 4:5 portrait posts (long-form knowledge, opinions)
+• Carousel covers + inner pages (for tutorial series)
+
+🎬 Story series
+• 9:16 countdown stories
+• Q&A layout
+• Product-recommendation layout
+
+🖼️ Bio cards
+• For sharing on Threads/Twitter
+• For media-collaboration pitches
+• Speaker introduction cards`,
+    features: [
+      'Canva layouts (posts/stories/bio cards)',
+      'Post on your own without a designer',
+      'Brand color system + font usage guide',
+      'Works with the free version of Canva',
+      'Unlimited edits after purchase, commercial license',
+    ],
+  },
+  'short-video-hook-asset-pack': {
+    fullDescription: `A short-video asset pack that works in CapCut / Premiere / Final Cut.
+
+🎬 Caption animation templates
+• Explosive text burst (for knowledge videos)
+• Typewriter reveal (for story videos)
+• Neon glow sweep (for tech/cool themes)
+• Handwritten doodle (for lifestyle vlogs)
+• Alert bar / breaking news (for controversy)
+
+🔊 Transition SFX pack
+• Impact SFX (pull attention back)
+• Swipe SFX (for scene changes)
+• Bell/notification (for emphasis)
+• Ambient (suspense/tension)
+• Comedy SFX (for funny content)
+
+📝 100 golden opening hooks
+• By theme: knowledge/controversy/relatable/suspense/list
+• Includes a "which content fits which hook" guide
+
+⚙️ File formats
+• MP4 (animation templates)
+• MP3 + WAV (SFX)
+• PDF (hook copy library)`,
+    features: [
+      'Caption animation templates (MP4, drop-in)',
+      'Transition SFX (MP3 + WAV)',
+      'Golden opening-hook copy',
+      'Works with CapCut / Premiere / Final Cut',
+      'Includes captioned versions',
+    ],
+  },
+  'ai-personal-brand-full-pack': {
+    fullDescription: `Still envying how well others run their personal brand while you don't even know "what the first step is"?
+
+The problem was never that you don't try hard enough — it's that you're missing a system you can just follow.
+
+This pack prepares everything you need to go "from 0 to a personal brand" — the tools, prompts and steps. You just fill in the blanks, copy, and publish.
+
+────────────────
+🎯 Who it's for
+• People who want to build a personal brand but don't know where to start
+• Creators whose content is slow and directionless, who keep going dark
+• People who want to use AI but don't know how to prompt
+
+────────────────
+📦 What you get (5 parts)
+
+📱 Part 1｜Setting up your IG account
+• AI bio prompts (enter your positioning, get 5 versions at once)
+• Personal-brand positioning worksheet (4 questions to find your edge)
+• Highlights categories and cover design tips
+
+💡 Part 2｜IG content idea bank
+• 16 post ideas, organized by content pillar (value / trends / story)
+• Each idea comes with a format suggestion + a ready-to-use ChatGPT prompt
+• No more staring at a blank screen
+
+✍️ Part 3｜Blog prompts ×20
+• SEO title generator, article outlines, conclusions and CTAs
+• "Make AI write in your voice" tuning techniques
+
+📧 Part 4｜Newsletter prompts ×5
+• Weekly digest / tips list / personal story / promo notice / special thanks
+• One prompt per format — it even generates the subject line
+
+🚀 Part 5｜30-day execution calendar
+• One action per day, a single clear throughline
+• A full roadmap from setting up your account to your first 1,000 followers
+
+────────────────
+💡 Why it works
+The prompts are versions proven in real operation that produce publish-ready content — not vague templates you copy but can't get anything out of. Paired with clear content pillars and a steady posting rhythm, the first 30 days can realistically build 250–500 followers (depending on niche and execution).
+
+────────────────
+📂 How you get it: unlock the online version with a personal serial after purchase — permanent access, prompts copy in one click.`,
+    features: [
+      'IG account setup: bio prompts + positioning worksheet',
+      'IG content idea bank: 16 ideas + prompts',
+      'Blog prompts ×20 (SEO titles, outlines, CTAs)',
+      'Newsletter prompts ×5 (subject lines included)',
+      '30-day execution calendar (0→1,000 followers path)',
+    ],
+  },
+  'line-auto-budget-bot': {
+    fullDescription: `The biggest problem with budgeting apps is: do you remember to open them?
+
+This script lets you log on the go in LINE, organized automatically.
+
+🤖 Dead simple to use
+1. Message LINE "lunch 150" or "transit 45 EasyCard"
+2. The bot auto-categorizes and logs it to Google Sheets
+3. Every Sunday it sends you a weekly spending report
+
+📊 Auto-generated charts
+• Monthly spending pie chart (by category)
+• Daily spending line chart
+• Bar chart comparing with last month
+• "Danger category" alerts (auto-notify when over budget)
+
+🗂️ Spending categories (customizable)
+• Food/Transit/Shopping/Entertainment/Medical/Daily/Other
+• Fixed vs. variable expenses calculated separately
+
+⚙️ Setup notes
+• Uses the LINE Messaging API (free tier)
+• Google Apps Script (completely free)
+• No coding needed — just follow the steps
+• Includes a 30-minute setup video tutorial`,
+    features: [
+      'Log expenses by messaging LINE — no app to open',
+      'Auto-syncs to Google Sheets',
+      'Weekly auto pie chart + line chart',
+      'Auto LINE alert when over budget',
+      'Includes a step-by-step video (done in 30 min)',
+    ],
+  },
+}
+

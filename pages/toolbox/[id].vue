@@ -4,7 +4,7 @@ import { products, type Product } from '~/data/products'
 const route = useRoute()
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { catLabel, pName, pDesc, pTags } = useLocalizedContent()
+const { catLabel, pName, pDesc, pTags, pFullDesc, pFeatures } = useLocalizedContent()
 const product = computed<Product | undefined>(() =>
   products.find((p) => p.id === route.params.id),
 )
@@ -175,7 +175,7 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
             <h3 class="font-bold text-gray-800 mb-3 text-sm">{{ t('toolbox.detail.includes') }}</h3>
             <ul class="space-y-2">
               <li
-                v-for="feature in product.features"
+                v-for="feature in pFeatures(product)"
                 :key="feature"
                 class="flex items-start gap-2.5 text-sm text-gray-600"
               >
@@ -215,7 +215,7 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
           <div class="prose prose-gray max-w-none">
             <div
               class="text-gray-600 leading-relaxed whitespace-pre-line text-base"
-            >{{ product.fullDescription }}</div>
+            >{{ pFullDesc(product) }}</div>
           </div>
         </div>
       </div>

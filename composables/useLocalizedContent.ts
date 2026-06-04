@@ -1,4 +1,4 @@
-import { categoryLabelsEn, productEn, portfolioEn, blogEn } from '~/data/contentEn'
+import { categoryLabelsEn, productEn, portfolioEn, blogEn, productDetailEn } from '~/data/contentEn'
 
 // 依目前語系，回傳卡片摘要的本地化內容；en 缺漏時 fallback 回中文原欄位。
 export function useLocalizedContent() {
@@ -13,6 +13,10 @@ export function useLocalizedContent() {
     isEn.value ? productEn[p.id]?.description ?? p.description : p.description
   const pTags = (p: { id: string; tags: string[] }) =>
     isEn.value ? productEn[p.id]?.tags ?? p.tags : p.tags
+  const pFullDesc = (p: { id: string; fullDescription: string }) =>
+    isEn.value ? productDetailEn[p.id]?.fullDescription ?? p.fullDescription : p.fullDescription
+  const pFeatures = (p: { id: string; features: string[] }) =>
+    isEn.value ? productDetailEn[p.id]?.features ?? p.features : p.features
 
   const wTitle = (p: { id: string; title: string }) =>
     isEn.value ? portfolioEn[p.id]?.title ?? p.title : p.title
@@ -27,5 +31,5 @@ export function useLocalizedContent() {
   const bTags = (p: { tags: string[]; tagsEn?: string[] }) =>
     isEn.value && p.tagsEn && p.tagsEn.length ? p.tagsEn : p.tags
 
-  return { isEn, catLabel, pName, pDesc, pTags, wTitle, wDesc, bTitle, bExcerpt, bTags }
+  return { isEn, catLabel, pName, pDesc, pTags, pFullDesc, pFeatures, wTitle, wDesc, bTitle, bExcerpt, bTags }
 }
