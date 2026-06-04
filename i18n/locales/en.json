@@ -325,8 +325,6 @@
     "desc1": "Fill out the form and I'll reply within 24 hours.",
     "desc2": "We can start by talking through your needs and what works best for you.",
     "noPush": "No hard sell — I'll give you my honest advice 💬",
-    "hours": "Hours",
-    "hoursVal": "Weekdays 10:00–18:00",
     "email": "Email",
     "lineId": "LINE ID",
     "note": "※ I'm often abroad, so please reach out online — phone calls may incur international charges for both sides.",
@@ -575,6 +573,27 @@
       }
     ]
   },
+  "designPrice": {
+    "metaTitle": "Design Services | Zeona Studio - Branding, Logo Design, Marketing Assets",
+    "metaDesc": "Zeona Studio professional design services: brand identity, logo design, social post assets, marketing banners, UI/UX design and LINE rich menus. From brand planning to visual execution, we craft a consistent, memorable brand image that stands out.",
+    "heading": "Design Services Price List",
+    "sub1": "Social marketing visuals, brand identity, website UI/UX planning",
+    "sub2": "Professional design that builds a distinctive brand image",
+    "noteTitle": "A note on design projects",
+    "noteBody": "Final pricing is adjusted to the actual complexity of your needs. Every design item includes 2 rounds of minor revisions. Extra drafts, rush handling or licensed commercial stock are quoted separately as needed.",
+    "items": [
+      { "title": "Logo Design", "highlight": "Design planning, standard palette & basic application icons", "description": "Build your brand's core visual — vector source files and common formats included.", "price": "10,000", "unit": "and up" },
+      { "title": "Social Image / Banner Design", "highlight": "Custom sizes for each platform (FB/IG/Shopee, etc.)", "description": "High-quality static design. ※ Animated GIF +30%.", "price": "1,200", "unit": "and up" },
+      { "title": "Poster / Event Key Visual", "highlight": "Custom key visual with applied composition", "description": "Great for large events and exhibitions. ※ Print-ready file +NT$500.", "price": "3,000", "unit": "and up" },
+      { "title": "LINE Rich Menu Design", "highlight": "3- or 6-grid layout, includes brand-style definition", "description": "Elevates your official account; includes color rules and layout optimization.", "price": "1,500", "unit": "– 3,500" },
+      { "title": "EDM / Landing Page Design", "highlight": "Marketing-oriented layout with responsive (RWD) planning", "description": "Includes visual design and HTML export. ※ Copy to be provided by the client.", "price": "4,000", "unit": "and up" },
+      { "title": "Explainer / Infographic", "highlight": "Data visualization and integrated text-graphics design", "description": "Static from $3,000 / interactive web version from $6,000.", "price": "3,000", "unit": "and up" },
+      { "title": "UI/UX Design (per page)", "highlight": "Wireframe + UI design + Figma delivery", "description": "Includes a basic interactive prototype. ※ Complex features/admin systems quoted separately.", "price": "10,000", "unit": "/page and up" },
+      { "title": "Design System + Wireframe", "highlight": "Complete design principles and component library (Design System)", "description": "Includes color, type, component rules and up to 5 wireframe pages.", "price": "50,000", "unit": "and up" },
+      { "title": "Presentation Design (PPT / Keynote)", "highlight": "Customized by page count and style to boost persuasion", "description": "Basic $300/page. ※ Animation (transitions/paths/interaction) +50%.", "price": "300", "unit": "/page and up" },
+      { "title": "Social Visual Kit (Limited Offer)", "highlight": "IG 9-grid + story highlight covers + brand avatar", "description": "Includes 3 reusable post templates — one-stop social layout.", "price": "8,000", "unit": "" }
+    ]
+  },
   "toolbox": {
     "metaTitle": "Digital Toolbox | Zeona Studio - AI Marketing Tools, Prompt Packs & Templates",
     "metaDesc": "Zeona Studio Digital Toolbox: curated AI prompt packs, marketing templates and learning resources to boost your social marketing with AI. Buy & use instantly, lifetime download.",
@@ -695,8 +714,6 @@
     "design": "Design",
     "allServices": "All Services",
     "blog": "Blog",
-    "hours": "Hours",
-    "hoursVal": "Weekdays 10:00–18:00",
     "email": "Email",
     "lineId": "LINE ID"
   },

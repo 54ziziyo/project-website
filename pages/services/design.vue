@@ -3,16 +3,13 @@
 import DesignPrice from '~/components/service/DesignPrice.vue'
 
 // SEO 優化 - 視覺設計服務頁面
-useHead({
-  title: '視覺設計服務 | Zeona Studio - 品牌設計、LOGO設計、行銷素材',
+const { t } = useI18n()
+useHead(() => ({
+  title: t('designPrice.metaTitle'),
   meta: [
-    {
-      name: 'description',
-      content:
-        'Zeona Studio 專業視覺設計服務：品牌識別設計、LOGO 設計、社群貼文素材、行銷 Banner 製作、UI/UX 介面設計、LINE 圖文選單。從品牌規劃到視覺執行，為您打造一致且令人印象深刻的品牌視覺形象，讓品牌在市場中脫穎而出。',
-    },
-    { property: 'og:title', content: '視覺設計服務 | Zeona Studio - 品牌設計專家' },
-    { property: 'og:description', content: '專業視覺設計，為您的品牌建立獨特形象。' },
+    { name: 'description', content: t('designPrice.metaDesc') },
+    { property: 'og:title', content: t('designPrice.metaTitle') },
+    { property: 'og:description', content: t('designPrice.sub2') },
     { property: 'og:url', content: 'https://zeona.vercel.app/services/design' },
   ],
   link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/services/design' }],
@@ -22,12 +19,12 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: '視覺設計服務',
+        name: t('designPrice.heading'),
         provider: {
           '@type': 'Organization',
           name: 'Zeona Studio',
         },
-        description: '品牌識別設計、LOGO 設計、行銷素材製作',
+        description: t('designPrice.sub1'),
         areaServed: { '@type': 'Country', name: 'Taiwan' },
         serviceType: 'Graphic Design',
         offers: {
@@ -39,7 +36,7 @@ useHead({
       }),
     },
   ],
-})
+}))
 </script>
 <template>
   <div>
