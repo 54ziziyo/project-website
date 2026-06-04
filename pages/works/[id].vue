@@ -8,6 +8,10 @@ definePageMeta({
 const route = useRoute()
 const isVisible = ref(false)
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+const { catLabel, wTitle, wDesc } = useLocalizedContent()
+
 const currentPortfolio = computed(() => {
   const id = route.params.id as string
   return portfolios.find((p) => p.id === id) || null
@@ -17,20 +21,20 @@ const currentPortfolio = computed(() => {
 useHead(() => {
   if (!currentPortfolio.value) {
     return {
-      title: '找不到作品 | Zeona Studio',
-      meta: [{ name: 'description', content: '您查找的作品不存在或已被移除。' }],
+      title: t('works.detail.notFoundTitle') + ' | Zeona Studio',
+      meta: [{ name: 'description', content: t('works.detail.notFoundDesc') }],
     }
   }
 
   const portfolio = currentPortfolio.value
   return {
-    title: `${portfolio.title} | Zeona Studio 作品集`,
+    title: `${wTitle(portfolio)} | Zeona Studio`,
     meta: [
       {
         name: 'description',
         content: `${portfolio.title} | Zeona Studio 作品集- ${portfolio.shortDesc}。${portfolio.category}專案，使用技術：${portfolio.techStack.slice(0, 10).join('、')}。查看 Zeona Studio 如何協助客戶打造數位門面。`,
       },
-      { property: 'og:title', content: `${portfolio.title} | Zeona Studio 作品集` },
+      { property: 'og:title', content: `${wTitle(portfolio)} | Zeona Studio` },
       { property: 'og:description', content: `${portfolio.shortDesc}。查看完整專案介紹與成果展示。` },
       { property: 'og:url', content: `https://zeona.vercel.app/works/${portfolio.id}` },
       { property: 'og:type', content: 'article' },
@@ -48,10 +52,10 @@ const backLink = computed(() => {
       : currentPortfolio.value?.category
 
   if (resolvedCategory && categories.includes(resolvedCategory) && resolvedCategory !== '全部') {
-    return { path: '/works', query: { category: resolvedCategory } }
+    return { path: localePath('/works'), query: { category: resolvedCategory } }
   }
 
-  return { path: '/works' }
+  return { path: localePath('/works') }
 })
 
 onMounted(() => {
@@ -72,20 +76,20 @@ onMounted(() => {
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
-          <span>返回作品集</span>
+          <span>{{ t('works.detail.back') }}</span>
         </NuxtLink>
       </div>
     </div>
 
     <div v-if="!currentPortfolio" class="px-8 md:px-12">
       <div class="max-w-6xl mx-auto text-center py-20">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">找不到此作品</h1>
-        <p class="text-gray-600 mb-8">抱歉，您查找的作品不存在或已被移除。</p>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ t('works.detail.notFoundTitle') }}</h1>
+        <p class="text-gray-600 mb-8">{{ t('works.detail.notFoundDesc') }}</p>
         <NuxtLink
           :to="backLink"
           class="inline-block bg-[#8782FF] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#6f6bff] transition-all duration-300"
         >
-          返回作品集
+          {{ t('works.detail.back') }}
         </NuxtLink>
       </div>
     </div>
@@ -97,14 +101,14 @@ onMounted(() => {
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
           <div class="inline-block bg-[#8782FF] text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-            {{ currentPortfolio.category }}
+            {{ catLabel(currentPortfolio.category) }}
           </div>
-          <h1 class="hidden">{{ currentPortfolio.title }} | Zeona Studio 作品集</h1>
+          <h1 class="hidden">{{ wTitle(currentPortfolio) }} | Zeona Studio</h1>
           <div class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            {{ currentPortfolio.title }}
+            {{ wTitle(currentPortfolio) }}
           </div>
           <p class="text-xl text-gray-600">
-            {{ currentPortfolio.shortDesc }}
+            {{ wDesc(currentPortfolio) }}
           </p>
         </div>
 
@@ -130,8 +134,8 @@ onMounted(() => {
               <img
                 v-else
                 :src="currentPortfolio.image"
-                :alt="`${currentPortfolio.title} - ${currentPortfolio.shortDesc}`"
-                :title="`${currentPortfolio.title} | ${currentPortfolio.category} 作品展示`"
+                :alt="`${wTitle(currentPortfolio)} - ${wDesc(currentPortfolio)}`"
+                :title="`${wTitle(currentPortfolio)} | ${catLabel(currentPortfolio.category)}`"
                 class="w-full h-auto object-cover"
                 width="800"
                 height="600"
@@ -148,7 +152,7 @@ onMounted(() => {
             <div class="mb-8">
               <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
                 <span class="w-2 h-6 bg-[#8782FF] rounded mr-3"></span>
-                專案描述
+                {{ t('works.detail.desc') }}
               </h2>
               <p class="text-gray-600 leading-relaxed" v-html="currentPortfolio.description"></p>
             </div>
@@ -156,7 +160,7 @@ onMounted(() => {
             <div class="mb-8">
               <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
                 <span class="w-2 h-6 bg-[#8782FF] rounded mr-3"></span>
-                主要功能
+                {{ t('works.detail.features') }}
               </h2>
               <ul class="space-y-3">
                 <li v-for="feature in currentPortfolio.features" :key="feature" class="flex items-start">
@@ -175,7 +179,7 @@ onMounted(() => {
             <div class="mb-8">
               <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
                 <span class="w-2 h-6 bg-[#8782FF] rounded mr-3"></span>
-                使用技術
+                {{ t('works.detail.tech') }}
               </h2>
               <div class="flex flex-wrap gap-2">
                 <span
@@ -196,7 +200,7 @@ onMounted(() => {
                 rel="noopener noreferrer"
                 class="flex items-center justify-between w-full bg-[#8782FF] text-white font-semibold py-4 px-6 rounded-xl hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-lg"
               >
-                <span>查看網站</span>
+                <span>{{ t('works.detail.viewSite') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     stroke-linecap="round"
@@ -214,7 +218,7 @@ onMounted(() => {
                 rel="noopener noreferrer"
                 class="flex items-center justify-between w-full bg-white text-[#8782FF] font-semibold py-4 px-6 rounded-xl border-2 border-[#8782FF] hover:bg-[#8782FF] hover:text-white transition-all duration-300"
               >
-                <span>查看流程圖</span>
+                <span>{{ t('works.detail.viewFlow') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     stroke-linecap="round"
@@ -231,7 +235,7 @@ onMounted(() => {
         <div v-if="currentPortfolio.dataScreenshots && currentPortfolio.dataScreenshots.length > 0" class="mt-12 mb-16">
           <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
             <span class="w-2 h-6 bg-[#8782FF] rounded mr-3"></span>
-            數據實證 (Insights)
+            {{ t('works.detail.insights') }}
           </h2>
 
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -243,8 +247,8 @@ onMounted(() => {
               <img
                 :src="img"
                 class="w-full h-auto object-cover"
-                :alt="`${currentPortfolio.title} 數據分析截圖 ${idx + 1}`"
-                :title="`${currentPortfolio.title} 成效數據 ${idx + 1}`"
+                :alt="`${wTitle(currentPortfolio)} - Insights ${idx + 1}`"
+                :title="`${wTitle(currentPortfolio)} - Insights ${idx + 1}`"
                 width="400"
                 height="300"
                 loading="lazy"
@@ -252,21 +256,21 @@ onMounted(() => {
             </div>
           </div>
 
-          <p class="mt-4 text-xs text-gray-400 italic">* 數據取自專業主面板與洞察報告。</p>
+          <p class="mt-4 text-xs text-gray-400 italic">{{ t('works.detail.insightsNote') }}</p>
         </div>
 
         <div
           class="bg-gradient-to-br from-[#8782FF]/10 to-[#6f6bff]/10 py-16 rounded-2xl text-center transition-all duration-1000 transform delay-500"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          <div class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">想要打造類似的專案？</div>
+          <div class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{{ t('works.detail.ctaTitle') }}</div>
           <p class="text-gray-600 mb-8 max-w-xl mx-auto px-4">
-            讓 Zeona Studio 協助您實現數位夢想，從設計到開發，提供一站式服務。
+            {{ t('works.detail.ctaSub') }}
           </p>
           <NuxtLink
-            to="/contact"
+            :to="localePath('/contact')"
             class="inline-block bg-[#8782FF] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-lg"
-            >立即聯繫我</NuxtLink
+            >{{ t('works.detail.ctaBtn') }}</NuxtLink
           >
         </div>
       </div>

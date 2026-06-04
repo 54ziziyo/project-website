@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { portfolios, categories } from '~/data/portfolios'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+const { catLabel, wTitle, wDesc } = useLocalizedContent()
+
 // SEO 優化 - 作品集頁面
-useHead({
-  title: '作品集 | Zeona Studio - 網站開發與數位行銷案例展示',
+useHead(() => ({
+  title: t('works.metaTitle'),
   meta: [
-    {
-      name: 'description',
-      content:
-        '瀏覽 Zeona Studio 精選作品集：企業官網設計、品牌形象網站、電商平台開發、數位行銷案例。了解我們如何協助客戶打造高轉換率的數位門面，從規劃到上線的完整案例分享。',
-    },
-    { property: 'og:title', content: '作品集 | Zeona Studio - 案例展示' },
-    { property: 'og:description', content: '精選網站開發與數位行銷案例，展現專業實力。' },
+    { name: 'description', content: t('works.metaDesc') },
+    { property: 'og:title', content: t('works.metaTitle') },
+    { property: 'og:description', content: t('works.sub') },
     { property: 'og:url', content: 'https://zeona.vercel.app/works' },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
@@ -23,18 +23,18 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        name: 'Zeona Studio 作品集',
-        description: '網站開發與數位行銷案例展示',
+        name: t('works.metaTitle'),
+        description: t('works.sub'),
         url: 'https://zeona.vercel.app/works',
         mainEntity: {
           '@type': 'ItemList',
-          name: '精選作品',
+          name: 'Zeona Studio',
           numberOfItems: portfolios.length,
         },
       }),
     },
   ],
-})
+}))
 
 // 裝置偵測
 const { isDesktop } = useDevice()
@@ -104,14 +104,14 @@ onMounted(() => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
           ]"
         >
-          <span class="text-[#6f6bff]">一起來為品牌打造</span>
-          <span>數位競爭力</span>
+          <span class="text-[#6f6bff]">{{ t('works.heading1') }}</span>
+          <span>{{ t('works.heading2') }}</span>
         </h2>
         <h1
           class="text-[#5B5B5B] text-[14px] md:text-[18px] max-w-2xl mx-auto transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          從網站設計、行銷策略到品牌視覺<br />Zeona Studio 協助企業實現數位轉型，創造真實的商業成果
+          {{ t('works.sub') }}
         </h1>
       </div>
     </div>
@@ -132,7 +132,7 @@ onMounted(() => {
           ]"
           @click="setCategory(category)"
         >
-          {{ category }}
+          {{ catLabel(category) }}
         </button>
       </div>
     </div>
@@ -147,14 +147,14 @@ onMounted(() => {
             :class="[activeCards.has(index) ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
           >
             <NuxtLink
-              :to="{ path: portfolio.link, query: categoryQuery }"
+              :to="{ path: localePath(portfolio.link), query: categoryQuery }"
               class="relative mb-8 rounded-xl overflow-hidden bg-gray-100 aspect-[4/3] shadow-sm group-hover:shadow-xl transition-all duration-500"
-              :title="`查看 ${portfolio.title} 專案詳情`"
+              :title="wTitle(portfolio)"
             >
               <img
                 :src="portfolio.image"
-                :alt="`${portfolio.title} - ${portfolio.shortDesc}`"
-                :title="`${portfolio.title} | ${portfolio.category}`"
+                :alt="`${wTitle(portfolio)} - ${wDesc(portfolio)}`"
+                :title="`${wTitle(portfolio)} | ${catLabel(portfolio.category)}`"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-102"
                 width="600"
                 height="450"
@@ -166,17 +166,17 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
               >
                 <span class="bg-white/90 backdrop-blur-md text-[#8782FF] px-4 py-1 rounded-full text-xs font-bold">
-                  {{ portfolio.category }}
+                  {{ catLabel(portfolio.category) }}
                 </span>
               </div>
             </NuxtLink>
 
             <div class="px-2 flex-1 flex flex-col">
               <h3 class="text-2xl font-black text-gray-900 mb-3 transition-colors tracking-tight">
-                {{ portfolio.title }}
+                {{ wTitle(portfolio) }}
               </h3>
               <p class="text-gray-500 text-base mb-4 line-clamp-2 leading-relaxed font-light">
-                {{ portfolio.shortDesc }}
+                {{ wDesc(portfolio) }}
               </p>
 
               <div class="flex flex-wrap gap-2 mb-4">
@@ -191,7 +191,7 @@ onMounted(() => {
 
               <div v-if="isDesktop" class="mt-2 block overflow-hidden">
                 <NuxtLink
-                  :to="{ path: portfolio.link, query: categoryQuery }"
+                  :to="{ path: localePath(portfolio.link), query: categoryQuery }"
                   class="group/link flex items-center justify-end gap-3 h-8"
                 >
                   <div class="overflow-hidden">
@@ -213,7 +213,7 @@ onMounted(() => {
         </div>
 
         <div v-if="filteredPortfolios.length === 0" class="text-center py-20">
-          <p class="text-gray-400 text-lg">目前沒有該分類的作品</p>
+          <p class="text-gray-400 text-lg">{{ t('works.empty') }}</p>
         </div>
       </div>
     </div>
@@ -229,19 +229,19 @@ onMounted(() => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
           ]"
         >
-          準備好開始你的<span class="text-[#8782FF]">數位之旅</span>了嗎？
+          {{ t('works.ctaPre') }}<span class="text-[#8782FF]">{{ t('works.ctaHi') }}</span>{{ t('works.ctaPost') }}
         </h2>
         <p
           class="text-gray-500 text-lg md:text-xl mb-10 transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          不需要大團隊，只需要一套好工具。逛逛數位工具箱即套即用，或讓我為你客製化打造。
+          {{ t('works.ctaSub') }}
         </p>
         <NuxtLink
-          to="/contact"
+          :to="localePath('/contact')"
           class="inline-block bg-[#8782FF] text-white font-bold py-4 px-10 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 active:scale-95"
         >
-          聯繫我
+          {{ t('works.ctaBtn') }}
         </NuxtLink>
       </div>
     </div>
