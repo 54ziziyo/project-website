@@ -29,6 +29,7 @@ export default defineNuxtConfig({
 
   // 多語系：中文為預設（網址不變），英文走 /en/
   i18n: {
+    vueI18n: './i18n.config.ts',
     defaultLocale: 'zh-TW',
     strategy: 'prefix_except_default',
     locales: [
@@ -39,6 +40,9 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     bundle: {
       optimizeTranslationDirective: false,
+    },
+    compilation: {
+      strictMessage: false,
     },
   },
 
