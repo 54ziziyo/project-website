@@ -17,6 +17,7 @@ export const categoryLabelsEn: Record<string, string> = {
   品牌行銷策略: 'Brand Marketing',
   社群與短影音: 'Social & Video',
   'AI 數位行銷': 'AI Marketing',
+  工具推薦: 'Tool Picks',
 }
 
 export const productEn: Record<string, { name: string; description: string; tags: string[] }> = {
@@ -111,11 +112,11 @@ export const portfolioEn: Record<string, { title: string; shortDesc: string }> =
 }
 
 export const blogEn: Record<string, { title: string; excerpt: string }> = {
-  'geo-optimization-complete-guide-2026': {
+  'ai-fullstack-tools-lovable-bolt-manus': {
     title:
-      'What Is GEO? The Complete 2026 Generative Engine Optimization Guide: 7 Steps to Get ChatGPT & Perplexity Recommending You (Prompts Included)',
+      'Generate an Entire Website With One AI Prompt? The Best Full-Stack Builders Compared: Lovable, Bolt.new & Manus AI',
     excerpt:
-      'When customers stop Googling and just ask AI “which one do you recommend,” does your brand show up in the answer? A do-it-now GEO guide: 7 steps plus copy-paste prompts.',
+      'Can’t code but want a Web App that actually works? Get up to speed on the hottest AI full-stack builders — from Lovable and Bolt.new to Manus AI — comparing features, learning curve and best-fit use cases.',
   },
   'case-study-motorbike-geo-success': {
     title:
