@@ -4,28 +4,11 @@ import TrainingImg from '../assets/images/info/training.png'
 import WebDevImg from '../assets/images/info/web-development.png'
 import DesignImg from '../assets/images/info/web-design.png'
 
-const services = [
-  {
-    title: '數位工具箱',
-    items: ['即套即用模板與套版素材', 'AI 提示詞包', '可重複使用的內容範本', '即買即用、永久下載'],
-    img: MedoaPlanImg,
-  },
-  {
-    title: 'AI ＆ 自動化',
-    items: ['AI 工具與助理開發', 'LINE 機器人', '行銷／文案／設計自動化流程', '把重複工作交給 AI'],
-    img: TrainingImg,
-  },
-  {
-    title: '網站與軟體開發',
-    items: ['UI/UX 設計', '網站前端開發', '後端串接 API、部署上線', '可額外加購：GA數據、SEO優化等'],
-    img: WebDevImg,
-  },
-  {
-    title: '設計與行銷',
-    items: ['品牌視覺 / LOGO 設計', '社群圖文與短影音', 'SEO 內容與部落格', '社群經營與排程代發'],
-    img: DesignImg,
-  },
-]
+const { t, tm, rt } = useI18n()
+const localePath = useLocalePath()
+const serviceImgs = [MedoaPlanImg, TrainingImg, WebDevImg, DesignImg]
+const services = computed(() => tm('info.services') as { title: string; items: string[] }[])
+const whyItems = computed(() => tm('info.why') as { title: string; desc: string }[])
 
 const serviceCardEls = ref<HTMLElement[]>([])
 const visibleCards = ref(new Set<number>())
@@ -96,11 +79,9 @@ onBeforeUnmount(() => {
         class="relative max-w-7xl mx-auto text-center transition-all duration-700"
         :class="visibleSections.services ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
       >
-        <p class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">服務項目與流程</p>
-        <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6">可以怎麼幫助你？</div>
-        <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">
-          想自己動手，我有現成的數位工具箱；想交給我，也能提供客製化的一站式服務<br />從個人創作者到剛起步的品牌與小型企業都適合
-        </div>
+        <p class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">{{ t('info.kicker') }}</p>
+        <div class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6">{{ t('info.heading') }}</div>
+        <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">{{ t('info.sub1') }}<br />{{ t('info.sub2') }}</div>
       </div>
 
       <div
@@ -114,19 +95,19 @@ onBeforeUnmount(() => {
           :class="visibleCards.has(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
           <img
-            :src="item.img"
-            :alt="item.title + ' 服務圖示'"
-            :title="item.title + ' - Zeona Studio'"
+            :src="serviceImgs[index]"
+            :alt="rt(item.title)"
+            :title="rt(item.title) + ' - Zeona Studio'"
             class="mx-auto h-12 mb-4"
             width="48"
             height="48"
           />
-          <div class="text-lg font-bold mb-2">{{ item.title }}</div>
+          <div class="text-lg font-bold mb-2">{{ rt(item.title) }}</div>
           <ul class="list-disc list-inside text-sm text-gray-500 mt-1 text-left">
-            <li>{{ item.items[0] }}</li>
-            <li>{{ item.items[1] }}</li>
-            <li>{{ item.items[2] }}</li>
-            <li v-if="item.items[3]">{{ item.items[3] }}</li>
+            <li>{{ rt(item.items[0]) }}</li>
+            <li>{{ rt(item.items[1]) }}</li>
+            <li>{{ rt(item.items[2]) }}</li>
+            <li v-if="item.items[3]">{{ rt(item.items[3]) }}</li>
           </ul>
         </div>
       </div>
@@ -137,8 +118,8 @@ onBeforeUnmount(() => {
       class="relative pl-8 md:pl-[6.875rem] md:pt-40 py-30 transition-all duration-700"
       :class="visibleSections.why ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
     >
-      <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[24px] font-bold">為什麼選擇我呢？</div>
-      <div class="text-[24px] md:text-[52px] font-bold leading-none mb-8 md:mb-[80px]">量身打造品牌門面</div>
+      <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[24px] font-bold">{{ t('info.whyKicker') }}</div>
+      <div class="text-[24px] md:text-[52px] font-bold leading-none mb-8 md:mb-[80px]">{{ t('info.whyHeading') }}</div>
       <div class="space-y-[32px] md:space-y-[60px]">
         <div class="space-y-[8px] md:space-y-[16px]">
           <div class="flex items-center space-x-[12px] md:space-x-[24px]">
@@ -150,10 +131,10 @@ onBeforeUnmount(() => {
               width="30"
               height="30"
             />
-            <div class="text-[16px] md:text-[24px] font-bold pr-8">全面一站式｜設計 × 技術 × 行銷整合力</div>
+            <div class="text-[16px] md:text-[24px] font-bold pr-8">{{ rt(whyItems[0].title) }}</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
-            我不只會做設計與前端開發，更懂得行銷的邏輯，協助品牌真正產生「價值」與「轉換」
+            {{ rt(whyItems[0].desc) }}
           </div>
         </div>
 
@@ -167,10 +148,10 @@ onBeforeUnmount(() => {
               width="30"
               height="30"
             />
-            <div class="text-[16px] md:text-[24px] font-bold pr-8">高彈性客製方案｜一對一深度服務，靈活彈性調整</div>
+            <div class="text-[16px] md:text-[24px] font-bold pr-8">{{ rt(whyItems[1].title) }}</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
-            不論是剛起步的品牌或已經營一段時間的企業，我都會依照你的目標與預算，給出最合適的建議與內容規劃
+            {{ rt(whyItems[1].desc) }}
           </div>
         </div>
 
@@ -184,10 +165,10 @@ onBeforeUnmount(() => {
               width="30"
               height="30"
             />
-            <div class="text-[16px] md:text-[24px] font-bold pr-8">彈性合作方案｜流程清楚、報價透明、溝通快速</div>
+            <div class="text-[16px] md:text-[24px] font-bold pr-8">{{ rt(whyItems[2].title) }}</div>
           </div>
           <div class="text-[#5B5B5B] text-[14px] px-8 md:text-[20px] md:pl-[54px]">
-            你將清楚知道每一階段該交付什麼、何時完成，所有內容與成本明確透明，合作起來沒有壓力
+            {{ rt(whyItems[2].desc) }}
           </div>
         </div>
       </div>
@@ -212,13 +193,13 @@ onBeforeUnmount(() => {
 
         <div class="relative z-10 flex items-center justify-between h-full px-10">
           <div>
-            <h2 class="text-2xl font-bold mb-2">從品牌定位到數位落地</h2>
-            <p class="text-sm text-gray-200">幫你實現『行銷腦+技術力』</p>
+            <h2 class="text-2xl font-bold mb-2">{{ t('info.bannerTitle') }}</h2>
+            <p class="text-sm text-gray-200">{{ t('info.bannerSub') }}</p>
           </div>
 
           <div class="text-center text-[#F1F0FF]">
             <div class="text-5xl font-bold leading-tight">100%</div>
-            <div class="text-sm text-white mt-1">成效提升</div>
+            <div class="text-sm text-white mt-1">{{ t('info.bannerStat') }}</div>
           </div>
         </div>
       </div>
@@ -230,26 +211,26 @@ onBeforeUnmount(() => {
       :class="visibleSections.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
     >
       <div class="max-w-6xl text-center">
-        <h2 class="text-[24px] md:text-[32px] font-bold mb-4">想了解更多嗎？讓我聊聊吧！</h2>
+        <h2 class="text-[24px] md:text-[32px] font-bold mb-4">{{ t('info.ctaHeading') }}</h2>
         <p class="text-[#5B5B5B] text-[16px] md:text-[20px] mb-12">
-          想自己動手，可以先逛逛數位工具箱；想交給我，我也能提供量身打造的解決方案
+          {{ t('info.ctaSub1') }}
           <br />
-          讓你的品牌在數位世界中脫穎而出
+          {{ t('info.ctaSub2') }}
         </p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
-            href="/toolbox"
-            title="逛數位工具箱 - AI 提示詞、模板與素材"
+            :href="localePath('/toolbox')"
+            :title="t('info.ctaToolbox')"
             class="font-semibold py-3 px-6 rounded-full text-white text-sm bg-[#8782FF] cursor-pointer hover:bg-[#6f6bff] transition-colors duration-300"
           >
-            逛數位工具箱 →
+            {{ t('info.ctaToolbox') }}
           </a>
           <a
-            href="/contact"
-            title="填寫表單聯繫我 - 客製化軟體開發與設計行銷服務"
+            :href="localePath('/contact')"
+            :title="t('info.ctaContact')"
             class="font-semibold py-3 px-6 rounded-full text-[#8782FF] text-sm border border-[#8782FF] cursor-pointer hover:bg-[#8782FF] hover:text-white transition-colors duration-300"
           >
-            填寫表單聯繫我
+            {{ t('info.ctaContact') }}
           </a>
         </div>
       </div>

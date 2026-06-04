@@ -23,7 +23,7 @@
     "title2": "Just the right tools",
     "bodyPre": "Zeona gives you ready-to-use",
     "bodyToolkit": "digital toolkits, prompts and automation templates",
-    "bodyMid": " to automate your repetitive marketing, design, copywriting and website work. Need something more complex? We also offer one-on-one",
+    "bodyMid": " to automate your repetitive marketing, design, copywriting and website work.",
     "bodyCustom": "custom software development & AI integration",
     "bodyPost": ".",
     "ctaToolbox": "Explore the Toolbox →",
@@ -126,6 +126,48 @@
     "col4a": "🔹 Cross-discipline: marketing thinking + technical execution",
     "col4b": "🔹 Flexible: from ready tools to custom projects",
     "col4c": "🔹 Transparent: clear pricing & progress tracking",
+    "ctaToolbox": "Explore the Toolbox →",
+    "ctaContact": "Contact me via the form"
+  },
+  "about": {
+    "kicker": "About me",
+    "h1a": "I'm the founder of Zeona",
+    "h1b": "Marketing, design, front-end —",
+    "h1hi": "all handled by one person",
+    "p1": "I'm a marketer, a designer, and a front-end developer at the same time. I can juggle all of this not because I have more hours in the day, but because I lean heavily on AI and automation.",
+    "p2": "My ultimate goal is to build an AI system that runs my business on autopilot — letting AI handle my marketing carousels, blog posts and visual design.",
+    "p3": "Along the way, I've gathered the most practical, genuinely money-making templates and tool packs into the Digital Toolbox. The shortcuts I've found, you can copy directly.",
+    "cards": [
+      { "label": "Plug & play", "title": "Digital Toolbox", "desc": "Ready-made prompts, templates and asset packs — pick one and go, so you never get stuck at 'where do I start?'" },
+      { "label": "Let AI handle the repetition", "title": "Automation templates", "desc": "Turn repetitive marketing, copy and design work into automation templates and AI workflows." },
+      { "label": "One person can do it", "title": "High-output, solo", "desc": "You don't need a big team — with the right tools, one person can produce professional content and websites." },
+      { "label": "Something more complex?", "title": "Custom development", "desc": "Need a custom website, AI tool or system integration? Hand the parts you can't do to me." }
+    ]
+  },
+  "info": {
+    "kicker": "Services & process",
+    "heading": "How can I help you?",
+    "sub1": "Want to DIY? I've got a ready-made Digital Toolbox. Prefer to hand it over? I offer a custom, all-in-one service.",
+    "sub2": "From solo creators to early-stage brands and small businesses.",
+    "services": [
+      { "title": "Digital Toolbox", "items": ["Plug-and-play templates & assets", "AI prompt packs", "Reusable content templates", "Buy once, download forever"] },
+      { "title": "AI & Automation", "items": ["AI tools & assistants", "LINE bots", "Marketing / copy / design automation", "Let AI handle the busywork"] },
+      { "title": "Web & Software Dev", "items": ["UI/UX design", "Front-end development", "Backend API & deployment", "Add-ons: GA analytics, SEO, etc."] },
+      { "title": "Design & Marketing", "items": ["Brand visuals / logo design", "Social graphics & short videos", "SEO content & blog", "Social management & scheduling"] }
+    ],
+    "whyKicker": "Why work with me?",
+    "whyHeading": "A brand front-door, tailored to you",
+    "why": [
+      { "title": "All-in-one｜design × tech × marketing", "desc": "I don't just design and build front-ends — I understand marketing, helping your brand create real value and conversion." },
+      { "title": "Flexible & custom｜one-on-one, adaptable", "desc": "Whether you're just starting out or already established, I tailor advice and content plans to your goals and budget." },
+      { "title": "Flexible engagement｜clear process, transparent pricing", "desc": "You'll always know what's delivered at each stage and when — all content and costs are clear, so working together is stress-free." }
+    ],
+    "bannerTitle": "From brand positioning to digital execution",
+    "bannerSub": "Bringing together a marketer's mind + technical skill",
+    "bannerStat": "performance lift",
+    "ctaHeading": "Want to know more? Let's talk!",
+    "ctaSub1": "Want to DIY? Start with the Digital Toolbox. Prefer to hand it over? I'll build a solution tailored to you.",
+    "ctaSub2": "Make your brand stand out in the digital world.",
     "ctaToolbox": "Explore the Toolbox →",
     "ctaContact": "Contact me via the form"
   }

@@ -1,4 +1,9 @@
 <script setup lang="ts">
+const { t, tm, rt } = useI18n()
+const aboutCards = computed(
+  () => tm('about.cards') as { label: string; title: string; desc: string }[],
+)
+
 const cardEls = ref<HTMLElement[]>([])
 const visibleCards = ref(new Set<number>())
 const headerRef = ref<HTMLElement | null>(null)
@@ -59,16 +64,18 @@ onBeforeUnmount(() => {
         class="text-center transition-all duration-700"
         :class="visibleHeader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
       >
-        <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">關於我</div>
+        <div class="mb-2 md:mb-4 text-[#8782FF] text-[16px] md:text-[16px] md:text-[24px] font-bold">
+          {{ t('about.kicker') }}
+        </div>
         <h1 class="text-[24px] md:text-[52px] font-bold leading-[1.25] mb:mb-12 mb-8">
-          我是 Zeona 的創辦人<br />行銷、設計、前端，<span class="text-[#8782FF]">一個人全包</span>
+          {{ t('about.h1a') }}<br />{{ t('about.h1b') }}<span class="text-[#8782FF]">{{ t('about.h1hi') }}</span>
         </h1>
         <div class="text-[#5B5B5B] text-[14px] md:text-[16px] mb-4 leading-relaxed">
-          我同時是行銷人、設計師，也是前端工程師。能同時處理這麼多面向的業務，不是因為我天生比別人有時間，而是因為我大量使用 AI 與自動化工具。
+          {{ t('about.p1') }}
           <br />
-          我的最終目標，是打造一個 100% 幫我自動營運的 AI 系統——讓 AI 幫我跑行銷輪播、寫部落格、做視覺設計。
+          {{ t('about.p2') }}
           <br />
-          在這個探索的過程中，我把最實用、能真正落地賺錢的模板與工具包整理在「數位工具箱」。我走過的捷徑，你現在可以直接複製。
+          {{ t('about.p3') }}
         </div>
       </div>
 
@@ -79,10 +86,10 @@ onBeforeUnmount(() => {
           class="order-1 lg:order-1 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col md:gap-2 transition-all duration-700 transform"
           :class="visibleCards.has(0) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <div class="text-[#8782FF] text-[14px] md:text-base font-bold">即套即用</div>
-          <div class="text-[16px] md:text-xl font-bold mb-2">數位工具箱</div>
+          <div class="text-[#8782FF] text-[14px] md:text-base font-bold">{{ rt(aboutCards[0].label) }}</div>
+          <div class="text-[16px] md:text-xl font-bold mb-2">{{ rt(aboutCards[0].title) }}</div>
           <div class="text-[#5B5B5B] text-[12px] md:text-sm">
-            現成的提示詞、模板與素材包，挑了就能用，幫你跨過「不知道怎麼開始」。
+            {{ rt(aboutCards[0].desc) }}
           </div>
         </div>
 
@@ -109,10 +116,10 @@ onBeforeUnmount(() => {
           class="order-4 lg:order-3 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col md:gap-2 transition-all duration-700 transform"
           :class="visibleCards.has(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <div class="text-[#8782FF] text-[14px] md:text-base font-bold">把重複交給 AI</div>
-          <div class="text-[16px] md:text-xl font-bold mb-2">自動化範本</div>
+          <div class="text-[#8782FF] text-[14px] md:text-base font-bold">{{ rt(aboutCards[1].label) }}</div>
+          <div class="text-[16px] md:text-xl font-bold mb-2">{{ rt(aboutCards[1].title) }}</div>
           <div class="text-[#5B5B5B] text-[12px] md:text-sm">
-            行銷、文案與設計的重複工作，用自動化範本與 AI 流程一次省下。
+            {{ rt(aboutCards[1].desc) }}
           </div>
         </div>
 
@@ -156,10 +163,10 @@ onBeforeUnmount(() => {
           class="order-5 lg:order-6 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col md:gap-2 transition-all duration-700 transform"
           :class="visibleCards.has(5) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <div class="text-[#8782FF] text-[14px] md:text-base font-bold">一個人也能做</div>
-          <div class="text-[16px] md:text-xl font-bold mb-2">高效產出</div>
+          <div class="text-[#8782FF] text-[14px] md:text-base font-bold">{{ rt(aboutCards[2].label) }}</div>
+          <div class="text-[16px] md:text-xl font-bold mb-2">{{ rt(aboutCards[2].title) }}</div>
           <div class="text-[#5B5B5B] text-[12px] md:text-sm">
-            不需要大團隊，用對工具，一個人也能做出專業的內容與網站。
+            {{ rt(aboutCards[2].desc) }}
           </div>
         </div>
 
@@ -186,10 +193,10 @@ onBeforeUnmount(() => {
           class="order-8 lg:order-8 bg-white rounded-xl hover:shadow-xl shadow-lg p-5 flex flex-col md:gap-2 transition-all duration-700 transform"
           :class="visibleCards.has(7) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
         >
-          <div class="text-[#8782FF] text-[14px] md:text-base font-bold">需求更複雜</div>
-          <div class="text-[16px] md:text-xl font-bold mb-2">客製化開發</div>
+          <div class="text-[#8782FF] text-[14px] md:text-base font-bold">{{ rt(aboutCards[3].label) }}</div>
+          <div class="text-[16px] md:text-xl font-bold mb-2">{{ rt(aboutCards[3].title) }}</div>
           <div class="text-[#5B5B5B] text-[12px] md:text-sm">
-            需要客製網站、AI 工具或系統串接？做不來的部分直接交給我。
+            {{ rt(aboutCards[3].desc) }}
           </div>
         </div>
       </div>
