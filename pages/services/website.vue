@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import WebProject from '~/components/service/WebProject.vue'
+// import WebProject from '~/components/service/WebProject.vue' // 方案區暫時隱藏，恢復時一併取消註解
 import AutoScrollCards from '~/components/service/WebAutoScrollCards.vue'
 import WebPrice from '~/components/service/WebPrice.vue'
 import WebAddOnItems from '~/components/service/WebAddOnItems.vue'
@@ -47,7 +47,8 @@ useHead({
   <div>
     <WebPrice />
     <AutoScrollCards />
-    <WebProject />
+    <!-- 方案顯示區，暫時先隱藏，等內容確定後再放出來 -->
+    <!-- <WebProject /> -->
     <WebAddOnItems />
   </div>
 </template>
