@@ -35,25 +35,52 @@
       {
         "title": "Want to DIY, but don't know where to start",
         "problems": [
-          { "label": "Too many tools", "desc": "no idea which to use or how to combine them" },
-          { "label": "Lost in tutorials", "desc": "you learn a lot but still can't ship anything" },
-          { "label": "Starting from scratch every time", "desc": "no ready-to-use template to build on" }
+          {
+            "label": "Too many tools",
+            "desc": "no idea which to use or how to combine them"
+          },
+          {
+            "label": "Lost in tutorials",
+            "desc": "you learn a lot but still can't ship anything"
+          },
+          {
+            "label": "Starting from scratch every time",
+            "desc": "no ready-to-use template to build on"
+          }
         ]
       },
       {
         "title": "Content is slow and feels unpolished",
         "problems": [
-          { "label": "Hours stuck on one post", "desc": "copy and layout just won't come together" },
-          { "label": "No design instinct", "desc": "the result looks plain and unprofessional" },
-          { "label": "Posting on and off", "desc": "one creative block and you go dark" }
+          {
+            "label": "Hours stuck on one post",
+            "desc": "copy and layout just won't come together"
+          },
+          {
+            "label": "No design instinct",
+            "desc": "the result looks plain and unprofessional"
+          },
+          {
+            "label": "Posting on and off",
+            "desc": "one creative block and you go dark"
+          }
         ]
       },
       {
         "title": "You use AI, but it doesn't deliver",
         "problems": [
-          { "label": "Messy prompts", "desc": "AI replies are vague and unusable" },
-          { "label": "Inconsistent results", "desc": "same request, different quality every time" },
-          { "label": "No repeatable process", "desc": "every new topic means starting over" }
+          {
+            "label": "Messy prompts",
+            "desc": "AI replies are vague and unusable"
+          },
+          {
+            "label": "Inconsistent results",
+            "desc": "same request, different quality every time"
+          },
+          {
+            "label": "No repeatable process",
+            "desc": "every new topic means starting over"
+          }
         ]
       }
     ]
@@ -87,11 +114,36 @@
     "heading": "Does this sound like you?",
     "sub": "If so, my services are a great fit",
     "items": [
-      { "title": "Marketing manager / project lead", "l1": "Need to report site metrics & results", "l2": "Care about dashboards & health tracking", "l3": "Want to cut outsourcing communication costs" },
-      { "title": "Startup / early-stage brand", "l1": "Need all-in-one website & marketing", "l2": "Limited budget, value ROI", "l3": "Lack tech/marketing staff, want a long-term partner" },
-      { "title": "Traditional business going digital", "l1": "Want to move offline to online with a pro team", "l2": "Need long-term advisory & tech support", "l3": "Value transparent pricing & ongoing support" },
-      { "title": "E-commerce / DTC brand", "l1": "Site must support campaigns & conversion", "l2": "Care about UX & SEO", "l3": "Need ongoing optimization & analytics" },
-      { "title": "SME owner / brand operator", "l1": "Want a stronger brand website image", "l2": "Want the site to drive real sales", "l3": "Value data transparency & results tracking" }
+      {
+        "title": "Marketing manager / project lead",
+        "l1": "Need to report site metrics & results",
+        "l2": "Care about dashboards & health tracking",
+        "l3": "Want to cut outsourcing communication costs"
+      },
+      {
+        "title": "Startup / early-stage brand",
+        "l1": "Need all-in-one website & marketing",
+        "l2": "Limited budget, value ROI",
+        "l3": "Lack tech/marketing staff, want a long-term partner"
+      },
+      {
+        "title": "Traditional business going digital",
+        "l1": "Want to move offline to online with a pro team",
+        "l2": "Need long-term advisory & tech support",
+        "l3": "Value transparent pricing & ongoing support"
+      },
+      {
+        "title": "E-commerce / DTC brand",
+        "l1": "Site must support campaigns & conversion",
+        "l2": "Care about UX & SEO",
+        "l3": "Need ongoing optimization & analytics"
+      },
+      {
+        "title": "SME owner / brand operator",
+        "l1": "Want a stronger brand website image",
+        "l2": "Want the site to drive real sales",
+        "l3": "Value data transparency & results tracking"
+      }
     ]
   },
   "feedback": {
@@ -99,12 +151,36 @@
     "heading": "See what others say",
     "rating": "Service rating",
     "items": [
-      { "content": "Our subsidiary's mobile site was always hard to use. After redesigning the interface and flow, our user numbers went up a lot — great work!", "author": "Gon Chen", "role": "Product Manager" },
-      { "content": "I worried tech communication would be hard, but they explain things in plain language. The design and site were delivered earlier than expected, and they proactively optimize it regularly!", "author": "Mr. Chou", "role": "Japanese motorcycle gear importer" },
-      { "content": "I'd just opened my business — running around factories and suppliers while needing a site and marketing was a lot. They handled a simple site and social content, and it's been thoughtful and solid so far.", "author": "Ms. Wang", "role": "Beverage startup" },
-      { "content": "I urgently needed an event landing page and a promo short video. Thanks for the professional guidance — the CTA button design doubled our sign-ups. Will work together again.", "author": "Gee Huang", "role": "Event agency project lead" },
-      { "content": "They built my website. I really didn't know how to set one up, but they patiently walked me through it. After launch people started reaching out — it really feels like I'm getting noticed.", "author": "Photographer Shu", "role": "Photography studio" },
-      { "content": "After working together on my site and marketing, way more people reach out to me now! They even suggested UX details I hadn't noticed.", "author": "Ms. Chang", "role": "Advertising agency" }
+      {
+        "content": "Our subsidiary's mobile site was always hard to use. After redesigning the interface and flow, our user numbers went up a lot — great work!",
+        "author": "Gon Chen",
+        "role": "Product Manager"
+      },
+      {
+        "content": "I worried tech communication would be hard, but they explain things in plain language. The design and site were delivered earlier than expected, and they proactively optimize it regularly!",
+        "author": "Mr. Chou",
+        "role": "Japanese motorcycle gear importer"
+      },
+      {
+        "content": "I'd just opened my business — running around factories and suppliers while needing a site and marketing was a lot. They handled a simple site and social content, and it's been thoughtful and solid so far.",
+        "author": "Ms. Wang",
+        "role": "Beverage startup"
+      },
+      {
+        "content": "I urgently needed an event landing page and a promo short video. Thanks for the professional guidance — the CTA button design doubled our sign-ups. Will work together again.",
+        "author": "Gee Huang",
+        "role": "Event agency project lead"
+      },
+      {
+        "content": "They built my website. I really didn't know how to set one up, but they patiently walked me through it. After launch people started reaching out — it really feels like I'm getting noticed.",
+        "author": "Photographer Shu",
+        "role": "Photography studio"
+      },
+      {
+        "content": "After working together on my site and marketing, way more people reach out to me now! They even suggested UX details I hadn't noticed.",
+        "author": "Ms. Chang",
+        "role": "Advertising agency"
+      }
     ],
     "ctaHeading": "Want to DIY — and do it better?",
     "ctaSub1": "From ready-made tools to custom services, there's a way that fits you.",
@@ -130,18 +206,47 @@
     "ctaContact": "Contact me via the form"
   },
   "about": {
-    "kicker": "About me",
     "h1a": "I'm the founder of Zeona",
     "h1b": "Marketing, design, front-end —",
     "h1hi": "all handled by one person",
-    "p1": "I'm a marketer, a designer, and a front-end developer at the same time. I can juggle all of this not because I have more hours in the day, but because I lean heavily on AI and automation.",
-    "p2": "My ultimate goal is to build an AI system that runs my business on autopilot — letting AI handle my marketing carousels, blog posts and visual design.",
-    "p3": "Along the way, I've gathered the most practical, genuinely money-making templates and tool packs into the Digital Toolbox. The shortcuts I've found, you can copy directly.",
+    "lead": "Not because I have more time than anyone else — but because I've turned AI and automation into my team.",
+    "modulesHeading": "My service modules",
+    "modulesSub": "From strategy blueprint to fully automated execution — tailored, high-efficiency digital solutions built around you.",
+    "points": [
+      {
+        "label": "One-person studio",
+        "text": "Marketing, design and front-end — from strategy to launch, all in-house."
+      },
+      {
+        "label": "The end goal",
+        "text": "An AI system that runs on autopilot — carousels, blog posts and design."
+      },
+      {
+        "label": "Digital Toolbox",
+        "text": "Every shortcut I've found, packaged into templates you can copy directly."
+      }
+    ],
     "cards": [
-      { "label": "Plug & play", "title": "Digital Toolbox", "desc": "Ready-made prompts, templates and asset packs — pick one and go, so you never get stuck at 'where do I start?'" },
-      { "label": "Let AI handle the repetition", "title": "Automation templates", "desc": "Turn repetitive marketing, copy and design work into automation templates and AI workflows." },
-      { "label": "One person can do it", "title": "High-output, solo", "desc": "You don't need a big team — with the right tools, one person can produce professional content and websites." },
-      { "label": "Something more complex?", "title": "Custom development", "desc": "Need a custom website, AI tool or system integration? Hand the parts you can't do to me." }
+      {
+        "label": "Plug & play",
+        "title": "Digital Toolbox",
+        "desc": "Ready-made prompts, templates and asset packs — pick one and go, so you never get stuck at 'where do I start?'"
+      },
+      {
+        "label": "Let AI handle the repetition",
+        "title": "Automation templates",
+        "desc": "Turn repetitive marketing, copy and design work into automation templates and AI workflows."
+      },
+      {
+        "label": "One person can do it",
+        "title": "High-output, solo",
+        "desc": "You don't need a big team — with the right tools, one person can produce professional content and websites."
+      },
+      {
+        "label": "Something more complex?",
+        "title": "Custom development",
+        "desc": "Need a custom website, AI tool or system integration? Hand the parts you can't do to me."
+      }
     ]
   },
   "info": {
@@ -150,17 +255,58 @@
     "sub1": "Want to DIY? I've got a ready-made Digital Toolbox. Prefer to hand it over? I offer a custom, all-in-one service.",
     "sub2": "From solo creators to early-stage brands and small businesses.",
     "services": [
-      { "title": "Digital Toolbox", "items": ["Plug-and-play templates & assets", "AI prompt packs", "Reusable content templates", "Buy once, download forever"] },
-      { "title": "AI & Automation", "items": ["AI tools & assistants", "LINE bots", "Marketing / copy / design automation", "Let AI handle the busywork"] },
-      { "title": "Web & Software Dev", "items": ["UI/UX design", "Front-end development", "Backend API & deployment", "Add-ons: GA analytics, SEO, etc."] },
-      { "title": "Design & Marketing", "items": ["Brand visuals / logo design", "Social graphics & short videos", "SEO content & blog", "Social management & scheduling"] }
+      {
+        "title": "Digital Toolbox",
+        "items": [
+          "Plug-and-play templates & assets",
+          "AI prompt packs",
+          "Reusable content templates",
+          "Buy once, download forever"
+        ]
+      },
+      {
+        "title": "AI & Automation",
+        "items": [
+          "AI tools & assistants",
+          "LINE bots",
+          "Marketing / copy / design automation",
+          "Let AI handle the busywork"
+        ]
+      },
+      {
+        "title": "Web & Software Dev",
+        "items": [
+          "UI/UX design",
+          "Front-end development",
+          "Backend API & deployment",
+          "Add-ons: GA analytics, SEO, etc."
+        ]
+      },
+      {
+        "title": "Design & Marketing",
+        "items": [
+          "Brand visuals / logo design",
+          "Social graphics & short videos",
+          "SEO content & blog",
+          "Social management & scheduling"
+        ]
+      }
     ],
     "whyKicker": "Why work with me?",
     "whyHeading": "A brand front-door, tailored to you",
     "why": [
-      { "title": "All-in-one｜design × tech × marketing", "desc": "I don't just design and build front-ends — I understand marketing, helping your brand create real value and conversion." },
-      { "title": "Flexible & custom｜one-on-one, adaptable", "desc": "Whether you're just starting out or already established, I tailor advice and content plans to your goals and budget." },
-      { "title": "Flexible engagement｜clear process, transparent pricing", "desc": "You'll always know what's delivered at each stage and when — all content and costs are clear, so working together is stress-free." }
+      {
+        "title": "All-in-one｜design × tech × marketing",
+        "desc": "I don't just design and build front-ends — I understand marketing, helping your brand create real value and conversion."
+      },
+      {
+        "title": "Flexible & custom｜one-on-one, adaptable",
+        "desc": "Whether you're just starting out or already established, I tailor advice and content plans to your goals and budget."
+      },
+      {
+        "title": "Flexible engagement｜clear process, transparent pricing",
+        "desc": "You'll always know what's delivered at each stage and when — all content and costs are clear, so working together is stress-free."
+      }
     ],
     "bannerTitle": "From brand positioning to digital execution",
     "bannerSub": "Bringing together a marketer's mind + technical skill",
@@ -230,32 +376,105 @@
     "customSub": "Quoted to your needs",
     "customDesc": "These are all custom projects — no fixed packages. I'll assess your specs, complexity and effort, then quote accordingly.",
     "customServices": [
-      { "title": "Website & system development", "highlight": "Front-end & back-end, database design, API integration, cloud deployment", "description": "Build a bespoke website and admin system from scratch — members, payments, data management and other complex logic — with deployment and ongoing maintenance.", "ta": "✅ For brands & businesses with unique needs that templates can't meet" },
-      { "title": "AI tool development", "highlight": "ChatGPT / Claude / Gemini API integration, RAG knowledge base, custom AI assistants", "description": "Build bespoke AI applications: knowledge-base Q&A, auto-reply bots, AI document and content workflows.", "ta": "✅ For businesses or solo founders looking to boost efficiency with AI" },
-      { "title": "LINE bot development", "highlight": "LINE Messaging API, auto-reply, rich menus, CRM integration", "description": "Build LINE official-account bots with smart conversation, auto-push and form collection, connected to your backend or spreadsheets for automated customer management.", "ta": "✅ For shops & brands managing customers through LINE" },
-      { "title": "Automation workflows", "highlight": "Make / n8n / Zapier / Google Apps Script automation", "description": "Connect SaaS tools and APIs into hands-off workflows that cut repetitive manual work and let the system work for you.", "ta": "✅ For teams with lots of repetitive tasks wanting to cut costs" }
+      {
+        "title": "Website & system development",
+        "highlight": "Front-end & back-end, database design, API integration, cloud deployment",
+        "description": "Build a bespoke website and admin system from scratch — members, payments, data management and other complex logic — with deployment and ongoing maintenance.",
+        "ta": "✅ For brands & businesses with unique needs that templates can't meet"
+      },
+      {
+        "title": "AI tool development",
+        "highlight": "ChatGPT / Claude / Gemini API integration, RAG knowledge base, custom AI assistants",
+        "description": "Build bespoke AI applications: knowledge-base Q&A, auto-reply bots, AI document and content workflows.",
+        "ta": "✅ For businesses or solo founders looking to boost efficiency with AI"
+      },
+      {
+        "title": "LINE bot development",
+        "highlight": "LINE Messaging API, auto-reply, rich menus, CRM integration",
+        "description": "Build LINE official-account bots with smart conversation, auto-push and form collection, connected to your backend or spreadsheets for automated customer management.",
+        "ta": "✅ For shops & brands managing customers through LINE"
+      },
+      {
+        "title": "Automation workflows",
+        "highlight": "Make / n8n / Zapier / Google Apps Script automation",
+        "description": "Connect SaaS tools and APIs into hands-off workflows that cut repetitive manual work and let the system work for you.",
+        "ta": "✅ For teams with lots of repetitive tasks wanting to cut costs"
+      }
     ],
     "webTitle": "Website Setup Services",
     "webSub": "What I can do for you",
     "webDesc": "From design and development to launch — pick what you need. Common website packages and starting prices are shown below.",
     "webServices": [
-      { "title": "Web design", "items": ["UI/UX flow & layout planning", "Figma visual design & design system", "Responsive (RWD) adaptation"] },
-      { "title": "Web development", "items": ["One-page landing / campaign pages", "Multi-page brand websites", "WordPress setup & admin training"] },
-      { "title": "E-commerce", "items": ["Cart & member system", "Order & inventory admin", "Payment & logistics (ECPay / Line Pay)"] },
-      { "title": "Markup / slicing", "items": ["Static markup (HTML / CSS / JS)", "Vue / React dynamic front-end", "Responsive cross-device adaptation"] },
-      { "title": "Deployment & launch", "items": ["Hosting & domain setup", "HTTPS / SSL certificates", "Basic SEO setup"] }
+      {
+        "title": "Web design",
+        "items": [
+          "UI/UX flow & layout planning",
+          "Figma visual design & design system",
+          "Responsive (RWD) adaptation"
+        ]
+      },
+      {
+        "title": "Web development",
+        "items": [
+          "One-page landing / campaign pages",
+          "Multi-page brand websites",
+          "WordPress setup & admin training"
+        ]
+      },
+      {
+        "title": "E-commerce",
+        "items": [
+          "Cart & member system",
+          "Order & inventory admin",
+          "Payment & logistics (ECPay / Line Pay)"
+        ]
+      },
+      {
+        "title": "Markup / slicing",
+        "items": [
+          "Static markup (HTML / CSS / JS)",
+          "Vue / React dynamic front-end",
+          "Responsive cross-device adaptation"
+        ]
+      },
+      {
+        "title": "Deployment & launch",
+        "items": [
+          "Hosting & domain setup",
+          "HTTPS / SSL certificates",
+          "Basic SEO setup"
+        ]
+      }
     ],
     "scrollPre": "What else your ",
     "scrollHi": "website",
     "scrollPost": " can do",
     "scrollSub": "The most professional service for you",
     "scrollCards": [
-      { "title": "Advanced SEO", "description": "SEO audit & search-friendly structure" },
-      { "title": "Google Analytics", "description": "Tracking setup & data dashboards" },
-      { "title": "Multi-language", "description": "Language switching to reach global markets" },
-      { "title": "GTM", "description": "Conversion goals & user-behavior reports" },
-      { "title": "Functional features", "description": "Custom forms, booking, calendar sync, email notifications, etc." },
-      { "title": "Platform customization", "description": "Custom features on Wix, Shopify and more" }
+      {
+        "title": "Advanced SEO",
+        "description": "SEO audit & search-friendly structure"
+      },
+      {
+        "title": "Google Analytics",
+        "description": "Tracking setup & data dashboards"
+      },
+      {
+        "title": "Multi-language",
+        "description": "Language switching to reach global markets"
+      },
+      {
+        "title": "GTM",
+        "description": "Conversion goals & user-behavior reports"
+      },
+      {
+        "title": "Functional features",
+        "description": "Custom forms, booking, calendar sync, email notifications, etc."
+      },
+      {
+        "title": "Platform customization",
+        "description": "Custom features on Wix, Shopify and more"
+      }
     ],
     "basicTitle": "Basic Add-ons",
     "basicSub": "For custom projects",
@@ -267,26 +486,372 @@
     "colDesc": "Description",
     "colCompat": "Works with",
     "basicAddons": [
-      { "name": "Domain & hosting", "description": "Domain registration, basic hosting, HTTPS SSL certificate" },
-      { "name": "Advanced commercial SSL", "description": "Only needed for special business requirements" },
-      { "name": "SEO setup", "description": "Keyword optimization, sitemap, meta tags" },
-      { "name": "Google Analytics install", "description": "Traffic tracking setup" },
-      { "name": "Multi-language switch", "description": "Add English / Japanese versions (translation copy not included)" }
+      {
+        "name": "Domain & hosting",
+        "description": "Domain registration, basic hosting, HTTPS SSL certificate"
+      },
+      {
+        "name": "Advanced commercial SSL",
+        "description": "Only needed for special business requirements"
+      },
+      {
+        "name": "SEO setup",
+        "description": "Keyword optimization, sitemap, meta tags"
+      },
+      {
+        "name": "Google Analytics install",
+        "description": "Traffic tracking setup"
+      },
+      {
+        "name": "Multi-language switch",
+        "description": "Add English / Japanese versions (translation copy not included)"
+      }
     ],
     "advancedAddons": [
-      { "name": "Animations", "description": "Basic Lottie animation; WebGL interactions quoted separately", "compatible": "Fully custom site" },
-      { "name": "Member system", "description": "Sign-up / login (Firebase or basic backend)", "compatible": "WordPress / multi-page site" },
-      { "name": "LINE integration", "description": "Official account binding, LINE Login or Messaging API", "compatible": "Campaign page or e-commerce" },
-      { "name": "Payment integration", "description": "ECPay / Line Pay etc. (contract fees excluded)", "compatible": "E-commerce or booking sites" },
-      { "name": "GTM conversion tracking", "description": "Conversion goals & event tracking (incl. basic report reading)", "compatible": "All site types" },
-      { "name": "Heatmap tools", "description": "Hotjar or Microsoft Clarity setup", "compatible": "All site types" },
-      { "name": "Third-party data integration", "description": "Integrate external data (e.g. Google Calendar, live exchange rates, maps)", "compatible": "Fully custom site / WordPress" },
-      { "name": "Automation integration", "description": "Automated notifications & cross-platform (e.g. LINE Notify, SMS, Slack)", "compatible": "Fully custom services" },
-      { "name": "Advanced forms", "description": "Multi-step forms, file upload, conditional logic", "compatible": "Fully custom site / WordPress" },
-      { "name": "Booking system", "description": "Online time-slot booking (incl. Google Calendar sync)", "compatible": "Service-type sites" },
-      { "name": "Automated email", "description": "Custom email templates + SendGrid / Mailchimp", "compatible": "Membership sites" },
-      { "name": "Wix extensions", "description": "Custom code embedding, database integration, etc.", "compatible": "Wix sites" },
-      { "name": "Shopify customization", "description": "Theme edits, checkout optimization, etc.", "compatible": "Shopify" }
+      {
+        "name": "Animations",
+        "description": "Basic Lottie animation; WebGL interactions quoted separately",
+        "compatible": "Fully custom site"
+      },
+      {
+        "name": "Member system",
+        "description": "Sign-up / login (Firebase or basic backend)",
+        "compatible": "WordPress / multi-page site"
+      },
+      {
+        "name": "LINE integration",
+        "description": "Official account binding, LINE Login or Messaging API",
+        "compatible": "Campaign page or e-commerce"
+      },
+      {
+        "name": "Payment integration",
+        "description": "ECPay / Line Pay etc. (contract fees excluded)",
+        "compatible": "E-commerce or booking sites"
+      },
+      {
+        "name": "GTM conversion tracking",
+        "description": "Conversion goals & event tracking (incl. basic report reading)",
+        "compatible": "All site types"
+      },
+      {
+        "name": "Heatmap tools",
+        "description": "Hotjar or Microsoft Clarity setup",
+        "compatible": "All site types"
+      },
+      {
+        "name": "Third-party data integration",
+        "description": "Integrate external data (e.g. Google Calendar, live exchange rates, maps)",
+        "compatible": "Fully custom site / WordPress"
+      },
+      {
+        "name": "Automation integration",
+        "description": "Automated notifications & cross-platform (e.g. LINE Notify, SMS, Slack)",
+        "compatible": "Fully custom services"
+      },
+      {
+        "name": "Advanced forms",
+        "description": "Multi-step forms, file upload, conditional logic",
+        "compatible": "Fully custom site / WordPress"
+      },
+      {
+        "name": "Booking system",
+        "description": "Online time-slot booking (incl. Google Calendar sync)",
+        "compatible": "Service-type sites"
+      },
+      {
+        "name": "Automated email",
+        "description": "Custom email templates + SendGrid / Mailchimp",
+        "compatible": "Membership sites"
+      },
+      {
+        "name": "Wix extensions",
+        "description": "Custom code embedding, database integration, etc.",
+        "compatible": "Wix sites"
+      },
+      {
+        "name": "Shopify customization",
+        "description": "Theme edits, checkout optimization, etc.",
+        "compatible": "Shopify"
+      }
     ]
+  },
+  "footer": {
+    "tagline": "Thanks for visiting — I look forward to working with you!",
+    "about": "About",
+    "faq": "FAQ",
+    "works": "Work",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "software": "Software Dev",
+    "marketing": "Marketing",
+    "design": "Design",
+    "allServices": "All Services",
+    "blog": "Blog",
+    "hours": "Hours",
+    "hoursVal": "Weekdays 10:00–18:00",
+    "email": "Email",
+    "lineId": "LINE ID"
+  },
+  "faq": {
+    "heading": "FAQ",
+    "sub1": "Here's a rundown of the service process, fees and collaboration details.",
+    "sub2": "Clear, shared expectations are the first step to a professional partnership.",
+    "cat": {
+      "web": "Software",
+      "marketing": "Marketing",
+      "design": "Design"
+    },
+    "moreQ": "Still have questions?",
+    "contactLink": "Get in touch with me",
+    "legalNote": "These English terms are provided for reference; the Chinese version prevails.",
+    "items": {
+      "web": [
+        {
+          "title": "What's the full process from inquiry to delivery?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Whether it's a website, AI tool, LINE bot or automation, the process is roughly:"
+            },
+            {
+              "type": "ol",
+              "items": [
+                "Consultation: share your goals, use cases and rough budget, with reference examples.",
+                "Scope & quote: after clarifying features and integrations, I provide a quote and timeline.",
+                "Contract & deposit: once the spec is confirmed, we sign and a 50% deposit is paid.",
+                "Scheduling: once the deposit clears, the project enters the development schedule.",
+                "Development & testing: built on schedule, with a test environment or demo to track progress.",
+                "Acceptance & balance: after confirming everything works in the test environment, the balance is settled.",
+                "Deployment & delivery: once the balance clears, the system is deployed or handed over."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Why does custom software need an assessment before a quote?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Custom development has no fixed price; cost varies significantly with feature scope, system complexity, the number of third-party integrations and estimated hours. So I need to understand your full requirements to quote accurately. The clearer your description, references and scope, the more precise the quote; once the quote and spec are confirmed and signed, they serve as the basis for development and acceptance."
+            }
+          ]
+        },
+        {
+          "title": "AI tools, LINE bots and automation use third-party services — how are cost and stability handled?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "These projects usually integrate third-party platforms (e.g. OpenAI / Claude API, LINE Messaging API, Make / n8n, cloud hosting). 1. Costs: subscription, API usage and license fees for third-party services are borne by the client, billed per each platform's actual rates. 2. Out-of-control factors: if a third-party platform changes policy, alters or discontinues an API, raises fees, has outages, or suspends the account — circumstances beyond my control — and functionality is affected, I'm not liable for damages, but I'll help assess alternatives (which may involve additional billable hours). 3. Tip: custom solutions are built with flexibility in mind to adapt to platform changes."
+            }
+          ]
+        },
+        {
+          "title": "Can I keep adding or changing requirements during the project?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "To ensure on-time delivery, the confirmed spec is the development baseline; if there's UI design, the design phase includes 2 rounds of revisions. Changing a confirmed spec mid-development, or requesting new features outside the original scope during acceptance, is treated as a 'new requirement' and quoted separately by hours, with the timeline adjusted."
+            }
+          ]
+        },
+        {
+          "title": "What if my materials or account access aren't ready in time?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "To protect quality and delivery, the contract specifies a 'materials deadline'. If client-side materials (text, images, account access for integrations, API keys, license codes) are delayed beyond the agreed schedule, the delivery date is pushed back by the actual number of days delayed; if the delay seriously affects other projects' scheduling, the project may need to re-queue or pay a 'reschedule fee'."
+            }
+          ]
+        },
+        {
+          "title": "Is there maintenance or warranty after launch?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "After delivery I provide 1 month of technical support, with free fixes for bugs or issues in existing features. The following are not covered for free: new features, content/spec changes, and failures caused by third-party or environment updates (e.g. a package losing support, an API change, or self-edits to the source code). For ongoing needs, a 'regular maintenance' plan can be quoted; maintenance clients get priority and preferential rates, while non-maintenance clients are quoted per difficulty and hours."
+            }
+          ]
+        },
+        {
+          "title": "Who owns the source code, accounts and system?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "After the full balance is settled, system admin access, the custom source code and content copyright belong to the client. I retain the right to showcase the work in my portfolio (excluding confidential data). Third-party packages, frameworks and services are governed by their own licenses. Before the balance is settled, access and source code are not transferred."
+            }
+          ]
+        },
+        {
+          "title": "Are AI tools' outputs and results guaranteed?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "AI models' responses are probabilistic and uncertain and may produce inaccurate or unexpected content; the final result still needs to be reviewed and checked by the user. I provide AI tool development and integration, not a guarantee of any specific accuracy, sales or business results; outputs should not be used as the final basis for legal, medical, financial or other professional decisions. For applications involving data collection, storage and personal information, the contract defines the scope of use and responsibilities, and the client must ensure their use complies with applicable laws."
+            }
+          ]
+        }
+      ],
+      "marketing": [
+        {
+          "title": "What's the marketing process and payment terms?",
+          "blocks": [
+            {
+              "type": "ol",
+              "items": [
+                "Briefing: discuss product info, style and goals.",
+                "Contract & deposit: a 50% deposit starts the project; monthly plans are paid in full upfront.",
+                "Content proposal: for ongoing subscriptions, a 'content calendar' and topic plan are provided at the start of each month; otherwise content is produced per project.",
+                "Delivery: delivered on schedule with 2 rounds of minor revisions.",
+                "Wrap-up & renewal: files are delivered after the balance is settled; monthly renewals should be confirmed 15 days before period end."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "What if I don't have materials? Anything to note when providing them?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The service does not include on-site shooting. Clients must ensure provided materials (photos, logos, fonts) are licensed for commercial use; any copyright disputes are the client's full legal responsibility. If a client's delayed materials prevent on-time posting that month, that slot is forfeited — no refund or carry-over to the next month."
+            }
+          ]
+        },
+        {
+          "title": "Can you guarantee reach, follower growth or sales?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "I provide professional 'content production and strategy'. Because social algorithms and market factors are beyond control, no specific numerical results are guaranteed. All fees are 'professional service fees', not 'performance guarantees'; refunds or deductions for data falling short of expectations are not accepted. If impacts arise from social platform (e.g. FB/IG) policy changes, sudden account suspension, or major algorithm updates, I'm not liable for damages."
+            }
+          ]
+        },
+        {
+          "title": "How many revisions for a post or video deliverable?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Each deliverable includes 2 free minor revisions (e.g. text fixes, partial layout). 'Restyling', 'major script rewrites', or 'changes requested after final approval & publishing' are treated as a new project and quoted separately."
+            }
+          ]
+        },
+        {
+          "title": "How are rush jobs handled?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "If the timeline is shorter than the item's average working days (e.g. Logo within 5 days, Banner within 2 days), a 30%–50% rush fee applies, subject to current scheduling availability."
+            }
+          ]
+        },
+        {
+          "title": "Can I get the source/editable files of the graphics or videos?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Deliverables are final published files (JPG/MP4). Unless a buyout is specified, editable files (AI, PR project files) are not provided. To obtain the editable source files, an additional copyright transfer fee of 50% of the project total applies. They may not be resold or provided to third parties without authorization."
+            }
+          ]
+        },
+        {
+          "title": "Any limits on communication and contact hours?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Service hours are Monday to Friday, 10:00 - 18:00. Messages outside working hours are answered the next business day. Except for major emergencies such as a hacked account, please respect rest and working time outside office hours."
+            }
+          ]
+        },
+        {
+          "title": "After an SEO article is written, how long until rankings improve?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "SEO is a long-term investment, usually taking 3-6 months to gradually show results. I provide keyword research and structure, but cannot guarantee a specific keyword will rank on the first page."
+            }
+          ]
+        }
+      ],
+      "design": [
+        {
+          "title": "What's the design process and payment terms?",
+          "blocks": [
+            {
+              "type": "ol",
+              "items": [
+                "Brief: discuss style preferences and confirm design specs.",
+                "Contract & deposit: a 50% deposit officially starts the schedule.",
+                "First drafts: 1-3 style proposals depending on the project.",
+                "Refinement: includes 2 free minor revisions (e.g. color, positioning).",
+                "Balance & delivery: after the 50% balance is settled, final files are delivered."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Any limits on the number and scope of revisions?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Each deliverable includes 2 minor revisions. Beyond that, a revision fee of 15-20% of the project total applies per round. 💡 Note: changes that deviate from the originally agreed style (i.e. a complete redo) are treated as a new project and re-quoted. Once a design is approved, any later changes incur extra fees."
+            }
+          ]
+        },
+        {
+          "title": "What if a typo is found after the work is published or printed?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "During delivery, final proofreading is the client's responsibility. Please carefully check all copy, phone numbers, URLs, etc. before approval. If a typo is found after the client has approved the final version, I'm not liable for the resulting rework hours or printing losses."
+            }
+          ]
+        },
+        {
+          "title": "Why do colors look different on phone vs. computer?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Because displays (phone, computer screens) render color differently, a 10-15% color difference is normal. For printing, I strongly recommend adding the 'print file optimization service (+NT$500)', where I do CMYK color correction. If the client prints using RGB web images themselves and gets a severe color shift, I'm not responsible."
+            }
+          ]
+        },
+        {
+          "title": "Can I give you photos I found online to use in the design?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Yes, but the client must ensure the materials provided (photos, fonts, logos) are licensed for commercial use. Any copyright dispute arising from client-provided materials is the client's full legal responsibility. If you need me to purchase commercial stock, the cost is quoted separately."
+            }
+          ]
+        },
+        {
+          "title": "Who owns the copyright and source files after design?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "After the full balance is paid, the client has perpetual usage rights to the work. I retain the right to publish and display the work (as portfolio). On source files: delivery does not include editable files (AI/PSD/Figma). To buy out the editable source, an additional copyright transfer fee of 50% of the project total applies."
+            }
+          ]
+        },
+        {
+          "title": "Can I get a refund if I cancel halfway through?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "1. Before first drafts: 20% of the deposit is refunded. 2. After first drafts: the deposit is non-refundable, and the client may not use any proposed drafts. This protects the creative work and production hours already invested — thank you for understanding."
+            }
+          ]
+        },
+        {
+          "title": "How are rush design jobs priced?",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "If the timeline is shorter than the item's average working days (e.g. Logo within 5 days, Banner within 2 days), a 30%–50% rush fee applies, subject to current scheduling availability."
+            }
+          ]
+        }
+      ]
+    }
   }
 }
