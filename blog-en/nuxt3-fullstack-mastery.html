@@ -1,0 +1,77 @@
+<h2>Why I Chose Nuxt 3 for Full-Stack Development</h2>
+      <p>In the AI era, web performance and SEO structure matter more than ever.<br />With its powerful <strong>SSR (server-side rendering)</strong> and <strong>Nitro engine</strong>, Nuxt 3 lets developers handle backend APIs with Vue's logic and delivers top-tier edge-computing capability. For an efficiency-driven developer like you, Nuxt 3 is the best tool for turning ideas into productivity.</p>
+
+      <div style="text-align: center; margin: 25px 0;">
+        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=1200&auto=format&fit=crop" alt="Coding and Web Development" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      </div>
+
+      <h2>Hands-On Guide: Official Docs and Resource Links</h2>
+      <p>Before you start building, be sure to bookmark these core resources:</p>
+      <ul>
+        <li><a href="https://nuxt.com/docs/getting-started/introduction" target="_blank" style="color: #2563eb; text-decoration: underline;">Nuxt 3 Official Getting Started</a>: the most accurate API reference and best practices.</li>
+        <li><a href="https://hub.nuxt.com/" target="_blank" style="color: #2563eb; text-decoration: underline;">Nuxt Hub (new tool)</a>: the fastest way to deploy and manage Nuxt apps on the Cloudflare edge platform.</li>
+        <li><a href="https://pinia.vuejs.org/ssr/nuxt.html" target="_blank" style="color: #2563eb; text-decoration: underline;">Pinia + Nuxt SSR integration guide</a>: master consistency of complex state between server and client.</li>
+      </ul>
+
+      <hr>
+
+      <h2>Let AI Write Your Code: Nuxt 3-Specific Prompts</h2>
+      <p>Paired with AI tools (like Cursor or ChatGPT), these prompts help you quickly scaffold a standard architecture:</p>
+
+      <div style="background-color: #f0f9ff; padding: 20px; border-left: 5px solid #0ea5e9; margin: 20px 0;">
+        <strong>1. Composable Creator</strong><br>
+        <code>Prompt: Write a composable named useApi for Nuxt 3. Requirements: wrap useFetch; automatically attach a Bearer Token stored in a cookie; include global error handling, a custom request interceptor, and complete TypeScript type definitions.</code>
+        <br><br>
+
+        <strong>2. Server API with Edge Caching (Nitro Server Route)</strong><br>
+        <code>Prompt: Create a GET endpoint under server/api. It fetches data from the external database [Database Name] and uses Nitro's cacheStorage to implement an SWR (Stale-While-Revalidate) caching strategy for high-performance responses at the edge.</code>
+        <br><br>
+
+        <strong>3. Dynamic SEO Meta</strong><br>
+        <code>Prompt: Write Nuxt 3 Script Setup code for a page. Requirements: automatically configure useSeoMeta and useHead from a [Data Object] fetched via API, including OpenGraph tags, Twitter card format, and dynamically generated JSON-LD structured data to optimize AEO ranking.</code>
+        <br><br>
+
+        <strong>4. Auth Middleware</strong><br>
+        <code>Prompt: Create a Nuxt 3 route middleware (middleware/auth.ts). Requirements: check the login state in the Pinia store; if not logged in, redirect to /login with the current route as a query parameter, and support consistent checks on both server and client.</code>
+        <br><br>
+
+        <strong>5. Performance Audit</strong><br>
+        <code>Prompt: Here is a Nuxt 3 component [Code Segment]. Analyze the risk points that could cause a hydration mismatch, suggest how to optimize the component's lazy loading, and identify which parts should use &lt;NuxtIsland&gt; to reduce client-side JS size.</code>
+      </div>
+
+      <hr>
+
+      <h2>Three Core Full-Stack Techniques</h2>
+
+      <h3>1. File-based routing and hydration optimization</h3>
+      <p>Nuxt 3 auto-generates routes from the <code>pages/</code> directory, but we now emphasize <strong>Islands Architecture</strong> more. With <code>&lt;NuxtIsland&gt;</code>, we can render static parts on the server only and hydrate just the interactive components, dramatically improving the LCP score.</p>
+
+      <h3>2. Edge-first Server APIs</h3>
+      <p>Using the <code>server/</code> directory, you can write backend logic without leaving the Nuxt project. Combined with <strong>Nitro</strong>, these APIs can deploy to Vercel Edge or Cloudflare Workers, bringing data processing closer to the user for millisecond-level responses.</p>
+
+      <h3>3. Smart SEO setup</h3>
+      <p>Nuxt 3's <code>useSeoMeta</code> makes SEO configuration extremely simple and dynamic. Combined with structured data (Schema.org), you can ensure your Nuxt app is highly recognizable to the AI search engines of 2026.</p>
+
+      <div style="text-align: center; margin: 25px 0;">
+        <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=1200&auto=format&fit=crop" alt="Advanced Server Architecture" width="1200" height="800" style="max-width: 100%; border-radius: 12px;">
+      </div>
+
+      <hr>
+
+      <h2>Deployment in Practice: From Dev to Live</h2>
+      <ol>
+        <li><strong>Vercel / Netlify:</strong> best for front-end-led projects, with one-click deploys and automatic preview environments.</li>
+        <li><strong>Nuxt Hub (Cloudflare):</strong> the most popular choice, offering ultra-low-cost database, file storage and edge-computing integration.</li>
+        <li><strong>Docker + Nitro:</strong> if you have your own VPS (e.g., Linode or DigitalOcean), Docker deployment gives you maximum control over the environment.</li>
+      </ol>
+      <hr>
+      <h4>Essential references and technical sources for developers:</h4>
+      <ul>
+        <li><a href="https://nuxt.com/docs/getting-started/introduction" target="_blank">Nuxt 3 Official Docs</a>: technical details on SSR rendering, the Nitro engine and the latest Islands Architecture.</li>
+        <li><a href="https://hub.nuxt.com/" target="_blank">Nuxt Hub cloud platform</a>: the latest tooling for edge-computing deployment and database management in 2026.</li>
+        <li><a href="https://vercel.com/docs/functions/edge-functions" target="_blank">Vercel Edge Functions whitepaper</a>: the underlying principles for low-latency full-stack deployment.</li>
+        <li><a href="https://blog.vuejs.org/" target="_blank">Vue.js core team blog</a>: track the future evolution of Vue 3 and its ecosystem (such as Vapor Mode).</li>
+      </ul>
+
+      <p><strong>Ready to start your Nuxt 3 project?</strong><br>
+      💬 Get professional full-stack development consulting: <a href="https://lin.ee/xJpEh2l/" target="_blank">Contact Zeona on LINE</a></p>

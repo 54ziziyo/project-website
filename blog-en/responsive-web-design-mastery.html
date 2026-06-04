@@ -1,0 +1,75 @@
+<h2>The Paradigm Shift in Responsive Design: From Viewport to Component</h2>
+      <p>We used to switch styles based on screen width (the viewport), but in modern web development, component-driven development is the mainstream.<br /><strong>Container Queries</strong> let you define styles based on "where a component is placed" rather than the size of the whole window. This makes components truly portable.</p>
+
+      <div style="text-align: center; margin: 25px 0;">
+        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&auto=format&fit=crop" alt="Responsive UI Design on Different Devices" width="1200" height="800" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      </div>
+
+      <h2>Hands-On: Exporting High-Quality Responsive Code From Figma</h2>
+      <p>For developers, hand-matching CSS to a Figma design is hugely time-consuming.<br /><br />The most mainstream workflow today uses <strong>Dev Mode</strong> together with automation plugins:</p>
+      <ul>
+        <li><strong>Figma to Code (Vue/React):</strong> use <a href="https://www.figma.com/files/team/1260072719102971325/resources/community/plugin/857346721138427857/anima-figma-to-code-react-html-css-tailwind-mui-devmode-inspect-react-html-vue-css?fuid=892681714801987404" target="_blank" style="color: #2563eb; text-decoration: underline;">Anima for Figma</a>, or the <a href="https://www.animaapp.com/figma" target="_blank" style="color: #2563eb; text-decoration: underline;">Anima website</a>, which turns Auto Layout directly into Flexbox or Grid Tailwind CSS code.</li>
+        <li><strong><a href="https://www.locofy.ai/" target="_blank" style="color: #2563eb; text-decoration: underline;">Locofy.ai</a>:</strong> one of the most powerful AI tools right now — it converts designs into responsive React or Vue components, even supporting TypeScript and Props definitions.</li>
+        <li><strong>Official Dev Mode:</strong> make good use of Figma's built-in CSS inspector and copy parameters like <code>gap</code> and <code>flex</code> directly to reduce errors.</li>
+      </ul>
+
+      <hr>
+
+      <h2>🚀 The Three Modern CSS Responsive Essentials</h2>
+
+      <h3>1. Container Queries</h3>
+      <p>This is the most recommended approach today. When your sidebar shrinks, the inner card component automatically adjusts its layout:</p>
+      <pre style="background: #1e293b; color: #e2e8f0; padding: 15px; border-radius: 8px;"><code>/* Define the container */
+.card-container {
+  container-type: inline-size;
+}
+
+/* Switch to a single column when the container is below 400px */
+@container (max-width: 400px) {
+  .card-content {
+    display: block;
+  }
+}</code></pre>
+
+      <h3>2. CSS clamp(): fluid fonts and spacing</h3>
+      <p>No need to write multiple breakpoints — let the font scale naturally between phone and desktop:</p>
+      <code>font-size: clamp(1rem, 5vw + 1rem, 2.5rem);</code>
+
+      <h3>3. CSS Grid layout magic</h3>
+      <p>Use <code>auto-fit</code> to let components wrap automatically, with no media queries:</p>
+      <code>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));</code>
+
+      <hr>
+
+      <h2>🚀 A Front-End Accelerator: Five RWD Prompt Templates</h2>
+      <div style="background-color: #f0fdf4; padding: 20px; border-left: 5px solid #22c55e; margin: 20px 0;">
+        <strong>1. Layout Debugging</strong><br>
+        <code>Prompt: I have a piece of [Vue/React] code that shows a horizontal scrollbar on mobile. Help me find the element overflowing the container and suggest how to fix the layout.</code>
+        <br><br>
+        <strong>2. Figma to CSS Grid (Design to Code)</strong><br>
+        <code>Prompt: Here are the parameters of a three-column Figma design [paste parameters]. Convert it into a responsive component built with CSS Grid; it should automatically become two columns below 768px and one column below 480px.</code>
+        <br><br>
+        <strong>3. Responsive Images (Performance)</strong><br>
+        <code>Prompt: Generate HTML that uses the &lt;picture&gt; tag for responsive image loading. Requirements: a small WebP image on mobile, a high-quality WebP on desktop, and lazy loading enabled.</code>
+        <br><br>
+        <strong>4. Modern CSS Migration</strong><br>
+        <code>Prompt: Rewrite this traditional media-query-based CSS to use Container Queries and the clamp() function, to improve component reusability.</code>
+        <br><br>
+        <strong>5. Adaptive Navigation</strong><br>
+        <code>Prompt: Write a Vue 3 component that shows a horizontal navbar on desktop and automatically turns into a side hamburger menu below 1024px, with a transition animation.</code>
+      </div>
+
+      <hr>
+
+      <h2>Recommended Learning Resources & Tutorials</h2>
+      <ul>
+        <li><a href="https://web.dev/learn/design/" target="_blank" style="color: #2563eb; text-decoration: underline;">Google web.dev: Learn Responsive Design</a>: the most authoritative free, complete RWD course.</li>
+        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" style="color: #2563eb; text-decoration: underline;">CSS-Tricks: A Complete Guide to CSS Grid</a>: an essential layout encyclopedia for front-end developers.</li>
+        <li><a href="https://www.smashingmagazine.com/2025/02/taking-rwd-to-the-extreme/" target="_blank" style="color: #2563eb; text-decoration: underline;">Smashing Magazine RWD section</a>: a deep look at the latest responsive design trends and UX practices.</li>
+      </ul>
+
+      <h2>Conclusion: Great Design Comes From Mastery of Detail</h2>
+      <p>Responsive design isn't just about making the layout "move" — it's about making users feel fluid and natural on any device. Once you master Container Queries and Figma automation tools, you save the tedious slicing time and focus on more valuable logic. Zeona Studio helps brands build ultra-performant web experiences, so every one of your users gets a flawless cross-device view.</p>
+
+      <p><strong>Want to optimize your site's cross-device experience?</strong><br>
+      💬 Book a technical consultation: <a href="https://lin.ee/xJpEh2l/" target="_blank">Contact Zeona on LINE</a></p>
