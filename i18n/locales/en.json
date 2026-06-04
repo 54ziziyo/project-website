@@ -220,5 +220,73 @@
     "modalBody2": "Want to chat sooner? Add me on LINE~",
     "modalLine": "Chat on LINE",
     "modalClose": "Got it"
+  },
+  "svc": {
+    "title": "Software Development Services",
+    "intro1": "Custom software development: websites, AI tools, LINE bots, automation and more",
+    "intro2": "All custom projects are quoted based on actual needs and effort — feel free to message me",
+    "lineCta": "Ask for a quote on LINE",
+    "customTitle": "Custom Software Development",
+    "customSub": "Quoted to your needs",
+    "customDesc": "These are all custom projects — no fixed packages. I'll assess your specs, complexity and effort, then quote accordingly.",
+    "customServices": [
+      { "title": "Website & system development", "highlight": "Front-end & back-end, database design, API integration, cloud deployment", "description": "Build a bespoke website and admin system from scratch — members, payments, data management and other complex logic — with deployment and ongoing maintenance.", "ta": "✅ For brands & businesses with unique needs that templates can't meet" },
+      { "title": "AI tool development", "highlight": "ChatGPT / Claude / Gemini API integration, RAG knowledge base, custom AI assistants", "description": "Build bespoke AI applications: knowledge-base Q&A, auto-reply bots, AI document and content workflows.", "ta": "✅ For businesses or solo founders looking to boost efficiency with AI" },
+      { "title": "LINE bot development", "highlight": "LINE Messaging API, auto-reply, rich menus, CRM integration", "description": "Build LINE official-account bots with smart conversation, auto-push and form collection, connected to your backend or spreadsheets for automated customer management.", "ta": "✅ For shops & brands managing customers through LINE" },
+      { "title": "Automation workflows", "highlight": "Make / n8n / Zapier / Google Apps Script automation", "description": "Connect SaaS tools and APIs into hands-off workflows that cut repetitive manual work and let the system work for you.", "ta": "✅ For teams with lots of repetitive tasks wanting to cut costs" }
+    ],
+    "webTitle": "Website Setup Services",
+    "webSub": "What I can do for you",
+    "webDesc": "From design and development to launch — pick what you need. Common website packages and starting prices are shown below.",
+    "webServices": [
+      { "title": "Web design", "items": ["UI/UX flow & layout planning", "Figma visual design & design system", "Responsive (RWD) adaptation"] },
+      { "title": "Web development", "items": ["One-page landing / campaign pages", "Multi-page brand websites", "WordPress setup & admin training"] },
+      { "title": "E-commerce", "items": ["Cart & member system", "Order & inventory admin", "Payment & logistics (ECPay / Line Pay)"] },
+      { "title": "Markup / slicing", "items": ["Static markup (HTML / CSS / JS)", "Vue / React dynamic front-end", "Responsive cross-device adaptation"] },
+      { "title": "Deployment & launch", "items": ["Hosting & domain setup", "HTTPS / SSL certificates", "Basic SEO setup"] }
+    ],
+    "scrollPre": "What else your ",
+    "scrollHi": "website",
+    "scrollPost": " can do",
+    "scrollSub": "The most professional service for you",
+    "scrollCards": [
+      { "title": "Advanced SEO", "description": "SEO audit & search-friendly structure" },
+      { "title": "Google Analytics", "description": "Tracking setup & data dashboards" },
+      { "title": "Multi-language", "description": "Language switching to reach global markets" },
+      { "title": "GTM", "description": "Conversion goals & user-behavior reports" },
+      { "title": "Functional features", "description": "Custom forms, booking, calendar sync, email notifications, etc." },
+      { "title": "Platform customization", "description": "Custom features on Wix, Shopify and more" }
+    ],
+    "basicTitle": "Basic Add-ons",
+    "basicSub": "For custom projects",
+    "basicNote": "Optional services you can add; cost is quoted together after assessment.",
+    "advTitle": "Advanced Add-ons",
+    "advSub": "For custom projects",
+    "advNote": "Extendable advanced features, quoted per project needs.",
+    "colItem": "Add-on",
+    "colDesc": "Description",
+    "colCompat": "Works with",
+    "basicAddons": [
+      { "name": "Domain & hosting", "description": "Domain registration, basic hosting, HTTPS SSL certificate" },
+      { "name": "Advanced commercial SSL", "description": "Only needed for special business requirements" },
+      { "name": "SEO setup", "description": "Keyword optimization, sitemap, meta tags" },
+      { "name": "Google Analytics install", "description": "Traffic tracking setup" },
+      { "name": "Multi-language switch", "description": "Add English / Japanese versions (translation copy not included)" }
+    ],
+    "advancedAddons": [
+      { "name": "Animations", "description": "Basic Lottie animation; WebGL interactions quoted separately", "compatible": "Fully custom site" },
+      { "name": "Member system", "description": "Sign-up / login (Firebase or basic backend)", "compatible": "WordPress / multi-page site" },
+      { "name": "LINE integration", "description": "Official account binding, LINE Login or Messaging API", "compatible": "Campaign page or e-commerce" },
+      { "name": "Payment integration", "description": "ECPay / Line Pay etc. (contract fees excluded)", "compatible": "E-commerce or booking sites" },
+      { "name": "GTM conversion tracking", "description": "Conversion goals & event tracking (incl. basic report reading)", "compatible": "All site types" },
+      { "name": "Heatmap tools", "description": "Hotjar or Microsoft Clarity setup", "compatible": "All site types" },
+      { "name": "Third-party data integration", "description": "Integrate external data (e.g. Google Calendar, live exchange rates, maps)", "compatible": "Fully custom site / WordPress" },
+      { "name": "Automation integration", "description": "Automated notifications & cross-platform (e.g. LINE Notify, SMS, Slack)", "compatible": "Fully custom services" },
+      { "name": "Advanced forms", "description": "Multi-step forms, file upload, conditional logic", "compatible": "Fully custom site / WordPress" },
+      { "name": "Booking system", "description": "Online time-slot booking (incl. Google Calendar sync)", "compatible": "Service-type sites" },
+      { "name": "Automated email", "description": "Custom email templates + SendGrid / Mailchimp", "compatible": "Membership sites" },
+      { "name": "Wix extensions", "description": "Custom code embedding, database integration, etc.", "compatible": "Wix sites" },
+      { "name": "Shopify customization", "description": "Theme edits, checkout optimization, etc.", "compatible": "Shopify" }
+    ]
   }
 }

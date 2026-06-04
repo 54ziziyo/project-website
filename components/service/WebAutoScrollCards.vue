@@ -1,25 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
-const cards = [
-  {
-    title: 'SEO進階優化',
-    description: 'SEO健檢、優化對搜尋引擎友善架構',
-  },
-  { title: 'Google 分析', description: '設定追蹤碼、資料儀表版' },
-  { title: '多國語系', description: '支援多國語言切換、拓展國際市場' },
-  {
-    title: 'GTM',
-    description: '轉換目標設定、追蹤顧客行為報告',
-  },
-  {
-    title: '功能性服務',
-    description: '客製化表單、預約系統、行事曆串接、Email 通知等',
-  },
-  { title: '平台客製化功能', description: 'Wix、Shopify 其他平台客製功能' },
-]
-
-const duplicatedCards = [...cards, ...cards]
+const { t, tm, rt } = useI18n()
+const cards = computed(() => tm('svc.scrollCards') as { title: string; description: string }[])
+const duplicatedCards = computed(() => [...cards.value, ...cards.value])
 const scrollContainer = ref<HTMLElement | null>(null)
 
 onMounted(() => {
@@ -47,9 +31,9 @@ onMounted(() => {
     <!-- 標題區塊 -->
     <div class="flex flex-col items-center mb-14 md:mb-[80px]">
       <div class="text-[24px] md:text-[52px] font-bold leading-none mb-4 md:mb-8">
-        您的<span class="text-[#8782FF]">網站</span>還能做到這些
+        {{ t('svc.scrollPre') }}<span class="text-[#8782FF]">{{ t('svc.scrollHi') }}</span>{{ t('svc.scrollPost') }}
       </div>
-      <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">提供給您最專業的服務</div>
+      <div class="text-[#5B5B5B] text-[14px] md:text-[20px]">{{ t('svc.scrollSub') }}</div>
     </div>
 
     <!-- 滾動卡片 -->
@@ -70,10 +54,10 @@ onMounted(() => {
 
         <!-- 卡片內容 -->
         <div class="font-bold text-[20px] md:text-[24px] mb-5 md:mb-2 text-[#5B5B5B]">
-          {{ card.title }}
+          {{ rt(card.title) }}
         </div>
         <p class="text-[16px] md:text-[18px] text-gray-600 text-wrap">
-          {{ card.description }}
+          {{ rt(card.description) }}
         </p>
       </div>
     </div>
