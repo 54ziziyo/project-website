@@ -158,7 +158,7 @@ const showMenu = ref(false)
       </NavigationMenu>
 
       <!-- 語言切換 + CTA Button -->
-      <div class="md:flex hidden items-center gap-4">
+      <div class="md:flex hidden items-center gap-6">
         <div class="flex items-center gap-1 text-sm font-semibold">
           <NuxtLink
             :to="switchLocalePath('zh-TW')"
