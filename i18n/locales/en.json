@@ -573,6 +573,19 @@
       }
     ]
   },
+  "unlock": {
+    "metaTitle": "Unlock the AI Personal-Brand Pack | Zeona Studio",
+    "brand": "AI Personal-Brand Pack",
+    "heading": "Enter your serial to unlock",
+    "sub": "After purchasing on Gumroad, you'll receive a product serial (License Key). Paste it below to unlock the content permanently.",
+    "placeholder": "e.g. XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX",
+    "errEmpty": "Please enter your serial",
+    "errFail": "Verification failed, please try again later",
+    "verifying": "Verifying…",
+    "unlockBtn": "Unlock content",
+    "notYet": "Haven't purchased yet?",
+    "getOnGumroad": "Get it on Gumroad"
+  },
   "designPrice": {
     "metaTitle": "Design Services | Zeona Studio - Branding, Logo Design, Marketing Assets",
     "metaDesc": "Zeona Studio professional design services: brand identity, logo design, social post assets, marketing banners, UI/UX design and LINE rich menus. From brand planning to visual execution, we craft a consistent, memorable brand image that stands out.",

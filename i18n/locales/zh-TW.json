@@ -574,6 +574,19 @@
       }
     ]
   },
+  "unlock": {
+    "metaTitle": "解鎖 AI 個人品牌建立包 | Zeona Studio",
+    "brand": "AI 個人品牌建立包",
+    "heading": "輸入你的序號解鎖",
+    "sub": "在 Gumroad 購買後，你會收到一組產品序號（License Key）。把它貼在下方即可永久開啟內容。",
+    "placeholder": "例如：XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX",
+    "errEmpty": "請輸入你的序號",
+    "errFail": "驗證失敗，請稍後再試",
+    "verifying": "驗證中…",
+    "unlockBtn": "解鎖內容",
+    "notYet": "還沒購買？",
+    "getOnGumroad": "前往 Gumroad 取得"
+  },
   "designPrice": {
     "metaTitle": "視覺設計服務 | Zeona Studio - 品牌設計、LOGO設計、行銷素材",
     "metaDesc": "Zeona Studio 專業視覺設計服務：品牌識別設計、LOGO 設計、社群貼文素材、行銷 Banner 製作、UI/UX 介面設計、LINE 圖文選單。從品牌規劃到視覺執行，為您打造一致且令人印象深刻的品牌視覺形象，讓品牌在市場中脫穎而出。",
