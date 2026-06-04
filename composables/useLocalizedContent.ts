@@ -19,10 +19,13 @@ export function useLocalizedContent() {
   const wDesc = (p: { id: string; shortDesc: string }) =>
     isEn.value ? portfolioEn[p.id]?.shortDesc ?? p.shortDesc : p.shortDesc
 
-  const bTitle = (p: { id: string; title: string }) =>
-    isEn.value ? blogEn[p.id]?.title ?? p.title : p.title
-  const bExcerpt = (p: { id: string; excerpt: string }) =>
-    isEn.value ? blogEn[p.id]?.excerpt ?? p.excerpt : p.excerpt
+  // 部落格：優先用 Notion 的英文欄位，其次 contentEn 對照表，最後中文
+  const bTitle = (p: { id: string; title: string; titleEn?: string }) =>
+    isEn.value ? p.titleEn || blogEn[p.id]?.title || p.title : p.title
+  const bExcerpt = (p: { id: string; excerpt: string; excerptEn?: string }) =>
+    isEn.value ? p.excerptEn || blogEn[p.id]?.excerpt || p.excerpt : p.excerpt
+  const bTags = (p: { tags: string[]; tagsEn?: string[] }) =>
+    isEn.value && p.tagsEn && p.tagsEn.length ? p.tagsEn : p.tags
 
-  return { isEn, catLabel, pName, pDesc, pTags, wTitle, wDesc, bTitle, bExcerpt }
+  return { isEn, catLabel, pName, pDesc, pTags, wTitle, wDesc, bTitle, bExcerpt, bTags }
 }

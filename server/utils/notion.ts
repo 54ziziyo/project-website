@@ -50,6 +50,15 @@ export function pageToPost(page: any, content = '', contentEn = '') {
       keywords: extractText(p['SEO Keywords']?.rich_text),
       ogImage: coverImage,
     },
+    // 英文欄位（Notion 上的 *(EN) 屬性）；空字串代表該篇尚未提供英文
+    titleEn: extractText(p['Title (EN)']?.rich_text),
+    excerptEn: extractText(p['Excerpt (EN)']?.rich_text),
+    tagsEn: p['Tags (EN)']?.multi_select?.map((t: any) => t.name) || [],
+    seoEn: {
+      title: extractText(p['SEO Title (EN)']?.rich_text),
+      description: extractText(p['SEO Description (EN)']?.rich_text),
+      keywords: extractText(p['SEO Keywords (EN)']?.rich_text),
+    },
     content,
     contentEn,
   }

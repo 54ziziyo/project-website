@@ -10,7 +10,7 @@ const isVisible = ref(false)
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { isEn, catLabel, bTitle, bExcerpt } = useLocalizedContent()
+const { isEn, catLabel, bTitle, bExcerpt, bTags } = useLocalizedContent()
 
 const { data: currentPost } = await useAsyncData<BlogPost>(
   `blog-${route.params.id}`,
@@ -43,16 +43,18 @@ useHead(() => {
   }
 
   const post = currentPost.value
-  // 英文語系：標題／描述用英文卡片內容；其餘 fallback 原本 SEO 欄位
-  const seoTitle = isEn.value ? bTitle(post) : post.seo.title
+  // 英文語系：優先用 Notion 的 SEO(EN) 欄位，其次英文標題／摘要，最後中文 SEO 欄位
+  const seoTitle = isEn.value ? post.seoEn?.title || bTitle(post) : post.seo.title
   const seoDesc = isEn.value
-    ? (bExcerpt(post) + ' | Zeona Studio Blog').slice(0, 170)
+    ? (post.seoEn?.description || bExcerpt(post) || '').slice(0, 170)
     : (post.title + ' - ' + post.seo.description + ' | Zeona Studio 部落格').slice(0, 170)
+  const seoKeywords = isEn.value ? post.seoEn?.keywords || post.seo.keywords : post.seo.keywords
+  const tagList = bTags(post).join(', ')
   return {
     title: seoTitle,
     meta: [
       { name: 'description', content: seoDesc },
-      { name: 'keywords', content: post.seo.keywords },
+      { name: 'keywords', content: seoKeywords },
       { property: 'og:title', content: seoTitle },
       { property: 'og:description', content: seoDesc },
       { property: 'og:type', content: 'article' },
@@ -62,10 +64,10 @@ useHead(() => {
       { property: 'article:modified_time', content: post.updatedAt },
       { property: 'article:author', content: post.author },
       { property: 'article:section', content: post.category },
-      { property: 'article:tag', content: post.tags.join(', ') },
+      { property: 'article:tag', content: tagList },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: post.seo.title },
-      { name: 'twitter:description', content: post.seo.description },
+      { name: 'twitter:title', content: seoTitle },
+      { name: 'twitter:description', content: seoDesc },
       { name: 'twitter:image', content: post.seo.ogImage },
     ],
     link: [{ rel: 'canonical', href: `https://zeona.vercel.app/blog/${post.id}` }],
@@ -105,7 +107,7 @@ useHead(() => {
             '@type': 'WebPage',
             '@id': `https://zeona.vercel.app/blog/${post.id}`,
           },
-          keywords: post.tags.join(', '),
+          keywords: bTags(post).join(', '),
         }),
       },
     ],
@@ -205,7 +207,7 @@ onMounted(() => {
           <!-- 標籤 -->
           <div class="flex flex-wrap gap-2 mb-8">
             <span
-              v-for="tag in currentPost.tags"
+              v-for="tag in bTags(currentPost)"
               :key="tag"
               class="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100"
             >
@@ -264,7 +266,7 @@ onMounted(() => {
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div class="flex flex-wrap gap-2">
                 <span
-                  v-for="tag in currentPost.tags"
+                  v-for="tag in bTags(currentPost)"
                   :key="tag"
                   class="px-4 py-1.5 bg-gray-50 text-gray-500 text-sm rounded-full border border-gray-100 hover:border-[#8782FF] hover:text-[#8782FF] transition-all cursor-pointer"
                 >

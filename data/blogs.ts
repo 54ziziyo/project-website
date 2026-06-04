@@ -7,6 +7,15 @@ export interface BlogPost {
   content: string
   // 英文內文（來自 Notion 中 caption 標記為 "en" 的 code block）；無則 fallback 中文 content
   contentEn?: string
+  // 英文欄位（Notion *(EN) 屬性）；空代表該篇尚未提供英文，前端會 fallback
+  titleEn?: string
+  excerptEn?: string
+  tagsEn?: string[]
+  seoEn?: {
+    title: string
+    description: string
+    keywords: string
+  }
   coverImage: string
   author: string
   publishedAt: string
