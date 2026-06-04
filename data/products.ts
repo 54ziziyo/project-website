@@ -318,8 +318,8 @@ export const products: Product[] = [
     id: 'ai-personal-brand-full-pack',
     name: '手把手帶你 AI 社群經營包｜IG + 部落格 + 電子報全套攻略',
     category: 'Prompt 提示詞',
-    price: 990,
-    originalPrice: 1290,
+    price: 1290,
+    originalPrice: 3290,
     description:
       '不用湊團隊、不用從零摸索，一套 AI 提示詞與模板，帶你把 IG、部落格、電子報一次建立起來——從定位到 30 天發文，填空、複製、發布就好。',
     fullDescription: `還在羨慕別人的個人品牌經營得有聲有色，自己卻連「第一步該做什麼」都不知道？
