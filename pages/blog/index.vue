@@ -40,7 +40,20 @@ const router = useRouter()
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { catLabel, bTitle, bExcerpt } = useLocalizedContent()
+const { isEn, catLabel, bTitle, bExcerpt } = useLocalizedContent()
+
+// 全站標籤中→英對照（由各篇 tags / tagsEn 同序建立）；篩選仍用中文 key
+const tagLabelMap = computed(() => {
+  const m: Record<string, string> = {}
+  for (const p of blogPosts.value || []) {
+    const en = p.tagsEn || []
+    ;(p.tags || []).forEach((tg, i) => {
+      if (en[i] && !m[tg]) m[tg] = en[i]
+    })
+  }
+  return m
+})
+const tagLabel = (tg: string) => (isEn.value ? tagLabelMap.value[tg] || tg : tg)
 
 // SEO
 useHead(() => ({
@@ -476,7 +489,7 @@ onMounted(() => {
           <!-- 標籤 / 分類篩選提示 -->
           <div v-if="filterDescription && !searchQuery.trim()" class="mb-6 flex items-center gap-2">
             <p class="text-gray-500 text-sm">
-              {{ t('blog.filtering') }}<span class="text-[#8782FF] font-semibold">{{ catLabel(filterDescription) }}</span>
+              {{ t('blog.filtering') }}<span class="text-[#8782FF] font-semibold">{{ selectedTag ? tagLabel(filterDescription) : catLabel(filterDescription) }}</span>
               <span class="text-gray-400">{{ t('blog.count', { n: filteredPosts.length }) }}</span>
             </p>
             <button
@@ -531,7 +544,7 @@ onMounted(() => {
                       class="hidden sm:inline-block px-2.5 py-0.5 bg-gray-100 text-gray-500 text-xs rounded-full hover:bg-[#8782FF]/10 hover:text-[#8782FF] transition-all"
                       @click.prevent.stop="setTag(tag)"
                     >
-                      {{ tag }}
+                      {{ tagLabel(tag) }}
                     </button>
                   </div>
                 </div>
@@ -673,7 +686,7 @@ onMounted(() => {
                             :key="tag"
                             class="flex-shrink-0 inline-block px-2 py-0.5 bg-[#8782FF]/10 text-[#8782FF] text-[10px] font-semibold rounded-full leading-relaxed"
                           >
-                            {{ tag }}
+                            {{ tagLabel(tag) }}
                           </span>
                         </div>
                         <div
@@ -733,7 +746,7 @@ onMounted(() => {
                   ]"
                   @click="setTag(tag)"
                 >
-                  {{ tag }}
+                  {{ tagLabel(tag) }}
                 </button>
               </div>
             </div>
