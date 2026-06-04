@@ -15,10 +15,19 @@ export default defineEventHandler(async (event) => {
   const page = data.results[0]
   const blocks = await getBlocks(notionToken, page.id)
 
-  const content = blocks.results
-    .filter((b: any) => b.type === 'code')
+  const codeBlocks = blocks.results.filter((b: any) => b.type === 'code')
+  // caption 含 "en" 的 code block 視為英文內文，其餘為中文內文
+  const isEnBlock = (b: any) => extractText(b.code?.caption).toLowerCase().includes('en')
+
+  const content = codeBlocks
+    .filter((b: any) => !isEnBlock(b))
     .map((b: any) => extractText(b.code?.rich_text))
     .join('')
 
-  return pageToPost(page, content)
+  const contentEn = codeBlocks
+    .filter((b: any) => isEnBlock(b))
+    .map((b: any) => extractText(b.code?.rich_text))
+    .join('')
+
+  return pageToPost(page, content, contentEn)
 })

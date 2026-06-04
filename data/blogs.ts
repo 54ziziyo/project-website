@@ -5,6 +5,8 @@ export interface BlogPost {
   tags: string[]
   excerpt: string
   content: string
+  // 英文內文（來自 Notion 中 caption 標記為 "en" 的 code block）；無則 fallback 中文 content
+  contentEn?: string
   coverImage: string
   author: string
   publishedAt: string

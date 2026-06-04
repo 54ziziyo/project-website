@@ -10,11 +10,16 @@ const isVisible = ref(false)
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { catLabel, bTitle, bExcerpt } = useLocalizedContent()
+const { isEn, catLabel, bTitle, bExcerpt } = useLocalizedContent()
 
 const { data: currentPost } = await useAsyncData<BlogPost>(
   `blog-${route.params.id}`,
   () => $fetch<BlogPost>(`/api/blogs/${route.params.id}`),
+)
+
+// 文章內文：英文語系且 Notion 有英文內文時用英文，否則 fallback 中文
+const articleBody = computed(() =>
+  isEn.value && currentPost.value?.contentEn ? currentPost.value.contentEn : currentPost.value?.content,
 )
 
 // 推薦文章：取同分類的其他文章
@@ -38,19 +43,18 @@ useHead(() => {
   }
 
   const post = currentPost.value
+  // 英文語系：標題／描述用英文卡片內容；其餘 fallback 原本 SEO 欄位
+  const seoTitle = isEn.value ? bTitle(post) : post.seo.title
+  const seoDesc = isEn.value
+    ? (bExcerpt(post) + ' | Zeona Studio Blog').slice(0, 170)
+    : (post.title + ' - ' + post.seo.description + ' | Zeona Studio 部落格').slice(0, 170)
   return {
-    title: post.seo.title,
+    title: seoTitle,
     meta: [
-      {
-        name: 'description',
-        content: (post.title + ' - ' + post.seo.description + ' | Zeona Studio 部落格').slice(0, 170),
-      },
+      { name: 'description', content: seoDesc },
       { name: 'keywords', content: post.seo.keywords },
-      { property: 'og:title', content: post.seo.title },
-      {
-        property: 'og:description',
-        content: (post.title + ' - ' + post.seo.description + ' | Zeona Studio 部落格').slice(0, 170),
-      },
+      { property: 'og:title', content: seoTitle },
+      { property: 'og:description', content: seoDesc },
       { property: 'og:type', content: 'article' },
       { property: 'og:url', content: `https://zeona.vercel.app/blog/${post.id}` },
       { property: 'og:image', content: post.seo.ogImage },
@@ -80,8 +84,8 @@ useHead(() => {
         innerHTML: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
-          headline: post.title,
-          description: post.seo.description,
+          headline: isEn.value ? bTitle(post) : post.title,
+          description: isEn.value ? bExcerpt(post) : post.seo.description,
           image: post.seo.ogImage,
           author: {
             '@type': 'Organization',
@@ -190,12 +194,12 @@ onMounted(() => {
 
           <!-- 標題 -->
           <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
-            {{ currentPost.title }}
+            {{ bTitle(currentPost) }}
           </h1>
 
           <!-- 摘要 -->
           <p class="text-lg md:text-xl text-gray-500 leading-relaxed mb-6">
-            {{ currentPost.excerpt }}
+            {{ bExcerpt(currentPost) }}
           </p>
 
           <!-- 標籤 -->
@@ -231,8 +235,8 @@ onMounted(() => {
           <div class="rounded-2xl overflow-hidden shadow-xl">
             <img
               :src="currentPost.coverImage"
-              :alt="`${currentPost.title} - ${currentPost.category} 文章封面`"
-              :title="currentPost.title"
+              :alt="`${bTitle(currentPost)} - ${catLabel(currentPost.category)}`"
+              :title="bTitle(currentPost)"
               class="w-full h-auto aspect-[16/9] object-cover"
               width="1200"
               height="675"
@@ -249,7 +253,7 @@ onMounted(() => {
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
           <!-- eslint-disable-next-line vue/no-v-html -->
-          <div class="blog-content" v-html="currentPost.content"></div>
+          <div class="blog-content" v-html="articleBody"></div>
         </div>
       </div>
 

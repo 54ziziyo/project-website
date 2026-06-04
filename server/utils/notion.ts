@@ -30,7 +30,7 @@ export async function getBlocks(token: string, blockId: string) {
   return res.json()
 }
 
-export function pageToPost(page: any, content = '') {
+export function pageToPost(page: any, content = '', contentEn = '') {
   const p = page.properties
   const coverImage = p['Cover Image']?.url || ''
   return {
@@ -51,5 +51,6 @@ export function pageToPost(page: any, content = '') {
       ogImage: coverImage,
     },
     content,
+    contentEn,
   }
 }
