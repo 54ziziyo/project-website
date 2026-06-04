@@ -2,13 +2,16 @@
 import { products, type Product } from '~/data/products'
 
 const route = useRoute()
+const { t } = useI18n()
+const localePath = useLocalePath()
+const { catLabel, pName, pDesc, pTags } = useLocalizedContent()
 const product = computed<Product | undefined>(() =>
   products.find((p) => p.id === route.params.id),
 )
 
 // 404 redirect if not found
 if (!product.value) {
-  throw createError({ statusCode: 404, message: '找不到此商品' })
+  throw createError({ statusCode: 404, message: t('toolbox.detail.notFound') })
 }
 
 const relatedProducts = computed(() =>
@@ -20,11 +23,11 @@ const relatedProducts = computed(() =>
 useHead(() => {
   if (!product.value) return {}
   return {
-    title: `${product.value.name} | 數位工具箱 | Zeona Studio`,
+    title: `${pName(product.value)} | Zeona Studio`,
     meta: [
-      { name: 'description', content: product.value.description },
-      { property: 'og:title', content: product.value.name },
-      { property: 'og:description', content: product.value.description },
+      { name: 'description', content: pDesc(product.value) },
+      { property: 'og:title', content: pName(product.value) },
+      { property: 'og:description', content: pDesc(product.value) },
       { property: 'og:image', content: product.value.coverImage },
       { property: 'og:type', content: 'product' },
     ],
@@ -32,7 +35,7 @@ useHead(() => {
 })
 
 const formatPrice = (price: number) =>
-  price === 0 ? '免費' : `NT$${price.toLocaleString()}`
+  price === 0 ? t('toolbox.free') : `NT$${price.toLocaleString()}`
 const isVisible = ref(false)
 onMounted(() => setTimeout(() => (isVisible.value = true), 80))
 </script>
@@ -42,13 +45,13 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
     <!-- 返回按鈕 -->
     <div class="px-6 md:px-12 mb-8 max-w-6xl mx-auto">
       <NuxtLink
-        to="/toolbox"
+        :to="localePath('/toolbox')"
         class="inline-flex items-center text-gray-500 hover:text-[#8782FF] transition-colors text-sm"
       >
         <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
-        返回工具箱
+        {{ t('toolbox.detail.back') }}
       </NuxtLink>
     </div>
 
@@ -63,7 +66,7 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
           <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-100">
             <img
               :src="product.coverImage"
-              :alt="product.name"
+              :alt="pName(product)"
               class="w-full h-full object-cover"
               width="800"
               height="600"
@@ -73,7 +76,7 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
           <!-- 標籤 -->
           <div class="flex flex-wrap gap-2 mt-4">
             <span
-              v-for="tag in product.tags"
+              v-for="tag in pTags(product)"
               :key="tag"
               class="px-3 py-1 bg-gray-50 text-gray-400 text-xs rounded-full border border-gray-100"
             >#{{ tag }}</span>
@@ -94,20 +97,20 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
             <span
               v-if="product.isBestSeller"
               class="px-3 py-1 bg-amber-400 text-white text-xs font-bold rounded-full"
-            >熱銷</span>
+            >{{ t('toolbox.bestSeller') }}</span>
             <span class="px-3 py-1 bg-[#8782FF]/10 text-[#8782FF] text-xs font-semibold rounded-full">
-              {{ product.category }}
+              {{ catLabel(product.category) }}
             </span>
           </div>
 
           <!-- 商品名稱 -->
           <h1 class="text-2xl md:text-3xl font-black text-gray-900 mb-3 leading-tight tracking-tight">
-            {{ product.name }}
+            {{ pName(product) }}
           </h1>
 
           <!-- 簡介 -->
           <p class="text-gray-500 text-base leading-relaxed mb-6">
-            {{ product.description }}
+            {{ pDesc(product) }}
           </p>
 
           <!-- 價格區 -->
@@ -122,7 +125,7 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
               NT${{ product.originalPrice.toLocaleString() }}
             </span>
             <span v-if="product.originalPrice" class="px-2 py-0.5 bg-red-50 text-red-500 text-xs font-bold rounded-full">
-              省 NT${{ (product.originalPrice - product.price).toLocaleString() }}
+              {{ t('toolbox.detail.save', { amount: (product.originalPrice - product.price).toLocaleString() }) }}
             </span>
           </div>
 
@@ -135,19 +138,19 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              免費下載
+              {{ t('toolbox.detail.freeDownload') }}
             </a>
-            <p class="text-center text-gray-400 text-xs mb-6">完全免費，無需付款</p>
+            <p class="text-center text-gray-400 text-xs mb-6">{{ t('toolbox.detail.freeNote') }}</p>
           </template>
           <template v-else-if="product.status === 'coming-soon'">
             <div class="flex items-center justify-center gap-2 w-full py-4 bg-gray-100 text-gray-400 font-bold text-lg rounded-2xl cursor-not-allowed mb-3">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              即將上架，敬請期待
+              {{ t('toolbox.detail.comingSoon') }}
             </div>
             <p class="text-center text-gray-400 text-xs mb-6">
-              上架通知？歡迎 <NuxtLink to="/contact" class="text-[#8782FF] underline">聯絡我</NuxtLink> 登記優先通知
+              {{ t('toolbox.detail.notifyPre') }} <NuxtLink :to="localePath('/contact')" class="text-[#8782FF] underline">{{ t('toolbox.detail.notifyLink') }}</NuxtLink> {{ t('toolbox.detail.notifyPost') }}
             </p>
           </template>
           <template v-else>
@@ -160,16 +163,16 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
-              立即購買
+              {{ t('toolbox.detail.buy') }}
             </a>
             <p class="text-center text-gray-400 text-xs mb-6">
-              透過 Gumroad 安全付款・購買後即可永久下載
+              {{ t('toolbox.detail.buyNote') }}
             </p>
           </template>
 
           <!-- 包含內容 -->
           <div class="bg-gray-50 rounded-2xl p-5">
-            <h3 class="font-bold text-gray-800 mb-3 text-sm">📦 包含內容</h3>
+            <h3 class="font-bold text-gray-800 mb-3 text-sm">{{ t('toolbox.detail.includes') }}</h3>
             <ul class="space-y-2">
               <li
                 v-for="feature in product.features"
@@ -190,13 +193,13 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              格式：{{ product.fileType }}
+              {{ t('toolbox.detail.formatLabel', { type: product.fileType }) }}
             </div>
             <div class="flex items-center gap-1.5">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              購買後永久下載
+              {{ t('toolbox.detail.lifetime') }}
             </div>
           </div>
         </div>
@@ -207,7 +210,7 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
         <div class="max-w-3xl">
           <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
             <span class="w-1 h-6 bg-[#8782FF] rounded-full"></span>
-            商品詳情
+            {{ t('toolbox.detail.details') }}
           </h2>
           <div class="prose prose-gray max-w-none">
             <div
@@ -221,9 +224,9 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
         <div
           v-for="item in [
-            { icon: '🔒', title: '安全付款', desc: 'Gumroad 加密付款，支援信用卡' },
-            { icon: '⚡', title: '即買即得', desc: '付款完成後立即收到下載連結' },
-            { icon: '♾️', title: '永久使用', desc: '一次購買，檔案永久保存' },
+            { icon: '🔒', title: t('toolbox.detail.secureTitle'), desc: t('toolbox.detail.secureDesc') },
+            { icon: '⚡', title: t('toolbox.detail.instantTitle'), desc: t('toolbox.detail.instantDesc') },
+            { icon: '♾️', title: t('toolbox.detail.foreverTitle'), desc: t('toolbox.detail.foreverDesc') },
           ]"
           :key="item.title"
           class="flex items-start gap-3 bg-gray-50 rounded-xl p-4"
@@ -240,19 +243,19 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
       <div v-if="relatedProducts.length > 0">
         <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
           <span class="w-1 h-6 bg-[#8782FF] rounded-full"></span>
-          你可能也喜歡
+          {{ t('toolbox.detail.related') }}
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <NuxtLink
             v-for="related in relatedProducts"
             :key="related.id"
-            :to="`/toolbox/${related.id}`"
+            :to="localePath(`/toolbox/${related.id}`)"
             class="group block bg-white rounded-xl overflow-hidden border border-gray-100 hover:border-[#8782FF]/30 hover:shadow-lg transition-all duration-300"
           >
             <div class="aspect-[4/3] overflow-hidden bg-gray-50">
               <img
                 :src="related.coverImage"
-                :alt="related.name"
+                :alt="pName(related)"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 width="300"
                 height="225"
@@ -260,9 +263,9 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
               />
             </div>
             <div class="p-4">
-              <p class="text-xs text-[#8782FF] font-semibold mb-1">{{ related.category }}</p>
+              <p class="text-xs text-[#8782FF] font-semibold mb-1">{{ catLabel(related.category) }}</p>
               <h3 class="font-bold text-gray-900 text-sm line-clamp-2 group-hover:text-[#8782FF] transition-colors mb-2">
-                {{ related.name }}
+                {{ pName(related) }}
               </h3>
               <span class="text-[#8782FF] font-black text-base">{{ formatPrice(related.price) }}</span>
             </div>
