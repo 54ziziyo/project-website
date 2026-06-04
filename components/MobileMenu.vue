@@ -18,23 +18,27 @@ watch(isOpen, (val) => {
   document.body.style.overflow = val ? 'hidden' : ''
 })
 
-const navItems = [
-  { title: 'Home', href: '/', sub: '首頁', no: '01' },
-  { title: 'About', href: '/about', sub: '關於我', no: '02' },
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
+
+const navItems = computed(() => [
+  { title: 'Home', href: localePath('/'), sub: t('mobile.home'), no: '01' },
+  { title: 'About', href: localePath('/about'), sub: t('nav.about'), no: '02' },
   {
     title: 'Services',
-    sub: '服務項目',
+    sub: t('nav.services'),
     no: '03',
     children: [
-      { title: '󠁯・ 軟體開發', href: '/services/website' },
-      { title: '󠁯・ 視覺設計', href: '/services/design' },
+      { title: t('nav.servicesSoftware'), href: localePath('/services/website') },
+      { title: t('nav.servicesDesign'), href: localePath('/services/design') },
     ],
   },
-  { title: 'FAQ', href: '/faq', sub: '常見問題', no: '04' },
-  { title: 'Works', href: '/works', sub: '作品集', no: '05' },
-  { title: 'Blog', href: '/blog', sub: '部落格', no: '06' },
-  { title: 'Contact', href: '/contact', sub: '聯繫我', no: '07' },
-]
+  { title: 'FAQ', href: localePath('/faq'), sub: t('nav.faq'), no: '04' },
+  { title: 'Works', href: localePath('/works'), sub: t('nav.works'), no: '05' },
+  { title: 'Blog', href: localePath('/blog'), sub: t('nav.blog'), no: '06' },
+  { title: 'Contact', href: localePath('/contact'), sub: t('nav.contact'), no: '07' },
+])
 
 function toggleExpand(index: number) {
   expandedIndex.value = expandedIndex.value === index ? null : index
@@ -168,7 +172,22 @@ function toggleExpand(index: number) {
 
       <div class="mt-auto px-10 py-12 flex justify-between items-end relative z-10">
         <div class="flex flex-col space-y-1">
-          <span class="text-[10px] text-gray-400 uppercase tracking-widest">Connect with me</span>
+          <div class="flex items-center gap-2 text-sm font-bold mb-3">
+            <NuxtLink
+              :to="switchLocalePath('zh-TW')"
+              :class="locale === 'zh-TW' ? 'text-[#8782FF]' : 'text-gray-400'"
+              @click="isOpen = false"
+              >中文</NuxtLink
+            >
+            <span class="text-gray-300">/</span>
+            <NuxtLink
+              :to="switchLocalePath('en')"
+              :class="locale === 'en' ? 'text-[#8782FF]' : 'text-gray-400'"
+              @click="isOpen = false"
+              >EN</NuxtLink
+            >
+          </div>
+          <span class="text-[10px] text-gray-400 uppercase tracking-widest">{{ t('mobile.connect') }}</span>
           <div class="flex items-center space-x-4 font-black text-sm text-[#4A4A4A]">
             <a
               href="https://www.instagram.com/lunn_yan/"

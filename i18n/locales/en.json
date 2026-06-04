@@ -12,6 +12,10 @@
     "blog": "Blog",
     "contact": "Contact"
   },
+  "mobile": {
+    "home": "Home",
+    "connect": "Connect with me"
+  },
   "hero": {
     "badge": "AI Powered Toolkit",
     "kicker": "The era of AI & digital tools",
@@ -24,5 +28,105 @@
     "bodyPost": ".",
     "ctaToolbox": "Explore the Toolbox →",
     "ctaGuide": "Get the free playbook"
+  },
+  "problem": {
+    "heading": "Sound familiar?",
+    "points": [
+      {
+        "title": "Want to DIY, but don't know where to start",
+        "problems": [
+          { "label": "Too many tools", "desc": "no idea which to use or how to combine them" },
+          { "label": "Lost in tutorials", "desc": "you learn a lot but still can't ship anything" },
+          { "label": "Starting from scratch every time", "desc": "no ready-to-use template to build on" }
+        ]
+      },
+      {
+        "title": "Content is slow and feels unpolished",
+        "problems": [
+          { "label": "Hours stuck on one post", "desc": "copy and layout just won't come together" },
+          { "label": "No design instinct", "desc": "the result looks plain and unprofessional" },
+          { "label": "Posting on and off", "desc": "one creative block and you go dark" }
+        ]
+      },
+      {
+        "title": "You use AI, but it doesn't deliver",
+        "problems": [
+          { "label": "Messy prompts", "desc": "AI replies are vague and unusable" },
+          { "label": "Inconsistent results", "desc": "same request, different quality every time" },
+          { "label": "No repeatable process", "desc": "every new topic means starting over" }
+        ]
+      }
+    ]
+  },
+  "solution": {
+    "kicker": "The good news is",
+    "headingPre": "The hard parts,",
+    "headingHi": "I've solved for you",
+    "cards": [
+      {
+        "no": "01. Ready-made tools, just plug in",
+        "title": "No starting from scratch",
+        "title2": "just apply a template",
+        "desc": "The Toolbox is full of ready-to-use AI prompts, templates and asset packs. Pick one and go — no more 'I don't know where to start'."
+      },
+      {
+        "no": "02. A repeatable AI workflow",
+        "title": "Turn good results into steady output",
+        "title2": "",
+        "desc": "I've turned battle-tested prompts and steps into a repeatable workflow, so you produce consistently instead of relying on luck."
+      },
+      {
+        "no": "03. Can't do it? I've got you",
+        "title": "Need it custom-built?",
+        "title2": "Just hand it to me",
+        "desc": "For more advanced websites, AI tools or automation, hand the parts you can't do to me — and save yourself the trial and error."
+      }
+    ]
+  },
+  "audience": {
+    "heading": "Does this sound like you?",
+    "sub": "If so, my services are a great fit",
+    "items": [
+      { "title": "Marketing manager / project lead", "l1": "Need to report site metrics & results", "l2": "Care about dashboards & health tracking", "l3": "Want to cut outsourcing communication costs" },
+      { "title": "Startup / early-stage brand", "l1": "Need all-in-one website & marketing", "l2": "Limited budget, value ROI", "l3": "Lack tech/marketing staff, want a long-term partner" },
+      { "title": "Traditional business going digital", "l1": "Want to move offline to online with a pro team", "l2": "Need long-term advisory & tech support", "l3": "Value transparent pricing & ongoing support" },
+      { "title": "E-commerce / DTC brand", "l1": "Site must support campaigns & conversion", "l2": "Care about UX & SEO", "l3": "Need ongoing optimization & analytics" },
+      { "title": "SME owner / brand operator", "l1": "Want a stronger brand website image", "l2": "Want the site to drive real sales", "l3": "Value data transparency & results tracking" }
+    ]
+  },
+  "feedback": {
+    "badge": "Real client reviews",
+    "heading": "See what others say",
+    "rating": "Service rating",
+    "items": [
+      { "content": "Our subsidiary's mobile site was always hard to use. After redesigning the interface and flow, our user numbers went up a lot — great work!", "author": "Gon Chen", "role": "Product Manager" },
+      { "content": "I worried tech communication would be hard, but they explain things in plain language. The design and site were delivered earlier than expected, and they proactively optimize it regularly!", "author": "Mr. Chou", "role": "Japanese motorcycle gear importer" },
+      { "content": "I'd just opened my business — running around factories and suppliers while needing a site and marketing was a lot. They handled a simple site and social content, and it's been thoughtful and solid so far.", "author": "Ms. Wang", "role": "Beverage startup" },
+      { "content": "I urgently needed an event landing page and a promo short video. Thanks for the professional guidance — the CTA button design doubled our sign-ups. Will work together again.", "author": "Gee Huang", "role": "Event agency project lead" },
+      { "content": "They built my website. I really didn't know how to set one up, but they patiently walked me through it. After launch people started reaching out — it really feels like I'm getting noticed.", "author": "Photographer Shu", "role": "Photography studio" },
+      { "content": "After working together on my site and marketing, way more people reach out to me now! They even suggested UX details I hadn't noticed.", "author": "Ms. Chang", "role": "Advertising agency" }
+    ],
+    "ctaHeading": "Want to DIY — and do it better?",
+    "ctaSub1": "From ready-made tools to custom services, there's a way that fits you.",
+    "ctaSub2": "Leave your needs in the form and I'll get back to you soon.",
+    "tag": "Buy & use instantly",
+    "boxTitle": "🧰 Digital Toolbox",
+    "boxNote": "※ Lifetime download. New products added regularly.",
+    "col1Title": "Ready-made, use right away",
+    "col1a": "✔ AI prompt packs ✔ Marketing / design templates",
+    "col1b": "✔ Template asset kits ✔ Instant, lifetime download",
+    "col2Title": "Always-fresh content",
+    "col2a": "✔ Blog updated regularly with AI / marketing tips",
+    "col2b": "✔ New toolbox products added continuously",
+    "col3Title": "Can't DIY? I'll build it",
+    "col3a": "📌 Websites, AI tools, LINE bots, automation",
+    "col3b": "📌 Visual design & social marketing",
+    "col3c": "📌 Custom projects quoted to your needs",
+    "col4Title": "Why work with me?",
+    "col4a": "🔹 Cross-discipline: marketing thinking + technical execution",
+    "col4b": "🔹 Flexible: from ready tools to custom projects",
+    "col4c": "🔹 Transparent: clear pricing & progress tracking",
+    "ctaToolbox": "Explore the Toolbox →",
+    "ctaContact": "Contact me via the form"
   }
 }

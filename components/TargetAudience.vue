@@ -29,60 +29,26 @@ onMounted(() => {
   if (sectionRef.value) observer.observe(sectionRef.value)
 })
 
-const targetAudiences = [
-  {
-    title: '行銷經理／專案負責人',
-    content_1: '需交代網站數據與成效',
-    content_2: '重視報表與健康追蹤',
-    content_3: '想減少外包溝通成本',
-
-    img: img1,
-  },
-  {
-    title: '新創公司／初創品牌',
-    content_1: '需要一站式網站與行銷服務',
-    content_2: '預算有限，重視效益',
-    content_3: '缺乏技術行銷人力，想找長期夥伴',
-    img: img2,
-  },
-  {
-    title: '正在數位轉型的傳統企業',
-    content_1: '希望線下轉線上，找專業團隊',
-    content_2: '需要長期顧問與技術支援',
-    content_3: '重視透明報價與長期技術支援',
-
-    img: img3,
-  },
-  {
-    title: '電商經營者／DTC品牌',
-    content_1: '網站需支援行銷活動與轉換',
-    content_2: '關心用戶體驗與SEO',
-    content_3: '需要持續優化和數據分析',
-    img: img4,
-  },
-  {
-    title: '中小企業主／品牌經營者',
-    content_1: '想提升品牌網站形象',
-    content_2: '希望網站能帶來實際成交',
-    content_3: '重視數據透明和成效追蹤',
-    img: img5,
-  },
-]
+const { t, tm, rt } = useI18n()
+const audienceImgs = [img1, img2, img3, img4, img5]
+const audienceItems = computed(
+  () => tm('audience.items') as { title: string; l1: string; l2: string; l3: string }[],
+)
 </script>
 
 <template>
   <div ref="sectionRef" class="w-full md:px-4 px-0 pt-20 pb-32 select-none">
-    <div 
+    <div
       class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center transition-all duration-1000 transform"
       :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
     >
-      你是否符合以下特徵？
+      {{ t('audience.heading') }}
     </div>
-    <div 
+    <div
       class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center md:mb-16 mb-8 transition-all duration-1000 transform"
       :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
     >
-      如果有的話，我的服務會相當適合你
+      {{ t('audience.sub') }}
     </div>
     <Carousel
       class="w-full md:px-15 px-12 relative"
@@ -94,7 +60,7 @@ const targetAudiences = [
     >
       <CarouselContent>
         <CarouselItem
-          v-for="(targetAudience, index) in targetAudiences"
+          v-for="(item, index) in audienceItems"
           :key="index"
           class="basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
         >
@@ -103,10 +69,10 @@ const targetAudiences = [
               class="group bg-white hover:scale-101 p-8 rounded-xl border h-full flex flex-col space-y-4 shadow-md hover:shadow-lg transition-all duration-300"
             >
               <div class="flex items-center justify-center w-full h-48 md:h-56 overflow-hidden">
-                <img 
-                  :src="targetAudience.img"
-                  :alt="targetAudience.title + ' - 目標客群插圖'"
-                  :title="targetAudience.title + ' | Zeona Studio'"
+                <img
+                  :src="audienceImgs[index]"
+                  :alt="rt(item.title)"
+                  :title="rt(item.title) + ' | Zeona Studio'"
                   class="max-h-full max-w-full object-contain"
                   width="200"
                   height="200"
@@ -114,12 +80,12 @@ const targetAudiences = [
                 />
               </div>
               <p class="font-semibold text-gray-900 mt-4">
-                {{ targetAudience.title }}
+                {{ rt(item.title) }}
               </p>
               <ul class="text-gray-600 list-disc pl-4">
-                <li>{{ targetAudience.content_1 }}</li>
-                <li>{{ targetAudience.content_2 }}</li>
-                <li>{{ targetAudience.content_3 }}</li>
+                <li>{{ rt(item.l1) }}</li>
+                <li>{{ rt(item.l2) }}</li>
+                <li>{{ rt(item.l3) }}</li>
               </ul>
             </div>
           </div>

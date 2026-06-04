@@ -9,6 +9,9 @@ import Autoplay from 'embla-carousel-autoplay'
 
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
 
+const { t, tm, rt } = useI18n()
+const localePath = useLocalePath()
+
 const isVisible = ref(false)
 const cardVisible = ref(false)
 const sectionRef = ref(null)
@@ -47,47 +50,7 @@ onMounted(() => {
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6]
 
-const testimonials = [
-  {
-    content: '我子公司的手機版網頁服務一直都很難使用，後來決定重新設計介面跟規劃流程，現在用戶數提高了很多，很讚！',
-    author: 'Gon陳',
-    role: '產品經理',
-    avatar: avatar1,
-  },
-  {
-    content: '原本擔心技術溝通困難，但他們能用外行人聽得懂的語言解釋，設計和網站都比預期更早交付，還會定期主動優化！',
-    author: 'Mr. 周',
-    role: '日本重機人身部品代購',
-    avatar: avatar2,
-  },
-  {
-    content:
-      '因為剛開業需要跑工廠、廠商又要做網站和行銷，要處理太多事了，所以請他們做了簡易官網和社群內容經營的部分，目前感受很用心還不錯～',
-    author: '汪小姐',
-    role: '飲品新創',
-    avatar: avatar3,
-  },
-  {
-    content:
-      '臨時需要製作活動Landing Page和宣傳短影片，謝謝你們很專業的引導，設計的CTA按鈕讓報名人數翻倍，後續還會想繼續合作。',
-    author: 'Gee Huang',
-    role: '活動公司專案執行',
-    avatar: avatar4,
-  },
-  {
-    content:
-      '請他們幫我做了網站，因為一直不太知道要怎麼建置網站，但他們很有耐心地跟著詢問我，架設完後也開始有一些人詢問，曝光起來的感覺很好',
-    author: '攝影小書',
-    role: '攝影工作室',
-    avatar: avatar5,
-  },
-  {
-    content: '合作了網站與行銷服務後，更多人來詢問我了！甚至主動建議我沒注意到的使用者體驗細節。',
-    author: '章小姐',
-    role: '廣告公司',
-    avatar: avatar6,
-  },
-]
+const testimonials = computed(() => tm('feedback.items') as { content: string; author: string; role: string }[])
 </script>
 <template>
   <div ref="sectionRef" class="w-full">
@@ -98,13 +61,13 @@ const testimonials = [
             class="inline-block border px-4 py-1 rounded-full text-sm transition-all duration-1000 transform"
             :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
           >
-            真實客戶評價
+            {{ t('feedback.badge') }}
           </div>
           <div
             class="text-[24px] md:text-[52px] font-bold leading-none mb:mb-8 mb-6 text-center mt-3 transition-all duration-1000 transform"
             :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
           >
-            讓我看看別人怎麼說
+            {{ t('feedback.heading') }}
           </div>
         </div>
 
@@ -128,7 +91,7 @@ const testimonials = [
           class="text-center mb-6 transition-all duration-1000 transform"
           :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
         >
-          <p class="text-sm">服務體驗評分</p>
+          <p class="text-sm">{{ t('feedback.rating') }}</p>
           <div class="flex justify-center items-center gap-1 text-yellow-400 text-xl">
             <span v-for="i in 5" :key="i">★</span>
             <span class="ml-2">5.0</span>
@@ -158,14 +121,14 @@ const testimonials = [
             <div class="p-4 h-full select-none">
               <div class="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col">
                 <p class="text-gray-600 italic mb-6 flex-grow">
-                  {{ testimonial.content }}
+                  {{ rt(testimonial.content) }}
                 </p>
 
                 <div class="flex items-center">
                   <img
-                    :src="testimonial.avatar"
-                    :alt="testimonial.author + ' 頭像'"
-                    :title="testimonial.author + ' - 客戶評價'"
+                    :src="avatars[index]"
+                    :alt="rt(testimonial.author)"
+                    :title="rt(testimonial.author)"
                     class="w-12 h-12 rounded-full object-cover mr-4"
                     width="48"
                     height="48"
@@ -174,9 +137,9 @@ const testimonials = [
 
                   <div>
                     <p class="font-semibold text-gray-900">
-                      {{ testimonial.author }}
+                      {{ rt(testimonial.author) }}
                     </p>
-                    <p class="text-sm text-gray-500">{{ testimonial.role }}</p>
+                    <p class="text-sm text-gray-500">{{ rt(testimonial.role) }}</p>
                   </div>
                 </div>
               </div>
@@ -194,10 +157,10 @@ const testimonials = [
             class="font-bold leading-none mb:mb-8 mb-6 text-center text-[#6f6bff]"
             style="font-size: clamp(24px, 5vw, 52px)"
           >
-            想自己做，也想做得更好嗎？
+            {{ t('feedback.ctaHeading') }}
           </h2>
           <p class="text-[#5B5B5B] text-[14px] md:text-[20px] mb-4 text-center mb-16">
-            從現成的工具模板到客製化服務，總有一種方式適合你<br />填寫表單留下需求，我會盡快與你聯繫
+            {{ t('feedback.ctaSub1') }}<br />{{ t('feedback.ctaSub2') }}
           </p>
         </div>
 
@@ -207,24 +170,24 @@ const testimonials = [
           :class="[cardVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0']"
         >
           <div class="text-left mb-8 border-b pb-8">
-            <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">即買即用</span>
-            <div class="text-2xl font-bold mt-4 mb-1">🧰 數位工具箱</div>
-            <p class="text-xs text-[#5B5B5B] mb-6">※ 永久下載，工具箱會不斷上架新商品。</p>
+            <span class="bg-[#6f6bff] text-white px-2 py-1 text-sm font-semibold rounded">{{ t('feedback.tag') }}</span>
+            <div class="text-2xl font-bold mt-4 mb-1">{{ t('feedback.boxTitle') }}</div>
+            <p class="text-xs text-[#5B5B5B] mb-6">{{ t('feedback.boxNote') }}</p>
 
             <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">
               <div>
-                <div class="text-lg font-semibold mb-4">現成工具，馬上能用</div>
+                <div class="text-lg font-semibold mb-4">{{ t('feedback.col1Title') }}</div>
                 <ul class="space-y-2 text-sm md:text-base">
-                  <li>✔ AI 提示詞包 ✔ 行銷／設計模板</li>
-                  <li>✔ 套版素材工具包 ✔ 即買即用、永久下載</li>
+                  <li>{{ t('feedback.col1a') }}</li>
+                  <li>{{ t('feedback.col1b') }}</li>
                 </ul>
               </div>
 
               <div>
-                <div class="text-lg font-semibold mb-4">持續更新的內容</div>
+                <div class="text-lg font-semibold mb-4">{{ t('feedback.col2Title') }}</div>
                 <ul class="space-y-2 text-sm md:text-base">
-                  <li>✔ 部落格定期更新 AI／行銷教學</li>
-                  <li>✔ 工具箱不斷推出新商品</li>
+                  <li>{{ t('feedback.col2a') }}</li>
+                  <li>{{ t('feedback.col2b') }}</li>
                 </ul>
               </div>
             </div>
@@ -232,36 +195,36 @@ const testimonials = [
 
           <div class="grid md:grid-cols-2 gap-4 text-sm md:text-base">
             <div>
-              <div class="text-lg font-semibold mb-4">做不來，交給我客製</div>
+              <div class="text-lg font-semibold mb-4">{{ t('feedback.col3Title') }}</div>
               <ul class="space-y-2">
-                <li>📌 網站、AI 工具、LINE 機器人、自動化開發</li>
-                <li>📌 視覺設計與社群行銷</li>
-                <li>📌 客製化專案依需求報價</li>
+                <li>{{ t('feedback.col3a') }}</li>
+                <li>{{ t('feedback.col3b') }}</li>
+                <li>{{ t('feedback.col3c') }}</li>
               </ul>
             </div>
 
             <div>
-              <div class="text-lg font-semibold mb-4">為什麼選擇我？</div>
+              <div class="text-lg font-semibold mb-4">{{ t('feedback.col4Title') }}</div>
               <ul class="space-y-2">
-                <li>🔹 跨領域經驗：結合行銷思維與技術實現能力</li>
-                <li>🔹 彈性合作：從現成工具到客製專案都可以</li>
-                <li>🔹 透明溝通：清楚報價與進度追蹤</li>
+                <li>{{ t('feedback.col4a') }}</li>
+                <li>{{ t('feedback.col4b') }}</li>
+                <li>{{ t('feedback.col4c') }}</li>
               </ul>
             </div>
           </div>
 
           <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
             <NuxtLink
-              to="/toolbox"
+              :to="localePath('/toolbox')"
               class="relative bg-[#8782FF] text-white font-semibold py-3 px-6 rounded-full hover:bg-[#6f6bff] transition btn-glow"
             >
-              <span>逛數位工具箱 →</span>
+              <span>{{ t('feedback.ctaToolbox') }}</span>
             </NuxtLink>
             <NuxtLink
-              to="/contact"
+              :to="localePath('/contact')"
               class="font-semibold py-3 px-6 rounded-full border border-[#8782FF] text-[#8782FF] hover:bg-[#8782FF] hover:text-white transition"
             >
-              <span>填寫表單聯繫我</span>
+              <span>{{ t('feedback.ctaContact') }}</span>
             </NuxtLink>
           </div>
         </div>

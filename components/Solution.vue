@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+const { t, tm, rt } = useI18n()
+const solutionCards = computed(
+  () => tm('solution.cards') as { no: string; title: string; title2: string; desc: string }[],
+)
+
 const isVisible = ref(false)
 const sectionRef = ref(null)
 const activeCards = ref(new Set())
@@ -44,10 +49,10 @@ onMounted(() => {
         class="flex justify-center flex-col items-center mb-16 md:mb-24 transition-all duration-1000 transform"
         :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
       >
-        <div class="mb-4 text-[#5B5B5B] text-lg md:text-2xl font-bold tracking-widest">好消息是</div>
+        <div class="mb-4 text-[#5B5B5B] text-lg md:text-2xl font-bold tracking-widest">{{ t('solution.kicker') }}</div>
         <h2 class="text-[clamp(24px,5vw,52px)] text-center font-black leading-[1.2] text-gray-900">
-          困難的問題<br class="md:hidden" />
-          <span class="text-[#8782FF] whitespace-nowrap"> 我都幫你解決了 </span>
+          {{ t('solution.headingPre') }}<br class="md:hidden" />
+          <span class="text-[#8782FF] whitespace-nowrap"> {{ t('solution.headingHi') }} </span>
         </h2>
         <div class="w-16 h-1.5 bg-[#8782FF] mt-12 rounded-full"></div>
       </div>
@@ -57,12 +62,12 @@ onMounted(() => {
           class="solution-card order-1 flex flex-col justify-center text-center md:text-left transition-all duration-1000 transform"
           :class="[activeCards.has(0) ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0']"
         >
-          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">01. 現成工具直接套用</div>
+          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">{{ rt(solutionCards[0].no) }}</div>
           <div class="text-[20px] md:text-[28px] font-extrabold mb-4 text-[#333] leading-snug">
-            不用從零開始<br />套上模板就能用
+            {{ rt(solutionCards[0].title) }}<br />{{ rt(solutionCards[0].title2) }}
           </div>
           <div class="text-[#5B5B5B] text-base md:text-lg leading-relaxed">
-            數位工具箱裡有現成的 AI 提示詞、模板與素材包，挑了就能用，幫你跨過「不知道怎麼開始」的門檻。
+            {{ rt(solutionCards[0].desc) }}
           </div>
         </div>
 
@@ -85,12 +90,12 @@ onMounted(() => {
           class="solution-card order-3 md:order-4 flex flex-col justify-center text-center md:text-left transition-all duration-1000 transform"
           :class="[activeCards.has(2) ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0']"
         >
-          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">02. 可複製的 AI 流程</div>
+          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">{{ rt(solutionCards[1].no) }}</div>
           <div class="text-[20px] md:text-[28px] font-extrabold mb-4 text-[#333] leading-snug">
-            把好結果變成穩定產出
+            {{ rt(solutionCards[1].title) }}
           </div>
           <div class="text-[#5B5B5B] text-base md:text-lg leading-relaxed">
-            我把實戰中驗證過的提示詞與步驟整理成可複製的流程，照著做就能穩定產出，不再每次靠運氣。
+            {{ rt(solutionCards[1].desc) }}
           </div>
         </div>
 
@@ -113,12 +118,12 @@ onMounted(() => {
           class="solution-card order-5 flex flex-col justify-center text-center md:text-left transition-all duration-1000 transform"
           :class="[activeCards.has(4) ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0']"
         >
-          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">03. 做不來也有我</div>
+          <div class="text-[24px] font-bold text-[#8782FF] mb-2 uppercase tracking-wide">{{ rt(solutionCards[2].no) }}</div>
           <div class="text-[20px] md:text-[28px] font-extrabold mb-4 text-[#333] leading-snug">
-            需要客製<br />直接交給我就好
+            {{ rt(solutionCards[2].title) }}<br />{{ rt(solutionCards[2].title2) }}
           </div>
           <div class="text-[#5B5B5B] text-base md:text-lg leading-relaxed">
-            想要更進階的網站、AI 工具或自動化流程，做不來的部分可以直接找我客製，省下自己摸索的時間。
+            {{ rt(solutionCards[2].desc) }}
           </div>
         </div>
 

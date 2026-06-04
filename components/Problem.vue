@@ -1,30 +1,8 @@
 <script lang="ts" setup>
-const problemPoints = ref([
-  {
-    title: '想自己做，卻不知道從哪開始',
-    problems: [
-      { label: '工具一大堆', desc: '不知道該用哪個、怎麼搭' },
-      { label: '看教學看到迷路', desc: '學了一堆還是做不出成品' },
-      { label: '每次都從零開始', desc: '沒有能直接套用的範本' },
-    ],
-  },
-  {
-    title: '內容產出又慢又沒質感',
-    problems: [
-      { label: '一篇貼文卡好幾小時', desc: '文案、排版擠不出來' },
-      { label: '設計沒手感', desc: '成品看起來陽春、不夠專業' },
-      { label: '發文斷斷續續', desc: '靈感一卡就開天窗' },
-    ],
-  },
-  {
-    title: '用了 AI，卻用不出效果',
-    problems: [
-      { label: '提示詞亂下', desc: 'AI 回得很空泛、不能用' },
-      { label: '成果不穩定', desc: '同樣需求每次品質都不一樣' },
-      { label: '沒有可複製的流程', desc: '換個主題又要重頭摸索' },
-    ],
-  },
-])
+const { t, tm, rt } = useI18n()
+const problemPoints = computed(
+  () => tm('problem.points') as { title: string; problems: { label: string; desc: string }[] }[],
+)
 
 const observerItems = ref<HTMLElement[]>([])
 const activeIndexes = ref<Set<number>>(new Set())
@@ -69,7 +47,7 @@ onMounted(() => {
         class="relative mb-24 md:mb-36 text-center transition-all duration-1000 transform"
         :class="[activeIndexes.size > 0 ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
       >
-        <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">你是否也遇到這些問題？</h2>
+        <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">{{ t('problem.heading') }}</h2>
         <div class="w-16 h-1.5 bg-gradient-to-r from-[#8782FF] via-[#ff333d] to-[#ffe3a8] mx-auto rounded-full" />
       </div>
 
@@ -99,7 +77,7 @@ onMounted(() => {
 
           <div class="flex-1 flex flex-col space-y-5 text-center md:text-left md:max-w-[480px]">
             <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800 tracking-tight">
-              {{ item.title }}
+              {{ rt(item.title) }}
             </h3>
 
             <div class="space-y-4">
@@ -112,10 +90,10 @@ onMounted(() => {
                   <span class="text-[10px]">●</span>
                 </span>
                 <span class="leading-relaxed text-start">
-                  <b>{{ prob.label }}</b>
+                  <b>{{ rt(prob.label) }}</b>
                   <span v-if="isMobile"><br /></span>
                   <span v-else> </span>
-                  → {{ prob.desc }}
+                  → {{ rt(prob.desc) }}
                 </span>
               </div>
             </div>
