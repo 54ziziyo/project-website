@@ -6,6 +6,7 @@ type Grecaptcha = {
 
 const recaptchaSiteKey = '6LezflssAAAAAAyrX2klGOA-XG6g7Kj2cgY9oiEz'
 const route = useRoute()
+const { t } = useI18n()
 
 const form = {
   name: ref(''),
@@ -81,28 +82,28 @@ const validate = () => {
   const start = form.startDate.value
   const end = form.endDate.value
 
-  if (!name) errors.value.name = '姓名為必填'
+  if (!name) errors.value.name = t('form.errName')
 
   if (!mail || !emailRegex.test(mail)) {
-    errors.value.mail = '請輸入有效的電子信箱'
+    errors.value.mail = t('form.errEmail')
   }
 
   if (!desc || desc.length < 10) {
-    errors.value.desc = '請至少填寫 10 字的需求說明'
+    errors.value.desc = t('form.errDesc')
   }
 
   if (!budget) {
-    errors.value.budget = '請填寫預算'
+    errors.value.budget = t('form.errBudgetRequired')
   } else if (!budgetRegex.test(budget)) {
-    errors.value.budget = '僅允許數字、逗號、-、~'
+    errors.value.budget = t('form.errBudgetFormat')
   }
 
   if (line && line.length < 3) {
-    errors.value.line = 'LINE ID 長度需大於 3'
+    errors.value.line = t('form.errLine')
   }
 
   if (start && end && new Date(end) < new Date(start)) {
-    errors.value.endDate = '結案日不可早於開案日'
+    errors.value.endDate = t('form.errDate')
   }
 
   return Object.keys(errors.value).length === 0
@@ -132,7 +133,7 @@ const onSubmit = async () => {
     const grecaptcha = await loadRecaptcha()
     token = await grecaptcha.execute(recaptchaSiteKey, { action: 'contact' })
   } catch (err) {
-    showToast('error', 'reCAPTCHA 載入失敗，請稍後再試。')
+    showToast('error', t('form.msgRecaptcha'))
     isSubmitting.value = false
     return
   }
@@ -159,12 +160,12 @@ const onSubmit = async () => {
 
     // 在 no-cors 模式下，我們無法讀取回應內容
     // 只要沒噴 catch，通常代表資料已送達 Google 伺服器
-    showToast('success', '感謝填寫！我會盡快與你聯繫。')
+    showToast('success', t('form.msgSuccess'))
     showBookingModal.value = true
     resetForm()
   } catch (err) {
     console.error('送出失敗:', err)
-    showToast('error', '送出失敗，請檢查網路。')
+    showToast('error', t('form.msgNetwork'))
   } finally {
     isSubmitting.value = false
   }
@@ -187,12 +188,12 @@ const resetForm = () => {
   <div class="space-y-6">
     <!-- 姓名 -->
     <div class="flex flex-col space-y-2">
-      <label for="name" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">聯絡人姓名※</label>
+      <label for="name" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">{{ t('form.name') }}※</label>
       <input
         id="name"
         v-model="form.name.value"
         type="text"
-        placeholder="請輸入您的稱呼"
+        :placeholder="t('form.namePh')"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.name" class="text-red-500 text-sm px-2">
@@ -202,24 +203,24 @@ const resetForm = () => {
 
     <!-- 公司品牌 -->
     <div class="flex flex-col space-y-2">
-      <label for="brand" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">公司/品牌名稱</label>
+      <label for="brand" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">{{ t('form.brand') }}</label>
       <input
         id="brand"
         v-model="form.brand.value"
         type="text"
-        placeholder="請輸入您的公司/品牌名稱"
+        :placeholder="t('form.brandPh')"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
     </div>
 
     <!-- 信箱 -->
     <div class="flex flex-col space-y-2">
-      <label for="mail" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">電子信箱※</label>
+      <label for="mail" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">{{ t('form.email') }}※</label>
       <input
         id="mail"
         v-model="form.mail.value"
         type="email"
-        placeholder="請輸入電子信箱"
+        :placeholder="t('form.emailPh')"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.mail" class="text-red-500 text-sm px-2">
@@ -229,12 +230,12 @@ const resetForm = () => {
 
     <!-- LINE ID -->
     <div class="flex flex-col space-y-2">
-      <label for="line" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">LINE ID</label>
+      <label for="line" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">{{ t('form.lineId') }}</label>
       <input
         id="line"
         v-model="form.line.value"
         type="text"
-        placeholder="請提供您的 LINE 確保我可以與您聯繫"
+        :placeholder="t('form.linePh')"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.line" class="text-red-500 text-sm px-2">
@@ -244,12 +245,12 @@ const resetForm = () => {
 
     <!-- 需求說明 -->
     <div class="flex flex-col space-y-2">
-      <label for="desc" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">需求說明※</label>
+      <label for="desc" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">{{ t('form.desc') }}※</label>
       <textarea
         id="desc"
         v-model="form.desc.value"
         rows="4"
-        placeholder="請提供需求項目、功能等說明..."
+        :placeholder="t('form.descPh')"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       ></textarea>
       <p v-if="errors.desc" class="text-red-500 text-sm px-2">
@@ -260,7 +261,7 @@ const resetForm = () => {
     <!-- 日期 -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="flex flex-col space-y-2">
-        <label for="startDate" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預計開案日</label>
+        <label for="startDate" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">{{ t('form.startDate') }}</label>
         <input
           id="startDate"
           v-model="form.startDate.value"
@@ -270,7 +271,7 @@ const resetForm = () => {
       </div>
 
       <div class="flex flex-col space-y-2">
-        <label for="endDate" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預計結案日</label>
+        <label for="endDate" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">{{ t('form.endDate') }}</label>
         <input
           id="endDate"
           v-model="form.endDate.value"
@@ -285,12 +286,12 @@ const resetForm = () => {
 
     <!-- 預算 -->
     <div class="flex flex-col space-y-2">
-      <label for="budget" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">預算範圍※</label>
+      <label for="budget" class="text-[#5B5B5B] text-[16px] md:text-[18px] mb-2">{{ t('form.budget') }}※</label>
       <input
         id="budget"
         v-model="form.budget.value"
         type="text"
-        placeholder="$500,000"
+        :placeholder="t('form.budgetPh')"
         class="bg-white px-4 py-2 md:py-3 rounded-lg placeholder:text-[#A2A2A2] md:placeholder:text-[14px] focus-visible:outline-none md:text-sm"
       />
       <p v-if="errors.budget" class="text-red-500 text-sm px-2">
@@ -309,9 +310,9 @@ const resetForm = () => {
           class="h-5 w-5 border-2 border-white/40 border-t-white rounded-full animate-spin"
           aria-hidden="true"
         ></span>
-        送出中...
+        {{ t('form.submitting') }}
       </span>
-      <span v-else>送出表單</span>
+      <span v-else>{{ t('form.submit') }}</span>
     </button>
 
     <transition name="fade-slide">
@@ -325,7 +326,7 @@ const resetForm = () => {
             class="h-2.5 w-2.5 rounded-full"
             :class="statusMessage.type === 'success' ? 'bg-green-500' : 'bg-red-500'"
           ></span>
-          {{ statusMessage.type === 'success' ? '已送出' : '送出失敗' }}
+          {{ statusMessage.type === 'success' ? t('form.toastSentTitle') : t('form.toastFailTitle') }}
         </div>
         <p class="leading-relaxed text-[#4A4A4A]">{{ statusMessage.text }}</p>
       </div>
@@ -334,9 +335,9 @@ const resetForm = () => {
     <transition name="fade-slide">
       <div v-if="showBookingModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
         <div class="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl text-center space-y-4">
-          <h3 class="text-xl md:text-2xl font-black text-[#1f1f1f] leading-tight">送出成功 🎉</h3>
+          <h3 class="text-xl md:text-2xl font-black text-[#1f1f1f] leading-tight">{{ t('form.modalTitle') }}</h3>
           <p class="text-base text-[#4A4A4A] leading-relaxed">
-            感謝你的填寫！我會在 24 小時內回覆你。<br />想更快聊聊，也可以直接加我 LINE～
+            {{ t('form.modalBody1') }}<br />{{ t('form.modalBody2') }}
           </p>
           <a
             href="https://lin.ee/Tt7Apjc"
@@ -345,14 +346,14 @@ const resetForm = () => {
             class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition"
             @click="showBookingModal = false"
           >
-            加 LINE 聊聊
+            {{ t('form.modalLine') }}
           </a>
           <button
             type="button"
             class="text-sm text-[#5B5B5B] underline hover:text-[#7A7DFE]"
             @click="showBookingModal = false"
           >
-            我知道了
+            {{ t('form.modalClose') }}
           </button>
         </div>
       </div>
