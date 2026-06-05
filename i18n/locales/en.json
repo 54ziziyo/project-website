@@ -7,6 +7,7 @@
     "servicesDesign": "Design",
     "servicesDesignDesc": "Design packages, branding and UI/UX to build a distinctive brand identity",
     "faq": "FAQ",
+    "faqDesc": "Common questions on process, pricing and collaboration",
     "toolbox": "Toolbox",
     "works": "Work",
     "blog": "Blog",
@@ -19,13 +20,13 @@
   "hero": {
     "badge": "AI Powered Toolkit",
     "kicker": "The era of AI & digital tools",
-    "title1": "You don't need a big team",
-    "title2": "Just the right tools",
-    "bodyPre": "Zeona gives you ready-to-use",
+    "title1": "AI and digital tools",
+    "title2": "save you time so you can focus on what matters",
+    "bodyPre": "I've turned my hands-on experience in marketing, design and web development into ready-to-use",
     "bodyToolkit": "digital toolkits, prompts and automation templates",
     "bodyMid": " to automate your repetitive marketing, design, copywriting and website work.",
-    "bodyCustom": "custom software development & AI integration",
-    "bodyPost": ".",
+    "bodyCustom": "",
+    "bodyPost": "",
     "ctaToolbox": "Explore the Toolbox →",
     "ctaGuide": "Get the free playbook"
   },
@@ -206,7 +207,7 @@
     "ctaContact": "Contact me"
   },
   "about": {
-    "h1a": "I'm the founder of Zeona",
+    "h1a": "I'm Zeona",
     "h1b": "Marketing, design, dev —",
     "h1hi": "all handled by one person",
     "lead": "Not because I have more time than anyone else — but because I've turned AI and automation into my team.",
@@ -214,8 +215,8 @@
     "modulesSub": "From strategy blueprint to fully automated execution — tailored, high-efficiency digital solutions built around you.",
     "points": [
       {
-        "label": "One-person studio",
-        "text": "Marketing, design and front-end — from strategy to launch, all in-house."
+        "label": "Why I started",
+        "text": "I didn't want to spend my time on repetitive work, so I started using AI and automation tools to handle it for me."
       },
       {
         "label": "The end goal",
@@ -252,7 +253,7 @@
   "info": {
     "kicker": "Services & process",
     "heading": "How can I help you?",
-    "sub1": "Want to DIY? I've got a ready-made Digital Toolbox. Prefer to hand it over? I offer a custom, all-in-one service.",
+    "sub1": "No need to start from scratch — I've got a ready-made Digital Toolbox.",
     "sub2": "From solo creators to early-stage brands and small businesses.",
     "services": [
       {
@@ -269,7 +270,7 @@
         "items": [
           "AI tools & assistants",
           "LINE bots",
-          "Marketing / copy / design automation",
+          "Streamline marketing / copy / design",
           "Let AI handle the busywork"
         ]
       },
@@ -300,16 +301,16 @@
         "desc": "I don't just design and build front-ends — I understand marketing, helping your brand create real value and conversion."
       },
       {
-        "title": "Flexible & custom｜one-on-one, adaptable",
-        "desc": "Whether you're just starting out or already established, I tailor advice and content plans to your goals and budget."
+        "title": "Template packs｜ready-made tools, plug in and go",
+        "desc": "I've packaged battle-tested tools, prompts and workflows into copy-ready template packs, so you don't have to start from scratch — just plug in and use."
       },
       {
-        "title": "Flexible engagement｜clear process, transparent pricing",
-        "desc": "You'll always know what's delivered at each stage and when — all content and costs are clear, so working together is stress-free."
+        "title": "Flexible & custom｜one-on-one, adaptable",
+        "desc": "Whether you're just starting out or already established, I tailor advice and content plans to your goals and budget."
       }
     ],
-    "bannerTitle": "From brand positioning to digital execution",
-    "bannerSub": "Bringing together a marketer's mind + technical skill",
+    "bannerTitle": "Put AI employees to work",
+    "bannerSub": "so you have more time for what truly matters",
     "bannerStat": "performance lift",
     "ctaHeading": "Want to know more? Let's talk!",
     "ctaSub1": "Want to DIY? Start with the Digital Toolbox. Prefer to hand it over? I'll build a solution tailored to you.",
