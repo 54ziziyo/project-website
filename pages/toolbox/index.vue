@@ -38,19 +38,19 @@ const scrollMobile = (direction: 'left' | 'right') => {
 }
 
 const filteredProducts = computed(() => {
-  const base = selectedCategory.value === '全部'
-    ? products
-    : products.filter((p) => p.category === selectedCategory.value)
-  // 付費商品由貴到便宜，免費（price===0）排最後
+  const base =
+    selectedCategory.value === '全部' ? products : products.filter((p) => p.category === selectedCategory.value)
+  // 已上架商品（available）優先，其餘再依原本價格邏輯排序
   return [...base].sort((a, b) => {
+    if (a.status === 'available' && b.status !== 'available') return -1
+    if (a.status !== 'available' && b.status === 'available') return 1
     if (a.price === 0 && b.price > 0) return 1
     if (a.price > 0 && b.price === 0) return -1
     return b.price - a.price
   })
 })
 
-const formatPrice = (price: number) =>
-  price === 0 ? t('toolbox.free') : `NT$${price.toLocaleString()}`
+const formatPrice = (price: number) => (price === 0 ? t('toolbox.free') : `NT$${price.toLocaleString()}`)
 
 onMounted(() => {
   setTimeout(() => (isVisible.value = true), 80)
@@ -78,7 +78,7 @@ onBeforeUnmount(() => {
         <h1 class="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight leading-tight">
           {{ t('toolbox.title') }}
         </h1>
-        <p class="text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+        <p class="text-gray-500 text-base md:text-lg leading-relaxed mx-auto">
           {{ t('toolbox.subtitle') }}
         </p>
       </div>
@@ -188,19 +188,21 @@ onBeforeUnmount(() => {
               <span
                 v-if="product.price === 0 && product.status === 'available'"
                 class="px-2.5 py-1 bg-emerald-500 text-white text-xs font-black rounded-full"
-              >{{ t('toolbox.free') }}</span>
+                >{{ t('toolbox.free') }}</span
+              >
               <span
                 v-else-if="product.status === 'coming-soon'"
                 class="px-2.5 py-1 bg-gray-800/80 backdrop-blur-sm text-white text-xs font-bold rounded-full"
-              >{{ t('toolbox.comingSoon') }}</span>
-              <span
-                v-else-if="product.isNew"
-                class="px-2.5 py-1 bg-[#8782FF] text-white text-xs font-bold rounded-full"
-              >NEW</span>
+                >{{ t('toolbox.comingSoon') }}</span
+              >
+              <span v-else-if="product.isNew" class="px-2.5 py-1 bg-[#8782FF] text-white text-xs font-bold rounded-full"
+                >NEW</span
+              >
               <span
                 v-if="product.isBestSeller && product.status !== 'coming-soon'"
                 class="px-2.5 py-1 bg-amber-400 text-white text-xs font-bold rounded-full"
-              >{{ t('toolbox.bestSeller') }}</span>
+                >{{ t('toolbox.bestSeller') }}</span
+              >
             </div>
             <!-- 分類標籤 -->
             <div class="absolute top-3 right-3">
@@ -212,7 +214,9 @@ onBeforeUnmount(() => {
 
           <!-- 內容 -->
           <div class="p-5">
-            <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-[#8782FF] transition-colors line-clamp-2">
+            <h2
+              class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-[#8782FF] transition-colors line-clamp-2"
+            >
               {{ pName(product) }}
             </h2>
             <p class="text-gray-500 text-sm leading-relaxed line-clamp-2 mb-4">
@@ -225,20 +229,23 @@ onBeforeUnmount(() => {
                 v-for="tag in pTags(product).slice(0, 3)"
                 :key="tag"
                 class="px-2 py-0.5 bg-gray-50 text-gray-400 text-xs rounded-full border border-gray-100"
-              >#{{ tag }}</span>
+                >#{{ tag }}</span
+              >
             </div>
 
             <!-- 價格 -->
             <div class="flex items-center justify-between pt-3 border-t border-gray-50">
-              <span
-                :class="[
-                  'text-xl font-black',
-                  product.price === 0 ? 'text-emerald-500' : 'text-[#8782FF]',
-                ]"
-              >{{ formatPrice(product.price) }}</span>
+              <span :class="['text-xl font-black', product.price === 0 ? 'text-emerald-500' : 'text-[#8782FF]']">{{
+                formatPrice(product.price)
+              }}</span>
               <div class="flex items-center gap-1.5 text-xs text-gray-400">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
                 </svg>
                 {{ product.fileType }}
               </div>
@@ -256,7 +263,9 @@ onBeforeUnmount(() => {
 
     <!-- CTA -->
     <div class="px-4 md:px-8 mx-4 md:mx-8 mt-20">
-      <div class="max-w-6xl mx-auto text-center bg-gradient-to-br from-[#8782FF]/8 to-[#6f6bff]/8 p-12 md:p-16 rounded-[2.5rem]">
+      <div
+        class="max-w-6xl mx-auto text-center bg-gradient-to-br from-[#8782FF]/8 to-[#6f6bff]/8 p-12 md:p-16 rounded-[2.5rem]"
+      >
         <p class="text-gray-400 text-sm mb-2 font-medium uppercase tracking-widest">{{ t('toolbox.ctaKicker') }}</p>
         <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">
           {{ t('toolbox.ctaTitle') }}
