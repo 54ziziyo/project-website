@@ -56,6 +56,8 @@ const currentFaqs = computed(() => {
 
 const categoryRefs = ref<Record<string, HTMLElement | null>>({})
 const indicatorStyle = ref<{ width: string; transform: string }>({ width: '0px', transform: 'translateX(0px)' })
+// 指示器量測完成前，active 按鈕先用自身紫底當後備，避免初載白字白底（看起來像沒進頁面）
+const indicatorReady = ref(false)
 
 const getFaqValues = (category: Category) => faqValues[category]
 
@@ -98,6 +100,7 @@ const updateIndicator = () => {
     // 使用 transform 來達成平滑滑動，起始點由 left-0 決定
     transform: `translateX(${offsetLeft}px)`,
   }
+  indicatorReady.value = true
 }
 
 onMounted(() => {
@@ -154,7 +157,7 @@ const scrollToActive = () => {
 
 const resolveText = (value: unknown) => {
   if (typeof value === 'string') return value
-  return rt(value as any)
+  return rt(value as Parameters<typeof rt>[0])
 }
 
 watch(selectedCategory, () => {
@@ -192,7 +195,8 @@ onMounted(() => {
         class="relative flex bg-white p-1.5 rounded-2xl shadow-sm border border-gray-200 overflow-x-auto no-scrollbar max-w-full"
       >
         <span
-          class="absolute top-1.5 bottom-1.5 left-0 bg-[#8782FF] rounded-xl shadow-md transition-all duration-300 ease-out pointer-events-none"
+          class="absolute top-1.5 bottom-1.5 left-0 bg-[#8782FF] rounded-xl shadow-md ease-out pointer-events-none"
+          :class="indicatorReady ? 'transition-all duration-300' : ''"
           :style="indicatorStyle"
           aria-hidden="true"
         ></span>
@@ -203,6 +207,7 @@ onMounted(() => {
           :class="[
             'relative z-10 px-6 py-2.5 rounded-xl transition-all duration-300 text-sm md:text-base font-bold whitespace-nowrap cursor-pointer',
             selectedCategory === cat.value ? 'text-white' : 'text-gray-500 hover:text-[#8782FF]',
+            selectedCategory === cat.value && !indicatorReady ? 'bg-[#8782FF]' : '',
           ]"
           @click="setCategory(cat.value)"
         >

@@ -64,15 +64,15 @@ onBeforeUnmount(() => {
         :class="visibleHeader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
       >
         <h1 class="text-[24px] md:text-[52px] font-bold leading-[1.25] mb:mb-12 mb-8">
-          {{ t('about.h1a') }}<br />{{ t('about.h1b') }}<span class="text-[#8782FF]">{{ t('about.h1hi') }}</span>
+          {{ t('about.h1a') }}<br />{{ t('about.h1b') }}<br /><span class="text-[#8782FF]">{{ t('about.h1hi') }}</span>
         </h1>
         <p
-          class="text-[#3D3D3D] text-[15px] md:text-[19px] font-medium leading-relaxed max-w-2xl mx-auto mb-8 md:mb-10"
+          class="text-[#3D3D3D] text-[15px] md:text-[19px] font-medium leading-relaxed max-w-2xl mx-auto mb-0 md:mb-10"
         >
           {{ t('about.lead') }}
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto text-left py-12 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto text-left py-10 md:py-16">
           <div
             v-for="(pt, i) in aboutPoints"
             :key="i"

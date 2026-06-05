@@ -23,22 +23,21 @@ const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
 
 const navItems = computed(() => [
-  { title: 'Home', href: localePath('/'), sub: t('mobile.home'), no: '01' },
-  { title: 'About', href: localePath('/about'), sub: t('nav.about'), no: '02' },
+  { title: 'About', href: localePath('/about'), sub: t('nav.about'), no: '01' },
   {
     title: 'Services',
     sub: t('nav.services'),
-    no: '03',
+    no: '02',
     children: [
       { title: t('nav.servicesSoftware'), href: localePath('/services/website') },
       { title: t('nav.servicesDesign'), href: localePath('/services/design') },
     ],
   },
-  { title: 'FAQ', href: localePath('/faq'), sub: t('nav.faq'), no: '04' },
-  { title: 'Toolbox', href: localePath('/toolbox'), sub: t('nav.toolbox'), no: '05' },
-  { title: 'Works', href: localePath('/works'), sub: t('nav.works'), no: '06' },
-  { title: 'Blog', href: localePath('/blog'), sub: t('nav.blog'), no: '07' },
-  { title: 'Contact', href: localePath('/contact'), sub: t('nav.contact'), no: '08' },
+  { title: 'FAQ', href: localePath('/faq'), sub: t('nav.faq'), no: '03' },
+  { title: 'Toolbox', href: localePath('/toolbox'), sub: t('nav.toolbox'), no: '04' },
+  { title: 'Works', href: localePath('/works'), sub: t('nav.works'), no: '05' },
+  { title: 'Blog', href: localePath('/blog'), sub: t('nav.blog'), no: '06' },
+  { title: 'Contact', href: localePath('/contact'), sub: t('nav.contact'), no: '07' },
 ])
 
 function toggleExpand(index: number) {
