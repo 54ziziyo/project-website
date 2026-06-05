@@ -756,33 +756,13 @@ onMounted(() => {
     </div>
 
     <!-- CTA Section -->
-    <div class="px-4 md:px-8 py-16 md:py-24 mx-4 md:mx-8 mt-8">
-      <div
-        class="mx-auto text-center bg-gradient-to-br from-[#8782FF]/10 to-[#6f6bff]/10 p-12 md:p-20 rounded-[3rem] shadow-sm"
-      >
-        <h2
-          class="font-black leading-tight mb-6 text-[32px] md:text-[48px] text-gray-900 tracking-tighter"
-          :class="[
-            'transition-all duration-1000 transform',
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
-          ]"
-        >
-          {{ t('blog.indexCtaPre') }}<span class="text-[#8782FF]">{{ t('blog.indexCtaHi') }}</span>{{ t('blog.indexCtaPost') }}
-        </h2>
-        <p
-          class="text-gray-500 text-lg md:text-xl mb-10 transition-all duration-1000 transform"
-          :class="[isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']"
-        >
-          {{ t('blog.indexCtaSub') }}
-        </p>
-        <NuxtLink
-          :to="localePath('/contact')"
-          class="inline-block bg-[#8782FF] text-white font-bold py-4 px-10 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 active:scale-95"
-        >
-          {{ t('blog.indexCtaBtn') }}
-        </NuxtLink>
-      </div>
-    </div>
+    <ContactCta
+      :title-pre="t('blog.indexCtaPre')"
+      :title-highlight="t('blog.indexCtaHi')"
+      :title-post="t('blog.indexCtaPost')"
+      :subtitle="t('blog.indexCtaSub')"
+      :button-text="t('blog.indexCtaBtn')"
+    />
   </div>
 </template>
 

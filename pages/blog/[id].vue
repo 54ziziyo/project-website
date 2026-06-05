@@ -328,24 +328,13 @@ onMounted(() => {
     </div>
 
     <!-- CTA Section -->
-    <div class="px-4 md:px-8 py-16 md:py-24 mx-4 md:mx-8">
-      <div
-        class="mx-auto text-center bg-gradient-to-br from-[#8782FF]/10 to-[#6f6bff]/10 p-12 md:p-20 rounded-[3rem] shadow-sm"
-      >
-        <h2 class="font-black leading-tight mb-6 text-[32px] md:text-[48px] text-gray-900 tracking-tighter">
-          {{ t('blog.detail.ctaPre') }}<span class="text-[#8782FF]">{{ t('blog.detail.ctaHi') }}</span>{{ t('blog.detail.ctaPost') }}
-        </h2>
-        <p class="text-gray-500 text-lg md:text-xl mb-10">
-          {{ t('blog.detail.ctaSub') }}
-        </p>
-        <NuxtLink
-          :to="localePath('/contact')"
-          class="inline-block bg-[#8782FF] text-white font-bold py-4 px-10 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 active:scale-95"
-        >
-          {{ t('blog.detail.ctaBtn') }}
-        </NuxtLink>
-      </div>
-    </div>
+    <ContactCta
+      :title-pre="t('blog.detail.ctaPre')"
+      :title-highlight="t('blog.detail.ctaHi')"
+      :title-post="t('blog.detail.ctaPost')"
+      :subtitle="t('blog.detail.ctaSub')"
+      :button-text="t('blog.detail.ctaBtn')"
+    />
   </div>
 </template>
 

@@ -4,6 +4,8 @@ import AutoScrollCards from '~/components/service/WebAutoScrollCards.vue'
 import WebPrice from '~/components/service/WebPrice.vue'
 import WebAddOnItems from '~/components/service/WebAddOnItems.vue'
 
+const { t } = useI18n()
+
 // SEO 優化 - 網站開發服務頁面
 useHead({
   title: '軟體開發服務 | Zeona Studio - 客製化網站、AI 工具、LINE 機器人與自動化開發',
@@ -50,6 +52,14 @@ useHead({
     <!-- 方案顯示區，暫時先隱藏，等內容確定後再放出來 -->
     <!-- <WebProject /> -->
     <WebAddOnItems />
+    <!-- CTA Section -->
+    <ContactCta
+      :title-pre="t('blog.detail.ctaPre')"
+      :title-highlight="t('blog.detail.ctaHi')"
+      :title-post="t('blog.detail.ctaPost')"
+      :subtitle="t('blog.detail.ctaSub')"
+      :button-text="t('blog.detail.ctaBtn')"
+    />
   </div>
 </template>
 
