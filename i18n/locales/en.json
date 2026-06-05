@@ -21,7 +21,7 @@
     "badge": "AI Powered Toolkit",
     "kicker": "The era of AI & digital tools",
     "title1": "AI and digital tools",
-    "title2": "save you time so you can focus on what matters",
+    "title2": "Free up your time, boost your efficiency",
     "bodyPre": "I've turned my hands-on experience in marketing, design and web development into ready-to-use",
     "bodyToolkit": "digital toolkits, prompts and automation templates",
     "bodyMid": " to automate your repetitive marketing, design, copywriting and website work.",
@@ -370,10 +370,6 @@
     "title": "Software Development Services",
     "intro1": "Custom software development: websites, AI tools, LINE bots, automation and more",
     "intro2": "All custom projects are quoted based on actual needs and effort — feel free to message me",
-    "lineCta": "Ask for a quote on LINE",
-    "customTitle": "Custom Software Development",
-    "customSub": "Quoted to your needs",
-    "customDesc": "These are all custom projects — no fixed packages. I'll assess your specs, complexity and effort, then quote accordingly.",
     "customServices": [
       {
         "title": "Website & system development",
@@ -417,7 +413,7 @@
         "items": [
           "One-page landing / campaign pages",
           "Multi-page brand websites",
-          "WordPress setup & admin training"
+          "Custom website setup & feature development"
         ]
       },
       {

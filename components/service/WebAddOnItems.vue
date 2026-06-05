@@ -6,8 +6,8 @@ const advancedAddons = computed(
 )
 </script>
 <template>
-  <div class="relative px-4 flex justify-center flex-col items-center text-center">
-    <div class="max-w-6xl mx-auto w-full px-6 md:px-12 mb-32 space-y-32 lg:pb-40 lg:space-y-40">
+  <div class="relative px-4 flex justify-center flex-col items-center text-center mb-12">
+    <div class="max-w-6xl mx-auto w-full pt-16 mt-16 px-6 md:px-12 space-y-32 lg:space-y-36">
       <div>
         <div class="text-[24px] md:text-[28px] font-bold leading-none mb-2">{{ t('svc.basicTitle') }}</div>
         <div class="text-[#8782FF] text-[16px] md:text-[20px] font-bold mb-3">{{ t('svc.basicSub') }}</div>

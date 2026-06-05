@@ -24,17 +24,17 @@ const switchLocalePath = useSwitchLocalePath()
 
 const navItems = computed(() => [
   { title: 'About', href: localePath('/about'), sub: t('nav.about'), no: '01' },
+  { title: 'Toolbox', href: localePath('/toolbox'), sub: t('nav.toolbox'), no: '02' },
   {
     title: 'Services',
     sub: t('nav.services'),
-    no: '02',
+    no: '03',
     children: [
       { title: t('nav.servicesSoftware'), href: localePath('/services/website') },
       { title: t('nav.servicesDesign'), href: localePath('/services/design') },
       { title: t('nav.faq'), href: localePath('/faq') },
     ],
   },
-  { title: 'Toolbox', href: localePath('/toolbox'), sub: t('nav.toolbox'), no: '03' },
   { title: 'Works', href: localePath('/works'), sub: t('nav.works'), no: '04' },
   { title: 'Blog', href: localePath('/blog'), sub: t('nav.blog'), no: '05' },
   { title: 'Contact', href: localePath('/contact'), sub: t('nav.contact'), no: '06' },
@@ -205,7 +205,7 @@ function toggleExpand(index: number) {
             >
           </div>
         </div>
-        <div class="text-[10px] text-gray-400 font-mono tracking-tighter">©2026 ZEONA DESIGN</div>
+        <div class="text-[10px] text-gray-400 font-mono tracking-tighter">©{{ new Date().getFullYear() }} ZEONA STUDIO</div>
       </div>
     </div>
   </transition>

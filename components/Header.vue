@@ -101,6 +101,12 @@ const showMenu = ref(false)
           </NavigationMenuItem>
 
           <NavigationMenuItem>
+            <NavigationMenuLink :href="localePath('/toolbox')" :class="navigationMenuTriggerStyle()">
+              {{ $t('nav.toolbox') }}
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
             <NavigationMenuTrigger>{{ $t('nav.services') }}</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
@@ -122,12 +128,6 @@ const showMenu = ref(false)
                 </li>
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuLink :href="localePath('/toolbox')" :class="navigationMenuTriggerStyle()">
-              {{ $t('nav.toolbox') }}
-            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
