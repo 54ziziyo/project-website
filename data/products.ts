@@ -55,7 +55,7 @@ export const products: Product[] = [
     purchaseUrl: 'https://gumroad.com',
     fileType: 'PDF',
     tags: ['上班族', 'ChatGPT', '職場', 'Email', '週報'],
-    isBestSeller: true,
+    isBestSeller: false,
     status: 'coming-soon',
   },
   {
@@ -133,13 +133,13 @@ export const products: Product[] = [
     purchaseUrl: '#',
     fileType: 'PDF',
     tags: ['Threads', '社群', '文案', '流量', '鉤子'],
-    status: 'available',
+    status: 'coming-soon',
   },
 
   // ─── Notion 模板 ──────────────────────────────────────────────
   {
     id: 'adhd-focus-digital-journal',
-    name: '原來自律這麼簡單｜ P人神器',
+    name: 'P人神器｜原來自律這麼簡單',
     category: 'Notion 模板',
     price: 0,
     description: '選項越少，越容易開始。這款神器主打「今天能做到的事有哪些」，防迷路設計，讓你打開就能動。',
@@ -176,10 +176,49 @@ export const products: Product[] = [
       '快速捕捉區：腦子冒出來就丟進去',
       '番茄鐘整合 + 自動記錄完成數',
     ],
-    purchaseUrl: 'https://gumroad.com',
+    purchaseUrl: 'https://app.notion.com/p/P-376cf51200d281ffb2abfda49be3ee56?source=copy_link',
     fileType: 'Notion 模板',
     tags: ['Notion', 'ADHD', '專注', '生產力', '數位手帳'],
-    status: 'coming-soon',
+    status: 'available',
+  },
+  {
+    id: 'geo-ai-recommendation-prompt-pack',
+    name: 'GEO 實作提示詞包｜讓 ChatGPT、Perplexity 主動推薦你',
+    category: 'Notion 模板',
+    price: 0,
+    description: '7 個步驟、可直接複製的提示詞，加一張內容追蹤表。把你的內容變成「AI 好引用」的樣子，讓 AI 在回答時主動把你講出來。',
+    fullDescription: `客人不再 Google、直接問 AI「推薦哪一間」時，你的品牌出現在答案裡了嗎？
+
+這份免費包，是把 GEO（生成引擎最佳化）拆成「動手做」的提示詞，照貼就能用。
+
+內容物：
+🎯 7 段現成提示詞（把 [方括號] 換成你的內容即可）
+• 盤點客戶真的會問 AI 的 12 個問題
+• 把答案寫成「AI 好引用」的格式
+• 一次產出一組 FAQ（GEO 最高 CP 值招式）
+• 用數據與來源強化可信度
+• 產生結構化資料（JSON-LD Schema）
+• 統一各平台的品牌描述
+• 每月「AI 有沒有推薦你」自我檢測
+
+📊 GEO 內容追蹤表（Notion 資料庫，含範例列）
+• 一眼看出哪些主題已寫成 FAQ、有沒有被 AI 引用
+
+適合：個人品牌、小商家、接案者、做內容行銷的人。
+完整觀念教學看部落格〈GEO 完整教學（附提示詞）〉，這份包負責讓你「直接動手」。`,
+    coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
+    features: [
+      '7 段可直接複製的繁中提示詞，填空即用',
+      '涵蓋 FAQ、結構化資料、品牌一致性等 GEO 關鍵動作',
+      '附 Notion「GEO 內容追蹤表」資料庫（含範例）',
+      '每月自我檢測提示詞，追蹤 AI 推薦能見度',
+      '免費下載，搭配〈GEO 完整教學〉部落格文一起看',
+    ],
+    purchaseUrl: 'https://app.notion.com/p/376cf51200d281d1a426d4d64e06e6a2',
+    fileType: 'Notion 模板',
+    tags: ['GEO', 'AI搜尋優化', '提示詞', 'ChatGPT', '免費'],
+    isNew: true,
+    status: 'available',
   },
   {
     id: 'freelancer-client-tracker-notion',
@@ -223,11 +262,11 @@ export const products: Product[] = [
       '報價單生成器：自動計算、一鍵 PDF 匯出',
       '繁體中文介面，附 30 分鐘上手教學',
     ],
-    purchaseUrl: 'https://gumroad.com',
+    purchaseUrl: 'https://app.notion.com/p/CRM-376cf51200d28132af47ed83e7c62046?source=copy_link',
     fileType: 'Notion 模板',
     tags: ['Notion', '接案', 'CRM', '財務管理', '自由工作者'],
     isBestSeller: true,
-    status: 'coming-soon',
+    status: 'available',
   },
 
   // ─── Canva 模板 ───────────────────────────────────────────────
@@ -365,7 +404,7 @@ export const products: Product[] = [
 
 ────────────────
 📂 取得方式：購買後以專屬序號解鎖線上版，永久存取、提示詞可一鍵複製`,
-    coverImage: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=600&fit=crop',
+    coverImage: 'https://i.ibb.co/VG9NgNz/6c5d68c4-6d01-4717-8963-ed4ed9492e11.png',
     features: [
       'IG 帳號建立：Bio 提示詞＋品牌定位工作表',
       'IG 內容點子庫：16 個發文點子＋提示詞',
@@ -373,11 +412,11 @@ export const products: Product[] = [
       '電子報提示詞 ×5（含主旨列生成）',
       '30 天執行行事曆（0→1000 粉路徑）',
     ],
-    purchaseUrl: 'https://gumroad.com',
+    purchaseUrl: 'https://zeona.gumroad.com/l/pmqqiu',
     fileType: '線上閱讀版（序號解鎖）',
     tags: ['個人品牌', 'IG', '電子報', '部落格', 'ChatGPT'],
-    isNew: true,
-    status: 'coming-soon',
+    isBestSeller: true,
+    status: 'available',
   },
   {
     id: 'line-auto-budget-bot',
