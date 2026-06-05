@@ -72,7 +72,7 @@ onBeforeUnmount(() => {
           {{ t('about.lead') }}
         </p>
 
-        <div class="grid grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto text-left py-12 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto text-left py-12 md:py-16">
           <div
             v-for="(pt, i) in aboutPoints"
             :key="i"
