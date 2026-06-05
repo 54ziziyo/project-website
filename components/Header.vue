@@ -56,6 +56,11 @@ const components = computed(() => [
     href: localePath('/services/design'),
     description: t('nav.servicesDesignDesc'),
   },
+  {
+    title: t('nav.faq'),
+    href: localePath('/faq'),
+    description: t('nav.faqDesc'),
+  },
 ])
 
 // 控制 Drawer 開關
@@ -117,16 +122,6 @@ const showMenu = ref(false)
                 </li>
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              :href="localePath('/faq')"
-              title="常見問題 FAQ - 軟體開發與行銷服務疑問解答"
-              :class="navigationMenuTriggerStyle()"
-            >
-              {{ $t('nav.faq') }}
-            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>

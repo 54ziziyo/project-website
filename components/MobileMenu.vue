@@ -31,13 +31,13 @@ const navItems = computed(() => [
     children: [
       { title: t('nav.servicesSoftware'), href: localePath('/services/website') },
       { title: t('nav.servicesDesign'), href: localePath('/services/design') },
+      { title: t('nav.faq'), href: localePath('/faq') },
     ],
   },
-  { title: 'FAQ', href: localePath('/faq'), sub: t('nav.faq'), no: '03' },
-  { title: 'Toolbox', href: localePath('/toolbox'), sub: t('nav.toolbox'), no: '04' },
-  { title: 'Works', href: localePath('/works'), sub: t('nav.works'), no: '05' },
-  { title: 'Blog', href: localePath('/blog'), sub: t('nav.blog'), no: '06' },
-  { title: 'Contact', href: localePath('/contact'), sub: t('nav.contact'), no: '07' },
+  { title: 'Toolbox', href: localePath('/toolbox'), sub: t('nav.toolbox'), no: '03' },
+  { title: 'Works', href: localePath('/works'), sub: t('nav.works'), no: '04' },
+  { title: 'Blog', href: localePath('/blog'), sub: t('nav.blog'), no: '05' },
+  { title: 'Contact', href: localePath('/contact'), sub: t('nav.contact'), no: '06' },
 ])
 
 function toggleExpand(index: number) {
