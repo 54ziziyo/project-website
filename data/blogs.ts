@@ -42,6 +42,106 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'google-ai-search-duckduckgo-surge-2026',
+    title: 'Google AI 搜尋逼用戶出走，DuckDuckGo 安裝量單日暴增 70%：個人品牌與小商家該怎麼接招？',
+    category: '品牌行銷策略',
+    tags: ['Google AI 搜尋', 'DuckDuckGo', 'AI Overviews', 'GEO', 'AI搜尋優化'],
+    excerpt:
+      'Google 把搜尋框換成 AI 對話引擎後，DuckDuckGo 在 iPhone 的安裝量單日暴增近 70%、noai 頁面流量增加 22.7%。當「輸入關鍵字、點連結」的時代結束，靠搜尋帶客的你該怎麼辦？這篇用最新數據拆解事件，並給你 3 個能立刻執行的因應策略（附提示詞）。',
+    titleEn:
+      'Google AI Search Pushes Users Away, DuckDuckGo Installs Spike Up to 70%: What It Means for Creators and Small Brands',
+    excerptEn:
+      'After Google replaced its search box with an AI conversation engine, DuckDuckGo iPhone installs spiked nearly 70% in a single day and its no-AI page traffic rose 22.7%. As "type a keyword, click a link" ends, what should you do if search brings you customers? A data-driven breakdown plus 3 actionable moves (with prompts).',
+    tagsEn: ['Google AI Search', 'DuckDuckGo', 'AI Overviews', 'GEO', 'AI Search Optimization'],
+    coverImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop',
+    author: 'Zeona Studio',
+    publishedAt: '2026-06-06',
+    updatedAt: '2026-06-06',
+    featured: true,
+    seo: {
+      title: 'Google AI 搜尋逼走用戶、DuckDuckGo 暴增 70%：品牌該怎麼接招（2026 分析）| Zeona Studio',
+      description:
+        'Google 用 AI Overviews 取代傳統搜尋框，DuckDuckGo 安裝量單日暴增近 70%、noai 流量增 22.7%。本文用最新數據拆解這場「搜尋葬禮」，並給個人品牌與小商家 3 個可立刻執行的 GEO 因應策略與提示詞。',
+      keywords:
+        'Google AI 搜尋, AI Overviews, DuckDuckGo, AI 搜尋優化, GEO, 生成引擎最佳化, AI Mode, 搜尋行銷 2026, Kagi, Brave Search',
+      ogImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop',
+    },
+    seoEn: {
+      title: 'Google AI Search vs DuckDuckGo Surge: What Brands Should Do (2026) | Zeona Studio',
+      description:
+        'Google replaced its search box with AI Overviews and DuckDuckGo installs spiked up to 70% in a day, with no-AI traffic up 22.7%. A data-driven breakdown plus 3 actionable GEO moves and prompts for creators and small brands.',
+      keywords:
+        'Google AI Search, AI Overviews, DuckDuckGo, AI Search Optimization, GEO, Generative Engine Optimization, AI Mode, search marketing 2026, Kagi, Brave Search',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.8;"><strong>一句話總結：</strong>Google 正式用「AI 生成答案」取代傳統的連結清單，引發部分用戶反彈——隱私搜尋引擎 <strong>DuckDuckGo 在 iPhone 上的安裝量單日暴增近 70%</strong>。對靠搜尋帶客的個人品牌與小商家來說，這代表遊戲規則變了：你要優化的，不再只是「被搜尋到」，而是「被 AI 主動講出來」。</p>
+
+      <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
+        <strong>TL;DR（懶人包）：</strong>① Google I/O 宣布以 AI 對話引擎取代搜尋框，稱「25 年來最大升級」。② 不滿的用戶湧向 DuckDuckGo、Brave、Kagi。③ 兩種說法同時成立——AI 搜尋很受歡迎，但「誰決定要用多少 AI」才是爭點。④ 你的對策：別只做 SEO，要做 <a href="/blog/geo-optimization-complete-guide-2026" style="color:#8782FF;font-weight:bold;">GEO（讓 AI 主動推薦你）</a>。
+      </blockquote>
+
+      <h2>發生了什麼事？</h2>
+      <p>過去 25 年，我們用 Google 的方式都一樣：<strong>輸入關鍵字 → 拿到一串連結 → 點開其中一個</strong>。在上個月的 Google I/O 大會上，Google 宣布要用「AI 驅動的對話引擎」取代這個搜尋框——現在你得到的是 AI 生成的答案，下面還附帶後續問題。Google 稱這是「25 年來搜尋功能的最大升級」。</p>
+      <p>但不是所有人都買單。消息一出，<strong>DuckDuckGo 在美國的應用程式安裝量月增 18%</strong>，並在陣亡將士紀念日當天達到 30% 的峰值；iPhone 上的成長更猛，平均增幅 33%、<strong>單日高峰逼近 70%</strong>。同期，DuckDuckGo 的「無 AI 搜尋頁」（noai.duckduckgo.com）流量增加了 <strong>22.7%</strong>。</p>
+
+      <div style="text-align:center;margin:25px 0;">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&auto=format&fit=crop" alt="使用者在搜尋引擎前重新思考搜尋習慣" width="1200" height="675" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+        <p style="font-size:0.9em;color:#666;margin-top:10px;">圖：當「點連結」變成「等答案」，用戶開始用腳投票。</p>
+      </div>
+
+      <h2>不只 DuckDuckGo——這是一場集體出走</h2>
+      <p>DuckDuckGo 執行長 Gabriel Weinberg 講得很直接：「Google 正在強迫用戶接受人工智慧，卻不提供退出的途徑。他們的結果越來越糟，而不是越來越好。」</p>
+      <p>而且不只它一家。同一時期，<strong>Brave Search 和 Kagi 的流量也同步激增</strong>；自 2023 年以來，Bing 的全球市佔更悄悄從 2.8% 爬升到近 5%，一部分要歸功於它與 Copilot 的整合。趨勢很一致：感覺被 Google「牽著鼻子走」的用戶，至少會開始找替代方案。</p>
+
+      <h2>先別恐慌：把規模看清楚</h2>
+      <p>數字要放回脈絡才不會誤判。Google 仍佔全球搜尋市場約 <strong>90%</strong>，每天處理約 <strong>85 億次</strong>搜尋；DuckDuckGo 在美國市佔約 2%，每天約 1～1.45 億次。所以「70% 安裝量暴增」是發生在一個很小的基數上——它是一個<strong>強烈的訊號，但還不是地殼變動</strong>。</p>
+      <p>Google 這邊則強調：這不是強制過渡。搜尋副總裁 Elizabeth Reid 指出，AI 模式目前有 <strong>10 億月活躍用戶</strong>、搜尋量每季翻倍，且 Google 已為「只想看純連結」的人保留了「網頁」篩選器。諷刺的是，DuckDuckGo 自己也有 AI 功能，只是<strong>可以一鍵關掉</strong>。</p>
+
+      <h2>真正的爭點：不是「要不要 AI」，而是「誰說了算」</h2>
+      <p>這件事最常被誤解的地方是：它<strong>不是「AI 搜尋好不好」的辯論</strong>。AI 搜尋確實很受歡迎，但也有一批人對它現在的樣子不滿。爭的是「<strong>誰來決定 AI 用到什麼程度</strong>」——Google 的答案是「我們說了算」，DuckDuckGo 的答案是「你說了算」。</p>
+      <p>對你（創作者、小商家）的啟示更實際：當 AI 直接給答案、跳過連結，<strong>使用者不再「搜尋」，而是「等答案」</strong>。如果那個答案裡沒有你，你連被比較的機會都沒有。</p>
+
+      <hr>
+
+      <h2>所以，靠搜尋帶客的你該怎麼做？（3 個可立刻執行的對策）</h2>
+
+      <h3>對策 1️⃣：從「被搜尋到」轉向「被 AI 引用」——開始做 GEO</h3>
+      <p>SEO 是讓你排上 Google 第一頁；<strong>GEO（生成引擎最佳化）</strong>是讓 ChatGPT、Perplexity、Google AI Overviews 在回答時<strong>主動把你講出來</strong>。AI 偏好「能直接回答問題、有明確事實、來源可信」的內容。把每篇內容開頭就用一句話講完結論，AI 最愛擷取這種句子。完整做法我整理在這篇 <a href="/blog/geo-optimization-complete-guide-2026" style="color:#8782FF;font-weight:bold;">GEO 完整教學（附提示詞）</a>。</p>
+      <div style="background:#0f172a;color:#e2e8f0;padding:16px 20px;border-radius:10px;font-size:14px;line-height:1.75;margin:16px 0;white-space:pre-wrap;">你是我的 GEO 內容策略師。我的品牌是「[填入品牌/產業]」，目標客群是「[填入]」。
+請列出客群在購買前最可能拿去問 ChatGPT 的 12 個真實問題，
+並依「資訊型／比較型／決策型」分類，標出哪些最可能帶來成交，
+再針對前 3 個問題各寫一段「40 字內先給結論」的可被引用答案。</div>
+
+      <h3>對策 2️⃣：把雞蛋從「搜尋」這個籃子分散出去</h3>
+      <p>當搜尋流量越來越不可控，<strong>你最該擁有的是「不靠演算法的名單」</strong>——Email 與 LINE。搭配你已經在經營的 IG／短影音內容，把一次性的搜尋訪客，變成可重複觸及的訂閱者。流量入口越分散，平台改規則時你越不會被一槍斃命。</p>
+
+      <h3>對策 3️⃣：強化「品牌直搜」與一致的官方資訊</h3>
+      <p>AI 在生成答案時會交叉比對「網路上關於你的描述」。請確保你的<strong>品牌名、定位、聯絡方式在官網、IG、Google 商家、各平台都一致</strong>，並在官網補上結構化資料（Organization／FAQPage）。當越多人「直接搜尋你的品牌名」，AI 與搜尋引擎就越把你當成一個確定的實體推薦。</p>
+
+      <hr>
+
+      <h2>常見問題 FAQ</h2>
+      <h3>Q：Google AI Overviews 會讓我的網站流量歸零嗎？</h3>
+      <p>不會歸零，但<strong>「只是來找一個簡單答案」的點擊會減少</strong>。受影響最大的是純資訊型內容；具體比較、實戰案例、可購買的產品頁，仍然會帶來高意圖的流量，而且更值得投資。</p>
+      <h3>Q：我該叫客戶改用 DuckDuckGo 嗎？</h3>
+      <p>重點不是換工具，而是<strong>讓你的品牌不管用戶在哪個引擎、用不用 AI 都找得到</strong>。與其押注單一平台，不如把內容做成「AI 與人類都好引用」的樣子。</p>
+      <h3>Q：GEO 和 SEO 要二選一嗎？</h3>
+      <p>不用。<strong>兩者疊加</strong>，而且大部分工作共用。SEO 顧傳統搜尋，GEO 顧 AI 問答，把現有內容重新整理成「定義先行＋FAQ＋有來源」就同時加分。</p>
+
+      <hr>
+
+      <h2>資料來源</h2>
+      <ul style="line-height:1.9;">
+        <li><a href="https://blog.google/products/search/" target="_blank" rel="noopener" style="color:#2563eb;text-decoration:underline;">Google 官方部落格：Search／AI Mode 更新</a></li>
+        <li><a href="https://duckduckgo.com/" target="_blank" rel="noopener" style="color:#2563eb;text-decoration:underline;">DuckDuckGo 官方網站</a>（含 noai.duckduckgo.com 無 AI 搜尋頁）</li>
+      </ul>
+
+      <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
+        <strong>不想自己從零摸索 GEO？</strong>我把這套「讓 AI 主動推薦你」的提示詞與內容範本，整理在 <a href="/toolbox" style="color:#8782FF;font-weight:bold;">數位工具箱</a> 裡，挑了就能套用；想看真實成效，可以讀 <a href="/blog/case-study-motorbike-geo-success" style="color:#8782FF;font-weight:bold;">重機部品 GEO 實戰案例</a>。需要把官網結構化資料一次做到位，歡迎 <a href="/contact" style="color:#8782FF;font-weight:bold;">直接聊聊</a>。
+      </blockquote>
+    `,
+  },
+  {
     id: 'geo-optimization-complete-guide-2026',
     title: 'GEO 是什麼？2026 生成引擎最佳化完整教學：7 步驟讓 ChatGPT、Perplexity 主動推薦你（附提示詞）',
     category: '品牌行銷策略',
