@@ -6,9 +6,6 @@ const isLoaded = ref(false)
 const guideModalOpen = ref(false)
 const isInAppBrowser = ref(false)
 
-// 使用 SSR-aware 裝置偵測，手機版不載入 Lottie（節省 JS 解析效能）
-const { isMobileOrTablet } = useDevice()
-
 let rafId: number | null = null
 const handleScroll = () => {
   if (rafId !== null) return
@@ -20,7 +17,7 @@ const handleScroll = () => {
 
 const checkBrowser = () => {
   if (import.meta.client) {
-    const ua = navigator.userAgent || navigator.vendor || (window as any).opera
+    const ua = navigator.userAgent || navigator.vendor || (window as Window & { opera?: string }).opera || ''
     isInAppBrowser.value = /Instagram|FBAN|FBAV|Line/i.test(ua)
   }
 }
@@ -138,7 +135,7 @@ onBeforeUnmount(() => {
 
               <div class="relative z-10 w-full aspect-square flex items-center justify-center overflow-hidden">
                 <client-only>
-                  <Lottie v-if="!isMobileOrTablet" name="web-animations" class="transform scale-[1.3] md:scale-[1.5]" />
+                  <Lottie name="web-animations" class="transform scale-[1.3] md:scale-[1.5]" />
                 </client-only>
               </div>
             </div>
