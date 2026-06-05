@@ -19,6 +19,24 @@ useHead(() => ({
 const isVisible = ref(false)
 const selectedCategory = ref<ProductCategory>('全部')
 
+// 行動版可水平捲動的分類標籤（與部落格一致）
+const mobileTabScrollerRef = ref<HTMLElement | null>(null)
+const mobileCanScrollLeft = ref(false)
+const mobileCanScrollRight = ref(false)
+
+const updateMobileScroll = () => {
+  const el = mobileTabScrollerRef.value
+  if (!el) return
+  mobileCanScrollLeft.value = el.scrollLeft > 2
+  mobileCanScrollRight.value = el.scrollLeft < el.scrollWidth - el.clientWidth - 2
+}
+
+const scrollMobile = (direction: 'left' | 'right') => {
+  const el = mobileTabScrollerRef.value
+  if (!el) return
+  el.scrollBy({ left: direction === 'left' ? -160 : 160, behavior: 'smooth' })
+}
+
 const filteredProducts = computed(() => {
   const base = selectedCategory.value === '全部'
     ? products
@@ -36,6 +54,12 @@ const formatPrice = (price: number) =>
 
 onMounted(() => {
   setTimeout(() => (isVisible.value = true), 80)
+  nextTick(updateMobileScroll)
+  window.addEventListener('resize', updateMobileScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateMobileScroll)
 })
 </script>
 
@@ -62,7 +86,65 @@ onMounted(() => {
 
     <!-- 分類篩選 -->
     <div class="max-w-6xl mx-auto px-6 md:px-12 mb-10">
-      <div class="flex gap-2 flex-wrap">
+      <!-- 行動版：可水平捲動 + 左右箭頭 -->
+      <div class="lg:hidden relative">
+        <!-- 左遮罩 + 箭頭 -->
+        <div
+          v-show="mobileCanScrollLeft"
+          class="absolute left-0 top-0 bottom-0 z-10 flex items-center pointer-events-none"
+        >
+          <div class="h-full w-12 bg-gradient-to-r from-white to-transparent"></div>
+          <button
+            class="absolute left-0 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
+            aria-label="往左捲動分類"
+            @click="scrollMobile('left')"
+          >
+            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+        </div>
+        <!-- 標籤捲動容器 -->
+        <div
+          ref="mobileTabScrollerRef"
+          class="flex gap-2 overflow-x-auto scrollbar-hide scroll-smooth px-1 py-1"
+          @scroll="updateMobileScroll"
+        >
+          <button
+            v-for="cat in productCategories"
+            :key="cat"
+            :class="[
+              'flex-shrink-0 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap',
+              selectedCategory === cat
+                ? 'bg-[#8782FF] text-white shadow-md shadow-[#8782FF]/30'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200',
+            ]"
+            @click="selectedCategory = cat"
+          >
+            {{ catLabel(cat) }}
+            <span v-if="cat === '全部'" class="ml-1.5 text-xs opacity-70">{{ products.length }}</span>
+          </button>
+        </div>
+        <!-- 右遮罩 + 箭頭 -->
+        <div
+          v-show="mobileCanScrollRight"
+          class="absolute right-0 top-0 bottom-0 z-10 flex items-center pointer-events-none"
+        >
+          <div class="h-full w-12 bg-gradient-to-l from-white to-transparent"></div>
+          <button
+            class="absolute right-0 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
+            aria-label="往右捲動分類"
+            @click="scrollMobile('right')"
+          >
+            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 桌面版：維持換行排列 -->
+      <div class="hidden lg:flex gap-2 flex-wrap">
         <button
           v-for="cat in productCategories"
           :key="cat"
@@ -75,10 +157,7 @@ onMounted(() => {
           @click="selectedCategory = cat"
         >
           {{ catLabel(cat) }}
-          <span
-            v-if="cat === '全部'"
-            class="ml-1.5 text-xs opacity-70"
-          >{{ products.length }}</span>
+          <span v-if="cat === '全部'" class="ml-1.5 text-xs opacity-70">{{ products.length }}</span>
         </button>
       </div>
     </div>
@@ -193,3 +272,14 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+/* 隱藏捲動條但保留水平捲動功能（分類標籤用） */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+</style>
