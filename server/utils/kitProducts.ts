@@ -39,8 +39,8 @@ export const KIT_PRODUCTS: KitProduct[] = [
     permalink: 'jcfhy',
     label: 'CRM 客戶管理系統',
     type: 'link',
-    // TODO：換成 CRM 在 Notion「Publish to web + Allow duplicate as template」後的公開 notion.site 連結
-    url: 'https://app.notion.com/p/CRM-376cf51200d28132af47ed83e7c62046',
+    // CRM 已在 Notion 發布（Duplicate as template 已開），買家解鎖後導向此公開範本連結
+    url: 'https://fork-cub-4e1.notion.site/CRM-376cf51200d28132af47ed83e7c62046',
   },
 ]
 
