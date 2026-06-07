@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     notionToken: process.env.NOTION_TOKEN,
     notionDatabaseId: process.env.NOTION_DATABASE_ID,
     // Gumroad 商品清單已移到 server/utils/kitProducts.ts（多商品、自動偵測序號屬於哪個商品）。
-    // 不再需要 GUMROAD_PRODUCT_ID／PERMALINK 環境變數。
+  
     kitSecret: process.env.KIT_SECRET,
     // 本機若設 KIT_FORCE_AUTH=1，serveKit 會強制驗證 cookie（用來在 localhost 完整測序號解鎖流程）。
     kitForceAuth: process.env.KIT_FORCE_AUTH,
