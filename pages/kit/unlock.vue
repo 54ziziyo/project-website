@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import { products } from '~/data/products'
+
 const { t, locale } = useI18n()
 const route = useRoute()
-useHead(() => ({
-  title: t('unlock.metaTitle'),
-  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
-}))
+const { pName } = useLocalizedContent()
 
 const licenseKey = ref('')
 const loading = ref(false)
@@ -19,11 +18,24 @@ interface UnlockResult {
   url: string | null
 }
 
-// 選填的 kit 提示（?kit=crm 或 ?p=crm），用來省一次 API；沒帶也沒關係，後端會自動判斷序號屬於哪個商品。
+// 選填的 kit 提示（?kit=crm 或 ?p=crm）：用來顯示對應商品名、並省一次 API；沒帶也沒關係，後端會自動判斷序號屬於哪個商品。
 const kitHint = computed(() => {
   const v = route.query.kit ?? route.query.p
   return typeof v === 'string' && v.trim() ? v.trim() : undefined
 })
+
+// 依 kit 提示找對應商品，動態顯示商品名（沒對到就用通用標題，不寫死任何商品）
+const hintedProduct = computed(() => (kitHint.value ? products.find((p) => p.kitSlug === kitHint.value) : undefined))
+const brandName = computed(() => (hintedProduct.value ? pName(hintedProduct.value) : t('unlock.brand')))
+
+useHead(() => ({
+  title: hintedProduct.value ? `${brandName.value} | Zeona Studio` : t('unlock.metaTitle'),
+  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+}))
+
+// 解鎖成功後在本地記住「商品↔序號」對應，供商品頁直接跳轉。
+// 注意：不在輸入框預填序號，以免測試 A 商品時看到 B 商品的序號。
+const { rememberKeyForKit } = useLicenseStore()
 
 async function unlock() {
   error.value = ''
@@ -40,6 +52,7 @@ async function unlock() {
         kit: kitHint.value,
       },
     })
+    rememberKeyForKit(r.kit, licenseKey.value.trim()) // 依解鎖到的商品記住序號，供商品頁直接跳轉/預填
     // 依後端回傳的解鎖目標導向：link→外部連結（如 Notion）；page→站內受保護頁（整頁導向才會打到 server route）
     if (r.type === 'link' && r.url) {
       window.location.href = r.url
@@ -61,7 +74,7 @@ async function unlock() {
         <div class="flex items-center gap-3 mb-6">
           <div class="w-11 h-11 rounded-xl bg-[#8782FF] flex items-center justify-center text-xl">🎯</div>
           <div>
-            <div class="font-bold text-gray-900 leading-tight">{{ t('unlock.brand') }}</div>
+            <div class="font-bold text-gray-900 leading-tight">{{ brandName }}</div>
             <div class="text-xs text-gray-400">Zeona Studio</div>
           </div>
         </div>

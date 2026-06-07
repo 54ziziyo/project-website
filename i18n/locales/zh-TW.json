@@ -532,8 +532,8 @@
     ]
   },
   "unlock": {
-    "metaTitle": "解鎖 AI 個人品牌建立包 | Zeona Studio",
-    "brand": "AI 個人品牌建立包",
+    "metaTitle": "序號解鎖 | Zeona Studio",
+    "brand": "Zeona 數位工具箱",
     "heading": "輸入你的序號解鎖",
     "sub": "在 Gumroad 購買後，你會收到一組產品序號（License Key）。把它貼在下方即可永久開啟內容。",
     "placeholder": "例如：XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX",
@@ -649,6 +649,7 @@
       "notifyLink": "聯絡我",
       "notifyPost": "登記優先通知",
       "buy": "立即購買",
+      "alreadyBought": "已購買，前往商品",
       "buyNote": "透過 Gumroad 安全付款・購買後即可永久下載",
       "includes": "📦 包含內容",
       "formatLabel": "格式：{type}",

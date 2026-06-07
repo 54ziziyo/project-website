@@ -14,6 +14,9 @@ export interface Product {
   isNew?: boolean
   isBestSeller?: boolean
   status: 'available' | 'coming-soon'
+  // 若此商品的內容透過 /kit 序號解鎖交付，填對應的 kit slug（= server/utils/kitProducts.ts 的 kit）。
+  // 有填才會在詳情頁顯示「已購買，前往商品」並能用記住的序號直接跳轉。
+  kitSlug?: string
 }
 
 export const productCategories = ['全部', 'Prompt 提示詞', 'Notion 模板', 'Canva 模板', '素材工具包'] as const
@@ -152,6 +155,7 @@ export const products: Product[] = [
     tags: ['Notion', '接案', 'CRM', '財務管理', '自由工作者'],
     isBestSeller: true,
     status: 'available',
+    kitSlug: 'crm',
   },
 
   // ─── Canva 模板 ───────────────────────────────────────────────
@@ -259,6 +263,7 @@ export const products: Product[] = [
     tags: ['個人品牌', 'IG', '電子報', '部落格', 'ChatGPT'],
     isBestSeller: true,
     status: 'available',
+    kitSlug: 'ai-personal-brand',
   },
 
   // ─── Prompt 提示詞 ────────────────────────────────────────────

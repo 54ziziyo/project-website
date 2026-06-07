@@ -571,8 +571,8 @@
     ]
   },
   "unlock": {
-    "metaTitle": "Unlock the AI Personal-Brand Pack | Zeona Studio",
-    "brand": "AI Personal-Brand Pack",
+    "metaTitle": "Unlock with license | Zeona Studio",
+    "brand": "Zeona Toolkit",
     "heading": "Enter your serial to unlock",
     "sub": "After purchasing on Gumroad, you'll receive a product serial (License Key). Paste it below to unlock the content permanently.",
     "placeholder": "e.g. XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX",
@@ -628,6 +628,7 @@
       "notifyLink": "contact me",
       "notifyPost": "to get priority notice",
       "buy": "Buy now",
+      "alreadyBought": "Already purchased? Unlock it",
       "buyNote": "Secure payment via Gumroad · lifetime download after purchase",
       "includes": "📦 What's included",
       "formatLabel": "Format: {type}",

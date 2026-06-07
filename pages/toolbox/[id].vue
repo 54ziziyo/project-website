@@ -2,9 +2,35 @@
 import { products, type Product } from '~/data/products'
 
 const route = useRoute()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { catLabel, pName, pDesc, pTags, pFullDesc, pFeatures } = useLocalizedContent()
+const { getKeyForKit } = useLicenseStore()
+
+// 「已購買，前往商品」：用本地記住的序號直接重新解鎖並跳到該商品內容；沒記住過就去解鎖頁輸入。
+// 用同步開新分頁 + 之後設定網址，避免 await 後 window.open 被擋；解鎖 cookie 與新分頁同源共用。
+async function goToMyProduct(kitSlug: string) {
+  const unlockHref = localePath({ path: '/kit/unlock', query: { kit: kitSlug } })
+  const key = getKeyForKit(kitSlug)
+  if (!key) {
+    window.open(unlockHref, '_blank')
+    return
+  }
+  const w = window.open('', '_blank')
+  try {
+    const r = await $fetch<{ type: string; next: string | null; nextEn: string | null; url: string | null }>(
+      '/api/unlock-kit',
+      { method: 'POST', body: { license_key: key, kit: kitSlug } },
+    )
+    const target = r.type === 'link' && r.url ? r.url : (locale.value === 'en' && r.nextEn) || r.next || '/'
+    if (w) w.location.href = target
+    else window.location.href = target
+  } catch {
+    // 序號失效/已退款等 → 退回解鎖頁（帶商品提示）
+    if (w) w.location.href = unlockHref
+    else window.location.href = unlockHref
+  }
+}
 const product = computed<Product | undefined>(() =>
   products.find((p) => p.id === route.params.id),
 )
@@ -133,6 +159,8 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
           <template v-if="product.price === 0 && product.status === 'available'">
             <a
               :href="product.purchaseUrl"
+              target="_blank"
+              rel="noopener noreferrer"
               class="flex items-center justify-center gap-2 w-full py-4 bg-emerald-500 text-white font-bold text-lg rounded-2xl hover:bg-emerald-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 mb-3"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,13 +186,21 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
               :href="product.purchaseUrl"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center gap-2 w-full py-4 bg-[#8782FF] text-white font-bold text-lg rounded-2xl hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-xl hover:shadow-[#8782FF]/30 hover:-translate-y-0.5 active:scale-95 mb-3"
+              class="flex items-center justify-center gap-2 w-full py-3 bg-[#8782FF] text-white font-bold text-lg rounded-2xl hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-xl hover:shadow-[#8782FF]/30 hover:-translate-y-0.5 active:scale-95 mb-3"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
               {{ t('toolbox.detail.buy') }}
             </a>
+            <button
+              v-if="product.kitSlug"
+              type="button"
+              class="flex items-center justify-center gap-2 w-full py-3 border-2 border-[#8782FF] text-[#8782FF] font-bold rounded-2xl hover:bg-[#8782FF]/5 transition-all active:scale-95 mb-3"
+              @click="goToMyProduct(product.kitSlug)"
+            >
+              ✓ {{ t('toolbox.detail.alreadyBought') }}
+            </button>
             <p class="text-center text-gray-400 text-xs mb-6">
               {{ t('toolbox.detail.buyNote') }}
             </p>
