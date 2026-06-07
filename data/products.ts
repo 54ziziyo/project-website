@@ -44,7 +44,7 @@ export const products: Product[] = [
 • 所有人都用得到：週報生成、Email 潤稿、會議摘要、績效自評
 
 買了這包，今晚就能開始用。`,
-    coverImage: 'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=800&h=600&fit=crop',
+    coverImage: 'https://i.ibb.co/MxF5qMRt/Chat-GPT-Image-2026-6-8-03-12-02.png',
     features: [
       '50 個繁體中文職場提示詞，copy-paste 即用',
       '每個場景附真實輸出範例',
@@ -127,7 +127,7 @@ export const products: Product[] = [
 • 今天最棒的一件事？
 • 明天的唯一目標？
 • 一句話紀念今天？`,
-    coverImage: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop',
+    coverImage: 'https://i.ibb.co/9kSP6mQ8/Chat-GPT-Image-2026-6-8-01-20-13.png',
     features: [
       '防分心極簡介面，每天只看一個頁面',
       '「今日唯一目標」強迫優先排序',
@@ -164,7 +164,7 @@ export const products: Product[] = [
 
 適合：個人品牌、小商家、接案者、做內容行銷的人。
 完整觀念教學看部落格〈GEO 完整教學（附提示詞）〉，這份包負責讓你「直接動手」。`,
-    coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
+    coverImage: 'https://i.ibb.co/bMZJKK7Q/Chat-GPT-Image-2026-6-8-01-43-51.png',
     features: [
       '7 段可直接複製的繁中提示詞，填空即用',
       '涵蓋 FAQ、結構化資料、品牌一致性等 GEO 關鍵動作',
@@ -212,7 +212,7 @@ export const products: Product[] = [
 📑 合約存檔區
 • 所有合約集中管理
 • 重要條款備忘提醒`,
-    coverImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+    coverImage: 'https://i.ibb.co/3mdMfxn0/Chat-GPT-Image-2026-6-8-01-02-03.png',
     features: [
       '客戶資料庫：聯絡資訊、黑名單標記、交易總額',
       'Kanban 案件追蹤：從詢價到收款全流程',
