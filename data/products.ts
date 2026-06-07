@@ -59,12 +59,12 @@ export const products: Product[] = [
     status: 'coming-soon',
   },
   {
-    id: 'threads-hook-formula-200',
-    name: 'Threads 爆流量鉤子文案庫｜200 個引爆留言的開頭公式',
-    category: 'Prompt 提示詞',
+    id: 'hook-formula-200',
+    name: '爆流量鉤子文案庫｜200 個引爆留言的開頭公式',
+    category: '素材工具包',
     price: 0,
     description: '200 個實測能引爆留言、爭議與轉發的第一句話。複製貼上就自帶流量，不需要粉絲基礎也能破百讚。',
-    fullDescription: `Threads 的演算法只看一件事：你的第一句話夠不夠讓人想回覆。
+    fullDescription: `演算法只看一件事：你的第一句話夠不夠讓人想回覆。
 
 這份文案庫收錄 200 個經過實測的開場公式，分成 10 種策略類型：
 
@@ -80,18 +80,18 @@ export const products: Product[] = [
 👑 身份認同型：「這種人才看得懂」式的歸屬感
 
 每個公式附：使用範例 + 適合的帳號類型。`,
-    coverImage: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&h=600&fit=crop',
+    coverImage: 'https://i.ibb.co/dFRDNj5/Chat-GPT-Image-2026-6-8-03-06-40.png',
     features: [
-      '200 個實測有效的 Threads 開場公式',
+      '200 個實測有效的開場公式',
       '10 種流量策略分類，按需求選用',
       '每個公式附實際範例',
       '適合各種帳號類型（個人/品牌/素人）',
       '無需粉絲基礎也能引爆互動',
     ],
-    purchaseUrl: '#',
-    fileType: 'PDF',
+    purchaseUrl: '/kit/hook-formula-200',
+    fileType: '線上閱讀版',
     tags: ['Threads', '社群', '文案', '流量', '鉤子'],
-    status: 'coming-soon',
+    status: 'available',
   },
 
   // ─── Notion 模板 ──────────────────────────────────────────────

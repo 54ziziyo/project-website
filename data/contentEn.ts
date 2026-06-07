@@ -33,11 +33,11 @@ export const productEn: Record<string, { name: string; description: string; tags
       'Golden hooks + script frameworks + ChatGPT prompts. Generate a full script in 30 seconds and rescue low view counts.',
     tags: ['Short Video', 'Reels', 'TikTok', 'Script', 'Hook'],
   },
-  'threads-hook-formula-200': {
-    name: 'Threads Viral Hook Library｜200 Opening Lines That Spark Replies',
+  'hook-formula-200': {
+    name: 'Viral Hook Library｜200 Opening Lines That Spark Replies',
     description:
       '200 tested first lines that trigger replies, debate and reshares. Copy-paste and they bring their own reach — no follower base needed to break 100 likes.',
-    tags: ['Threads', 'Social', 'Copywriting', 'Reach', 'Hooks'],
+    tags: ['Threads', 'Reels', 'TikTok', 'Social', 'Hooks'],
   },
   'adhd-focus-digital-journal': {
     name: 'Self-Discipline Made Simple｜A Tool for Scattered Minds',
@@ -252,7 +252,7 @@ Drop in your topic and generate a full first-draft script in 30 seconds.`,
       'Written for a real, on-the-ground voice',
     ],
   },
-  'threads-hook-formula-200': {
+  'hook-formula-200': {
     fullDescription: `The Threads algorithm cares about one thing: whether your first line makes people want to reply.
 
 This library collects 200 tested opening formulas across 10 strategy types:
