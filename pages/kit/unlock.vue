@@ -93,7 +93,7 @@ async function unlock() {
         <div class="mt-6 pt-5 border-t border-gray-100 text-center">
           <p class="text-xs text-gray-400">
             {{ t('unlock.notYet') }}
-            <a href="https://gumroad.com" target="_blank" rel="noopener" class="text-[#8782FF] font-semibold hover:underline">
+            <a href="https://zeona.vercel.app/toolbox" target="_blank" rel="noopener" class="text-[#8782FF] font-semibold hover:underline">
               {{ t('unlock.getOnGumroad') }}
             </a>
           </p>
