@@ -20,81 +20,47 @@ export const productCategories = ['全部', 'Prompt 提示詞', 'Notion 模板',
 export type ProductCategory = (typeof productCategories)[number]
 
 export const products: Product[] = [
-  // ─── Prompt 提示詞 ────────────────────────────────────────────
+  // ─── Notion 模板 ──────────────────────────────────────────────
   {
-    id: 'workplace-chatgpt-50-scenarios',
-    name: '上班族 ChatGPT 職場提示包｜50 個即貼即用場景',
+    id: 'geo-ai-recommendation-prompt-pack',
+    name: 'GEO 實作提示詞包｜讓 ChatGPT、Perplexity 主動推薦你',
     category: 'Prompt 提示詞',
-    price: 199,
-    description: '週報、會議摘要、Email、簡報、績效評估…50 種真實職場場景，直接貼給 ChatGPT，不用再想怎麼下指令。',
-    fullDescription: `你有沒有每次打開 ChatGPT，卻不知道怎麼跟它說話？
-
-這包提示詞就是為台灣上班族設計的「職場 AI 作弊卡」。
-
-50 個場景全部來自真實工作情境，每個都附：
-✅ 完整提示詞（繁體中文，可直接貼上）
-✅ 實際輸出範例（讓你知道效果）
-✅ 調整技巧說明（怎麼改成自己的風格）
-
-涵蓋部門：
-• 行銷/社群：文案、活動企劃、競品分析
-• PM/企劃：PRD 撰寫、使用者故事、需求規格
-• 業務/客服：客戶提案、陌生開發信、投訴處理話術
-• HR：招募 JD、員工公告、離職訪談問題
-• 所有人都用得到：週報生成、Email 潤稿、會議摘要、績效自評
-
-買了這包，今晚就能開始用。`,
-    coverImage: 'https://i.ibb.co/MxF5qMRt/Chat-GPT-Image-2026-6-8-03-12-02.png',
-    features: [
-      '50 個繁體中文職場提示詞，copy-paste 即用',
-      '每個場景附真實輸出範例',
-      '涵蓋行銷、PM、業務、HR 等部門',
-      '附「如何讓 AI 輸出更像人說話」教學',
-      '購買後永久下載，終身免費更新',
-    ],
-    purchaseUrl: 'https://gumroad.com',
-    fileType: 'PDF',
-    tags: ['上班族', 'ChatGPT', '職場', 'Email', '週報'],
-    isBestSeller: false,
-    status: 'coming-soon',
-  },
-  {
-    id: 'hook-formula-200',
-    name: '爆流量鉤子文案庫｜200 個引爆留言的開頭公式',
-    category: '素材工具包',
     price: 0,
-    description: '200 個實測能引爆留言、爭議與轉發的第一句話。複製貼上就自帶流量，不需要粉絲基礎也能破百讚。',
-    fullDescription: `演算法只看一件事：你的第一句話夠不夠讓人想回覆。
+    description:
+      '7 個步驟、可直接複製的提示詞，加一張內容追蹤表。把你的內容變成「AI 好引用」的樣子，讓 AI 在回答時主動把你講出來。',
+    fullDescription: `客人不再 Google、直接問 AI「推薦哪一間」時，你的品牌出現在答案裡了嗎？
 
-這份文案庫收錄 200 個經過實測的開場公式，分成 10 種策略類型：
+這份免費包，是把 GEO（生成引擎最佳化）拆成「動手做」的提示詞，照貼就能用。
 
-🔥 爭議觸發型：讓人忍不住要反駁或力挺
-💡 知識衝擊型：讓人感覺學到東西，想分享
-😂 共鳴吐槽型：讓人覺得「就是這樣」然後留言
-🎯 預言挑戰型：讓人想看接下來發生什麼
-😮 反常識型：讓人質疑自己既有認知
-📊 數字震撼型：具體數字讓人停下來看
-💬 問句引互動型：讓人忍不住要回答
-🔗 故事入場型：一句話讓人想看下去
-⚡ 急迫感型：讓人覺得現在不學就來不及
-👑 身份認同型：「這種人才看得懂」式的歸屬感
+內容物：
+🎯 7 段現成提示詞（把 [方括號] 換成你的內容即可）
+• 盤點客戶真的會問 AI 的 12 個問題
+• 把答案寫成「AI 好引用」的格式
+• 一次產出一組 FAQ（GEO 最高 CP 值招式）
+• 用數據與來源強化可信度
+• 產生結構化資料（JSON-LD Schema）
+• 統一各平台的品牌描述
+• 每月「AI 有沒有推薦你」自我檢測
 
-每個公式附：使用範例 + 適合的帳號類型。`,
-    coverImage: 'https://i.ibb.co/dFRDNj5/Chat-GPT-Image-2026-6-8-03-06-40.png',
+📊 GEO 內容追蹤表（Notion 資料庫，含範例列）
+• 一眼看出哪些主題已寫成 FAQ、有沒有被 AI 引用
+
+適合：個人品牌、小商家、接案者、做內容行銷的人。
+完整觀念教學看部落格〈GEO 完整教學（附提示詞）〉，這份包負責讓你「直接動手」。`,
+    coverImage: 'https://i.ibb.co/bMZJKK7Q/Chat-GPT-Image-2026-6-8-01-43-51.png',
     features: [
-      '200 個實測有效的開場公式',
-      '10 種流量策略分類，按需求選用',
-      '每個公式附實際範例',
-      '適合各種帳號類型（個人/品牌/素人）',
-      '無需粉絲基礎也能引爆互動',
+      '7 段可直接複製的繁中提示詞，填空即用',
+      '涵蓋 FAQ、結構化資料、品牌一致性等 GEO 關鍵動作',
+      '附 Notion「GEO 內容追蹤表」資料庫（含範例）',
+      '每月自我檢測提示詞，追蹤 AI 推薦能見度',
+      '免費下載，搭配〈GEO 完整教學〉部落格文一起看',
     ],
-    purchaseUrl: '/kit/hook-formula-200',
-    fileType: '線上閱讀版',
-    tags: ['Threads', '社群', '文案', '流量', '鉤子'],
+    purchaseUrl: 'https://app.notion.com/p/376cf51200d281d1a426d4d64e06e6a2',
+    fileType: 'Notion 模板',
+    tags: ['GEO', 'AI搜尋優化', '提示詞', 'ChatGPT', '免費'],
+    isNew: true,
     status: 'available',
   },
-
-  // ─── Notion 模板 ──────────────────────────────────────────────
   {
     id: 'adhd-focus-digital-journal',
     name: 'P人神器｜原來自律這麼簡單',
@@ -137,46 +103,6 @@ export const products: Product[] = [
     purchaseUrl: 'https://app.notion.com/p/P-376cf51200d281ffb2abfda49be3ee56?source=copy_link',
     fileType: 'Notion 模板',
     tags: ['Notion', 'ADHD', '專注', '生產力', '數位手帳'],
-    status: 'available',
-  },
-  {
-    id: 'geo-ai-recommendation-prompt-pack',
-    name: 'GEO 實作提示詞包｜讓 ChatGPT、Perplexity 主動推薦你',
-    category: 'Prompt 提示詞',
-    price: 0,
-    description:
-      '7 個步驟、可直接複製的提示詞，加一張內容追蹤表。把你的內容變成「AI 好引用」的樣子，讓 AI 在回答時主動把你講出來。',
-    fullDescription: `客人不再 Google、直接問 AI「推薦哪一間」時，你的品牌出現在答案裡了嗎？
-
-這份免費包，是把 GEO（生成引擎最佳化）拆成「動手做」的提示詞，照貼就能用。
-
-內容物：
-🎯 7 段現成提示詞（把 [方括號] 換成你的內容即可）
-• 盤點客戶真的會問 AI 的 12 個問題
-• 把答案寫成「AI 好引用」的格式
-• 一次產出一組 FAQ（GEO 最高 CP 值招式）
-• 用數據與來源強化可信度
-• 產生結構化資料（JSON-LD Schema）
-• 統一各平台的品牌描述
-• 每月「AI 有沒有推薦你」自我檢測
-
-📊 GEO 內容追蹤表（Notion 資料庫，含範例列）
-• 一眼看出哪些主題已寫成 FAQ、有沒有被 AI 引用
-
-適合：個人品牌、小商家、接案者、做內容行銷的人。
-完整觀念教學看部落格〈GEO 完整教學（附提示詞）〉，這份包負責讓你「直接動手」。`,
-    coverImage: 'https://i.ibb.co/bMZJKK7Q/Chat-GPT-Image-2026-6-8-01-43-51.png',
-    features: [
-      '7 段可直接複製的繁中提示詞，填空即用',
-      '涵蓋 FAQ、結構化資料、品牌一致性等 GEO 關鍵動作',
-      '附 Notion「GEO 內容追蹤表」資料庫（含範例）',
-      '每月自我檢測提示詞，追蹤 AI 推薦能見度',
-      '免費下載，搭配〈GEO 完整教學〉部落格文一起看',
-    ],
-    purchaseUrl: 'https://app.notion.com/p/376cf51200d281d1a426d4d64e06e6a2',
-    fileType: 'Notion 模板',
-    tags: ['GEO', 'AI搜尋優化', '提示詞', 'ChatGPT', '免費'],
-    isNew: true,
     status: 'available',
   },
   {
@@ -253,7 +179,7 @@ export const products: Product[] = [
 • Threads/Twitter 分享用
 • 媒體合作提案用
 • 演講介紹卡`,
-    coverImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
+    coverImage: 'https://i.ibb.co/21PmtDwS/Chat-GPT-Image-2026-6-8-03-26-41.png',
     features: [
       'Canva 版型（貼文/限動/個人簡介卡）',
       '小編神器發文不求人，不該讓發文變成負擔',
@@ -332,6 +258,80 @@ export const products: Product[] = [
     fileType: '線上閱讀版（序號解鎖）',
     tags: ['個人品牌', 'IG', '電子報', '部落格', 'ChatGPT'],
     isBestSeller: true,
+    status: 'available',
+  },
+
+  // ─── Prompt 提示詞 ────────────────────────────────────────────
+  {
+    id: 'workplace-chatgpt-50-scenarios',
+    name: '上班族 ChatGPT 職場提示包｜50 個即貼即用場景',
+    category: 'Prompt 提示詞',
+    price: 199,
+    description: '週報、會議摘要、Email、簡報、績效評估…50 種真實職場場景，直接貼給 ChatGPT，不用再想怎麼下指令。',
+    fullDescription: `你有沒有每次打開 ChatGPT，卻不知道怎麼跟它說話？
+
+這包提示詞就是為台灣上班族設計的「職場 AI 作弊卡」。
+
+50 個場景全部來自真實工作情境，每個都附：
+✅ 完整提示詞（繁體中文，可直接貼上）
+✅ 實際輸出範例（讓你知道效果）
+✅ 調整技巧說明（怎麼改成自己的風格）
+
+涵蓋部門：
+• 行銷/社群：文案、活動企劃、競品分析
+• PM/企劃：PRD 撰寫、使用者故事、需求規格
+• 業務/客服：客戶提案、陌生開發信、投訴處理話術
+• HR：招募 JD、員工公告、離職訪談問題
+• 所有人都用得到：週報生成、Email 潤稿、會議摘要、績效自評
+
+買了這包，今晚就能開始用。`,
+    coverImage: 'https://i.ibb.co/MxF5qMRt/Chat-GPT-Image-2026-6-8-03-12-02.png',
+    features: [
+      '50 個繁體中文職場提示詞，copy-paste 即用',
+      '每個場景附真實輸出範例',
+      '涵蓋行銷、PM、業務、HR 等部門',
+      '附「如何讓 AI 輸出更像人說話」教學',
+      '購買後永久下載，終身免費更新',
+    ],
+    purchaseUrl: 'https://gumroad.com',
+    fileType: 'PDF',
+    tags: ['上班族', 'ChatGPT', '職場', 'Email', '週報'],
+    isBestSeller: false,
+    status: 'coming-soon',
+  },
+  {
+    id: 'hook-formula-200',
+    name: '爆流量鉤子文案庫｜200 個引爆留言的開頭公式',
+    category: '素材工具包',
+    price: 0,
+    description: '200 個實測能引爆留言、爭議與轉發的第一句話。複製貼上就自帶流量，不需要粉絲基礎也能破百讚。',
+    fullDescription: `演算法只看一件事：你的第一句話夠不夠讓人想回覆。
+
+這份文案庫收錄 200 個經過實測的開場公式，分成 10 種策略類型：
+
+🔥 爭議觸發型：讓人忍不住要反駁或力挺
+💡 知識衝擊型：讓人感覺學到東西，想分享
+😂 共鳴吐槽型：讓人覺得「就是這樣」然後留言
+🎯 預言挑戰型：讓人想看接下來發生什麼
+😮 反常識型：讓人質疑自己既有認知
+📊 數字震撼型：具體數字讓人停下來看
+💬 問句引互動型：讓人忍不住要回答
+🔗 故事入場型：一句話讓人想看下去
+⚡ 急迫感型：讓人覺得現在不學就來不及
+👑 身份認同型：「這種人才看得懂」式的歸屬感
+
+每個公式附：使用範例 + 適合的帳號類型。`,
+    coverImage: 'https://i.ibb.co/dFRDNj5/Chat-GPT-Image-2026-6-8-03-06-40.png',
+    features: [
+      '200 個實測有效的開場公式',
+      '10 種流量策略分類，按需求選用',
+      '每個公式附實際範例',
+      '適合各種帳號類型（個人/品牌/素人）',
+      '無需粉絲基礎也能引爆互動',
+    ],
+    purchaseUrl: '/kit/hook-formula-200',
+    fileType: '線上閱讀版',
+    tags: ['Threads', '社群', '文案', '流量', '鉤子'],
     status: 'available',
   },
 ]
