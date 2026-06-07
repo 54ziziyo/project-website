@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
+const route = useRoute()
 useHead(() => ({
   title: t('unlock.metaTitle'),
   meta: [{ name: 'robots', content: 'noindex, nofollow' }],
@@ -9,6 +10,21 @@ const licenseKey = ref('')
 const loading = ref(false)
 const error = ref('')
 
+interface UnlockResult {
+  ok: boolean
+  kit: string
+  type: 'page' | 'link'
+  next: string | null
+  nextEn: string | null
+  url: string | null
+}
+
+// 選填的 kit 提示（?kit=crm 或 ?p=crm），用來省一次 API；沒帶也沒關係，後端會自動判斷序號屬於哪個商品。
+const kitHint = computed(() => {
+  const v = route.query.kit ?? route.query.p
+  return typeof v === 'string' && v.trim() ? v.trim() : undefined
+})
+
 async function unlock() {
   error.value = ''
   if (!licenseKey.value.trim()) {
@@ -17,13 +33,19 @@ async function unlock() {
   }
   loading.value = true
   try {
-    await $fetch('/api/unlock-kit', {
+    const r = await $fetch<UnlockResult>('/api/unlock-kit', {
       method: 'POST',
-      body: { license_key: licenseKey.value.trim() },
+      body: {
+        license_key: licenseKey.value.trim(),
+        kit: kitHint.value,
+      },
     })
-    // 成功後整頁導向（才會打到受保護的 server route）；依語言導向中／英版
-    window.location.href =
-      locale.value === 'en' ? '/en/kit/ai-personal-brand' : '/kit/ai-personal-brand'
+    // 依後端回傳的解鎖目標導向：link→外部連結（如 Notion）；page→站內受保護頁（整頁導向才會打到 server route）
+    if (r.type === 'link' && r.url) {
+      window.location.href = r.url
+    } else {
+      window.location.href = (locale.value === 'en' && r.nextEn) || r.next || '/'
+    }
   } catch (e: any) {
     error.value = e?.statusMessage || e?.data?.statusMessage || t('unlock.errFail')
     loading.value = false

@@ -8,8 +8,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     notionToken: process.env.NOTION_TOKEN,
     notionDatabaseId: process.env.NOTION_DATABASE_ID,
-    // Gumroad 付費門檻
-    gumroadProductId: process.env.GUMROAD_PRODUCT_ID,
+    // Gumroad 商品清單已移到 server/utils/kitProducts.ts（多商品、自動偵測序號屬於哪個商品）。
+    // 不再需要 GUMROAD_PRODUCT_ID／PERMALINK 環境變數。
     kitSecret: process.env.KIT_SECRET,
   },
 
