@@ -59,48 +59,6 @@ export const products: Product[] = [
     status: 'coming-soon',
   },
   {
-    id: 'short-video-script-pack',
-    name: '短影音爆款腳本生成包｜Reels / TikTok / YT Shorts',
-    category: 'Prompt 提示詞',
-    price: 199,
-    description: '黃金開頭 hook + 腳本框架 + ChatGPT 提示詞，30 秒生成完整腳本，拯救低播放量。',
-    fullDescription: `前 3 秒沒抓住人，後面再好看都沒用。
-
-這包幫你解決短影音最難的部分：「怎麼開場」和「怎麼說故事」。
-
-包含：
-
-🎣 黃金開頭 Hook（按主題分類）
-• 知識型開場「99% 的人不知道…」
-• 爭議型開場「你一直做錯這件事」
-• 情感型開場「我從來沒跟你說過…」
-• 清單型開場「5 個方法讓你…」
-• 問句型開場「你有沒有遇過…」
-
-📋 腳本框架
-1. 教學型：問題 → 步驟 → 結果
-2. 故事型：衝突 → 轉折 → 收尾
-3. 對比型：Before → After → 方法
-4. 爭議型：觀點 → 反擊 → 立場
-5. 清單型：數字 → 展開 → 行動
-
-🤖 ChatGPT 提示詞模板
-把你的主題填入，30 秒生成完整腳本初稿。`,
-    coverImage: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&h=600&fit=crop',
-    features: [
-      '分類整理的黃金開場 Hooks',
-      '可套用的腳本框架',
-      'ChatGPT 提示詞：30 秒生成完整腳本',
-      '附「哪種 Hook 適合哪種主題」選擇指南',
-      '繁體中文，台灣語境',
-    ],
-    purchaseUrl: 'https://gumroad.com',
-    fileType: 'PDF',
-    tags: ['短影音', 'Reels', 'TikTok', '腳本', 'Hook'],
-    isNew: true,
-    status: 'coming-soon',
-  },
-  {
     id: 'threads-hook-formula-200',
     name: 'Threads 爆流量鉤子文案庫｜200 個引爆留言的開頭公式',
     category: 'Prompt 提示詞',
