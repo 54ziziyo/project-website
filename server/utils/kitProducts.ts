@@ -35,8 +35,7 @@ export const KIT_PRODUCTS: KitProduct[] = [
   },
   {
     kit: 'crm',
-    // TODO：填入 CRM 在 Gumroad 的 product_id（Content → License key → Use your product ID…）
-    productId: '',
+    productId: 'FK6lOMS7nxxbs-WHqesKAw==',
     permalink: 'jcfhy',
     label: 'CRM 客戶管理系統',
     type: 'link',
