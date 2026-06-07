@@ -9,8 +9,9 @@ export async function serveKit(
   lang: 'zh' | 'en' = 'zh',
   requiredKit: string = 'ai-personal-brand',
 ) {
-  // 本機開發免驗證，方便預覽
-  if (!import.meta.dev) {
+  // 本機開發預設免驗證方便預覽；想在本機測「真實序號解鎖」流程，在 .env 設 KIT_FORCE_AUTH=1 即可強制驗證。
+  const enforceAuth = !import.meta.dev || !!useRuntimeConfig().kitForceAuth
+  if (enforceAuth) {
     const token = getCookie(event, KIT_COOKIE)
     const payload = verifyKitToken(token)
 

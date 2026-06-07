@@ -75,7 +75,7 @@ export default defineEventHandler(async (event) => {
 
   setCookie(event, KIT_COOKIE, token, {
     httpOnly: true,
-    secure: true,
+    secure: !import.meta.dev, // 正式環境(https)才 secure；本機 http://localhost 設 false，否則瀏覽器不會回傳 cookie
     sameSite: 'lax',
     path: '/',
     maxAge: 60 * 60 * 24 * 60,
