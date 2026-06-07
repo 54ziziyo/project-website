@@ -142,9 +142,10 @@ export const products: Product[] = [
   {
     id: 'geo-ai-recommendation-prompt-pack',
     name: 'GEO 實作提示詞包｜讓 ChatGPT、Perplexity 主動推薦你',
-    category: 'Notion 模板',
+    category: 'Prompt 提示詞',
     price: 0,
-    description: '7 個步驟、可直接複製的提示詞，加一張內容追蹤表。把你的內容變成「AI 好引用」的樣子，讓 AI 在回答時主動把你講出來。',
+    description:
+      '7 個步驟、可直接複製的提示詞，加一張內容追蹤表。把你的內容變成「AI 好引用」的樣子，讓 AI 在回答時主動把你講出來。',
     fullDescription: `客人不再 Google、直接問 AI「推薦哪一間」時，你的品牌出現在答案裡了嗎？
 
 這份免費包，是把 GEO（生成引擎最佳化）拆成「動手做」的提示詞，照貼就能用。
@@ -232,7 +233,7 @@ export const products: Product[] = [
     id: 'dark-mode-personal-brand-canva',
     name: 'Canva 模板包｜小編神器 IG 貼文＆限動',
     category: 'Canva 模板',
-    price: 499,
+    price: 699,
     description:
       '換上這套視覺包，你的 IG 立刻質感升級，包含貼文、限動、個人簡介卡等所有你在 IG 上會用到的版型，適合 Canva 免費版使用。',
     fullDescription: `質感不是設計出來的，是顏色和字型決定的。
