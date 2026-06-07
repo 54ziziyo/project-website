@@ -47,7 +47,8 @@ async function unlock() {
       window.location.href = (locale.value === 'en' && r.nextEn) || r.next || '/'
     }
   } catch (e: any) {
-    error.value = e?.statusMessage || e?.data?.statusMessage || t('unlock.errFail')
+    // 後端自訂訊息在 e.data；e.statusMessage 常只是 HTTP reason（如 "Forbidden"），放最後備援
+    error.value = e?.data?.statusMessage || e?.data?.message || e?.statusMessage || t('unlock.errFail')
     loading.value = false
   }
 }

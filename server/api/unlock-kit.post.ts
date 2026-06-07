@@ -18,11 +18,12 @@ interface GumroadVerifyResponse {
   }
 }
 
-async function verifyLicense(permalink: string, licenseKey: string): Promise<GumroadVerifyResponse | null> {
+async function verifyLicense(productId: string, licenseKey: string): Promise<GumroadVerifyResponse | null> {
+  // Gumroad 一律用 product_id 驗證（部分商品強制要求，permalink 會被拒）。
   return await $fetch<GumroadVerifyResponse>('https://api.gumroad.com/v2/licenses/verify', {
     method: 'POST',
     body: new URLSearchParams({
-      product_permalink: permalink,
+      product_id: productId,
       license_key: licenseKey,
       increment_uses_count: 'false',
     }),
@@ -44,7 +45,8 @@ export default defineEventHandler(async (event) => {
   let result: GumroadVerifyResponse | null = null
 
   for (const product of candidates) {
-    const res = await verifyLicense(product.permalink, licenseKey)
+    if (!product.productId) continue // 尚未設定 product_id 的商品先略過
+    const res = await verifyLicense(product.productId, licenseKey)
     if (res?.success) {
       matched = product
       result = res
