@@ -262,7 +262,7 @@ export const products: Product[] = [
       '報價單生成器：自動計算、一鍵 PDF 匯出',
       '繁體中文介面，附 30 分鐘上手教學',
     ],
-    purchaseUrl: 'https://app.notion.com/p/CRM-376cf51200d28132af47ed83e7c62046?source=copy_link',
+    purchaseUrl: 'https://zeona.gumroad.com/l/jcfhy',
     fileType: 'Notion 模板',
     tags: ['Notion', '接案', 'CRM', '財務管理', '自由工作者'],
     isBestSeller: true,
@@ -310,49 +310,6 @@ export const products: Product[] = [
   },
 
   // ─── 素材工具包 ───────────────────────────────────────────────
-  {
-    id: 'short-video-hook-asset-pack',
-    name: '短影音開頭 3 秒爆點素材包｜字幕動畫 + 轉場音效 + 鉤子公式',
-    category: '素材工具包',
-    price: 0,
-    description: '前 3 秒決定一切。這包給你現成的字幕動畫模板、抓住注意力的轉場音效和黃金開頭鉤子。',
-    fullDescription: `CapCut / Premiere / Final Cut 都可以用的短影音素材包。
-
-🎬 字幕動畫模板
-• 爆炸式文字衝出（適合知識型影片）
-• 打字機逐字顯現（適合故事型）
-• 霓虹發光掃過（適合科技/炫酷主題）
-• 手寫感塗鴉（適合生活感 vlog）
-• 警示條/新聞快訊（適合爭議型）
-
-🔊 轉場音效包
-• 衝擊音效（讓人注意力拉回來）
-• 滑動音效（切換場景用）
-• 鈴聲/提示音（強調重點用）
-• 氛圍音（懸念感/緊張感）
-• 喜劇音效（搞笑內容用）
-
-📝 100 個黃金開頭鉤子
-• 依主題分類：知識/爭議/共鳴/懸念/清單
-• 附「哪種內容適合哪種鉤子」選擇指南
-
-⚙️ 使用格式
-• MP4（動畫模板）
-• MP3 + WAV（音效）
-• PDF（鉤子文案庫）`,
-    coverImage: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&h=600&fit=crop',
-    features: [
-      '字幕動畫模板（MP4，可直接套用）',
-      '轉場音效（MP3 + WAV）',
-      '黃金開頭鉤子文案',
-      '適用 CapCut / Premiere / Final Cut',
-      '繁體中文字幕版本',
-    ],
-    purchaseUrl: 'https://gumroad.com',
-    fileType: 'MP4 + MP3 + PDF',
-    tags: ['短影音', 'CapCut', '素材包', '轉場', 'Hook'],
-    status: 'coming-soon',
-  },
   {
     id: 'ai-personal-brand-full-pack',
     name: '手把手帶你 AI 社群經營包｜IG + 部落格 + 電子報全套攻略',
@@ -417,48 +374,5 @@ export const products: Product[] = [
     tags: ['個人品牌', 'IG', '電子報', '部落格', 'ChatGPT'],
     isBestSeller: true,
     status: 'available',
-  },
-  {
-    id: 'line-auto-budget-bot',
-    name: '懶人 LINE 自動記帳機器人腳本',
-    category: '素材工具包',
-    price: 499,
-    description: '在 LINE 打「午餐 150」，自動同步到 Google 試算表並產出超美圖表。不用打開任何 App，邊走路邊記帳。',
-    fullDescription: `記帳 App 的最大問題是：你記得打開嗎？
-
-這個腳本讓你在 LINE 隨手記，自動整理。
-
-🤖 使用方式超簡單
-1. 在 LINE 傳「午餐 150」或「交通費 45 悠遊卡」
-2. 機器人自動分類、記錄到 Google 試算表
-3. 每週日自動傳來本週消費報告
-
-📊 自動生成的圖表
-• 月支出圓餅圖（按分類）
-• 每日消費折線圖
-• 和上個月對比的長條圖
-• 「危險類別」警示（超過預算自動通知）
-
-🗂️ 支出分類（可自訂）
-• 餐飲/交通/購物/娛樂/醫療/日用/其他
-• 固定支出 vs 變動支出分開計算
-
-⚙️ 建置說明
-• 使用 LINE Messaging API（免費額度）
-• Google Apps Script（完全免費）
-• 全程不需要寫程式，照步驟設定即可
-• 附 30 分鐘建置影片教學`,
-    coverImage: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
-    features: [
-      'LINE 傳訊息自動記帳，不用開 App',
-      '自動同步 Google 試算表',
-      '每週自動產出消費圓餅圖 + 折線圖',
-      '超預算自動 LINE 通知',
-      '附逐步建置影片教學（30 分鐘完成）',
-    ],
-    purchaseUrl: 'https://gumroad.com',
-    fileType: 'Script + PDF',
-    tags: ['LINE', '記帳', '自動化', 'Google試算表', '懶人工具'],
-    status: 'coming-soon',
   },
 ]
