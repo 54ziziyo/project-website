@@ -271,16 +271,16 @@ export const products: Product[] = [
     id: 'workplace-chatgpt-50-scenarios',
     name: '上班族 ChatGPT 職場提示包｜50 個即貼即用場景',
     category: 'Prompt 提示詞',
-    price: 199,
+    price: 0,
     description: '週報、會議摘要、Email、簡報、績效評估…50 種真實職場場景，直接貼給 ChatGPT，不用再想怎麼下指令。',
     fullDescription: `你有沒有每次打開 ChatGPT，卻不知道怎麼跟它說話？
 
 這包提示詞就是為台灣上班族設計的「職場 AI 作弊卡」。
 
 50 個場景全部來自真實工作情境，每個都附：
-✅ 完整提示詞（繁體中文，可直接貼上）
-✅ 實際輸出範例（讓你知道效果）
-✅ 調整技巧說明（怎麼改成自己的風格）
+✅ 完整提示詞（繁體中文，可直接複製貼上）
+✅ 調整技巧（教你微調成自己的風格）
+✅ 加碼教學：如何讓 AI 輸出更像人說話
 
 涵蓋部門：
 • 行銷/社群：文案、活動企劃、競品分析
@@ -293,16 +293,16 @@ export const products: Product[] = [
     coverImage: 'https://i.ibb.co/MxF5qMRt/Chat-GPT-Image-2026-6-8-03-12-02.png',
     features: [
       '50 個繁體中文職場提示詞，copy-paste 即用',
-      '每個場景附真實輸出範例',
+      '多數場景附「調整技巧」教你微調方向',
       '涵蓋行銷、PM、業務、HR 等部門',
       '附「如何讓 AI 輸出更像人說話」教學',
-      '購買後永久下載，終身免費更新',
+      '線上閱讀版，打開即用、免費開放',
     ],
-    purchaseUrl: 'https://gumroad.com',
-    fileType: 'PDF',
+    purchaseUrl: '/kit/workplace-chatgpt-50-scenarios',
+    fileType: '線上閱讀版',
     tags: ['上班族', 'ChatGPT', '職場', 'Email', '週報'],
     isBestSeller: false,
-    status: 'coming-soon',
+    status: 'available',
   },
   {
     id: 'hook-formula-200',
