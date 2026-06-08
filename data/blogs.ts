@@ -77,7 +77,7 @@ export const blogPosts: BlogPost[] = [
       <p style="font-size:18px;line-height:1.8;"><strong>一句話總結：</strong>Google 正式用「AI 生成答案」取代傳統的連結清單，引發部分用戶反彈——隱私搜尋引擎 <strong>DuckDuckGo 在 iPhone 上的安裝量單日暴增近 70%</strong>。對靠搜尋帶客的個人品牌與小商家來說，這代表遊戲規則變了：你要優化的，不再只是「被搜尋到」，而是「被 AI 主動講出來」。</p>
 
       <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
-        <strong>TL;DR（懶人包）：</strong>① Google I/O 宣布以 AI 對話引擎取代搜尋框，稱「25 年來最大升級」。② 不滿的用戶湧向 DuckDuckGo、Brave、Kagi。③ 兩種說法同時成立——AI 搜尋很受歡迎，但「誰決定要用多少 AI」才是爭點。④ 你的對策：別只做 SEO，要做 <a href="/blog/geo-optimization-complete-guide-2026" style="color:#8782FF;font-weight:bold;">GEO（讓 AI 主動推薦你）</a>。
+        <strong>TL;DR（懶人包）：</strong>① Google I/O 宣布以 AI 對話引擎取代搜尋框，稱「25 年來最大升級」。② 不滿的用戶湧向 DuckDuckGo、Brave、Kagi。③ 兩種說法同時成立——AI 搜尋很受歡迎，但「誰決定要用多少 AI」才是爭點。④ 你的對策：別只做 SEO，要做 <a href="/toolbox/geo-ai-recommendation-prompt-pack" style="color:#8782FF;font-weight:bold;">GEO（讓 AI 主動推薦你）</a>。
       </blockquote>
 
       <h2>發生了什麼事？</h2>
@@ -275,7 +275,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
-        <strong>不想自己從零開始？</strong>我把這套 GEO 流程用到的提示詞與內容範本，整理在 <a href="/toolbox" style="color:#8782FF;font-weight:bold;">數位工具箱</a> 裡，挑了就能套用；想看真實成效，也可以讀這篇 <a href="/blog/case-study-motorbike-geo-success" style="color:#8782FF;font-weight:bold;">重機部品 GEO 實戰案例</a>。需要把結構化資料與官網一次做到位，歡迎 <a href="/contact" style="color:#8782FF;font-weight:bold;">直接聊聊</a>。
+        <strong>不想自己從零開始？</strong>我把這套 GEO 流程用到的提示詞與內容範本，整理在 <a href="/toolbox/geo-ai-recommendation-prompt-pack" style="color:#8782FF;font-weight:bold;">GEO 實作提示詞包</a> 中，挑了就能套用；想看真實成效，也可以讀這篇 <a href="/blog/case-study-motorbike-geo-success" style="color:#8782FF;font-weight:bold;">重機部品 GEO 實戰案例</a>。需要把結構化資料與官網一次做到位，歡迎 <a href="/contact" style="color:#8782FF;font-weight:bold;">直接聊聊</a>。
       </blockquote>
     `,
   },
