@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { blogCategories, type BlogPost } from '~/data/blogs'
+import { blogTagsEn } from '~/data/blogTagsEn'
 
 const { data: blogPosts } = await useAsyncData<BlogPost[]>(
   'blogs',
@@ -53,7 +54,8 @@ const tagLabelMap = computed(() => {
   }
   return m
 })
-const tagLabel = (tg: string) => (isEn.value ? tagLabelMap.value[tg] || tg : tg)
+// 顯示用標籤翻譯：靜態字典優先（全站權威），其次各篇 tagsEn 同序對照，最後 fallback 原文
+const tagLabel = (tg: string) => (isEn.value ? blogTagsEn[tg] || tagLabelMap.value[tg] || tg : tg)
 
 // SEO
 useHead(() => ({

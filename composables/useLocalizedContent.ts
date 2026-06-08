@@ -1,4 +1,5 @@
 import { categoryLabelsEn, productEn, portfolioEn, blogEn, productDetailEn } from '~/data/contentEn'
+import { blogTagsEn } from '~/data/blogTagsEn'
 
 // 依目前語系，回傳卡片摘要的本地化內容；en 缺漏時 fallback 回中文原欄位。
 export function useLocalizedContent() {
@@ -28,8 +29,9 @@ export function useLocalizedContent() {
     isEn.value ? p.titleEn || blogEn[p.id]?.title || p.title : p.title
   const bExcerpt = (p: { id: string; excerpt: string; excerptEn?: string }) =>
     isEn.value ? p.excerptEn || blogEn[p.id]?.excerpt || p.excerpt : p.excerpt
+  // 英文版：每個中文 tag 走全站字典翻譯（缺漏才 fallback 原文），與部落格列表頁一致
   const bTags = (p: { tags: string[]; tagsEn?: string[] }) =>
-    isEn.value && p.tagsEn && p.tagsEn.length ? p.tagsEn : p.tags
+    isEn.value ? (p.tags || []).map((tg) => blogTagsEn[tg] || tg) : p.tags
 
   return { isEn, catLabel, pName, pDesc, pTags, pFullDesc, pFeatures, wTitle, wDesc, bTitle, bExcerpt, bTags }
 }
