@@ -148,6 +148,11 @@ export const blogPosts: BlogPost[] = [
     tags: ['GEO', '生成引擎最佳化', 'AI搜尋優化', 'ChatGPT行銷', 'SEO'],
     excerpt:
       '當客人不再 Google、直接問 AI「推薦哪一間」，你的品牌出現在答案裡了嗎？這是一份可以直接照做的 GEO 教學：7 個步驟＋可複製提示詞，讓 ChatGPT、Perplexity、Google AI 主動把你列入推薦清單。建議收藏。',
+    titleEn:
+      'What Is GEO? The Complete 2026 Generative Engine Optimization Guide: 7 Steps to Get ChatGPT & Perplexity to Recommend You (with Prompts)',
+    excerptEn:
+      'When customers stop Googling and just ask AI "which one do you recommend?", is your brand in the answer? A ready-to-follow GEO guide: 7 steps plus copy-paste prompts to get ChatGPT, Perplexity, and Google AI to put you on the shortlist. Worth bookmarking.',
+    tagsEn: ['GEO', 'Generative Engine Optimization', 'AI Search Optimization', 'ChatGPT Marketing', 'SEO'],
     coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop',
     author: 'Zeona Studio',
     publishedAt: '2026-06-04',
@@ -159,6 +164,13 @@ export const blogPosts: BlogPost[] = [
         'GEO（生成引擎最佳化）完整教學：搞懂 GEO 與 SEO 差異，用 7 個可照做的步驟與可複製提示詞，讓 ChatGPT、Perplexity、Google AI Overviews 主動推薦你的品牌。',
       keywords: 'GEO, 生成引擎最佳化, Generative Engine Optimization, AI搜尋優化, AEO, ChatGPT行銷, Perplexity, SEO 2026',
       ogImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop',
+    },
+    seoEn: {
+      title: 'What Is GEO? Complete 2026 Generative Engine Optimization Guide (with Prompts) | Zeona Studio',
+      description:
+        'A complete GEO (Generative Engine Optimization) guide: understand the GEO vs SEO difference, and use 7 actionable steps with copy-paste prompts to get ChatGPT, Perplexity, and Google AI Overviews to recommend your brand.',
+      keywords:
+        'GEO, Generative Engine Optimization, AI Search Optimization, AEO, ChatGPT marketing, Perplexity, Google AI Overviews, SEO 2026',
     },
     content: `
       <p style="font-size:18px;line-height:1.8;"><strong>一句話定義：GEO（Generative Engine Optimization，生成引擎最佳化）</strong>是讓你的內容更容易被 ChatGPT、Perplexity、Gemini、Google AI Overviews 等「生成式 AI」<strong>理解、信任並主動引用</strong>的優化方法。簡單說——SEO 是讓你被「搜尋到」，GEO 是讓你被 AI「推薦出去」。</p>
