@@ -3,7 +3,7 @@ import { products, productCategories, type ProductCategory } from '~/data/produc
 
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { catLabel, pName, pDesc, pTags } = useLocalizedContent()
+const { catLabel, pName, pDesc, pTags, pCoverImage } = useLocalizedContent()
 
 useHead(() => ({
   title: t('toolbox.metaTitle'),
@@ -176,7 +176,7 @@ onBeforeUnmount(() => {
           <!-- 封面圖 -->
           <div class="relative overflow-hidden bg-gray-50">
             <img
-              :src="product.coverImage"
+              :src="pCoverImage(product)"
               :alt="pName(product)"
               class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
               :loading="index < 6 ? 'eager' : 'lazy'"

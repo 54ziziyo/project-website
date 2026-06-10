@@ -10,7 +10,7 @@ const isVisible = ref(false)
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { isEn, catLabel, bTitle, bExcerpt, bTags } = useLocalizedContent()
+const { isEn, catLabel, bTitle, bExcerpt, bTags, bCoverImage } = useLocalizedContent()
 
 const { data: currentPost } = await useAsyncData<BlogPost>(
   `blog-${route.params.id}`,
@@ -236,7 +236,7 @@ onMounted(() => {
         >
           <div class="rounded-2xl overflow-hidden shadow-xl">
             <img
-              :src="currentPost.coverImage"
+              :src="bCoverImage(currentPost)"
               :alt="`${bTitle(currentPost)} - ${catLabel(currentPost.category)}`"
               :title="bTitle(currentPost)"
               class="w-full h-auto aspect-[16/9] object-cover"
@@ -297,7 +297,7 @@ onMounted(() => {
           >
             <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
               <img
-                :src="post.coverImage"
+                :src="bCoverImage(post)"
                 :alt="`${bTitle(post)} - ${catLabel(post.category)}`"
                 :title="bTitle(post)"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"

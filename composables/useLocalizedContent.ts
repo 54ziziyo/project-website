@@ -19,6 +19,12 @@ export function useLocalizedContent() {
   const pFeatures = (p: { id: string; features: string[] }) =>
     isEn.value ? productDetailEn[p.id]?.features ?? p.features : p.features
 
+  const pCoverImage = (p: { coverImage: string; coverImageEn?: string }) =>
+    isEn.value ? p.coverImageEn ?? p.coverImage : p.coverImage
+
+  const bCoverImage = (p: { coverImage: string; coverImageEn?: string }) =>
+    isEn.value ? p.coverImageEn ?? p.coverImage : p.coverImage
+
   const wTitle = (p: { id: string; title: string }) =>
     isEn.value ? portfolioEn[p.id]?.title ?? p.title : p.title
   const wDesc = (p: { id: string; shortDesc: string }) =>
@@ -33,5 +39,5 @@ export function useLocalizedContent() {
   const bTags = (p: { tags: string[]; tagsEn?: string[] }) =>
     isEn.value ? (p.tags || []).map((tg) => blogTagsEn[tg] || tg) : p.tags
 
-  return { isEn, catLabel, pName, pDesc, pTags, pFullDesc, pFeatures, wTitle, wDesc, bTitle, bExcerpt, bTags }
+  return { isEn, catLabel, pName, pDesc, pTags, pFullDesc, pFeatures, pCoverImage, bCoverImage, wTitle, wDesc, bTitle, bExcerpt, bTags }
 }

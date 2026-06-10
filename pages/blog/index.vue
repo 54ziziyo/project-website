@@ -41,7 +41,7 @@ const router = useRouter()
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { isEn, catLabel, bTitle, bExcerpt } = useLocalizedContent()
+const { isEn, catLabel, bTitle, bExcerpt, bCoverImage } = useLocalizedContent()
 
 // 全站標籤中→英對照（由各篇 tags / tagsEn 同序建立）；篩選仍用中文 key
 const tagLabelMap = computed(() => {
@@ -556,7 +556,7 @@ onMounted(() => {
                   class="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-28 rounded-lg overflow-hidden bg-gray-100"
                 >
                   <img
-                    :src="post.coverImage"
+                    :src="bCoverImage(post)"
                     :alt="`${bTitle(post)} - ${catLabel(post.category)}`"
                     :title="bTitle(post)"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

@@ -4,7 +4,7 @@ import { products, type Product } from '~/data/products'
 const route = useRoute()
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { catLabel, pName, pDesc, pTags, pFullDesc, pFeatures } = useLocalizedContent()
+const { catLabel, pName, pDesc, pTags, pFullDesc, pFeatures, pCoverImage } = useLocalizedContent()
 const { getKeyForKit } = useLicenseStore()
 
 // 「已購買，前往商品」：用本地記住的序號直接重新解鎖並跳到該商品內容；沒記住過就去解鎖頁輸入。
@@ -54,7 +54,7 @@ useHead(() => {
       { name: 'description', content: pDesc(product.value) },
       { property: 'og:title', content: pName(product.value) },
       { property: 'og:description', content: pDesc(product.value) },
-      { property: 'og:image', content: product.value.coverImage },
+      { property: 'og:image', content: pCoverImage(product.value) },
       { property: 'og:type', content: 'product' },
     ],
   }
@@ -91,7 +91,7 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
         >
           <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-100">
             <img
-              :src="product.coverImage"
+              :src="pCoverImage(product)"
               :alt="pName(product)"
               class="w-full h-full object-cover"
               width="800"
