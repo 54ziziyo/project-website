@@ -17,6 +17,7 @@ export interface BlogPost {
     keywords: string
   }
   coverImage: string
+  coverImageEn?: string
   author: string
   publishedAt: string
   updatedAt: string
@@ -41,6 +42,178 @@ export const blogCategories = [
 export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: 'typeless-voice-ai-prompt-guide-2026',
+    title: '拜託！使用提示詞之前，先下載語音助理，快速讓 AI 真正認識你、才能產出更精準的內容',
+    category: 'Prompt 提示詞',
+    tags: ['Typeless', '語音輸入', 'AI工具', '提示詞', 'ChatGPT'],
+    excerpt:
+      '你照著提示詞貼給 AI，結果產出的東西感覺很通用、跟你沒關係？問題不在提示詞，在於 AI 不知道你是誰。這篇教你用 Typeless 語音輸入，四步驟口說完自我介紹，讓 AI 立刻「認識你」，產出才會真正符合你的需求。',
+    titleEn: 'Stop Typing, Start Talking: Use Typeless to Help AI Truly Understand You',
+    excerptEn:
+      'Your AI outputs feel generic and disconnected from your brand? The problem isn\'t your prompt — AI simply doesn\'t know who you are. Learn how to use Typeless voice input with a 4-step spoken self-intro so AI instantly "knows you" and produces far more relevant content.',
+    tagsEn: ['Typeless', 'Voice Input', 'AI Tools', 'Prompt Engineering', 'ChatGPT'],
+    coverImage: 'https://i.ibb.co/d4K2tdS3/Chat-GPT-Image-2026-6-10-02-19-51.png',
+    coverImageEn: 'https://i.ibb.co/KxgbwtGs/Chat-GPT-Image-2026-6-10-02-33-35.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-06-10',
+    updatedAt: '2026-06-10',
+    featured: false,
+    seo: {
+      title: 'Typeless 語音輸入教學：讓 AI 真正認識你，提示詞產出更精準 | Zeona Studio',
+      description:
+        '用 Typeless 四步驟口說自我介紹，幫 AI 建立你的背景脈絡。配合 [填入] 提示詞包，不再產出通用廢話。附出國翻譯實用技巧與免費下載連結。',
+      keywords:
+        'Typeless 教學, 語音輸入 AI, 提示詞技巧, ChatGPT 語音, AI 自我介紹, 提示詞優化, Typeless 免費下載, AI 工具 2026',
+      ogImage: 'https://i.ibb.co/d4K2tdS3/Chat-GPT-Image-2026-6-10-02-19-51.png',
+    },
+    seoEn: {
+      title: 'Typeless Voice Input Guide: Help AI Know You So Prompts Actually Work | Zeona Studio',
+      description:
+        'Use Typeless to speak a 4-step self-intro and give AI the context it needs. Combine with fill-in prompts for outputs that sound like you, not a generic bot. Free download included.',
+      keywords:
+        'Typeless tutorial, voice input AI, prompt engineering, ChatGPT voice, AI context, prompt optimization, Typeless free download, AI tools 2026',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.8;">你有沒有遇過這種情況：認真找了一份提示詞，填完貼給 ChatGPT，結果產出的東西感覺很「正確」，但就是跟你沒關係？讀起來像是任何人都可以用的通用範本，不像你說的話？</p>
+      <p>問題不在提示詞。提示詞本身沒錯。</p>
+      <p><strong>問題在於：AI 根本不知道你是誰。</strong></p>
+
+      <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
+        <strong>TL;DR 懶人包：</strong><br>
+        ① AI 產出通用廢話，是因為沒有你的背景脈絡。<br>
+        ② 解法：每次下提示詞前，先告訴 AI「你是誰、在做什麼、想達成什麼」。<br>
+        ③ 打字太慢？用 <strong>Typeless</strong> 語音輸入，四步驟口說完，直接貼進提示詞。<br>
+        ④ 出國聽不懂廣播？Typeless 即時翻譯也能用。<br>
+        ⑤ 完全免費，手機電腦都能用：<a href="https://www.typeless.com/?via=ziyun" target="_blank" rel="noopener" style="color:#8782FF;font-weight:700;">立即下載</a>
+      </blockquote>
+
+      <h2>為什麼你的 AI 產出沒有「你的味道」？</h2>
+      <p>AI 語言模型在訓練時學的是「人類平均」——它知道什麼是好的 IG 文案、什麼是標準的部落格結構，但它不知道你是做哪一行的、你的目標受眾是誰、你的語氣是輕鬆還是專業。</p>
+      <p>如果你只給它一個提示詞，沒有背景說明，它就用「最安全的平均值」來填補那些空白。產出來的東西看起來沒問題，但就是缺那個只有你才有的味道。</p>
+      <p>這就是為什麼很多提示詞包（包括 Zeona 的）在每個提示詞裡都有 <span style="background:#fef3c7;padding:2px 6px;border-radius:4px;font-weight:700;">[填入]</span> 的欄位：</p>
+
+      <div style="text-align:center;margin:28px 0;">
+        <img src="https://i.ibb.co/Kp2fZyyz/1781071920607.jpg" alt="Zeona AI個人品牌建立包提示詞示範，顯示[填入]欄位" style="max-width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.12);">
+        <p style="font-size:0.85em;color:#666;margin-top:10px;">Zeona AI 個人品牌建立包的提示詞範例——每個 [填入] 都需要你提供關於自己的資訊</p>
+      </div>
+
+      <p>這些 <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">[填入]</code> 欄位，是提示詞最重要的部分。你填得越具體、越精準，AI 產出的東西就越符合你的需求。</p>
+      <p>但問題來了：每次都要重新打一遍「我是 XXX，我在做 XXX，我的目標受眾是 XXX……」，非常耗時間，尤其是提示詞一多，你很容易就懶得填，直接省略——然後又得到一堆通用廢話。</p>
+
+      <h2>Typeless：用說的比打字快 4 倍</h2>
+      <p>這就是我一直推薦大家下載 <strong>Typeless</strong> 的原因。</p>
+      <p>Typeless 是一款語音輸入工具，支援 macOS、Windows、iOS、Android，完全免費。它最核心的功能是：<strong>你說什麼，它就幫你整理成乾淨的文字</strong>——自動去掉「那個、然後、嗯」這類填充詞，自動整理成有結構的段落。</p>
+
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px;margin:28px 0;">
+        <h3 style="margin-top:0;color:#1e293b;">Typeless 主要功能</h3>
+        <ul style="margin:0;padding-left:20px;line-height:2;">
+          <li><strong>語音轉文字，快 4 倍</strong>：說話速度約 220 字/分鐘，打字只有 45 字/分鐘</li>
+          <li><strong>自動過濾填充詞</strong>：「嗯」「那個」「然後就是」——自動消除</li>
+          <li><strong>自動整理格式</strong>：清單、步驟、重點，說完直接有結構</li>
+          <li><strong>個人化語氣</strong>：學習你的說話習慣，越用越像你</li>
+          <li><strong>100+ 語言</strong>：自動偵測語言並轉錄</li>
+          <li><strong>即時翻譯</strong>：聽不懂的語言，它幫你即時翻成你看得懂的文字</li>
+          <li><strong>整合 ChatGPT / Claude / Notion</strong>：在這些工具裡直接語音輸入</li>
+          <li><strong>零雲端存留</strong>：不上傳資料、不拿你的內容訓練模型</li>
+        </ul>
+      </div>
+
+      <h2>四步驟口說自我介紹法：讓 AI 立刻認識你</h2>
+      <p>下載好 Typeless 之後，在你貼提示詞給 AI 之前，先做這件事：</p>
+      <p>打開 Typeless，直接對著麥克風說出這四件事：</p>
+
+      <div style="display:grid;gap:16px;margin:24px 0;">
+        <div style="background:#f5f3ff;border-left:4px solid #8782FF;border-radius:0 12px 12px 0;padding:16px 20px;">
+          <div style="font-weight:800;color:#6d28d9;font-size:13px;letter-spacing:1px;margin-bottom:6px;">STEP 1</div>
+          <div style="font-weight:700;font-size:16px;color:#1e293b;">你是誰</div>
+          <div style="color:#64748b;margin-top:4px;">身份、背景、職業。例：「我是自由接案的社群經理，主要服務餐飲類的小品牌，經營繁體中文市場。」</div>
+        </div>
+        <div style="background:#f5f3ff;border-left:4px solid #8782FF;border-radius:0 12px 12px 0;padding:16px 20px;">
+          <div style="font-weight:800;color:#6d28d9;font-size:13px;letter-spacing:1px;margin-bottom:6px;">STEP 2</div>
+          <div style="font-weight:700;font-size:16px;color:#1e293b;">你在做什麼</div>
+          <div style="color:#64748b;margin-top:4px;">目前的專案或工作內容。例：「我現在在幫一家日式甜點店做 IG 內容規劃，這個月要做 12 篇貼文。」</div>
+        </div>
+        <div style="background:#f5f3ff;border-left:4px solid #8782FF;border-radius:0 12px 12px 0;padding:16px 20px;">
+          <div style="font-weight:800;color:#6d28d9;font-size:13px;letter-spacing:1px;margin-bottom:6px;">STEP 3</div>
+          <div style="font-weight:700;font-size:16px;color:#1e293b;">你想達到的目的</div>
+          <div style="color:#64748b;margin-top:4px;">這次要解決什麼問題。例：「我想增加貼文的互動率，讓更多人在留言區說出自己的口味偏好。」</div>
+        </div>
+        <div style="background:#f5f3ff;border-left:4px solid #8782FF;border-radius:0 12px 12px 0;padding:16px 20px;">
+          <div style="font-weight:800;color:#6d28d9;font-size:13px;letter-spacing:1px;margin-bottom:6px;">STEP 4</div>
+          <div style="font-weight:700;font-size:16px;color:#1e293b;">你希望成果是什麼樣子</div>
+          <div style="color:#64748b;margin-top:4px;">具體的輸出格式或風格。例：「語氣要輕鬆、有點療癒，不要太商業，最後要有一個讓人想回應的問題。」</div>
+        </div>
+      </div>
+
+      <p>說完之後，Typeless 會把你說的話整理成乾淨的文字。</p>
+      <p>接著，<strong>把這段文字貼到提示詞的最前面</strong>，然後再貼你的提示詞內容。</p>
+      <p>AI 一看到背景脈絡，就知道在跟誰說話了——產出的內容會更精準、更有你的味道，你需要來回修改的次數也會大幅減少。</p>
+
+      <h2>實際操作示範：搭配 Zeona 提示詞包</h2>
+      <p>以 Zeona 的「AI 個人品牌建立包」為例，裡面的提示詞長這樣：</p>
+
+      <div style="background:#0f172a;border-radius:12px;padding:20px 24px;margin:24px 0;font-family:'SF Mono',Menlo,monospace;font-size:14px;color:#e2e8f0;line-height:1.8;">
+        <div style="color:#94a3b8;margin-bottom:12px;font-size:12px;">ChatGPT 提示詞範例</div>
+        你是一位 IG 社群行銷專家。請幫我寫一篇 IG 輪播圖的完整腳本。<br>
+        我的品牌定位：<span style="color:#fbbf24;font-weight:700;">[填入]</span><br>
+        今天的主題：<span style="color:#fbbf24;font-weight:700;">[填入，例如：「3 個 ChatGPT 初學者常犯的錯誤」]</span><br>
+        目標受眾：<span style="color:#fbbf24;font-weight:700;">[填入]</span><br>
+        語氣風格：<span style="color:#fbbf24;font-weight:700;">[填入，例如：輕鬆、有點幽默但專業]</span>
+      </div>
+
+      <p>用 Typeless 說完四步驟後，你的輸入變成這樣：</p>
+
+      <div style="background:#0f172a;border-radius:12px;padding:20px 24px;margin:24px 0;font-family:'SF Mono',Menlo,monospace;font-size:14px;color:#e2e8f0;line-height:1.8;">
+        <div style="color:#94a3b8;margin-bottom:12px;font-size:12px;">加上背景脈絡後</div>
+        <span style="color:#86efac;">【我的背景】我是自由接案的社群經理，主要服務餐飲類小品牌，目標是幫客戶的 IG 增加真實互動，語氣偏輕鬆療癒。</span><br><br>
+        你是一位 IG 社群行銷專家。請幫我寫一篇 IG 輪播圖的完整腳本。<br>
+        我的品牌定位：<span style="color:#fbbf24;">服務台灣在地日式甜點品牌，主打手工感與療癒氛圍</span><br>
+        今天的主題：<span style="color:#fbbf24;">3 種讓人忍不住存起來的甜點拍照角度</span><br>
+        目標受眾：<span style="color:#fbbf24;">25-35 歲女性，喜歡美食打卡、注重生活美感</span><br>
+        語氣風格：<span style="color:#fbbf24;">輕鬆、有點療癒，不要太商業</span>
+      </div>
+
+      <p>同樣一個提示詞，加了背景脈絡之後，AI 的產出會完全不同——不再是通用範本，而是真正符合你品牌風格的內容。</p>
+
+      <h2>出國神器：聽不懂也沒關係</h2>
+      <p>我開始用 Typeless 是因為有業配機會，但越用越離不開它，尤其是出國的時候。</p>
+      <p>遇到聽不懂的廣播、或是對方講太快收音不好，Google 翻譯有時候根本派不上用場。但 Typeless 的即時翻譯不一樣——它會<strong>原封不動</strong>把對方說的話呈現在螢幕上，你至少先看懂對方在說什麼。</p>
+      <p>雖然沒辦法馬上很快速地回覆，但你至少不會一臉茫然不知道發生了什麼事。這在陌生環境裡非常重要。現在我手機和電腦版都有下載，是出門必帶工具之一。</p>
+
+      <div style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:12px;padding:20px 24px;margin:24px 0;">
+        <div style="font-weight:800;color:#047857;margin-bottom:8px;">✈️ 出國實用場景</div>
+        <ul style="margin:0;padding-left:20px;color:#065f46;line-height:2;">
+          <li>機場廣播聽不懂 → Typeless 即時轉文字</li>
+          <li>飯店人員說話太快 → 手機錄音即時翻譯</li>
+          <li>日文/韓文菜單或指示牌 → 語音讀出來讓它翻</li>
+          <li>商務會議外國口音濃 → 會議內容即時轉錄</li>
+        </ul>
+      </div>
+
+      <h2>現在就去下載（完全免費）</h2>
+      <p>Typeless 支援 macOS、Windows、iOS、Android，免費版功能已經非常完整。</p>
+      <p>下載完成後，試著對它說一遍你的四步驟自我介紹，把整理好的內容存起來——以後每次開啟新的 AI 對話，貼上去就好，不用再重新介紹自己。</p>
+
+      <div style="text-align:center;margin:32px 0;">
+        <a href="https://www.typeless.com/?via=ziyun" target="_blank" rel="noopener"
+          style="display:inline-block;background:linear-gradient(135deg,#8782ff,#a855f7);color:#fff;font-weight:800;font-size:16px;padding:16px 40px;border-radius:999px;text-decoration:none;box-shadow:0 4px 20px rgba(135,130,255,0.4);">
+          免費下載 Typeless →
+        </a>
+        <p style="color:#64748b;font-size:13px;margin-top:12px;">透過此連結下載，支持 Zeona Studio 的內容創作 🙏</p>
+      </div>
+
+      <hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0;">
+
+      <h2>總結：三件事記起來</h2>
+      <ol style="line-height:2.2;">
+        <li>AI 產出通用，是因為它不知道你是誰——每次下提示詞前，先給它背景脈絡</li>
+        <li>用 Typeless 語音輸入說四步驟自我介紹，比打字快 4 倍，整理好直接貼進提示詞</li>
+        <li>出國聽不懂？Typeless 即時翻譯也能用，手機電腦版都有</li>
+      </ol>
+      <p>搭配 Zeona 的提示詞包使用效果最好：<a href="/toolbox" style="color:#8782FF;font-weight:700;">前往數位工具箱 →</a></p>
+    `,
+  },
   {
     id: 'openai-super-app-chatgpt-codex-2026',
     title: 'OpenAI 要把 ChatGPT、Codex、Atlas 併成「超級應用」：一句「聊天已死」，對創作者意味著什麼？',
