@@ -75,6 +75,12 @@ export const productEn: Record<string, { name: string; description: string; tags
       'Type “lunch 150” in LINE — it auto-syncs to Google Sheets and builds beautiful charts. No app to open; track expenses on the go.',
     tags: ['LINE', 'Budgeting', 'Automation', 'Google Sheets', 'Lazy Tool'],
   },
+  'super-voice-assistant': {
+    name: 'Please — Download This Voice Assistant Before Using Any Prompt',
+    description:
+      'Stop typing. Speak 4 sentences to tell AI who you are, then paste into any prompt — output becomes 10× more relevant to you. Free download, use it now.',
+    tags: ['Voice Input', 'AI Tools', 'Typeless', 'Prompts', 'Free'],
+  },
 }
 
 export const portfolioEn: Record<string, { title: string; shortDesc: string }> = {
@@ -489,6 +495,46 @@ This script lets you log on the go in LINE, organized automatically.
       'Weekly auto pie chart + line chart',
       'Auto LINE alert when over budget',
       'Includes a step-by-step video (done in 30 min)',
+    ],
+  },
+  'super-voice-assistant': {
+    fullDescription: `Ever follow a prompt exactly, paste it into ChatGPT, and get something that feels totally generic — like anyone could have written it?
+
+The problem isn't the prompt. **AI just doesn't know who you are.**
+
+Every time you use a prompt, you're supposed to tell AI your background and context first. But typing that out from scratch every single time is slow. Most people skip it — and that's why they keep getting generic output.
+
+That's why I always tell people to download **Typeless** first.
+
+────────────────
+🎙️ The 4-Step Spoken Self-Intro
+
+Open Typeless and speak these four things into your mic:
+1. **Who you are** (your identity, background, role)
+2. **What you're working on** (your current project or task)
+3. **What you want to achieve** (the goal for this session)
+4. **What the output should look like** (tone, format, style)
+
+Typeless transcribes everything into clean, structured text — no filler words, no mess. Paste that at the top of any prompt, and AI instantly knows who it's talking to. Outputs become more relevant, more on-brand, and need far fewer revisions.
+
+────────────────
+🌏 Why I Love Typeless Abroad
+
+I started using Typeless through a partnership, but I got genuinely hooked — especially for travel. When someone speaks too fast or the audio is bad, Google Translate often can't keep up. Typeless puts their exact words on your screen in real time, so you at least know what's being said — even if you can't respond immediately.
+
+I keep it on both my phone and laptop. It's become a travel essential.
+
+────────────────
+📥 How to Get It
+
+Click the button below to download Typeless free through my link.
+Once installed, speak your 4-step intro once and save the text — paste it at the top of any AI session from now on.`,
+    features: [
+      '4-step spoken self-intro — give AI the context it needs',
+      'Voice input is 4× faster than typing (220 wpm vs 45 wpm)',
+      'Pairs with any prompt pack for far more relevant output',
+      "Live translation — great when you can't understand someone abroad",
+      'Free download, works on mobile and desktop',
     ],
   },
 }
