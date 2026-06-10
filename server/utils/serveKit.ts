@@ -30,11 +30,7 @@ export async function serveKit(
     }
   }
 
-  // 英文檔若尚未提供，先 fallback 回中文版，避免 404
-  let html = await useStorage('assets:server').getItem<string>(file)
-  if (!html && file.endsWith('.en.html')) {
-    html = await useStorage('assets:server').getItem<string>('kit/ai-personal-brand.html')
-  }
+  const html = await useStorage('assets:server').getItem<string>(file)
   if (!html) {
     throw createError({ statusCode: 404, statusMessage: 'Content not found' })
   }

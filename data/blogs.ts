@@ -42,6 +42,107 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'openai-super-app-chatgpt-codex-2026',
+    title: 'OpenAI 要把 ChatGPT、Codex、Atlas 併成「超級應用」：一句「聊天已死」，對創作者意味著什麼？',
+    category: 'AI 人工智慧',
+    tags: ['OpenAI', 'ChatGPT', 'Codex', 'AI 超級應用', 'AI 工作流'],
+    excerpt:
+      'OpenAI 要在上市前搞個大動作：把 ChatGPT、寫程式的 Codex、還有 Atlas 瀏覽器，全部塞進同一個「超級應用」裡，公司高層甚至放話「聊天已死」。這到底在吵什麼？這篇用最白話的方式講清楚來龍去脈、附上出處，再告訴你它對創作者和小商家有什麼實際影響，最後給你 3 個現在就能動手做的準備（附提示詞）。',
+    titleEn:
+      'OpenAI Is Merging ChatGPT and Codex Into a "Super App": Why "Chat Is Dead" Matters for Creators',
+    excerptEn:
+      'Ahead of its IPO, OpenAI is folding ChatGPT, Codex, and the Atlas browser into one desktop "super app", and an exec told the FT that "chat is dead". Here is a plain-English breakdown with sources, what it means for creators and small brands, plus 3 practical steps to get ahead (with a prompt).',
+    tagsEn: ['OpenAI', 'ChatGPT', 'Codex', 'AI Super App', 'AI Workflow'],
+    coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop',
+    author: 'Zeona Studio',
+    publishedAt: '2026-06-09',
+    updatedAt: '2026-06-09',
+    featured: true,
+    seo: {
+      title: 'OpenAI「超級應用」來了：ChatGPT＋Codex 合併、「聊天已死」對創作者的意義（2026）| Zeona Studio',
+      description:
+        'OpenAI 趕在 IPO 前把 ChatGPT、Codex、Atlas 合併成桌面超級應用，高層直言「聊天已死」。本文用白話拆解事件與出處，分析對創作者與小商家的影響，並給 3 個提前卡位的實作步驟（附提示詞）。',
+      keywords:
+        'OpenAI 超級應用, ChatGPT Codex 合併, 聊天已死, OpenAI IPO, AI 代理, agentic AI, Codex, Atlas 瀏覽器, AI 工作流, 2026 AI 趨勢',
+      ogImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop',
+    },
+    seoEn: {
+      title: 'OpenAI Super App: ChatGPT + Codex Merge and Why "Chat Is Dead" (2026) | Zeona Studio',
+      description:
+        'OpenAI is merging ChatGPT, Codex, and Atlas into a desktop super app before its IPO, with an exec saying "chat is dead". A plain-English breakdown with sources, the impact on creators and small brands, and 3 practical steps (with a prompt).',
+      keywords:
+        'OpenAI super app, ChatGPT Codex merge, chat is dead, OpenAI IPO, AI agents, agentic AI, Codex, Atlas browser, AI workflow, 2026 AI trends',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.8;"><strong>一句話總結：</strong>OpenAI 正把聊天的 ChatGPT、寫程式的 Codex 和 Atlas 瀏覽器，合併成一個桌面「超級應用」，趕在 IPO 前把將近 10 億用戶推向付費方案。一位高層甚至對《金融時報》撂下狠話——「聊天已死」。對每天靠 AI 工具吃飯的創作者和小團隊來說，這句話的意思是：你用 AI 的方式，要從「跟它聊天」變成「叫它幫你動手做」。</p>
+
+      <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
+        <strong>TL;DR（懶人包）：</strong><br>① OpenAI 把聊天、寫程式、瀏覽器三個產品收進同一個介面。<br>② 戰略重心從「聊天機器人」轉向「會自己動手做事的 AI 代理（agent）」。<br>③ Sam Altman 內部下達「紅色警戒」，因為 Anthropic 的 Claude Code 正在吃掉它的開發者市場。<br>④ 你的對策：別再每個工具各用各的，現在就把工作流收斂、開始練「代理式 AI」。
+      </blockquote>
+
+      <h2>到底發生了什麼事？</h2>
+      <p>這件事最早是《華爾街日報》在 2025 年 3 月披露的：OpenAI 要把旗下三條產品線——聊天用的 <strong>ChatGPT</strong>、寫程式的 <strong>Codex</strong>、還有 AI 瀏覽器 <strong>Atlas</strong>——整併成一個桌面版的「超級應用」。如今這個計畫已經進入推廣階段。</p>
+      <p>《金融時報》補上了商業面的細節：改版後的介面會把用戶導向 Canva、Booking.com 這類合作夥伴服務，並內建程式工具、AI 代理和第三方整合。負責統一平台產品策略的是共同創辦人暨總裁 <strong>Greg Brockman</strong>；商業推廣則交給應用業務執行長 <strong>Fidji Simo</strong>。</p>
+      <p>Simo 在內部備忘錄裡講得很白：</p>
+      <blockquote style="background:#f9fafb;border-left:5px solid #8782FF;padding:15px 20px;margin:20px 0;border-radius:0 8px 8px 0;">「碎片化一直在拖慢我們的速度，讓我們更難達到想要的品質標準。」</blockquote>
+      <p>背後的數字也很關鍵：Codex 的用戶自 2 月以來成長了 <strong>6 倍、突破 500 萬</strong>；OpenAI 也已向美國證管會（SEC）遞交機密的 S-1 上市文件，據報估值超過 <strong>3,000 億美元</strong>。換句話說，這次大改版，是衝著 IPO 來的。</p>
+
+      <h2>為什麼是大事？用白話講</h2>
+      <p>「超級應用」這個詞，你可以想成中國的微信、東南亞的 Grab：一個 App 把聊天、搜尋、工具、支付、電商全包了。OpenAI 認為 AI 也會出現這種「贏者通吃」的平台，而 ChatGPT 就是它的入口。</p>
+      <p>更直接的對照組是 Google：Gemini 已經塞進 Docs、Sheets、Meet，開發者有 AI Studio、Firebase，連 NotebookLM 都被收編。Google 蓋的所有東西都長在同一個生態系裡，Gemini 是貫穿全部的那根軸。OpenAI 現在想複製這套：ChatGPT 管聊天、Codex 管程式、Atlas 管瀏覽，一家公司、一個生態、一個模型家族。</p>
+      <p>而這也擺明是衝著 <strong>Anthropic</strong> 來的。Anthropic 的 Claude Code 預估到 2026 年 2 月、年化營收上看 25 億美元，正在開發者圈子裡狠咬 OpenAI 一口。所以 OpenAI 的回手就是：不要一個產品一個產品打，乾脆把整個工作流握在自己手裡。一位高層對《金融時報》說得更直接——<strong>「聊天已死」（Chat is dead）</strong>。</p>
+
+      <h2>那……對你有什麼影響？</h2>
+      <p>如果你是創作者、接案者或小商家，這波變化其實跟你很有關係：</p>
+      <ul style="line-height:1.9;">
+        <li><strong>「聊天」會變「代辦」：</strong>以後 AI 不只回答你，而是直接幫你把事情做完——查資料、寫程式、訂行程、產內容，一條龍跑完。</li>
+        <li><strong>工具會越併越大包：</strong>你習慣的 ChatGPT 介面會長出越來越多功能。好處是方便，壞處是你會更難離開這個生態（也就是所謂的「鎖定效應」）。</li>
+        <li><strong>「會用代理」變成新門檻：</strong>懂得把任務整包交給 AI 代理自動跑的人，產能會跟「只會一問一答」的人快速拉開差距。</li>
+      </ul>
+
+      <h2>實作：3 步驟，提前為「超級應用時代」卡位</h2>
+      <h3>Step 1️⃣：把你的 AI 工作流收斂成一條龍</h3>
+      <p>先盤點你現在「東一個工具、西一個工具」的痛點。用這個提示詞，讓 AI 幫你把流程畫出來：</p>
+      <div style="background:#0f172a;color:#e2e8f0;padding:16px 20px;border-radius:10px;font-size:14px;line-height:1.75;margin:16px 0;white-space:pre-wrap;">你是我的 AI 工作流顧問。我的工作是「[你的職業／主要產出]」，每天會用到的工具有「[列出你用的工具]」。
+請幫我畫出目前的工作流程，標出哪幾段其實可以整包交給「會自己動手的 AI 代理」一次做完，並建議我先從哪一段開始自動化、為什麼。</div>
+
+      <h3>Step 2️⃣：開始練「代理式 AI」，而不只是聊天</h3>
+      <p>這正是這波改版的核心。與其每次都問 AI「幫我想 10 個標題」，不如給它一個完整任務、讓它自己跑完。最好上手的方式，是拿現成的提示詞先培養「把整包任務交出去」的手感——我整理了一份完全免費的 <a href="/toolbox/workplace-chatgpt-50-scenarios" style="color:#8782FF;font-weight:bold;">上班族 ChatGPT 職場提示包</a>，50 個場景複製即用，先從這裡開始把日常工作丟給 AI。</p>
+
+      <h3>Step 3️⃣：別把雞蛋全放在同一個籃子</h3>
+      <p>超級應用很方便，但「方便」的另一面就是「綁死」。建議你至少同時熟悉兩家（例如 OpenAI 和 Anthropic），重要的資料與內容自己留一份備份，別讓單一平台掌握你全部的工作流。</p>
+
+      <h2>客觀觀點：先別急著相信「聊天已死」</h2>
+      <p>「聊天已死」聽起來很帥，但它更像一句行銷口號，而不是既成事實。幾個該冷靜看待的點：</p>
+      <ul style="line-height:1.9;">
+        <li><strong>執行難度被低估：</strong>Google 花了二十年才把整個生態系縫起來。OpenAI 想在 IPO 視窗關閉前、趁 Anthropic、微軟、Google 還沒鎖死企業合約前追上，時間表非常緊。</li>
+        <li><strong>合併不等於變好用：</strong>把三個產品塞進同一個介面，也可能變得更臃腫。微信式的超級應用，在歐美市場其實一直沒真正成功過。</li>
+        <li><strong>利益與風險並存：</strong>美國政府正與 OpenAI 商談持股，一個「既獲利、又監管」的角色本身就有利益衝突的疑慮。（這屬於 OpenAI 另一條新聞）</li>
+      </ul>
+      <p>所以我的建議是：方向（AI 從「聊天」走向「代理」）值得相信，但「某一家會贏者通吃」這件事，還是親眼看到再說。</p>
+
+      <h2>常見問題 FAQ</h2>
+      <h3>Q：我又不寫程式，Codex 跟我有關係嗎？</h3>
+      <p>有。現在的代理式（agentic）工具用「講的」就能操作，重點不是會不會寫程式，而是「把一個完整任務整包交給 AI 跑完」的思維。學會這個思維，比死記任何單一工具都值錢。</p>
+      <h3>Q：手機版 App 會跟著大改嗎？</h3>
+      <p>據報導，這次改版主要針對桌面端，目標是專業用戶與企業用戶；手機 App 短期內不會有大變動。</p>
+      <h3>Q：那我現在該換工具嗎？</h3>
+      <p>先別急著換。優先要做的是「收斂工作流＋練代理思維」，至於工具最後誰勝出，再跟著調整都來得及。</p>
+
+      <h2>出處與延伸閱讀</h2>
+      <ul style="line-height:1.9;">
+        <li>《華爾街日報》（The Wall Street Journal）：最早披露 ChatGPT／Codex／Atlas 整併計畫（2025 年 3 月）。</li>
+        <li>《金融時報》（Financial Times）：Fidji Simo 內部備忘錄、「聊天已死」說法，以及合作夥伴導流與商業推廣細節。</li>
+        <li>文中數據（Codex 用戶數、估值、S-1 申報）綜合自上述媒體與 AI 產業電子報報導，實際數字以各家原始報導為準。</li>
+        <li>延伸閱讀：<a href="/blog/google-ai-search-duckduckgo-surge-2026" style="color:#8782FF;font-weight:bold;">Google AI 搜尋逼用戶出走</a>、<a href="/blog/geo-optimization-complete-guide-2026" style="color:#8782FF;font-weight:bold;">GEO 完整教學</a>。</li>
+      </ul>
+
+      <blockquote style="background:#f5f3ff;border-left:5px solid #8782FF;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;">
+        <strong>想讓 AI 真的幫你省時間，而不是越用越亂？</strong>我把實際在用的提示詞與工作流，整理在 <a href="/toolbox" style="color:#8782FF;font-weight:bold;">數位工具箱</a>，挑了就能套用；其中 <a href="/toolbox/workplace-chatgpt-50-scenarios" style="color:#8782FF;font-weight:bold;">上班族 ChatGPT 職場提示包</a> 完全免費。需要把整套 AI 工作流或官網一次規劃好，也歡迎 <a href="/contact" style="color:#8782FF;font-weight:bold;">直接聊聊</a>。
+      </blockquote>
+    `,
+  },
+  {
     id: 'google-ai-search-duckduckgo-surge-2026',
     title: 'Google AI 搜尋逼用戶出走，DuckDuckGo 安裝量單日暴增 70%：個人品牌與小商家該怎麼接招？',
     category: '品牌行銷策略',
