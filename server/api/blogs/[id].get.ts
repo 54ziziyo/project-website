@@ -29,5 +29,6 @@ export default defineEventHandler(async (event) => {
     .map((b: any) => extractText(b.code?.rich_text))
     .join('')
 
+  setResponseHeader(event, 'Cache-Control', 's-maxage=3600, stale-while-revalidate=86400')
   return pageToPost(page, content, contentEn)
 })
