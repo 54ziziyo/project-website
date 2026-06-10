@@ -58,6 +58,7 @@ async function ensureSchema() {
       'SEO Title (EN)': { rich_text: {} },
       'SEO Description (EN)': { rich_text: {} },
       'SEO Keywords (EN)': { rich_text: {} },
+      'Cover Image (EN)': { url: {} },
     },
   })
   console.log('✅ 欄位確認/補齊完成')
@@ -120,6 +121,7 @@ async function main() {
       Tags: { multi_select: post!.tags.map((t) => ({ name: t })) },
       Excerpt: rt(post!.excerpt),
       'Cover Image': { url: post!.coverImage || null },
+      'Cover Image (EN)': { url: post!.coverImageEn || null },
       Author: rt(post!.author),
       'Published At': { date: { start: post!.publishedAt } },
       Status: { select: { name: 'Published' } },

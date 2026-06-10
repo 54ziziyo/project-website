@@ -33,6 +33,7 @@ export async function getBlocks(token: string, blockId: string) {
 export function pageToPost(page: any, content = '', contentEn = '') {
   const p = page.properties
   const coverImage = p['Cover Image']?.url || ''
+  const coverImageEn = p['Cover Image (EN)']?.url || undefined
   return {
     id: extractText(p.ID?.rich_text) || page.id,
     title: extractText(p.Title?.title),
@@ -40,6 +41,7 @@ export function pageToPost(page: any, content = '', contentEn = '') {
     tags: p.Tags?.multi_select?.map((t: any) => t.name) || [],
     excerpt: extractText(p.Excerpt?.rich_text),
     coverImage,
+    coverImageEn,
     author: extractText(p.Author?.rich_text),
     publishedAt: p['Published At']?.date?.start || '',
     updatedAt: p['Published At']?.date?.start || '',
