@@ -175,19 +175,22 @@ onBeforeUnmount(() => {
               width="400"
               height="300"
             />
-            <!-- 徽章 -->
+            <!-- 左上徽章（coming-soon 限定） -->
             <div class="absolute top-3 left-3 flex gap-1.5">
               <span
-                v-if="product.price === 0 && product.status === 'available'"
-                class="px-2.5 py-1 bg-emerald-500 text-white text-xs font-black rounded-full"
-                >{{ t('toolbox.free') }}</span
-              >
-              <span
-                v-else-if="product.status === 'coming-soon'"
+                v-if="product.status === 'coming-soon'"
                 class="px-2.5 py-1 bg-gray-800/80 backdrop-blur-sm text-white text-xs font-bold rounded-full"
                 >{{ t('toolbox.comingSoon') }}</span
               >
-              <span v-else-if="product.isNew" class="px-2.5 py-1 bg-[#8782FF] text-white text-xs font-bold rounded-full"
+            </div>
+            <!-- 右上：分類標籤 + NEW / 熱銷徽章 -->
+            <div class="absolute top-3 right-3 flex flex-col items-end gap-1.5">
+              <span class="px-2.5 py-1 bg-[#8782FF] text-white text-xs font-medium rounded-full">
+                {{ catLabel(product.category) }}
+              </span>
+              <span
+                v-if="product.isNew && !product.isBestSeller && product.status !== 'coming-soon'"
+                class="px-2.5 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full"
                 >NEW</span
               >
               <span
@@ -195,12 +198,6 @@ onBeforeUnmount(() => {
                 class="px-2.5 py-1 bg-amber-400 text-white text-xs font-bold rounded-full"
                 >{{ t('toolbox.bestSeller') }}</span
               >
-            </div>
-            <!-- 分類標籤 -->
-            <div class="absolute top-3 right-3">
-              <span class="px-2.5 py-1 bg-white/90 backdrop-blur-sm text-gray-700 text-xs font-medium rounded-full">
-                {{ catLabel(product.category) }}
-              </span>
             </div>
           </div>
 
