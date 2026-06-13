@@ -91,7 +91,11 @@ function extractBlocks(body: string): { body: string; blocks: string[] } {
     let html: string
     if (kind === 'cta') {
       const url = info.trim()
-      const lines = inner.trim().split('\n').map(l => l.trim()).filter(Boolean)
+      const lines = inner
+        .trim()
+        .split('\n')
+        .map((l) => l.trim())
+        .filter(Boolean)
       const title = lines[0] ?? ''
       const btnLabel = lines[lines.length - 1] ?? '前往查看 →'
       const desc = lines.length > 2 ? lines.slice(1, -1).join(' ') : ''
@@ -173,7 +177,9 @@ export function renderCourse(shell: string, src: string): string {
   const indref = cfg.industries
     ? `<details class="ind-ref"><summary><span class="mi">lightbulb</span> ${esc(cfg.industries.summary)}</summary>` +
       `<div class="ind-ref-body"><p class="intro">${highlightVars(esc(cfg.industries.intro))}</p>` +
-      cfg.industries.items.map((it) => `<div class="ind-item"><h4>${esc(it.h)}</h4><p>${esc(it.p)}</p></div>`).join('') +
+      cfg.industries.items
+        .map((it) => `<div class="ind-item"><h4>${esc(it.h)}</h4><p>${esc(it.p)}</p></div>`)
+        .join('') +
       `</div></details>`
     : ''
 
@@ -186,6 +192,8 @@ export function renderCourse(shell: string, src: string): string {
     const meta = cfg.parts[i]
     if (!meta) return
     let rendered = md.render(chunk)
+    // 移除 markdown --- 產生的 <hr>
+    rendered = rendered.replace(/<hr\s*\/?>/gi, '')
     // 標題裡的 :icon_name: → material 圖示（在塞回 prompt 內容前做，避免動到提示詞文字）
     rendered = rendered.replace(/:([a-z_]{2,30}):/g, '<span class="mi">$1</span>')
     // 把 prompt/data/tip/ideas 佔位塞回
@@ -210,7 +218,8 @@ export function renderCourse(shell: string, src: string): string {
 
     // 側欄：本 Part 的 h3 與每週行事曆 → 子連結（依文件順序）
     const subs: string[] = []
-    const subRe = /<h3 id="([^"]+)"[^>]*>(.*?)<\/h3>|<div class="cal-week" id="([^"]+)"><div class="cal-wlbl">([^<]*)<\/div>/g
+    const subRe =
+      /<h3 id="([^"]+)"[^>]*>(.*?)<\/h3>|<div class="cal-week" id="([^"]+)"><div class="cal-wlbl">([^<]*)<\/div>/g
     let mm: RegExpExecArray | null
     while ((mm = subRe.exec(rendered))) {
       const id = mm[1] || mm[3]
@@ -243,7 +252,12 @@ export function renderCourse(shell: string, src: string): string {
   if (cfg.stats || cfg.quickjumps) {
     const statBlock = cfg.stats
       ? `<div><div class="pnl-title">關鍵數字速查</div><div class="stats-w"><div class="sw-t">${esc(cfg.stats.groupTitle)}</div>` +
-        cfg.stats.rows.map((r) => `<div class="s-row"><span class="s-key">${esc(r.k)}</span><span class="s-val">${esc(r.v)}</span></div>`).join('') +
+        cfg.stats.rows
+          .map(
+            (r) =>
+              `<div class="s-row"><span class="s-key">${esc(r.k)}</span><span class="s-val">${esc(r.v)}</span></div>`,
+          )
+          .join('') +
         `</div></div>`
       : ''
     const jumpBlock = cfg.quickjumps
