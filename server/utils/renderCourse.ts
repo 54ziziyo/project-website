@@ -192,16 +192,18 @@ export function renderCourse(shell: string, src: string): string {
     rendered = rendered.replace(/<p>@@BLOCK(\d+)@@<\/p>/g, (_m, n) => extracted.blocks[+n])
     // 第一個 <p> → pt-desc（與原本同樣的副標樣式）
     rendered = rendered.replace(/<p>/, '<p class="pt-desc">')
+    // Part 0：industries accordion 插在 pt-desc 段落結尾後（緊接在第一段下方）
+    if (i === 0 && indref) {
+      rendered = rendered.replace('</p>', `</p>${indref}`)
+    }
 
     const n = i + 1
     const active = i === 0 ? ' active' : ''
-    const indrefHtml = i === 0 ? indref : ''
     partHtmls.push(
       `<div class="part-page${active}" data-part="${i}" data-part-id="${meta.id}" data-part-title="${esc(meta.label)}">` +
         `<div class="pt-sec" id="${meta.id}">` +
         `<div class="pt-tag"><span class="mi">${meta.icon}</span> Part ${n}</div>` +
         rendered +
-        indrefHtml +
         PNAV +
         `</div></div>`,
     )
