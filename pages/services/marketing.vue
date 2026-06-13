@@ -2,7 +2,8 @@
 import MarketingProject from '~/components/service/MarketingProject.vue'
 import MarketingPrice from '~/components/service/MarketingPrice.vue'
 
-// SEO 優化 - 數位行銷服務頁面
+const { t } = useI18n()
+
 useHead({
   title: '數位行銷服務 | Zeona Studio - SEO優化、社群經營、內容行銷',
   meta: [
@@ -45,6 +46,14 @@ useHead({
   <div>
     <MarketingPrice />
     <MarketingProject />
+    <ContactCta
+      :title-pre="t('mktg.ctaPre')"
+      :title-highlight="t('mktg.ctaHi')"
+      :title-post="t('mktg.ctaPost')"
+      :subtitle="t('mktg.ctaSub')"
+      :button-text="t('mktg.ctaBtn')"
+      to="/toolbox"
+    />
   </div>
 </template>
 
