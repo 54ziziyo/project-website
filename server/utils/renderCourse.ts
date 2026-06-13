@@ -86,10 +86,24 @@ function buildCalendar(info: string, inner: string): string {
 // 從 body 抽出 ::: prompt / data / tip / ideas / calendar 區塊，換成佔位，之後再塞回對應 HTML（內容保持原樣、不被 markdown 破壞）
 function extractBlocks(body: string): { body: string; blocks: string[] } {
   const blocks: string[] = []
-  const re = /^::: (prompt|data|tip|ideas|calendar)([^\n]*)\n([\s\S]*?)\n:::[ \t]*$/gm
+  const re = /^::: (prompt|data|tip|ideas|calendar|cta)([^\n]*)\n([\s\S]*?)\n:::[ \t]*$/gm
   const out = body.replace(re, (_m, kind: string, info: string, inner: string) => {
     let html: string
-    if (kind === 'calendar') {
+    if (kind === 'cta') {
+      const url = info.trim()
+      const lines = inner.trim().split('\n').map(l => l.trim()).filter(Boolean)
+      const title = lines[0] ?? ''
+      const btnLabel = lines[lines.length - 1] ?? '前往查看 →'
+      const desc = lines.length > 2 ? lines.slice(1, -1).join(' ') : ''
+      html =
+        `<div class="cta-card">` +
+        `<div class="cta-body">` +
+        `<div class="cta-title">${escapeKeepBrackets(title)}</div>` +
+        (desc ? `<div class="cta-desc">${escapeKeepBrackets(desc)}</div>` : '') +
+        `</div>` +
+        `<a class="cta-btn" href="${escapeKeepBrackets(url)}" target="_blank" rel="noopener">${escapeKeepBrackets(btnLabel)}</a>` +
+        `</div>`
+    } else if (kind === 'calendar') {
       html = buildCalendar(info, inner)
     } else if (kind === 'prompt') {
       const content = highlightVars(escapeKeepBrackets(inner.trim()))
@@ -101,16 +115,17 @@ function extractBlocks(body: string): { body: string; blocks: string[] } {
     } else if (kind === 'tip') {
       html =
         `<div class="tip"><span class="mi" style="font-size: 15px; color: #f59e0b">lightbulb</span> ` +
-        `${highlightVars(escapeKeepBrackets(inner.trim().replace(/\n+/g, ' ')))}</div>`
+        `${highlightVars(escapeKeepBrackets(inner.trim()).replace(/\n/g, '<br>'))}</div>`
     } else if (kind === 'ideas') {
       html = buildIdeas(inner)
     } else {
       // data：第一段「導語｜內文」，導語加粗＋verified 圖示
-      const text = inner.trim().replace(/\n+/g, ' ')
+      const escaped = escapeKeepBrackets(inner.trim())
+      const text = escaped.replace(/\n/g, '<br>')
       const i = text.indexOf('｜')
       const lead = i >= 0 ? text.slice(0, i) : '官方數據'
       const rest = i >= 0 ? text.slice(i) : '｜' + text
-      html = `<div class="data-box"><strong><span class="mi">verified</span> ${escapeKeepBrackets(lead)}</strong>${escapeKeepBrackets(rest)}</div>`
+      html = `<div class="data-box"><strong><span class="mi">verified</span> ${lead}</strong>${rest}</div>`
     }
     blocks.push(html)
     return `\n\n@@BLOCK${blocks.length - 1}@@\n\n`
@@ -154,7 +169,15 @@ export function renderCourse(shell: string, src: string): string {
   body = extracted.body
   const md = getMd(ids.idMap)
 
-  // 3) 依 H2 切成各 Part，逐段渲染
+  // 3) ind-ref（五大產業等）預先組好，注入 Part 0
+  const indref = cfg.industries
+    ? `<details class="ind-ref"><summary><span class="mi">lightbulb</span> ${esc(cfg.industries.summary)}</summary>` +
+      `<div class="ind-ref-body"><p class="intro">${highlightVars(esc(cfg.industries.intro))}</p>` +
+      cfg.industries.items.map((it) => `<div class="ind-item"><h4>${esc(it.h)}</h4><p>${esc(it.p)}</p></div>`).join('') +
+      `</div></details>`
+    : ''
+
+  // 4) 依 H2 切成各 Part，逐段渲染
   const chunks = body.split(/\n(?=## )/).filter((c) => c.trim().startsWith('## '))
   const partHtmls: string[] = []
   const sidebarNps: string[] = []
@@ -172,11 +195,13 @@ export function renderCourse(shell: string, src: string): string {
 
     const n = i + 1
     const active = i === 0 ? ' active' : ''
+    const indrefHtml = i === 0 ? indref : ''
     partHtmls.push(
       `<div class="part-page${active}" data-part="${i}" data-part-id="${meta.id}" data-part-title="${esc(meta.label)}">` +
         `<div class="pt-sec" id="${meta.id}">` +
         `<div class="pt-tag"><span class="mi">${meta.icon}</span> Part ${n}</div>` +
         rendered +
+        indrefHtml +
         PNAV +
         `</div></div>`,
     )
@@ -211,15 +236,7 @@ export function renderCourse(shell: string, src: string): string {
     .map((c) => `<div class="m-chip"><span class="mi" style="color: ${c.color}">${c.icon}</span> ${esc(c.text)}</div>`)
     .join('\n            ')
 
-  // 6) ind-ref（五大產業等）
-  const indref = cfg.industries
-    ? `<details class="ind-ref"><summary><span class="mi">lightbulb</span> ${esc(cfg.industries.summary)}</summary>` +
-      `<div class="ind-ref-body"><p class="intro">${highlightVars(esc(cfg.industries.intro))}</p>` +
-      cfg.industries.items.map((it) => `<div class="ind-item"><h4>${esc(it.h)}</h4><p>${esc(it.p)}</p></div>`).join('') +
-      `</div></details>`
-    : ''
-
-  // 7) 右側速查面板
+  // 6) 右側速查面板
   let rightpanel = ''
   if (cfg.stats || cfg.quickjumps) {
     const statBlock = cfg.stats
@@ -249,7 +266,7 @@ export function renderCourse(shell: string, src: string): string {
     .replace('<!--COVER_TITLE-->', `<h1>${cfg.cover.title}</h1>`)
     .replace('<!--COVER_SUB-->', `<p>${cfg.cover.sub}</p>`)
     .replace('<!--COVER_CHIPS-->', chips)
-    .replace('<!--INDREF-->', indref)
+    .replace('<!--INDREF-->', '')
     .replace('<!--SIDEBAR-->', sidebar)
     .replace('<!--PARTS-->', partHtmls.join('\n'))
     .replace('<!--RIGHTPANEL-->', rightpanel)
