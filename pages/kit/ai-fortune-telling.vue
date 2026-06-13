@@ -373,6 +373,12 @@ async function copy(text: string, id: string) {
   }
 }
 
+// ─── Accordion ────────────────────────────────────────────
+const openId = ref<string | null>(null)
+function toggleOpen(id: string) {
+  openId.value = openId.value === id ? null : id
+}
+
 // ─── Mobile nav ───────────────────────────────────────────
 const mobileNavOpen = ref(false)
 </script>
@@ -487,62 +493,82 @@ const mobileNavOpen = ref(false)
             </h2>
           </div>
 
-          <div class="grid gap-5 md:grid-cols-2">
+          <div class="grid gap-3 md:grid-cols-1">
             <article
               v-for="card in filteredCards"
               :key="card.id"
-              class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex flex-col"
+              class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden"
             >
-              <!-- Header -->
-              <div class="flex items-start justify-between mb-3">
-                <div class="flex items-center gap-2">
-                  <span class="text-xl">{{ card.icon }}</span>
-                  <div>
-                    <h3 class="font-bold text-gray-900 text-sm leading-snug">{{ card.title }}</h3>
-                    <span class="text-xs text-[#8782FF]/70">{{ card.category }}</span>
+              <!-- Accordion trigger -->
+              <button
+                type="button"
+                class="w-full text-left p-5 flex flex-col gap-3 hover:bg-gray-50/60 transition-colors"
+                :aria-expanded="openId === card.id"
+                @click="toggleOpen(card.id)"
+              >
+                <!-- Header row -->
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xl">{{ card.icon }}</span>
+                    <div>
+                      <h3 class="font-bold text-gray-900 text-sm leading-snug">{{ card.title }}</h3>
+                      <span class="text-xs text-[#8782FF]/70">{{ card.category }}</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 shrink-0">
+                    <span
+                      v-if="card.badge"
+                      class="text-xs font-bold px-2 py-0.5 rounded-full bg-[#8782FF]/10 text-[#8782FF]"
+                    >{{ card.badge }}</span>
+                    <svg
+                      class="w-4 h-4 text-gray-400 transition-transform duration-200"
+                      :class="openId === card.id ? 'rotate-180' : ''"
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
                   </div>
                 </div>
-                <span
-                  v-if="card.badge"
-                  class="flex-shrink-0 text-xs font-bold px-2 py-0.5 rounded-full bg-[#8782FF]/10 text-[#8782FF]"
-                >{{ card.badge }}</span>
-              </div>
 
-              <!-- Description -->
-              <p class="text-sm text-gray-500 leading-relaxed mb-3">{{ card.desc }}</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-500 leading-relaxed">{{ card.desc }}</p>
 
-              <!-- Hook -->
-              <div class="bg-amber-50 border-l-2 border-amber-400 px-3 py-2 rounded-r-lg mb-4">
-                <p class="text-xs text-amber-700 leading-relaxed">
-                  <span class="font-bold">✦ 10 秒亮點：</span>{{ card.hook }}
-                </p>
-              </div>
+                <!-- Hook -->
+                <div class="bg-amber-50 border-l-2 border-amber-400 px-3 py-2 rounded-r-lg">
+                  <p class="text-xs text-amber-700 leading-relaxed text-left">
+                    <span class="font-bold">✦ 10 秒亮點：</span>{{ card.hook }}
+                  </p>
+                </div>
+              </button>
 
-              <!-- Tip (optional external tool hint) -->
-              <div v-if="card.tip" class="flex items-start gap-2 bg-sky-50 border border-sky-200 rounded-lg px-3 py-2 mb-4">
-                <span class="text-sky-500 text-sm mt-0.5 shrink-0">🔗</span>
-                <p class="text-xs text-sky-700 leading-relaxed">
-                  {{ card.tip }}
-                  <a
-                    v-if="card.tipUrl"
-                    :href="card.tipUrl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="underline font-semibold hover:text-sky-900 ml-1"
-                  >前往生成星盤 →</a>
-                </p>
-              </div>
+              <!-- Expandable content -->
+              <div v-show="openId === card.id" class="px-5 pb-5 flex flex-col gap-4">
+                <!-- Tip (optional external tool hint) -->
+                <div v-if="card.tip" class="flex items-start gap-2 bg-sky-50 border border-sky-200 rounded-lg px-3 py-2">
+                  <span class="text-sky-500 text-sm mt-0.5 shrink-0">🔗</span>
+                  <p class="text-xs text-sky-700 leading-relaxed">
+                    {{ card.tip }}
+                    <a
+                      v-if="card.tipUrl"
+                      :href="card.tipUrl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="underline font-semibold hover:text-sky-900 ml-1"
+                    >前往生成星盤 →</a>
+                  </p>
+                </div>
 
-              <!-- Prompt code block -->
-              <div class="relative bg-[#0f172a] text-[#e2e8f0] rounded-lg p-4 pr-16 text-xs leading-relaxed flex-1">
-                <pre class="whitespace-pre-wrap break-words font-mono">{{ card.prompt }}</pre>
-                <button
-                  type="button"
-                  class="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 transition whitespace-nowrap"
-                  @click="copy(card.prompt, card.id)"
-                >
-                  {{ copiedId === card.id ? '已複製 ✓' : '複製' }}
-                </button>
+                <!-- Prompt code block -->
+                <div class="relative bg-[#0f172a] text-[#e2e8f0] rounded-lg p-4 pr-16 text-xs leading-relaxed">
+                  <pre class="whitespace-pre-wrap break-words font-mono">{{ card.prompt }}</pre>
+                  <button
+                    type="button"
+                    class="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 transition whitespace-nowrap"
+                    @click.stop="copy(card.prompt, card.id)"
+                  >
+                    {{ copiedId === card.id ? '已複製 ✓' : '複製' }}
+                  </button>
+                </div>
               </div>
             </article>
           </div>
