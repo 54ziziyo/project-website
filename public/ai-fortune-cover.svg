@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#0d0d1e"/>
+  <!-- Outer dashed ring -->
+  <circle cx="200" cy="145" r="122" fill="none" stroke="#8782FF" stroke-width="0.4" opacity="0.18" stroke-dasharray="3 6"/>
+  <!-- Concentric circles -->
+  <circle cx="200" cy="145" r="100" fill="none" stroke="#8782FF" stroke-width="0.6" opacity="0.3"/>
+  <circle cx="200" cy="145" r="76" fill="none" stroke="#C9A85C" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="200" cy="145" r="52" fill="none" stroke="#8782FF" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="200" cy="145" r="30" fill="none" stroke="#C9A85C" stroke-width="1" opacity="0.6"/>
+  <!-- Cross axis lines -->
+  <line x1="200" y1="43" x2="200" y2="247" stroke="#C9A85C" stroke-width="0.4" opacity="0.2"/>
+  <line x1="98" y1="145" x2="302" y2="145" stroke="#C9A85C" stroke-width="0.4" opacity="0.2"/>
+  <!-- Diagonal lines -->
+  <line x1="128" y1="73" x2="272" y2="217" stroke="#8782FF" stroke-width="0.3" opacity="0.15"/>
+  <line x1="272" y1="73" x2="128" y2="217" stroke="#8782FF" stroke-width="0.3" opacity="0.15"/>
+  <!-- 8 compass ticks -->
+  <g transform="translate(200,145)">
+    <line x1="0" y1="-24" x2="0" y2="-17" stroke="#C9A85C" stroke-width="1.8" opacity="0.85" stroke-linecap="round"/>
+    <line x1="17" y1="-17" x2="12" y2="-12" stroke="#C9A85C" stroke-width="1.8" opacity="0.85" stroke-linecap="round"/>
+    <line x1="24" y1="0" x2="17" y2="0" stroke="#C9A85C" stroke-width="1.8" opacity="0.85" stroke-linecap="round"/>
+    <line x1="17" y1="17" x2="12" y2="12" stroke="#C9A85C" stroke-width="1.8" opacity="0.85" stroke-linecap="round"/>
+    <line x1="0" y1="24" x2="0" y2="17" stroke="#C9A85C" stroke-width="1.8" opacity="0.85" stroke-linecap="round"/>
+    <line x1="-17" y1="17" x2="-12" y2="12" stroke="#C9A85C" stroke-width="1.8" opacity="0.85" stroke-linecap="round"/>
+    <line x1="-24" y1="0" x2="-17" y2="0" stroke="#C9A85C" stroke-width="1.8" opacity="0.85" stroke-linecap="round"/>
+    <line x1="-17" y1="-17" x2="-12" y2="-12" stroke="#C9A85C" stroke-width="1.8" opacity="0.85" stroke-linecap="round"/>
+  </g>
+  <!-- Central diamond -->
+  <polygon points="200,122 222,145 200,168 178,145" fill="none" stroke="#C9A85C" stroke-width="1.4" opacity="0.9"/>
+  <polygon points="200,130 214,145 200,160 186,145" fill="#C9A85C" opacity="0.12"/>
+  <!-- AI label in center -->
+  <text x="200" y="150" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="#C9A85C" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="1.5" opacity="0.95">AI</text>
+  <!-- Star dots -->
+  <circle cx="55" cy="42" r="2" fill="#C9A85C" opacity="0.8"/>
+  <circle cx="358" cy="32" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="28" cy="195" r="1.5" fill="#8782FF" opacity="0.75"/>
+  <circle cx="378" cy="168" r="2" fill="#C9A85C" opacity="0.6"/>
+  <circle cx="140" cy="18" r="1" fill="white" opacity="0.6"/>
+  <circle cx="292" cy="272" r="1.5" fill="#8782FF" opacity="0.7"/>
+  <circle cx="42" cy="260" r="1" fill="white" opacity="0.5"/>
+  <circle cx="368" cy="255" r="1.5" fill="#C9A85C" opacity="0.5"/>
+  <circle cx="95" cy="98" r="1" fill="white" opacity="0.4"/>
+  <circle cx="318" cy="88" r="1" fill="white" opacity="0.4"/>
+  <circle cx="80" cy="232" r="1" fill="#8782FF" opacity="0.4"/>
+  <circle cx="322" cy="225" r="1" fill="white" opacity="0.3"/>
+  <circle cx="165" cy="28" r="1" fill="#8782FF" opacity="0.5"/>
+  <circle cx="245" cy="265" r="1" fill="white" opacity="0.45"/>
+  <!-- Bottom pill label -->
+  <rect x="88" y="268" width="224" height="20" rx="10" fill="#8782FF" opacity="0.12"/>
+  <text x="200" y="282" text-anchor="middle" font-size="10" fill="#8782FF" font-family="Arial,sans-serif" letter-spacing="2" opacity="0.9">數位命理工具箱</text>
+  <!-- Top decorative dots -->
+  <text x="200" y="16" text-anchor="middle" font-size="8" fill="#C9A85C" font-family="Arial,sans-serif" opacity="0.45" letter-spacing="5">✦  ✦  ✦</text>
+</svg>
