@@ -11,7 +11,9 @@
     "toolbox": "Toolbox",
     "works": "Work",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "servicesMarketing": "Marketing",
+    "servicesMarketingDesc": "SEO, social content, short-form video and digital marketing services"
   },
   "mobile": {
     "home": "Home",
@@ -592,16 +594,76 @@
     "noteTitle": "A note on design projects",
     "noteBody": "Final pricing is adjusted to the actual complexity of your needs. Every design item includes 2 rounds of minor revisions. Extra drafts, rush handling or licensed commercial stock are quoted separately as needed.",
     "items": [
-      { "title": "Logo Design", "highlight": "Design planning, standard palette & basic application icons", "description": "Build your brand's core visual — vector source files and common formats included.", "price": "10,000", "unit": "and up" },
-      { "title": "Social Image / Banner Design", "highlight": "Custom sizes for each platform (FB/IG/Shopee, etc.)", "description": "High-quality static design. ※ Animated GIF +30%.", "price": "1,200", "unit": "and up" },
-      { "title": "Poster / Event Key Visual", "highlight": "Custom key visual with applied composition", "description": "Great for large events and exhibitions. ※ Print-ready file +NT$500.", "price": "3,000", "unit": "and up" },
-      { "title": "LINE Rich Menu Design", "highlight": "3- or 6-grid layout, includes brand-style definition", "description": "Elevates your official account; includes color rules and layout optimization.", "price": "1,500", "unit": "– 3,500" },
-      { "title": "EDM / Landing Page Design", "highlight": "Marketing-oriented layout with responsive (RWD) planning", "description": "Includes visual design and HTML export. ※ Copy to be provided by the client.", "price": "4,000", "unit": "and up" },
-      { "title": "Explainer / Infographic", "highlight": "Data visualization and integrated text-graphics design", "description": "Static from $3,000 / interactive web version from $6,000.", "price": "3,000", "unit": "and up" },
-      { "title": "UI/UX Design (per page)", "highlight": "Wireframe + UI design + Figma delivery", "description": "Includes a basic interactive prototype. ※ Complex features/admin systems quoted separately.", "price": "10,000", "unit": "/page and up" },
-      { "title": "Design System + Wireframe", "highlight": "Complete design principles and component library (Design System)", "description": "Includes color, type, component rules and up to 5 wireframe pages.", "price": "50,000", "unit": "and up" },
-      { "title": "Presentation Design (PPT / Keynote)", "highlight": "Customized by page count and style to boost persuasion", "description": "Basic $300/page. ※ Animation (transitions/paths/interaction) +50%.", "price": "300", "unit": "/page and up" },
-      { "title": "Social Visual Kit (Limited Offer)", "highlight": "IG 9-grid + story highlight covers + brand avatar", "description": "Includes 3 reusable post templates — one-stop social layout.", "price": "8,000", "unit": "" }
+      {
+        "title": "Logo Design",
+        "highlight": "Design planning, standard palette & basic application icons",
+        "description": "Build your brand's core visual — vector source files and common formats included.",
+        "price": "10,000",
+        "unit": "and up"
+      },
+      {
+        "title": "Social Image / Banner Design",
+        "highlight": "Custom sizes for each platform (FB/IG/Shopee, etc.)",
+        "description": "High-quality static design. ※ Animated GIF +30%.",
+        "price": "1,200",
+        "unit": "and up"
+      },
+      {
+        "title": "Poster / Event Key Visual",
+        "highlight": "Custom key visual with applied composition",
+        "description": "Great for large events and exhibitions. ※ Print-ready file +NT$500.",
+        "price": "3,000",
+        "unit": "and up"
+      },
+      {
+        "title": "LINE Rich Menu Design",
+        "highlight": "3- or 6-grid layout, includes brand-style definition",
+        "description": "Elevates your official account; includes color rules and layout optimization.",
+        "price": "1,500",
+        "unit": "– 3,500"
+      },
+      {
+        "title": "EDM / Landing Page Design",
+        "highlight": "Marketing-oriented layout with responsive (RWD) planning",
+        "description": "Includes visual design and HTML export. ※ Copy to be provided by the client.",
+        "price": "4,000",
+        "unit": "and up"
+      },
+      {
+        "title": "Explainer / Infographic",
+        "highlight": "Data visualization and integrated text-graphics design",
+        "description": "Static from $3,000 / interactive web version from $6,000.",
+        "price": "3,000",
+        "unit": "and up"
+      },
+      {
+        "title": "UI/UX Design (per page)",
+        "highlight": "Wireframe + UI design + Figma delivery",
+        "description": "Includes a basic interactive prototype. ※ Complex features/admin systems quoted separately.",
+        "price": "10,000",
+        "unit": "/page and up"
+      },
+      {
+        "title": "Design System + Wireframe",
+        "highlight": "Complete design principles and component library (Design System)",
+        "description": "Includes color, type, component rules and up to 5 wireframe pages.",
+        "price": "50,000",
+        "unit": "and up"
+      },
+      {
+        "title": "Presentation Design (PPT / Keynote)",
+        "highlight": "Customized by page count and style to boost persuasion",
+        "description": "Basic $300/page. ※ Animation (transitions/paths/interaction) +50%.",
+        "price": "300",
+        "unit": "/page and up"
+      },
+      {
+        "title": "Social Visual Kit (Limited Offer)",
+        "highlight": "IG 9-grid + story highlight covers + brand avatar",
+        "description": "Includes 3 reusable post templates — one-stop social layout.",
+        "price": "8,000",
+        "unit": ""
+      }
     ]
   },
   "toolbox": {
@@ -988,5 +1050,103 @@
         }
       ]
     }
+  },
+  "mktg": {
+    "title": "Digital Marketing Services",
+    "intro1": "From social posts to short-form video, from SEO to brand awareness",
+    "intro2": "Custom strategies built around your brand — let more people find you",
+    "priceTitle": "Marketing Price List",
+    "note": "Good to know",
+    "noteText": "All prices include 1-2 rounds of minor revisions. Additional graphics, major script changes or rush requests are quoted separately.",
+    "planTitle": "Choose the plan that fits you",
+    "planSub1": "Have a creative idea you want brought to life?",
+    "planSub2": "I can help you evaluate it — feel free to reach out anytime!",
+    "planDiversity": "Multiple options",
+    "planSelect": "Get started",
+    "planPopular": "MOST POPULAR",
+    "priceServices": [
+      {
+        "title": "Social Post Creation",
+        "highlight": "Full graphic + copy package, 3-4 images per post",
+        "description": "Content designed for the FB/IG algorithm. Includes brand tone planning and professional layout design.",
+        "price": "2,000",
+        "unit": "/ post"
+      },
+      {
+        "title": "Stories Design",
+        "highlight": "High-engagement visuals, 2-3 motion graphics per set",
+        "description": "Great for product promotions, countdowns or polls. Boosts visual impact, reach and conversions.",
+        "price": "1,200",
+        "unit": "/ set"
+      },
+      {
+        "title": "SEO Blog Content",
+        "highlight": "Data-driven writing with keyword research and SEO structure",
+        "description": "Includes 1,500-word article, internal/external link planning, ALT text and Meta Description optimisation for better rankings.",
+        "price": "5,000",
+        "unit": "/ article"
+      },
+      {
+        "title": "Basic Short Video Edit (30s)",
+        "highlight": "Precise captions, rhythm editing, ready for social",
+        "description": "Edited from your footage — includes basic colour grade, sound effects and platform-compliant export.",
+        "price": "1,000",
+        "unit": "/ video"
+      },
+      {
+        "title": "Advanced Short Video Edit (60s)",
+        "highlight": "Animated captions, motion effects and transitions",
+        "description": "Ideal for product introductions or brand stories. Includes richer visual effects and background music mixing.",
+        "price": "2,000",
+        "unit": "/ video"
+      }
+    ],
+    "plans": [
+      {
+        "title": "Starter Pack",
+        "subtitle": "New brands or small accounts needing consistent posts",
+        "price": "15,000",
+        "unit": "TWD / mo",
+        "isPopular": false,
+        "features": [
+          "8 posts with graphics (layout design + full planning)",
+          "8 Stories sets (2-3 motion graphics each)",
+          "Basic content planning (posting direction suggestions)",
+          "Post design + copywriting (add-on available)"
+        ]
+      },
+      {
+        "title": "Growth Pack",
+        "subtitle": "Established brands that need complete content management",
+        "price": "25,000",
+        "unit": "TWD / mo",
+        "isPopular": true,
+        "features": [
+          "12 posts with graphics (layout design + full planning)",
+          "12 Stories sets (2-3 motion graphics each)",
+          "Full social content strategy (themes + posting schedule)",
+          "Post design / copywriting / scheduled publishing",
+          "Short video editing not included (add-on available)"
+        ]
+      },
+      {
+        "title": "Flagship All-in-One",
+        "subtitle": "SMBs needing video exposure alongside social",
+        "price": "38,000",
+        "unit": "TWD / mo",
+        "isPopular": false,
+        "features": [
+          "12 posts with graphics (layout design + full planning)",
+          "12 Stories sets (2-3 motion graphics each)",
+          "2 x 60s short video edits (captions + effects included)",
+          "Full social content strategy + scheduled publishing"
+        ]
+      }
+    ],
+    "ctaPre": "Want to DIY? ",
+    "ctaHi": "Digital Toolbox",
+    "ctaPost": " has what you need",
+    "ctaSub": "Browse prompt packs, templates and AI tools — buy once, use forever, no waiting for quotes.",
+    "ctaBtn": "Browse Toolbox →"
   }
 }
