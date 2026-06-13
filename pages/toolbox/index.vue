@@ -38,16 +38,8 @@ const scrollMobile = (direction: 'left' | 'right') => {
 }
 
 const filteredProducts = computed(() => {
-  const base =
-    selectedCategory.value === '全部' ? products : products.filter((p) => p.category === selectedCategory.value)
-  // 已上架商品（available）優先，其餘再依原本價格邏輯排序
-  return [...base].sort((a, b) => {
-    if (a.status === 'available' && b.status !== 'available') return -1
-    if (a.status !== 'available' && b.status === 'available') return 1
-    if (a.price === 0 && b.price > 0) return 1
-    if (a.price > 0 && b.price === 0) return -1
-    return b.price - a.price
-  })
+  if (selectedCategory.value === '全部') return products
+  return products.filter((p) => p.category === selectedCategory.value)
 })
 
 const formatPrice = (price: number) => (price === 0 ? t('toolbox.free') : `NT$${price.toLocaleString()}`)
