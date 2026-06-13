@@ -467,6 +467,118 @@
         color: #78350f;
         margin: 16px 0;
       }
+      .typeless-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(90deg, #f0fdf4 0%, #dcfce7 100%);
+        border-bottom: 1px solid #86efac;
+        padding: 10px 28px;
+        text-decoration: none;
+        color: inherit;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+      .typeless-bar:hover {
+        background: linear-gradient(90deg, #dcfce7 0%, #bbf7d0 100%);
+      }
+      .tl-mic {
+        font-size: 18px;
+        color: #16a34a;
+        flex-shrink: 0;
+      }
+      .tl-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        min-width: 0;
+        flex: 1;
+      }
+      .tl-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: #15803d;
+        letter-spacing: 0.02em;
+      }
+      .tl-desc {
+        font-size: 12px;
+        color: #166534;
+        opacity: 0.85;
+      }
+      .tl-btn {
+        flex-shrink: 0;
+        background: #16a34a;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 6px;
+        white-space: nowrap;
+      }
+      @media (max-width: 540px) {
+        .typeless-bar {
+          padding: 8px 16px;
+        }
+        .tl-desc {
+          display: none;
+        }
+      }
+      .cta-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        background: linear-gradient(135deg, #ede9fe 0%, #e0e7ff 100%);
+        border: 1px solid #c4b5fd;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin: 20px 0;
+      }
+      .cta-body {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        min-width: 0;
+      }
+      .cta-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #4c1d95;
+      }
+      .cta-desc {
+        font-size: 13px;
+        color: #5b21b6;
+        line-height: 1.5;
+      }
+      .cta-btn {
+        flex-shrink: 0;
+        display: inline-block;
+        background: #7c3aed;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 9px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.15s;
+      }
+      .cta-btn:hover {
+        background: #6d28d9;
+      }
+      @media (max-width: 540px) {
+        .cta-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .cta-btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
       .hl-box {
         background: #f8fafc;
         border: 1px solid var(--bdr);
@@ -526,22 +638,21 @@
         border-bottom: none;
       }
       .day-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
         margin: 16px 0;
       }
       .day-card {
         border: 1px solid var(--bdr);
         border-radius: 10px;
-        padding: 14px 18px;
+        padding: 14px 16px;
         background: #fff;
         transition: border-color 0.15s, box-shadow 0.15s;
         cursor: pointer;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 2px 14px;
+        flex-direction: column;
+        gap: 4px;
       }
       .day-card:hover {
         border-color: var(--accent);
@@ -551,22 +662,23 @@
         border-color: var(--accent);
       }
       .d-num {
-        font-size: 11px;
+        font-size: 10px;
         color: var(--accent);
         font-weight: 700;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        min-width: 52px;
       }
       .d-theme {
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
         color: var(--dark);
         margin: 0;
+        line-height: 1.4;
       }
       .d-fmt {
-        font-size: 12px;
+        font-size: 11px;
         color: var(--muted);
+        margin-top: 2px;
       }
       .cal-week {
         margin-bottom: 24px;
@@ -807,6 +919,9 @@
         .right-panel {
           display: none;
         }
+        .day-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       @media (max-width: 768px) {
         .layout {
@@ -824,9 +939,6 @@
         .cb {
           padding: 0 20px 48px;
         }
-        .day-grid {
-          grid-template-columns: 1fr 1fr;
-        }
         table {
           font-size: 12px;
         }
@@ -835,9 +947,10 @@
           padding: 8px 10px;
         }
       }
-      @media (max-width: 480px) {
+      @media (max-width: 435px) {
         .day-grid {
           grid-template-columns: 1fr;
+          gap: 8px;
         }
         .cover h1 {
           font-size: 21px;
@@ -1019,6 +1132,7 @@
         }
         .day-grid {
           grid-template-columns: 1fr !important;
+          gap: 8px;
         }
       }
 
@@ -1296,13 +1410,15 @@
         display: none !important;
       }
 
-      /* ── DAY CARD ACCORDION (full-width rows) ───────────── */
+      /* ── DAY CARD ACCORDION (3-col cards) ───────────── */
       .day-card .dd-hint {
-        margin-left: auto;
-        font-size: 0;
+        margin-top: auto;
+        padding-top: 8px;
+        font-size: 11px;
         color: var(--accent);
         display: flex;
         align-items: center;
+        gap: 2px;
       }
       .day-card .dd-hint::after {
         content: 'expand_more';
@@ -1548,6 +1664,15 @@
 
       <!-- MAIN -->
       <main class="main">
+        <a class="typeless-bar" href="https://www.typeless.com/?via=ziyun" target="_blank" rel="noopener">
+          <span class="mi tl-mic">mic</span>
+          <div class="tl-text">
+            <span class="tl-title">推薦搭配 Typeless</span>
+            <span class="tl-desc">用說的跟 AI 溝通最快，省去打字、還會自動整理重點</span>
+          </div>
+          <span class="tl-btn">免費註冊 →</span>
+        </a>
+
         <div class="cover">
           <div class="c-badge">✦ Zeona Studio 數位工具包</div>
           <!--COVER_TITLE-->
