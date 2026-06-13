@@ -154,7 +154,7 @@ onBeforeUnmount(() => observer?.disconnect())
         <section v-for="(s, i) in sections" :id="`sec-${i}`" :key="i" class="scroll-mt-24 lg:scroll-mt-6">
           <h2 class="text-lg md:text-xl font-black text-gray-900 mb-5">{{ s.title }}</h2>
 
-          <div class="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
+          <div class="grid gap-4 2xl:grid-cols-2">
             <article
               v-for="item in s.items"
               :key="`${i}-${item.n}`"
