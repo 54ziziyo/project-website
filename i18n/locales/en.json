@@ -1,7 +1,7 @@
 {
   "nav": {
     "about": "About",
-    "services": "Services",
+    "services": "Commission",
     "servicesSoftware": "Software Dev",
     "servicesSoftwareDesc": "Custom software development: websites, AI tools, LINE bots, automation and more",
     "servicesDesign": "Design",
@@ -10,6 +10,7 @@
     "faqDesc": "Common questions on process, pricing and collaboration",
     "toolbox": "Toolbox",
     "works": "Work",
+    "worksDesc": "Browse past development and design projects",
     "blog": "Blog",
     "contact": "Contact",
     "servicesMarketing": "Marketing",

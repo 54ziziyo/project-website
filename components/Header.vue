@@ -62,6 +62,11 @@ const components = computed(() => [
     description: t('nav.servicesMarketingDesc'),
   },
   {
+    title: t('nav.works'),
+    href: localePath('/works'),
+    description: t('nav.worksDesc'),
+  },
+  {
     title: t('nav.faq'),
     href: localePath('/faq'),
     description: t('nav.faqDesc'),
@@ -133,16 +138,6 @@ const showMenu = ref(false)
                 </li>
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              :href="localePath('/works')"
-              title="作品集 - 網站開發與行銷案例展示"
-              :class="navigationMenuTriggerStyle()"
-            >
-              {{ $t('nav.works') }}
-            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>

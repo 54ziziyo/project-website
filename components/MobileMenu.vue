@@ -33,11 +33,11 @@ const navItems = computed(() => [
       { title: t('nav.servicesSoftware'), href: localePath('/services/website') },
       { title: t('nav.servicesDesign'), href: localePath('/services/design') },
       { title: t('nav.servicesMarketing'), href: localePath('/services/marketing') },
+      { title: t('nav.works'), href: localePath('/works') },
       { title: t('nav.faq'), href: localePath('/faq') },
     ],
   },
-  { title: 'Works', href: localePath('/works'), sub: t('nav.works'), no: '04' },
-  { title: 'Blog', href: localePath('/blog'), sub: t('nav.blog'), no: '05' },
+  { title: 'Blog', href: localePath('/blog'), sub: t('nav.blog'), no: '04' },
   { title: 'Contact', href: localePath('/contact'), sub: t('nav.contact'), no: '06' },
 ])
 
