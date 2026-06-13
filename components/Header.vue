@@ -57,6 +57,11 @@ const components = computed(() => [
     description: t('nav.servicesDesignDesc'),
   },
   {
+    title: t('nav.servicesMarketing'),
+    href: localePath('/services/marketing'),
+    description: t('nav.servicesMarketingDesc'),
+  },
+  {
     title: t('nav.faq'),
     href: localePath('/faq'),
     description: t('nav.faqDesc'),
