@@ -54,11 +54,12 @@ useHead({
     <WebAddOnItems />
     <!-- CTA Section -->
     <ContactCta
-      :title-pre="t('blog.detail.ctaPre')"
-      :title-highlight="t('blog.detail.ctaHi')"
-      :title-post="t('blog.detail.ctaPost')"
-      :subtitle="t('blog.detail.ctaSub')"
-      :button-text="t('blog.detail.ctaBtn')"
+      title-pre="想自己動手做？"
+      title-highlight="數位工具箱"
+      title-post="裡有你要的"
+      subtitle="提示詞包、模板、AI 工具一次逛，買了永久用，不用等報價。"
+      button-text="逛數位工具箱 →"
+      to="/toolbox"
     />
   </div>
 </template>

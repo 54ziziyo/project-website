@@ -5,6 +5,7 @@ defineProps<{
   titlePost?: string
   subtitle?: string
   buttonText: string
+  to?: string
 }>()
 
 const localePath = useLocalePath()
@@ -52,7 +53,7 @@ onMounted(() => {
         {{ subtitle }}
       </p>
       <NuxtLink
-        :to="localePath('/contact')"
+        :to="localePath(to ?? '/contact')"
         class="inline-block bg-[#8782FF] text-white font-bold py-4 px-10 rounded-full hover:bg-[#6f6bff] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 active:scale-95"
       >
         {{ buttonText }}
