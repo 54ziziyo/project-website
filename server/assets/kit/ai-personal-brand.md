@@ -51,16 +51,11 @@
     ]
   },
   "quickjumps": [
-    { "href": "#ta-profile", "icon": "manage_accounts", "label": "TA 受眾輪廓", "sub": "提示詞 #0-A" },
     { "href": "#bio-prompt", "icon": "smartphone", "label": "IG Bio 生成", "sub": "提示詞 #1 · 5 個版本" },
-    { "href": "#bio-optimize", "icon": "edit", "label": "優化現有 Bio", "sub": "提示詞 #1b" },
     { "href": "#positioning", "icon": "my_location", "label": "品牌定位工作表", "sub": "提示詞 #2" },
-    { "href": "#golden3s", "icon": "videocam", "label": "Reels 黃金 3 秒", "sub": "4 種破題公式" },
+    { "href": "#carousel-prompt", "icon": "photo_library", "label": "輪播圖文案", "sub": "提示詞 #4" },
     { "href": "#reel-prompt", "icon": "videocam", "label": "Reels 腳本生成", "sub": "提示詞 #5" },
-    { "href": "#carousel-conversion", "icon": "photo_library", "label": "輪播高轉換設計", "sub": "5 個商業邏輯" },
-    { "href": "#story-modules", "icon": "web_stories", "label": "限動互動模組", "sub": "4 種類型" },
-    { "href": "#seo-title", "icon": "search", "label": "SEO 標題生成", "sub": "部落格 #1" },
-    { "href": "#voice", "icon": "record_voice_over", "label": "語氣調教", "sub": "部落格 #4" }
+    { "href": "#story-modules", "icon": "web_stories", "label": "限動互動模組", "sub": "4 種類型" }
   ]
 }
 ---
@@ -69,7 +64,7 @@
 
 開帳號之前先把這三件事想清楚，後面所有提示詞的效果才會準。
 
-### 提示詞 #0-A — 生成目標受眾（TA）輪廓 {#ta-profile}
+### 提示詞 #0-A — 生成目標受眾輪廓 {#ta-profile}
 
 ::: prompt
 你是一位 Instagram 個人品牌顧問。
@@ -183,7 +178,7 @@ IG Bio 支援 Unicode 特殊字體，把字型轉換後直接貼進 Bio，讓帳
 名稱欄建議用正常字體——IG 搜尋較難索引 Unicode 特殊字體，名稱欄是搜尋主要索引位置，用正常字才不會影響被找到的機會。特殊字體用在 Bio 描述內裝飾即可。
 :::
 
-### 提示詞 #1 — 生成 IG Bio（5 個版本） {#bio-prompt}
+### 提示詞 #1 — 生成 IG Bio {#bio-prompt}
 
 ::: prompt
 你是一位 Instagram 個人品牌策略師。

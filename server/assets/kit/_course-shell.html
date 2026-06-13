@@ -209,7 +209,7 @@
         color: #94a3b8;
       }
       .nc-wrap {
-        padding: 2px 0 6px 46px;
+        padding: 2px 0 6px 4px;
       }
       .nc {
         display: block;
@@ -353,6 +353,11 @@
         letter-spacing: -0.02em;
         line-height: 1.2;
         margin-bottom: 8px;
+        scroll-margin-top: 32px;
+      }
+      .pt-sec h3[id],
+      .pt-sec h4[id] {
+        scroll-margin-top: 32px;
       }
       .pt-desc {
         font-size: 15px;
@@ -1802,7 +1807,8 @@
         if (!(id in idToPart)) return false
         if (idToPart[id] !== curPart) setActivePart(idToPart[id], false)
         const el = document.getElementById(id)
-        if (el) requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+        // 雙 rAF：確保 part 切換後 layout 完成再 scroll
+        if (el) requestAnimationFrame(() => requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' })))
         return true
       }
       // intercept all in-page anchor links (sidebar, drawer, right panel, quick jump)
@@ -1826,7 +1832,13 @@
       }
       document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.mob-jump-link').forEach((a) => {
-          a.addEventListener('click', () => closeMobPopup(document.getElementById('jump-ov')))
+          a.addEventListener('click', (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            const id = a.getAttribute('href')?.slice(1)
+            closeMobPopup(document.getElementById('jump-ov'))
+            if (id) requestAnimationFrame(() => requestAnimationFrame(() => goToAnchor(id)))
+          })
         })
         document.querySelectorAll('.ck-item[data-goto]').forEach((item) => {
           item.addEventListener('click', (e) => {
@@ -1932,18 +1944,18 @@
               <div class="qc-sub">提示詞 #5</div>
             </div></a
           >
-          <a href="#seo-title" class="qc-item mob-jump-link"
-            ><div class="qc-icon"><span class="mi">search</span></div>
+          <a href="#story-modules" class="qc-item mob-jump-link"
+            ><div class="qc-icon"><span class="mi">web_stories</span></div>
             <div>
-              <div class="qc-lbl">SEO 標題生成</div>
-              <div class="qc-sub">部落格 #1</div>
+              <div class="qc-lbl">限動互動模組</div>
+              <div class="qc-sub">4 種類型</div>
             </div></a
           >
-          <a href="#voice" class="qc-item mob-jump-link"
-            ><div class="qc-icon"><span class="mi">record_voice_over</span></div>
+          <a href="#ta-profile" class="qc-item mob-jump-link"
+            ><div class="qc-icon"><span class="mi">manage_accounts</span></div>
             <div>
-              <div class="qc-lbl">語氣調教</div>
-              <div class="qc-sub">部落格 #4</div>
+              <div class="qc-lbl">TA 受眾輪廓</div>
+              <div class="qc-sub">提示詞 #0-A</div>
             </div></a
           >
         </div>

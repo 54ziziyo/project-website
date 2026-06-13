@@ -22,15 +22,12 @@ function highlightVars(s: string): string {
   return s.replace(/\[[^\]\n]{1,60}\]/g, (m) => `<span class="v">${m}</span>`)
 }
 
-let mdCache: MarkdownIt | null = null
+// 每次 render 都建新實例，避免 warm-request 時 closure 拿到舊 idMap
 function getMd(idMap: Map<string, string>): MarkdownIt {
-  // idMap 會在每次 render 前更新，所以共用實例即可
-  if (mdCache) return mdCache
   const md = new MarkdownIt({ html: false, linkify: true, breaks: false })
   md.use(anchor, {
     slugify: (s: string) => idMap.get(s.trim()) || 'h-' + s.trim().replace(/\s+/g, '-'),
   })
-  mdCache = md
   return md
 }
 
