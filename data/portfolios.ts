@@ -13,9 +13,12 @@ export interface Portfolio {
   title: string
   category: string
   description: string
+  descriptionEn?: string
   shortDesc: string
   features: string[]
+  featuresEn?: string[]
   techStack: string[]
+  techStackEn?: string[]
   image: string
   dataScreenshots?: string[]
   link: string
@@ -25,6 +28,93 @@ export interface Portfolio {
 }
 
 export const portfolios: Portfolio[] = [
+  {
+    id: 'roml-woo-seo-auto',
+    title: 'AI SEO 商品上架自動化',
+    category: '軟體開發',
+    shortDesc: '日本品牌商品爬取到 WooCommerce 上架全自動，2 分鐘取代 60 分鐘人工',
+    description: `將日本重機品牌（RS Taichi、Kushitani）官網商品網址，自動轉換為 WooCommerce 上架就緒的 SEO 商品頁。<br /><br />完整流程：爬取官網商品資料（名稱、顏色、尺寸、庫存狀態、商品圖片）→ Claude AI 生成 SEO+GEO 商品名稱、完整說明文案、焦點關鍵字、Yoast 中繼描述、圖片 alt 文字 → 自動判斷商品分類（含上層分類）→ 建立含顏色/尺寸的變體商品並對應即時庫存 → 自動填入 Yoast SEO 所有必填欄位與 Open Graph 社群圖文 → 以「送件審閱」狀態送進 WooCommerce，管理員確認售價後即可發布。<br /><br />支援整個系列批次上架、SKU 自動去重（已上架自動略過）、季節自動解析（從商品圖片檔名判斷春夏／秋冬款）。每件商品從人工撰文排版約 30–60 分鐘，縮短至全自動 2 分鐘內完成。`,
+    features: [
+      'AI 自動生成 SEO+GEO 商品文案與焦點關鍵字',
+      '多品牌爬蟲（RS Taichi、Kushitani）',
+      '含顏色／尺寸／庫存的變體商品自動建立',
+      'Yoast SEO 全欄位 + Open Graph 自動填入',
+      'SKU 去重與季節自動解析（春夏／秋冬）',
+      '批次上架：2 分鐘完成原本 60 分鐘人工作業',
+    ],
+    techStack: ['TypeScript', 'Node.js', 'Anthropic Claude API', 'WooCommerce REST API', 'WordPress Media API', 'Yoast SEO 自動化', 'GEO 文案策略', '網頁爬蟲', '變體商品自動建立', 'OG / Twitter meta 自動修正'],
+    techStackEn: ["TypeScript","Node.js","Anthropic Claude API","WooCommerce REST API","WordPress Media API","Yoast SEO Automation","GEO Content Strategy","Web Scraping","Variation Product Auto-Build","OG / Twitter Meta Auto-Patch"],
+    descriptionEn: `Takes Japanese motorcycle brand product URLs (RS Taichi, Kushitani) and fully automates the entire WooCommerce listing pipeline.<br /><br />The workflow: scrape product data (name, color, size, stock status, images) → Claude AI generates SEO+GEO product titles, full copy, focus keywords, Yoast meta descriptions, and image alt text → auto-detect product category (including parent category) → build variation products with color/size mapped to live inventory → populate every Yoast SEO field and Open Graph social tags → submit to WooCommerce as "Pending Review" so the admin only needs to set the price before publishing.<br /><br />Supports full-series batch listing, SKU deduplication (already-listed SKUs are skipped automatically), and season detection from image filenames (Spring/Summer vs. Autumn/Winter). Reduces per-product time from 30–60 minutes of manual copywriting to under 2 minutes, fully automated.`,
+    featuresEn: [
+          "Claude AI auto-generates SEO+GEO copy and focus keywords",
+          "Multi-brand scrapers (RS Taichi & Kushitani)",
+          "Variation products with color / size / inventory built automatically",
+          "Full Yoast SEO field population + Open Graph tags",
+          "SKU deduplication & season detection (Spring–Summer / Autumn–Winter)",
+          "Batch listing: 2 minutes vs. 60 minutes of manual work per product"
+    ],
+    image: getImageUrl('roml-woo-seo_dev.png'),
+    link: '/works/roml-woo-seo-auto',
+    websiteLink: '#',
+  },
+  {
+    id: 'hogan-ig-operation',
+    title: '【社群】內容策劃業配執行',
+    category: '行銷營運',
+    shortDesc: '@hogan.tech 軟體工程師 IG，2.9 萬粉絲、200 則貼文，業配從洽談到交稿全程獨立作業',
+    description: `軟體工程為主題 Instagram 帳號 @hogan.tech，以軟體工程師為核心受眾，產出科技工具介紹、工程師迷因與技術討論等內容，目前累積 <strong>2.9 萬粉絲、200 則貼文</strong>。<br /><br />全程由個人獨立負責：主題策劃、文案撰寫、腳本製作、拍攝、剪輯、發布排程，以及貼文留言自動私訊回覆，並洽談與執行廠商業配合作。<br /><br />合作品牌橫跨 AI 開發工具、軟體服務與影音平台，包含 Claude AI 全端開發工作流課程、Typeless、ReccoAI、Flixseek 等。業配內容從需求溝通、腳本提案、拍攝製作到交稿全程獨立作業，確保品牌訊息與帳號風格自然融合，維持受眾信任度與互動品質。`,
+    features: [
+      '主題策劃與內容日曆規劃',
+      '腳本撰寫、拍攝、剪輯一條龍製作',
+      '廠商業配洽談、提案與執行',
+      '留言自動私訊回覆（ManyChat / BotBonnie）',
+      '受眾分析與貼文數據追蹤優化',
+      '科技工具介紹、工程師迷因、技術討論多元內容',
+    ],
+    techStack: ['社群文案撰寫', '短影片腳本撰寫', '短影片拍攝', '短影片剪輯', '廠商業配溝通與提案', '科技內容策劃', 'Reels / 短影音製作', '受眾分析與內容優化', '個人品牌經營'],
+    techStackEn: ["Social Copywriting","Short-Video Scripting","Short-Video Filming","Short-Video Editing","Brand Sponsorship Negotiation & Proposal","Tech Content Strategy","Reels / Short-Form Video Production","Audience Analytics & Content Optimization","Personal Brand Management"],
+    descriptionEn: `A software-engineering-focused Instagram account, @hogan.tech, targeting software engineers as its core audience. Content covers tech tool reviews, engineering memes, and technical discussions — currently at <strong>29K followers and 200 posts</strong>.<br /><br />Fully independent: topic planning, copywriting, scripting, filming, editing, scheduling, automated DM replies on comments, plus end-to-end sponsorship negotiations and execution.<br /><br />Brand partnerships span AI dev tools, SaaS platforms, and streaming services — including Claude AI full-stack workflow courses, Typeless, ReccoAI, and Flixseek. Every sponsored post is handled solo from brief to final delivery, ensuring brand messaging integrates naturally with the account's voice to maintain audience trust and engagement quality.`,
+    featuresEn: [
+          "Topic strategy and content calendar planning",
+          "End-to-end production: script → film → edit",
+          "Sponsorship negotiation, proposal, and delivery",
+          "Automated comment DM replies (ManyChat / BotBonnie)",
+          "Audience analytics and post-performance optimization",
+          "Diverse content: tech tool reviews, engineer memes, technical discussions"
+    ],
+    image: getImageUrl('hogan-ig_pro.png'),
+    link: '/works/hogan-ig-operation',
+    websiteLink: '#',
+  },
+  {
+    id: 'roml-line-bot',
+    title: 'AI 自動化購物 LINE 代購機器人',
+    category: '軟體開發',
+    shortDesc: '傳送日本商品連結即可選色選尺寸加入購物車，整合匯率換算、運費計算、訂單管理全流程',
+    description: `為日本代購店「洛姆」打造的 LINE 官方帳號 AI 聊天機器人，整合完整代購購物流程：顧客只需在 LINE 傳送日本商品網址，機器人自動爬取商品資訊，回傳互動式 Flex Message 卡片供選色、選尺寸，一鍵加入購物車；結帳頁以 LIFF 應用呈現，即時換算日幣匯率、自動計算國際航空運費與代購加碼，顧客填寫資料後即可送出訂單。<br /><br />支援 <strong>7 個日本品牌</strong>（Uniqlo、GU、RS Taichi、Kushitani、FR2、BAPE、AAPE），各自實作獨立爬蟲。訂單自動寫入 Supabase 資料庫並同步 Google 試算表，發送確認 Email；Vercel Cron Job 每日自動清除逾期訂單並執行爬蟲健康監控。<br /><br />技術亮點包含：結帳前即時重新驗證庫存與價格、Flex Message 50KB 自動分段保護機制、玉山銀行 JPY 匯率自動抓取與快取、Webhook 模組化架構設計。`,
+    features: [
+      '貼網址即完成商品查詢、選色選尺寸到下單',
+      '互動式 Flex Message 選購卡片（50KB 自動分段）',
+      'LIFF 結帳頁：即時匯率 + 運費 + 代購費全自動計算',
+      '7 大日本品牌獨立爬蟲（Uniqlo、BAPE、RS Taichi 等）',
+      '訂單寫入 Supabase + 同步 Google 試算表 + 寄出確認 Email',
+      'Vercel Cron Job 每日自動清除逾期訂單與爬蟲健康監控',
+    ],
+    techStack: ['Nuxt 4', 'TypeScript', 'Node.js', 'LINE Bot SDK', 'LINE LIFF', 'Supabase PostgreSQL', 'Google Sheets API', 'Vercel Serverless', 'Cron Jobs', '爬蟲 & 自動化', 'Vue 3', 'Tailwind CSS'],
+    techStackEn: ["Nuxt 4","TypeScript","Node.js","LINE Bot SDK","LINE LIFF","Supabase PostgreSQL","Google Sheets API","Vercel Serverless","Cron Jobs","Scraping & Automation","Vue 3","Tailwind CSS"],
+    descriptionEn: `A LINE Official Account AI chatbot built for Japanese proxy shop "ROML", covering the entire proxy-purchase flow. Customers simply send a Japanese product URL in LINE; the bot scrapes the product, returns an interactive Flex Message card to pick color and size, and adds it to the cart in one tap. The LIFF checkout page shows a live JPY exchange rate, calculates international air freight, and adds the proxy fee — customers just fill in their details and submit.<br /><br />Supports <strong>7 Japanese brands</strong> (Uniqlo, GU, RS Taichi, Kushitani, FR2, BAPE, AAPE) with independent scrapers per brand. Orders are written to Supabase, synced to Google Sheets, and trigger a confirmation email. A Vercel Cron Job runs daily to purge expired orders and run scraper health checks.<br /><br />Technical highlights: real-time inventory and price re-validation before checkout, Flex Message 50KB auto-split protection, live JPY rate fetching and caching from E.SUN Bank, and a modular Webhook architecture.`,
+    featuresEn: [
+          "Paste a URL → query product, pick color & size, place order — all in LINE",
+          "Interactive Flex Message product cards (auto-split at 50KB)",
+          "LIFF checkout: live FX rate + shipping + proxy fee, fully automated",
+          "7 Japanese brand scrapers (Uniqlo, BAPE, RS Taichi, and more)",
+          "Orders saved to Supabase + synced to Google Sheets + confirmation email sent",
+          "Vercel Cron Job: daily expired-order cleanup and scraper health monitoring"
+    ],
+    image: getImageUrl('roml-line-bot_dev.png'),
+    link: '/works/roml-line-bot',
+    websiteLink: '#',
+  },
   {
     id: 'luxetravel',
     title: 'Luxe Travel 歐洲旅遊平台',

@@ -84,6 +84,18 @@ export const productEn: Record<string, { name: string; description: string; tags
 }
 
 export const portfolioEn: Record<string, { title: string; shortDesc: string }> = {
+  'roml-woo-seo-auto': {
+    title: 'AI SEO Product Listing Automation',
+    shortDesc: 'Fully automated pipeline from Japanese brand scraping to WooCommerce — 2 minutes vs. 60 minutes manual',
+  },
+  'hogan-ig-operation': {
+    title: 'IG Account Management: Content Strategy to Sponsored Execution',
+    shortDesc: '@hogan.tech software-engineer IG — 29K followers, 200 posts, end-to-end sponsorship from pitch to delivery',
+  },
+  'roml-line-bot': {
+    title: 'AI Shopping LINE Bot for Japan Proxy Purchasing',
+    shortDesc: 'Send a product URL in LINE — the bot scrapes it, lets you pick color & size, and handles checkout with live FX rates',
+  },
   luxetravel: { title: 'Luxe Travel — European Travel Platform', shortDesc: 'Premium European travel planning service' },
   levert: { title: 'Levert — Probiotics E-commerce', shortDesc: 'A professional supplements shopping experience' },
   miniclub: { title: 'Miniclub — Travel Service Platform', shortDesc: 'Expert-led travel planning service' },

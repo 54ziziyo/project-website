@@ -10,7 +10,7 @@ const isVisible = ref(false)
 
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { catLabel, wTitle, wDesc } = useLocalizedContent()
+const { catLabel, wTitle, wDesc, wFullDesc, wFeatures, wTechStack } = useLocalizedContent()
 
 const currentPortfolio = computed(() => {
   const id = route.params.id as string
@@ -154,7 +154,7 @@ onMounted(() => {
                 <span class="w-2 h-6 bg-[#8782FF] rounded mr-3"></span>
                 {{ t('works.detail.desc') }}
               </h2>
-              <p class="text-gray-600 leading-relaxed" v-html="currentPortfolio.description"></p>
+              <p class="text-gray-600 leading-relaxed" v-html="wFullDesc(currentPortfolio)"></p>
             </div>
 
             <div class="mb-8">
@@ -163,7 +163,7 @@ onMounted(() => {
                 {{ t('works.detail.features') }}
               </h2>
               <ul class="space-y-3">
-                <li v-for="feature in currentPortfolio.features" :key="feature" class="flex items-start">
+                <li v-for="feature in wFeatures(currentPortfolio)" :key="feature" class="flex items-start">
                   <svg class="w-5 h-5 text-[#8782FF] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path
                       fill-rule="evenodd"
@@ -183,7 +183,7 @@ onMounted(() => {
               </h2>
               <div class="flex flex-wrap gap-2">
                 <span
-                  v-for="tech in currentPortfolio.techStack"
+                  v-for="tech in wTechStack(currentPortfolio)"
                   :key="tech"
                   class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full font-medium hover:bg-[#8782FF] hover:text-white transition-all duration-300"
                 >

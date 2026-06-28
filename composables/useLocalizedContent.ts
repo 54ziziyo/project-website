@@ -29,6 +29,12 @@ export function useLocalizedContent() {
     isEn.value ? portfolioEn[p.id]?.title ?? p.title : p.title
   const wDesc = (p: { id: string; shortDesc: string }) =>
     isEn.value ? portfolioEn[p.id]?.shortDesc ?? p.shortDesc : p.shortDesc
+  const wFullDesc = (p: { description: string; descriptionEn?: string }) =>
+    isEn.value ? p.descriptionEn ?? p.description : p.description
+  const wFeatures = (p: { features: string[]; featuresEn?: string[] }) =>
+    isEn.value ? p.featuresEn ?? p.features : p.features
+  const wTechStack = (p: { techStack: string[]; techStackEn?: string[] }) =>
+    isEn.value ? p.techStackEn ?? p.techStack : p.techStack
 
   // 部落格：優先用 Notion 的英文欄位，其次 contentEn 對照表，最後中文
   const bTitle = (p: { id: string; title: string; titleEn?: string }) =>
@@ -39,5 +45,5 @@ export function useLocalizedContent() {
   const bTags = (p: { tags: string[]; tagsEn?: string[] }) =>
     isEn.value ? (p.tagsEn?.length ? p.tagsEn : (p.tags || []).map((tg) => blogTagsEn[tg] || tg)) : p.tags
 
-  return { isEn, catLabel, pName, pDesc, pTags, pFullDesc, pFeatures, pCoverImage, bCoverImage, wTitle, wDesc, bTitle, bExcerpt, bTags }
+  return { isEn, catLabel, pName, pDesc, pTags, pFullDesc, pFeatures, pCoverImage, bCoverImage, wTitle, wDesc, wFullDesc, wFeatures, wTechStack, bTitle, bExcerpt, bTags }
 }

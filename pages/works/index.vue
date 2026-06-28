@@ -3,7 +3,7 @@ import { portfolios, categories } from '~/data/portfolios'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
-const { catLabel, wTitle, wDesc } = useLocalizedContent()
+const { catLabel, wTitle, wDesc, wTechStack } = useLocalizedContent()
 
 // SEO 優化 - 作品集頁面
 useHead(() => ({
@@ -181,12 +181,12 @@ onMounted(() => {
 
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  v-for="tech in portfolio.techStack.slice(0, 3)"
+                  v-for="tech in wTechStack(portfolio).slice(0, 3)"
                   :key="tech"
                   class="px-3 py-1 bg-gray-50 text-gray-400 text-xs rounded-full border border-gray-100 hover:border-[#8782FF] hover:text-[#8782FF] transition-all"
                   >{{ tech }}</span
                 >
-                <span v-if="portfolio.techStack.length > 3" class="text-gray-300 text-xs self-center">...</span>
+                <span v-if="wTechStack(portfolio).length > 3" class="text-gray-300 text-xs self-center">...</span>
               </div>
 
               <div v-if="isDesktop" class="mt-2 block overflow-hidden">
