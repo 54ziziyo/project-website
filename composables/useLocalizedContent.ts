@@ -35,9 +35,9 @@ export function useLocalizedContent() {
     isEn.value ? p.titleEn || blogEn[p.id]?.title || p.title : p.title
   const bExcerpt = (p: { id: string; excerpt: string; excerptEn?: string }) =>
     isEn.value ? p.excerptEn || blogEn[p.id]?.excerpt || p.excerpt : p.excerpt
-  // 英文版：每個中文 tag 走全站字典翻譯（缺漏才 fallback 原文），與部落格列表頁一致
+  // 英文版：優先使用 tagsEn，沒有才走字典翻譯 fallback
   const bTags = (p: { tags: string[]; tagsEn?: string[] }) =>
-    isEn.value ? (p.tags || []).map((tg) => blogTagsEn[tg] || tg) : p.tags
+    isEn.value ? (p.tagsEn?.length ? p.tagsEn : (p.tags || []).map((tg) => blogTagsEn[tg] || tg)) : p.tags
 
   return { isEn, catLabel, pName, pDesc, pTags, pFullDesc, pFeatures, pCoverImage, bCoverImage, wTitle, wDesc, bTitle, bExcerpt, bTags }
 }

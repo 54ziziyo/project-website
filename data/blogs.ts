@@ -43,6 +43,34 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'ai-tools-fundraisly-brew-unabyss',
+    title: "別再瞎忙了！這 3 款 AI 工具幫你搞定募資、行銷與自動化知識庫",
+    category: 'AI 人工智慧',
+    tags: ['AI工具', '募資', '電子郵件行銷', '自動化', 'Product Hunt'],
+    excerpt: "如果你還在用傳統方式找投資人、設計電子郵件、整理 AI 的上下文，你可能正在浪費大量時間。這篇帶你看 Fundraisly、Brew、Unabyss 三款 AI 工具，從創業募資到行銷自動化，全方位提升效率。",
+    titleEn: "Stop Wasting Time: 3 AI Tools That Automate Fundraising, Email Design & Your AI Context Layer",
+    excerptEn: "Still spending hours finding investors, designing emails from scratch, and re-explaining yourself to AI? These 3 tools — Fundraisly, Brew, and Unabyss — tackle each of these problems head-on. Here's an honest look at what they do, who they're for, and whether they're worth your time.",
+    tagsEn: ['AI tools', 'fundraising', 'email marketing', 'automation', 'Product Hunt'],
+    coverImage: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80',
+    coverImageEn: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80',
+    author: 'Zeona Studio',
+    publishedAt: '2026-06-21',
+    updatedAt: '2026-06-21',
+    featured: false,
+    seo: {
+      title: '別再瞎忙了！這 3 款 AI 工具幫你搞定募資、行銷與自動化知識庫 | Zeona Studio',
+      description: '找投資人靠人脈、行銷設計靠感覺、每次用 AI 都要重新說明背景？Fundraisly、Brew、Unabyss 三款 AI 工具，分別解決這三個痛點，帶你全方位提升創業效率。',
+      keywords: 'Fundraisly, Brew, Unabyss, AI工具, 募資, 電子郵件行銷, AI自動化, Product Hunt 2026',
+      ogImage: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80',
+    },
+    seoEn: {
+      title: 'Stop Wasting Time: 3 AI Tools for Fundraising, Email Design & Context Management | Zeona Studio',
+      description: 'Fundraisly finds and books investor meetings for you. Brew designs on-brand emails without design skills. Unabyss keeps your AI always updated on your context. Honest review of all three.',
+      keywords: 'Fundraisly review, Brew email tool, Unabyss AI context, AI tools 2026, Product Hunt AI, startup tools',
+    },
+    content: "<p style=\"font-size:18px;line-height:1.9;\">你有沒有這種感覺：每天都很忙，但回頭看，好像沒做到什麼真正重要的事？找投資人靠人脈、寫行銷信靠感覺、每次用 AI 都要重新解釋一遍背景——這三件事，正在悄悄吃掉你大量的時間和精力。</p>\n\n<p>這週從 Product Hunt 上，我挑出了 3 款讓我眼睛一亮的 AI 工具：<a href=\"https://fundraisly.com\" target=\"_blank\" rel=\"noopener\"><strong>Fundraisly</strong></a>、<a href=\"https://brew.so\" target=\"_blank\" rel=\"noopener\"><strong>Brew</strong></a>、<a href=\"https://unabyss.com\" target=\"_blank\" rel=\"noopener\"><strong>Unabyss</strong></a>。它們分別解決了募資媒合、電子郵件行銷、以及 AI 知識管理這三個痛點。讓我帶你一起看看它們值不值得用。</p>\n\n<hr/>\n\n<h2>1. Fundraisly：讓 AI 幫你找對投資人，直接幫你約好會議</h2>\n\n<p>募資是很多創業者最怕的一關。你需要花大量時間研究哪些 VC 投過類似的案子、寫 cold email、等待回覆……即便這樣，回覆率也往往令人沮喪。<a href=\"https://fundraisly.com\" target=\"_blank\" rel=\"noopener\">Fundraisly</a> 想改變這件事。</p>\n\n<p>它是一款 AI 募資代理（AI Fundraising Agent），核心功能是根據你的公司背景、產業、募資階段，自動從超過 <strong>30 萬名投資人</strong>和<strong>數百萬筆交易紀錄</strong>的資料庫中，找出最相關的潛在投資人，並主動幫你安排介紹與會議。你不需要再盲目地發 cold email，Fundraisly 會替你做這件事。</p>\n\n<p>我覺得這個產品最有意思的地方，是它不只是「推薦清單」，而是真的代替你去做外展（outreach）的動作。對於沒有強大人脈網路的創業者來說，這個門檻差距可以被大幅縮小。</p>\n\n<h3>如何開始使用 Fundraisly？</h3>\n<ol>\n  <li><strong>建立帳號並填寫公司資料</strong>：包含產業類別、募資輪次（Pre-Seed、Seed、Series A 等）、目標金額與公司亮點。資料填得愈完整，媒合準確度愈高。</li>\n  <li><strong>審閱 AI 推薦的投資人名單</strong>：系統會列出最相關的投資人清單，你可以篩選、確認目標後授權 Fundraisly 發起接觸。</li>\n  <li><strong>等待會議邀約確認</strong>：Fundraisly 會以你的名義進行外展，有興趣的投資人確認後，會議就會直接排進你的行事曆。</li>\n</ol>\n\n<h3>為什麼選 Fundraisly 而不是其他平台？</h3>\n<p>市場上類似的工具（如 Visible、Foundersuite）大多是 CRM 管理工具，幫你整理投資人資訊，但外展動作還是得自己來。Fundraisly 的差異在於它是 <strong>全自動化的主動外展</strong>，幫你省去最費時費力的冷接觸階段。如果你的時間很寶貴，或是你的人脈網路還不夠強，這個差異就非常關鍵。</p>\n\n<h3>誰適合使用 Fundraisly？</h3>\n<ul>\n  <li>正在進行 Pre-Seed 到 Series A 的早期新創團隊</li>\n  <li>沒有強大 VC 人脈、需要從零建立投資人關係的創業者</li>\n  <li>想提高募資效率、減少在外展上花費時間的 Founder</li>\n</ul>\n\n<hr/>\n\n<h2>2. Brew：AI 幫你設計電子郵件，讓你的品牌在收件匣裡脫穎而出</h2>\n\n<p>電子郵件行銷的開信率（Open Rate）平均只有 20–25%，但設計精美、品牌一致的郵件可以讓這個數字顯著提升。問題是，大多數人不是設計師，也沒有時間從頭學 Figma 或 Canva 來做郵件設計。<a href=\"https://brew.so\" target=\"_blank\" rel=\"noopener\">Brew</a> 就是為這個痛點而生的。</p>\n\n<p>Brew 主打 AI 輔助的電子郵件設計，讓你不需要設計背景，也能快速產出風格一致、視覺漂亮的品牌郵件。它的設計理念是「簡單易用」，從範本選擇到內容編輯，整個流程都針對非設計師使用者優化。</p>\n\n<p>老實說，我第一次看到這個工具時，擔心它只是另一個「把 AI 貼上去的普通郵件工具」，但它的設計彈性和品牌一致性讓我刮目相看。特別是在你需要快速產出大量系列郵件的時候，Brew 可以幫你維持視覺品質而不讓速度打折。</p>\n\n<h3>如何開始使用 Brew？</h3>\n<ol>\n  <li><strong>匯入你的品牌識別</strong>：上傳 Logo、設定品牌色、字型，Brew 會自動套用到所有設計中。</li>\n  <li><strong>選擇郵件範本或讓 AI 生成</strong>：輸入這封信的目的（如「產品上線公告」、「限時優惠」），AI 會生成第一版草稿。</li>\n  <li><strong>設定自動化序列</strong>：連結你的訂閱者名單，設定觸發條件（如新用戶歡迎信、購後追蹤信），讓 Brew 自動發送。</li>\n</ol>\n\n<h3>為什麼選 Brew 而不是 Mailchimp 或 Klaviyo？</h3>\n<p>Mailchimp 和 Klaviyo 是強大的工具，但它們的設計介面對非設計師來說仍有門檻，且需要花時間學習操作邏輯。Brew 的核心優勢是 <strong>以 AI 降低設計門檻</strong>，讓你更快從「想法」到「發送出去的郵件」。如果你是小型品牌或個人創業者，需要快速、好看、省時，Brew 會是更適合的起點。</p>\n\n<h3>誰適合使用 Brew？</h3>\n<ul>\n  <li>正在建立品牌受眾的個人創業者、內容創作者</li>\n  <li>電商品牌需要快速產出系列行銷郵件</li>\n  <li>行銷人員想提升郵件視覺品質但沒有設計資源</li>\n</ul>\n\n<hr/>\n\n<h2>3. Unabyss：讓 AI 永遠記住你是誰，不用再重複解釋背景</h2>\n\n<p>你有沒有遇過這個問題：每次開一個新的 ChatGPT 對話，都要重新解釋「我是做什麼的」、「我的目標是什麼」、「我偏好的風格是什麼」……一遍又一遍？這不只是麻煩，更是在浪費你的認知資源。<a href=\"https://unabyss.com\" target=\"_blank\" rel=\"noopener\">Unabyss</a> 想解決的，就是這個問題。</p>\n\n<p>Unabyss 是一個「自我更新的 AI 上下文層（Self-Updating Context Layer）」。它會連接你日常使用的應用程式（如 Notion、Gmail、行事曆），自動提取、結構化並持續更新你的個人背景資訊，讓你的 AI 工具在每次對話中都已經「認識你」，不需要重新說明。</p>\n\n<p>舉個具體例子：你在 Notion 裡更新了某個專案的進度，Unabyss 會自動同步這個資訊到你的 AI 上下文中。下次你問 ChatGPT「幫我想一下這個專案下一步怎麼做」，它已經知道你的專案現況，不需要你再貼一次背景。</p>\n\n<h3>如何開始使用 Unabyss？</h3>\n<ol>\n  <li><strong>建立帳號並連接你的應用程式</strong>：Unabyss 目前支援 Notion、Gmail、Google Calendar 等主流工具，授權連接後即可開始同步。</li>\n  <li><strong>設定你的個人上下文範疇</strong>：決定哪些資訊要被提取（如工作角色、進行中的專案、偏好設定），哪些要排除（如私人訊息）。</li>\n  <li><strong>整合到你的 AI 工作流程</strong>：Unabyss 會生成一個上下文區塊，你可以在任何 AI 工具的系統提示（System Prompt）中使用，讓 AI 立刻理解你的背景。</li>\n</ol>\n\n<h3>為什麼選 Unabyss 而不是手動管理 System Prompt？</h3>\n<p>手動管理 System Prompt 的問題是：你的背景資訊會隨時間過時。你的專案更新了、你的目標改變了，但 System Prompt 還停留在三個月前。Unabyss 的核心差異是 <strong>自動更新</strong>：你的上下文會隨著你實際的工作動態同步，讓 AI 的輸出永遠基於你最新的情況。</p>\n\n<h3>誰適合使用 Unabyss？</h3>\n<ul>\n  <li>重度使用 AI 工具（ChatGPT、Claude、Gemini）的知識工作者</li>\n  <li>同時管理多個專案、需要 AI 快速掌握不同背景的創業者</li>\n  <li>希望提升 AI 輸出品質、減少背景說明時間的開發者與設計師</li>\n</ul>\n\n<hr/>\n\n<h2>結語：AI 工具改變的不只是效率，還有你和工作的關係</h2>\n\n<p>這三款工具有一個共同點：它們都在幫你省掉那些「明明很重要但很耗時」的準備工作——找對投資人、設計好看的郵件、讓 AI 認識你。當這些前置工作被自動化，你才有更多認知資源去做真正需要人類判斷的決策。</p>\n\n<p>不過，使用 AI 工具時有一件事值得提醒：當工具代替你去接觸投資人、寄出郵件，<strong>你的授權與監督仍然很重要</strong>。AI 可以提高效率，但對外的溝通最終還是代表你的品牌和信譽。用工具，但別讓工具完全取代你的判斷。</p>\n\n<p>如果這三款工具裡，你只能先試一款，我的建議是：<strong>先從你最大的痛點出發</strong>。正在找錢？試 Fundraisly。需要做行銷但設計苦手？試 Brew。AI 重度使用者？Unabyss 會讓你的工作流程質變。</p>\n\n<p>這些工具都還在早期階段，功能持續在演化。趁現在入場，也是最好摸清楚它們邊界的時機。</p>",
+  },
+  {
     id: 'typeless-voice-ai-prompt-guide-2026',
     title: '拜託！使用提示詞之前，先下載語音助理，快速讓 AI 真正認識你、才能產出更精準的內容',
     category: 'Prompt 提示詞',
