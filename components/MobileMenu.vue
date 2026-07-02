@@ -191,7 +191,7 @@ function toggleExpand(index: number) {
           <span class="text-[10px] text-gray-400 uppercase tracking-widest">{{ t('mobile.connect') }}</span>
           <div class="flex items-center space-x-4 font-black text-sm text-[#4A4A4A]">
             <a
-              href="https://www.instagram.com/lunn_yan/"
+              href="https://www.instagram.com/zeona_co/"
               target="__blank"
               rel="noopener noreferrer"
               class="hover:text-[#8782FF]"
@@ -206,7 +206,9 @@ function toggleExpand(index: number) {
             >
           </div>
         </div>
-        <div class="text-[10px] text-gray-400 font-mono tracking-tighter">©{{ new Date().getFullYear() }} ZEONA STUDIO</div>
+        <div class="text-[10px] text-gray-400 font-mono tracking-tighter">
+          ©{{ new Date().getFullYear() }} ZEONA STUDIO
+        </div>
       </div>
     </div>
   </transition>

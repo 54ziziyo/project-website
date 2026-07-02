@@ -50,7 +50,7 @@ export default defineNuxtConfig({
 
   // 網站基本 URL（sitemap 需要）
   site: {
-    url: 'https://zeona.vercel.app',
+    url: 'https://www.zeona.co',
   },
 
   // Sitemap 配置
