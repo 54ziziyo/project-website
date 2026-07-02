@@ -6,11 +6,11 @@ export default defineNuxtPlugin(() => {
     }
     ;(window as any).gtag = gtag
     gtag('js', new Date())
-    gtag('config', 'G-5QEVXM0T57')
+    gtag('config', 'G-JW3D2C1Q5E')
 
     const script = document.createElement('script')
     script.async = true
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-5QEVXM0T57'
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-JW3D2C1Q5E'
     document.head.appendChild(script)
   }
 
