@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ComponentPublicInstance } from 'vue'
+
 // 類別類型定義
 type Category = 'web' | 'marketing' | 'design'
 
@@ -55,6 +57,9 @@ const currentFaqs = computed(() => {
 })
 
 const categoryRefs = ref<Record<string, HTMLElement | null>>({})
+const setCategoryRef = (value: string) => (el: Element | ComponentPublicInstance | null) => {
+  categoryRefs.value[value] = el instanceof HTMLElement ? el : null
+}
 const indicatorStyle = ref<{ width: string; transform: string }>({ width: '0px', transform: 'translateX(0px)' })
 // 指示器量測完成前，active 按鈕先用自身紫底當後備，避免初載白字白底（看起來像沒進頁面）
 const indicatorReady = ref(false)
@@ -203,7 +208,7 @@ onMounted(() => {
         <button
           v-for="cat in categories"
           :key="cat.value"
-          :ref="(el) => (categoryRefs[cat.value] = el)"
+          :ref="setCategoryRef(cat.value)"
           :class="[
             'relative z-10 px-6 py-2.5 rounded-xl transition-all duration-300 text-sm md:text-base font-bold whitespace-nowrap cursor-pointer',
             selectedCategory === cat.value ? 'text-white' : 'text-gray-500 hover:text-[#8782FF]',

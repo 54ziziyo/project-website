@@ -32,12 +32,9 @@ jobs:
 
       - run: pnpm build
 
-  # ESLint 目前有既有錯誤（主要是 @typescript-eslint/no-explicit-any），
-  # 尚未清完前先不擋 PR，但狀態仍會顯示在 PR 上供參考。
-  # TODO: 既有錯誤清完後移除 continue-on-error，讓這個 job 真正擋 PR。
+  # ESLint 既有錯誤已清完，這個 job 會擋 PR。
   lint:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -54,12 +51,9 @@ jobs:
 
       - run: pnpm lint
 
-  # 型別檢查目前有既有錯誤（vue-tsc 對部分 DOM/型別推導有問題），
-  # 尚未清完前先不擋 PR，但狀態仍會顯示在 PR 上供參考。
-  # TODO: 既有錯誤清完後移除 continue-on-error，讓這個 job 真正擋 PR。
+  # 型別檢查既有錯誤已清完，這個 job 會擋 PR。
   typecheck:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 

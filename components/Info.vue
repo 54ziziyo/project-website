@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ComponentPublicInstance } from 'vue'
 import MedoaPlanImg from '../assets/images/info/media-planning.png'
 import TrainingImg from '../assets/images/info/training.png'
 import WebDevImg from '../assets/images/info/web-development.png'
@@ -24,7 +25,7 @@ const isInView = (el: HTMLElement, offset = 0.8) => {
   return rect.top <= viewHeight * offset && rect.bottom >= 0
 }
 
-const collectCardRef = (el: Element | null) => {
+const collectCardRef = (el: Element | ComponentPublicInstance | null) => {
   if (el instanceof HTMLElement && !serviceCardEls.value.includes(el)) {
     serviceCardEls.value.push(el)
   }

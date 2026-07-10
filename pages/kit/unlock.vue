@@ -18,6 +18,12 @@ interface UnlockResult {
   url: string | null
 }
 
+// $fetch 失敗時丟出的錯誤形狀（對應 ofetch 的 FetchError，這裡只取用到的欄位）
+interface UnlockFetchError {
+  data?: { statusMessage?: string; message?: string }
+  statusMessage?: string
+}
+
 // 選填的 kit 提示（?kit=crm 或 ?p=crm）：用來顯示對應商品名、並省一次 API；沒帶也沒關係，後端會自動判斷序號屬於哪個商品。
 const kitHint = computed(() => {
   const v = route.query.kit ?? route.query.p
@@ -59,9 +65,10 @@ async function unlock() {
     } else {
       window.location.href = (locale.value === 'en' && r.nextEn) || r.next || '/'
     }
-  } catch (e: any) {
+  } catch (e) {
     // 後端自訂訊息在 e.data；e.statusMessage 常只是 HTTP reason（如 "Forbidden"），放最後備援
-    error.value = e?.data?.statusMessage || e?.data?.message || e?.statusMessage || t('unlock.errFail')
+    const err = e as UnlockFetchError
+    error.value = err?.data?.statusMessage || err?.data?.message || err?.statusMessage || t('unlock.errFail')
     loading.value = false
   }
 }

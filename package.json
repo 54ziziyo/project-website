@@ -37,7 +37,7 @@
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-container": "^4.0.0",
     "nuxt": "^3.17.4",
-    "nuxt-lottie": "^1.0.3",
+    "nuxt-lottie": "^1.0.9",
     "reka-ui": "^2.3.0",
     "shadcn-nuxt": "^2.1.0",
     "tailwind-merge": "^3.3.0",
@@ -48,6 +48,9 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@notionhq/client": "^5.23.0",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^26.1.1",
     "vitest": "^4.1.10",
     "vue-tsc": "^3.3.7"
   }

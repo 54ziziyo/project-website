@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ComponentPublicInstance } from 'vue'
+
 const { t, tm, rt } = useI18n()
 const aboutCards = computed(() => tm('about.cards') as { label: string; title: string; desc: string }[])
 const aboutPoints = computed(() => tm('about.points') as { label: string; text: string }[])
@@ -14,7 +16,7 @@ const isInView = (el: HTMLElement, offset = 0.8) => {
   return rect.top <= viewHeight * offset && rect.bottom >= 0
 }
 
-const collectCardRef = (el: Element | null) => {
+const collectCardRef = (el: Element | ComponentPublicInstance | null) => {
   if (el instanceof HTMLElement && !cardEls.value.includes(el)) {
     cardEls.value.push(el)
   }
