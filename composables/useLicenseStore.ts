@@ -24,7 +24,7 @@ export function useLicenseStore() {
   function rememberKeyForKit(kit: string, key: string) {
     if (!kit || !key) return
     const map = read()
-    delete map[kit]
+    Reflect.deleteProperty(map, kit)
     map[kit] = key
     write(map)
   }

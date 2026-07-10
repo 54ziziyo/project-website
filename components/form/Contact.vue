@@ -1,7 +1,15 @@
 <script setup lang="ts">
+import type { LocationQueryValue } from 'vue-router'
+
 type Grecaptcha = {
   ready: (cb: () => void) => void
   execute: (siteKey: string, options: { action: string }) => Promise<string>
+}
+
+declare global {
+  interface Window {
+    grecaptcha?: Grecaptcha
+  }
 }
 
 const recaptchaSiteKey = '6LezflssAAAAAAyrX2klGOA-XG6g7Kj2cgY9oiEz'
@@ -29,7 +37,7 @@ const showBookingModal = ref(false)
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const budgetRegex = /^[0-9,\-~\s]+$/
 
-const applyPrefill = (prefill?: string | string[]) => {
+const applyPrefill = (prefill?: LocationQueryValue | LocationQueryValue[]) => {
   if (typeof prefill === 'string' && prefill.trim()) {
     form.desc.value = prefill
   }
@@ -48,7 +56,7 @@ watch(
 
 const loadRecaptcha = () => {
   return new Promise<Grecaptcha>((resolve, reject) => {
-    const existing = (window as any).grecaptcha as Grecaptcha | undefined
+    const existing = window.grecaptcha
     if (existing) {
       existing.ready(() => resolve(existing))
       return
@@ -59,7 +67,7 @@ const loadRecaptcha = () => {
     script.async = true
     script.defer = true
     script.onload = () => {
-      const grecaptcha = (window as any).grecaptcha as Grecaptcha | undefined
+      const grecaptcha = window.grecaptcha
       if (!grecaptcha) {
         reject(new Error('reCAPTCHA 載入失敗'))
         return
@@ -132,7 +140,7 @@ const onSubmit = async () => {
   try {
     const grecaptcha = await loadRecaptcha()
     token = await grecaptcha.execute(recaptchaSiteKey, { action: 'contact' })
-  } catch (err) {
+  } catch {
     showToast('error', t('form.msgRecaptcha'))
     isSubmitting.value = false
     return

@@ -6,6 +6,12 @@ type Grecaptcha = {
   execute: (siteKey: string, options: { action: string }) => Promise<string>
 }
 
+declare global {
+  interface Window {
+    grecaptcha?: Grecaptcha
+  }
+}
+
 const recaptchaSiteKey = '6LezflssAAAAAAyrX2klGOA-XG6g7Kj2cgY9oiEz'
 const scriptUrl =
   'https://script.google.com/macros/s/AKfycbwbSt3nyNmYePhPTXzNjLuJnbHnS7h7b6fvegfFQ1j1rH8bBFIQfLO-pcfs4-FPIeEs/exec'
@@ -25,7 +31,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const loadRecaptcha = () => {
   return new Promise<Grecaptcha>((resolve, reject) => {
-    const existing = (window as any).grecaptcha as Grecaptcha | undefined
+    const existing = window.grecaptcha
     if (existing) {
       existing.ready(() => resolve(existing))
       return
@@ -36,7 +42,7 @@ const loadRecaptcha = () => {
     script.async = true
     script.defer = true
     script.onload = () => {
-      const grecaptcha = (window as any).grecaptcha as Grecaptcha | undefined
+      const grecaptcha = window.grecaptcha
       if (!grecaptcha) {
         reject(new Error('reCAPTCHA 載入失敗'))
         return

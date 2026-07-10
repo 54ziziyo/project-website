@@ -38,7 +38,7 @@ const headers = {
   'Notion-Version': NOTION_VERSION,
 }
 
-async function api(path: string, method: string, body?: object) {
+async function api(path: string, method: string, body?: object): Promise<unknown> {
   const res = await fetch(`https://api.notion.com/v1${path}`, {
     method,
     headers,
@@ -46,6 +46,11 @@ async function api(path: string, method: string, body?: object) {
   })
   if (!res.ok) throw new Error(`${method} ${path} → ${res.status} ${await res.text()}`)
   return res.json()
+}
+
+// 查詢結果只用到每筆的 page id（用來封存舊版本）
+interface NotionQueryResult {
+  results: { id: string }[]
 }
 
 async function ensureSchema() {
@@ -77,9 +82,9 @@ function readEnHtml(id: string): string {
 }
 
 async function archiveExisting(id: string) {
-  const data: any = await api(`/databases/${DB}/query`, 'POST', {
+  const data = (await api(`/databases/${DB}/query`, 'POST', {
     filter: { property: 'ID', rich_text: { equals: id } },
-  })
+  })) as NotionQueryResult
   for (const page of data.results) {
     await api(`/pages/${page.id}`, 'PATCH', { archived: true })
     console.log(`🗑  已封存舊版本：${page.id}`)
@@ -99,7 +104,7 @@ async function main() {
   const enChunks = enHtml ? splitContent(enHtml) : []
   console.log(`📝 中文 ${zhChunks.length} 段、英文 ${enChunks.length} 段`)
 
-  const children: any[] = [
+  const children: Record<string, unknown>[] = [
     { object: 'block', type: 'heading_2', heading_2: { rich_text: [{ text: { content: '文章內容（HTML）' } }] } },
     ...zhChunks.map((c) => ({
       object: 'block', type: 'code',

@@ -127,8 +127,8 @@ onBeforeUnmount(() => {
                     backdropFilter: isInAppBrowser ? 'none' : 'blur(30px)',
                     backfaceVisibility: 'hidden',
                     transform: 'translate3d(0, 0, 0)',
-                    webkitBackfaceVisibility: 'hidden',
-                    webkitBackdropFilter: isInAppBrowser ? 'none' : 'blur(30px)',
+                    WebkitBackfaceVisibility: 'hidden',
+                    WebkitBackdropFilter: isInAppBrowser ? 'none' : 'blur(30px)',
                   }"
                 />
               </div>

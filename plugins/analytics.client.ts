@@ -1,10 +1,19 @@
+type GtagArgs = [command: string, ...rest: unknown[]]
+
+declare global {
+  interface Window {
+    dataLayer?: GtagArgs[]
+    gtag?: (...args: GtagArgs) => void
+  }
+}
+
 export default defineNuxtPlugin(() => {
   const load = () => {
-    ;(window as any).dataLayer = (window as any).dataLayer || []
-    function gtag(...args: any[]) {
-      ;(window as any).dataLayer.push(args)
+    window.dataLayer = window.dataLayer || []
+    function gtag(...args: GtagArgs) {
+      window.dataLayer?.push(args)
     }
-    ;(window as any).gtag = gtag
+    window.gtag = gtag
     gtag('js', new Date())
     gtag('config', 'G-JW3D2C1Q5E')
 
@@ -15,7 +24,7 @@ export default defineNuxtPlugin(() => {
   }
 
   if ('requestIdleCallback' in window) {
-    ;(window as any).requestIdleCallback(load, { timeout: 3000 })
+    window.requestIdleCallback(load, { timeout: 3000 })
   } else {
     setTimeout(load, 500)
   }

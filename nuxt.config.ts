@@ -5,6 +5,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
 
+  // 讓 typecheck 認得 Node 全域型別（process、Buffer 等），server/、scripts/ 都會用到。
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        types: ['node'],
+      },
+    },
+  },
+
   runtimeConfig: {
     notionToken: process.env.NOTION_TOKEN,
     notionDatabaseId: process.env.NOTION_DATABASE_ID,

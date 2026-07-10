@@ -3,7 +3,7 @@
  * 執行：npx tsx scripts/weekly-ai-digest.ts
  */
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execSync } from 'node:child_process'
@@ -20,6 +20,22 @@ if (!PRODUCT_HUNT_TOKEN || !GROQ_API_KEY) {
 }
 
 // ── 1. 爬 Product Hunt 本週 Top AI 工具 ─────────────────────────────────────
+
+interface ProductHuntResponse {
+  data: {
+    posts: {
+      edges: {
+        node: {
+          name: string
+          tagline: string
+          description?: string
+          website: string
+          votesCount: number
+        }
+      }[]
+    }
+  }
+}
 
 async function fetchProductHunt(): Promise<{ name: string; tagline: string; description: string; url: string; votesCount: number }[]> {
   const query = `{
@@ -46,8 +62,8 @@ async function fetchProductHunt(): Promise<{ name: string; tagline: string; desc
   })
 
   if (!res.ok) throw new Error(`Product Hunt API 失敗：${res.status}`)
-  const data: any = await res.json()
-  return data.data.posts.edges.map((e: any) => ({
+  const data = (await res.json()) as ProductHuntResponse
+  return data.data.posts.edges.map((e) => ({
     name: e.node.name,
     tagline: e.node.tagline,
     description: e.node.description || e.node.tagline,
@@ -79,6 +95,10 @@ async function fetchBensBites(): Promise<{ title: string; summary: string; link:
 
 // ── 3. 用 Groq 生成中英文章 ──────────────────────────────────────────────────
 
+interface GroqResponse {
+  choices?: { message?: { content?: string } }[]
+}
+
 async function groq(prompt: string): Promise<string> {
   const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
@@ -94,7 +114,7 @@ async function groq(prompt: string): Promise<string> {
     }),
   })
   if (!res.ok) throw new Error(`Groq API 失敗：${res.status} ${await res.text()}`)
-  const data: any = await res.json()
+  const data = (await res.json()) as GroqResponse
   return data.choices?.[0]?.message?.content || ''
 }
 
@@ -102,7 +122,7 @@ function today(): string {
   return new Date().toISOString().split('T')[0]
 }
 
-function slugify(text: string): string {
+function slugify(_text: string): string {
   return `weekly-ai-digest-${today()}`
 }
 

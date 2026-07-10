@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { LocationQueryValue } from 'vue-router'
 import { portfolios, categories } from '~/data/portfolios'
 
 const { t } = useI18n()
@@ -49,7 +50,7 @@ const selectedCategory = ref(
 const categoryQuery = computed(() => (selectedCategory.value === '全部' ? {} : { category: selectedCategory.value }))
 const setCategory = (category: string) => {
   selectedCategory.value = category
-  const nextQuery: Record<string, string | string[] | undefined> = { ...route.query }
+  const nextQuery: Record<string, LocationQueryValue | LocationQueryValue[]> = { ...route.query }
 
   if (category === '全部') {
     delete nextQuery.category

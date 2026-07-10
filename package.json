@@ -9,7 +9,10 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "format": "npx prettier --write .",
-    "reset": "rm -rf node_modules && pnpm install"
+    "reset": "rm -rf node_modules && pnpm install",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "test": "vitest run"
   },
   "dependencies": {
     "@nuxt/eslint": "^1.4.1",
@@ -34,7 +37,7 @@
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-container": "^4.0.0",
     "nuxt": "^3.17.4",
-    "nuxt-lottie": "^1.0.3",
+    "nuxt-lottie": "^1.0.9",
     "reka-ui": "^2.3.0",
     "shadcn-nuxt": "^2.1.0",
     "tailwind-merge": "^3.3.0",
@@ -43,5 +46,12 @@
     "typescript": "^5.8.3",
     "vue": "^3.5.14",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@notionhq/client": "^5.23.0",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^26.1.1",
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.3.7"
   }
 }

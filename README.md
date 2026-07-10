@@ -2,24 +2,18 @@
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+> **這個專案只用 pnpm。** 不要用 npm/yarn/bun 安裝，避免 lockfile 衝突（package-lock.json 已移除）。
+
 ## Setup
+
+複製 `.env.example` 成 `.env` 並填入實際的金鑰。
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
 
 pnpm reset
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server

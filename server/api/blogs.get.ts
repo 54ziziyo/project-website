@@ -9,5 +9,5 @@ export default defineEventHandler(async (event) => {
   })
 
   setResponseHeader(event, 'Cache-Control', 's-maxage=300, stale-while-revalidate=3600')
-  return data.results.map((page: any) => pageToPost(page))
+  return data.results.map((page) => pageToPost(page))
 })

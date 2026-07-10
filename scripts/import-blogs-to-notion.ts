@@ -134,8 +134,8 @@ async function main() {
     try {
       await importPost(post)
       await new Promise((r) => setTimeout(r, 400))
-    } catch (err: any) {
-      console.error(`❌ 失敗：${post.title}`, err?.message)
+    } catch (err) {
+      console.error(`❌ 失敗：${post.title}`, err instanceof Error ? err.message : err)
     }
   }
 
