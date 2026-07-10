@@ -4,8 +4,6 @@ import AutoScrollCards from '~/components/service/WebAutoScrollCards.vue'
 import WebPrice from '~/components/service/WebPrice.vue'
 import WebAddOnItems from '~/components/service/WebAddOnItems.vue'
 
-const { t } = useI18n()
-
 // SEO 優化 - 網站開發服務頁面
 useHead({
   title: '軟體開發服務 | Zeona Studio - 客製化網站、AI 工具、LINE 機器人與自動化開發',

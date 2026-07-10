@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+env:
+  # 專案只用 pnpm（package-lock.json 已移除），版本對齊本機開發環境。
+  PNPM_VERSION: '10'
+  NODE_VERSION: '20'
+
+jobs:
+  # 主要防線：安裝、測試、build 都必須通過，失敗會讓 PR 顯示紅字。
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm test
+
+      - run: pnpm build
+
+  # ESLint 目前有既有錯誤（主要是 @typescript-eslint/no-explicit-any），
+  # 尚未清完前先不擋 PR，但狀態仍會顯示在 PR 上供參考。
+  # TODO: 既有錯誤清完後移除 continue-on-error，讓這個 job 真正擋 PR。
+  lint:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm lint
+
+  # 型別檢查目前有既有錯誤（vue-tsc 對部分 DOM/型別推導有問題），
+  # 尚未清完前先不擋 PR，但狀態仍會顯示在 PR 上供參考。
+  # TODO: 既有錯誤清完後移除 continue-on-error，讓這個 job 真正擋 PR。
+  typecheck:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm typecheck

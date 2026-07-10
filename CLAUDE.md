@@ -1,6 +1,12 @@
 # Zeona 官網（project-website）
 
-Nuxt 3 + Tailwind + @nuxt/ui。線上：https://zeona.vercel.app
+Nuxt 3 + Tailwind + @nuxt/ui。線上：https://zeona.vercel.app（Vercel Git 整合自動部署，push 到 main 會直接影響正式站）
+
+## Git 流程
+
+commit / push / 開 PR 不用先問，可以直接做。**CI 綠燈就自動 merge；CI 紅燈或有 conflict，不能 merge，要主動跟子芸說清楚哪裡出錯。**
+
+這個 repo 沒有 staging 層，push 到 main 幾乎等於直接上線——正因為沒有人工把關這一層，CI 檢查（lint/typecheck/build/test）就是唯一的安全網，不能隨便放寬求過。
 
 ## ⚠️ 部落格資料來源：Notion，不是 `data/blogs.ts`
 

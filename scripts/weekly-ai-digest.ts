@@ -3,7 +3,7 @@
  * 執行：npx tsx scripts/weekly-ai-digest.ts
  */
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execSync } from 'node:child_process'
@@ -102,7 +102,7 @@ function today(): string {
   return new Date().toISOString().split('T')[0]
 }
 
-function slugify(text: string): string {
+function slugify(_text: string): string {
   return `weekly-ai-digest-${today()}`
 }
 

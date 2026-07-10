@@ -9,7 +9,10 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "format": "npx prettier --write .",
-    "reset": "rm -rf node_modules && pnpm install"
+    "reset": "rm -rf node_modules && pnpm install",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "test": "vitest run"
   },
   "dependencies": {
     "@nuxt/eslint": "^1.4.1",
@@ -43,5 +46,9 @@
     "typescript": "^5.8.3",
     "vue": "^3.5.14",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.3.7"
   }
 }
