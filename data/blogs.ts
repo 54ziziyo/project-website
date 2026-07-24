@@ -43,6 +43,139 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'ig-auto-dm-tools-comparison-2026',
+    title: '【實測評比】IG留言自動私訊工具怎麼選？免費方案、強迫追蹤、隱藏粉絲門檻全整理',
+    category: '社群與短影音',
+    tags: ['IG自動私訊', '留言機器人', 'ManyChat', 'Kufu', 'InstantDM'],
+    excerpt:
+      '留言就自動收到私訊的工具怎麼選？我實際連接 IG 帳號測試 Meta 原生功能、Manychat、Kufu、InstantDM 四款工具，比較免費方案、留言自動回覆上限、強迫追蹤功能，還挖出 ReplyRush、DMLink 官網沒寫清楚的隱藏粉絲門檻。',
+    titleEn:
+      '[Hands-On Review] Best Instagram Comment-to-DM Tools: Free Plans, Forced Follows & Hidden Follower Thresholds Compared',
+    excerptEn:
+      "Which Instagram auto-DM tool is actually worth it? I connected my real IG account to test Meta's native feature, Manychat, Kufu, and InstantDM — comparing free plans, auto-reply limits, and forced-follow features. Plus the hidden follower thresholds ReplyRush and DMLink don't mention on their pricing pages.",
+    tagsEn: ['Instagram Auto-DM', 'Comment Bot', 'ManyChat', 'Kufu', 'InstantDM'],
+    coverImage: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=450&fit=crop',
+    coverImageEn: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=450&fit=crop',
+    author: 'Zeona Studio',
+    publishedAt: '2026-07-24',
+    updatedAt: '2026-07-24',
+    featured: false,
+    seo: {
+      title: '【實測評比】IG留言自動私訊工具怎麼選？免費方案/強迫追蹤/隱藏門檻全整理 | Zeona Studio',
+      description:
+        '實測 Meta 原生功能、Manychat、Kufu、InstantDM 四款 IG 留言自動私訊工具，比較免費額度、回覆上限、強迫追蹤功能，並揭露 ReplyRush、DMLink 官網沒寫的隱藏粉絲門檻，附原始出處連結。',
+      keywords: 'IG自動私訊, 留言自動回覆, ManyChat, Kufu, InstantDM, ReplyRush, DMLink, Instagram行銷工具, 社群自動化 2026',
+      ogImage: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&h=630&fit=crop',
+    },
+    seoEn: {
+      title: 'Best Instagram Auto-DM Tools 2026: Manychat vs Kufu vs InstantDM Compared | Zeona Studio',
+      description:
+        "Hands-on test of Meta's native reply feature, Manychat, Kufu, and InstantDM — free tiers, auto-reply limits, forced-follow features, and the hidden follower thresholds ReplyRush and DMLink don't advertise.",
+      keywords:
+        'Instagram auto DM, comment to DM tool, Manychat, Kufu, InstantDM, ReplyRush, DMLink, Instagram marketing tools, social media automation 2026',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">大家現在應該都很習慣，在貼文下面留言，就會收到私訊。因為現在想要當創作者，所以自己稍微調查了一下，順便來幫大家評比幾個留言自動私訊工具——<strong>有些還可以強迫用戶追蹤你才能收到私訊唷！</strong></p>
+      <p>這篇不是只看官網文案而已，我是<strong>實際去連接 IG 帳號測試過</strong>才發現，官網寫的東西有些根本不準，甚至有隱藏的粉絲數門檻完全沒寫在網站上。以下資訊全部附上原始出處連結，大家可以自己點進去核對。</p>
+
+      <hr>
+
+      <h2>一次看懂：重點比較表</h2>
+      <div style="overflow-x:auto;margin:20px 0;">
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <thead>
+          <tr style="background:#f1f0ff;">
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">工具</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">免費方案</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">留言自動私訊限制</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">強迫追蹤功能</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">隱藏粉絲門檻</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Meta 原生功能</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 完全免費（如果你有這功能的話）</td><td style="padding:12px;border:1px solid #e5e7eb;">未知，依帳號而定</td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 沒有強迫追蹤</td><td style="padding:12px;border:1px solid #e5e7eb;">疑似正在灰度測試，並非所有專業帳號都有</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Manychat</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 25 個活躍聯絡人/月</td><td style="padding:12px;border:1px solid #e5e7eb;">免費版限 4 組基本自動化</td><td style="padding:12px;border:1px solid #e5e7eb;">官網頁面未列此功能，無法確認</td><td style="padding:12px;border:1px solid #e5e7eb;">未提及</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Kufu</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 僅 14 天試用，之後強制年繳</td><td style="padding:12px;border:1px solid #e5e7eb;">貼文自動回覆<strong>無上限</strong>（社群版/企業版皆為∞）</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 有，但要自己在自動化流程手動組（留言觸發→判斷是否已追蹤→分流）</td><td style="padding:12px;border:1px solid #e5e7eb;">未提及</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>InstantDM</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 無免費方案</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ <strong>真・無上限</strong>（官方標示 Unlimited Automation + Unlimited Contacts）</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 內建強迫追蹤功能</td><td style="padding:12px;border:1px solid #e5e7eb;">目前未發現門檻（實測 40+ 粉絲可用）</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <blockquote style="background:#f9fafb;border-left:5px solid #8782FF;padding:15px 20px;margin:20px 0;border-radius:0 8px 8px 0;">
+        ⚠️ 除了以上四個，我也測試過 ReplyRush、DMLink(LinkDM) 等工具，這兩家都藏了官網完全沒寫的<strong>粉絲數門檻</strong>（分別要求帳號超過 50 人、100 人才能連接 IG，猜測是為了防水軍帳號），細節放在文末補充。<br><br>
+        表格中標示「未提及」或「無法確認」，不代表一定沒有，只是官網頁面沒寫清楚，建議大家自己實際去連接帳號測試一次，不要只看網站文案就下決定。
+      </blockquote>
+
+      <hr>
+
+      <h2>各工具詳細介紹</h2>
+
+      <h3>1. Meta 原生功能 — 如果你有，免費且最推薦</h3>
+      <p>Meta 自己其實有內建一個留言自動私訊的功能，但我自己測試的三個粉專（都是連結 IG 的專業帳號）都沒有看到這個功能，猜測可能還在灰度測試階段，不是每個帳號都有開放。</p>
+      <p>大家可以自己去後台找找看有沒有這個選項，<strong>如果有的話是最好的選擇，因為完全免費</strong>。缺點是沒有強迫追蹤功能，但免費就已經很夠用了。</p>
+      <ul style="line-height:1.9;">
+        <li>Meta 官方說明：<a href="https://www.facebook.com/business/help/318238182723007" target="_blank" rel="noopener">連結</a></li>
+        <li>Meta 教學影片參考：<a href="https://www.instagram.com/reels/DY4RufSPSWz/" target="_blank" rel="noopener">連結</a></li>
+      </ul>
+
+      <h3>2. Manychat — 老牌工具，免費但額度很小</h3>
+      <p>優點是完全免費，但缺點是一個月<strong>限額 25 個「活躍聯絡人」</strong>——注意這個單位不是 DM 則數，而是「跟你的自動化互動過的不重複人數」。如果一篇貼文留言互動一下就衝過 25 人，免費版<strong>沒辦法加購超額</strong>，只能直接升級到 <strong>$14/mo</strong> 的方案繼續用。</p>
+      <p>優點是他有中文介面。至於有沒有強迫追蹤功能，官網頁面查不到相關說明，暫時無法確認。</p>
+      <ul style="line-height:1.9;">
+        <li>Manychat 使用教學：<a href="https://sabrinaspace.com/manychat/" target="_blank" rel="noopener">連結</a></li>
+      </ul>
+
+      <h3>3. Kufu — 中文介面，年繳制但留言回覆無上限</h3>
+      <p>Kufu 應該大家常常在短影音平台刷到相關介紹。他的<strong>免費試用只有 14 天</strong>，之後就要強制付一年的費用，社群版 <strong>NT$5,000/年</strong>，平均下來一個月大概 NT$400 出頭，其實很划算。</p>
+      <p>重點是他的<strong>留言自動回覆是無上限的</strong>。強迫追蹤的功能雖然不是一鍵按鈕，但可以自己在自動化流程裡面組出來，除了這部分蠻複雜以外，其實他 CP 蠻高的。</p>
+
+      <h3>4. InstantDM — 全英文介面，目前綜合 CP 值最高</h3>
+      <p>InstantDM 沒有免費版，但<strong>年繳只要 US$9.99/月</strong>，而且是<strong>真・無上限</strong>（官方是這樣寫的啦）——不管是自動化次數還是聯絡人數都沒有上限，還內建強迫追蹤功能。所以綜合算下來，這個反而是 CP 值最高的選擇。</p>
+
+      <hr>
+
+      <h2>補充：其他測試過但沒進榜單的工具</h2>
+      <p>其實我測試過的不止上面這些（還有 ReplyRush、DMLink 好多好多），這兩家都有一個共同點——<strong>要求你的帳號粉絲數要有 50 或 100 人以上才能連接</strong>，猜測是怕帳號是水軍。</p>
+      <ul style="line-height:1.9;">
+        <li><strong>ReplyRush</strong>：免費版 1,500 則 DM/月，但免費版完全沒有留言自動回覆功能，要升到 Lite($10/月) 才有，還要求粉絲數超過 50 才能連接。</li>
+        <li><strong>DMLink</strong>：免費版 1,000 則 DM/月，但只能設定最新 10 篇貼文，且要求粉絲數超過 100 才能連接。</li>
+      </ul>
+      <p>這兩家我目前粉絲數都不夠，直接被卡在連接 IG 帳號這一關，進不去後台設定，所以沒有放進主要比較裡。</p>
+
+      <hr>
+
+      <div style="text-align:center;margin:28px 0;">
+        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&auto=format&fit=crop" alt="桌上寫著 Marketing Strategy 的字條，代表挑選自動化工具前要先想清楚策略" width="1200" height="800" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      </div>
+
+      <h2>懶人包結論</h2>
+      <p>大家都希望錢花在刀口上，每個工具都是<strong>魔鬼藏在細節裡</strong>——免費不代表能用、便宜不代表沒有隱藏門檻。這幾個工具我自己實測過的、甚至現在還在嘗試的，都還在試哪一個 CP 最高最好用，會持續更新給大家。</p>
+      <p>先簡單整理一下：</p>
+      <ul style="line-height:1.9;">
+        <li><strong>想要完全免費</strong> → 先去後台確認有沒有 Meta 原生功能，有的話直接用；沒有的話 Manychat 是次選，但注意 25 人的額度很容易爆</li>
+        <li><strong>想要留言回覆無上限、願意年繳</strong> → Kufu 或 InstantDM</li>
+        <li><strong>目前綜合 CP 值最高</strong> → InstantDM</li>
+      </ul>
+      <p>如果你也喜歡我的影片，幫我追蹤起來！也可以留言告訴我你嘗試了哪些工具，歡迎留言「DM」跟你分享私訊工具比較。</p>
+
+      <hr>
+
+      <h2>資料來源</h2>
+      <p>以下為本文所有數據截圖與資訊之原始出處，撰文時間為 2026 年 7 月，各平台方案內容與定價可能隨時異動，建議實際訂閱前以官網最新資訊為準：</p>
+      <ul style="line-height:1.9;">
+        <li>Meta 官方說明：<a href="https://www.facebook.com/business/help/318238182723007" target="_blank" rel="noopener">連結</a></li>
+        <li>Meta 教學影片參考：<a href="https://www.instagram.com/reels/DY4RufSPSWz/" target="_blank" rel="noopener">連結</a></li>
+        <li>InstantDM 官方定價頁：<a href="https://instantdm.com/pricing" target="_blank" rel="noopener">連結</a></li>
+        <li>Manychat 官方定價頁：<a href="https://manychat.com/pricing" target="_blank" rel="noopener">連結</a></li>
+        <li>Manychat 使用教學：<a href="https://sabrinaspace.com/manychat/" target="_blank" rel="noopener">連結</a></li>
+        <li>Kufu 官方定價頁：<a href="https://www.kufu.tw/pricing" target="_blank" rel="noopener">連結</a></li>
+        <li>ReplyRush 官方定價頁：<a href="https://www.replyrush.com/pricing" target="_blank" rel="noopener">連結</a></li>
+        <li>DMLink 官方定價頁：<a href="https://www.linkdm.com/pricing" target="_blank" rel="noopener">連結</a></li>
+      </ul>
+      <p style="font-size:13px;color:#666;">文中標示「實測」的資訊（如 ReplyRush 需超過 50 粉絲、DMLink 需超過 100 粉絲才能連接 IG 帳號、Meta 原生功能疑似灰度測試），為筆者本人實際操作發現，非各官網公開文件所載，特此註明來源為個人實測結果，非官方公告。</p>
+    `,
+  },
+  {
     id: 'ai-tools-fundraisly-brew-unabyss',
     title: "別再瞎忙了！這 3 款 AI 工具幫你搞定募資、行銷與自動化知識庫",
     category: 'AI 人工智慧',
