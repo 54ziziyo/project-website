@@ -41,8 +41,18 @@ const { t } = useI18n()
                   >@768viuqz</a
                 >
               </div>
-              <div class="text-[#5B5B5B] md:text-xs text-sm">
-                {{ t('contact.note') }}
+              <div class="flex justify-between items-center">
+                <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">
+                  {{ t('contact.instagram') }}
+                </div>
+                <a
+                  href="https://www.instagram.com/zeona_co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="透過 Instagram 聯繫 Zeona Studio"
+                  class="text-[#8782FF] text-[16px] md:text-[18px] hover:text-[#6f6bff] transition-colors"
+                  >@zeona_co</a
+                >
               </div>
             </div>
             <div class="mt-8 flex justify-center">
