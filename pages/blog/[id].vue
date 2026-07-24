@@ -17,6 +17,11 @@ const { data: currentPost } = await useAsyncData<BlogPost>(
   () => $fetch<BlogPost>(`/api/blogs/${route.params.id}`),
 )
 
+// 找不到文章時，SSR 回應要是真的 404（否則爬蟲/監控會把「找不到文章」頁當成正常頁收錄）
+if (import.meta.server && !currentPost.value) {
+  setResponseStatus(404)
+}
+
 // 文章內文：英文語系且 Notion 有英文內文時用英文，否則 fallback 中文
 const articleBody = computed(() =>
   isEn.value && currentPost.value?.contentEn ? currentPost.value.contentEn : currentPost.value?.content,

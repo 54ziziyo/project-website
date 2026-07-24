@@ -17,6 +17,11 @@ const currentPortfolio = computed(() => {
   return portfolios.find((p) => p.id === id) || null
 })
 
+// 找不到作品時，SSR 回應要是真的 404（否則爬蟲/監控會把「找不到作品」頁當成正常頁收錄）
+if (import.meta.server && !currentPortfolio.value) {
+  setResponseStatus(404)
+}
+
 // 動態 SEO
 useHead(() => {
   if (!currentPortfolio.value) {
