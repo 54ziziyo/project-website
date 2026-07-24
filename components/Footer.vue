@@ -51,8 +51,11 @@
       <div class="space-y-2 flex flex-col">
         <div class="flex space-x-2">
           <div>{{ t('footer.email') }}</div>
-          <a href="mailto:54ziziyo@gmail.com" title="54ziziyo@gmail.com" class="hover:text-[#8782FF] transition"
-            >54ziziyo@gmail.com</a
+          <a
+            href="mailto:zeona.studio@gmail.com"
+            title="zeona.studio@gmail.com"
+            class="hover:text-[#8782FF] transition"
+            >zeona.studio@gmail.com</a
           >
         </div>
         <div class="flex space-x-2">

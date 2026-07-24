@@ -24,10 +24,10 @@ const { t } = useI18n()
               <div class="flex justify-between items-center">
                 <div class="text-[#5B5B5B] text-[16px] md:text-[18px] font-semibold">{{ t('contact.email') }}</div>
                 <a
-                  href="mailto:54ziziyo@gmail.com"
+                  href="mailto:zeona.studio@gmail.com"
                   title="寄送電子郵件給 Zeona Studio"
                   class="text-[#8782FF] text-[16px] md:text-[18px] hover:text-[#6f6bff] transition-colors"
-                  >54ziziyo@gmail.com</a
+                  >zeona.studio@gmail.com</a
                 >
               </div>
               <div class="flex justify-between items-center">
