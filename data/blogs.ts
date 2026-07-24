@@ -44,15 +44,15 @@ export type BlogCategory = (typeof blogCategories)[number]
 export const blogPosts: BlogPost[] = [
   {
     id: 'ig-auto-dm-tools-comparison-2026',
-    title: '【實測評比】IG留言自動私訊工具怎麼選？免費方案、強迫追蹤、隱藏粉絲門檻全整理',
+    title: '【實測評比】IG留言自動私訊工具怎麼選？免費方案、強迫追蹤功能全整理',
     category: '社群與短影音',
     tags: ['IG自動私訊', '留言機器人', 'ManyChat', 'Kufu', 'InstantDM'],
     excerpt:
-      '留言就自動收到私訊的工具怎麼選？我實際連接 IG 帳號測試 Meta 原生功能、Manychat、Kufu、InstantDM 四款工具，比較免費方案、留言自動回覆上限、強迫追蹤功能，還挖出 ReplyRush、DMLink 官網沒寫清楚的隱藏粉絲門檻。',
+      '留言就自動收到私訊的工具怎麼選？我實際連接 IG 帳號測試 Meta 原生功能、Manychat、Kufu、InstantDM 四款工具，比較免費方案、留言自動回覆上限、強迫追蹤功能，附原始出處連結。',
     titleEn:
-      '[Hands-On Review] Best Instagram Comment-to-DM Tools: Free Plans, Forced Follows & Hidden Follower Thresholds Compared',
+      '[Hands-On Review] Best Instagram Comment-to-DM Tools: Free Plans & Forced-Follow Features Compared',
     excerptEn:
-      "Which Instagram auto-DM tool is actually worth it? I connected my real IG account to test Meta's native feature, Manychat, Kufu, and InstantDM — comparing free plans, auto-reply limits, and forced-follow features. Plus the hidden follower thresholds ReplyRush and DMLink don't mention on their pricing pages.",
+      "Which Instagram auto-DM tool is actually worth it? I connected my real IG account to test Meta's native feature, Manychat, Kufu, and InstantDM — comparing free plans, auto-reply limits, and forced-follow features.",
     tagsEn: ['Instagram Auto-DM', 'Comment Bot', 'ManyChat', 'Kufu', 'InstantDM'],
     coverImage: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=450&fit=crop',
     coverImageEn: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=450&fit=crop',
@@ -61,16 +61,16 @@ export const blogPosts: BlogPost[] = [
     updatedAt: '2026-07-24',
     featured: false,
     seo: {
-      title: '【實測評比】IG留言自動私訊工具怎麼選？免費方案/強迫追蹤/隱藏門檻全整理 | Zeona Studio',
+      title: '【實測評比】IG留言自動私訊工具怎麼選？免費方案/強迫追蹤功能全整理 | Zeona Studio',
       description:
-        '實測 Meta 原生功能、Manychat、Kufu、InstantDM 四款 IG 留言自動私訊工具，比較免費額度、回覆上限、強迫追蹤功能，並揭露 ReplyRush、DMLink 官網沒寫的隱藏粉絲門檻，附原始出處連結。',
+        '實測 Meta 原生功能、Manychat、Kufu、InstantDM 四款 IG 留言自動私訊工具，比較免費額度、回覆上限、強迫追蹤功能，附原始出處連結。',
       keywords: 'IG自動私訊, 留言自動回覆, ManyChat, Kufu, InstantDM, ReplyRush, DMLink, Instagram行銷工具, 社群自動化 2026',
       ogImage: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&h=630&fit=crop',
     },
     seoEn: {
       title: 'Best Instagram Auto-DM Tools 2026: Manychat vs Kufu vs InstantDM Compared | Zeona Studio',
       description:
-        "Hands-on test of Meta's native reply feature, Manychat, Kufu, and InstantDM — free tiers, auto-reply limits, forced-follow features, and the hidden follower thresholds ReplyRush and DMLink don't advertise.",
+        "Hands-on test of Meta's native reply feature, Manychat, Kufu, and InstantDM — free tiers, auto-reply limits, and forced-follow features compared.",
       keywords:
         'Instagram auto DM, comment to DM tool, Manychat, Kufu, InstantDM, ReplyRush, DMLink, Instagram marketing tools, social media automation 2026',
     },
@@ -89,20 +89,19 @@ export const blogPosts: BlogPost[] = [
             <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">免費方案</th>
             <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">留言自動私訊限制</th>
             <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">強迫追蹤功能</th>
-            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">隱藏粉絲門檻</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Meta 原生功能</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 完全免費（如果你有這功能的話）</td><td style="padding:12px;border:1px solid #e5e7eb;">未知，依帳號而定</td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 沒有強迫追蹤</td><td style="padding:12px;border:1px solid #e5e7eb;">疑似正在灰度測試，並非所有專業帳號都有</td></tr>
-          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Manychat</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 25 個活躍聯絡人/月</td><td style="padding:12px;border:1px solid #e5e7eb;">免費版限 4 組基本自動化</td><td style="padding:12px;border:1px solid #e5e7eb;">官網頁面未列此功能，無法確認</td><td style="padding:12px;border:1px solid #e5e7eb;">未提及</td></tr>
-          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Kufu</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 僅 14 天試用，之後強制年繳</td><td style="padding:12px;border:1px solid #e5e7eb;">貼文自動回覆<strong>無上限</strong>（社群版/企業版皆為∞）</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 有，但要自己在自動化流程手動組（留言觸發→判斷是否已追蹤→分流）</td><td style="padding:12px;border:1px solid #e5e7eb;">未提及</td></tr>
-          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>InstantDM</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 無免費方案</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ <strong>真・無上限</strong>（官方標示 Unlimited Automation + Unlimited Contacts）</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 內建強迫追蹤功能</td><td style="padding:12px;border:1px solid #e5e7eb;">目前未發現門檻（實測 40+ 粉絲可用）</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Meta 原生功能</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 完全免費（如果你有這功能的話）</td><td style="padding:12px;border:1px solid #e5e7eb;">未知，依帳號而定</td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 沒有強迫追蹤</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Manychat</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 25 個活躍聯絡人/月</td><td style="padding:12px;border:1px solid #e5e7eb;">免費版限 4 組基本自動化</td><td style="padding:12px;border:1px solid #e5e7eb;">官網頁面未列此功能，無法確認</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Kufu</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 僅 14 天試用，之後強制年繳</td><td style="padding:12px;border:1px solid #e5e7eb;">貼文自動回覆<strong>無上限</strong>（社群版/企業版皆為∞）</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 有，但要自己在自動化流程手動組（留言觸發→判斷是否已追蹤→分流）</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>InstantDM</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">❌ 無免費方案</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ <strong>真・無上限</strong>（官方標示 Unlimited Automation + Unlimited Contacts）</td><td style="padding:12px;border:1px solid #e5e7eb;">✅ 內建強迫追蹤功能</td></tr>
         </tbody>
       </table>
       </div>
 
       <blockquote style="background:#f9fafb;border-left:5px solid #8782FF;padding:15px 20px;margin:20px 0;border-radius:0 8px 8px 0;">
-        ⚠️ 除了以上四個，我也測試過 ReplyRush、DMLink(LinkDM) 等工具，這兩家都藏了官網完全沒寫的<strong>粉絲數門檻</strong>（分別要求帳號超過 50 人、100 人才能連接 IG，猜測是為了防水軍帳號），細節放在文末補充。<br><br>
+        ⚠️ 除了以上四個，我也測試過 ReplyRush、DMLink(LinkDM) 等工具，細節放在文末補充。<br><br>
         表格中標示「未提及」或「無法確認」，不代表一定沒有，只是官網頁面沒寫清楚，建議大家自己實際去連接帳號測試一次，不要只看網站文案就下決定。
       </blockquote>
 
@@ -135,12 +134,12 @@ export const blogPosts: BlogPost[] = [
       <hr>
 
       <h2>補充：其他測試過但沒進榜單的工具</h2>
-      <p>其實我測試過的不止上面這些（還有 ReplyRush、DMLink 好多好多），這兩家都有一個共同點——<strong>要求你的帳號粉絲數要有 50 或 100 人以上才能連接</strong>，猜測是怕帳號是水軍。</p>
+      <p>其實我測試過的不止上面這些，還有 ReplyRush、DMLink 好多好多。</p>
       <ul style="line-height:1.9;">
-        <li><strong>ReplyRush</strong>：免費版 1,500 則 DM/月，但免費版完全沒有留言自動回覆功能，要升到 Lite($10/月) 才有，還要求粉絲數超過 50 才能連接。</li>
-        <li><strong>DMLink</strong>：免費版 1,000 則 DM/月，但只能設定最新 10 篇貼文，且要求粉絲數超過 100 才能連接。</li>
+        <li><strong>ReplyRush</strong>：免費版 1,500 則 DM/月，但免費版完全沒有留言自動回覆功能，要升到 Lite($10/月) 才有。</li>
+        <li><strong>DMLink</strong>：免費版 1,000 則 DM/月，但只能設定最新 10 篇貼文。</li>
       </ul>
-      <p>這兩家我目前粉絲數都不夠，直接被卡在連接 IG 帳號這一關，進不去後台設定，所以沒有放進主要比較裡。</p>
+      <p>這兩家的留言自動回覆功能相對陽春，所以沒有放進主要比較裡。</p>
 
       <hr>
 
@@ -172,7 +171,7 @@ export const blogPosts: BlogPost[] = [
         <li>ReplyRush 官方定價頁：<a href="https://www.replyrush.com/pricing" target="_blank" rel="noopener">連結</a></li>
         <li>DMLink 官方定價頁：<a href="https://www.linkdm.com/pricing" target="_blank" rel="noopener">連結</a></li>
       </ul>
-      <p style="font-size:13px;color:#666;">文中標示「實測」的資訊（如 ReplyRush 需超過 50 粉絲、DMLink 需超過 100 粉絲才能連接 IG 帳號、Meta 原生功能疑似灰度測試），為筆者本人實際操作發現，非各官網公開文件所載，特此註明來源為個人實測結果，非官方公告。</p>
+      <p style="font-size:13px;color:#666;">文中標示「實測」的資訊（如 Meta 原生功能疑似灰度測試），為筆者本人實際操作發現，非各官網公開文件所載，特此註明來源為個人實測結果，非官方公告。</p>
     `,
   },
   {
