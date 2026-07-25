@@ -43,6 +43,123 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: '21st-dev-mcp-ui-components-guide-2026',
+    title: '21st.dev 完整使用教學：AI 時代的前端靈感庫，一萬多個元件直接生成',
+    category: '網站開發',
+    tags: ['21st.dev', 'MCP', 'AI前端開發', 'UI元件庫', 'Cursor', 'Claude Code'],
+    excerpt:
+      '跟AI形容「我要有質感的按鈕」總是做不出你要的畫面？21st.dev 收錄一萬多個現成元件，每個都附好AI提示詞，還能直接連MCP在編輯器裡生成。完整教學：怎麼找模板、怎麼複製提示詞、怎麼連MCP，以及2026年7月最新價格，附查證來源。',
+    titleEn:
+      '21st.dev Complete Guide: The AI-Era Frontend Inspiration Library With 10,000+ Ready-Made Components',
+    excerptEn:
+      "Tired of AI never nailing the 'polished button' you described? 21st.dev has 10,000+ ready-made components, each with a copy-paste AI prompt — and it connects via MCP straight into your editor. Full guide: finding templates, copying prompts, setting up MCP, and current July 2026 pricing, with sources.",
+    tagsEn: ['21st.dev', 'MCP', 'AI Frontend Development', 'UI Component Library', 'Cursor', 'Claude Code'],
+    coverImage: 'https://images.unsplash.com/photo-1550439062-609e1531270e?w=800&h=450&fit=crop',
+    coverImageEn: 'https://images.unsplash.com/photo-1550439062-609e1531270e?w=800&h=450&fit=crop',
+    author: 'Zeona Studio',
+    publishedAt: '2026-07-25',
+    updatedAt: '2026-07-25',
+    featured: false,
+    seo: {
+      title: '21st.dev 完整使用教學：AI前端靈感庫，MCP串接與2026年7月最新價格 | Zeona Studio',
+      description:
+        '21st.dev收錄一萬多個現成React/Tailwind元件，附AI提示詞可直接貼給Claude Code/Cursor/v0使用。教你怎麼找模板、複製提示詞、連接MCP，附2026年7月最新價格表與查證來源。',
+      keywords: '21st.dev, MCP, AI前端開發, UI元件庫, Cursor, Claude Code, v0, shadcn, AI生成UI, 前端提示詞 2026',
+      ogImage: 'https://images.unsplash.com/photo-1550439062-609e1531270e?w=1200&h=630&fit=crop',
+    },
+    seoEn: {
+      title: '21st.dev Guide 2026: AI Frontend Component Library, MCP Setup & Pricing | Zeona Studio',
+      description:
+        '21st.dev hosts 10,000+ React/Tailwind components with copy-paste AI prompts for Claude Code, Cursor, and v0. Full guide to finding templates, copying prompts, and connecting MCP, with July 2026 pricing and sources.',
+      keywords:
+        '21st.dev, MCP, AI frontend development, UI component library, Cursor, Claude Code, v0, shadcn, AI UI generation, frontend prompts 2026',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">你有沒有遇過這種狀況——跟AI說「我要一個很有質感的按鈕」、「滾動要順一點」、「Hover要有質感」，結果AI生出來的東西，跟你腦中畫面差十萬八千里？</p>
+      <p>問題不是AI不夠強，是<strong>用文字形容視覺，本來就會有落差</strong>。這篇帶你認識 <strong>21st.dev</strong>——一個收錄超過一萬個現成React/Tailwind元件的靈感庫，每個元件都附好對應的AI提示詞，讓你不用再絞盡腦汁描述畫面。以下價格資訊以<strong>2026年7月</strong>為準，並附上查證來源連結。</p>
+
+      <hr>
+
+      <h2>21st.dev 是什麼？</h2>
+      <p>21st.dev 是一個<strong>元件註冊平台</strong>，由700+設計工程師共同貢獻，目前收錄：</p>
+      <ul>
+        <li>2,000+ 行銷區塊（動畫英雄區、頁首、Landing Page區塊）</li>
+        <li>2,100+ UI元件（按鈕、卡片、導覽列等）</li>
+        <li>總計 10,000+ 精心製作的元件</li>
+      </ul>
+      <p>跟一般元件庫不同的地方在於：<strong>每個元件都不只是程式碼，還附上一段可以直接貼給AI用的提示詞</strong>，讓AI工具（Claude Code、Cursor、v0、Lovable）照著把元件重建進你的專案裡，並自動適配你的專案風格。</p>
+
+      <h2>怎麼找模板和想要的動畫效果</h2>
+      <ol>
+        <li>打開 <a href="https://21st.dev" target="_blank" rel="noopener">21st.dev</a></li>
+        <li>用分類或搜尋瀏覽元件（按鈕、卡片、Hero區塊、動畫效果等）</li>
+        <li>每個元件都有即時預覽，可以直接看到動畫效果長什麼樣</li>
+        <li>找到喜歡的，點進去看詳細頁面</li>
+      </ol>
+
+      <h2>怎麼找提示詞</h2>
+      <p>在你喜歡的元件頁面上，會看到 <strong>「Copy Prompt」</strong> 按鈕：</p>
+      <ol>
+        <li>點擊複製提示詞</li>
+        <li>貼到 Claude Code、Cursor、v0 或 Lovable 裡</li>
+        <li>AI就會照著提示詞把這個元件重建到你的專案中，並自動適配你的專案風格</li>
+      </ol>
+      <p>也可以用傳統方式，透過 <strong>shadcn CLI</strong> 指令直接安裝元件到專案裡。</p>
+
+      <h2>怎麼連MCP（進階用法，推薦給常常寫程式的人）</h2>
+      <p>如果你常用 Cursor、Claude Code 或 Windsurf 開發，可以直接把 21st.dev 接成 <strong>MCP（Model Context Protocol）</strong>，讓AI在你的編輯器裡直接搜尋、生成元件，不用切換到瀏覽器複製貼上。</p>
+
+      <p><strong>推薦安裝方式（21st CLI）：</strong></p>
+      <pre><code>npx @21st-dev/cli@latest init --client cursor</code></pre>
+
+      <p><strong>手動設定方式：</strong>在編輯器的MCP設定檔加入：</p>
+      <pre><code>{
+  "mcpServers": {
+    "21st": {
+      "url": "https://21st.dev/api/mcp",
+      "headers": { "x-api-key": "YOUR_API_KEY" }
+    }
+  }
+}</code></pre>
+      <p>API Key 要到 <a href="https://21st.dev/mcp" target="_blank" rel="noopener">21st.dev/mcp</a> 申請。</p>
+      <blockquote>注意：舊版的 <code>@21st-dev/magic</code> 套件已經轉向新的 21st MCP 伺服器，如果你之前申請過舊的 Magic API Key，需要重新申請新的。</blockquote>
+
+      <h2>價錢是多少（2026年7月最新）</h2>
+      <p>21st.dev <strong>有免費版，但功能有限</strong>：</p>
+      <div style="overflow-x:auto;margin:20px 0;">
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <thead>
+          <tr style="background:#f1f0ff;">
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">方案</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">價格（年繳）</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">適合對象</th>
+            <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">主要功能</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>免費版</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">$0</td><td style="padding:12px;border:1px solid #e5e7eb;">想先試試看的人</td><td style="padding:12px;border:1px solid #e5e7eb;">每天可複製2個元件</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Builder</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">$6/月</td><td style="padding:12px;border:1px solid #e5e7eb;">個人開發者</td><td style="padding:12px;border:1px solid #e5e7eb;">無限複製程式碼與提示詞、可用MCP/CLI搜尋元件、無限元件安裝</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Builder + AI</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">$15/月</td><td style="padding:12px;border:1px solid #e5e7eb;">想直接用AI生成UI的人</td><td style="padding:12px;border:1px solid #e5e7eb;">包含Builder全部功能＋每月AI生成額度（500起）、多種進階AI模型</td></tr>
+          <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Team</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">$7.50/席位/月</td><td style="padding:12px;border:1px solid #e5e7eb;">團隊、代理商</td><td style="padding:12px;border:1px solid #e5e7eb;">集中帳務、共享收藏、權限控管、私有團隊元件</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><strong>簡單說：先用免費版逛逛感受一下，真的要頻繁使用（尤其是要用MCP搜尋、無限複製）再升級Builder方案。</strong></p>
+
+      <h2>總結</h2>
+      <p>以前做前端，時間都花在「跟AI解釋我要什麼」；現在用21st.dev，變成「直接挑我要的那個效果」。省下的不是技術門檻，是溝通成本。</p>
+      <p>如果你也常常卡在跟AI描述畫面這件事，值得花五分鐘去逛逛 <a href="https://21st.dev" target="_blank" rel="noopener">21st.dev</a>。</p>
+
+      <h2>資料來源</h2>
+      <ul>
+        <li><a href="https://21st.dev" target="_blank" rel="noopener">21st.dev 官網</a></li>
+        <li><a href="https://21st.dev/mcp" target="_blank" rel="noopener">21st.dev/mcp — MCP設定與API Key申請</a></li>
+        <li><a href="https://github.com/21st-dev/magic-mcp" target="_blank" rel="noopener">github.com/21st-dev/magic-mcp — MCP伺服器官方文件</a></li>
+        <li><a href="https://21st.dev/pricing" target="_blank" rel="noopener">21st.dev/pricing — 定價頁面（查證於2026年7月）</a></li>
+      </ul>
+    `,
+  },
+  {
     id: 'ig-auto-dm-tools-comparison-2026',
     title: '【實測評比】IG留言自動私訊工具怎麼選？免費方案、強迫追蹤功能全整理',
     category: '社群與短影音',

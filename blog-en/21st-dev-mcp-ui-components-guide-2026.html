@@ -1,0 +1,82 @@
+<p style="font-size:18px;line-height:1.9;">Ever told an AI "give me a fancy button" or "make the scroll feel smoother" — and gotten back something nowhere close to what you pictured?</p>
+<p>It's not that the AI isn't capable. It's that <strong>describing visuals in words always loses something in translation</strong>. This post walks through <strong>21st.dev</strong>, a library of over 10,000 ready-made React/Tailwind components — each one paired with a prompt you can hand straight to your AI tool. All pricing below is current as of <strong>July 2026</strong>, with source links so you can verify everything yourself.</p>
+
+<hr>
+
+<h2>What is 21st.dev?</h2>
+<p>21st.dev is a <strong>community component registry</strong> built by 700+ design engineers, currently hosting:</p>
+<ul>
+  <li>2,000+ marketing blocks (animated heroes, headers, landing sections)</li>
+  <li>2,100+ UI components (buttons, cards, navigation, etc.)</li>
+  <li>10,000+ components in total</li>
+</ul>
+<p>What sets it apart from a typical component library: <strong>every component ships with a copy-paste prompt</strong>, not just code. Paste that prompt into Claude Code, Cursor, v0, or Lovable, and the AI rebuilds the component inside your project, matched to your theme.</p>
+
+<h2>Finding templates and animation effects</h2>
+<ol>
+  <li>Open <a href="https://21st.dev" target="_blank" rel="noopener">21st.dev</a></li>
+  <li>Browse by category or search (buttons, cards, hero sections, animated effects, etc.)</li>
+  <li>Every component has a live preview so you can see the animation before committing</li>
+  <li>Found one you like? Click through to the detail page</li>
+</ol>
+
+<h2>Finding the prompt</h2>
+<p>On each component's page, look for the <strong>"Copy Prompt"</strong> button:</p>
+<ol>
+  <li>Click to copy the prompt</li>
+  <li>Paste it into Claude Code, Cursor, v0, or Lovable</li>
+  <li>The AI rebuilds the component in your project and adapts it to your existing style</li>
+</ol>
+<p>You can also install components the traditional way via the <strong>shadcn CLI</strong>.</p>
+
+<h2>Connecting the MCP (for people who code often)</h2>
+<p>If you regularly work in Cursor, Claude Code, or Windsurf, you can connect 21st.dev as an <strong>MCP (Model Context Protocol) server</strong> — letting your AI search and generate components directly inside your editor, no browser tab-switching required.</p>
+
+<p><strong>Recommended install (21st CLI):</strong></p>
+<pre><code>npx @21st-dev/cli@latest init --client cursor</code></pre>
+
+<p><strong>Manual setup:</strong> add this to your editor's MCP config:</p>
+<pre><code>{
+  "mcpServers": {
+    "21st": {
+      "url": "https://21st.dev/api/mcp",
+      "headers": { "x-api-key": "YOUR_API_KEY" }
+    }
+  }
+}</code></pre>
+<p>Get your API key at <a href="https://21st.dev/mcp" target="_blank" rel="noopener">21st.dev/mcp</a>.</p>
+<blockquote>Note: the older <code>@21st-dev/magic</code> package has been superseded by the new 21st MCP server. If you had an old Magic API key, you'll need to generate a new one.</blockquote>
+
+<h2>How much does it cost (July 2026)</h2>
+<p>21st.dev <strong>does have a free tier, but it's limited</strong>:</p>
+<div style="overflow-x:auto;margin:20px 0;">
+<table style="width:100%;border-collapse:collapse;font-size:14px;">
+  <thead>
+    <tr style="background:#f1f0ff;">
+      <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">Plan</th>
+      <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">Price (billed yearly)</th>
+      <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">Best for</th>
+      <th style="padding:12px;text-align:left;border:1px solid #e5e7eb;">Key features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Free</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">$0</td><td style="padding:12px;border:1px solid #e5e7eb;">Just browsing</td><td style="padding:12px;border:1px solid #e5e7eb;">2 component copies per day</td></tr>
+    <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Builder</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">$6/mo</td><td style="padding:12px;border:1px solid #e5e7eb;">Individual developers</td><td style="padding:12px;border:1px solid #e5e7eb;">Unlimited code & prompt copies, MCP & CLI search, unlimited installs</td></tr>
+    <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Builder + AI</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">$15/mo</td><td style="padding:12px;border:1px solid #e5e7eb;">People generating UI with AI</td><td style="padding:12px;border:1px solid #e5e7eb;">Everything in Builder + monthly AI credits (500+), multiple premium AI models</td></tr>
+    <tr><td style="padding:12px;border:1px solid #e5e7eb;"><strong>Team</strong></td><td style="padding:12px;border:1px solid #e5e7eb;">$7.50/seat/mo</td><td style="padding:12px;border:1px solid #e5e7eb;">Agencies & teams</td><td style="padding:12px;border:1px solid #e5e7eb;">Centralized billing, shared collections, admin controls, private components</td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>In short: start with the free tier to get a feel for it. If you'll be using it often — especially the MCP search — upgrade to Builder.</strong></p>
+
+<h2>Takeaway</h2>
+<p>Building frontends used to mean spending your time explaining what you wanted to an AI. With 21st.dev, it becomes picking the exact effect you already see. What you save isn't a technical skill gap — it's communication overhead.</p>
+<p>If you're often stuck describing a screen to an AI, it's worth five minutes browsing <a href="https://21st.dev" target="_blank" rel="noopener">21st.dev</a>.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li><a href="https://21st.dev" target="_blank" rel="noopener">21st.dev — homepage</a></li>
+  <li><a href="https://21st.dev/mcp" target="_blank" rel="noopener">21st.dev/mcp — MCP setup & API key</a></li>
+  <li><a href="https://github.com/21st-dev/magic-mcp" target="_blank" rel="noopener">github.com/21st-dev/magic-mcp — MCP server docs</a></li>
+  <li><a href="https://21st.dev/pricing" target="_blank" rel="noopener">21st.dev/pricing — pricing page (checked July 2026)</a></li>
+</ul>
