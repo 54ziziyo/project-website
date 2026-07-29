@@ -43,6 +43,85 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'claude-shared-chats-google-search-2026',
+    title: 'Claude洩漏了大家的隱私？其實是「分享」按下去，全世界都看得到',
+    category: 'AI 人工智慧',
+    tags: ['Claude', 'Anthropic', '資安', '隱私', 'AI工具'],
+    excerpt:
+      '上週末Reddit發現Google能搜到別人跟Claude的對話，甚至有API金鑰跟加密貨幣私鑰外流。這不是駭客攻擊，是「分享」功能被誤解——附圖解怎麼檢查自己分享過的內容，跟原始新聞來源。',
+    titleEn:
+      'Did Claude Really Leak Everyone\'s Privacy? No — Hitting "Share" Just Made It Public',
+    excerptEn:
+      "Over the weekend, Reddit users found that Google could surface other people's Claude conversations — some even containing API keys and crypto wallet keys. This isn't a hack, it's a misunderstood share feature. Includes screenshots on how to check what you've shared, plus original news sources.",
+    tagsEn: ['Claude', 'Anthropic', 'Cybersecurity', 'Privacy', 'AI Tools'],
+    coverImage: 'https://i.ibb.co/Cs5Zt1FP/claude-share-dialog.png',
+    coverImageEn: 'https://i.ibb.co/Cs5Zt1FP/claude-share-dialog.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-07-29',
+    updatedAt: '2026-07-29',
+    featured: false,
+    seo: {
+      title: 'Claude洩漏隱私？「分享」按鈕的真相與自保方法 | Zeona Studio',
+      description:
+        '2026年7月Reddit發現Google能搜到別人的Claude對話，含API金鑰與加密貨幣私鑰。這不是資安漏洞，是分享功能的誤解。圖解Share按鈕、Privacy設定與自保步驟，附Fortune、Axios等原始查證來源。',
+      keywords: 'Claude隱私, Claude洩漏, Anthropic資安, claude.ai/share, AI工具隱私, API金鑰外流, Claude Settings',
+      ogImage: 'https://i.ibb.co/Cs5Zt1FP/claude-share-dialog.png',
+    },
+    seoEn: {
+      title: 'Did Claude Leak User Privacy? The Truth About the Share Button | Zeona Studio',
+      description:
+        "In July 2026, Reddit found Google indexing other users' Claude conversations, including API keys and crypto wallet keys. This isn't a data breach — it's a misunderstood share feature. Screenshots included, with sources from Fortune, Axios and more.",
+      keywords:
+        'Claude privacy, Claude data leak, Anthropic security, claude.ai/share, AI tool privacy, API key exposure, Claude Settings',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">上週末（2026/07/26-27），Reddit上有人發現只要在Google打「site:claude.ai/share」，就能搜到別人跟Claude的對話內容——履歷、法律諮詢、程式碼，甚至還有API金鑰跟加密貨幣錢包私鑰。消息一出，Fortune、Axios、CyberSecurityNews等科技媒體都跟進報導，網路上也開始瘋傳「Claude洩漏用戶隱私」。</p>
+      <p>但事情沒有那麼簡單，也沒有那麼可怕。這篇文章想把整件事拆開來講清楚：<strong>這不是駭客攻擊，是一個被大多數人誤解的「分享」功能</strong>。</p>
+
+      <hr>
+
+      <h2>事情是怎麼發生的</h2>
+      <p>當你在Claude點擊右上角的分享按鈕：</p>
+      <img src="https://i.ibb.co/4Zhgdt4s/claude-share-button.png" alt="Claude對話介面右上角的Share分享按鈕位置" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>會跳出一個選擇視窗，讓你決定這段對話要「Keep private（僅自己可見）」還是「Create public link（產生任何人都能看的公開連結）」：</p>
+      <img src="https://i.ibb.co/Cs5Zt1FP/claude-share-dialog.png" alt="Claude分享對話框，可選擇Keep private或Create public link，並顯示產生的公開網址" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>問題就出在這裡：很多人選了「Create public link」只是想傳給朋友看，卻不知道這個連結其實是<strong>全世界都能看的公開網頁</strong>。一旦這個連結被貼到Reddit、X這類公開平台，搜尋引擎的爬蟲就會順著連結一路爬進去，把整段對話收錄進搜尋結果——這跟把一份Google文件設成「知道連結的人都能看」，結果被搜尋引擎收錄，是一樣的邏輯。</p>
+      <p>技術上真正出包的地方，是這些公開頁面本來應該要有一個叫「noindex」的標籤，明確告訴搜尋引擎「不要收錄我」，但這次不少頁面漏掉了這個標籤，才會讓已經流出去的連結被Google跟Bing收錄。Anthropic在2025年其實就發生過一次類似的事件。</p>
+
+      <h2>這不是資安漏洞，是使用者不知道後果</h2>
+      <p>這件事跟「駭客入侵資料庫偷資料」完全是兩回事。你的Claude對話<strong>預設是100%私密的，只有你自己看得到</strong>——除非你自己主動按下分享，並選擇了「公開連結」這個選項。整起事件從頭到尾，都是使用者自己觸發的動作，只是很多人沒意識到「分享」背後的真正意思是「公開發布到全世界」。</p>
+      <p>真正該被檢討的，是<strong>產品設計沒有把這件事講清楚</strong>。「分享」跟「公開發布」聽起來感受完全不同，但Claude目前的分享機制沒有密碼保護、沒有指定對象的功能，只要開了公開連結，理論上全世界（包括搜尋引擎）都看得到。</p>
+
+      <h2>如果你曾經用過分享功能，現在就去檢查</h2>
+      <p>好消息是，管理自己分享過的內容其實很簡單。點選左上角選單進入Settings：</p>
+      <img src="https://i.ibb.co/7xbHZ57m/claude-settings-menu.png" alt="Mac版Claude應用程式選單，點選Settings進入設定" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>進到左側選單的「Privacy」分頁，往下滑會看到「Your data」這個區塊：</p>
+      <img src="https://i.ibb.co/4nNrwt8f/claude-privacy-settings.png" alt="Claude設定頁面的Privacy分頁，顯示Your data區塊包含Export data、Shared chats、Shared artifacts等管理選項" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>這裡可以分別管理「Shared chats（分享過的對話）」跟「Shared artifacts（分享過的成品，像是文件、網頁、程式碼）」，點旁邊的「Manage」按鈕，就能看到自己過去到底分享過什麼、還有哪些連結忘記關掉：</p>
+      <img src="https://i.ibb.co/jPCFrb8t/claude-shared-data-manage.png" alt="Claude的Your data管理頁面，可管理Export data、Shared chats、Shared artifacts、Uploaded files與Memory preferences" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>花30秒檢查一次，把不需要的分享連結取消（Unshare），比事後心驚肉跳好太多。</p>
+
+      <h2>三個實用心態</h2>
+      <p><strong>只要不按分享，你的對話100%私密。</strong> 這件事的起點，永遠是使用者自己選擇了「公開」。</p>
+      <p><strong>一旦按了分享，就把它當成「發一篇公開文章」來看待。</strong> 傳出去之前檢查一下裡面有沒有密碼、API金鑰、身分證字號、公司機密——這些東西一旦跟著分享連結一起被搜尋引擎收錄，就不再只是「分享給朋友」，而是「公開給全世界」。</p>
+      <p><strong>用Claude Code（終端機工具）寫程式的人可以放心。</strong> 這次出事的都是網頁版的分享/發布功能，Claude Code產生的程式碼只存在你自己的電腦裡，不會自動變公開，除非你自己把它推上公開的GitHub repository。</p>
+      <p>工具本身沒有偷你的資料，但「分享」兩個字背後的後果，很多人真的不知道。花點時間搞懂它，比事後才發現自己的東西被搜到划算多了。</p>
+
+      <h2>資料來源</h2>
+      <ul>
+        <li><a href="https://fortune.com/2026/07/27/a-trove-of-users-seemingly-private-conversations-with-anthropics-claude-ai-chatbot-showed-up-in-google-search-results/" target="_blank" rel="noopener">Fortune - Users' seemingly private conversations with Anthropic's Claude showed up in Google search results</a></li>
+        <li><a href="https://www.axios.com/2026/07/27/anthropic-claude-public-chats-google-search" target="_blank" rel="noopener">Axios - Google search is indexing public Claude artifacts</a></li>
+        <li><a href="https://cybersecuritynews.com/claude-ai-shared-chats/" target="_blank" rel="noopener">CyberSecurityNews - Claude AI Shared Chats Reportedly Exposed in Google Search Results</a></li>
+        <li><a href="https://cybernews.com/ai-news/claude-chats-artifacts-indexed-google/" target="_blank" rel="noopener">CyberNews - Claude chats and workspaces turn up on Google</a></li>
+      </ul>
+    `,
+  },
+  {
     id: '21st-dev-mcp-ui-components-guide-2026',
     title: '21st.dev 完整使用教學：AI 時代的前端靈感庫，一萬多個元件直接生成',
     category: '網站開發',

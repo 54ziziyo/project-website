@@ -1,0 +1,44 @@
+<p style="font-size:18px;line-height:1.9;">Over the weekend of July 26-27, 2026, Reddit users discovered that searching "site:claude.ai/share" on Google surfaced other people's Claude conversations — resumes, legal advice, code, and even API keys and cryptocurrency wallet keys. Fortune, Axios, and CyberSecurityNews all picked up the story, and "Claude leaked user privacy" started spreading online.</p>
+<p>But it's not that simple, and not that scary either. This post breaks down what actually happened: <strong>this isn't a hack — it's a widely misunderstood "share" feature</strong>.</p>
+
+<hr>
+
+<h2>How it happened</h2>
+<p>When you click the share button in the top-right corner of a Claude conversation:</p>
+<img src="https://i.ibb.co/4Zhgdt4s/claude-share-button.png" alt="Location of the Share button in the top-right corner of the Claude chat interface" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+<p>A dialog pops up letting you choose between "Keep private" (only you can access it) or "Create public link" (anyone with the link can view it):</p>
+<img src="https://i.ibb.co/Cs5Zt1FP/claude-share-dialog.png" alt="Claude's share dialog, showing Keep private and Create public link options along with the generated public URL" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+<p>Here's where the confusion starts: many people choose "Create public link" just to send something to a friend, without realizing that link is genuinely <strong>a public webpage anyone in the world can reach</strong>. Once that link gets posted to a public platform like Reddit or X, search engine crawlers follow it in — and the whole conversation ends up indexed in search results. It's the same mechanism as setting a Google Doc to "anyone with the link" and having it later show up in search.</p>
+<p>The actual technical failure was that these public pages should have carried a "noindex" tag telling search engines not to index them — but a number of pages were missing that tag, which let already-leaked links get picked up by Google and Bing. Anthropic actually had a similar incident back in 2025.</p>
+
+<h2>Not a breach — a case of users not knowing the consequences</h2>
+<p>This is nothing like a hacker breaking into a database. Your Claude conversations are <strong>100% private by default, visible only to you</strong> — unless you actively click share and choose the public link option. From start to finish, this was a user-triggered action; the problem is that a lot of people didn't realize "share" actually means "publish to the entire internet."</p>
+<p>What genuinely deserves scrutiny is that <strong>the product design didn't make this clear enough</strong>. "Share" and "publish publicly" feel like very different actions, but Claude's current sharing mechanism has no password protection and no way to restrict who can view it — once a public link exists, in principle the whole world (including search engines) can see it.</p>
+
+<h2>If you've ever used the share feature, go check now</h2>
+<p>The good news: managing what you've shared is simple. Open the menu and go to Settings:</p>
+<img src="https://i.ibb.co/7xbHZ57m/claude-settings-menu.png" alt="Claude app menu on Mac, with Settings selected" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+<p>In the Privacy tab on the left, scroll down to the "Your data" section:</p>
+<img src="https://i.ibb.co/4nNrwt8f/claude-privacy-settings.png" alt="Claude settings Privacy tab, showing the Your data section with Export data, Shared chats, and Shared artifacts management options" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+<p>From here you can separately manage "Shared chats" and "Shared artifacts" (documents, web apps, or code you've published). Click "Manage" next to either one to see exactly what you've shared in the past — and catch any links you forgot to turn off:</p>
+<img src="https://i.ibb.co/jPCFrb8t/claude-shared-data-manage.png" alt="Claude's Your data management page, showing options to manage Export data, Shared chats, Shared artifacts, Uploaded files, and Memory preferences" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+<p>Thirty seconds to check and unshare anything you don't need anymore beats finding out the hard way later.</p>
+
+<h2>Three practical habits</h2>
+<p><strong>If you never click share, your conversations are 100% private.</strong> Every incident here started with a user choosing to make something public.</p>
+<p><strong>Once you do share something, treat it like publishing a public article.</strong> Before you send it, check whether it contains passwords, API keys, ID numbers, or company secrets — once that content gets indexed alongside the share link, it's no longer "shared with a friend," it's "public to the whole world."</p>
+<p><strong>If you use Claude Code (the terminal tool), you're in the clear on this one.</strong> This incident was entirely about the web app's share/publish features. Code generated by Claude Code stays on your own machine and never becomes public automatically — unless you push it to a public GitHub repository yourself.</p>
+<p>The tool didn't steal your data. But a lot of people genuinely don't understand what "share" implies. Taking a few minutes to understand it now is a lot cheaper than finding your own content indexed later.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li><a href="https://fortune.com/2026/07/27/a-trove-of-users-seemingly-private-conversations-with-anthropics-claude-ai-chatbot-showed-up-in-google-search-results/" target="_blank" rel="noopener">Fortune - Users' seemingly private conversations with Anthropic's Claude showed up in Google search results</a></li>
+  <li><a href="https://www.axios.com/2026/07/27/anthropic-claude-public-chats-google-search" target="_blank" rel="noopener">Axios - Google search is indexing public Claude artifacts</a></li>
+  <li><a href="https://cybersecuritynews.com/claude-ai-shared-chats/" target="_blank" rel="noopener">CyberSecurityNews - Claude AI Shared Chats Reportedly Exposed in Google Search Results</a></li>
+  <li><a href="https://cybernews.com/ai-news/claude-chats-artifacts-indexed-google/" target="_blank" rel="noopener">CyberNews - Claude chats and workspaces turn up on Google</a></li>
+</ul>
