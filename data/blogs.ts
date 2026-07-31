@@ -54,8 +54,8 @@ export const blogPosts: BlogPost[] = [
     excerptEn:
       "Tags like \"/human\" and \"/think\" that go viral online aren't official OpenAI system commands — they're custom shorthand that ChatGPT interprets as instructions. Here are 50 of them, organized by use case, with sources backing techniques like chain-of-thought and devil's advocate prompting.",
     tagsEn: ['ChatGPT', 'Prompt Engineering', 'AI Tools', 'Productivity'],
-    coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop',
-    coverImageEn: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1712002641088-1191ef635cf2?w=800&h=450&fit=crop',
+    coverImageEn: 'https://images.unsplash.com/photo-1712002641088-1191ef635cf2?w=800&h=450&fit=crop',
     author: 'Zeona Studio',
     publishedAt: '2026-07-31',
     updatedAt: '2026-07-31',
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
       description:
         '整理50個依情境分類的ChatGPT Prompt標籤（深度思考、寫作溝通、決策分析、創意、學習、效率、商業、程式、情緒、進階組合），說明這不是官方密技而是自訂指令慣例，附OpenAI官方文件與其他來源查證。',
       keywords: 'ChatGPT隱藏指令, ChatGPT Prompt, 提示詞工程, prompt engineering, ChatGPT技巧, chain of thought, 思維鏈, ELI5',
-      ogImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop',
+      ogImage: 'https://images.unsplash.com/photo-1712002641088-1191ef635cf2?w=1200&h=630&fit=crop',
     },
     seoEn: {
       title: '50 ChatGPT Hidden Commands: /think, /eli5, /no-fluff and More, With Sources | Zeona Studio',
