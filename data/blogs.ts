@@ -43,6 +43,131 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'korean-dopamine-sites-2026',
+    title: '韓國「多巴胺網站」實測：不花一毛錢，也能體驗買東西的爽感',
+    category: '社群與短影音',
+    tags: ['多巴胺網站', 'dopamine site', '韓國潮流', 'FoodNeverComes', 'Dopamine Shop'],
+    excerpt:
+      '韓國流行一種「多巴胺網站」：瀏覽、加購物車、結帳的過程跟真實購物一樣，但不花一毛錢也不會收到任何商品。實測Dopamine Shop虛擬購物與FoodNeverComes虛擬外送兩個真實網站，附截圖跟查證來源。',
+    titleEn:
+      "I Tried Korea's Viral 'Dopamine Sites' — All the Shopping Thrill, Zero Dollars Spent",
+    excerptEn:
+      "A Korean trend called 'dopamine sites' lets you browse, add to cart, and check out just like real shopping — except nothing ships and nothing costs a cent. Hands-on with Dopamine Shop (fake shopping) and FoodNeverComes (fake delivery), with screenshots and sources.",
+    tagsEn: ['Dopamine Sites', 'Korean Trend', 'FoodNeverComes', 'Dopamine Shop', 'Viral Trend'],
+    coverImage: 'https://i.ibb.co/S4DKr47v/foodnevercomes-01-home.png',
+    coverImageEn: 'https://i.ibb.co/S4DKr47v/foodnevercomes-01-home.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-08-01',
+    updatedAt: '2026-08-01',
+    featured: false,
+    seo: {
+      title: '韓國多巴胺網站實測：Dopamine Shop虛擬購物、FoodNeverComes虛擬外送 | Zeona Studio',
+      description:
+        '韓國流行的「多巴胺網站」讓你體驗買東西的爽感卻不花錢。實測Dopamine Shop（虛擬購物）與FoodNeverComes（虛擬外送）兩個真實可玩網站，附操作截圖與Fast Company、Psychology Today等查證來源。',
+      keywords: '多巴胺網站, dopamine site, 韓國潮流, FoodNeverComes, Dopamine Shop, 虛擬購物, 假購物網站',
+      ogImage: 'https://i.ibb.co/S4DKr47v/foodnevercomes-01-home.png',
+    },
+    seoEn: {
+      title: "Korea's Dopamine Sites Tried: Dopamine Shop & FoodNeverComes Reviewed | Zeona Studio",
+      description:
+        "South Korea's viral 'dopamine sites' let you experience the thrill of shopping without spending a cent. Hands-on with Dopamine Shop and FoodNeverComes, with screenshots and sources from Fast Company, Psychology Today, and more.",
+      keywords:
+        'dopamine sites, Korean trend, FoodNeverComes, Dopamine Shop, fake shopping site, virtual shopping',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">先問大家一個問題：你買東西的時候，是下單那一刻開心，還是收到實物、拆包裹的那一刻更開心？</p>
+      <p>我會這樣問，是因為最近看到幾個貼文，說韓國正在流行一種「多巴胺網站」——網站上什麼都不會真的發生，但你卻能得到整個消費過程的體驗感。我實際找了兩個真實存在、可以直接玩的網站來試玩，這篇整理給大家。</p>
+
+      <hr>
+
+      <h2>什麼是「多巴胺網站」？</h2>
+      <p>這個現象源自韓國，尤其在生活成本高漲、年輕世代壓力大的環境下開始流行。核心邏輯是：<strong>多巴胺其實是在「期待獎勵」的當下釋放的，不是在真正拿到獎勵的那一刻</strong>——這也是為什麼單純瀏覽、加購物車、結帳的過程本身，就能帶來接近真實購物的爽感，就算最後什麼都不會寄到你家。</p>
+
+      <h2>一、虛擬購物：Dopamine Shop</h2>
+      <p>網站：<a href="https://dopamine-shop.com/" target="_blank" rel="noopener">dopamine-shop.com</a></p>
+      <p>Dopamine Shop 是一個惡搞與娛樂性質的虛擬購物網站，核心理念是「只享受逛街購物的手感與爽感，但不花任何一毛錢」。</p>
+      <p><strong>主要特點：</strong></p>
+      <ul>
+        <li><strong>零成本過購物癮</strong>：網站上所有商品、價格、折價都是虛構的，可以隨意瀏覽、加入購物車、模擬結帳，獲得分泌多巴胺的快樂，但不會被收取任何費用，也不會收到任何真實包裹</li>
+        <li><strong>豐富的虛擬商品</strong>：涵蓋科技產品、遊戲裝備、居家廚房、美妝時尚等各類商品</li>
+        <li><strong>虛擬抽獎/盲盒</strong>：設有標準、高級、傳說等不同機率的虛擬盲盒，免費開箱體驗</li>
+        <li><strong>協助戒掉衝動消費</strong>：靈感源自韓國流行的「多巴胺網站（도파민 사이트）」，幫助人們紓解購物慾、抑制現實中的衝動消費</li>
+      </ul>
+
+      <p>首頁長這樣：</p>
+      <img src="https://i.ibb.co/fYNnFQ5k/dopamine-shop-01-home.png" alt="Dopamine Shop首頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>不只可以選擇買美妝：</p>
+      <img src="https://i.ibb.co/Wj8f76T/dopamine-shop-02-beauty.png" alt="Dopamine Shop美妝分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>還有這麼多種類可以買：</p>
+      <img src="https://i.ibb.co/0p2Djr7Y/dopamine-shop-03-categories-pets.png" alt="Dopamine Shop商品分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);margin-bottom:12px;">
+      <img src="https://i.ibb.co/5hHZ1t5M/dopamine-shop-04-categories-games.png" alt="Dopamine Shop遊戲分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>加入購物車長這樣：</p>
+      <img src="https://i.ibb.co/ynN3g8By/dopamine-shop-05-cart.png" alt="Dopamine Shop購物車" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>前往消費：</p>
+      <img src="https://i.ibb.co/Z6sDRSFg/dopamine-shop-06-order-confirmed.png" alt="Dopamine Shop訂單確認" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>還可以有收據：</p>
+      <img src="https://i.ibb.co/5Wm9ZjFC/dopamine-shop-07-receipt.png" alt="Dopamine Shop收據" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>買越多等級還會越高：</p>
+      <img src="https://i.ibb.co/whjMtmmZ/dopamine-shop-08-level-up.png" alt="Dopamine Shop升級畫面" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>真的是太快樂了。</p>
+
+      <h2>二、虛擬外送：FoodNeverComes</h2>
+      <p>網站：<a href="https://foodnevercomes.com/" target="_blank" rel="noopener">foodnevercomes.com</a></p>
+      <p>「FoodNeverComes」（食物永遠不會來）是一個專門讓人免費體驗「線上點餐」快感的舒壓／趣味網站。簡單來說，它的概念是「滿足你想點外賣的慾望（獲得多巴胺），但完全不用花錢」。</p>
+      <p><strong>主要玩法：</strong></p>
+      <ul>
+        <li><strong>假點餐、真舒壓</strong>：可以像使用一般外送App一樣，瀏覽來自12個國家（日本、韓國、義大利、墨西哥等）的各式美食菜單，把想吃的東西加入購物車</li>
+        <li><strong>不用付任何費用</strong>：結帳時網站會自動幫你填入虛擬信用卡資訊，不需要輸入個人資料或付錢</li>
+        <li><strong>搞笑的外送追蹤</strong>：結帳後會跳出即時地圖與追蹤畫面，外送員甚至是「小蝸（Waddles the Penguin）」，過程中還會冒出各種幽默訊息</li>
+        <li><strong>提供真實食譜</strong>：雖然不會真的送食物來，但每道菜都附免費簡易食譜，餓了可以自己動手做</li>
+      </ul>
+
+      <p>首頁長這樣：</p>
+      <img src="https://i.ibb.co/S4DKr47v/foodnevercomes-01-home.png" alt="FoodNeverComes首頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>可以選你喜歡的餐點去下單：</p>
+      <img src="https://i.ibb.co/9HK8v0zd/foodnevercomes-02-dish-detail.png" alt="FoodNeverComes餐點詳情" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>選擇好商品內容：</p>
+      <img src="https://i.ibb.co/vxZ5BVtF/foodnevercomes-03-tray.png" alt="FoodNeverComes購物車" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>也會給你checkout：</p>
+      <img src="https://i.ibb.co/27Z48Qd7/foodnevercomes-04-checkout.png" alt="FoodNeverComes結帳頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>再來就不用猶豫點下去下單：</p>
+      <img src="https://i.ibb.co/yFJYTq9F/foodnevercomes-05-checkout-place-order.png" alt="FoodNeverComes下單確認" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>還會跟你說在路上多久會抵達：</p>
+      <img src="https://i.ibb.co/kVHT6CyV/foodnevercomes-06-tracking.png" alt="FoodNeverComes外送追蹤" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <p>甚至還可以打電話call外送員：</p>
+      <img src="https://i.ibb.co/fVR529s4/foodnevercomes-07-tracking-call.png" alt="FoodNeverComes致電外送員" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+
+      <hr>
+
+      <h2>我的感想</h2>
+      <p>老實說，試完這兩個網站之後，我不太明白為什麼大家會想用。對我自己來說，付錢下單的那一刻，絕對比不上收到東西、拆包裹的那一刻開心。但這也可能是因為我本來就很享受「等待到手」的過程，而這類網站設計給的是「沒有等待、沒有代價」的爽感，兩種爽法本質上不太一樣。</p>
+      <p>你們是哪一派？下單開心派，還是拆包裹開心派？想試試看的話，歡迎留言告訴我，也可以分享你覺得這些網站對你來說到底有沒有用。</p>
+
+      <h2>補充：這個趨勢不只兩種玩法</h2>
+      <p>網路上也流傳虛擬買房買車、虛擬抽菸這類更誇張的版本，多家媒體證實這個「多巴胺網站」類別正在擴展，但這兩類我目前查不到具體、可驗證的網站連結，先不放，避免誤導大家點到假網站或錯誤連結。</p>
+
+      <h2>資料來源</h2>
+      <ul>
+        <li><a href="https://www.fastcompany.com/91560432/dopamine-sites-fake-online-shopping-apps-let-you-pretend-to-buy-things-foodnevercomes" target="_blank" rel="noopener">Fast Company - The rise of fake online shopping platforms</a></li>
+        <li><a href="https://www.psychologytoday.com/us/blog/positively-media/202606/dopamine-sites-the-emotional-pay-off-of-fake-food-orders" target="_blank" rel="noopener">Psychology Today - Dopamine Sites: The Emotional Pay-Off of Fake Food Orders</a></li>
+        <li><a href="https://www.newsnationnow.com/business/tech/dopamine-sites-simulate-shopping-and-smoking/" target="_blank" rel="noopener">NewsNation - Viral Korean 'dopamine sites' simulate shopping and smoking</a></li>
+      </ul>
+    `,
+  },
+  {
     id: 'chatgpt-50-prompt-shortcuts-2026',
     title: '50個ChatGPT「隱藏指令」大全：不是官方密技，但真的有效（附查證來源）',
     category: 'Prompt 提示詞',
