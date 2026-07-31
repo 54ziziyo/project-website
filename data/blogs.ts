@@ -83,7 +83,7 @@ export const blogPosts: BlogPost[] = [
       <h2>一、深度思考類</h2>
       <ol>
         <li><strong>/think</strong> — 讓AI深入思考再回答，不要給表面答案</li>
-        <li><strong>/triad</strong> — 提供三種不同角度的答案，讓你比較</li>
+        <li><strong>/alt3</strong> — 提供三種不同角度的答案，讓你比較（可調整成/alt4、/alt5，建議最多到/alt5，超過角度容易重複、也難消化）</li>
         <li><strong>/blind-spot</strong> — 主動找出你可能忽略的盲點</li>
         <li><strong>/devil</strong> — 唱反調，專門找你論點裡的漏洞</li>
         <li><strong>/root-cause</strong> — 挖到問題的根本原因，不只是表面症狀</li>
@@ -172,6 +172,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>這些標籤，到底有沒有科學根據？</h2>
       <p>誠實講：50個標籤裡，有些是有紮實研究/官方文件佐證的成熟技巧，有些則是把常見溝通慣例包裝成標籤，效果一樣好用，但沒有專門的學術研究去驗證這個「名稱」本身。</p>
+      <p><strong>這裡要區分清楚「標籤名稱」跟「背後技巧」是兩個不同層次的可查證性</strong>：底層技巧（思維鏈、魔鬼代言人、角色扮演、ELI5）真的有研究或官方文件佐證有效；但「標籤」本身的名字，是每個創作者自己習慣取的稱呼，沒有統一標準，也沒辦法查證「這個名字對不對」——不同人整理出來的清單，同一個技巧常常會用不同的標籤名稱，你也可以自己重新命名，只要AI看得懂意思就行。</p>
       <ul>
         <li><strong>思維鏈（對應/think、/step-by-step）</strong>：是被廣泛驗證的技巧，讓模型在回答前展開推理過程，能得到更準確、更有邏輯的答案。</li>
         <li><strong>魔鬼代言人（對應/devil）</strong>：實測能把ChatGPT從「順從助理」變成「會挑戰你論點的批判夥伴」，有效抓出邏輯漏洞。</li>
