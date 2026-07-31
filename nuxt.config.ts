@@ -143,9 +143,6 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
       ],
       link: [
-        { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
-        { rel: 'preconnect', href: 'https://www.google-analytics.com' },
-        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'canonical', href: 'https://zeona.vercel.app' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
