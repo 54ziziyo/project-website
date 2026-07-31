@@ -43,6 +43,157 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'chatgpt-50-prompt-shortcuts-2026',
+    title: '50個ChatGPT「隱藏指令」大全：不是官方密技，但真的有效（附查證來源）',
+    category: 'Prompt 提示詞',
+    tags: ['ChatGPT', 'Prompt提示詞', 'AI工具', '提示詞工程'],
+    excerpt:
+      '網路上瘋傳的「/human」「/think」這類ChatGPT隱藏指令，其實不是OpenAI官方的系統功能，而是一種你自訂、AI也聽得懂的「口令」。整理50個依情境分類的實用標籤，並附上思維鏈、魔鬼代言人等技巧的官方與研究來源佐證。',
+    titleEn:
+      "50 ChatGPT \"Hidden Commands\" — Not an Official Feature, But They Actually Work (Sources Included)",
+    excerptEn:
+      "Tags like \"/human\" and \"/think\" that go viral online aren't official OpenAI system commands — they're custom shorthand that ChatGPT interprets as instructions. Here are 50 of them, organized by use case, with sources backing techniques like chain-of-thought and devil's advocate prompting.",
+    tagsEn: ['ChatGPT', 'Prompt Engineering', 'AI Tools', 'Productivity'],
+    coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop',
+    coverImageEn: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop',
+    author: 'Zeona Studio',
+    publishedAt: '2026-07-31',
+    updatedAt: '2026-07-31',
+    featured: false,
+    seo: {
+      title: '50個ChatGPT隱藏指令大全：/think、/eli5、/no-fluff等實用標籤與查證來源 | Zeona Studio',
+      description:
+        '整理50個依情境分類的ChatGPT Prompt標籤（深度思考、寫作溝通、決策分析、創意、學習、效率、商業、程式、情緒、進階組合），說明這不是官方密技而是自訂指令慣例，附OpenAI官方文件與其他來源查證。',
+      keywords: 'ChatGPT隱藏指令, ChatGPT Prompt, 提示詞工程, prompt engineering, ChatGPT技巧, chain of thought, 思維鏈, ELI5',
+      ogImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop',
+    },
+    seoEn: {
+      title: '50 ChatGPT Hidden Commands: /think, /eli5, /no-fluff and More, With Sources | Zeona Studio',
+      description:
+        "50 categorized ChatGPT prompt tags for deep thinking, writing, decision-making, creativity, learning, efficiency, business, code, and emotional support — with an honest explainer on why these aren't official commands, backed by OpenAI documentation and other sources.",
+      keywords:
+        'ChatGPT hidden commands, ChatGPT prompts, prompt engineering, ChatGPT tricks, chain of thought, ELI5, devil\'s advocate prompting',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">網路上常常看到「ChatGPT隱藏指令」這種說法——只要在Prompt前面打「/human」「/think」這種標籤，回答品質就能大幅提升。這篇文章想先跟你講清楚一件事：<strong>這些不是OpenAI官方藏起來的系統功能</strong>，而是使用者自己發明、AI也聽得懂的「口令慣例」——你把這種簡短標籤放在問題前面，ChatGPT會把它解讀成一種指令，照著調整回答的角度、深度或語氣。</p>
+      <p>雖然不是官方密技，但<strong>底層的技巧本身是真實有效的</strong>，很多都有OpenAI官方文件或研究佐證（思維鏈、角色扮演、魔鬼代言人等），這篇整理50個依情境分類的標籤，並附上查證來源，讓你用得安心。</p>
+
+      <hr>
+
+      <h2>一、深度思考類</h2>
+      <ol>
+        <li><strong>/think</strong> — 讓AI深入思考再回答，不要給表面答案</li>
+        <li><strong>/triad</strong> — 提供三種不同角度的答案，讓你比較</li>
+        <li><strong>/blind-spot</strong> — 主動找出你可能忽略的盲點</li>
+        <li><strong>/devil</strong> — 唱反調，專門找你論點裡的漏洞</li>
+        <li><strong>/root-cause</strong> — 挖到問題的根本原因，不只是表面症狀</li>
+        <li><strong>/first-principles</strong> — 用第一性原理重新拆解問題，不套用現成答案</li>
+        <li><strong>/worst-case</strong> — 列出最壞情況，並給出對應方案</li>
+        <li><strong>/assumptions</strong> — 列出這個答案背後隱藏了哪些假設</li>
+      </ol>
+
+      <h2>二、溝通與寫作類</h2>
+      <ol start="9">
+        <li><strong>/no-fluff</strong> — 砍掉所有廢話，只留重點</li>
+        <li><strong>/human</strong> — 用更自然、更像真人的口吻回答，不要機器人腔</li>
+        <li><strong>/eli5</strong> — 用小學生也聽得懂的方式解釋（Explain Like I'm 5）</li>
+        <li><strong>/tone-casual</strong> — 改成輕鬆口語的語氣</li>
+        <li><strong>/tone-formal</strong> — 改成正式、專業的語氣</li>
+        <li><strong>/shorten</strong> — 精簡到一半字數，但保留關鍵重點</li>
+        <li><strong>/bullet</strong> — 全部用條列式呈現，不要長段落</li>
+        <li><strong>/story</strong> — 用故事或比喻說明，不要條列知識點</li>
+      </ol>
+
+      <h2>三、決策與分析類</h2>
+      <ol start="17">
+        <li><strong>/pros-cons</strong> — 列出優缺點對照表</li>
+        <li><strong>/decision-matrix</strong> — 用評分矩陣幫你做決定</li>
+        <li><strong>/risk</strong> — 抓出這個決定潛在的風險</li>
+        <li><strong>/compare</strong> — 比較兩個選項之間的差異</li>
+        <li><strong>/prioritize</strong> — 幫你把多項任務排出優先順序</li>
+      </ol>
+
+      <h2>四、創意與腦力激盪類</h2>
+      <ol start="22">
+        <li><strong>/brainstorm</strong> — 生成大量點子，先不篩選</li>
+        <li><strong>/wild</strong> — 給一個瘋狂、不切實際但有啟發性的點子</li>
+        <li><strong>/remix</strong> — 把兩個不相關的概念混在一起，生出新點子</li>
+        <li><strong>/alternative</strong> — 給三個完全不同方向的替代方案</li>
+      </ol>
+
+      <h2>五、學習與理解類</h2>
+      <ol start="26">
+        <li><strong>/teach-me</strong> — 用蘇格拉底式提問，引導你自己想通，不直接給答案</li>
+        <li><strong>/quiz-me</strong> — 針對剛剛學到的內容出題考你</li>
+        <li><strong>/analogy</strong> — 用生活化的類比解釋抽象概念</li>
+        <li><strong>/step-by-step</strong> — 拆解成具體、可執行的一步一步流程</li>
+      </ol>
+
+      <h2>六、效率與格式類</h2>
+      <ol start="30">
+        <li><strong>/table</strong> — 用表格呈現內容</li>
+        <li><strong>/tldr</strong> — 給三句話以內的摘要</li>
+        <li><strong>/checklist</strong> — 轉換成可以打勾的清單</li>
+        <li><strong>/template</strong> — 給一個能直接套用的模板</li>
+      </ol>
+
+      <h2>七、商業與職場類</h2>
+      <ol start="34">
+        <li><strong>/email</strong> — 把這段話改寫成專業得體的email</li>
+        <li><strong>/pitch</strong> — 用30秒電梯簡報的方式講重點</li>
+        <li><strong>/negotiate</strong> — 針對談判情境，給出應對話術</li>
+        <li><strong>/boss-mode</strong> — 用老闆會問的角度來檢視這件事</li>
+        <li><strong>/meeting-notes</strong> — 把對話內容整理成會議紀錄格式</li>
+        <li><strong>/objection</strong> — 預測對方可能提出的反對意見，並準備好回應</li>
+      </ol>
+
+      <h2>八、程式與技術類</h2>
+      <ol start="40">
+        <li><strong>/debug</strong> — 找出這段程式碼可能出錯的地方</li>
+        <li><strong>/explain-code</strong> — 逐行解釋這段程式碼在做什麼</li>
+        <li><strong>/refactor</strong> — 優化這段程式碼的可讀性跟效率</li>
+        <li><strong>/edge-case</strong> — 列出這個邏輯可能漏掉的邊界情況</li>
+      </ol>
+
+      <h2>九、情緒與個人成長類</h2>
+      <ol start="44">
+        <li><strong>/reframe</strong> — 用更正向、更有建設性的角度重新詮釋這件事</li>
+        <li><strong>/vent</strong> — 先讓你發洩情緒，不要急著給建議</li>
+        <li><strong>/coach</strong> — 用教練式提問，幫你釐清目標，而不是直接給建議</li>
+      </ol>
+
+      <h2>十、進階組合類</h2>
+      <ol start="47">
+        <li><strong>/chain</strong> — 把任務拆成多個步驟，一步步引導你完成</li>
+        <li><strong>/persona</strong> — 假設AI是某個角色/專家身份，用那個角度回答</li>
+        <li><strong>/socratic</strong> — 不斷反問你，直到你自己想清楚答案</li>
+        <li><strong>/source</strong> — 要求附上這個答案的可信度或來源依據，不要憑空講</li>
+      </ol>
+
+      <h2>這些標籤，到底有沒有科學根據？</h2>
+      <p>誠實講：50個標籤裡，有些是有紮實研究/官方文件佐證的成熟技巧，有些則是把常見溝通慣例包裝成標籤，效果一樣好用，但沒有專門的學術研究去驗證這個「名稱」本身。</p>
+      <ul>
+        <li><strong>思維鏈（對應/think、/step-by-step）</strong>：是被廣泛驗證的技巧，讓模型在回答前展開推理過程，能得到更準確、更有邏輯的答案。</li>
+        <li><strong>魔鬼代言人（對應/devil）</strong>：實測能把ChatGPT從「順從助理」變成「會挑戰你論點的批判夥伴」，有效抓出邏輯漏洞。</li>
+        <li><strong>角色扮演（對應/persona、/boss-mode）</strong>：OpenAI官方最佳實踐也建議，給模型明確角色設定（例如「你是一位資深財務分析師」），能讓回答更貼近你要的專業角度。</li>
+        <li><strong>ELI5、精簡摘要類（對應/eli5、/tldr、/no-fluff）</strong>：屬於長期存在的溝通慣例（源自Reddit的r/explainlikeimfive），沒有專門的AI研究論文驗證這個名稱，但「要求簡化語言」本身是任何人都能理解、也確實有效的指令。</li>
+      </ul>
+      <p>另外，這種「用slash指令包裝Prompt技巧」的做法，並不是只有這篇文章在整理，網路上也有其他類似的彙整（例如32個ChatGPT指令的整理文章），可以互相參照。</p>
+
+      <h2>總結</h2>
+      <p>這些標籤不是官方認證的「系統指令」，而是你自己定義、AI也聽得懂的「口令」——把標籤放在Prompt最前面，AI就會照著這個方向調整回答風格。真正的效果，還是取決於你後面接的問題描述得夠不夠清楚，標籤只是幫你少打幾個字，把常用的指令模式變成好記的捷徑。</p>
+
+      <h2>資料來源</h2>
+      <ul>
+        <li><a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" target="_blank" rel="noopener">OpenAI Help Center - Best practices for prompt engineering with the OpenAI API</a></li>
+        <li><a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank" rel="noopener">OpenAI API Docs - Prompt engineering guide</a></li>
+        <li><a href="https://botpress.com/blog/chain-of-thought" target="_blank" rel="noopener">Botpress - What is chain-of-thought prompting?</a></li>
+        <li><a href="https://www.makeuseof.com/devils-advocate-prompt-chatgpt/" target="_blank" rel="noopener">MakeUseOf - This simple devil's-advocate prompt turned ChatGPT into a better assistant</a></li>
+        <li><a href="https://themodernfield.com/cheat-codes-of-chatgpt/" target="_blank" rel="noopener">The Modern Field - The Cheat Codes of ChatGPT: 32 Shortcuts to Force Better Outputs</a></li>
+      </ul>
+    `,
+  },
+  {
     id: 'claude-shared-chats-google-search-2026',
     title: 'Claude洩漏了大家的隱私？其實是「分享」按下去，全世界都看得到',
     category: 'AI 人工智慧',
