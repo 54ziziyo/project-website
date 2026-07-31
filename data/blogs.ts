@@ -54,8 +54,8 @@ export const blogPosts: BlogPost[] = [
     excerptEn:
       "A Korean trend called 'dopamine sites' lets you browse, add to cart, and check out just like real shopping — except nothing ships and nothing costs a cent. Hands-on with Dopamine Shop (fake shopping) and FoodNeverComes (fake delivery), with screenshots and sources.",
     tagsEn: ['Dopamine Sites', 'Korean Trend', 'FoodNeverComes', 'Dopamine Shop', 'Viral Trend'],
-    coverImage: 'https://i.ibb.co/S4DKr47v/foodnevercomes-01-home.png',
-    coverImageEn: 'https://i.ibb.co/S4DKr47v/foodnevercomes-01-home.png',
+    coverImage: 'https://i.ibb.co/B5HgN5Ks/foodnevercomes-01-home.png',
+    coverImageEn: 'https://i.ibb.co/B5HgN5Ks/foodnevercomes-01-home.png',
     author: 'Zeona Studio',
     publishedAt: '2026-08-01',
     updatedAt: '2026-08-01',
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
       description:
         '韓國流行的「多巴胺網站」讓你體驗買東西的爽感卻不花錢。實測Dopamine Shop（虛擬購物）與FoodNeverComes（虛擬外送）兩個真實可玩網站，附操作截圖與Fast Company、Psychology Today等查證來源。',
       keywords: '多巴胺網站, dopamine site, 韓國潮流, FoodNeverComes, Dopamine Shop, 虛擬購物, 假購物網站',
-      ogImage: 'https://i.ibb.co/S4DKr47v/foodnevercomes-01-home.png',
+      ogImage: 'https://i.ibb.co/B5HgN5Ks/foodnevercomes-01-home.png',
     },
     seoEn: {
       title: "Korea's Dopamine Sites Tried: Dopamine Shop & FoodNeverComes Reviewed | Zeona Studio",
@@ -95,26 +95,26 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <p>首頁長這樣：</p>
-      <img src="https://i.ibb.co/fYNnFQ5k/dopamine-shop-01-home.png" alt="Dopamine Shop首頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/mCyXTSw9/dopamine-shop-01-home.png" alt="Dopamine Shop首頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>不只可以選擇買美妝：</p>
-      <img src="https://i.ibb.co/Wj8f76T/dopamine-shop-02-beauty.png" alt="Dopamine Shop美妝分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/YwnhJ3r/dopamine-shop-02-beauty.png" alt="Dopamine Shop美妝分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>還有這麼多種類可以買：</p>
-      <img src="https://i.ibb.co/0p2Djr7Y/dopamine-shop-03-categories-pets.png" alt="Dopamine Shop商品分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);margin-bottom:12px;">
-      <img src="https://i.ibb.co/5hHZ1t5M/dopamine-shop-04-categories-games.png" alt="Dopamine Shop遊戲分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/LDRkz1F9/dopamine-shop-03-categories-pets.png" alt="Dopamine Shop商品分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);margin-bottom:12px;">
+      <img src="https://i.ibb.co/whmtd3K0/dopamine-shop-04-categories-games.png" alt="Dopamine Shop遊戲分類" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>加入購物車長這樣：</p>
-      <img src="https://i.ibb.co/ynN3g8By/dopamine-shop-05-cart.png" alt="Dopamine Shop購物車" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/JRchrzF7/dopamine-shop-05-cart.png" alt="Dopamine Shop購物車" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>前往消費：</p>
-      <img src="https://i.ibb.co/Z6sDRSFg/dopamine-shop-06-order-confirmed.png" alt="Dopamine Shop訂單確認" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/0jNbpK69/dopamine-shop-06-order-confirmed.png" alt="Dopamine Shop訂單確認" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>還可以有收據：</p>
-      <img src="https://i.ibb.co/5Wm9ZjFC/dopamine-shop-07-receipt.png" alt="Dopamine Shop收據" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/4ZzfkSdC/dopamine-shop-07-receipt.png" alt="Dopamine Shop收據" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>買越多等級還會越高：</p>
-      <img src="https://i.ibb.co/whjMtmmZ/dopamine-shop-08-level-up.png" alt="Dopamine Shop升級畫面" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/0yvh5bbp/dopamine-shop-08-level-up.png" alt="Dopamine Shop升級畫面" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>真的是太快樂了。</p>
 
@@ -130,25 +130,25 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <p>首頁長這樣：</p>
-      <img src="https://i.ibb.co/S4DKr47v/foodnevercomes-01-home.png" alt="FoodNeverComes首頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/B5HgN5Ks/foodnevercomes-01-home.png" alt="FoodNeverComes首頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>可以選你喜歡的餐點去下單：</p>
-      <img src="https://i.ibb.co/9HK8v0zd/foodnevercomes-02-dish-detail.png" alt="FoodNeverComes餐點詳情" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/0y4DXL8z/foodnevercomes-02-dish-detail.png" alt="FoodNeverComes餐點詳情" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>選擇好商品內容：</p>
-      <img src="https://i.ibb.co/vxZ5BVtF/foodnevercomes-03-tray.png" alt="FoodNeverComes購物車" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/WWg93GTh/foodnevercomes-03-tray.png" alt="FoodNeverComes購物車" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>也會給你checkout：</p>
-      <img src="https://i.ibb.co/27Z48Qd7/foodnevercomes-04-checkout.png" alt="FoodNeverComes結帳頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/Rpjwhmcp/foodnevercomes-04-checkout.png" alt="FoodNeverComes結帳頁" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>再來就不用猶豫點下去下單：</p>
-      <img src="https://i.ibb.co/yFJYTq9F/foodnevercomes-05-checkout-place-order.png" alt="FoodNeverComes下單確認" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/6051hFM0/foodnevercomes-05-checkout-place-order.png" alt="FoodNeverComes下單確認" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>還會跟你說在路上多久會抵達：</p>
-      <img src="https://i.ibb.co/kVHT6CyV/foodnevercomes-06-tracking.png" alt="FoodNeverComes外送追蹤" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/p60TrFP6/foodnevercomes-06-tracking.png" alt="FoodNeverComes外送追蹤" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <p>甚至還可以打電話call外送員：</p>
-      <img src="https://i.ibb.co/fVR529s4/foodnevercomes-07-tracking-call.png" alt="FoodNeverComes致電外送員" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="https://i.ibb.co/35Xq7vnB/foodnevercomes-07-tracking-call.png" alt="FoodNeverComes致電外送員" style="max-width:100%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
       <hr>
 
