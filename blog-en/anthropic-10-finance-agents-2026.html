@@ -1,0 +1,127 @@
+<p style="font-size:18px;line-height:1.9;">Claude can now act as your stock analyst too — sort of. On May 5, 2026, Anthropic officially launched "Claude for Financial Services," shipping 10 ready-to-run finance agents across four categories: Research & Advisory, Research & Modeling, Fund Admin & Finance Ops, and Operations & Onboarding.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;">
+<tr style="background:#f1f5f9;"><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">Category</th><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">Agent</th><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">What it does</th></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Research & Advisory</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/pitch-agent" target="_blank" rel="noopener">Pitch Agent</a></td><td style="padding:10px;border:1px solid #e2e8f0;">Comps, precedents, LBO → branded pitch deck, end to end</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Research & Advisory</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/meeting-prep-agent" target="_blank" rel="noopener">Meeting Prep Agent</a></td><td style="padding:10px;border:1px solid #e2e8f0;">Briefing pack before every client meeting</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Research & Modeling</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/market-researcher" target="_blank" rel="noopener"><strong>Market Researcher</strong></a></td><td style="padding:10px;border:1px solid #e2e8f0;">Sector/theme → industry overview, competitive landscape, peer comps, ideas shortlist</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Research & Modeling</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/earnings-reviewer" target="_blank" rel="noopener"><strong>Earnings Reviewer</strong></a></td><td style="padding:10px;border:1px solid #e2e8f0;">Earnings call + filings → model update → note draft</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Research & Modeling</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/model-builder" target="_blank" rel="noopener"><strong>Model Builder</strong></a></td><td style="padding:10px;border:1px solid #e2e8f0;">DCF, LBO, 3-statement, comps — live in Excel</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Fund Admin & Ops</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/valuation-reviewer" target="_blank" rel="noopener">Valuation Reviewer</a></td><td style="padding:10px;border:1px solid #e2e8f0;">Ingests GP packages, runs valuation template, stages LP reporting</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Fund Admin & Ops</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/gl-reconciler" target="_blank" rel="noopener">GL Reconciler</a></td><td style="padding:10px;border:1px solid #e2e8f0;">Finds breaks, traces root cause, routes for sign-off</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Fund Admin & Ops</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/month-end-closer" target="_blank" rel="noopener">Month-End Closer</a></td><td style="padding:10px;border:1px solid #e2e8f0;">Accruals, roll-forwards, variance commentary</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Fund Admin & Ops</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/statement-auditor" target="_blank" rel="noopener">Statement Auditor</a></td><td style="padding:10px;border:1px solid #e2e8f0;">Audits LP statements before distribution</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;">Operations & Onboarding</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/kyc-screener" target="_blank" rel="noopener">KYC Screener</a></td><td style="padding:10px;border:1px solid #e2e8f0;">Parses onboarding docs, runs the rules engine, flags gaps</td></tr>
+</table>
+
+<hr>
+
+<h2>🏆 My top 3 picks for individual investors</h2>
+<p>The other 7 (Pitch Agent, GL Reconciler, KYC Screener, etc.) are really internal workflow tools for investment banking / accounting / compliance teams — not much use for a regular individual investor. These 3 are the ones actually worth trying:</p>
+<ol>
+  <li><strong>Earnings Reviewer — #1, most recommended:</strong> Feed it an earnings call transcript or SEC filing, and it analyzes what management actually said, flagging changes relevant to your investment thesis. This is my top pick because it <strong>needs no paid data subscription</strong> — just find a public earnings transcript yourself (like the NVIDIA/TSMC examples below), copy-paste it in, and you're good to go. Lowest barrier, highest value.</li>
+  <li><strong>Market Researcher:</strong> Synthesizes news, filings, and broker research into a market landscape report, flagging items relevant to credit/risk. Same deal — you can feed it your own news/public data without needing a paid feed.</li>
+  <li><strong>Model Builder:</strong> Builds a base financial model from your inputs (revenue assumptions, margin structure, capex) and outputs a working Excel file. Ranked #3 because it requires more manual assumption inputs — better suited for people who already understand financial statements and want to build their own model.</li>
+</ol>
+
+<hr>
+
+<h2>What this can — and can't — do</h2>
+<p>Before you install anything, a few things need to be clear upfront:</p>
+<ul>
+  <li><strong>Traditional securities only — no crypto:</strong> These 10 official agents target equities, bonds, and derivatives. There is <strong>no official Bitcoin/Solana integration</strong>. If you want AI-assisted crypto research, there's no Anthropic-official agent for it — you're limited to Claude's own chat + web search, or third-party community-built "Crypto Research" Skills (not made by Anthropic; verify quality/trustworthiness yourself before relying on them for decisions)</li>
+  <li><strong>Full functionality needs paid data feeds:</strong> Market Researcher and Model Builder are designed around institutional data connectors — FactSet, LSEG (formerly Refinitiv), Daloopa, Morningstar. Without those subscriptions, the agents still work, but your data source becomes whatever you manually feed in (a PDF you downloaded, a news link you pasted) rather than live automated data</li>
+  <li><strong>Drafts only, never auto-trading:</strong> Anthropic explicitly states these agents produce drafts for human review only — no trade execution, no automated buying/selling</li>
+  <li><strong>Taiwan stocks:</strong> No dedicated Taiwan market data connector, but since the agent is really "apply this analysis logic to whatever data you give it," you can still feed it public filings from Taiwan's MOPS (公開資訊觀測站) or broker reports — just without automated live data</li>
+</ul>
+
+<h2>Installing via Claude Code</h2>
+<p>If you already use Claude Code, <strong>you don't need to run every line below</strong>:</p>
+<ul>
+  <li>Lines 1–2 are required (add the marketplace + core package, everything else depends on it)</li>
+  <li>Each line from line 3 onward installs one agent — <strong>just install the ones you actually want</strong>, not all 10 (the example below shows my top 3 picks)</li>
+  <li>The vertical bundle at the end (e.g. equity-research) is optional too, for when you want a whole vertical's skill set at once</li>
+</ul>
+<pre style="background:#1e293b;color:#f1f5f9;padding:16px;border-radius:8px;overflow-x:auto;"># 1. Add the official financial services marketplace (required)
+claude plugin marketplace add anthropics/financial-services
+
+# 2. Install the core package first (everything else depends on it)
+claude plugin install financial-analysis@claude-for-financial-services
+
+# 3. Install the agents you want (below are my top 3 picks for individual investors)
+claude plugin install earnings-reviewer@claude-for-financial-services
+claude plugin install market-researcher@claude-for-financial-services
+claude plugin install model-builder@claude-for-financial-services
+
+# 4. Or install a full vertical bundle (e.g. equity research)
+claude plugin install equity-research@claude-for-financial-services</pre>
+<p><strong>If you're logged into Claude Code with a Pro/Max subscription (regular `claude login`), you don't need an API key</strong> — it runs off your existing subscription quota. An API key is only needed for the "Claude Managed Agents" deployment route (self-hosted, scheduled/unattended automation), which is billed separately and unrelated to installing plugins normally.</p>
+
+<h2>Installing via Claude Cowork (recommended if you're not into the command line — also no API key needed)</h2>
+<ol>
+  <li>Open the Claude desktop app, switch to "Cowork" mode</li>
+  <li>Left sidebar → "Customize" → "Browse plugins" → "Personal"</li>
+  <li>Click "+" → "Add marketplace from GitHub" → paste: <code>https://github.com/anthropics/financial-services</code></li>
+  <li>Install <strong>financial-analysis</strong> first (core package, required), then add whichever agents you want</li>
+</ol>
+<p>Once installed, type "/" in the Cowork chat box to pull up commands, e.g.:</p>
+<ul>
+  <li><code>/comps [company]</code> — run a comparable company analysis</li>
+  <li><code>/dcf [company]</code> — build a discounted cash flow valuation model</li>
+  <li><code>/earnings [company] [quarter]</code> — generate an earnings summary</li>
+  <li><code>/ic-memo [project name]</code> — draft an investment committee memo</li>
+</ul>
+
+<hr>
+
+<h2>Real US + Taiwan stock examples you can try right now</h2>
+<p>Since you don't have an institutional data subscription, the practical workflow is: <strong>you find the source material, the agent organizes and analyzes it</strong> — not a fully automated live-monitoring system. Below are two <strong>verified, genuinely current</strong> earnings call transcripts you can plug straight into Earnings Reviewer.</p>
+
+<h3>Example 1: US stock — NVIDIA Q1 FY2027</h3>
+<ul>
+  <li><strong>Call date:</strong> May 20, 2026</li>
+  <li><strong>Speakers:</strong> Jensen Huang (President & CEO), Colette Kress (CFO)</li>
+  <li><strong>Transcript:</strong> <a href="https://www.fool.com/earnings/call-transcripts/2026/05/20/nvidia-nvda-q1-2027-earnings-transcript/" target="_blank" rel="noopener">fool.com/earnings/call-transcripts/2026/05/20/nvidia-nvda-q1-2027-earnings-transcript</a></li>
+</ul>
+<p>Example prompt for Earnings Reviewer:</p>
+<blockquote>Here's NVIDIA's Q1 FY2027 (5/20/2026) earnings call transcript: [paste link or full text]. Analyze management's outlook on data center/AI chip demand — is the tone more conservative or more optimistic compared to last quarter? Any risk flags worth noting?</blockquote>
+
+<h3>Example 2: Taiwan stock — TSMC Q2 2026</h3>
+<ul>
+  <li><strong>Call date:</strong> July 16, 2026</li>
+  <li><strong>Speakers:</strong> C.C. Wei (Chairman & CEO), Wendell Huang (CFO)</li>
+  <li><strong>Transcript:</strong> <a href="https://www.fool.com/earnings/call-transcripts/2026/07/16/tsm-tsm-q2-2026-earnings-call-transcript/" target="_blank" rel="noopener">fool.com/earnings/call-transcripts/2026/07/16/tsm-tsm-q2-2026-earnings-call-transcript</a></li>
+</ul>
+<p>Example prompt for Earnings Reviewer:</p>
+<blockquote>Here's TSMC's Q2 2026 earnings call transcript: [paste link or full text]. Summarize management's comments on H2 capex, advanced node (2nm/3nm) capacity, and AI-related demand, and flag anything that's shifted meaningfully from last quarter.</blockquote>
+
+<p>Both are free, complete transcripts from Motley Fool (not paywalled previews) — verified directly by fetching the pages and confirming the opening dialogue, dates, and speaker names match genuine earnings calls. I haven't separately verified an official-source link on TSMC's own investor.tsmc.com or Taiwan's MOPS system for this same call.</p>
+
+<h3>Example 3: Using Market Researcher for sector comparison</h3>
+<p>After getting the Earnings Reviewer analysis on NVIDIA/TSMC, follow up with Market Researcher:</p>
+<blockquote>Give me an overview of the current competitive landscape in AI chips/semiconductor foundry, specifically comparing NVIDIA, TSMC, AMD, and Samsung's recent standing, plus any notable recent news or analyst ratings.</blockquote>
+<p>Or for the Taiwan supply chain:</p>
+<blockquote>Summarize recent industry news and analyst ratings for Taiwan's semiconductor supply chain (TSMC, MediaTek, ASE), and flag which items could move the stock price.</blockquote>
+
+<h3>Example 4: Using Model Builder to scaffold a financial model</h3>
+<p>If you want to build your own valuation, try:</p>
+<blockquote>Using TSMC's revenue, gross margin, and capex figures from the past few quarters, build me a simple 3-statement framework I can adjust with my own growth assumptions to estimate a reasonable share price range.</blockquote>
+<p>Since you don't have an institutional data subscription, Model Builder won't auto-pull live financial figures — you need to feed it TSMC's/NVIDIA's recent revenue, margin, etc. (pulled from the earnings transcript or public filings) before it has something to build a framework from.</p>
+
+<h2>The crypto workaround</h2>
+<p>Since there's no official crypto agent, the practical approach is just talking to Claude directly:</p>
+<blockquote>Look up Bitcoin's price movement over the past week, the main news events driving it, and compare the pattern to past halving cycles.</blockquote>
+<p>Claude will use its own web search capability to answer, but this isn't a packaged "agent" — the quality depends heavily on how specific your question is.</p>
+
+<hr>
+
+<h2>Bottom line</h2>
+<p>For institutional analysts with paid data subscriptions, these 10 agents genuinely save a lot of repetitive work. For an individual investor, the real value is in <strong>organizing and analyzing the material you find</strong>, not replacing the research itself — crypto has zero official support right now, and even the stock side needs you to source the filings and news yourself before the agent can add value.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li><a href="https://www.anthropic.com/news/finance-agents" target="_blank" rel="noopener">Anthropic - Agents for financial services</a></li>
+  <li><a href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener">anthropics/financial-services GitHub repo</a></li>
+  <li><a href="https://claude.com/resources/tutorials/install-financial-services-plugins-for-cowork" target="_blank" rel="noopener">Official Cowork financial plugins install guide</a></li>
+  <li><a href="https://www.theregister.com/2026/05/05/anthropic_unleashes_finance_agents_claude/" target="_blank" rel="noopener">The Register - Anthropic unleashes finance agents for Claude</a></li>
+</ul>

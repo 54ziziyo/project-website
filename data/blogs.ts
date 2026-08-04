@@ -43,6 +43,168 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'anthropic-10-finance-agents-2026',
+    title: 'Claude現在也能當你的股票分析師！Anthropic上架10個金融Agent實測教學',
+    category: 'AI 人工智慧',
+    tags: ['Anthropic', 'Claude', '金融Agent', 'Market Researcher', 'Earnings Reviewer', 'Model Builder'],
+    excerpt:
+      'Anthropic在2026年5月正式推出10個金融工作流程Agent，實測用Earnings Reviewer分析NVIDIA、台積電最新法說會逐字稿，附完整安裝步驟、推薦前3名Agent，以及加密貨幣目前無官方支援的說明。',
+    titleEn:
+      'Claude Can Be Your Stock Analyst Now: Trying Out Anthropic\'s 10 Finance Agents',
+    excerptEn:
+      "Anthropic launched 10 ready-to-run finance agents in May 2026. Tested Earnings Reviewer on real, current NVIDIA and TSMC earnings call transcripts, with full install steps, my top 3 agent picks, and an honest note on the (currently nonexistent) crypto support.",
+    tagsEn: ['Anthropic', 'Claude', 'Finance Agents', 'Market Researcher', 'Earnings Reviewer', 'Model Builder'],
+    coverImage: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80',
+    coverImageEn: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80',
+    author: 'Zeona Studio',
+    publishedAt: '2026-08-04',
+    updatedAt: '2026-08-04',
+    featured: false,
+    seo: {
+      title: 'Anthropic 10個金融Agent實測教學：Earnings Reviewer分析NVIDIA、台積電財報 | Zeona Studio',
+      description:
+        'Anthropic推出10個金融工作流程Agent，實測Earnings Reviewer分析NVIDIA、台積電最新法說會逐字稿，附Claude Code/Cowork安裝步驟、推薦前3名Agent。',
+      keywords: 'Anthropic, Claude, 金融Agent, Market Researcher, Earnings Reviewer, Model Builder, 財報分析, AI投資',
+      ogImage: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80',
+    },
+    seoEn: {
+      title: "Anthropic's 10 Finance Agents Tried: Earnings Reviewer on NVIDIA & TSMC | Zeona Studio",
+      description:
+        "Hands-on with Anthropic's 10 finance agents, testing Earnings Reviewer on real NVIDIA and TSMC earnings transcripts, with Claude Code/Cowork install steps and my top 3 picks.",
+      keywords:
+        'Anthropic, Claude, finance agents, Market Researcher, Earnings Reviewer, Model Builder, earnings analysis, AI investing',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">Anthropic在2026年5月5日正式發布了「Claude for Financial Services」，一口氣推出10個現成的金融工作流程Agent，涵蓋「研究與顧問」「研究與建模」「基金行政與財務營運」「營運與客戶開戶」四大類。</p>
+
+      <table style="width:100%;border-collapse:collapse;margin:20px 0;">
+      <tr style="background:#f1f5f9;"><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">分類</th><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">Agent</th><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">功能</th></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">研究與顧問</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/pitch-agent" target="_blank" rel="noopener">Pitch Agent</a></td><td style="padding:10px;border:1px solid #e2e8f0;">自動生成同業比較、前例交易、槓桿收購分析，產出完整提案簡報</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">研究與顧問</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/meeting-prep-agent" target="_blank" rel="noopener">Meeting Prep Agent</a></td><td style="padding:10px;border:1px solid #e2e8f0;">每次客戶會議前自動生成簡報包</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">研究與建模</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/market-researcher" target="_blank" rel="noopener"><strong>Market Researcher</strong></a></td><td style="padding:10px;border:1px solid #e2e8f0;">給產業或主題，自動生成產業概況、競爭格局、同業比較、標的清單</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">研究與建模</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/earnings-reviewer" target="_blank" rel="noopener"><strong>Earnings Reviewer</strong></a></td><td style="padding:10px;border:1px solid #e2e8f0;">分析法說會逐字稿+財報文件，更新模型、產出分析筆記</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">研究與建模</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/model-builder" target="_blank" rel="noopener"><strong>Model Builder</strong></a></td><td style="padding:10px;border:1px solid #e2e8f0;">自動建立DCF現金流折現、槓桿收購、三大報表、同業比較模型，直接產出Excel</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">基金行政/財務營運</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/valuation-reviewer" target="_blank" rel="noopener">Valuation Reviewer</a></td><td style="padding:10px;border:1px solid #e2e8f0;">讀取GP文件包，跑估值模板，準備LP報告</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">基金行政/財務營運</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/gl-reconciler" target="_blank" rel="noopener">GL Reconciler</a></td><td style="padding:10px;border:1px solid #e2e8f0;">找出總帳對不上的地方，追根本原因，送出覆核</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">基金行政/財務營運</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/month-end-closer" target="_blank" rel="noopener">Month-End Closer</a></td><td style="padding:10px;border:1px solid #e2e8f0;">應計、展延、差異分析註記</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">基金行政/財務營運</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/statement-auditor" target="_blank" rel="noopener">Statement Auditor</a></td><td style="padding:10px;border:1px solid #e2e8f0;">在LP報表發出前先審核一遍</td></tr>
+      <tr><td style="padding:10px;border:1px solid #e2e8f0;">營運與客戶開戶</td><td style="padding:10px;border:1px solid #e2e8f0;"><a href="https://github.com/anthropics/financial-services/tree/main/plugins/agent-plugins/kyc-screener" target="_blank" rel="noopener">KYC Screener</a></td><td style="padding:10px;border:1px solid #e2e8f0;">解析開戶文件，跑規則引擎，標記缺漏</td></tr>
+      </table>
+
+      <hr>
+
+      <h2>🏆 我最推薦個人投資者用的前3名</h2>
+      <p>其他7個（Pitch Agent、GL Reconciler、KYC Screener等）本質上是給投行/會計/法遵團隊用的內部工作流程，一般個人投資者用不太到。真正值得個人玩的是這3個：</p>
+      <ol>
+        <li><strong>Earnings Reviewer（財報審閱員）— 第一名，最推薦：</strong>丟一份法說會逐字稿或SEC申報文件進去，它會分析管理層到底說了什麼、標出跟你原本投資論點有關的變化。這個最推薦的原因是：<strong>不需要任何付費資料源</strong>，你只要自己上網抓到公開的法說會逐字稿（像下面NVIDIA、台積電的例子），複製貼上就能用，門檻最低、CP值最高。</li>
+        <li><strong>Market Researcher（市場研究員）：</strong>整合新聞、財報、券商研究報告，幫你自動生成產業/個股市場現況報告，並標記出跟信用/風險相關的重點。同樣可以靠你自己找的新聞/公開資料餵給它，不一定要付費資料源。</li>
+        <li><strong>Model Builder（模型建構師）：</strong>輸入營收假設、毛利結構、資本支出等參數，自動幫你建出一份可用的財務模型Excel。排第三是因為要自己輸入的假設參數比較多，比較適合已經對財報有基本概念、想自己動手建模的人。</li>
+      </ol>
+
+      <hr>
+
+      <h2>⚠️ 先說清楚：這個工具能做什麼、不能做什麼</h2>
+      <p>在教怎麼用之前，有幾件事一定要先講清楚，避免大家花時間裝了才發現不符合預期：</p>
+      <ul>
+        <li><strong>這是傳統證券工具，不支援加密貨幣：</strong>官方這10個Agent鎖定的是股票、債券、衍生性商品，沒有Bitcoin、Solana等加密貨幣的官方整合。如果你想用AI研究幣圈，目前沒有Anthropic官方的對應Agent，只能靠Claude本身的對話+網路搜尋能力，或是第三方社群做的「Crypto Research」Skill（非Anthropic官方出品，品質和可信度需要自己把關，不建議直接拿來做投資決策）。</li>
+        <li><strong>完整功能需要付費資料源：</strong>Market Researcher、Model Builder這類Agent背後預設串接的是FactSet、LSEG（原Refinitiv）、Daloopa、Morningstar這類機構級付費資料商。如果你沒有這些訂閱，Agent依然可以用，但資料來源會變成你自己上傳的檔案（例如你自己下載的財報PDF、你貼上的新聞連結），而不是即時自動串接的市場數據。</li>
+        <li><strong>只出草稿，不能自動下單：</strong>Anthropic官方明講，這些Agent只產出「給人類覆核用的草稿」，不會執行交易、不會自動幫你買賣。</li>
+        <li><strong>台股：</strong>沒有專門的台股資料連結器，但因為Agent本質上是「照著Skill邏輯處理你給的資料/你要求它查的資料」，你一樣可以請它幫你分析公開資訊觀測站、券商報告等你自己提供的台股資料，只是不會有自動化的即時串接。</li>
+      </ul>
+
+      <h2>怎麼安裝：Claude Code版本</h2>
+      <p>如果你已經有在用Claude Code，下面這些指令不是每一行都要跑：</p>
+      <ul>
+        <li>第1、2行是必裝（加入Marketplace + 核心套件，其他Agent都依賴這個）</li>
+        <li>第3行開始每一行對應一個Agent，只裝你自己想用的那幾個就好，不需要10個全裝（下面範例列的是我最推薦的前3名）</li>
+        <li>最後一行的產業包（例如equity-research）也是可選的，看你要不要一次拿到整個垂直領域的技能包</li>
+      </ul>
+      <pre style="background:#1e293b;color:#f1f5f9;padding:16px;border-radius:8px;overflow-x:auto;"># 1. 加入官方金融服務Marketplace（必裝）
+claude plugin marketplace add anthropics/financial-services
+
+# 2. 先裝核心套件（其他Agent都依賴這個，一定要先裝）
+claude plugin install financial-analysis@claude-for-financial-services
+
+# 3. 挑你要的Agent安裝（下面是我最推薦個人投資者用的3個，可依需求增減）
+claude plugin install earnings-reviewer@claude-for-financial-services
+claude plugin install market-researcher@claude-for-financial-services
+claude plugin install model-builder@claude-for-financial-services
+
+# 4. 如果要用整套產業包（例如證券研究）
+claude plugin install equity-research@claude-for-financial-services</pre>
+      <p><strong>如果你是用Pro/Max訂閱登入Claude Code（一般claude login那種），不需要另外設定API金鑰</strong>，用你原本的訂閱額度就能跑。API金鑰只有在你想用「Claude Managed Agents」這種進階部署方式（自己架後端、排程自動跑）時才需要，那是另一種API計價方式，跟一般安裝Plugin無關。</p>
+
+      <h2>怎麼安裝：Claude Cowork版本（不太會寫指令的人建議這個，同樣不需要API金鑰）</h2>
+      <ol>
+        <li>打開Claude桌面版App，切到「Cowork」模式</li>
+        <li>左側欄點「Customize」→「Browse plugins」→「Personal」</li>
+        <li>點「+」→「Add marketplace from GitHub」，貼上：<code>https://github.com/anthropics/financial-services</code></li>
+        <li>先安裝financial-analysis（核心套件，一定要先裝），再挑你要的其他Agent</li>
+      </ol>
+      <p>安裝完之後，在Cowork對話框輸入「/」就可以叫出指令，例如：</p>
+      <ul>
+        <li><code>/comps [公司名稱]</code> — 做同業比較分析</li>
+        <li><code>/dcf [公司名稱]</code> — 建立現金流折現估值模型</li>
+        <li><code>/earnings [公司名稱] [季度]</code> — 生成財報重點摘要</li>
+        <li><code>/ic-memo [專案名稱]</code> — 生成投資委員會備忘錄</li>
+      </ul>
+
+      <hr>
+
+      <h2>個人投資者實際能怎麼玩：美股+台股實測範例</h2>
+      <p>因為沒有機構資料訂閱，重點是「你負責找資料餵給它，它負責幫你整理分析邏輯」，不是全自動的即時盯盤系統。下面是兩份已查證過的真實最新財報逐字稿，可以直接拿去試玩Earnings Reviewer。</p>
+
+      <h3>範例一：美股 — NVIDIA Q1 FY2027</h3>
+      <ul>
+        <li><strong>法說會日期：</strong>2026年5月20日</li>
+        <li><strong>講者：</strong>Jensen Huang（總裁暨執行長）、Colette Kress（財務長）</li>
+        <li><strong>逐字稿連結：</strong><a href="https://www.fool.com/earnings/call-transcripts/2026/05/20/nvidia-nvda-q1-2027-earnings-transcript/" target="_blank" rel="noopener">fool.com/earnings/call-transcripts/2026/05/20/nvidia-nvda-q1-2027-earnings-transcript</a></li>
+      </ul>
+      <p>丟給Earnings Reviewer的範例提問：</p>
+      <blockquote>這是NVIDIA Q1 FY2027（2026/5/20）的法說會逐字稿：[貼上連結或全文]。幫我分析管理層對資料中心/AI晶片需求的展望，跟上一季比起來語氣是更保守還是更樂觀？有沒有值得注意的風險提示？</blockquote>
+
+      <h3>範例二：台股 — 台積電 Q2 2026</h3>
+      <ul>
+        <li><strong>法說會日期：</strong>2026年7月16日</li>
+        <li><strong>講者：</strong>魏哲家（董事長暨執行長）、黃仁昭（財務長）</li>
+        <li><strong>逐字稿連結：</strong><a href="https://www.fool.com/earnings/call-transcripts/2026/07/16/tsm-tsm-q2-2026-earnings-call-transcript/" target="_blank" rel="noopener">fool.com/earnings/call-transcripts/2026/07/16/tsm-tsm-q2-2026-earnings-call-transcript</a></li>
+      </ul>
+      <p>丟給Earnings Reviewer的範例提問：</p>
+      <blockquote>這是台積電2026年Q2法說會逐字稿：[貼上連結或全文]。幫我用中文整理管理層對下半年資本支出、先進製程（2奈米/3奈米）產能、AI相關需求的說法重點，並標出跟上一季相比有沒有明顯轉變的地方。</blockquote>
+
+      <p>以上兩篇都是Motley Fool免費公開的完整逐字稿（不是付費牆預覽版），已實際抓取內容核對開頭對話、日期、講者姓名，確認為真實法說會紀錄。台積電官網（investor.tsmc.com）或公開資訊觀測站（MOPS）上是否有同一場法說會的官方版連結，目前還沒有另外查證。</p>
+
+      <h3>範例三：用Market Researcher補上同產業比較</h3>
+      <p>拿到Earnings Reviewer對NVIDIA/台積電的分析後，可以接著丟給Market Researcher：</p>
+      <blockquote>幫我整理AI晶片/半導體代工產業目前的競爭格局，特別是NVIDIA、台積電、AMD、三星這幾家的近況比較，還有最近有哪些新聞或分析師評等值得注意？</blockquote>
+      <p>或針對台股產業鏈：</p>
+      <blockquote>幫我整理台灣半導體供應鏈（台積電、聯發科、日月光）最近的產業新聞跟分析師評等重點，標出哪些消息可能影響股價。</blockquote>
+
+      <h3>範例四：用Model Builder搭建財務模型框架</h3>
+      <p>如果你想自己動手做估值，可以丟給Model Builder：</p>
+      <blockquote>幫我用台積電最近幾季的營收、毛利率、資本支出數字，搭一個簡單的三大報表框架，讓我可以自己調整成長假設，抓抓看合理股價區間。</blockquote>
+      <p>因為沒有機構資料訂閱，Model Builder不會自動幫你抓即時財報數字，你需要先把台積電/NVIDIA近幾季的營收、毛利率等數字（可以從法說會逐字稿或公開財報裡摘出來）貼給它，它才有東西可以搭框架。</p>
+
+      <h2>幣圈的替代做法</h2>
+      <p>因為沒有官方Crypto Agent，比較實際的做法是直接跟Claude對話，例如：</p>
+      <blockquote>幫我查一下比特幣最近一週的價格走勢、主要新聞事件，以及跟過去減半週期的價格模式比較</blockquote>
+      <p>Claude會用它本身的網路搜尋能力回答，但這不是一個包裝好的「Agent」，品質會比較依賴你問的問題夠不夠具體。</p>
+
+      <hr>
+
+      <h2>一句話總結</h2>
+      <p>這10個Agent對機構分析師（有付費資料源）來說是真的能省下大量重複性工作；但對一般個人投資者來說，價值主要在於「幫你整理、分析你自己找到的資料」，而不是取代你做研究這件事本身——尤其加密貨幣目前完全沒有官方支援，股票部分也要靠你自己去找財報、新聞餵給它，才能發揮效果。</p>
+
+      <h2>資料來源</h2>
+      <ul>
+        <li><a href="https://www.anthropic.com/news/finance-agents" target="_blank" rel="noopener">Anthropic官方公告：Agents for financial services</a></li>
+        <li><a href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener">anthropics/financial-services GitHub repo</a></li>
+        <li><a href="https://claude.com/resources/tutorials/install-financial-services-plugins-for-cowork" target="_blank" rel="noopener">Claude Cowork金融外掛安裝教學（官方）</a></li>
+        <li><a href="https://www.theregister.com/2026/05/05/anthropic_unleashes_finance_agents_claude/" target="_blank" rel="noopener">The Register - Anthropic unleashes finance agents for Claude</a></li>
+      </ul>
+    `,
+  },
+  {
     id: 'korean-dopamine-sites-2026',
     title: '韓國「多巴胺網站」實測：不花一毛錢，也能體驗買東西的爽感',
     category: '社群與短影音',
