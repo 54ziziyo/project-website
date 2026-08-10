@@ -57,6 +57,7 @@ async function ensureSchema() {
   await api(`/databases/${DB}`, 'PATCH', {
     properties: {
       Featured: { checkbox: {} },
+      'Featured Order': { number: {} },
       'Title (EN)': { rich_text: {} },
       'Excerpt (EN)': { rich_text: {} },
       'Tags (EN)': { multi_select: {} },
@@ -131,6 +132,7 @@ async function main() {
       'Published At': { date: { start: post!.publishedAt } },
       Status: { select: { name: 'Published' } },
       Featured: { checkbox: !!post!.featured },
+      'Featured Order': { number: post!.featuredOrder ?? null },
       'SEO Title': rt(post!.seo.title),
       'SEO Description': rt(post!.seo.description),
       'SEO Keywords': rt(post!.seo.keywords),

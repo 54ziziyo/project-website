@@ -33,6 +33,10 @@ export interface NotionCheckboxProp {
   checkbox?: boolean
 }
 
+export interface NotionNumberProp {
+  number?: number | null
+}
+
 export interface NotionPageProperties {
   ID?: NotionRichTextProp
   Title?: NotionTitleProp
@@ -44,6 +48,7 @@ export interface NotionPageProperties {
   Author?: NotionRichTextProp
   'Published At'?: NotionDateProp
   Featured?: NotionCheckboxProp
+  'Featured Order'?: NotionNumberProp
   'SEO Title'?: NotionRichTextProp
   'SEO Description'?: NotionRichTextProp
   'SEO Keywords'?: NotionRichTextProp
@@ -125,6 +130,7 @@ export function pageToPost(page: NotionPage, content = '', contentEn = '') {
     publishedAt: p['Published At']?.date?.start || '',
     updatedAt: p['Published At']?.date?.start || '',
     featured: p.Featured?.checkbox || false,
+    featuredOrder: p['Featured Order']?.number ?? undefined,
     seo: {
       title: extractText(p['SEO Title']?.rich_text),
       description: extractText(p['SEO Description']?.rich_text),

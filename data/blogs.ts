@@ -22,6 +22,8 @@ export interface BlogPost {
   publishedAt: string
   updatedAt: string
   featured?: boolean
+  // 精選文章side bar內的手動排序，數字越小越前面；未設定則排在有設定的後面
+  featuredOrder?: number
   seo: {
     title: string
     description: string
@@ -59,7 +61,8 @@ export const blogPosts: BlogPost[] = [
     author: 'Zeona Studio',
     publishedAt: '2026-08-10',
     updatedAt: '2026-08-10',
-    featured: false,
+    featured: true,
+    featuredOrder: 2,
     seo: {
       title: 'Pikbest完整使用教學：免費設計素材、PPT模板、免版稅音樂下載 | Zeona Studio',
       description:
@@ -552,7 +555,8 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     author: 'Zeona Studio',
     publishedAt: '2026-07-31',
     updatedAt: '2026-07-31',
-    featured: false,
+    featured: true,
+    featuredOrder: 3,
     seo: {
       title: '50個ChatGPT隱藏指令大全：/think、/eli5、/no-fluff等實用標籤與查證來源 | Zeona Studio',
       description:
@@ -704,7 +708,8 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     author: 'Zeona Studio',
     publishedAt: '2026-07-29',
     updatedAt: '2026-07-29',
-    featured: false,
+    featured: true,
+    featuredOrder: 5,
     seo: {
       title: 'Claude洩漏隱私？「分享」按鈕的真相與自保方法 | Zeona Studio',
       description:
@@ -1059,7 +1064,8 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     author: 'Zeona Studio',
     publishedAt: '2026-06-10',
     updatedAt: '2026-06-10',
-    featured: false,
+    featured: true,
+    featuredOrder: 1,
     seo: {
       title: 'Typeless 語音輸入教學：讓 AI 真正認識你，提示詞產出更精準 | Zeona Studio',
       description:
@@ -1231,7 +1237,7 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     author: 'Zeona Studio',
     publishedAt: '2026-06-09',
     updatedAt: '2026-06-09',
-    featured: true,
+    featured: false,
     seo: {
       title: 'OpenAI「超級應用」來了：ChatGPT＋Codex 合併、「聊天已死」對創作者的意義（2026）| Zeona Studio',
       description:
@@ -1332,7 +1338,7 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     author: 'Zeona Studio',
     publishedAt: '2026-06-06',
     updatedAt: '2026-06-06',
-    featured: true,
+    featured: false,
     seo: {
       title: 'Google AI 搜尋逼走用戶、DuckDuckGo 暴增 70%：品牌該怎麼接招（2026 分析）| Zeona Studio',
       description:
@@ -1432,7 +1438,7 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     author: 'Zeona Studio',
     publishedAt: '2026-06-04',
     updatedAt: '2026-06-04',
-    featured: true,
+    featured: false,
     seo: {
       title: 'GEO 是什麼？2026 生成引擎最佳化完整教學（附提示詞）| Zeona Studio',
       description:
@@ -1565,6 +1571,8 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     author: 'Zeona Studio',
     publishedAt: '2026-02-22',
     updatedAt: '2026-02-22',
+    featured: true,
+    featuredOrder: 4,
     seo: {
       title: 'GEO 實戰案例：重機部品如何讓 AI 主動推薦品牌？ | Zeona Studio',
       description: '真實轉單案例分享！詳解重機人身部品網站如何透過 GEO 優化進入 ChatGPT 推薦清單，提升品牌權威與轉化。',

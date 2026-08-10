@@ -155,14 +155,16 @@ const paginatedPosts = computed(() => {
   return filteredPosts.value.slice(start, start + postsPerPage)
 })
 
-// 精選文章（右側 sidebar）：Notion 勾選 Featured 的優先，不足 4 篇用最新補齊
+// 精選文章（右側 sidebar）：Notion 勾選 Featured 的優先（依 featuredOrder 手動排序），不足 5 篇用最新補齊
 const featuredPosts = computed(() => {
   const posts = blogPosts.value || []
-  const manualFeatured = posts.filter((p) => p.featured)
+  const manualFeatured = posts
+    .filter((p) => p.featured)
+    .sort((a, b) => (a.featuredOrder ?? Infinity) - (b.featuredOrder ?? Infinity))
   const byRecency = [...posts]
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
     .filter((p) => !p.featured)
-  return [...manualFeatured, ...byRecency].slice(0, 4)
+  return [...manualFeatured, ...byRecency].slice(0, 5)
 })
 
 // 推薦主題（從分類中取得，排除「全部」）
