@@ -43,6 +43,203 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'pikbest-design-resources-guide',
+    title: '做圖不用再到處拼素材！Pikbest 完整使用教學：海報、PPT、音樂、音效一站找齊',
+    category: '視覺設計',
+    tags: ['Pikbest', '設計素材', 'PPT模板', '免版稅音樂', '電商素材', '免費資源'],
+    excerpt:
+      '客戶臨時要海報、要簡報，卻要開十個分頁找素材找配樂？整理Pikbest完整使用教學，350萬＋設計資源、電商模板、免版稅音樂音效、教學影片一站找齊，附版權授權說明與新手三步驟操作圖文。（內含我的聯盟行銷連結）',
+    titleEn:
+      'Stop Hunting for Design Assets Everywhere: Full Pikbest Guide — Posters, PPT, Music & Sound Effects in One Place',
+    excerptEn:
+      "Tired of opening ten tabs to find a poster template, a PPT deck, and royalty-free background music? Here's a full walkthrough of Pikbest — 3.5M+ design resources, e-commerce templates, royalty-free audio, and tutorial videos — with a step-by-step guide and licensing notes. (Includes my affiliate link)",
+    tagsEn: ['Pikbest', 'Design Resources', 'PPT Templates', 'Royalty-Free Music', 'E-commerce Assets', 'Free Resources'],
+    coverImage: '/images/pikbest/pikbest-homepage.png',
+    coverImageEn: '/images/pikbest/pikbest-homepage.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-08-10',
+    updatedAt: '2026-08-10',
+    featured: false,
+    seo: {
+      title: 'Pikbest完整使用教學：免費設計素材、PPT模板、免版稅音樂下載 | Zeona Studio',
+      description:
+        'Pikbest使用教學：350萬＋設計資源，電商模板、PPT簡報、免版稅音樂音效、剪輯教學影片一站找齊，附版權授權說明與新手操作步驟圖文。',
+      keywords: 'Pikbest, 設計素材下載, PPT模板, 免版稅音樂, 免費圖庫, 電商模板, 教學影片',
+      ogImage: '/images/pikbest/pikbest-homepage.png',
+    },
+    seoEn: {
+      title: 'Pikbest Complete Guide: Free Design Assets, PPT Templates & Royalty-Free Music | Zeona Studio',
+      description:
+        'A full walkthrough of Pikbest — 3.5M+ design resources, e-commerce templates, royalty-free music and sound effects, editing tutorials, licensing notes, and a step-by-step how-to.',
+      keywords:
+        'Pikbest, design resources, PPT templates, royalty-free music, free stock photos, e-commerce templates, tutorial videos',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">你是不是也遇過這種狀況：客戶臨時要一張活動海報，或是要交一份提案簡報，結果光是找素材、找配樂就花掉一半工作時間？我自己做IG貼文、部落格封面、客戶提案的時候，最常卡住的環節從來不是設計本身，而是「素材去哪找」——圖庫要開一個網站、PPT模板要另一個網站、配樂音效又要再開一個分頁，光是切換視窗就很累人。</p>
+
+      <p>後來發現<strong>Pikbest</strong>幾乎把我平常會用到的素材類型都包進同一個網站，才把這個到處拼湊素材的習慣改掉，這篇整理給你完整的使用教學。</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://zh.pikbest.com/?affiliate_code=416a79b9850d106" target="_blank" rel="noopener" style="display:inline-block;background:#f59e0b;color:#1e293b;font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;font-size:16px;">👉 點我進入 Pikbest 免費瀏覽素材</a></p>
+
+      <img src="/images/pikbest/pikbest-homepage.png" alt="Pikbest官網首頁，350萬+設計資源搜尋入口" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>Pikbest裡面到底有什麼？</h2>
+      <p>網站首頁就寫得很清楚：<strong>所有圖片、影片、音樂、音效、Office範本——無限下載</strong>。實際逛過一輪，幾個我最常用到的分類整理給你：</p>
+
+      <h3>🛍️ 電商模板</h3>
+      <p>促銷Banner、雙11／週年慶版型、產品主圖模板，直接套用改文字圖片就能上架，尤其是節慶檔期（雙11、年貨節、母親節）的版型更新很快。</p>
+      <img src="/images/pikbest/pikbest-ecommerce-templates.png" alt="Pikbest電商模板分類頁，雙11與年貨節促銷版型" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h3>🖼️ 照片圖庫</h3>
+      <p>4萬張以上可商用照片，人像、場景、生活情境類都找得到，適合部落格封面、社群貼文配圖。</p>
+      <img src="/images/pikbest/pikbest-photos.png" alt="Pikbest照片圖庫，教育文化主題可商用照片" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h3>🎵 音樂與音效</h3>
+      <p>影片配樂、卡通音效、轉場音效都有，做短影音、廣告片配樂不用再另外找版權音樂，每個音效都能線上先試聽再決定要不要下載。</p>
+      <img src="/images/pikbest/pikbest-sound-effects.png" alt="Pikbest音效庫，各類免版稅音效試聽下載" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h3>📊 PowerPoint／Word／Excel範本</h3>
+      <p>提案簡報、報表範本、出勤表這種辦公室常用檔案都有現成版型，商務簡報的版型設計質感也不錯，不用自己從零排版。</p>
+      <img src="/images/pikbest/pikbest-ppt-templates.png" alt="Pikbest PowerPoint簡報範本庫" style="width:100%;border-radius:8px;margin:20px 0;" />
+      <img src="/images/pikbest/pikbest-excel-templates.png" alt="Pikbest Excel範本，自動出勤表與考勤表範本" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h3>🎬 影片剪輯教學</h3>
+      <p>免費附上大量AE、PR特效教學影片，從轉場、字幕動效到爆炸特效都有教學，對剛開始學剪片的人蠻友善的。</p>
+      <img src="/images/pikbest/pikbest-video-tutorials.png" alt="Pikbest AE／PR剪輯特效教學影片列表" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <hr>
+
+      <h2>怎麼使用：新手三步驟</h2>
+      <ol>
+        <li><strong>搜尋或選分類：</strong>進到網站後，用上方搜尋框直接打關鍵字（例如「電商Banner」「PPT簡報」「音效」），或點左上角「所有類別」展開找你要的素材類型（設計模板、圖案素材、影片與音訊、電商模板、Office範本、攝影照片、UI）。</li>
+        <li><strong>確認版權授權：</strong>點進喜歡的素材，畫面右側會顯示「版權資訊」——先看清楚這個素材是免費方案可用，還是需要升級付費方案才能下載商用版，每個素材頁面都會清楚寫「你可以做什麼、不能做什麼」。</li>
+        <li><strong>下載並標明來源（免費方案）：</strong>免費方案下載的素材通常要求「標明來源」，頁面會直接給你一段可複製的連結語法，貼到你的作品頁面上就符合使用規範；如果是商業用途、不想附來源連結，就需要升級付費方案。</li>
+      </ol>
+      <img src="/images/pikbest/pikbest-license-info.png" alt="Pikbest版權資訊說明頁面，免費方案標明來源規則" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>為什麼我推薦這個網站</h2>
+      <ul>
+        <li><strong>一站找齊：</strong>素材種類多，不用再開十個分頁比價比款式</li>
+        <li><strong>免費也能用：</strong>免費方案就能瀏覽、預覽全部素材，先看再決定要不要升級</li>
+        <li><strong>授權標示清楚：</strong>每個素材頁面都寫明使用範圍，不會誤踩版權雷</li>
+        <li><strong>更新速度快：</strong>熱門分類、熱度飆升排序做得很好，找當季主題（雙11、聖誕、母親節）特別快</li>
+      </ul>
+
+      <hr>
+
+      <h2>一句話總結</h2>
+      <p>如果你也常常因為找素材、找配樂卡住工作進度，Pikbest可以先從免費方案開始試用，把常用的素材類型（電商模板、圖庫、音效、PPT範本）都收在同一個地方，省下大量到處比對版權、切換分頁的時間。</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://zh.pikbest.com/?affiliate_code=416a79b9850d106" target="_blank" rel="noopener" style="display:inline-block;background:#f59e0b;color:#1e293b;font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;font-size:16px;">👉 點我進入 Pikbest 免費瀏覽素材</a></p>
+
+      <p style="font-size:14px;color:#64748b;">聲明：本文包含我的Pikbest聯盟行銷連結，透過此連結註冊或升級付費方案，我可能會獲得對應分潤，不會影響你的購買價格，也不影響我上面的使用心得與教學內容。</p>
+    `,
+  },
+  {
+    id: 'ai-new-jobs-2026',
+    title: 'AI搶走工作，也生出新工作：2026年真的存在的AI新興職業與數據',
+    category: 'AI 人工智慧',
+    tags: ['AI職業', 'AI導入專員', 'LinkedIn', 'Indeed', '就業市場', '新興職業'],
+    excerpt:
+      '每次講到AI裁員新聞都很焦慮？先別急著恐慌。整理LinkedIn、Indeed兩大人力銀行2025-2026最新報告，加上「AI導入專員」「AI Agent開發工程師」等9個真實存在、有薪資數據的AI衍生職業，附完整資料來源連結。',
+    titleEn:
+      'AI Is Taking Jobs — and Creating New Ones: The Real AI Job Titles of 2026, with Data',
+    excerptEn:
+      "Every AI layoff headline feels scary, but the data tells a fuller story. Here's what LinkedIn and Indeed's 2025-2026 hiring reports actually say, plus 9 real AI-derived job titles — like 'AI Implementation Specialist' and 'AI Agent Engineer' — with salary ranges and sources.",
+    tagsEn: ['AI Careers', 'AI Implementation Specialist', 'LinkedIn', 'Indeed', 'Job Market', 'Emerging Roles'],
+    coverImage: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
+    coverImageEn: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
+    author: 'Zeona Studio',
+    publishedAt: '2026-08-07',
+    updatedAt: '2026-08-07',
+    featured: false,
+    seo: {
+      title: 'AI新興職業整理：AI導入專員、AI Agent工程師薪資與數據來源 | Zeona Studio',
+      description:
+        '整理LinkedIn、Indeed 2025-2026最新AI就業報告，介紹AI導入專員、AI Agent開發工程師等9個AI衍生職業的工作內容、薪資範圍與成長數據，附完整資料來源。',
+      keywords: 'AI職業, AI導入專員, AI Implementation Specialist, LinkedIn Jobs on the Rise, Indeed Hiring Lab, AI Agent工程師, AI新興職業',
+      ogImage: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
+    },
+    seoEn: {
+      title: 'AI Job Market 2026: New Roles Like AI Implementation Specialist, Salaries & Data | Zeona Studio',
+      description:
+        "A data-backed look at 9 real AI-derived job titles from LinkedIn's and Indeed's 2025-2026 hiring reports, including AI Implementation Specialist and AI Agent Engineer, with salary ranges and sources.",
+      keywords:
+        'AI careers, AI Implementation Specialist, LinkedIn Jobs on the Rise, Indeed Hiring Lab, AI Agent Engineer, emerging AI jobs 2026',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">每次滑到「某某公司因AI裁員」的新聞，是不是都會心裡一緊？我自己也是。但花時間查了LinkedIn、Indeed這兩大人力銀行2025-2026的最新報告後發現，事情不是只有「被取代」這一面——AI同時也在製造大量新職缺，而且有些職位薪資、成長數據都相當扎實，不是空話。這篇整理給你看，順便附上所有資料來源，自己也可以點進去查證。</p>
+
+      <h2>先看數據：AI真的在創造新工作</h2>
+      <p><strong>LinkedIn《2026 Jobs on the Rise》報告</strong>指出，AI Engineer被列為美國成長最快的職位第一名，2025年職缺年增<strong>143%</strong>；前五大成長職位中，有4個都跟AI相關（AI Engineer、AI Consultant/Strategist、Data Annotator、AI/ML Researcher）。全美AI/ML職缺從2024到2025成長163%，來到49,200個職缺。更驚人的是，AI已經創造超過130萬個新職位，還帶動60萬個AI相關資料中心職缺。PwC 2025的分析也指出，具備AI技能的職位薪資溢價達到<strong>56%</strong>，比一年前的25%整整翻了一倍多。</p>
+      <p><strong>Indeed Hiring Lab</strong>的數據也很有意思：美國職稱中含「AI」字樣的職缺，從2022年的264種暴增到2026年第一季的822種，成長超過3倍；而且這些AI相關職稱中有63%出現在傳統科技業以外的領域，例如醫療、教育、行銷、物流、管理，代表AI職缺已經不只是工程師的事。台灣這邊，104人力銀行統計2025年11月AI相關職缺達9.9萬個，較前一年成長38%，速度也不慢。</p>
+
+      <h2>9個真實存在的AI衍生職業</h2>
+
+      <h3>1. AI Engineer（AI工程師）</h3>
+      <p>LinkedIn報告中成長最快的職位，把大型語言模型、生成式AI整合進實際產品，橫跨模型串接、prompt設計、系統整合。</p>
+      <p><strong>需要哪些能力：</strong>90%以上的職缺會要求Python；核心是LLM API串接、RAG（檢索增強生成）架構、多Agent協作系統、prompt/系統提示設計、雲端平台（AWS/GCP/Azure）與容器化部署（Docker/CI-CD）。企業現在普遍要求「能把模型真的部署上線讓使用者用」，不是只在筆記本裡做demo。<strong>適合：</strong>本來就有寫程式背景（尤其後端、資料工程）、想往AI轉的工程師。</p>
+
+      <h3>2. AI Consultant / AI Strategist（AI顧問／策略顧問）</h3>
+      <p>不一定要會寫程式，而是幫企業評估「哪裡該導入AI、怎麼導入、風險在哪」，偏向顧問與策略規劃，適合有業務、管理背景想轉AI領域的人。</p>
+      <p><strong>需要哪些能力：</strong>商業分析、簡報與提案能力、對AI工具的基礎理解（不用會寫程式，但要知道各種AI工具能做到什麼、限制在哪）、利害關係人溝通、專案規劃。<strong>適合：</strong>原本做企業顧問、業務開發、產品經理，想轉往AI相關領域但不想重新學程式的人。</p>
+
+      <h3>3. Data Annotator（資料標註員）</h3>
+      <p>入門門檻最低的AI相關工作，替圖片、影片、音訊、文字做標註供模型訓練用，不需要工程背景，很適合當進入AI產業的第一步。</p>
+      <p><strong>需要哪些能力：</strong>英文（或標註語言）閱讀寫作能力、細心、邏輯判斷、查證與抓錯的耐心。多數入門職缺<strong>不需要寫程式</strong>，部分進階標註（例如程式碼、專業領域資料）才會要求相關背景知識。<strong>適合：</strong>完全沒有技術背景、想先進AI產業卡位、之後再往其他AI職位轉的人。</p>
+
+      <h3>4. AI Implementation Specialist（AI導入專員）</h3>
+      <p>這是「AI開發團隊」跟「實際使用AI的一般員工、企業」之間的橋樑，企業手上有AI工具卻不知道怎麼落地到日常工作，這個職位就是負責解決這個落差。</p>
+      <ul>
+        <li><strong>需要的技能：</strong>專案管理、變革管理（change management）、AI基礎知識、利害關係人溝通，部分職缺也要求Python、NLP工具、自動化與模型部署經驗</li>
+        <li><strong>薪資範圍：</strong>約US$80,000–190,000（依地區、產業、經驗不同）</li>
+        <li><strong>成長性：</strong>預估到2027年前年成長15–20%</li>
+        <li><strong>職涯路徑：</strong>Implementation Analyst → Specialist → Senior Specialist → AI Program Manager → AI Strategy Director</li>
+        <li><strong>工作型態：</strong>約75%職缺提供遠端或混合辦公</li>
+      </ul>
+      <p><strong>適合：</strong>有專案管理／PM經驗、擅長跨部門溝通、能把複雜工具講成大家聽得懂的話的人，是這份清單裡「不用重新學程式語言」但薪資天花板最高的選項之一。</p>
+
+      <h3>5. AI Agent開發工程師</h3>
+      <p>2026年需求成長最快的新興職位之一，工作內容是打造能自主規劃、執行多步驟任務的AI Agent，而不只是單次問答系統。</p>
+      <p><strong>需要哪些能力：</strong>在職缺關鍵字統計中，「agents」是僅次於「llm」的第二熱門技能字，實務上需要多Agent協作設計（multi-agent orchestration）、工具呼叫（tool calling）設計、記憶架構、evals與觀測（observability）、prompt injection防禦等偏工程的能力。<strong>適合：</strong>已經有AI Engineer基礎、想再往更前沿方向鑽研的工程師。</p>
+
+      <h3>6. Prompt Engineer（提示工程師）</h3>
+      <p>負責設計精準指令，讓生成式模型在內容創作、設計、資料分析等場景發揮最大效果。這個職位在2023-2024一度是話題職位，2025-2026逐漸融合進「AI Engineer」「AI導入專員」等更廣泛職位，但獨立職缺依然存在。</p>
+      <p><strong>需要哪些能力：</strong>入門職缺通常不強制要求寫程式，但需要對NLP／LLM運作原理有基本理解、邏輯與批判性思考（能分析AI回答哪裡不對、怎麼調整指令）、細膩的文字表達能力；較進階的職缺則會要求程式能力，用來串接LLM框架、驗證輸出結果。<strong>適合：</strong>文字工作者、編輯、對「怎麼跟AI溝通」特別有感的人，是門檻相對友善的入門選項。</p>
+
+      <h3>7. Trust Engineer / AI Reliability Engineer（AI信任／可靠性工程師）</h3>
+      <p>Trust Engineer負責設計「AI決策透明化、去偏見」的框架與稽核機制；AI Reliability Engineer則確保AI模型與pipeline在正式環境中穩定、安全、可預測地運作。這兩個角色反映企業導入AI後，開始重視「AI出錯了怎麼辦」的治理需求。</p>
+      <p><strong>需要哪些能力：</strong>系統維運／MLOps經驗、風險與合規意識、資料分析能力，部分職缺需要工程或資安背景。<strong>適合：</strong>原本做QA、系統維運、風控或資安的人，是比較少人注意到、但需求正在起來的方向。</p>
+
+      <h3>8. AI–Human Workflow Specialist（AI人力協作專家）</h3>
+      <p>專注在重新設計工作流程，確保AI真的能提升員工生產力而不是變成額外負擔，工作包含流程再造、協助團隊採用AI工具、追蹤導入後的實際效益。</p>
+      <p><strong>需要哪些能力：</strong>流程設計與優化、教育訓練／內部溝通能力、變革管理，加上對常見AI工具（ChatGPT、Copilot類）的實際操作熟悉度。<strong>適合：</strong>人資、教育訓練、營運管理背景的人。</p>
+
+      <h3>9. Chief AI Revenue Officer, CAIRO（AI營收長）</h3>
+      <p>新出現的高階主管職位，專門用AI拉高企業的業務、行銷、營收營運表現，目前主要出現在中大型企業。</p>
+      <p><strong>需要哪些能力：</strong>資深業務／行銷／營運主管經驗、對AI工具在業務流程中的應用有實戰理解、跨部門領導能力。<strong>適合：</strong>已經是資深主管、想在履歷上加上「AI轉型」實績的人，不是新手能直接應徵的入門職位。</p>
+
+      <hr>
+
+      <h2>一句話總結</h2>
+      <p>AI裁員新聞是真的，但它只是故事的一半。與其焦慮「會不會被取代」，不如對照上面每個職業「需要哪些能力」，看看自己現有的技能（管理、溝通、業務、文字、甚至只是「懂怎麼跟AI協作」）能不能對接上其中一個方向。像Data Annotator、Prompt Engineer入門版、AI導入專員、AI Consultant這幾個，都不需要重新學程式語言，門檻其實比想像中低，可以先從這幾個開始投履歷。</p>
+
+      <h2>資料來源</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/pulse/linkedin-jobs-rise-2026-25-fastest-growing-roles-us-linkedin-news-dlb1c" target="_blank" rel="noopener">LinkedIn Jobs on the Rise 2026: The 25 fastest-growing roles in the U.S.</a></li>
+        <li><a href="https://www.dice.com/career-advice/ai-related-jobs-top-linkedins-fastest-growing-roles-list-for-2026" target="_blank" rel="noopener">AI-related Jobs Top LinkedIn's Fastest-growing Roles List for 2026 – Dice.com</a></li>
+        <li><a href="https://www.weforum.org/stories/2026/01/ai-has-already-added-1-3-million-new-jobs-according-to-linkedin-data/" target="_blank" rel="noopener">AI has already added 1.3 million jobs, LinkedIn data says – World Economic Forum</a></li>
+        <li><a href="https://www.forbes.com/sites/juliakorn/2026/01/14/future-proof-your-career-with-linkedins-2026-fastest-growing-jobs-list/" target="_blank" rel="noopener">Future-Proof Your Career With LinkedIn's 2026 Fastest-Growing Jobs List – Forbes</a></li>
+        <li><a href="https://www.hiringlab.org/2026/01/15/hiring-labs-global-jobs-hiring-trends-reports-for-2026/" target="_blank" rel="noopener">Hiring Lab's Global Jobs & Hiring Trends Reports for 2026 – Indeed Hiring Lab</a></li>
+        <li><a href="https://www.hiringlab.org/2026/07/08/ai-and-job-postings-from-destruction-to-creation/" target="_blank" rel="noopener">AI and Job Postings: From Destruction to Creation? – Indeed Hiring Lab</a></li>
+        <li><a href="https://www.networkworld.com/article/4195712/ai-job-titles-expand-beyond-tech-as-it-hiring-remains-strong.html" target="_blank" rel="noopener">AI job titles expand beyond tech as IT hiring remains strong – Network World</a></li>
+        <li><a href="https://resources.rework.com/libraries/job-description-templates/ai-implementation-specialist" target="_blank" rel="noopener">AI Implementation Specialist Job Description Template – Complete 2026 Hiring Guide</a></li>
+        <li><a href="https://interviewguy.com/artificial-intelligence-specialist-job-description/" target="_blank" rel="noopener">Artificial Intelligence Specialist Job Description [Updated for 2026] – InterviewGuy</a></li>
+        <li><a href="https://www.sef.org.tw/article-1-204-14260" target="_blank" rel="noopener">應用無極限 生成式AI催生新興職業 – 財團法人海峽交流基金會</a></li>
+      </ul>
+    `,
+  },
+  {
     id: 'anthropic-10-finance-agents-2026',
     title: 'Claude現在也能當你的股票分析師！Anthropic上架10個金融Agent實測教學',
     category: 'AI 人工智慧',
