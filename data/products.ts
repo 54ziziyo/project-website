@@ -249,7 +249,7 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
 📥 免費使用方式
 
 點下方按鈕，透過我的連結進到 Pikbest，不用先付費就可以瀏覽、下載免費方案的素材試用看看，覺得好用再考慮要不要升級付費方案拿更完整的商用授權。`,
-    coverImage: '/images/pikbest/pikbest-homepage.png',
+    coverImage: '/images/pikbest/pikbest-cover.png',
     features: [
       '350萬＋設計資源：海報、PPT、Excel、Word範本一站找齊',
       '電商模板：促銷Banner、雙11／週年慶版型可直接套用',
