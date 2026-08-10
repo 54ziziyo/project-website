@@ -101,10 +101,8 @@ export const blogPosts: BlogPost[] = [
       <h3>📊 PowerPoint／Word／Excel範本</h3>
       <p>提案簡報、報表範本、出勤表這種辦公室常用檔案都有現成版型，商務簡報的版型設計質感也不錯，不用自己從零排版。</p>
       <img src="/images/pikbest/pikbest-ppt-templates.png" alt="Pikbest PowerPoint簡報範本庫" style="width:100%;border-radius:8px;margin:20px 0;" />
-      <div style="display:flex;gap:20px;align-items:center;margin:20px 0;flex-wrap:wrap;">
-        <img src="/images/pikbest/pikbest-excel-templates.png" alt="Pikbest Excel範本，自動出勤表與考勤表範本" style="flex:1 1 280px;max-width:320px;border-radius:8px;" />
-        <p style="flex:2 1 280px;margin:0;">Excel範本也不少，像自動出勤表、週出勤紀錄這種辦公室天天要用到的檔案，直接下載套用你的公司資料就能開始用，不用自己刻公式排版。</p>
-      </div>
+      <p>Excel範本也不少，像自動出勤表、週出勤紀錄這種辦公室天天要用到的檔案，直接下載套用你的公司資料就能開始用，不用自己刻公式排版。</p>
+      <img src="/images/pikbest/pikbest-excel-templates.png" alt="Pikbest Excel範本，自動生成員工出勤表與週出勤紀錄範本" style="width:100%;border-radius:8px;margin:20px 0;" />
 
       <h3>🎬 影片剪輯教學</h3>
       <p>免費附上大量AE、PR特效教學影片，從轉場、字幕動效到爆炸特效都有教學，對剛開始學剪片的人蠻友善的。</p>
