@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>後來發現<strong>Pikbest</strong>幾乎把我平常會用到的素材類型都包進同一個網站，才把這個到處拼湊素材的習慣改掉，這篇整理給你完整的使用教學。</p>
 
-      <p style="text-align:center;margin:24px 0;"><a href="https://zh.pikbest.com/?affiliate_code=416a79b9850d106" target="_blank" rel="noopener" style="display:inline-block;background:#f59e0b;color:#1e293b;font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;font-size:16px;">👉 點我進入 Pikbest 免費瀏覽素材</a></p>
+      <p style="text-align:center;margin:24px 0;"><a href="https://zh.pikbest.com/?affiliate_code=416a79b9850d106" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">免費使用 Pikbest</a></p>
 
       <img src="/images/pikbest/pikbest-homepage.png" alt="Pikbest官網首頁，350萬+設計資源搜尋入口" style="width:100%;border-radius:8px;margin:20px 0;" />
 
@@ -101,7 +101,10 @@ export const blogPosts: BlogPost[] = [
       <h3>📊 PowerPoint／Word／Excel範本</h3>
       <p>提案簡報、報表範本、出勤表這種辦公室常用檔案都有現成版型，商務簡報的版型設計質感也不錯，不用自己從零排版。</p>
       <img src="/images/pikbest/pikbest-ppt-templates.png" alt="Pikbest PowerPoint簡報範本庫" style="width:100%;border-radius:8px;margin:20px 0;" />
-      <img src="/images/pikbest/pikbest-excel-templates.png" alt="Pikbest Excel範本，自動出勤表與考勤表範本" style="width:100%;border-radius:8px;margin:20px 0;" />
+      <div style="display:flex;gap:20px;align-items:center;margin:20px 0;flex-wrap:wrap;">
+        <img src="/images/pikbest/pikbest-excel-templates.png" alt="Pikbest Excel範本，自動出勤表與考勤表範本" style="flex:1 1 280px;max-width:320px;border-radius:8px;" />
+        <p style="flex:2 1 280px;margin:0;">Excel範本也不少，像自動出勤表、週出勤紀錄這種辦公室天天要用到的檔案，直接下載套用你的公司資料就能開始用，不用自己刻公式排版。</p>
+      </div>
 
       <h3>🎬 影片剪輯教學</h3>
       <p>免費附上大量AE、PR特效教學影片，從轉場、字幕動效到爆炸特效都有教學，對剛開始學剪片的人蠻友善的。</p>
@@ -134,7 +137,7 @@ export const blogPosts: BlogPost[] = [
       <h2>一句話總結</h2>
       <p>如果你也常常因為找素材、找配樂卡住工作進度，Pikbest可以先從免費方案開始試用，把常用的素材類型（電商模板、圖庫、音效、PPT範本）都收在同一個地方，省下大量到處比對版權、切換分頁的時間。</p>
 
-      <p style="text-align:center;margin:24px 0;"><a href="https://zh.pikbest.com/?affiliate_code=416a79b9850d106" target="_blank" rel="noopener" style="display:inline-block;background:#f59e0b;color:#1e293b;font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;font-size:16px;">👉 點我進入 Pikbest 免費瀏覽素材</a></p>
+      <p style="text-align:center;margin:24px 0;"><a href="https://zh.pikbest.com/?affiliate_code=416a79b9850d106" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">免費使用 Pikbest</a></p>
 
       <p style="font-size:14px;color:#64748b;">聲明：本文包含我的Pikbest聯盟行銷連結，透過此連結註冊或升級付費方案，我可能會獲得對應分潤，不會影響你的購買價格，也不影響我上面的使用心得與教學內容。</p>
     `,
