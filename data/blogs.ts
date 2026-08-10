@@ -110,7 +110,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3>📱 UI／App介面素材</h3>
       <p>如果你要做App畫面Demo、提案簡報裡需要放介面設計稿，Pikbest也有現成的UI素材可以套用，像手機App首頁、任務清單、金融類介面這種常見版型都找得到，省下自己刻介面線框的時間。</p>
-      <img src="/images/pikbest/pikbest-app-ui.png" alt="Pikbest UI／App介面素材，手機App首頁與金融類介面設計稿" style="width:100%;border-radius:8px;margin:20px 0;" />
+      <img src="/images/pikbest/pikbest-app-ui.png" alt="Pikbest UI／App介面素材，手機App首頁與金融類介面設計稿" style="display:block;max-width:320px;width:100%;margin:20px auto;border-radius:8px;" />
 
       <h3>🗂️ 其他分類：廣告設計、PNG圖案、創意背景、裝飾裝修⋯⋯</h3>
       <p>除了上面幾個常用類型，Pikbest的分類其實鋪得很廣，像廣告設計（海報、名片、型錄DM、社群媒體圖）、PNG圖案（去背素材、向量圖案、GIF動畫）、創意背景（商業、節日、中國風、簡約風）、裝飾裝修（3D壁紙、CAD圖紙、婚禮裝飾）、電商模板（促銷、優惠券、C4D海報、Lazada版型）等，幾乎接案會用到的素材類型都涵蓋到了。</p>
