@@ -54,8 +54,8 @@ export const blogPosts: BlogPost[] = [
     excerptEn:
       "Tired of opening ten tabs to find a poster template, a PPT deck, and royalty-free background music? Here's a full walkthrough of Pikbest — 3.5M+ design resources, e-commerce templates, royalty-free audio, and tutorial videos — with a step-by-step guide and licensing notes. (Includes my affiliate link)",
     tagsEn: ['Pikbest', 'Design Resources', 'PPT Templates', 'Royalty-Free Music', 'E-commerce Assets', 'Free Resources'],
-    coverImage: '/images/pikbest/pikbest-homepage.png',
-    coverImageEn: '/images/pikbest/pikbest-homepage.png',
+    coverImage: 'https://zeona.vercel.app/images/pikbest/pikbest-homepage.png',
+    coverImageEn: 'https://zeona.vercel.app/images/pikbest/pikbest-homepage.png',
     author: 'Zeona Studio',
     publishedAt: '2026-08-10',
     updatedAt: '2026-08-10',
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
       description:
         'Pikbest使用教學：350萬＋設計資源，電商模板、PPT簡報、免版稅音樂音效、剪輯教學影片一站找齊，附版權授權說明與新手操作步驟圖文。',
       keywords: 'Pikbest, 設計素材下載, PPT模板, 免版稅音樂, 免費圖庫, 電商模板, 教學影片',
-      ogImage: '/images/pikbest/pikbest-homepage.png',
+      ogImage: 'https://zeona.vercel.app/images/pikbest/pikbest-homepage.png',
     },
     seoEn: {
       title: 'Pikbest Complete Guide: Free Design Assets, PPT Templates & Royalty-Free Music | Zeona Studio',
