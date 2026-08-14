@@ -45,6 +45,81 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'free-ai-courses-1hour-2026',
+    title: '1小時內拿到AI證書！3個真的免費的AI課程（查證到原本推薦的都變付費了）',
+    category: 'AI 人工智慧',
+    tags: ['免費AI課程', 'OpenAI Academy', 'Google Cloud', 'Microsoft Learn', 'AI證書'],
+    excerpt:
+      '原本要推薦的Google AI Essentials、Microsoft AI課程，查證後發現都已經悄悄變成付費了。重新找了3個目前（2026-08）確認真的免費、大多能在1小時內完成的AI入門課程，附報名連結、課程大綱與證書說明。',
+    titleEn:
+      'Get an AI Certificate in Under an Hour: 3 Courses That Are Still Actually Free (2026)',
+    excerptEn:
+      "The Google and Microsoft courses I originally planned to recommend turned out to now be paid. Here are 3 AI courses verified free as of August 2026 — most completable in under an hour — with sign-up links, syllabi, and certificate details.",
+    tagsEn: ['Free AI Courses', 'OpenAI Academy', 'Google Cloud', 'Microsoft Learn', 'AI Certificate'],
+    coverImage: 'https://images.unsplash.com/photo-1638636241638-aef5120c5153?auto=format&fit=crop&w=1200&q=80',
+    coverImageEn: 'https://images.unsplash.com/photo-1638636241638-aef5120c5153?auto=format&fit=crop&w=1200&q=80',
+    author: 'Zeona Studio',
+    publishedAt: '2026-08-14',
+    updatedAt: '2026-08-14',
+    featured: false,
+    seo: {
+      title: '1小時免費AI課程推薦：OpenAI Academy、Google、Microsoft Learn證書 | Zeona Studio',
+      description:
+        '查證後發現原本要推薦的Google AI Essentials、Microsoft課程都已變付費，重新整理3個目前確認免費的AI課程：OpenAI Academy、Google Cloud Skills Boost、Microsoft Learn，附連結與證書說明。',
+      keywords: '免費AI課程, AI證書, OpenAI Academy, Google Cloud Skills Boost, Microsoft Learn, AI入門課程 2026',
+      ogImage: 'https://images.unsplash.com/photo-1638636241638-aef5120c5153?auto=format&fit=crop&w=1200&q=80',
+    },
+    seoEn: {
+      title: 'Free AI Courses Under 1 Hour: OpenAI Academy, Google, Microsoft Learn Certificates | Zeona Studio',
+      description:
+        "The Google and Microsoft AI courses I originally planned to recommend are now paid. Here are 3 AI courses verified free in 2026 — OpenAI Academy, Google Cloud Skills Boost, Microsoft Learn — with links and certificate details.",
+      keywords:
+        'free AI courses, AI certificate, OpenAI Academy, Google Cloud Skills Boost, Microsoft Learn, free AI training 2026',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">本來要幫大家整理「1小時內免費AI課程」，查證的過程中發現一件事：原本打算推薦的 <strong>Google AI Essentials</strong>（Coursera版）跟 <strong>Microsoft「Career Essentials in Generative AI」</strong>（LinkedIn Learning版），現在都已經悄悄變成付費了——Google要US$49/月，Microsoft那個則需要LinkedIn Learning訂閱才能看。</p>
+
+      <p>與其硬推薦已經失效的免費活動，我重新找了3個<strong>目前（2026-08）多方查證確認仍然完全免費</strong>的替代方案，大多能在1小時內完成。</p>
+
+      <h2>1. OpenAI Academy — AI Foundations</h2>
+      <p><strong>報名連結：</strong><a href="https://academy.openai.com/" target="_blank" rel="noopener">academy.openai.com</a></p>
+      <p>2026年6月中，OpenAI把三門證書課程正式對外公開，不需要企業帳號、不用排隊、不用付費。建議依序修習：</p>
+      <ul>
+        <li><strong>AI Foundations</strong> — AI、大型語言模型、ChatGPT的基礎介紹，官網形容「適合完全新手」</li>
+        <li><strong>Applied AI Foundations</strong> — 把單次prompt延伸成可重複使用的工作流程</li>
+        <li><strong>Agents and Workflows</strong> — 學習指揮AI Agent完成結構化任務</li>
+      </ul>
+      <p>官方沒有列出各課程精確分鐘數，建議自己實測 AI Foundations 這門抓實際完課時間。完成後可取得OpenAI官方課程完成證書，需用ChatGPT帳號登入。</p>
+
+      <h2>2. Google Cloud Skills Boost — Generative AI Fundamentals（免費技能徽章）</h2>
+      <p><strong>報名連結：</strong><a href="https://www.skills.google/paths/118" target="_blank" rel="noopener">skills.google/paths/118</a></p>
+      <p>這是跟已經改成付費的Google AI Essentials<strong>不同的課程</strong>，發文/分享時要說清楚，避免大家點錯連結被要求付費。完成技能徽章需要修完3門小課：</p>
+      <ul>
+        <li>Introduction to Generative AI（單獨這門約<strong>45分鐘</strong>，最適合壓在1小時內）</li>
+        <li>Introduction to Large Language Models</li>
+        <li>Introduction to Responsible AI</li>
+      </ul>
+      <p>三門全部修完約需2小時，取得「Generative AI Fundamentals」數位技能徽章，可分享到LinkedIn，完全免費、不需訂閱。</p>
+
+      <h2>3. Microsoft Learn — Introduction to AI concepts（免費模組）</h2>
+      <p><strong>報名連結：</strong><a href="https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/" target="_blank" rel="noopener">learn.microsoft.com/training/modules/get-started-ai-fundamentals</a></p>
+      <p>要注意的是：這裡指的是 <strong>Microsoft Learn</strong> 官方訓練平台（跟需要付費訂閱的LinkedIn Learning是不同東西），本身完全免費，可以無限次瀏覽所有學習路徑、拿數位徽章。共10個單元，涵蓋AI基礎、生成式AI與Agent、文字/語音/視覺處理、負責任使用AI等主題，一般可在1小時內完成。</p>
+      <p>完成模組評量後可取得Microsoft Learn的模組完成徽章。⚠️ 這跟正式的<strong>Azure AI Fundamentals（AI-900）付費認證考試</strong>是兩回事——這個模組免費，但如果之後想拿有考試的正式認證，那個考試需要另外付費報名。</p>
+
+      <hr>
+
+      <h2>小結：三個平台怎麼選？</h2>
+      <table style="width:100%;border-collapse:collapse;margin:20px 0;">
+        <tr style="background:#f1f5f9;"><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">平台</th><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">最適合</th><th style="padding:10px;border:1px solid #e2e8f0;text-align:left;">特色</th></tr>
+        <tr><td style="padding:10px;border:1px solid #e2e8f0;">OpenAI Academy</td><td style="padding:10px;border:1px solid #e2e8f0;">想直接學怎麼用ChatGPT工作</td><td style="padding:10px;border:1px solid #e2e8f0;">聚焦實戰應用，三門課皆提供完成證書</td></tr>
+        <tr><td style="padding:10px;border:1px solid #e2e8f0;">Google Cloud Skills Boost</td><td style="padding:10px;border:1px solid #e2e8f0;">想快速拿到Google官方數位徽章</td><td style="padding:10px;border:1px solid #e2e8f0;">單門課45分鐘可完成，最適合壓在1小時內</td></tr>
+        <tr><td style="padding:10px;border:1px solid #e2e8f0;">Microsoft Learn</td><td style="padding:10px;border:1px solid #e2e8f0;">想要涵蓋面最廣的AI基礎知識</td><td style="padding:10px;border:1px solid #e2e8f0;">10單元涵蓋文字/語音/視覺多種AI應用類型，完全免費</td></tr>
+      </table>
+
+      <p>⚠️ AI課程平台的免費方案會隨時間調整（這次查證就發現先前推薦的兩個課程雙雙變成付費），上課前建議自己重新點一次連結，確認「免費」這件事現在還成立。</p>
+    `,
+  },
+  {
     id: 'pikbest-design-resources-guide',
     title: '做圖不用再到處拼素材！Pikbest 完整使用教學：海報、PPT、音樂、音效一站找齊',
     category: '視覺設計',
