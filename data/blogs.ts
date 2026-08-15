@@ -46,7 +46,7 @@ export type BlogCategory = (typeof blogCategories)[number]
 export const blogPosts: BlogPost[] = [
   {
     id: 'free-ai-courses-1hour-2026',
-    title: '1小時內拿到AI證書！4個真的免費的AI課程（查證到原本推薦的都變付費了）',
+    title: '1小時內拿到AI證書！給你4個真的免費的AI課程',
     category: 'AI 人工智慧',
     tags: ['免費AI課程', 'OpenAI Academy', 'Google Cloud', 'Microsoft Learn', 'Anthropic Academy', 'AI證書'],
     excerpt:
