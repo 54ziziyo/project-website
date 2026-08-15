@@ -61,7 +61,8 @@ export const blogPosts: BlogPost[] = [
     author: 'Zeona Studio',
     publishedAt: '2026-08-14',
     updatedAt: '2026-08-14',
-    featured: false,
+    featured: true,
+    featuredOrder: 2,
     seo: {
       title: '1小時免費AI課程推薦：OpenAI Academy、Google、Microsoft、Anthropic證書 | Zeona Studio',
       description:
@@ -143,7 +144,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2026-08-10',
     updatedAt: '2026-08-10',
     featured: true,
-    featuredOrder: 2,
+    featuredOrder: 3,
     seo: {
       title: 'Pikbest完整使用教學：免費設計素材、PPT模板、免版稅音樂下載 | Zeona Studio',
       description:
@@ -637,7 +638,7 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     publishedAt: '2026-07-31',
     updatedAt: '2026-07-31',
     featured: true,
-    featuredOrder: 3,
+    featuredOrder: 4,
     seo: {
       title: '50個ChatGPT隱藏指令大全：/think、/eli5、/no-fluff等實用標籤與查證來源 | Zeona Studio',
       description:
@@ -789,8 +790,7 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     author: 'Zeona Studio',
     publishedAt: '2026-07-29',
     updatedAt: '2026-07-29',
-    featured: true,
-    featuredOrder: 5,
+    featured: false,
     seo: {
       title: 'Claude洩漏隱私？「分享」按鈕的真相與自保方法 | Zeona Studio',
       description:
@@ -1653,7 +1653,7 @@ claude plugin install equity-research@claude-for-financial-services</pre>
     publishedAt: '2026-02-22',
     updatedAt: '2026-02-22',
     featured: true,
-    featuredOrder: 4,
+    featuredOrder: 5,
     seo: {
       title: 'GEO 實戰案例：重機部品如何讓 AI 主動推薦品牌？ | Zeona Studio',
       description: '真實轉單案例分享！詳解重機人身部品網站如何透過 GEO 優化進入 ChatGPT 推薦清單，提升品牌權威與轉化。',
