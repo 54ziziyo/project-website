@@ -34,6 +34,18 @@ const toastVisible = ref(false)
 let toastTimer: number | null = null
 const showBookingModal = ref(false)
 
+watch(showBookingModal, (isOpen) => {
+  if (import.meta.client) {
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+  }
+})
+
+onBeforeUnmount(() => {
+  if (import.meta.client) {
+    document.body.style.overflow = ''
+  }
+})
+
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const budgetRegex = /^[0-9,\-~\s]+$/
 
