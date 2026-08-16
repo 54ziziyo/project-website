@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>4. Anthropic Academy — Claude 101</h2>
       <p><strong>報名連結：</strong><a href="https://anthropic.skilljar.com/" target="_blank" rel="noopener">anthropic.skilljar.com</a></p>
-      <p>Anthropic（Claude背後的公司）在2026年3月2日上線了官方訓練平台 <strong>Anthropic Academy</strong>，20多門課涵蓋Claude基礎操作、Claude Code、API開發、MCP伺服器開發等，分成AI素養、產品訓練、開發者深度課程等路線。<strong>只需要email註冊Skilljar帳號，不需要Anthropic帳號、不需要信用卡、不需要Claude訂閱。</strong>子芸自己實測登入確認過，目前真的完全免費。</p>
+      <p>Anthropic（Claude背後的公司）在2026年3月2日上線了官方訓練平台 <strong>Anthropic Academy</strong>，20多門課涵蓋Claude基礎操作、Claude Code、API開發、MCP伺服器開發等，分成AI素養、產品訓練、開發者深度課程等路線。<strong>只需要email註冊Skilljar帳號，不需要Anthropic帳號、不需要信用卡、不需要Claude訂閱。</strong>我自己實測登入確認過，目前真的完全免費。</p>
       <p>給完全新手的入門課是 <strong>Claude 101</strong>，內容涵蓋Claude基礎功能、對話技巧、桌面版使用、專案整理、整合工具等，共5個模組、13堂課。官方沒有寫精確時數，第三方測試回報大約1-2小時，建議自己實測。完成後可取得Anthropic官方完成證書，Skilljar會自動生成「加到LinkedIn」的按鈕。</p>
 
       <hr>
