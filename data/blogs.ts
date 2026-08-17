@@ -83,8 +83,6 @@ export const blogPosts: BlogPost[] = [
 
       <p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:4px;">⚠️ 先說清楚：網路上有很多長得很像的網站，例如 <code>meigenai.io</code>、<code>meigen.art</code> 都<strong>不是</strong>這篇要介紹的那個。真正的官網是 <a href="https://www.meigen.ai/" target="_blank" rel="noopener"><strong>meigen.ai</strong></a>，發文/分享連結前務必再三確認網址，避免大家點錯地方。</p>
 
-      <img src="/images/meigen/01-gallery-all-categories.png" alt="MeiGen Gallery首頁，左側分類可依商業廣告/人像攝影/故事板等風格篩選" style="width:100%;border-radius:8px;margin:20px 0;" />
-
       <h2>核心功能與使用方式</h2>
 
       <h3>瀏覽與搜尋提示詞</h3>
