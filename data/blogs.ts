@@ -45,6 +45,130 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'meigen-ai-prompt-gallery-guide',
+    title: 'MeiGen 完整介紹：AI 圖像創作的提示詞靈感庫，不用從零想 Prompt',
+    category: 'Prompt 提示詞',
+    tags: ['MeiGen', 'AI圖像生成', '提示詞靈感庫', 'Prompt', 'AI繪圖'],
+    excerpt:
+      '每次做圖最卡的不是設計本身，是不知道提示詞怎麼寫。MeiGen把全世界做得好的AI圖片連同完整提示詞收錄起來，直接瀏覽、複製、套用。附正確官網連結、免費付費怎麼分、提示詞公式拆解與逆向工程技巧。',
+    titleEn:
+      'MeiGen Full Guide: An AI Image Prompt Gallery So You Never Start From Zero',
+    excerptEn:
+      "The hardest part of making AI images usually isn't the design — it's not knowing what to type. MeiGen collects great AI-generated images along with their full prompts, ready to browse, copy, and adapt. Includes the correct official link, free vs. paid breakdown, a prompt formula, and reverse-engineering tricks.",
+    tagsEn: ['MeiGen', 'AI Image Generation', 'Prompt Gallery', 'Prompt Engineering', 'AI Art'],
+    coverImage: 'https://www.zeona.co/images/meigen/01-gallery-all-categories.png',
+    coverImageEn: 'https://www.zeona.co/images/meigen/01-gallery-all-categories.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-08-17',
+    updatedAt: '2026-08-17',
+    featured: false,
+    seo: {
+      title: 'MeiGen 使用教學：AI圖像提示詞靈感庫完整介紹 | Zeona Studio',
+      description:
+        'MeiGen完整教學：提示詞靈感庫與在線生成平台，免費瀏覽複製提示詞，付費才需要消耗點數生成。附正確官網連結（避開山寨網站）、提示詞公式與逆向工程技巧。',
+      keywords: 'MeiGen, AI圖像生成, 提示詞靈感庫, Prompt教學, AI繪圖工具, GPT Image, Midjourney提示詞',
+      ogImage: 'https://www.zeona.co/images/meigen/01-gallery-all-categories.png',
+    },
+    seoEn: {
+      title: 'MeiGen Guide: The AI Image Prompt Gallery Explained | Zeona Studio',
+      description:
+        'A full walkthrough of MeiGen — an AI image prompt gallery and generation platform. Free to browse and copy prompts, paid credits only needed for on-site generation. Includes the correct official link, a prompt formula, and reverse-engineering tips.',
+      keywords:
+        'MeiGen, AI image generation, prompt gallery, prompt engineering, AI art tool, GPT Image, Midjourney prompts',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">MeiGen 是一個專為 AI 圖像創作打造的<strong>提示詞靈感庫與在線生成平台</strong>。簡單說，它把全世界創作者已經做出來、效果很好的AI圖片，連同完整的提示詞（Prompt）一起收錄起來，你可以直接瀏覽、複製、套用，不用自己從零開始想「要怎麼下指令」。</p>
+
+      <p>對我來說，這個網站解決的是一個很實際的問題：<strong>每次要做圖，最卡的往往不是設計本身，而是不知道提示詞要怎麼寫</strong>。MeiGen 直接把這一步省掉了。</p>
+
+      <p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:4px;">⚠️ 先說清楚：網路上有很多長得很像的網站，例如 <code>meigenai.io</code>、<code>meigen.art</code> 都<strong>不是</strong>這篇要介紹的那個。真正的官網是 <a href="https://www.meigen.ai/" target="_blank" rel="noopener"><strong>meigen.ai</strong></a>，發文/分享連結前務必再三確認網址，避免大家點錯地方。</p>
+
+      <img src="/images/meigen/01-gallery-all-categories.png" alt="MeiGen Gallery首頁，左側分類可依商業廣告/人像攝影/故事板等風格篩選" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>核心功能與使用方式</h2>
+
+      <h3>瀏覽與搜尋提示詞</h3>
+      <ul>
+        <li><strong>分類探索</strong>：點左側邊欄的分類（如「商業廣告 & 產品」「人像攝影」「故事板 & 角色」「桌布」等），快速過濾你想要的風格</li>
+        <li><strong>關鍵字搜尋</strong>：用頂部的「搜尋」功能找特定風格或主題</li>
+        <li><strong>模型分類</strong>：頂部標籤列可以按 AI 模型過濾，像 GPT Image、Seedance、Nanobanana、Midjourney 等，如果你已經知道自己慣用哪個模型，可以直接篩選對應風格的作品</li>
+      </ul>
+      <img src="/images/meigen/02-gallery-gpt-image-filter.png" alt="用頂部標籤按模型過濾，例如只看GPT Image生成的作品" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h3>使用與複製 Prompt</h3>
+      <p>在畫廊裡看到喜歡的作品時，點卡片上的「<strong>使用創意</strong>」，就會直接帶入該作品的提示詞（Prompt）與相關參數，讓你接著創作。想要更單純只拿文字的話，也可以直接點「<strong>複製 Prompt</strong>」，把整段提示詞複製出來，貼去任何一個AI工具使用（不限定要在MeiGen平台上生成）。</p>
+      <img src="/images/meigen/04-use-creative-detail.png" alt="點開作品，右側會顯示完整提示詞與使用創意、複製Prompt按鈕" style="width:100%;border-radius:8px;margin:20px 0;" />
+      <img src="/images/meigen/05-full-prompt-detail.png" alt="完整提示詞內容展開後，連Negative Prompt跟建議尺寸都寫清楚" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h3>在線生成圖像</h3>
+      <p>如果你想直接在 MeiGen 平台上生成：</p>
+      <ul>
+        <li><strong>提示詞輸入</strong>：在下方生成區輸入文字描述，或直接使用熱門提示詞卡片</li>
+        <li><strong>參考圖與角色設定</strong>：支援「圖片轉提示詞」與「上傳參考圖」功能，也可以建立並重複使用固定角色（適合需要維持同一個人物/代言人形象的品牌）</li>
+        <li><strong>品質與模型選擇</strong>：可設定生成品質（Standard / Medium / High）及模型（如 GPT Image 2.0、Nanobanana、Seedream、Midjourney 等），設定完成後點「生成圖片」即可消耗點數產圖</li>
+      </ul>
+      <img src="/images/meigen/07-generation-panel.png" alt="右側生成面板：輸入提示詞、設定品質，點生成圖片即可產圖" style="width:100%;border-radius:8px;margin:20px 0;" />
+      <img src="/images/meigen/08-model-selection.png" alt="可選模型清單，涵蓋GPT Image、Nanobanana、Seedream、Midjourney等多家AI模型" style="width:100%;border-radius:8px;margin:20px 0;" />
+      <img src="/images/meigen/09-quality-credits.png" alt="生成品質從標準到High可調整，畫質越高消耗點數越多" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h3>點數獎勵機制</h3>
+      <ul>
+        <li><strong>每日免費點數</strong>：登入即可領取每日免費發放的點數</li>
+        <li><strong>發佈作品贏點數</strong>：自己發佈提示詞作品後，如果被平台選為「精選」，可以獲得 <strong>50 點免費點數</strong>獎勵</li>
+      </ul>
+
+      <hr>
+
+      <h2>免費 vs 付費，怎麼分？</h2>
+      <p>這點一定要講清楚，免得大家誤會：</p>
+      <ul>
+        <li><strong>免費的部分</strong>：瀏覽作品、看完整提示詞、複製提示詞，這些全部都不用錢，你可以直接複製提示詞貼去其他AI工具使用（例如你自己的 ChatGPT），不受平台限制</li>
+        <li><strong>付費/消耗點數的部分</strong>：只有「在 MeiGen 網站上直接生成圖片」這件事會燒網站的 credits。網站有提供免費額度可以用，但<strong>我自己的建議是：把複製到的提示詞貼去自己的ChatGPT生成，會是更划算的做法</strong>，不用另外管理兩邊的點數額度。</li>
+      </ul>
+
+      <h2>這份工具適合誰？</h2>
+      <ul>
+        <li>想要自己做美圖，但每次都不知道提示詞怎麼下的人</li>
+        <li>合作電商／海報／社群媒體圖片，需要大量穩定產出視覺素材的人</li>
+        <li>想快點看到成果、不想從零摸索的人</li>
+        <li>想省去設計時間、又想維持一定質感的人</li>
+      </ul>
+
+      <hr>
+
+      <h2>進階技巧：怎麼把別人的提示詞改成「你的」</h2>
+      <p>網站上複製下來的提示詞，通常長這樣的結構：</p>
+      <pre style="background:#1e293b;color:#f1f5f9;padding:16px;border-radius:8px;overflow-x:auto;">[主體描述] + [場景/背景] + [燈光] + [鏡頭/角度] + [風格/畫質關鍵字]</pre>
+      <p>知道這個結構之後，套用到自己身上就簡單很多：</p>
+      <p><strong>如果是產品</strong>：把提示詞裡的「主體描述」改成你自己產品的外觀和名稱描述，其他（場景、燈光、鏡頭、風格）照舊保留就好。</p>
+      <p><strong>如果是人物</strong>：把提示詞裡的人物描述換成「你的年齡/性別/穿著/表情/人種」，場景、燈光、鏡頭、風格全部維持原本的設定，其他描述照舊。</p>
+      <p><strong>如果你看不懂提示詞在寫什麼</strong>：直接丟去問 ChatGPT，例如：「這個提示詞在說什麼？如果我想換成我的產品/我的人像，請問要怎麼改描述？」也可以請 AI 幫你拆解提示詞並逐段說明，甚至請它翻成中文都可以，完全不用自己硬啃英文。</p>
+
+      <hr>
+
+      <h2>反過來操作：從一張喜歡的圖，逆向做出提示詞</h2>
+      <p>記得一件事：<strong>所有想做的事情，在 AI 身上都可以反向操作</strong>。</p>
+      <p>如果你今天看到一張喜歡的圖片（不一定要來自MeiGen），也可以直接傳給AI，請它分析這張圖，並幫你做一個精準的提示詞，讓你能做出類似效果的作品。</p>
+      <p>想要準確率更高的話，可以請AI<strong>分別</strong>分析：光線 / 主體 / 風格 / 構圖 / 鏡頭 / 色調，拆解完之後再請它把這幾個面向合成一個完整的提示詞——比起直接叫AI「幫我寫一個提示詞」，這種拆解再合成的方式，通常出來的結果會更貼近你想要的樣子。</p>
+
+      <hr>
+
+      <h2>也有 App 版</h2>
+      <p>如果習慣用手機找靈感，MeiGen 在 App Store 跟 Google Play 都有上架（App名稱：「MeiGen：AI 圖片與影片藝廊」），逛畫廊、找提示詞在手機上一樣可以用。</p>
+      <img src="/images/meigen/10-app-store-listing.png" alt="App Store上的MeiGen App" style="width:100%;border-radius:8px;margin:20px 0;" />
+      <img src="/images/meigen/11-google-play-listing.png" alt="Google Play上的MeiGen App" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <hr>
+
+      <h2>寫在最後</h2>
+      <p>如果你閱讀到這邊，你真的是很優秀、有層層看完，現在這樣的年輕人不多了，好了不起啊！</p>
+      <p>AI 真的很棒吧，我們要擁抱 AI。我也還在學習，一起長大吧，我們還好小哦真的是～</p>
+      <p>喜歡這篇文章的話，幫我分享給其他朋友看，這是我的純分享，因為我也好喜歡這種感覺！</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://www.meigen.ai/" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">前往 MeiGen 官網</a></p>
+    `,
+  },
+  {
     id: 'free-ai-courses-1hour-2026',
     title: '1小時內拿到AI證書！給你4個真的免費的AI課程',
     category: 'AI 人工智慧',
