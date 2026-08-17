@@ -108,7 +108,6 @@ export const blogPosts: BlogPost[] = [
         <li><strong>品質與模型選擇</strong>：可設定生成品質（Standard / Medium / High）及模型（如 GPT Image 2.0、Nanobanana、Seedream、Midjourney 等），設定完成後點「生成圖片」即可消耗點數產圖</li>
       </ul>
       <img src="/images/meigen/07-generation-panel.png" alt="右側生成面板：輸入提示詞、設定品質，點生成圖片即可產圖" style="width:100%;border-radius:8px;margin:20px 0;" />
-      <img src="/images/meigen/08-model-selection.png" alt="可選模型清單，涵蓋GPT Image、Nanobanana、Seedream、Midjourney等多家AI模型" style="width:100%;border-radius:8px;margin:20px 0;" />
       <img src="/images/meigen/09-quality-credits.png" alt="生成品質從標準到High可調整，畫質越高消耗點數越多" style="width:100%;border-radius:8px;margin:20px 0;" />
 
       <h3>點數獎勵機制</h3>
@@ -161,7 +160,7 @@ export const blogPosts: BlogPost[] = [
       <hr>
 
       <h2>寫在最後</h2>
-      <p>如果你閱讀到這邊，你真的是很優秀、有層層看完，現在這樣的年輕人不多了，好了不起啊！</p>
+      <p>如果你閱讀到這邊，你真的是很優秀、有層層看完，現在這樣的年輕人不多了，好了不起啊！ ♥(´∀\` ) ♥</p>
       <p>AI 真的很棒吧，我們要擁抱 AI。我也還在學習，一起長大吧，我們還好小哦真的是～</p>
       <p>喜歡這篇文章的話，幫我分享給其他朋友看，這是我的純分享，因為我也好喜歡這種感覺！</p>
 
