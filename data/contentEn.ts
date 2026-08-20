@@ -90,7 +90,7 @@ export const portfolioEn: Record<string, { title: string; shortDesc: string }> =
   },
   'hogan-ig-operation': {
     title: 'IG Account Management: Content Strategy to Sponsored Execution',
-    shortDesc: '@hogan.tech software-engineer IG — 29K followers, 200 posts, end-to-end sponsorship from pitch to delivery',
+    shortDesc: '@hogan.tech software-engineer IG — 29K followers, 200 posts, commercial video produced end-to-end solo',
   },
   'roml-line-bot': {
     title: 'AI Shopping LINE Bot for Japan Proxy Purchasing',
