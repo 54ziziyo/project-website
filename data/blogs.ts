@@ -46,15 +46,15 @@ export type BlogCategory = (typeof blogCategories)[number]
 export const blogPosts: BlogPost[] = [
   {
     id: 'google-gemini-student-free-year-2026',
-    title: '台灣大專生免費領一年 Google AI Plus！但有3個坑要先看清楚',
+    title: '台灣大專生免費領一年 Google AI Plus！第一年真的0元，但這3件事要先知道',
     category: 'AI 人工智慧',
     tags: ['Google Gemini', '學生優惠', 'Google AI Plus', '免費AI工具', 'NotebookLM'],
     excerpt:
-      'Google開放台灣大專生免費用一年AI Plus，含400GB雲端空間跟2倍使用額度。但台灣拿到的方案跟美國不一樣，而且要綁信用卡、期滿會自動續訂165元。這篇幫你把資格、步驟、注意事項一次講清楚。',
+      '結論先講：第一年是真的完全免費、不會扣款，含400GB雲端空間跟2倍使用額度。滿一年後才會自動續訂每月165元，到期前自己取消就完全不用付錢。這篇整理申請資格、領取步驟，以及海外唸書的人適用哪個方案。',
     titleEn:
-      "Taiwan Students Get a Free Year of Google AI Plus — With 3 Catches Worth Knowing First",
+      "Taiwan Students Get a Free Year of Google AI Plus — Here's Exactly What's Free and What Isn't",
     excerptEn:
-      "Google is giving Taiwanese college students a free year of AI Plus, including 400GB of storage and 2x usage limits. But the Taiwan plan differs from the US one, requires a payment method upfront, and auto-renews at NT$165/month. Here's the full breakdown.",
+      "Straight answer: the first year is genuinely free with no charge, including 400GB of storage and 2x usage limits. It only starts billing NT$165/month after year one — cancel before then and you pay nothing. Here are the eligibility rules, signup steps, and which plan applies if you study abroad.",
     tagsEn: ['Google Gemini', 'Student Offer', 'Google AI Plus', 'Free AI Tools', 'NotebookLM'],
     coverImage: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
     coverImageEn: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
@@ -63,23 +63,25 @@ export const blogPosts: BlogPost[] = [
     updatedAt: '2026-08-20',
     featured: false,
     seo: {
-      title: 'Google AI Plus 學生免費一年怎麼領？台灣資格、步驟與3個注意事項 | Zeona Studio',
+      title: 'Google AI Plus 學生免費一年怎麼領？第一年0元、資格與注意事項 | Zeona Studio',
       description:
-        'Google開放台灣大專生免費用一年AI Plus（含400GB空間、Gemini Omni、2倍額度）。整理申請資格、領取步驟，以及要綁付款方式、自動續訂165元、12/31期限這3個要注意的地方。',
+        '台灣大專生可免費領一年Google AI Plus（400GB空間、Gemini Omni、2倍額度），第一年完全不扣款。整理申請資格、領取步驟、滿一年後每月165元的取消方式，以及海外唸書適用哪個方案。',
       keywords: 'Google AI Plus, Gemini學生方案, 學生免費AI, Google學生優惠, NotebookLM, Gemini免費一年, 台灣學生AI',
       ogImage: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
     },
     seoEn: {
-      title: 'Google AI Plus Free Year for Students: Taiwan Eligibility, Steps & 3 Catches | Zeona Studio',
+      title: 'Google AI Plus Free Year for Students: Year One Is Free, Eligibility & Steps | Zeona Studio',
       description:
-        'Google is offering Taiwanese college students a free year of AI Plus (400GB storage, Gemini Omni, 2x limits). Here are the eligibility rules, signup steps, and the three catches worth knowing first.',
+        'Taiwanese college students can claim a free year of Google AI Plus (400GB storage, Gemini Omni, 2x limits) with no charge during year one. Eligibility, signup steps, how to cancel before the NT$165/month renewal, and which plan applies if you study abroad.',
       keywords:
         'Google AI Plus, Gemini student plan, free AI for students, Google student offer, NotebookLM, Taiwan student AI',
     },
     content: `
-      <p style="font-size:18px;line-height:1.9;">Google 開放符合資格的大專生<strong>免費使用一年 Google AI Plus</strong>，這個消息這幾天在學生圈傳很兇。我自己查了一輪官方資訊，發現有幾個地方跟大家轉傳的版本不太一樣，尤其是<strong>台灣拿到的方案跟美國不同</strong>，還有幾個不講清楚之後可能會被扣款的細節，整理成這篇給你。</p>
+      <p style="font-size:18px;line-height:1.9;">Google 開放符合資格的大專生<strong>免費使用一年 Google AI Plus</strong>，這個消息這幾天在學生圈傳很兇。我自己查了一輪官方資訊，把大家最容易搞混的地方整理成這篇。</p>
 
-      <p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:4px;">⚠️ 先講最重要的一件事：網路上很多文章寫「免費領 Google AI Pro（月費 $19.99 美金）」，那是<strong>美國學生</strong>的方案。<strong>台灣學生拿到的是 Google AI Plus</strong>，原價每月新台幣 165 元。兩個不一樣，別看到美金價格就以為賺到那個數字。</p>
+      <p style="background:#dcfce7;border-left:4px solid #16a34a;padding:12px 16px;border-radius:4px;">✅ <strong>先回答最多人問的問題：這到底是免費還是要錢？</strong><br><br><strong>第一年（12個月）是真的完全免費，不會扣你任何一毛錢。</strong>申請時雖然要填付款方式，但免費期間內不會產生費用。<br><br>只有在<strong>滿一年之後、而且你沒有主動取消</strong>的情況下，才會開始自動續訂、每月收新台幣 165 元。<strong>只要在到期前取消，就是完整免費用一年、付 0 元。</strong></p>
+
+      <p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:4px;">⚠️ 另一個容易誤會的地方：網路上很多文章寫「免費領 Google AI Pro（月費 $19.99 美金）」，那是<strong>美國學生</strong>的方案。<strong>台灣學生拿到的是 Google AI Plus</strong>（原價每月新台幣 165 元）。兩個規格不一樣，別看到美金價格就以為賺到那個數字。</p>
 
       <h2>台灣學生實際可以拿到什麼？</h2>
       <ul>
@@ -119,13 +121,14 @@ export const blogPosts: BlogPost[] = [
 
       <hr>
 
-      <h2>⚠️ 三個一定要知道的坑</h2>
+      <h2>⚠️ 三件一定要先知道的事</h2>
 
-      <h3>1. 要先綁付款方式才能領</h3>
-      <p>雖然是免費方案，但申請的時候<strong>一定要提供有效的付款方式</strong>（信用卡等）。如果你不想綁卡，那這個方案基本上就跟你無緣，沒有其他繞過的方式。</p>
+      <h3>1. 要先綁付款方式才能領（但免費期間不會扣款）</h3>
+      <p>雖然第一年是免費的，但申請的時候<strong>一定要提供有效的付款方式</strong>（信用卡等），這是 Google 的規定，沒有繞過的方法。<strong>再強調一次：綁了卡，免費那一年還是 0 元，不會先扣你錢。</strong>如果你不想綁卡，那這個方案就跟你無緣了。</p>
 
-      <h3>2. 一年後會自動續訂，每月扣 165 元</h3>
-      <p>這個是最容易中招的地方——<strong>免費期滿後不會自動停止，而是自動續訂</strong>，開始每月扣新台幣 165 元。如果你只想用免費那一年，記得在到期前自己去取消訂閱。建議領到之後<strong>馬上在手機日曆設一個一年後的提醒</strong>，不然一年後真的會忘記。</p>
+      <h3>2. 滿一年後會自動續訂，這時才開始收 165 元</h3>
+      <p>這是唯一可能讓你花到錢的地方——<strong>免費期滿後不會自動停止，而是自動續訂</strong>，從第 13 個月開始每月收新台幣 165 元。</p>
+      <p>如果你只想用免費那一年，<strong>在到期前自己去取消訂閱就好，不會被收任何費用</strong>。強烈建議領到之後<strong>馬上在手機日曆設一個「11 個月後」的提醒</strong>，提早一個月提醒自己決定要續訂還是取消，不然一年後真的會忘記。</p>
 
       <h3>3. 兌換期限是 2026 年 12 月 31 日</h3>
       <p>過了這天就沒得領了。如果你符合資格但還在猶豫，可以先領起來放（記得配合上面第 2 點設提醒），不用等到真的要用才申請。</p>
