@@ -2,6 +2,9 @@
 import type { LocationQueryValue } from 'vue-router'
 import { portfolios, categories } from '~/data/portfolios'
 
+// 已下架的作品不對外顯示
+const visiblePortfolios = portfolios.filter((p) => !p.hidden)
+
 const { t } = useI18n()
 const localePath = useLocalePath()
 const { catLabel, wTitle, wDesc, wTechStack } = useLocalizedContent()
@@ -30,7 +33,7 @@ useHead(() => ({
         mainEntity: {
           '@type': 'ItemList',
           name: 'Zeona Studio',
-          numberOfItems: portfolios.length,
+          numberOfItems: visiblePortfolios.length,
         },
       }),
     },
@@ -64,9 +67,9 @@ const setCategory = (category: string) => {
 // 篩選邏輯
 const filteredPortfolios = computed(() => {
   if (selectedCategory.value === '全部') {
-    return portfolios
+    return visiblePortfolios
   }
-  return portfolios.filter((p) => p.category === selectedCategory.value)
+  return visiblePortfolios.filter((p) => p.category === selectedCategory.value)
 })
 
 onMounted(() => {

@@ -14,7 +14,9 @@ const { catLabel, wTitle, wDesc, wFullDesc, wFeatures, wTechStack } = useLocaliz
 
 const currentPortfolio = computed(() => {
   const id = route.params.id as string
-  return portfolios.find((p) => p.id === id) || null
+  // 已下架的作品視同不存在，直接連網址也會走 404
+  const found = portfolios.find((p) => p.id === id)
+  return found && !found.hidden ? found : null
 })
 
 // 找不到作品時，SSR 回應要是真的 404（否則爬蟲/監控會把「找不到作品」頁當成正常頁收錄）

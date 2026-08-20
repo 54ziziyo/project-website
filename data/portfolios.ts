@@ -25,6 +25,8 @@ export interface Portfolio {
   websiteLink: string
   flowchartLink?: string
   instagramEmbed?: string | null
+  // 設為 true 代表下架：不出現在作品列表，直接連網址也會回 404
+  hidden?: boolean
 }
 
 export const portfolios: Portfolio[] = [
@@ -85,6 +87,7 @@ export const portfolios: Portfolio[] = [
     image: getImageUrl('hogan-ig_pro.png'),
     link: '/works/hogan-ig-operation',
     websiteLink: '#',
+    hidden: true,
   },
   {
     id: 'roml-line-bot',
