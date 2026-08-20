@@ -46,15 +46,15 @@ export type BlogCategory = (typeof blogCategories)[number]
 export const blogPosts: BlogPost[] = [
   {
     id: 'google-gemini-student-free-year-2026',
-    title: '台灣大專生免費領一年 Google AI Plus！第一年真的0元，但這3件事要先知道',
+    title: '大專生快領！Google 送你一年免費 AI Plus，含 400GB 雲端空間',
     category: 'AI 人工智慧',
     tags: ['Google Gemini', '學生優惠', 'Google AI Plus', '免費AI工具', 'NotebookLM'],
     excerpt:
-      '結論先講：第一年是真的完全免費、不會扣款，含400GB雲端空間跟2倍使用額度。滿一年後才會自動續訂每月165元，到期前自己取消就完全不用付錢。這篇整理申請資格、領取步驟，以及海外唸書的人適用哪個方案。',
+      'Google開放台灣大專生免費用一年Google AI Plus，含400GB雲端空間、Gemini Omni跟2倍使用額度，第一年完全免費。這篇整理可以拿到什麼、誰能領、怎麼領，以及在國外唸書的人適用哪個方案。兌換到2026年12月31日。',
     titleEn:
-      "Taiwan Students Get a Free Year of Google AI Plus — Here's Exactly What's Free and What Isn't",
+      "Students: Claim a Free Year of Google AI Plus, Including 400GB of Storage",
     excerptEn:
-      "Straight answer: the first year is genuinely free with no charge, including 400GB of storage and 2x usage limits. It only starts billing NT$165/month after year one — cancel before then and you pay nothing. Here are the eligibility rules, signup steps, and which plan applies if you study abroad.",
+      "Google is giving eligible college students a free year of Google AI Plus — 400GB of cloud storage, Gemini Omni, and 2x usage limits, free for the first year. Here's what you get, who qualifies, how to claim it, and which plan applies if you study abroad. Open until December 31, 2026.",
     tagsEn: ['Google Gemini', 'Student Offer', 'Google AI Plus', 'Free AI Tools', 'NotebookLM'],
     coverImage: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
     coverImageEn: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
@@ -63,75 +63,55 @@ export const blogPosts: BlogPost[] = [
     updatedAt: '2026-08-20',
     featured: false,
     seo: {
-      title: 'Google AI Plus 學生免費一年怎麼領？第一年0元、資格與注意事項 | Zeona Studio',
+      title: 'Google AI Plus 學生方案免費一年怎麼領？資格與申請步驟 | Zeona Studio',
       description:
-        '台灣大專生可免費領一年Google AI Plus（400GB空間、Gemini Omni、2倍額度），第一年完全不扣款。整理申請資格、領取步驟、滿一年後每月165元的取消方式，以及海外唸書適用哪個方案。',
+        '台灣大專生可免費領一年Google AI Plus，含400GB雲端空間、Gemini Omni與2倍使用額度。整理可以拿到什麼、申請資格、領取步驟，以及在國外唸書適用哪個方案。兌換期限2026年12月31日。',
       keywords: 'Google AI Plus, Gemini學生方案, 學生免費AI, Google學生優惠, NotebookLM, Gemini免費一年, 台灣學生AI',
       ogImage: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
     },
     seoEn: {
-      title: 'Google AI Plus Free Year for Students: Year One Is Free, Eligibility & Steps | Zeona Studio',
+      title: 'How to Claim a Free Year of Google AI Plus for Students | Zeona Studio',
       description:
-        'Taiwanese college students can claim a free year of Google AI Plus (400GB storage, Gemini Omni, 2x limits) with no charge during year one. Eligibility, signup steps, how to cancel before the NT$165/month renewal, and which plan applies if you study abroad.',
+        'Eligible college students can claim a free year of Google AI Plus — 400GB storage, Gemini Omni, and 2x usage limits. What you get, who qualifies, how to claim it, and which plan applies if you study abroad. Open until December 31, 2026.',
       keywords:
         'Google AI Plus, Gemini student plan, free AI for students, Google student offer, NotebookLM, Taiwan student AI',
     },
     content: `
-      <p style="font-size:18px;line-height:1.9;">Google 開放符合資格的大專生<strong>免費使用一年 Google AI Plus</strong>，這個消息這幾天在學生圈傳很兇。我自己查了一輪官方資訊，把大家最容易搞混的地方整理成這篇。</p>
+      <p style="font-size:18px;line-height:1.9;">好康報你知！Google 開放符合資格的大專生<strong>免費使用一年 Google AI Plus</strong>，含 400GB 雲端空間跟 2 倍的 Gemini 使用額度，<strong>第一年完全免費</strong>。兌換期限到 2026 年 12 月 31 日，符合資格的話很推薦去領一下。</p>
 
-      <p style="background:#dcfce7;border-left:4px solid #16a34a;padding:12px 16px;border-radius:4px;">✅ <strong>先回答最多人問的問題：這到底是免費還是要錢？</strong><br><br><strong>第一年（12個月）是真的完全免費，不會扣你任何一毛錢。</strong>申請時雖然要填付款方式，但免費期間內不會產生費用。<br><br>只有在<strong>滿一年之後、而且你沒有主動取消</strong>的情況下，才會開始自動續訂、每月收新台幣 165 元。<strong>只要在到期前取消，就是完整免費用一年、付 0 元。</strong></p>
-
-      <p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:4px;">⚠️ 另一個容易誤會的地方：網路上很多文章寫「免費領 Google AI Pro（月費 $19.99 美金）」，那是<strong>美國學生</strong>的方案。<strong>台灣學生拿到的是 Google AI Plus</strong>（原價每月新台幣 165 元）。兩個規格不一樣，別看到美金價格就以為賺到那個數字。</p>
-
-      <h2>台灣學生實際可以拿到什麼？</h2>
+      <h2>可以拿到什麼？</h2>
       <ul>
         <li><strong>Gemini Omni 模型</strong>存取權</li>
         <li>使用額度是免費用戶的 <strong>2 倍</strong></li>
-        <li><strong>400GB</strong> Google 雲端硬碟空間（這個其實最實用，等於 Google One 的空間方案）</li>
-        <li>免費期間 <strong>一年</strong></li>
+        <li><strong>400GB</strong> Google 雲端硬碟空間（這個最實用，等於送你一個 Google One 空間方案）</li>
+        <li>免費用 <strong>一整年</strong></li>
       </ul>
-      <p>對照一下：美國學生拿到的是 AI Pro，含 5TB 空間、4 倍額度、Gmail 跟 Google Docs 裡的 Gemini 整合。台灣這邊規格是縮水版，但 400GB 空間 + 2 倍額度免費用一年，說真的還是很可以。</p>
-
-      <h2>那如果我是台灣人，但在國外唸書呢？</h2>
-      <p>這題我特別去查了 Google 官方說明，答案很明確：<strong>看你的「學校在哪個國家」，不是看你的國籍</strong>。</p>
-      <p>驗證方式是透過 SheerID、用<strong>學校信箱</strong>認證在學身分，所以系統認的是你就讀的學校，不是你的護照。</p>
-      <ul>
-        <li><strong>台灣人 + 讀美國的學校</strong> → 走美國方案，拿到的是 <strong>AI Pro</strong>（原價月費 $19.99 美金，含 5TB 空間、4 倍使用額度、Gmail 與 Google Docs 的 Gemini 整合）。等於規格比台灣的 AI Plus 好上不少</li>
-        <li><strong>台灣人 + 讀台灣的學校</strong> → 就是本文前面講的 AI Plus（400GB、2 倍額度）</li>
-        <li><strong>外國人 + 讀台灣的學校</strong> → 同樣是走台灣方案</li>
-      </ul>
-      <p style="background:#fee2e2;border-left:4px solid #ef4444;padding:12px 16px;border-radius:4px;">⚠️ <strong>有幾個地區是完全被排除的，這點很多人不知道</strong>：<strong>加拿大、香港、澳門</strong>，以及阿爾巴尼亞、玻利維亞、突尼西亞，這些地方的學校<strong>不適用任何學生方案</strong>。台灣人去加拿大、香港唸書的其實不少，如果你是這種情況，很遺憾這次領不到，不用白跑一趟。</p>
 
       <h2>誰可以領？</h2>
       <ul>
-        <li>台灣<strong>大專校院在學學生</strong>（年齡限制為 18 歲以上，官方頁面會做最終驗證）</li>
-        <li>需要用<strong>個人 Google 帳戶</strong>申請（不是學校發的帳號），並完成學生身分驗證</li>
-        <li>驗證方式可以用<strong>學校信箱</strong></li>
-        <li>如果你之前領過學生免費方案、或目前有其他 Google 訂閱在跑，要等那些結束才能申請</li>
+        <li>台灣<strong>大專校院在學學生</strong>（18 歲以上，官方頁面會做最終驗證）</li>
+        <li>用<strong>個人 Google 帳戶</strong>申請（不是學校發的帳號）</li>
+        <li>用<strong>學校信箱</strong>完成在學身分驗證</li>
+        <li>如果你之前領過學生方案、或有其他 Google 訂閱在跑，要等那些結束才能申請</li>
       </ul>
+
+      <h2>在國外唸書的話，領到的方案不一樣</h2>
+      <p>這個規則是<strong>看你的學校在哪個國家，不是看國籍</strong>（驗證是用學校信箱認在學身分，系統認學校不認護照）：</p>
+      <ul>
+        <li><strong>讀美國的學校</strong> → 走美國方案，拿到的是規格更好的 <strong>AI Pro</strong>，含 5TB 空間、4 倍使用額度、Gmail 與 Google Docs 的 Gemini 整合</li>
+        <li><strong>讀台灣的學校</strong> → 就是上面講的 AI Plus（400GB、2 倍額度）</li>
+      </ul>
+      <p>另外提醒一下，<strong>加拿大、香港、澳門</strong>的學校目前不在適用範圍內，如果你在這些地方唸書就先不用試了。</p>
 
       <h2>怎麼領？</h2>
       <ol>
         <li>用你的<strong>個人 Google 帳戶</strong>登入</li>
-        <li>前往 Google 學生方案頁面：<a href="https://one.google.com/ai-student" target="_blank" rel="noopener">one.google.com/ai-student</a></li>
+        <li>前往 <a href="https://one.google.com/ai-student" target="_blank" rel="noopener">one.google.com/ai-student</a></li>
         <li>用學校信箱完成學生身分驗證</li>
-        <li>填入付款方式（這步驟不能跳過，下面會解釋為什麼）</li>
-        <li>完成後就會開通一年免費</li>
+        <li>填入付款方式（免費期間不會扣款）</li>
+        <li>完成，開始免費用一年</li>
       </ol>
-
-      <hr>
-
-      <h2>⚠️ 三件一定要先知道的事</h2>
-
-      <h3>1. 要先綁付款方式才能領（但免費期間不會扣款）</h3>
-      <p>雖然第一年是免費的，但申請的時候<strong>一定要提供有效的付款方式</strong>（信用卡等），這是 Google 的規定，沒有繞過的方法。<strong>再強調一次：綁了卡，免費那一年還是 0 元，不會先扣你錢。</strong>如果你不想綁卡，那這個方案就跟你無緣了。</p>
-
-      <h3>2. 滿一年後會自動續訂，這時才開始收 165 元</h3>
-      <p>這是唯一可能讓你花到錢的地方——<strong>免費期滿後不會自動停止，而是自動續訂</strong>，從第 13 個月開始每月收新台幣 165 元。</p>
-      <p>如果你只想用免費那一年，<strong>在到期前自己去取消訂閱就好，不會被收任何費用</strong>。強烈建議領到之後<strong>馬上在手機日曆設一個「11 個月後」的提醒</strong>，提早一個月提醒自己決定要續訂還是取消，不然一年後真的會忘記。</p>
-
-      <h3>3. 兌換期限是 2026 年 12 月 31 日</h3>
-      <p>過了這天就沒得領了。如果你符合資格但還在猶豫，可以先領起來放（記得配合上面第 2 點設提醒），不用等到真的要用才申請。</p>
+      <p>一年免費期滿後會自動續訂（台灣是每月 165 元），如果不打算繼續用，記得在到期前自己去取消，詳細的續訂與取消規則<a href="https://one.google.com/ai-student" target="_blank" rel="noopener">以 Google 官方頁面說明為準</a>，申請前可以自己再看一下。</p>
 
       <hr>
 
@@ -158,9 +138,9 @@ export const blogPosts: BlogPost[] = [
 
       <hr>
 
-      <h2>所以到底值不值得領？</h2>
-      <p>如果你符合資格，我覺得<strong>值得，但要記得設取消提醒</strong>。理由很簡單：光是 400GB 雲端空間免費用一年，對雲端硬碟長期爆滿的人來說就很有感了，Gemini 額度加倍反而算是附加價值。</p>
-      <p>唯一要老實說的是：這種「免費一年、期滿自動續訂」的設計，本來就是希望你用習慣之後留下來繼續付費。這不是什麼陰謀，就是很正常的商業模式，但你要清楚知道遊戲規則，別到時候被扣款才在錯愕。<strong>領，然後設提醒</strong>，這樣就好。</p>
+      <h2>值得領嗎？</h2>
+      <p>如果你符合資格，我覺得很值得。光是 <strong>400GB 雲端空間免費用一年</strong>，對雲端硬碟長期爆滿的人來說就很有感了，Gemini 額度加倍算是加碼贈送。</p>
+      <p>兌換期限是 2026 年 12 月 31 日，符合資格的話就先去領起來吧！</p>
 
       <p style="text-align:center;margin:24px 0;"><a href="https://one.google.com/ai-student" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">前往領取學生方案</a></p>
 
