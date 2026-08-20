@@ -45,6 +45,122 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'google-gemini-student-free-year-2026',
+    title: '台灣大專生免費領一年 Google AI Plus！但有3個坑要先看清楚',
+    category: 'AI 人工智慧',
+    tags: ['Google Gemini', '學生優惠', 'Google AI Plus', '免費AI工具', 'NotebookLM'],
+    excerpt:
+      'Google開放台灣大專生免費用一年AI Plus，含400GB雲端空間跟2倍使用額度。但台灣拿到的方案跟美國不一樣，而且要綁信用卡、期滿會自動續訂165元。這篇幫你把資格、步驟、注意事項一次講清楚。',
+    titleEn:
+      "Taiwan Students Get a Free Year of Google AI Plus — With 3 Catches Worth Knowing First",
+    excerptEn:
+      "Google is giving Taiwanese college students a free year of AI Plus, including 400GB of storage and 2x usage limits. But the Taiwan plan differs from the US one, requires a payment method upfront, and auto-renews at NT$165/month. Here's the full breakdown.",
+    tagsEn: ['Google Gemini', 'Student Offer', 'Google AI Plus', 'Free AI Tools', 'NotebookLM'],
+    coverImage: 'https://www.zeona.co/images/gemini-student/hero.png',
+    coverImageEn: 'https://www.zeona.co/images/gemini-student/hero.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-08-20',
+    updatedAt: '2026-08-20',
+    featured: false,
+    seo: {
+      title: 'Google AI Plus 學生免費一年怎麼領？台灣資格、步驟與3個注意事項 | Zeona Studio',
+      description:
+        'Google開放台灣大專生免費用一年AI Plus（含400GB空間、Gemini Omni、2倍額度）。整理申請資格、領取步驟，以及要綁付款方式、自動續訂165元、12/31期限這3個要注意的地方。',
+      keywords: 'Google AI Plus, Gemini學生方案, 學生免費AI, Google學生優惠, NotebookLM, Gemini免費一年, 台灣學生AI',
+      ogImage: 'https://www.zeona.co/images/gemini-student/hero.png',
+    },
+    seoEn: {
+      title: 'Google AI Plus Free Year for Students: Taiwan Eligibility, Steps & 3 Catches | Zeona Studio',
+      description:
+        'Google is offering Taiwanese college students a free year of AI Plus (400GB storage, Gemini Omni, 2x limits). Here are the eligibility rules, signup steps, and the three catches worth knowing first.',
+      keywords:
+        'Google AI Plus, Gemini student plan, free AI for students, Google student offer, NotebookLM, Taiwan student AI',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">Google 開放符合資格的大專生<strong>免費使用一年 Google AI Plus</strong>，這個消息這幾天在學生圈傳很兇。我自己查了一輪官方資訊，發現有幾個地方跟大家轉傳的版本不太一樣，尤其是<strong>台灣拿到的方案跟美國不同</strong>，還有幾個不講清楚之後可能會被扣款的細節，整理成這篇給你。</p>
+
+      <p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:4px;">⚠️ 先講最重要的一件事：網路上很多文章寫「免費領 Google AI Pro（月費 $19.99 美金）」，那是<strong>美國學生</strong>的方案。<strong>台灣學生拿到的是 Google AI Plus</strong>，原價每月新台幣 165 元。兩個不一樣，別看到美金價格就以為賺到那個數字。</p>
+
+      <h2>台灣學生實際可以拿到什麼？</h2>
+      <ul>
+        <li><strong>Gemini Omni 模型</strong>存取權</li>
+        <li>使用額度是免費用戶的 <strong>2 倍</strong></li>
+        <li><strong>400GB</strong> Google 雲端硬碟空間（這個其實最實用，等於 Google One 的空間方案）</li>
+        <li>免費期間 <strong>一年</strong></li>
+      </ul>
+      <p>對照一下：美國學生拿到的是 AI Pro，含 5TB 空間、4 倍額度、Gmail 跟 Google Docs 裡的 Gemini 整合。台灣這邊規格是縮水版，但 400GB 空間 + 2 倍額度免費用一年，說真的還是很可以。</p>
+
+      <h2>誰可以領？</h2>
+      <ul>
+        <li>台灣<strong>大專校院在學學生</strong>（年齡限制為 18 歲以上，官方頁面會做最終驗證）</li>
+        <li>需要用<strong>個人 Google 帳戶</strong>申請（不是學校發的帳號），並完成學生身分驗證</li>
+        <li>驗證方式可以用<strong>學校信箱</strong></li>
+        <li>如果你之前領過學生免費方案、或目前有其他 Google 訂閱在跑，要等那些結束才能申請</li>
+      </ul>
+
+      <h2>怎麼領？</h2>
+      <ol>
+        <li>用你的<strong>個人 Google 帳戶</strong>登入</li>
+        <li>前往 Google 學生方案頁面：<a href="https://one.google.com/ai-student" target="_blank" rel="noopener">one.google.com/ai-student</a></li>
+        <li>用學校信箱完成學生身分驗證</li>
+        <li>填入付款方式（這步驟不能跳過，下面會解釋為什麼）</li>
+        <li>完成後就會開通一年免費</li>
+      </ol>
+
+      <hr>
+
+      <h2>⚠️ 三個一定要知道的坑</h2>
+
+      <h3>1. 要先綁付款方式才能領</h3>
+      <p>雖然是免費方案，但申請的時候<strong>一定要提供有效的付款方式</strong>（信用卡等）。如果你不想綁卡，那這個方案基本上就跟你無緣，沒有其他繞過的方式。</p>
+
+      <h3>2. 一年後會自動續訂，每月扣 165 元</h3>
+      <p>這個是最容易中招的地方——<strong>免費期滿後不會自動停止，而是自動續訂</strong>，開始每月扣新台幣 165 元。如果你只想用免費那一年，記得在到期前自己去取消訂閱。建議領到之後<strong>馬上在手機日曆設一個一年後的提醒</strong>，不然一年後真的會忘記。</p>
+
+      <h3>3. 兌換期限是 2026 年 12 月 31 日</h3>
+      <p>過了這天就沒得領了。如果你符合資格但還在猶豫，可以先領起來放（記得配合上面第 2 點設提醒），不用等到真的要用才申請。</p>
+
+      <hr>
+
+      <h2>這次一起推出的新學習功能</h2>
+      <p>除了方案本身，Google 這次也針對學生做了幾個新功能，我覺得對要準備考試、寫報告的人蠻有感的。以下影片來自 Google 官方部落格：</p>
+
+      <h3>學生專屬頁面（Student Hub）</h3>
+      <p>Gemini 側邊欄多了一個「Students」入口，把學習相關的功能集中在同一個地方，不用每次都重新想要用哪個工具。</p>
+      <video src="/images/gemini-student/student-hub.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
+
+      <h3>學習筆記本：把教材拆成小單元</h3>
+      <p>可以把課程教材丟進去，讓它拆解成一小段一小段的內容，還能自動生成<strong>單字卡</strong>跟<strong>練習測驗</strong>。準備期中期末的時候，這個比自己從頭整理快很多。</p>
+      <video src="/images/gemini-student/study-notebooks.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
+
+      <h3>互動式 3D 視覺化</h3>
+      <p>抽象的概念（像是生物構造、物理原理）可以用 3D 互動的方式呈現，比純文字解釋直觀很多。</p>
+      <video src="/images/gemini-student/interactive-visualizations.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
+
+      <h3>Deep Research × Gemini Live：用「聊的」做研究</h3>
+      <p>這個是我自己覺得最有趣的：把深度研究功能接上 Gemini Live，可以用對話的方式一路追問下去，而不是一次丟一個問題等它給答案。找資料的時候思路比較不會斷掉。</p>
+      <video src="/images/gemini-student/gemini-live-deep-research.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
+
+      <p>另外也支援串接日曆，把考試日期跟作業截止日同步進去。</p>
+
+      <hr>
+
+      <h2>所以到底值不值得領？</h2>
+      <p>如果你符合資格，我覺得<strong>值得，但要記得設取消提醒</strong>。理由很簡單：光是 400GB 雲端空間免費用一年，對雲端硬碟長期爆滿的人來說就很有感了，Gemini 額度加倍反而算是附加價值。</p>
+      <p>唯一要老實說的是：這種「免費一年、期滿自動續訂」的設計，本來就是希望你用習慣之後留下來繼續付費。這不是什麼陰謀，就是很正常的商業模式，但你要清楚知道遊戲規則，別到時候被扣款才在錯愕。<strong>領，然後設提醒</strong>，這樣就好。</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://one.google.com/ai-student" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">前往領取學生方案</a></p>
+
+      <h2>資料來源</h2>
+      <ul>
+        <li><a href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/" target="_blank" rel="noopener">Google 官方部落格：學生方案公告</a>（本文圖片與影片皆來自此官方頁面）</li>
+        <li><a href="https://one.google.com/ai-student" target="_blank" rel="noopener">Google 學生方案申請頁面</a></li>
+        <li><a href="https://www.inside.com.tw/article/42138-google-ai-plus-taiwan-college-students-free-year" target="_blank" rel="noopener">INSIDE：台灣大專生免費用一年 Google AI Plus</a></li>
+      </ul>
+      <p style="font-size:14px;color:#64748b;">※ 資格條件與方案內容以 Google 官方頁面公告為準，申請前建議自己再點進去確認一次，因為這類優惠條款有可能隨時調整。</p>
+    `,
+  },
+  {
     id: 'meigen-ai-prompt-gallery-guide',
     title: 'MeiGen 完整介紹：AI 圖像創作的提示詞靈感庫，不用從零想 Prompt',
     category: 'Prompt 提示詞',
