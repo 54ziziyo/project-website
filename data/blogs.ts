@@ -56,8 +56,8 @@ export const blogPosts: BlogPost[] = [
     excerptEn:
       "Google is giving Taiwanese college students a free year of AI Plus, including 400GB of storage and 2x usage limits. But the Taiwan plan differs from the US one, requires a payment method upfront, and auto-renews at NT$165/month. Here's the full breakdown.",
     tagsEn: ['Google Gemini', 'Student Offer', 'Google AI Plus', 'Free AI Tools', 'NotebookLM'],
-    coverImage: 'https://www.zeona.co/images/gemini-student/hero.png',
-    coverImageEn: 'https://www.zeona.co/images/gemini-student/hero.png',
+    coverImage: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
+    coverImageEn: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
     author: 'Zeona Studio',
     publishedAt: '2026-08-20',
     updatedAt: '2026-08-20',
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
       description:
         'Google開放台灣大專生免費用一年AI Plus（含400GB空間、Gemini Omni、2倍額度）。整理申請資格、領取步驟，以及要綁付款方式、自動續訂165元、12/31期限這3個要注意的地方。',
       keywords: 'Google AI Plus, Gemini學生方案, 學生免費AI, Google學生優惠, NotebookLM, Gemini免費一年, 台灣學生AI',
-      ogImage: 'https://www.zeona.co/images/gemini-student/hero.png',
+      ogImage: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BTS_gemini_hero_withcopy.width-1300.png',
     },
     seoEn: {
       title: 'Google AI Plus Free Year for Students: Taiwan Eligibility, Steps & 3 Catches | Zeona Studio',
@@ -127,19 +127,19 @@ export const blogPosts: BlogPost[] = [
 
       <h3>學生專屬頁面（Student Hub）</h3>
       <p>Gemini 側邊欄多了一個「Students」入口，把學習相關的功能集中在同一個地方，不用每次都重新想要用哪個工具。</p>
-      <video src="/images/gemini-student/student-hub.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
+      <video src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/16x9_student_hub_Aug17.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
 
       <h3>學習筆記本：把教材拆成小單元</h3>
       <p>可以把課程教材丟進去，讓它拆解成一小段一小段的內容，還能自動生成<strong>單字卡</strong>跟<strong>練習測驗</strong>。準備期中期末的時候，這個比自己從頭整理快很多。</p>
-      <video src="/images/gemini-student/study-notebooks.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
+      <video src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/16x9_study_notebooks_Aug17.mp4.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
 
       <h3>互動式 3D 視覺化</h3>
       <p>抽象的概念（像是生物構造、物理原理）可以用 3D 互動的方式呈現，比純文字解釋直觀很多。</p>
-      <video src="/images/gemini-student/interactive-visualizations.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
+      <video src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/16x9_interactive_visualizations_Aug19_final.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
 
       <h3>Deep Research × Gemini Live：用「聊的」做研究</h3>
       <p>這個是我自己覺得最有趣的：把深度研究功能接上 Gemini Live，可以用對話的方式一路追問下去，而不是一次丟一個問題等它給答案。找資料的時候思路比較不會斷掉。</p>
-      <video src="/images/gemini-student/gemini-live-deep-research.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
+      <video src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/16x9_GeminiLive_DR_Aug18.mp4" controls muted playsinline preload="metadata" style="width:100%;border-radius:8px;margin:20px 0;"></video>
 
       <p>另外也支援串接日曆，把考試日期跟作業截止日同步進去。</p>
 
