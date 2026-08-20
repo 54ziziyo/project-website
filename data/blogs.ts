@@ -90,6 +90,16 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>對照一下：美國學生拿到的是 AI Pro，含 5TB 空間、4 倍額度、Gmail 跟 Google Docs 裡的 Gemini 整合。台灣這邊規格是縮水版，但 400GB 空間 + 2 倍額度免費用一年，說真的還是很可以。</p>
 
+      <h2>那如果我是台灣人，但在國外唸書呢？</h2>
+      <p>這題我特別去查了 Google 官方說明，答案很明確：<strong>看你的「學校在哪個國家」，不是看你的國籍</strong>。</p>
+      <p>驗證方式是透過 SheerID、用<strong>學校信箱</strong>認證在學身分，所以系統認的是你就讀的學校，不是你的護照。</p>
+      <ul>
+        <li><strong>台灣人 + 讀美國的學校</strong> → 走美國方案，拿到的是 <strong>AI Pro</strong>（原價月費 $19.99 美金，含 5TB 空間、4 倍使用額度、Gmail 與 Google Docs 的 Gemini 整合）。等於規格比台灣的 AI Plus 好上不少</li>
+        <li><strong>台灣人 + 讀台灣的學校</strong> → 就是本文前面講的 AI Plus（400GB、2 倍額度）</li>
+        <li><strong>外國人 + 讀台灣的學校</strong> → 同樣是走台灣方案</li>
+      </ul>
+      <p style="background:#fee2e2;border-left:4px solid #ef4444;padding:12px 16px;border-radius:4px;">⚠️ <strong>有幾個地區是完全被排除的，這點很多人不知道</strong>：<strong>加拿大、香港、澳門</strong>，以及阿爾巴尼亞、玻利維亞、突尼西亞，這些地方的學校<strong>不適用任何學生方案</strong>。台灣人去加拿大、香港唸書的其實不少，如果你是這種情況，很遺憾這次領不到，不用白跑一趟。</p>
+
       <h2>誰可以領？</h2>
       <ul>
         <li>台灣<strong>大專校院在學學生</strong>（年齡限制為 18 歲以上，官方頁面會做最終驗證）</li>
@@ -155,6 +165,7 @@ export const blogPosts: BlogPost[] = [
       <ul>
         <li><a href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/" target="_blank" rel="noopener">Google 官方部落格：學生方案公告</a>（本文圖片與影片皆來自此官方頁面）</li>
         <li><a href="https://one.google.com/ai-student" target="_blank" rel="noopener">Google 學生方案申請頁面</a></li>
+        <li><a href="https://support.google.com/googleone/answer/17422238" target="_blank" rel="noopener">Google One 官方說明：學生方案資格條件與排除地區</a>（海外唸書適用哪個方案，以這頁為準）</li>
         <li><a href="https://www.inside.com.tw/article/42138-google-ai-plus-taiwan-college-students-free-year" target="_blank" rel="noopener">INSIDE：台灣大專生免費用一年 Google AI Plus</a></li>
       </ul>
       <p style="font-size:14px;color:#64748b;">※ 資格條件與方案內容以 Google 官方頁面公告為準，申請前建議自己再點進去確認一次，因為這類優惠條款有可能隨時調整。</p>
