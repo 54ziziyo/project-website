@@ -1,0 +1,61 @@
+<p style="font-size:18px;line-height:1.9;">Have you ever landed on a back-end system you've never used before, hunting for a setting that's nowhere to be found? You finally find a tutorial, only to discover the platform got updated and the screens don't match at all. So you screenshot the page and ask an AI — and it just hands you outdated, pre-update information anyway, leaving you to hunt for the answer step by step on your own.</p>
+
+<p>There's actually a tool that solves this directly now — <strong>Claude in Chrome</strong>. In short, it's a browser extension from Anthropic (the company behind Claude). Once installed, Claude gets an extra "mouse" — it can click, type, scroll, and capture screenshots right on the exact webpage you have open. Instead of just typing out steps for you to follow, you tell it what you need done, and it actually does it.</p>
+
+<p style="text-align:center;margin:24px 0;"><a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">Install from the Chrome Web Store</a></p>
+
+<hr>
+
+<h2>Before you start: who can actually use it?</h2>
+<p><strong>The extension itself is free to install</strong>, but actually using Claude to operate your browser currently requires a paid plan — <strong>Pro, Max, Team, or Enterprise</strong>. Free accounts can't use it yet. If you're on the free plan, you can still install the extension now and use it once you upgrade or once the feature rolls out more broadly.</p>
+
+<h2>Step 1 | Log in to your Claude account</h2>
+<p>Go to <a href="https://claude.ai/login" target="_blank" rel="noopener">claude.ai/login</a> and sign in with your Google account or email. No account yet? You can register on the spot.</p>
+<img src="/images/claude-in-chrome/01-claude-login.jpg" alt="Claude login page, sign in with Google or email" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<h2>Step 2 | Install the extension from the Chrome Web Store</h2>
+<p>Open Chrome and head to the Chrome Web Store.</p>
+<img src="/images/claude-in-chrome/02-chrome-web-store.png" alt="Chrome Web Store homepage" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<p>Search "claude in chrome" in the search bar. The first result — the orange Claude icon verified by claude.com — is the one you want.</p>
+<img src="/images/claude-in-chrome/03-search-claude-in-chrome.png" alt="Search results for claude in chrome" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<p>Click into it, then hit "Add to Chrome" in the top right to finish installing.</p>
+<img src="/images/claude-in-chrome/04-extension-detail-page.png" alt="Claude extension detail page, Add to Chrome button in the top right" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<h2>Step 3 | Open the Claude side panel</h2>
+<p>Once installed, you'll see a new orange Claude icon in the "Extensions" area at the top right of your browser. Click it, and the Claude chat panel slides open on the right side of the screen.</p>
+<img src="/images/claude-in-chrome/05-toolbar-icon.png" alt="Claude extension icon in the Chrome toolbar, showing the Open Claude tooltip" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<p>You'll also notice a new "Claude" tab group appears in your tab bar, so you can see at a glance which tabs Claude is currently working in.</p>
+<img src="/images/claude-in-chrome/06-tab-group.png" alt="A new Claude tab group appears in the tab bar" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<h2>Step 4 | Give it an instruction and let Claude take over</h2>
+<p>Now for the main event. In the side panel, describe what you need — for example: "Check this website's plugins for updates, and if any need updating, update them and confirm compatibility."</p>
+<img src="/images/claude-in-chrome/07-side-panel-chat.png" alt="Claude side panel mid-conversation, operating a WordPress admin dashboard" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<p>Once you send it, Claude will <strong>actually act on the webpage in front of you</strong> — clicking, switching pages, scrolling. Whatever section it's currently working on gets a visible <strong>orange outline</strong>, so you always know exactly where it's operating. A "Stop Claude" button also sits in the bottom right the whole time, so you can interrupt it mid-task whenever you want — no need to worry about it going off and clicking things unsupervised.</p>
+<img src="/images/claude-in-chrome/08-orange-highlight-stop-button.jpg" alt="Orange highlight while Claude is operating, with a Stop Claude button in the bottom right" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<p>The panel also logs every action it's taking in real time — things like "Navigating to..." or "Capturing page" — so you always know exactly which step it's on.</p>
+<img src="/images/claude-in-chrome/09-action-log.jpg" alt="Claude's action log, showing entries like Navigating to and Capturing page" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<p>The moment it clicks a button or submits a form, you'll also see a small <strong>orange ring around the cursor</strong> — that's Claude marking exactly where it just clicked.</p>
+<img src="/images/claude-in-chrome/10-orange-cursor-complete.jpg" alt="An orange ring appears around the cursor as an update completes" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<h2>Step 5 | A full report when it's done</h2>
+<p>When the task finishes, Claude doesn't just say "done" — it includes the actual screenshots it captured along the way, so you can verify exactly what it touched.</p>
+<img src="/images/claude-in-chrome/11-screenshot-example.png" alt="An example screenshot Claude captured while operating the page" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<p>On top of that, you get a written summary laying out exactly what was done at each step and what the outcome was.</p>
+<img src="/images/claude-in-chrome/12-completion-report.png" alt="Claude's written completion report after finishing the task" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<hr>
+
+<h2>One more thing: your chat history isn't lost — the web app and the extension stay in sync</h2>
+<p>A common worry is: "If I use the extension to have Claude operate my browser, will I lose that conversation once I go back to claude.ai on the web?" No need to worry — every operation is its own independent Task. Whether you chat with it in the side panel or reopen the same task on claude.ai later, everything stays perfectly in sync, right down to which tools it used and which screenshots it captured.</p>
+<img src="/images/claude-in-chrome/13-web-sync.png" alt="The claude.ai web view showing the same task, fully synced with the extension conversation" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+<h2>Bottom line</h2>
+<p>Claude in Chrome solves a very real problem: even a perfectly accurate AI answer still leaves you to do the clicking yourself — and once an interface changes, outdated AI advice actively works against you. With this tool, AI operates directly on the screen you're actually looking at. What you see is what you get, so you never have to guess where that "settings page" wandered off to after the redesign.</p>
+<p>This tool has been out for a while now — if you're a heavy Claude user, it's genuinely worth carving out time to try.</p>

@@ -45,6 +45,102 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'claude-in-chrome-extension-guide-2026',
+    title: '「Claude in Chrome」教學：讓AI直接幫你操作瀏覽器，不用再土法煉鋼找設定',
+    category: 'AI 人工智慧',
+    tags: ['Claude', 'Claude in Chrome', 'Anthropic', 'AI瀏覽器助手', 'Chrome擴充功能'],
+    excerpt:
+      '到陌生後台找嘸設定、截圖問AI又得到改版前的舊答案？Claude in Chrome擴充功能能讓AI直接在你眼前的畫面點擊操作，不用再自己土法煉鋼。整理安裝到操作的完整步驟，含哪些方案才能用、操作中橘框代表什麼意思，圖文教學一次看懂。',
+    titleEn:
+      'Claude in Chrome: A Full Setup Guide to Let AI Actually Operate Your Browser',
+    excerptEn:
+      "Stuck hunting for a setting on a site you've never used, then getting an outdated answer when you paste a screenshot to AI? The Claude in Chrome extension lets Claude click and operate right on your screen instead. Here's the full install-to-use walkthrough, including which plans support it and what that orange highlight actually means.",
+    tagsEn: ['Claude', 'Claude in Chrome', 'Anthropic', 'AI Browser Agent', 'Chrome Extension'],
+    coverImage: 'https://www.zeona.co/images/claude-in-chrome/07-side-panel-chat.png',
+    coverImageEn: 'https://www.zeona.co/images/claude-in-chrome/07-side-panel-chat.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-08-27',
+    updatedAt: '2026-08-27',
+    featured: false,
+    seo: {
+      title: 'Claude in Chrome教學：安裝、設定與操作完整步驟 | Zeona Studio',
+      description:
+        '完整圖解Claude in Chrome擴充功能：怎麼安裝、怎麼開啟側邊視窗、操作中橘框代表什麼、如何中途停止，以及免費版能不能用。新手也能一次上手。',
+      keywords: 'Claude in Chrome, Claude瀏覽器擴充功能, Claude AI Agent, Anthropic, Chrome擴充功能, AI自動化操作, Claude教學',
+      ogImage: 'https://www.zeona.co/images/claude-in-chrome/07-side-panel-chat.png',
+    },
+    seoEn: {
+      title: 'Claude in Chrome: Complete Install & Usage Guide | Zeona Studio',
+      description:
+        'A full walkthrough of the Claude in Chrome extension — installation, opening the side panel, what the orange highlight means, how to stop mid-task, and whether the free plan supports it.',
+      keywords:
+        'Claude in Chrome, Claude browser extension, Claude AI agent, Anthropic, Chrome extension, AI browser automation, Claude tutorial',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">你是不是也常常遇到這種狀況：到一個沒用過的後台系統，東找西找找不到設定在哪裡；好不容易找到教學文，結果平台又剛好改版，畫面完全對不上；沒辦法只好把畫面截圖丟給AI問，結果AI回你的還是「改版前」的舊資訊，只好自己一步一步土法煉鋼、玩「大家來找碴」。</p>
+
+      <p>其實這個問題，現在有一個工具可以直接解決——<strong>Claude in Chrome</strong>。簡單說，它是Anthropic（Claude的開發公司）推出的瀏覽器擴充功能。裝上之後，Claude會多一顆「滑鼠」，直接在你現在打開的這個網頁上幫你點擊、輸入、捲動、擷取畫面，等於是你口頭交代一件事，它就真的動手幫你做，而不是只把步驟文字打出來讓你自己對照。</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">前往 Chrome 線上應用程式商店安裝</a></p>
+
+      <hr>
+
+      <h2>開始之前：誰可以用？</h2>
+      <p><strong>擴充功能本身是免費安裝的</strong>，但實際要「使用」Claude幫你操作瀏覽器這個功能，目前僅開放給<strong>Pro、Max、Team、Enterprise</strong>等付費方案，免費帳號還沒有開放。如果你是免費版用戶，可以先把擴充功能裝起來，等升級方案或功能擴大開放後就能直接用。</p>
+
+      <h2>Step 1｜先登入你的Claude帳號</h2>
+      <p>到 <a href="https://claude.ai/login" target="_blank" rel="noopener">claude.ai/login</a> 用Google帳號或Email登入，沒有帳號的話當場註冊一個就可以。</p>
+      <img src="/images/claude-in-chrome/01-claude-login.jpg" alt="Claude登入頁面，可用Google帳號或Email登入" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>Step 2｜到Chrome線上應用程式商店安裝擴充功能</h2>
+      <p>打開Chrome瀏覽器，前往Chrome線上應用程式商店。</p>
+      <img src="/images/claude-in-chrome/02-chrome-web-store.png" alt="Chrome線上應用程式商店首頁" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>在搜尋欄輸入「claude in chrome」，第一個跳出來、claude.com認證的橘色Claude圖示就是我們要的。</p>
+      <img src="/images/claude-in-chrome/03-search-claude-in-chrome.png" alt="搜尋claude in chrome的結果列表" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>點進去之後，按右上角的「加到Chrome」完成安裝。</p>
+      <img src="/images/claude-in-chrome/04-extension-detail-page.png" alt="Claude擴充功能詳情頁，右上角加到Chrome按鈕" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>Step 3｜開啟Claude側邊視窗</h2>
+      <p>安裝完成後，瀏覽器右上角的「擴充功能」區域會多一個橘色Claude圖示，點一下它，右側就會跳出Claude的對話視窗。</p>
+      <img src="/images/claude-in-chrome/05-toolbar-icon.png" alt="Chrome工具列上的Claude擴充功能圖示，顯示Open Claude提示" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>同時你會發現分頁列上也會多一個「Claude」的分頁群組，方便你知道哪些分頁正在被Claude使用、操作。</p>
+      <img src="/images/claude-in-chrome/06-tab-group.png" alt="分頁列上多出的Claude分頁群組" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>Step 4｜開始下指令，讓Claude幫你操作畫面</h2>
+      <p>接下來就是重頭戲了。在右側視窗跟Claude描述你要做的事，例如：「幫我操作這個網站，查詢外掛是否有更新，有的話幫我更新並確認相容性」。</p>
+      <img src="/images/claude-in-chrome/07-side-panel-chat.png" alt="Claude側邊視窗對話中，正在操作WordPress後台" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>送出之後，Claude就會<strong>真的在你眼前的網頁上動作</strong>——自動點擊、切換頁面、捲動畫面。操作中的區塊會出現<strong>橘色框線</strong>提示，代表Claude目前正在對這個區域動手；右下角則會有一個「Stop Claude」按鈕，你隨時可以按下去中途喊停，不用擔心它會失控亂點。</p>
+      <img src="/images/claude-in-chrome/08-orange-highlight-stop-button.jpg" alt="操作中的橘框提示，右下角有Stop Claude按鈕" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>視窗裡也會同步列出它正在做的每個動作，像是「Navigating to...（前往某網址）」「Capturing page（擷取畫面）」等等，讓你清楚知道它現在到哪一步了。</p>
+      <img src="/images/claude-in-chrome/09-action-log.jpg" alt="Claude操作紀錄清單，顯示Navigating to與Capturing page等動作" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>點擊按鈕、送出表單的當下，你也會看到滑鼠游標旁出現<strong>橘色圈選提示</strong>，代表Claude正在點擊這個位置。</p>
+      <img src="/images/claude-in-chrome/10-orange-cursor-complete.jpg" alt="完成更新時，游標旁出現橘色圈選提示" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>Step 5｜完成後，給你一份完整報告</h2>
+      <p>任務跑完之後，Claude不會只丟一句「做完了」，而是會附上它操作過程中實際截取的畫面，方便你核對它到底動了什麼。</p>
+      <img src="/images/claude-in-chrome/11-screenshot-example.png" alt="Claude操作過程中截取的實際畫面範例" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>再加上一份文字整理的完成報告，清楚列出每一步做了什麼、結果如何。</p>
+      <img src="/images/claude-in-chrome/12-completion-report.png" alt="Claude完成任務後的文字報告" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <hr>
+
+      <h2>貼心提醒：對話紀錄不會不見，網頁版跟擴充功能是同步的</h2>
+      <p>很多人會擔心「用瀏覽器擴充功能操作的過程，回到claude.ai網頁版是不是就看不到了？」——不用擔心，因為每一次操作都是一個獨立任務（Task），不管你是在側邊視窗裡跟它對話，還是回到claude.ai網頁版打開同一個任務，內容都是完全同步的，連它當時用了哪些工具、截了哪些圖都查得到。</p>
+      <img src="/images/claude-in-chrome/13-web-sync.png" alt="Claude網頁版任務畫面，與擴充功能對話內容完全同步" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>小結</h2>
+      <p>Claude in Chrome解決的其實是一個很實際的痛點：AI給的答案再準，你自己還是得動手操作，而且介面一改版，AI給的舊資訊反而幫倒忙。現在有了這個工具，AI可以直接在你真實看到的畫面上操作，所見即所得，不用再猜它講的「設定頁」到底跑去哪了。</p>
+      <p>這個工具已經出來一陣子了，如果你是重度Claude使用者，真心建議找個時間玩玩看。</p>
+    `,
+  },
+  {
     id: 'google-gemini-student-free-year-2026',
     title: '大專生快領！Google 送你一年免費 AI Plus，含 400GB 雲端空間',
     category: 'AI 人工智慧',
