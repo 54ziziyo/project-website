@@ -56,8 +56,8 @@ export const blogPosts: BlogPost[] = [
     excerptEn:
       "Stuck hunting for a setting on a site you've never used, then getting an outdated answer when you paste a screenshot to AI? The Claude in Chrome extension lets Claude click and operate right on your screen instead. Here's the full install-to-use walkthrough, including which plans support it and what that orange highlight actually means.",
     tagsEn: ['Claude', 'Claude in Chrome', 'Anthropic', 'AI Browser Agent', 'Chrome Extension'],
-    coverImage: 'https://www.zeona.co/images/claude-in-chrome/07-side-panel-chat.png',
-    coverImageEn: 'https://www.zeona.co/images/claude-in-chrome/07-side-panel-chat.png',
+    coverImage: 'https://lh3.googleusercontent.com/ax1FN-E8cERlfip3yn86gMmh4WaXdgHGuCACWYXqo7HC9nz9cFyczci33wG9FJNh1BlNHK8Ju_cfsVclglfTiHxy=s1280-w1280-h800',
+    coverImageEn: 'https://lh3.googleusercontent.com/ax1FN-E8cERlfip3yn86gMmh4WaXdgHGuCACWYXqo7HC9nz9cFyczci33wG9FJNh1BlNHK8Ju_cfsVclglfTiHxy=s1280-w1280-h800',
     author: 'Zeona Studio',
     publishedAt: '2026-08-27',
     updatedAt: '2026-08-27',
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
       description:
         '完整圖解Claude in Chrome擴充功能：怎麼安裝、怎麼開啟側邊視窗、操作中橘框代表什麼、如何中途停止，以及免費版能不能用。新手也能一次上手。',
       keywords: 'Claude in Chrome, Claude瀏覽器擴充功能, Claude AI Agent, Anthropic, Chrome擴充功能, AI自動化操作, Claude教學',
-      ogImage: 'https://www.zeona.co/images/claude-in-chrome/07-side-panel-chat.png',
+      ogImage: 'https://lh3.googleusercontent.com/ax1FN-E8cERlfip3yn86gMmh4WaXdgHGuCACWYXqo7HC9nz9cFyczci33wG9FJNh1BlNHK8Ju_cfsVclglfTiHxy=s1280-w1280-h800',
     },
     seoEn: {
       title: 'Claude in Chrome: Complete Install & Usage Guide | Zeona Studio',
