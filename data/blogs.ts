@@ -84,8 +84,6 @@ export const blogPosts: BlogPost[] = [
 
       <p>路透社（Reuters）於2026年8月27日獨家報導了這起事件。這篇文章整理事情經過、資安專家怎麼看，最後附上一段你今天就能複製貼上、拿去測試自家AI代理的提示詞。</p>
 
-      <img src="https://www.bnnbloomberg.ca/resizer/v2/FF5TUNFEPOBPTVOQ5AS3WOHSMI.jpg?smart=true&auth=6456a8f07ccb8f2006ecedc008559d87d948f224504a48c457f7dfccf53760fe&width=1600&height=899" alt="SpaceX總部大樓外牆上的SpaceX標誌，攝於2020年5月26日甘迺迪太空中心（AP Photo/David J. Phillip）" style="width:100%;border-radius:8px;margin:20px 0;" />
-
       <h2>發生了什麼事？</h2>
       <p>先說一下主角：<strong>Cursor</strong>是一款AI程式碼編輯工具，這次被駭客騙過的AI代理，底層用的正是Anthropic的<strong>Claude Sonnet 4.5</strong>模型。比較讓人意外的是，Cursor目前已經是<strong>SpaceX</strong>旗下的工具——沒錯，就是馬斯克那個SpaceX。</p>
       <p>路透社證實至少<strong>7家企業</strong>因這波攻擊遭入侵，其中6家可具名查核，橫跨好幾個完全不相關的產業：比利時的清潔用品廠商Christeyns、德國的車庫門製造商Teckentrup、蘇格蘭的航空服務機構Helideck Certification Agency、阿根廷的藥品經銷商、義大利的一家製造業者，還有美國路易斯安那州的產權保險公司Bayou Title。資安公司CloudSek另外追蹤同一波攻擊行動，統計出的受害者更多達20家。</p>
