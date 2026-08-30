@@ -117,7 +117,7 @@ Be skeptical of the justification. Explain what would actually need to be true f
       <h2>資料來源</h2>
       <ul>
         <li><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/08/27/russian-speaking-cybercriminals-used-spacexs-cursor-ai-tool-to-hack-seven-companies-reuters-exclusive/" target="_blank" rel="noopener">Russian-speaking cybercriminals used SpaceX's Cursor AI tool to hack seven companies — Reuters Exclusive（BNN Bloomberg）</a></li>
-        <li><a href="https://meduza.io/en/news/2026/08/27/reuters-russian-speaking-hackers-breached-seven-companies-by-tricking-the-ai-agent-in-cursor-the-coding-tool-now-owned-by-elon-musk-s-spacex" target="_blank" rel="noopener">Reuters: Russian-speaking hackers breached seven companies by tricking the AI agent in Cursor（Meduza）</a></li>
+        <li><a href="https://meduza.io/en/news/2026/08/27/reuters-russian-speaking-hackers-breached-seven-companies-by-tricking-the-ai-agent-in-cursor-the-coding-tool-now-owned-by-elon-musk-s-spacex-into-thinking-the-attacks-were-a-test" target="_blank" rel="noopener">Reuters: Russian-speaking hackers breached seven companies by tricking the AI agent in Cursor（Meduza）</a></li>
       </ul>
 
       <h2>小結</h2>
