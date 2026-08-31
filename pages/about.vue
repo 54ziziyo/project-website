@@ -13,9 +13,9 @@ useHead({
       property: 'og:description',
       content: '用 AI 與自動化經營品牌，把工具與模板分享給你，也提供客製化開發與設計行銷服務。',
     },
-    { property: 'og:url', content: 'https://zeona.vercel.app/about' },
+    { property: 'og:url', content: 'https://www.zeona.co/about' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/about' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/about' }],
   script: [
     {
       type: 'application/ld+json',
@@ -24,7 +24,7 @@ useHead({
         '@type': 'AboutPage',
         name: '關於 Zeona Studio',
         description: '用 AI 與自動化經營品牌的個人創作者，提供數位工具箱與客製化軟體開發、設計行銷服務',
-        url: 'https://zeona.vercel.app/about',
+        url: 'https://www.zeona.co/about',
         mainEntity: {
           '@type': 'Organization',
           name: 'Zeona Studio',

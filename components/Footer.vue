@@ -43,6 +43,18 @@
             class="hover:text-[#8782FF] transition"
             >{{ t('footer.design') }}</NuxtLink
           >
+          <NuxtLink
+            :to="localePath('/services/marketing')"
+            :title="t('footer.marketing')"
+            class="hover:text-[#8782FF] transition"
+            >{{ t('footer.marketing') }}</NuxtLink
+          >
+          <NuxtLink
+            :to="localePath('/services/all')"
+            :title="t('footer.allServices')"
+            class="hover:text-[#8782FF] transition"
+            >{{ t('footer.allServices') }}</NuxtLink
+          >
           <NuxtLink :to="localePath('/blog')" :title="t('footer.blog')" class="hover:text-[#8782FF] transition">{{
             t('footer.blog')
           }}</NuxtLink>

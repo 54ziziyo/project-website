@@ -63,7 +63,7 @@ useHead(() => {
       { property: 'og:title', content: seoTitle },
       { property: 'og:description', content: seoDesc },
       { property: 'og:type', content: 'article' },
-      { property: 'og:url', content: `https://zeona.vercel.app/blog/${post.id}` },
+      { property: 'og:url', content: `https://www.zeona.co/blog/${post.id}` },
       { property: 'og:image', content: post.seo.ogImage },
       { property: 'article:published_time', content: post.publishedAt },
       { property: 'article:modified_time', content: post.updatedAt },
@@ -75,7 +75,7 @@ useHead(() => {
       { name: 'twitter:description', content: seoDesc },
       { name: 'twitter:image', content: post.seo.ogImage },
     ],
-    link: [{ rel: 'canonical', href: `https://zeona.vercel.app/blog/${post.id}` }],
+    link: [{ rel: 'canonical', href: `https://www.zeona.co/blog/${post.id}` }],
   }
 })
 
@@ -103,14 +103,14 @@ useHead(() => {
             name: 'Zeona Studio',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://zeona.vercel.app/favicon.ico',
+              url: 'https://www.zeona.co/favicon.ico',
             },
           },
           datePublished: post.publishedAt,
           dateModified: post.updatedAt,
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `https://zeona.vercel.app/blog/${post.id}`,
+            '@id': `https://www.zeona.co/blog/${post.id}`,
           },
           keywords: bTags(post).join(', '),
         }),

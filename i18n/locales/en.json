@@ -2,6 +2,8 @@
   "nav": {
     "about": "About",
     "services": "Commission",
+    "servicesAll": "All Services",
+    "servicesAllDesc": "Software development, design and digital marketing plans at a glance",
     "servicesSoftware": "Software Dev",
     "servicesSoftwareDesc": "Custom software development: websites, AI tools, LINE bots, automation and more",
     "servicesDesign": "Design",

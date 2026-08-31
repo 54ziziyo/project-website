@@ -10,9 +10,9 @@ useHead({
     },
     { property: 'og:title', content: '常見問題 FAQ | Zeona Studio - 服務疑問解答' },
     { property: 'og:description', content: '從軟體開發到數位行銷，一次解答您的所有疑問。' },
-    { property: 'og:url', content: 'https://zeona.vercel.app/faq' },
+    { property: 'og:url', content: 'https://www.zeona.co/faq' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/faq' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/faq' }],
   script: [
     {
       type: 'application/ld+json',

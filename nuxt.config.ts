@@ -128,8 +128,8 @@ export default defineNuxtConfig({
           content:
             '用 AI 工具與模板，一個人也能做出專業內容；需要客製化開發與設計行銷，也能依需求打造。立即逛逛數位工具箱。',
         },
-        { property: 'og:url', content: 'https://zeona.vercel.app' },
-        { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
+        { property: 'og:url', content: 'https://www.zeona.co' },
+        { property: 'og:image', content: 'https://www.zeona.co/og-cover.jpg' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:alt', content: 'Zeona Studio - 品牌數位轉型專家' },
@@ -140,11 +140,11 @@ export default defineNuxtConfig({
         { name: 'twitter:creator', content: '@zeonastudio' },
         { name: 'twitter:title', content: 'Zeona Studio | AI 數位工具箱與客製化開發' },
         { name: 'twitter:description', content: '用 AI 與工具模板，一個人也能做出專業行銷與內容' },
-        { name: 'twitter:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
+        { name: 'twitter:image', content: 'https://www.zeona.co/og-cover.jpg' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://zeona.vercel.app' },
+        { rel: 'canonical', href: 'https://www.zeona.co' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       ],
       script: [
@@ -156,8 +156,8 @@ export default defineNuxtConfig({
             '@type': 'Organization',
             name: 'Zeona Studio',
             alternateName: 'Zeona 品牌數位轉型專家',
-            url: 'https://zeona.vercel.app',
-            logo: 'https://zeona.vercel.app/logo.png',
+            url: 'https://www.zeona.co',
+            logo: 'https://www.zeona.co/logo.png',
             description:
               'Zeona Studio：用 AI 與自動化經營品牌，提供數位工具箱（AI 提示詞、模板、素材）與客製化軟體開發、網站架設、設計行銷服務。',
             foundingDate: '2024',
@@ -181,7 +181,7 @@ export default defineNuxtConfig({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
             name: 'Zeona Studio',
-            url: 'https://zeona.vercel.app',
+            url: 'https://www.zeona.co',
             description: 'AI 數位工具箱與客製化開發：一個人也能做出專業行銷與內容',
             publisher: {
               '@type': 'Organization',
@@ -191,7 +191,7 @@ export default defineNuxtConfig({
               '@type': 'SearchAction',
               target: {
                 '@type': 'EntryPoint',
-                urlTemplate: 'https://zeona.vercel.app/blog?q={search_term_string}',
+                urlTemplate: 'https://www.zeona.co/blog?q={search_term_string}',
               },
               'query-input': 'required name=search_term_string',
             },
