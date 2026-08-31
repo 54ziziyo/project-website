@@ -689,6 +689,8 @@
       "save": "省 NT${amount}",
       "freeDownload": "免費使用",
       "freeNote": "完全免費，無需付款",
+      "emailGateNote": "填寫姓名與Email，即可收到免費下載連結",
+      "emailGateSuccess": "資料已送出，點擊下方按鈕取得下載連結",
       "comingSoon": "即將上架，敬請期待",
       "notifyPre": "上架通知？歡迎",
       "notifyLink": "聯絡我",

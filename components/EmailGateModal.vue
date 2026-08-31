@@ -1,6 +1,26 @@
 <script setup lang="ts">
 const open = defineModel<boolean>('open', { default: false })
 
+const props = withDefaults(
+  defineProps<{
+    title?: string
+    description?: string
+    destinationUrl: string
+    trackingLabel?: string
+    ctaLabel?: string
+    successLabel?: string
+    storageKey?: string
+  }>(),
+  {
+    title: '免費領取攻略秘笈',
+    description: '整合網站開發、行銷設計的實戰地圖，填寫資料即可獲得連結。',
+    trackingLabel: '領取攻略秘笈',
+    ctaLabel: '📖 點此閱讀 →',
+    successLabel: '資料已送出，點擊下方按鈕閱讀完整地圖',
+    storageKey: 'guide-submission-v1',
+  },
+)
+
 type Grecaptcha = {
   ready: (cb: () => void) => void
   execute: (siteKey: string, options: { action: string }) => Promise<string>
@@ -15,8 +35,6 @@ declare global {
 const recaptchaSiteKey = '6LezflssAAAAAAyrX2klGOA-XG6g7Kj2cgY9oiEz'
 const scriptUrl =
   'https://script.google.com/macros/s/AKfycbwbSt3nyNmYePhPTXzNjLuJnbHnS7h7b6fvegfFQ1j1rH8bBFIQfLO-pcfs4-FPIeEs/exec'
-const guideUrl = 'https://zeona-studio--89izure.gamma.site/'
-const storageKey = 'guide-submission-v1'
 
 const form = {
   name: ref(''),
@@ -63,7 +81,7 @@ const submitToContact = async () => {
   formData.append('brand', '')
   formData.append('mail', form.email.value)
   formData.append('line', '')
-  formData.append('desc', '領取攻略秘笈')
+  formData.append('desc', props.trackingLabel)
   formData.append('startDate', '')
   formData.append('endDate', '')
   formData.append('budget', '0')
@@ -99,7 +117,7 @@ const submit = async () => {
     await submitToContact()
     status.value = 'sent'
     const payload = JSON.stringify({ name: form.name.value, email: form.email.value })
-    window.localStorage.setItem(storageKey, payload)
+    window.localStorage.setItem(props.storageKey, payload)
   } catch (err) {
     console.error('送出失敗', err)
     status.value = 'idle'
@@ -107,7 +125,7 @@ const submit = async () => {
 }
 
 const openGuide = () => {
-  window.open(guideUrl, '_blank', 'noopener')
+  window.open(props.destinationUrl, '_blank', 'noopener')
 }
 
 const close = () => {
@@ -123,7 +141,7 @@ const handleKeydown = (event: KeyboardEvent) => {
 const hydrateFromStorage = () => {
   if (typeof window === 'undefined') return
   try {
-    const raw = window.localStorage.getItem(storageKey)
+    const raw = window.localStorage.getItem(props.storageKey)
     if (!raw) return
     const parsed = JSON.parse(raw) as { name?: string; email?: string }
     if (parsed.name) form.name.value = parsed.name
@@ -172,9 +190,9 @@ onBeforeUnmount(() => {
             <div class="flex items-start justify-between gap-4">
               <div class="flex-1 min-w-0">
                 <p class="text-xs uppercase tracking-[0.25em] text-[#7A7DFE] font-bold mb-2">guide</p>
-                <h3 class="text-2xl md:text-3xl font-black text-[#1f1f1f] leading-tight">免費領取攻略秘笈</h3>
+                <h3 class="text-2xl md:text-3xl font-black text-[#1f1f1f] leading-tight">{{ props.title }}</h3>
                 <p class="text-sm md:text-base text-[#5B5B5B] mt-2 leading-relaxed">
-                  整合網站開發、行銷設計的實戰地圖，填寫資料即可獲得連結。
+                  {{ props.description }}
                 </p>
               </div>
               <button
@@ -213,7 +231,7 @@ onBeforeUnmount(() => {
 
               <div class="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
                 <div class="text-xs text-[#8a8a8a] leading-relaxed">
-                  點擊送出即同意接收攻略秘笈，送出後會顯示下載按鈕。
+                  點擊送出即同意接收此資源，送出後會顯示下載按鈕。
                 </div>
                 <button
                   class="w-full flex-none cursor-pointer md:w-auto px-8 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
@@ -233,12 +251,12 @@ onBeforeUnmount(() => {
             </div>
 
             <div v-else class="space-y-4 text-center">
-              <p class="text-base text-[#4a4a4a] font-semibold">資料已送出，點擊下方按鈕閱讀完整地圖</p>
+              <p class="text-base text-[#4a4a4a] font-semibold">{{ props.successLabel }}</p>
               <button
                 class="w-full px-6 py-3 bg-gradient-to-r from-[#7A7DFE] via-[#8D80FF] to-[#B188FF] text-white font-semibold rounded-xl shadow-lg shadow-[#8d80ff4d] hover:shadow-xl hover:shadow-[#8d80ff59] transition-all cursor-pointer"
                 @click="openGuide"
               >
-                📖 點此閱讀 →
+                {{ props.ctaLabel }}
               </button>
             </div>
           </div>

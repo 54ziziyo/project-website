@@ -97,6 +97,9 @@ const formatPrice = (price: number) =>
   price === 0 ? t('toolbox.free') : `NT$${price.toLocaleString()}`
 const isVisible = ref(false)
 onMounted(() => setTimeout(() => (isVisible.value = true), 80))
+
+// 免費品若標記 emailGate，改成先跳彈窗收email，送出後才給 purchaseUrl（而不是直接外連下載）
+const emailGateOpen = ref(false)
 </script>
 
 <template>
@@ -189,7 +192,20 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
           </div>
 
           <!-- 購買按鈕 -->
-          <template v-if="product.price === 0 && product.status === 'available'">
+          <template v-if="product.price === 0 && product.status === 'available' && product.emailGate">
+            <button
+              type="button"
+              class="flex items-center justify-center gap-2 w-full py-4 bg-emerald-500 text-white font-bold text-lg rounded-2xl hover:bg-emerald-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 mb-3 cursor-pointer"
+              @click="emailGateOpen = true"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              {{ t('toolbox.detail.freeDownload') }}
+            </button>
+            <p class="text-center text-gray-400 text-xs mb-6">{{ t('toolbox.detail.emailGateNote') }}</p>
+          </template>
+          <template v-else-if="product.price === 0 && product.status === 'available'">
             <a
               :href="product.purchaseUrl"
               target="_blank"
@@ -342,5 +358,18 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
         </div>
       </div>
     </div>
+
+    <EmailGateModal
+      v-if="product"
+      :key="product.id"
+      v-model:open="emailGateOpen"
+      :title="pName(product)"
+      :description="pDesc(product)"
+      :destination-url="product.purchaseUrl"
+      :tracking-label="`免費工具箱：${pName(product)}`"
+      :storage-key="`toolbox-gate-${product.id}`"
+      :cta-label="t('toolbox.detail.freeDownload')"
+      :success-label="t('toolbox.detail.emailGateSuccess')"
+    />
   </div>
 </template>
