@@ -14,9 +14,9 @@ useHead({
     },
     { property: 'og:title', content: '數位行銷服務 | Zeona Studio - SEO、社群經營專家' },
     { property: 'og:description', content: '數據驅動的行銷策略，讓您的品牌被更多人看見。' },
-    { property: 'og:url', content: 'https://zeona.vercel.app/services/marketing' },
+    { property: 'og:url', content: 'https://www.zeona.co/services/marketing' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/services/marketing' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/services/marketing' }],
   script: [
     {
       type: 'application/ld+json',

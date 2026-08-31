@@ -43,11 +43,11 @@ useHead(() => {
       },
       { property: 'og:title', content: `${wTitle(portfolio)} | Zeona Studio` },
       { property: 'og:description', content: `${portfolio.shortDesc}。查看完整專案介紹與成果展示。` },
-      { property: 'og:url', content: `https://zeona.vercel.app/works/${portfolio.id}` },
+      { property: 'og:url', content: `https://www.zeona.co/works/${portfolio.id}` },
       { property: 'og:type', content: 'article' },
       { property: 'og:image', content: portfolio.image },
     ],
-    link: [{ rel: 'canonical', href: `https://zeona.vercel.app/works/${portfolio.id}` }],
+    link: [{ rel: 'canonical', href: `https://www.zeona.co/works/${portfolio.id}` }],
   }
 })
 

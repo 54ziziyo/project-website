@@ -10,9 +10,9 @@ useHead({
     },
     { property: 'og:title', content: '服務項目總覽 | Zeona Studio - 數位服務方案' },
     { property: 'og:description', content: '從網站到行銷，一站式數位解決方案助您品牌成長。' },
-    { property: 'og:url', content: 'https://zeona.vercel.app/services/all' },
+    { property: 'og:url', content: 'https://www.zeona.co/services/all' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/services/all' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/services/all' }],
   script: [
     {
       type: 'application/ld+json',
@@ -28,7 +28,7 @@ useHead({
             item: {
               '@type': 'Service',
               name: '網站開發服務',
-              url: 'https://zeona.vercel.app/services/website',
+              url: 'https://www.zeona.co/services/website',
             },
           },
           {
@@ -37,7 +37,7 @@ useHead({
             item: {
               '@type': 'Service',
               name: '數位行銷服務',
-              url: 'https://zeona.vercel.app/services/marketing',
+              url: 'https://www.zeona.co/services/marketing',
             },
           },
           {
@@ -46,7 +46,7 @@ useHead({
             item: {
               '@type': 'Service',
               name: '視覺設計服務',
-              url: 'https://zeona.vercel.app/services/design',
+              url: 'https://www.zeona.co/services/design',
             },
           },
         ],

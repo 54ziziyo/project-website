@@ -66,7 +66,7 @@ onBeforeUnmount(() => {
               </div>
             </div>
 
-            <div class="text-white leading-[1.2] tracking-tight">
+            <h1 class="text-white leading-[1.2] tracking-tight">
               <span class="hidden text-3xl md:text-5xl lg:text-4xl xl:text-6xl font-light mb-4">{{
                 $t('hero.kicker')
               }}</span>
@@ -76,9 +76,9 @@ onBeforeUnmount(() => {
               <span class="block text-2xl md:text-4xl lg:text-3xl xl:text-5xl font-medium mt-4 text-white/90">
                 {{ $t('hero.title2') }}
               </span>
-            </div>
+            </h1>
 
-            <h1
+            <p
               class="text-white/85 text-base md:text-xl max-w-2xl mt-8 mb-12 leading-relaxed font-normal mx-auto lg:mx-0"
             >
               {{ $t('hero.bodyPre') }}
@@ -86,7 +86,7 @@ onBeforeUnmount(() => {
               {{ $t('hero.bodyMid') }}
               <span class="text-white font-bold border-b-2 border-white/40 pb-1">{{ $t('hero.bodyCustom') }}</span
               >{{ $t('hero.bodyPost') }}
-            </h1>
+            </p>
 
             <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
               <NuxtLink

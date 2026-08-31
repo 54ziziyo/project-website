@@ -10,12 +10,12 @@ useHead({
     },
     { property: 'og:title', content: '聯繫我 | Zeona Studio - 填寫表單，聊聊你的需求' },
     { property: 'og:description', content: '填寫表單留下需求，我會盡快與你聯繫，也可以加 LINE 直接聊聊。' },
-    { property: 'og:url', content: 'https://zeona.vercel.app/contact' },
+    { property: 'og:url', content: 'https://www.zeona.co/contact' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
+    { property: 'og:image', content: 'https://www.zeona.co/og-cover.jpg' },
     { name: 'theme-color', content: '#8782FF' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/contact' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/contact' }],
   script: [
     {
       type: 'application/ld+json',
@@ -24,7 +24,7 @@ useHead({
         '@type': 'ContactPage',
         name: '聯繫 Zeona Studio',
         description: '填寫表單聯繫，洽談客製化軟體開發、網站架設與設計行銷服務',
-        url: 'https://zeona.vercel.app/contact',
+        url: 'https://www.zeona.co/contact',
         mainEntity: {
           '@type': 'Organization',
           name: 'Zeona Studio',

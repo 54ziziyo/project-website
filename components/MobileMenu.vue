@@ -30,6 +30,7 @@ const navItems = computed(() => [
     sub: t('nav.services'),
     no: '03',
     children: [
+      { title: t('nav.servicesAll'), href: localePath('/services/all') },
       { title: t('nav.servicesSoftware'), href: localePath('/services/website') },
       { title: t('nav.servicesDesign'), href: localePath('/services/design') },
       { title: t('nav.servicesMarketing'), href: localePath('/services/marketing') },

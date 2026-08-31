@@ -47,6 +47,11 @@ const switchLocalePath = useSwitchLocalePath()
 
 const components = computed(() => [
   {
+    title: t('nav.servicesAll'),
+    href: localePath('/services/all'),
+    description: t('nav.servicesAllDesc'),
+  },
+  {
     title: t('nav.servicesSoftware'),
     href: localePath('/services/website'),
     description: t('nav.servicesSoftwareDesc'),

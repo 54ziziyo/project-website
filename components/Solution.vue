@@ -36,7 +36,7 @@ onMounted(() => {
     <div class="absolute md:-top-[20%] -right-[70%] pointer-events-none">
       <img
         src="../assets/images/round-purple.svg"
-        alt="裝飾圓形圖案"
+        alt=""
         title="Zeona Studio 網站裝飾元素"
         class="max-w-none"
         width="1500"

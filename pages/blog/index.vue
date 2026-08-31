@@ -66,10 +66,10 @@ useHead(() => ({
     { property: 'og:title', content: t('blog.metaTitle') },
     { property: 'og:description', content: t('blog.metaDesc') },
     { property: 'og:type', content: 'blog' },
-    { property: 'og:url', content: 'https://zeona.vercel.app/blog' },
-    { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
+    { property: 'og:url', content: 'https://www.zeona.co/blog' },
+    { property: 'og:image', content: 'https://www.zeona.co/og-cover.jpg' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/blog' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/blog' }],
 }))
 
 // 動畫控制

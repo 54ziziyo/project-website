@@ -10,7 +10,7 @@ const servicesPrice = computed(
     <div class="absolute pointer-events-none -z-10 opacity-30 top-0 left-0">
       <img
         src="@/assets/images/round-purple.svg"
-        alt="裝飾圓形圖案"
+        alt=""
         title="Zeona Studio 網站裝飾元素"
         class="max-w-none transform -translate-x-1/2 -translate-y-1/4"
         width="1500"

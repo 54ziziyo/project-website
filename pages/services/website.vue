@@ -15,9 +15,9 @@ useHead({
     },
     { property: 'og:title', content: '軟體開發服務 | Zeona Studio - 客製化網站、AI 工具與自動化開發' },
     { property: 'og:description', content: '網站、AI 工具、LINE 機器人、自動化流程，依需求量身打造。' },
-    { property: 'og:url', content: 'https://zeona.vercel.app/services/website' },
+    { property: 'og:url', content: 'https://www.zeona.co/services/website' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/services/website' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/services/website' }],
   script: [
     {
       type: 'application/ld+json',

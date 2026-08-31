@@ -10,9 +10,9 @@ useHead(() => ({
     { name: 'description', content: t('designPrice.metaDesc') },
     { property: 'og:title', content: t('designPrice.metaTitle') },
     { property: 'og:description', content: t('designPrice.sub2') },
-    { property: 'og:url', content: 'https://zeona.vercel.app/services/design' },
+    { property: 'og:url', content: 'https://www.zeona.co/services/design' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/services/design' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/services/design' }],
   script: [
     {
       type: 'application/ld+json',

@@ -48,6 +48,7 @@ const relatedProducts = computed(() =>
 
 useHead(() => {
   if (!product.value) return {}
+  const canonicalUrl = `https://www.zeona.co/toolbox/${product.value.id}`
   return {
     title: `${pName(product.value)} | Zeona Studio`,
     meta: [
@@ -56,6 +57,38 @@ useHead(() => {
       { property: 'og:description', content: pDesc(product.value) },
       { property: 'og:image', content: pCoverImage(product.value) },
       { property: 'og:type', content: 'product' },
+      { property: 'og:url', content: canonicalUrl },
+    ],
+    link: [{ rel: 'canonical', href: canonicalUrl }],
+  }
+})
+
+// Product Schema (JSON-LD) - 給AI/搜尋引擎讀商品資訊用
+useHead(() => {
+  if (!product.value) return {}
+  const p = product.value
+  return {
+    script: [
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: pName(p),
+          description: pDesc(p),
+          image: pCoverImage(p),
+          category: p.category,
+          brand: { '@type': 'Brand', name: 'Zeona Studio' },
+          offers: {
+            '@type': 'Offer',
+            url: `https://www.zeona.co/toolbox/${p.id}`,
+            priceCurrency: 'TWD',
+            price: p.price,
+            availability:
+              p.status === 'available' ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+          },
+        }),
+      },
     ],
   }
 })

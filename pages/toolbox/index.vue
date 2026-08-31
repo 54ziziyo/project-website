@@ -11,9 +11,9 @@ useHead(() => ({
     { name: 'description', content: t('toolbox.metaDesc') },
     { property: 'og:title', content: t('toolbox.metaTitle') },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://zeona.vercel.app/toolbox' },
+    { property: 'og:url', content: 'https://www.zeona.co/toolbox' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/toolbox' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/toolbox' }],
 }))
 
 const isVisible = ref(false)

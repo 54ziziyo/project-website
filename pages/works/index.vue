@@ -16,11 +16,11 @@ useHead(() => ({
     { name: 'description', content: t('works.metaDesc') },
     { property: 'og:title', content: t('works.metaTitle') },
     { property: 'og:description', content: t('works.sub') },
-    { property: 'og:url', content: 'https://zeona.vercel.app/works' },
+    { property: 'og:url', content: 'https://www.zeona.co/works' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:image', content: 'https://zeona.vercel.app/og-cover.jpg' },
+    { property: 'og:image', content: 'https://www.zeona.co/og-cover.jpg' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zeona.vercel.app/works' }],
+  link: [{ rel: 'canonical', href: 'https://www.zeona.co/works' }],
   script: [
     {
       type: 'application/ld+json',
@@ -29,7 +29,7 @@ useHead(() => ({
         '@type': 'CollectionPage',
         name: t('works.metaTitle'),
         description: t('works.sub'),
-        url: 'https://zeona.vercel.app/works',
+        url: 'https://www.zeona.co/works',
         mainEntity: {
           '@type': 'ItemList',
           name: 'Zeona Studio',
