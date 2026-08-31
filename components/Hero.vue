@@ -158,7 +158,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <GuideModal v-model:open="guideModalOpen" />
+    <EmailGateModal v-model:open="guideModalOpen" destination-url="https://zeona-studio--89izure.gamma.site/" />
   </section>
 </template>
 

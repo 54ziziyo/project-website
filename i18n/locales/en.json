@@ -688,6 +688,8 @@
       "save": "Save NT${amount}",
       "freeDownload": "Use for free",
       "freeNote": "Completely free, no payment needed",
+      "emailGateNote": "Enter your name and email to get the free download link",
+      "emailGateSuccess": "Submitted — click below to get your download link",
       "comingSoon": "Coming soon — stay tuned",
       "notifyPre": "Want a launch alert? Feel free to",
       "notifyLink": "contact me",

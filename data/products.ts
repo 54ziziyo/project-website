@@ -18,6 +18,9 @@ export interface Product {
   // 若此商品的內容透過 /kit 序號解鎖交付，填對應的 kit slug（= server/utils/kitProducts.ts 的 kit）。
   // 有填才會在詳情頁顯示「已購買，前往商品」並能用記住的序號直接跳轉。
   kitSlug?: string
+  // 免費商品是否要先收email才能拿到連結（詳情頁改成彈窗表單，送出後才顯示purchaseUrl）。
+  // 只用在我們自己的資源；typeless、pikbest這類聯盟連結不要設，會傷害聯盟轉換率。
+  emailGate?: boolean
 }
 
 export const productCategories = ['全部', 'Prompt 提示詞', 'Notion 模板', 'Canva 模板', '素材工具包'] as const
@@ -306,6 +309,7 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
       '按流派篩選，快速找到你最想算的那一種',
     ],
     purchaseUrl: '/kit/ai-fortune-telling',
+    emailGate: true,
     fileType: '免費提示詞庫（線上版）',
     tags: ['AI算命', '八字', '占星', '靈數', '免費'],
     isNew: true,
@@ -345,6 +349,7 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
       '線上閱讀版，打開即用、免費開放',
     ],
     purchaseUrl: '/kit/workplace-chatgpt-50-scenarios',
+    emailGate: true,
     fileType: '線上閱讀版',
     tags: ['上班族', 'ChatGPT', '職場', 'Email', '週報'],
     isBestSeller: false,
@@ -387,6 +392,7 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
       '免費下載，搭配〈GEO 完整教學〉部落格文一起看',
     ],
     purchaseUrl: 'https://app.notion.com/p/376cf51200d281d1a426d4d64e06e6a2',
+    emailGate: true,
     fileType: 'Notion 模板',
     tags: ['GEO', 'AI搜尋優化', '提示詞', 'ChatGPT', '免費'],
     isNew: true,
@@ -425,6 +431,7 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
       '無需粉絲基礎也能引爆互動',
     ],
     purchaseUrl: '/kit/hook-formula-200',
+    emailGate: true,
     fileType: '線上閱讀版',
     tags: ['Threads', '社群', '文案', '流量', '鉤子'],
     status: 'available',
@@ -471,6 +478,7 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
       '番茄鐘整合 + 自動記錄完成數',
     ],
     purchaseUrl: 'https://app.notion.com/p/P-376cf51200d281ffb2abfda49be3ee56?source=copy_link',
+    emailGate: true,
     fileType: 'Notion 模板',
     tags: ['Notion', 'ADHD', '專注', '生產力', '數位手帳'],
     status: 'available',
