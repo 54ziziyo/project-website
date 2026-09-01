@@ -21,6 +21,9 @@ export interface Product {
   // 免費商品是否要先收email才能拿到連結（詳情頁改成彈窗表單，送出後才顯示purchaseUrl）。
   // 只用在我們自己的資源；typeless、pikbest這類聯盟連結不要設，會傷害聯盟轉換率。
   emailGate?: boolean
+  // 詳情頁「保障說明」三格內容，依商品實際交付方式客製化（不是每個商品都透過Gumroad付費購買）。
+  // 不填則 fallback 回原本的Gumroad付款文案（僅適用真的透過Gumroad付費的商品）。
+  trustBadges?: { icon: string; title: string; desc: string }[]
 }
 
 export const productCategories = ['全部', 'Prompt 提示詞', 'Notion 模板', 'Canva 模板', '素材工具包', '工具推薦'] as const
@@ -93,6 +96,11 @@ export const products: Product[] = [
     isBestSeller: true,
     status: 'available',
     kitSlug: 'ai-personal-brand',
+    trustBadges: [
+      { icon: '🔒', title: '安全付款', desc: 'Gumroad加密付款，支援信用卡' },
+      { icon: '⚡', title: '付款即解鎖', desc: '付款完成後用序號立即解鎖線上閱讀版' },
+      { icon: '♾️', title: '序號永久有效', desc: '之後都能用同一組序號重新登入查看' },
+    ],
   },
 
   // 2
@@ -266,6 +274,11 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     tags: ['設計素材', 'Pikbest', 'PPT模板', '免版稅音樂', '電商素材', '免費'],
     isNew: true,
     status: 'available',
+    trustBadges: [
+      { icon: '🔗', title: '免費瀏覽', desc: '不用註冊付費，點連結就能逛全站素材' },
+      { icon: '⚡', title: '免費試用', desc: '免費方案就能下載試用，喜歡再考慮升級' },
+      { icon: '🔄', title: '持續更新', desc: '素材天天更新，不是單次購買的檔案' },
+    ],
   },
 
   // 3.6
@@ -310,7 +323,7 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
 用我的傳送門進去，輸入粉絲優惠碼「zeona」，除了全館折扣優惠，目前註冊會員綁定 LINE 還會額外贈送折扣金。
 
 如果你也跟我一樣訂閱一堆、又不想花冤枉錢，很推薦上去看看。`,
-    coverImage: '/images/subsubman/00-toolbox-cover.png',
+    coverImage: '/images/subsubman/00-toolbox-cover-v2.png',
     features: [
       'Netflix、Disney+、Spotify、ChatGPT、Gemini 等熱門訂閱集中管理',
       'Gemini Pro 限時特價 NT$490／18個月，會員也能買、照比例退款',
@@ -324,6 +337,11 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     tags: ['訂閱管理', 'Netflix', 'ChatGPT', 'Gemini', '省錢工具', '免費'],
     isNew: true,
     status: 'available',
+    trustBadges: [
+      { icon: '💬', title: '真人客服', desc: 'LINE真人服務，選方案、續約都有人協助' },
+      { icon: '⚡', title: '免費諮詢', desc: '點連結免費諮詢方案，不強迫立即付費' },
+      { icon: '🔄', title: '彈性訂閱', desc: '依需求調整訂閱項目，不綁死單一方案' },
+    ],
   },
 
   // 4
@@ -372,6 +390,11 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     tags: ['AI算命', '八字', '占星', '靈數', '免費'],
     isNew: true,
     status: 'available',
+    trustBadges: [
+      { icon: '📧', title: '填Email即可取得', desc: '免付款，填姓名Email送出後立即拿到連結' },
+      { icon: '🔒', title: '資料安全', desc: 'reCAPTCHA驗證送出，不會用作其他用途' },
+      { icon: '♾️', title: '永久保存', desc: '連結存好，之後可以隨時回來查看內容' },
+    ],
   },
 
   // 5
@@ -412,6 +435,11 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     tags: ['上班族', 'ChatGPT', '職場', 'Email', '週報'],
     isBestSeller: false,
     status: 'available',
+    trustBadges: [
+      { icon: '📧', title: '填Email即可取得', desc: '免付款，填姓名Email送出後立即拿到連結' },
+      { icon: '🔒', title: '資料安全', desc: 'reCAPTCHA驗證送出，不會用作其他用途' },
+      { icon: '♾️', title: '永久保存', desc: '連結存好，之後可以隨時回來查看內容' },
+    ],
   },
 
   // 6
@@ -455,6 +483,11 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     tags: ['GEO', 'AI搜尋優化', '提示詞', 'ChatGPT', '免費'],
     isNew: true,
     status: 'available',
+    trustBadges: [
+      { icon: '📧', title: '填Email即可取得', desc: '免付款，填姓名Email送出後立即拿到連結' },
+      { icon: '🔒', title: '資料安全', desc: 'reCAPTCHA驗證送出，不會用作其他用途' },
+      { icon: '♾️', title: '永久保存', desc: '連結存好，之後可以隨時回來查看內容' },
+    ],
   },
 
   // 7
@@ -493,6 +526,11 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     fileType: '線上閱讀版',
     tags: ['Threads', '社群', '文案', '流量', '鉤子'],
     status: 'available',
+    trustBadges: [
+      { icon: '📧', title: '填Email即可取得', desc: '免付款，填姓名Email送出後立即拿到連結' },
+      { icon: '🔒', title: '資料安全', desc: 'reCAPTCHA驗證送出，不會用作其他用途' },
+      { icon: '♾️', title: '永久保存', desc: '連結存好，之後可以隨時回來查看內容' },
+    ],
   },
 
   // 8
@@ -540,6 +578,11 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     fileType: 'Notion 模板',
     tags: ['Notion', 'ADHD', '專注', '生產力', '數位手帳'],
     status: 'available',
+    trustBadges: [
+      { icon: '📧', title: '填Email即可取得', desc: '免付款，填姓名Email送出後立即拿到連結' },
+      { icon: '🔒', title: '資料安全', desc: 'reCAPTCHA驗證送出，不會用作其他用途' },
+      { icon: '♾️', title: '永久保存', desc: '連結存好，之後可以隨時回來查看內容' },
+    ],
   },
 
   // 9
@@ -580,5 +623,10 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     tags: ['Canva', '個人品牌', 'IG', '視覺設計', 'Dark Mode'],
     isNew: true,
     status: 'coming-soon',
+    trustBadges: [
+      { icon: '🔒', title: '安全付款', desc: 'Gumroad加密付款，支援信用卡' },
+      { icon: '⚡', title: '付款即解鎖', desc: '付款完成後立即收到Canva模板連結' },
+      { icon: '🎨', title: '無限修改', desc: '購買後可無限次修改套用，商業授權' },
+    ],
   },
 ]

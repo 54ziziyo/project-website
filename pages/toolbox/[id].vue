@@ -100,6 +100,15 @@ onMounted(() => setTimeout(() => (isVisible.value = true), 80))
 
 // 免費品若標記 emailGate，改成先跳彈窗收email，送出後才給 purchaseUrl（而不是直接外連下載）
 const emailGateOpen = ref(false)
+
+// 詳情頁「保障說明」三格：優先用商品自訂的 trustBadges（依實際交付方式客製化文案），
+// 沒填則 fallback 回原本的Gumroad付款文案（僅適用真的透過Gumroad付費的商品）。
+const defaultTrustBadges = [
+  { icon: '🔒', title: t('toolbox.detail.secureTitle'), desc: t('toolbox.detail.secureDesc') },
+  { icon: '⚡', title: t('toolbox.detail.instantTitle'), desc: t('toolbox.detail.instantDesc') },
+  { icon: '♾️', title: t('toolbox.detail.foreverTitle'), desc: t('toolbox.detail.foreverDesc') },
+]
+const trustBadgeItems = computed(() => product.value?.trustBadges ?? defaultTrustBadges)
 </script>
 
 <template>
@@ -305,14 +314,10 @@ const emailGateOpen = ref(false)
         </div>
       </div>
 
-      <!-- 保障說明 -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
+      <!-- 保障說明：內容依商品實際交付方式客製化（見 data/products.ts 的 trustBadges），coming-soon商品還不能購買所以不顯示 -->
+      <div v-if="product.status === 'available'" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
         <div
-          v-for="item in [
-            { icon: '🔒', title: t('toolbox.detail.secureTitle'), desc: t('toolbox.detail.secureDesc') },
-            { icon: '⚡', title: t('toolbox.detail.instantTitle'), desc: t('toolbox.detail.instantDesc') },
-            { icon: '♾️', title: t('toolbox.detail.foreverTitle'), desc: t('toolbox.detail.foreverDesc') },
-          ]"
+          v-for="item in trustBadgeItems"
           :key="item.title"
           class="flex items-start gap-3 bg-gray-50 rounded-xl p-4"
         >
