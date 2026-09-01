@@ -45,6 +45,88 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'runway-solaris-interface-world-model-2026',
+    title: 'Runway Solaris：軟體介面不用寫死程式了，用「生成」的——白話文帶你看懂',
+    category: 'AI 人工智慧',
+    tags: ['Runway', 'Solaris', 'AI', '世界模型', 'AI影片生成'],
+    excerpt:
+      'Runway最新公布的Solaris，把整個App介面當成一部會即時回應你的影片來「生成」，不是先寫死程式碼再顯示畫面。這篇用白話文帶你看懂它到底在做什麼、demo長怎樣、跟現有做法差在哪，還有官方自己坦承現在還做不到的地方。',
+    titleEn:
+      "Runway's Solaris: Software Interfaces Generated Like Video, Not Coded — Explained Simply",
+    excerptEn:
+      "Runway just announced Solaris, which treats an entire app interface like a video that responds to you in real time, instead of running on pre-written code. Here's a plain-language walkthrough of what it actually does, what the demos look like, how it differs from existing approaches, and the limitations Runway itself admits it hasn't solved yet.",
+    tagsEn: ['Runway', 'Solaris', 'AI', 'World Model', 'AI Video Generation'],
+    coverImage:
+      'https://d3phaj0sisr2ct.cloudfront.net/site/images/sanity/2026/08/082626-solaris-blogpost-thumbnail-2fe8ad11-4846-4ba2-bbbf-a8db3feaa725.png',
+    coverImageEn:
+      'https://d3phaj0sisr2ct.cloudfront.net/site/images/sanity/2026/08/082626-solaris-blogpost-thumbnail-2fe8ad11-4846-4ba2-bbbf-a8db3feaa725.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-09-01',
+    updatedAt: '2026-09-01',
+    featured: false,
+    seo: {
+      title: 'Runway Solaris是什麼？介面即時生成技術白話文解釋 | Zeona Studio',
+      description:
+        'Runway發表Solaris「介面世界模型」，把App畫面當成即時生成的影片，不用先寫程式碼。整理它的原理、demo範例、與傳統做法的差異，以及官方公開的限制與使用者調查結果。',
+      keywords: 'Runway Solaris, 介面世界模型, AI生成介面, World Model, AI軟體開發, Runway AI, Gen-4.5',
+      ogImage:
+        'https://d3phaj0sisr2ct.cloudfront.net/site/images/sanity/2026/08/082626-solaris-blogpost-thumbnail-2fe8ad11-4846-4ba2-bbbf-a8db3feaa725.png',
+    },
+    seoEn: {
+      title: "What Is Runway's Solaris? Real-Time Interface Generation Explained | Zeona Studio",
+      description:
+        "Runway announced Solaris, an 'Interface World Model' that generates app screens like real-time video instead of running pre-written code. What it does, demo examples, how it differs from prior approaches, and the limitations and user study results Runway shared.",
+      keywords:
+        'Runway Solaris, interface world model, AI-generated interfaces, World Model, AI software, Runway AI, Gen-4.5',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">你平常用的App或網站，畫面長什麼樣子，其實老早就被工程師寫死在程式碼裡了——按下這顆按鈕，就跳出那個畫面，邏輯是固定的。Runway最近發表的<strong>Solaris</strong>想做一件很不一樣的事：<strong>畫面不是寫出來的，是「生成」出來的，而且是即時生成，你每動一下，它就重新畫一次給你看。</strong></p>
+
+      <p>聽起來有點抽象，這篇用白話文帶你看懂它到底在幹嘛。</p>
+
+      <h2>Solaris到底是什麼？</h2>
+      <p>Runway把它稱作「介面世界模型」（Interface World Model）。簡單說：<strong>它不是把整個App當成一堆程式碼在跑，而是把整個介面當成一部影片在「畫」</strong>——你在畫面上點擊、拖曳的每一個動作，都會變成新的一幀畫面，即時生成給你看，而不是去執行某一段寫死的程式邏輯。</p>
+      <p>技術上，這是拿Runway自家的Gen-4.5影片模型改造來的：讓它能接收你的點擊、拖曳當作輸入條件，再一幀接一幀往下生成畫面，同時盡量讓整段過程看起來連貫（官方說目前能撐住720p畫質的完整互動過程）。</p>
+
+      <video controls preload="metadata" poster="https://image.mux.com/A4JAiWI01016Z62NJblaeqswkY1T2Ivuae00PLNRu2T3Ks/thumbnail.webp" style="width:100%;border-radius:8px;margin:20px 0;">
+        <source src="https://stream.mux.com/A4JAiWI01016Z62NJblaeqswkY1T2Ivuae00PLNRu2T3Ks/highest.mp4" type="video/mp4" />
+      </video>
+      <p style="font-size:13px;color:#94a3b8;text-align:center;margin-top:-10px;">官方demo：同一個起始畫面（一張X光手掌），對相同的操作動作卻能給出不同的回應。（影片來源：Runway官網）</p>
+
+      <h2>跟以前的做法差在哪？</h2>
+      <p>傳統的做法是：設計師畫好介面稿，工程師再把它「翻譯」成程式碼去執行。這中間會漏掉很多細節，而且畫面能怎麼互動，全部要事先寫好——使用者做了「沒被寫進程式裡」的操作，畫面就是沒反應或直接出錯。</p>
+      <p>Solaris跳過「翻譯成程式碼」這一步，直接用影片模型把畫面生出來。官方講了一個很直覺的例子：你可以直接跟它說「把這張桌子移開，讓我看看後面長怎樣」，它就會像真的在動鏡頭一樣，生成出你要的畫面，而不是因為「這個功能沒被寫進程式」就沒反應。反光會隨光線改變、物件被移動時的反應也比較自然——因為這些本來就是影片模型最擅長生成的東西。</p>
+
+      <h2>為什麼能做到「沒寫過的操作」也能回應？</h2>
+      <p>背後其實是兩個模型分工：<strong>一個語言模型負責「理解你想做什麼」，另一個影片模型負責「把畫面畫出來」。</strong>語言模型判斷完你的意圖之後，交給影片模型即時生成對應的畫面回應，所以碰到工程師沒預先寫好的操作，也不會直接卡住或報錯。</p>
+
+      <h2>官方自己做的測試結果</h2>
+      <p>Runway也老實秀出了現有做法的極限：他們讓幾個語言模型「只看一張畫面截圖，重新做出這個介面」，結果很一致——畫面越接近真實照片（相對於單純的網頁、簡報這種規則性強的畫面），模型能重建出來的相似度就掉得越明顯，代表現在「先理解畫面、再生成程式碼」這條路本身就有資訊漏失的天花板。</p>
+      <img src="https://d3phaj0sisr2ct.cloudfront.net/site/images/sanity/2026/08/image-24-5ae5c80a-9697-4ae5-8b74-b80b857483b2.png" alt="不同AI模型從單張截圖重建介面的相似度比較，畫面越接近真實照片，重建相似度掉得越明顯" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>他們也找了250人做了一場人力評比，總共蒐集7,500次回答，讓大家比較Solaris生成的互動、跟用語言模型（對照組是Claude Opus 5）產生的互動結果：「哪個比較照指令做事」這題，62%的人選Solaris；「哪個在畫面裡表現得比較自然」這題，72%的人選Solaris。</p>
+      <img src="https://d3phaj0sisr2ct.cloudfront.net/site/images/sanity/2026/08/image-25-d4f3e428-eecc-4752-b5cd-30b7898ace03.png" alt="250人使用者調查：62%認為Solaris更能照指令做事，72%認為Solaris在畫面中表現更自然" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>還做不到什麼？（官方自己講的）</h2>
+      <ul>
+        <li><strong>文字顯示還不穩：</strong>即時生成畫面時，要讓文字清楚、不變形，目前還是沒解決的難題。</li>
+        <li><strong>可能講得很篤定但講錯：</strong>畢竟是「生成」出來的畫面，需要有可靠的參考資料當依據，不然容易生出看起來很像真的、但其實是錯的內容。</li>
+        <li><strong>長時間互動的穩定度還要加強：</strong>操作時間一拉長，畫面連貫性容易跑掉。</li>
+        <li><strong>無障礙功能還沒做：</strong>跟螢幕閱讀器、無障礙API的整合都還在等。</li>
+      </ul>
+
+      <h2>什麼時候能用？</h2>
+      <p>目前還沒有公開上線的時間表，官網開放了一個「搶先體驗」申請表單給有興趣的人跟合作夥伴登記。</p>
+
+      <hr>
+
+      <h2>一句話總結</h2>
+      <p>如果Solaris這條路真的走得通，以後的「軟體」可能不再是「工程師先做好一整套固定畫面，大家都用同一套」，而是每個人看到的介面都是當下即時生成、依你的操作長出來的版本——有點像「軟體」本身也開始像AI影片一樣被「生」出來，而不是被「寫」出來。目前還在早期階段，缺點官方也講得很坦白，但這個方向本身，值得持續關注。</p>
+
+      <p style="font-size:14px;color:#64748b;">資料來源：<a href="https://runway.com/news/research/introducing-solaris" target="_blank" rel="noopener">Runway官網——Introducing Solaris</a>，文中圖片與影片皆為Runway官方素材，直接連結自官網。</p>
+    `,
+  },
+  {
     id: 'subsubman-subscription-manager-guide',
     title: '訂閱一堆記不住、續約常忘記？訂閱管家幫你集中管理 Netflix、ChatGPT、Gemini',
     category: 'AI 人工智慧',
