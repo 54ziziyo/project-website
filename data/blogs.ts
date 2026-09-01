@@ -45,6 +45,90 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'subsubman-subscription-manager-guide',
+    title: '訂閱一堆記不住、續約常忘記？訂閱管家幫你集中管理 Netflix、ChatGPT、Gemini',
+    category: 'AI 人工智慧',
+    tags: ['訂閱管理', 'Netflix', 'ChatGPT', 'Gemini', '省錢工具', '訂閱管家'],
+    excerpt:
+      'Netflix、Disney+、Spotify、ChatGPT、Gemini訂閱一堆記不住、續約常忘記？整理「訂閱管家」使用教學：訂閱總覽、到期提醒、官方價差試算、真人LINE客服，附Gemini Pro限時特價與粉絲優惠碼。（內含我的聯盟行銷連結）',
+    titleEn:
+      'Too Many Subscriptions to Track? SubSubMan Manages Your Netflix, ChatGPT and Gemini in One Place',
+    excerptEn:
+      "Netflix, Disney+, Spotify, ChatGPT, Gemini — losing track of renewal dates and getting charged for things you forgot you had? A walkthrough of SubSubMan: subscription overview, renewal reminders, official-vs-plan price calculator, and real human support on LINE, plus a limited-time Gemini Pro deal and a fan discount code. (Includes my affiliate link)",
+    tagsEn: ['Subscription Management', 'Netflix', 'ChatGPT', 'Gemini', 'Money Saving', 'SubSubMan'],
+    coverImage: 'https://www.zeona.co/images/subsubman/01-homepage.png',
+    coverImageEn: 'https://www.zeona.co/images/subsubman/01-homepage.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-09-01',
+    updatedAt: '2026-09-01',
+    featured: false,
+    seo: {
+      title: '訂閱管家使用教學：Netflix、ChatGPT、Gemini訂閱集中管理 | Zeona Studio',
+      description:
+        '訂閱管家完整教學：Netflix、Disney+、Spotify、ChatGPT、Gemini等熱門訂閱集中管理，到期提醒、官方價差試算、真人LINE客服，附Gemini Pro限時特價NT$490與粉絲優惠碼zeona。',
+      keywords: '訂閱管家, subsubman, Netflix訂閱, ChatGPT訂閱, Gemini Pro特價, 訂閱管理, 省錢工具, 訂閱代管',
+      ogImage: 'https://www.zeona.co/images/subsubman/01-homepage.png',
+    },
+    seoEn: {
+      title: 'SubSubMan Guide: Manage Netflix, ChatGPT and Gemini Subscriptions in One Place | Zeona Studio',
+      description:
+        'A full walkthrough of SubSubMan — a subscription concierge covering Netflix, Disney+, Spotify, ChatGPT, Gemini and more, with renewal reminders, a price-comparison calculator, and real human support on LINE. Includes a limited-time Gemini Pro deal and fan discount code.',
+      keywords:
+        'SubSubMan, subscription manager, Netflix subscription, ChatGPT subscription, Gemini Pro deal, subscription management, money saving',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">你是不是也訂閱了一堆東西——Netflix、Disney+、Spotify、ChatGPT——結果從來搞不清楚哪個快到期、續約又常常忘記，等到被扣款才發現「啊這個我根本沒在用」？</p>
+
+      <p><strong>訂閱管家</strong>就是在解決這個問題：把你會用到的影音、音樂、AI熱門訂閱集中在一個地方管理，從挑方案、付款啟用，到到期前提醒、續約協助，全部交給專人處理。</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://subsubman.com/?ref=zeona" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">免費諮詢 訂閱管家</a></p>
+
+      <img src="/images/subsubman/01-homepage.png" alt="訂閱管家官網首頁，你的數位訂閱交給專業管家" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>有哪些訂閱服務可以選？</h2>
+      <p>常見的影音、音樂平台都沒問題：Netflix、Disney+、HBO Max、YouTube Premium、Spotify、KKBOX、iQIYI愛奇藝、ChatGPT、Gemini等熱門品牌一次整理，不確定怎麼選也可以直接告訴管家你的需求，協助你挑合適方案。</p>
+      <img src="/images/subsubman/02-streaming-brands.png" alt="訂閱管家可選的影音音樂品牌，Netflix、Disney+、YouTube、Spotify等熱門串流一次整理" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>尤其現在，Gemini Pro 限時特價</h2>
+      <p>Gemini Pro限時特價<strong>NT$490，可以使用18個月</strong>（Google AI + 5TB雲端空間一次升級），而且就算你已經是Gemini會員也能買，會照比例退款給你，換算下來一個月不到30元。</p>
+      <img src="/images/subsubman/03-gemini-pro-deal.png" alt="Gemini Pro限時特價NT$490，可使用18個月，含5TB雲端空間" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>加入會員中心，訂閱更從容</h2>
+      <ul>
+        <li><strong>訂閱總覽：</strong>剩餘天數與到期日一次看清楚，不用自己一個一個記</li>
+        <li><strong>安全查看：</strong>集中管理每項服務的使用資訊</li>
+        <li><strong>續約管理：</strong>快速找到需要延長的訂閱，不會等到斷訂才驚覺</li>
+      </ul>
+      <img src="/images/subsubman/04-member-center.png" alt="訂閱管家會員中心：訂閱總覽、安全查看、續約管理三大功能" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>官方價跟訂閱管家的價差，直接幫你算</h2>
+      <p>不用自己拿計算機比價，網站內建價格試算工具，三步驟就能看懂每月花費差多少。</p>
+      <img src="/images/subsubman/05-price-calculator-intro.png" alt="訂閱費用試算：選擇服務、設定方案、查看價差三步驟" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>先勾選你目前有訂閱的服務、填入目前每月實際付多少：</p>
+      <img src="/images/subsubman/06-select-subscriptions.png" alt="勾選目前訂閱的服務並填入每月實際付費金額" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <p>接著就會列出「原本每月花多少」對比「改用訂閱管家方案後每月花多少」，每項服務的價差跟預估年省金額都列得清清楚楚。以我試算的例子，同樣訂閱ChatGPT、Gemini、Netflix、Spotify等8項服務，每月可以少花將近NT$1,874，一年下來省超過兩萬。</p>
+      <img src="/images/subsubman/07-savings-comparison.png" alt="試算結果：每月可以少花NT$1,874，每項服務詳細價差列表" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>真人客服，不怕出問題找不到人</h2>
+      <p>官方LINE帳號已經認證，超過8,700人加了好友，不管是選方案還是售後問題都有真人客服協助，不是丟給你一個帳號密碼就沒下文。</p>
+      <img src="/images/subsubman/08-line-support.png" alt="訂閱管家官方LINE帳號，已認證，好友人數8731，提供真人客服聊天" style="display:block;max-width:280px;width:100%;margin:20px auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.1);" />
+
+      <p>從挑方案、付款啟用到售後協助，每一步都有人在背後把關：</p>
+      <img src="/images/subsubman/09-service-steps.png" alt="訂閱服務不只幫你開通：方案建議、快速開通、售後協助三步驟" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <hr>
+
+      <h2>一句話總結</h2>
+      <p>如果你也跟我一樣訂閱一堆、又不想花冤枉錢，很推薦上去看看。用我的傳送門進去，輸入粉絲優惠碼「<strong>zeona</strong>」，除了全館折扣優惠，目前註冊會員綁定LINE還會額外贈送折扣金。</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://subsubman.com/?ref=zeona" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">➡️ 前往我的專屬傳送門</a></p>
+
+      <p style="font-size:14px;color:#64748b;">聲明：本文包含我的訂閱管家聯盟行銷連結，透過此連結訂閱或升級方案，我可能會獲得對應分潤，不會影響你的購買價格，也不影響我上面的使用心得與介紹內容。</p>
+    `,
+  },
+  {
     id: 'cursor-ai-agent-social-engineering-hack-2026',
     title: '「這是測試環境」四個字，讓AI自己開後門：Cursor遭駭事件的資安啟示',
     category: 'AI 人工智慧',

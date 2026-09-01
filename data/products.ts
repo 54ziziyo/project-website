@@ -23,7 +23,7 @@ export interface Product {
   emailGate?: boolean
 }
 
-export const productCategories = ['全部', 'Prompt 提示詞', 'Notion 模板', 'Canva 模板', '素材工具包'] as const
+export const productCategories = ['全部', 'Prompt 提示詞', 'Notion 模板', 'Canva 模板', '素材工具包', '工具推薦'] as const
 export type ProductCategory = (typeof productCategories)[number]
 
 export const products: Product[] = [
@@ -264,6 +264,64 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     purchaseUrl: 'https://zh.pikbest.com/?affiliate_code=416a79b9850d106',
     fileType: '免費工具（外部連結）',
     tags: ['設計素材', 'Pikbest', 'PPT模板', '免版稅音樂', '電商素材', '免費'],
+    isNew: true,
+    status: 'available',
+  },
+
+  // 3.6
+  {
+    id: 'subsubman-subscription-manager',
+    name: '訂閱一堆記不住？訂閱管家幫你集中管理 Netflix、ChatGPT、Gemini 全部訂閱',
+    category: '工具推薦',
+    price: 0,
+    description:
+      'Netflix、Disney+、Spotify、ChatGPT、Gemini 等熱門訂閱集中管理，到期前主動提醒、真人客服協助續約，價格還比官方划算，尤其 Gemini Pro 限時特價。',
+    fullDescription: `你是不是也訂閱了一堆東西——Netflix、Disney+、Spotify、ChatGPT——結果從來搞不清楚哪個快到期、續約又常常忘記，等到被扣款才發現「啊這個我根本沒在用」？
+
+「訂閱管家」就是在解決這個問題：把你會用到的影音、音樂、AI 熱門訂閱集中在一個地方管理，從挑方案、付款啟用，到到期前提醒、續約協助，全部交給專人處理。
+
+────────────────
+📦 有哪些服務可以訂
+
+常見的影音、音樂平台都沒問題：Netflix、Disney+、HBO Max、YouTube Premium、Spotify、KKBOX、iQIYI 愛奇藝、ChatGPT、Gemini 等熱門品牌一次整理，不確定怎麼選也可以直接告訴管家你的需求，協助你挑合適方案。
+
+尤其現在 Gemini Pro 限時特價 NT$490，可以使用 18 個月（Google AI + 5TB 雲端空間一次升級），就算你已經是會員也能買，會照比例退款給你。
+
+────────────────
+✅ 加入會員中心，訂閱更從容
+
+• 訂閱總覽：剩餘天數與到期日一次看清楚，不用自己一個一個記
+• 安全查看：集中管理每項服務的使用資訊
+• 續約管理：快速找到需要延長的訂閱，不會等到斷訂才驚覺
+
+────────────────
+🧮 官方價跟訂閱管家的價差，直接幫你算
+
+勾選你目前有訂閱的服務、填入目前每月實際付多少，三步驟（選擇服務→設定方案→查看價差）就能看到「原本每月花多少」對比「改用訂閱管家方案後每月花多少」，每項服務的價差跟預估年省金額都列得清清楚楚，不用自己拿計算機算。
+
+────────────────
+💬 真人客服，不怕出問題找不到人
+
+官方 LINE 帳號已認證，超過 8,700 人加了好友，不管是選方案還是售後問題都有真人客服協助，不是丟給你一個帳號密碼就沒下文。
+
+────────────────
+🎁 專屬優惠
+
+用我的傳送門進去，輸入粉絲優惠碼「zeona」，除了全館折扣優惠，目前註冊會員綁定 LINE 還會額外贈送折扣金。
+
+如果你也跟我一樣訂閱一堆、又不想花冤枉錢，很推薦上去看看。`,
+    coverImage: '/images/subsubman/01-homepage.png',
+    features: [
+      'Netflix、Disney+、Spotify、ChatGPT、Gemini 等熱門訂閱集中管理',
+      'Gemini Pro 限時特價 NT$490／18個月，會員也能買、照比例退款',
+      '訂閱總覽：剩餘天數與到期日一次看清楚',
+      '續約管理：到期前主動提醒，快速延長訂閱',
+      '三步驟試算官方價與方案價的價差，預估每月／每年省多少',
+      '真人LINE客服協助選方案與售後，已認證、8,700＋人加好友',
+    ],
+    purchaseUrl: 'https://subsubman.com/?ref=zeona',
+    fileType: '免費服務（外部連結）',
+    tags: ['訂閱管理', 'Netflix', 'ChatGPT', 'Gemini', '省錢工具', '免費'],
     isNew: true,
     status: 'available',
   },
