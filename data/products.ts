@@ -310,7 +310,7 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
 用我的傳送門進去，輸入粉絲優惠碼「zeona」，除了全館折扣優惠，目前註冊會員綁定 LINE 還會額外贈送折扣金。
 
 如果你也跟我一樣訂閱一堆、又不想花冤枉錢，很推薦上去看看。`,
-    coverImage: '/images/subsubman/01-homepage.png',
+    coverImage: '/images/subsubman/00-cover.png',
     features: [
       'Netflix、Disney+、Spotify、ChatGPT、Gemini 等熱門訂閱集中管理',
       'Gemini Pro 限時特價 NT$490／18個月，會員也能買、照比例退款',

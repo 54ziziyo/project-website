@@ -56,8 +56,8 @@ export const blogPosts: BlogPost[] = [
     excerptEn:
       "Netflix, Disney+, Spotify, ChatGPT, Gemini — losing track of renewal dates and getting charged for things you forgot you had? A walkthrough of SubSubMan: subscription overview, renewal reminders, official-vs-plan price calculator, and real human support on LINE, plus a limited-time Gemini Pro deal and a fan discount code. (Includes my affiliate link)",
     tagsEn: ['Subscription Management', 'Netflix', 'ChatGPT', 'Gemini', 'Money Saving', 'SubSubMan'],
-    coverImage: 'https://www.zeona.co/images/subsubman/01-homepage.png',
-    coverImageEn: 'https://www.zeona.co/images/subsubman/01-homepage.png',
+    coverImage: 'https://www.zeona.co/images/subsubman/00-cover.png',
+    coverImageEn: 'https://www.zeona.co/images/subsubman/00-cover.png',
     author: 'Zeona Studio',
     publishedAt: '2026-09-01',
     updatedAt: '2026-09-01',
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
       description:
         '訂閱管家完整教學：Netflix、Disney+、Spotify、ChatGPT、Gemini等熱門訂閱集中管理，到期提醒、官方價差試算、真人LINE客服，附Gemini Pro限時特價NT$490與粉絲優惠碼zeona。',
       keywords: '訂閱管家, subsubman, Netflix訂閱, ChatGPT訂閱, Gemini Pro特價, 訂閱管理, 省錢工具, 訂閱代管',
-      ogImage: 'https://www.zeona.co/images/subsubman/01-homepage.png',
+      ogImage: 'https://www.zeona.co/images/subsubman/00-cover.png',
     },
     seoEn: {
       title: 'SubSubMan Guide: Manage Netflix, ChatGPT and Gemini Subscriptions in One Place | Zeona Studio',
