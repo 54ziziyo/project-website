@@ -61,8 +61,8 @@ export const blogPosts: BlogPost[] = [
     coverImageEn:
       'https://d3phaj0sisr2ct.cloudfront.net/site/images/sanity/2026/08/082626-solaris-blogpost-thumbnail-2fe8ad11-4846-4ba2-bbbf-a8db3feaa725.png',
     author: 'Zeona Studio',
-    publishedAt: '2026-09-01',
-    updatedAt: '2026-09-01',
+    publishedAt: '2026-09-02',
+    updatedAt: '2026-09-02',
     featured: false,
     seo: {
       title: 'Runway Solaris是什麼？介面即時生成技術白話文解釋 | Zeona Studio',
