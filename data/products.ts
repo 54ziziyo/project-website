@@ -216,6 +216,11 @@ Typeless 解決了這件事。直接按下翻譯，它會原封不動把對方�
     tags: ['語音輸入', 'AI工具', 'Typeless', '提示詞', '免費'],
     isNew: true,
     status: 'available',
+    trustBadges: [
+      { icon: '📱', title: '免費下載', desc: '手機電腦都能裝，透過連結直接下載安裝' },
+      { icon: '⚡', title: '免費使用', desc: '完全免費，不用先付費就能開始用' },
+      { icon: '🌏', title: '隨身翻譯', desc: '出國聽不懂也能用，即時語音翻譯' },
+    ],
   },
 
   // 3.5
