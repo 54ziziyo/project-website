@@ -20,7 +20,42 @@ export const categoryLabelsEn: Record<string, string> = {
   工具推薦: 'Tool Picks',
 }
 
+// 商品卡片「格式」標籤：中文值 → 英文標籤（全站共用，非以id對應，因為同一個值會重複出現在多個商品上）
+export const productFileTypeEn: Record<string, string> = {
+  'Canva 模板': 'Canva Template',
+  'Notion 模板': 'Notion Template',
+  '免費工具（外部連結）': 'Free Tool (External Link)',
+  '免費提示詞庫（線上版）': 'Free Prompt Library (Online)',
+  '免費服務（外部連結）': 'Free Service (External Link)',
+  線上閱讀版: 'Online Edition',
+  '線上閱讀版（序號解鎖）': 'Online Edition (License Key)',
+}
+
 export const productEn: Record<string, { name: string; description: string; tags: string[] }> = {
+  'pikbest-design-resources': {
+    name: 'No Design Assets? Pikbest Has Posters, PPT, Music & Sound Effects in One Place',
+    description:
+      '3.5M+ design resources — poster templates, PPT decks, e-commerce layouts, royalty-free music and sound effects, and tutorial videos, all on one site. Stop hunting for assets across ten tabs.',
+    tags: ['Design Resources', 'Pikbest', 'PPT Templates', 'Royalty-Free Music', 'E-commerce Assets', 'Free'],
+  },
+  'subsubman-subscription-manager': {
+    name: 'Too Many Subscriptions to Track? SubSubMan Manages All of Them for You',
+    description:
+      'Netflix, Disney+, Spotify, ChatGPT, Gemini and other popular subscriptions managed in one place, with renewal reminders and real human support — and it beats official pricing, especially the limited-time Gemini Pro deal.',
+    tags: ['Subscription Management', 'Netflix', 'ChatGPT', 'Gemini', 'Money Saving', 'Free'],
+  },
+  'ai-fortune-telling': {
+    name: 'AI Fortune Telling｜The Algorithm of Destiny: A Digital Divination Toolkit',
+    description:
+      'A free prompt library spanning every major school of fortune-telling. Eastern BaZi & Zi Wei Dou Shu × Western astrology & numerology — copy-paste into AI and let the algorithm become your personal life decoder.',
+    tags: ['AI Fortune Telling', 'BaZi', 'Astrology', 'Numerology', 'Free'],
+  },
+  'geo-ai-recommendation-prompt-pack': {
+    name: 'GEO Prompt Pack｜Get ChatGPT and Perplexity to Recommend You',
+    description:
+      '7 steps, all copy-paste-ready prompts, plus a content tracking sheet. Turn your content into something AI actually wants to cite.',
+    tags: ['GEO', 'AI Search Optimization', 'Prompts', 'ChatGPT', 'Free'],
+  },
   'workplace-chatgpt-50-scenarios': {
     name: 'ChatGPT for Work｜50 Copy-Paste Prompts for Professionals',
     description:
