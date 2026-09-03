@@ -45,6 +45,88 @@ export type BlogCategory = (typeof blogCategories)[number]
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'hotai-ai-hackathon-2026',
+    title: '2026和泰AI黑客松開放報名：總獎金破百萬，用AI解決TOYOTA真實企業題目',
+    category: 'AI 人工智慧',
+    tags: ['AI黑客松', '和泰', 'TOYOTA', 'AI競賽', 'AI人才'],
+    excerpt:
+      '和泰集團主辦的2026 AI黑客松開放報名，主題「以AI為核心動力，讓創意成為可落地的解決方案」，本屆開出7道企業挑戰題目（含TOYOTA油轉電挑戰），總獎金超過100萬元。整理參賽資格、賽制評分標準、獎勵辦法，還有報名連結。',
+    titleEn:
+      '2026 Hotai AI Hackathon Now Open: Over NT$1M in Prizes, Solve Real TOYOTA Business Challenges with AI',
+    excerptEn:
+      "Hotai Motor's 2026 AI Hackathon is open for registration, themed 'AI as the Core Engine, Turning Creativity into Deployable Solutions.' This year features 7 corporate challenge tracks — including a TOYOTA gas-to-EV transition challenge — with total prizes over NT$1 million. Eligibility, judging criteria, prizes, and the registration link, all in one place.",
+    tagsEn: ['AI Hackathon', 'Hotai', 'TOYOTA', 'AI Competition', 'AI Talent'],
+    coverImage: 'https://www.zeona.co/images/hotai-ai-hackathon/01-theme.png',
+    coverImageEn: 'https://www.zeona.co/images/hotai-ai-hackathon/01-theme.png',
+    author: 'Zeona Studio',
+    publishedAt: '2026-09-04',
+    updatedAt: '2026-09-04',
+    featured: false,
+    seo: {
+      title: '2026和泰AI黑客松報名資格、賽制與獎金整理 | Zeona Studio',
+      description:
+        '和泰AI黑客松2026開放報名，7道企業挑戰題目、總獎金破百萬。整理參賽資格、團隊人數、評審標準（初賽/決賽）、獎勵辦法與報名連結。',
+      keywords: '和泰AI黑客松, TOYOTA AI競賽, AI黑客松2026, 和泰集團, AI競賽報名, 大專生黑客松',
+      ogImage: 'https://www.zeona.co/images/hotai-ai-hackathon/01-theme.png',
+    },
+    seoEn: {
+      title: '2026 Hotai AI Hackathon: Eligibility, Judging Criteria & Prizes | Zeona Studio',
+      description:
+        'The 2026 Hotai AI Hackathon is open for registration with 7 corporate challenge tracks and over NT$1M in prizes. Eligibility, team size, judging criteria, prize breakdown, and the registration link.',
+      keywords:
+        'Hotai AI Hackathon, TOYOTA AI competition, AI hackathon 2026, Hotai Motor, AI competition registration',
+    },
+    content: `
+      <p style="font-size:18px;line-height:1.9;">如果你正在找一個能實際拿去解決真實企業問題、又有機會抱回獎金的AI競賽，<strong>2026和泰AI黑客松</strong>現在開放報名了。主題是「<strong>以AI為核心動力，讓創意成為可落地的解決方案</strong>」——重點是「可落地」，不是天馬行空的概念發想，而是企業真的想拿去用的提案。</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://contest.bhuntr.com/tw/y5sf0shclq6c3yn1db/" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">立即報名 2026和泰AI黑客松</a></p>
+
+      <img src="/images/hotai-ai-hackathon/01-theme.png" alt="2026和泰AI黑客松競賽主題：以AI為核心動力，讓創意成為可落地的解決方案，企業挑戰題目包含TOYOTA智能轉型：AI助攻油轉電TOYOTA EV新生活" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>這次要解什麼題目？</h2>
+      <p>本屆總共開出<strong>7道企業挑戰題目</strong>，都是和泰集團旗下品牌真實面對的課題。例如TOYOTA這道題目就是「<strong>智能轉型：AI助攻油轉電TOYOTA EV新生活</strong>」——探討怎麼用AI幫助車主從燃油車過渡到電動車的使用習慣與體驗。詳細題目內容需要點進競賽官網的「企業挑戰題目」查看每一道的完整說明。</p>
+
+      <h2>誰可以報名？</h2>
+      <p>參賽資格門檻不高，學生、社會人士都能組隊參加：</p>
+      <ul>
+        <li><strong>參賽對象：</strong>高中職、大專院校學生及社會人士皆可組隊參賽。每隊須設隊長一名（須具備中華民國國籍），以利後續聯絡事宜；若參賽者未成年，須檢附法定代理人同意書。</li>
+        <li><strong>團隊人數：</strong>每隊2-5人，不開放同一人跨隊或個人參賽。每隊可額外增設至多2位指導老師（不限學校教授），老師不列入團隊人數計算。</li>
+        <li><strong>授權規範：</strong>入圍決賽的團隊，須提交著作財產權授權暨肖像授權同意書。</li>
+        <li><strong>提案上限：</strong>每隊最多可投稿7件提案，但每項企業挑戰僅能投稿一件，不可重複或混合投稿同一件提案。報名系統採「一案一報名」，想投多件提案要分次報名。</li>
+      </ul>
+      <img src="/images/hotai-ai-hackathon/02-eligibility.png" alt="2026和泰AI黑客松參賽資格：參賽對象、團隊人數2-5人、授權規範、提案上限說明" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>初賽、決賽分別怎麼評分？</h2>
+      <p>評分標準初賽跟決賽不一樣，決賽更看重能不能真的落地執行：</p>
+      <ul>
+        <li><strong>初賽：</strong>主題連結度30%、創意表現25%、提案可行性25%、AI應用整合性20%</li>
+        <li><strong>決賽：</strong>提案可行性25%、AI應用整合性20%、商業應用價值20%、作品完成度20%、簡報表達15%</li>
+      </ul>
+      <img src="/images/hotai-ai-hackathon/03-scoring.png" alt="2026和泰AI黑客松賽制規範：初賽與決賽評審標準佔比圖" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <h2>獎金到底有多少？</h2>
+      <p>這次獎項設得算大方，總獎金<strong>超過100萬元</strong>：</p>
+      <ul>
+        <li><strong>冠軍：</strong>NT$300,000＋獎盃乙座（1隊）</li>
+        <li><strong>亞軍：</strong>NT$250,000＋獎盃乙座（1隊）</li>
+        <li><strong>季軍：</strong>NT$200,000＋獎盃乙座（1隊）</li>
+        <li><strong>潛力新星獎：</strong>NT$50,000（4隊）</li>
+        <li><strong>佳作：</strong>NT$10,000（8隊）</li>
+      </ul>
+      <p>每位得獎成員及指導老師都會拿到獎狀一紙。</p>
+      <img src="/images/hotai-ai-hackathon/04-prizes.png" alt="2026和泰AI黑客松競賽名次及獎勵辦法：冠軍30萬、亞軍25萬、季軍20萬、潛力新星獎5萬（4隊）、佳作1萬（8隊），總獎金超過100萬元" style="width:100%;border-radius:8px;margin:20px 0;" />
+
+      <hr>
+
+      <h2>一句話總結</h2>
+      <p>如果你手邊有AI相關的專案想法、或是想找一個有實際企業題目、有機會被真正落地採用的舞台練手，這場黑客松滿值得報名。組隊、找指導老師、選一道你最有把握的企業挑戰，剩下的就是把提案做到「可行性」跟「AI應用整合性」都站得住腳。</p>
+
+      <p style="text-align:center;margin:24px 0;"><a href="https://contest.bhuntr.com/tw/y5sf0shclq6c3yn1db/" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">➡️ 前往競賽官網／報名</a></p>
+
+      <p style="font-size:14px;color:#64748b;">資料來源：<a href="https://contest.bhuntr.com/tw/y5sf0shclq6c3yn1db/" target="_blank" rel="noopener">2026和泰AI黑客松官方報名頁面</a>，文中資訊與圖片皆整理自官方頁面公告內容，實際規則以主辦單位公告為準。</p>
+    `,
+  },
+  {
     id: 'runway-solaris-interface-world-model-2026',
     title: 'Runway Solaris：軟體介面不用寫死程式了，用「生成」的——白話文帶你看懂',
     category: 'AI 人工智慧',

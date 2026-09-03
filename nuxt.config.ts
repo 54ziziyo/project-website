@@ -69,9 +69,20 @@ export default defineNuxtConfig({
   },
 
   // 舊網址轉址（避免外部既有連結 404）
+  // 安全標頭：只設定不依賴特定 script/style/圖片來源清單的項目，避免鎖死
+  // 部落格文章慣用的各種外部圖床網域（例如引用原廠官網圖片/影片連結）。
   routeRules: {
     '/ai-personal-brand-kit.html': { redirect: '/kit/ai-personal-brand' },
     '/ai-personal-brand-kit': { redirect: '/kit/ai-personal-brand' },
+    '/**': {
+      headers: {
+        'X-Frame-Options': 'SAMEORIGIN',
+        'X-Content-Type-Options': 'nosniff',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+        'Content-Security-Policy': "frame-ancestors 'self'",
+      },
+    },
   },
 
   // 關閉 app manifest，消除 dev 冷啟動時 Vite 對 #app-manifest 的 pre-transform 解析錯誤
