@@ -20,6 +20,8 @@ export function useLocalizedContent() {
     isEn.value ? productDetailEn[p.id]?.fullDescription ?? p.fullDescription : p.fullDescription
   const pFeatures = (p: { id: string; features: string[] }) =>
     isEn.value ? productDetailEn[p.id]?.features ?? p.features : p.features
+  const pTrustBadges = (p: { id: string; trustBadges?: { icon: string; title: string; desc: string }[] }) =>
+    isEn.value ? productDetailEn[p.id]?.trustBadges ?? p.trustBadges : p.trustBadges
 
   const pCoverImage = (p: { coverImage: string; coverImageEn?: string }) =>
     isEn.value ? p.coverImageEn ?? p.coverImage : p.coverImage
@@ -47,5 +49,5 @@ export function useLocalizedContent() {
   const bTags = (p: { tags: string[]; tagsEn?: string[] }) =>
     isEn.value ? (p.tagsEn?.length ? p.tagsEn : (p.tags || []).map((tg) => blogTagsEn[tg] || tg)) : p.tags
 
-  return { isEn, catLabel, pName, pDesc, pTags, pFileType, pFullDesc, pFeatures, pCoverImage, bCoverImage, wTitle, wDesc, wFullDesc, wFeatures, wTechStack, bTitle, bExcerpt, bTags }
+  return { isEn, catLabel, pName, pDesc, pTags, pFileType, pFullDesc, pFeatures, pTrustBadges, pCoverImage, bCoverImage, wTitle, wDesc, wFullDesc, wFeatures, wTechStack, bTitle, bExcerpt, bTags }
 }

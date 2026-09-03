@@ -4,7 +4,7 @@ import { products, type Product } from '~/data/products'
 const route = useRoute()
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { catLabel, pName, pDesc, pTags, pFileType, pFullDesc, pFeatures, pCoverImage } = useLocalizedContent()
+const { catLabel, pName, pDesc, pTags, pFileType, pFullDesc, pFeatures, pTrustBadges, pCoverImage } = useLocalizedContent()
 const { getKeyForKit } = useLicenseStore()
 
 // 「已購買，前往商品」：用本地記住的序號直接重新解鎖並跳到該商品內容；沒記住過就去解鎖頁輸入。
@@ -108,7 +108,7 @@ const defaultTrustBadges = [
   { icon: '⚡', title: t('toolbox.detail.instantTitle'), desc: t('toolbox.detail.instantDesc') },
   { icon: '♾️', title: t('toolbox.detail.foreverTitle'), desc: t('toolbox.detail.foreverDesc') },
 ]
-const trustBadgeItems = computed(() => product.value?.trustBadges ?? defaultTrustBadges)
+const trustBadgeItems = computed(() => (product.value ? pTrustBadges(product.value) : undefined) ?? defaultTrustBadges)
 </script>
 
 <template>

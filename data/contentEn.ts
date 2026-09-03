@@ -246,8 +246,169 @@ export const blogEn: Record<string, { title: string; excerpt: string }> = {
   },
 }
 
+// 5個emailGate商品共用同一組保障說明文案（見 data/products.ts 對應中文版）
+const emailGateTrustBadgesEn = [
+  { icon: '📧', title: 'Get It With Your Email', desc: 'No payment — enter your name and email to get the link instantly' },
+  { icon: '🔒', title: 'Data Protected', desc: 'Verified via reCAPTCHA, never used for anything else' },
+  { icon: '♾️', title: 'Keep It Forever', desc: 'Save the link and come back anytime' },
+]
+
 // 商品內頁長文（fullDescription）＋功能列表（features）英文版
-export const productDetailEn: Record<string, { fullDescription: string; features: string[] }> = {
+export const productDetailEn: Record<
+  string,
+  { fullDescription: string; features: string[]; trustBadges?: { icon: string; title: string; desc: string }[] }
+> = {
+  'pikbest-design-resources': {
+    fullDescription: `Ever had a client ask for an event poster on short notice, or a pitch deck due tomorrow — and half your time goes into hunting down assets instead of actually designing?
+
+When I'm doing IG posts, blog covers, or client pitches, the bottleneck is never the design itself — it's "where do I even find this stuff": one site for stock photos, another for PPT templates, another tab for royalty-free music. Constantly switching tabs gets exhausting.
+
+Pikbest bundles nearly every asset type I regularly need into one site, so I finally stopped the tab-juggling habit.
+
+📦 What's on Pikbest
+
+🛍️ E-commerce templates: full-bleed promo banners, Double 11/anniversary sale layouts, product hero images — swap in your own text and they're ready to publish
+🖼️ Stock photos: 40,000+ commercially licensable photos — portraits, scenes, lifestyle shots
+🎵 Music & sound effects: background music, cartoon sound effects, transition sounds — no more hunting for licensed music for short-form video or ad edits
+📊 PowerPoint / Word / Excel templates: pitch decks, report templates, attendance sheets — ready-made layouts for everyday office files
+🎬 Video editing tutorials: AE/PR effects tutorials, free lessons on transitions and animated captions
+📱 UI/App interface assets: app screens and UI mockups — useful for pitch demos or design reference
+
+✅ Why I recommend this site
+• So many asset types in one place you never need to open ten tabs to compare
+• The free plan lets you browse and preview everything before deciding to upgrade
+• Commercial-use licensing is spelled out clearly on every asset page — no accidental copyright landmines
+• Trending categories and rising-popularity sorting make seasonal themes (Double 11, Christmas, Mother's Day) easy to find fast
+
+🖱️ How to use it (3 steps for beginners)
+
+1️⃣ Search by keyword (e.g. "e-commerce banner," "PPT deck," "sound effects") or click "All Categories" top-left to browse by type (design templates, graphics, video & audio, e-commerce templates, Office templates, photos, UI)
+2️⃣ Click into an asset — the right side panel shows "License Info": whether it's free-plan usable or requires a paid upgrade for commercial download
+3️⃣ Free-plan downloads usually require attribution — the page gives you copy-paste-ready credit text; for commercial use without attribution, you'll need to upgrade
+
+📥 How to use it for free
+
+Click the button below to go to Pikbest through my link — no payment required to browse and try free-plan assets. If you like it, consider upgrading for full commercial licensing.`,
+    features: [
+      '3.5M+ design resources: posters, PPT, Excel, Word templates in one place',
+      'E-commerce templates: promo banners, Double 11/anniversary layouts, ready to use',
+      '40,000+ commercially licensable stock photos',
+      'Royalty-free music and sound effects for short-form video',
+      'AE/PR editing tutorials — learn transitions and animated captions for free',
+      'Clear commercial-use licensing on every asset page',
+    ],
+    trustBadges: [
+      { icon: '🔗', title: 'Free to Browse', desc: 'No signup or payment — click the link and browse the whole site' },
+      { icon: '⚡', title: 'Free to Try', desc: 'The free plan lets you download and try before upgrading' },
+      { icon: '🔄', title: 'Constantly Updated', desc: 'Assets refresh daily — not a one-time purchase' },
+    ],
+  },
+  'subsubman-subscription-manager': {
+    fullDescription: `Do you have a pile of subscriptions too — Netflix, Disney+, Spotify, ChatGPT — and honestly have no idea which one's about to renew, then get charged for something you forgot you had?
+
+SubSubMan exists to fix exactly that: it brings the streaming, music, and AI subscriptions you actually use into one place — from picking a plan and activating it, to reminding you before renewal and helping you extend it. A real person handles all of it.
+
+📦 Which services can you subscribe to
+
+All the usual streaming and music platforms are covered: Netflix, Disney+, HBO Max, YouTube Premium, Spotify, KKBOX, iQIYI, ChatGPT, Gemini and more. Not sure what to pick? Just tell the concierge what you need.
+
+Especially right now: Gemini Pro is on a limited-time offer at NT$490 for 18 months (a Google AI + 5TB cloud storage upgrade in one go). Even if you're already a Gemini member, you can still buy it — you'll get a prorated refund.
+
+✅ Join the member center for easier subscription management
+
+• Subscription overview: see remaining days and expiry dates for everything at a glance
+• Secure view: manage usage info for every service in one place
+• Renewal management: quickly find subscriptions that need extending, before they lapse
+
+🧮 See exactly how much you save vs. official pricing
+
+Check off the services you currently subscribe to, enter what you're actually paying — three steps (select services → set your plan → see the difference) show "what you're paying now" against "what you'd pay on a SubSubMan plan," with the price difference and estimated yearly savings spelled out for every service. No calculator needed.
+
+💬 Real human support, so you're never stuck
+
+Their official LINE account is verified, with over 8,700 followers. Whether you're picking a plan or need after-sales help, there's a real person on the other end.
+
+🎁 Exclusive discount
+
+Go through my link and enter the fan discount code "zeona" — on top of the site-wide discount, new members who link LINE currently get an extra discount credit too.
+
+If you're like me — a pile of subscriptions and no interest in overpaying — it's worth a look.`,
+    features: [
+      'Netflix, Disney+, Spotify, ChatGPT, Gemini and other popular subscriptions in one place',
+      'Gemini Pro limited-time deal: NT$490/18 months, members can still buy with a prorated refund',
+      'Subscription overview: remaining days and expiry dates at a glance',
+      'Renewal management: proactive reminders, extend subscriptions fast',
+      'A 3-step calculator showing the price difference vs. official pricing, monthly and yearly',
+      'Real human support on LINE — verified, 8,700+ followers',
+    ],
+    trustBadges: [
+      { icon: '💬', title: 'Real Human Support', desc: 'Real support on LINE for plan selection and renewals' },
+      { icon: '⚡', title: 'Free Consultation', desc: 'Free consultation through the link, no pressure to pay' },
+      { icon: '🔄', title: 'Flexible Plans', desc: 'Adjust your subscriptions as needed, no lock-in' },
+    ],
+  },
+  'ai-fortune-telling': {
+    fullDescription: `Ever wondered what happens when thousands of years of fortune-telling wisdom meets AI?
+
+This toolkit turns the most established Eastern and Western divination systems into high-precision prompts you can paste straight into AI.
+
+No fortune teller needed, no payment required — just enter your birthdate and AI becomes your personal fortune-telling consultant.
+
+🌌 Western astrology & life-code readings (4 prompts)
+• Zodiac astrology: a full reading of your Sun, Moon, and Rising signs
+• Life-path numerology: calculate your destiny number and yearly code
+• Birthdate strengths psychology: decode your workplace personality from your birth numbers
+• Numerology divination: guidance on one specific question
+
+☯️ Traditional Eastern divination (3 prompts)
+• BaZi (Four Pillars) chart: Heavenly Stems × Earthly Branches, explained in plain language
+• Yearly fortune reading: wealth, romance, and health broken down by season
+• Zi Wei Dou Shu (Purple Star Astrology): your chart's main star, translated into modern career language
+
+🎯 Real-life applications (2 prompts)
+• Career & wealth blockers: find your money flow direction and financial blind spots
+• BaZi compatibility matching: analyze relationship compatibility and communication styles
+
+📌 Every prompt comes with modern psychology framing plus a management-style structure, so AI reads accurately and you understand it easily.`,
+    features: [
+      'High-precision prompts from every major school, completely free, copy-paste ready',
+      'Full coverage: Eastern BaZi & Zi Wei Dou Shu × Western astrology & numerology',
+      'Pair with the "AI Fortune Teller" interactive experience for an instant reading',
+      'Modern psychology framing that strips away traditional mystical jargon',
+      'Filter by school to quickly find the reading you actually want',
+    ],
+    trustBadges: emailGateTrustBadgesEn,
+  },
+  'geo-ai-recommendation-prompt-pack': {
+    fullDescription: `When customers stop Googling and just ask AI "which one do you recommend" — does your brand show up in the answer?
+
+This free pack breaks GEO (Generative Engine Optimization) down into copy-paste, hands-on prompts.
+
+What's inside:
+
+🎯 7 ready-to-use prompts (just swap in your own content)
+• Map out the 12 questions customers actually ask AI
+• Rewrite your answers into a format AI wants to cite
+• Generate a full FAQ set in one pass (GEO's highest-leverage move)
+• Strengthen credibility with data and sources
+• Generate structured data (JSON-LD schema)
+• Unify your brand description across platforms
+• A monthly self-check: "is AI recommending you or not"
+
+📊 GEO content tracking sheet (Notion database, with example rows)
+• See at a glance which topics are already FAQ-ready and which have been cited by AI
+
+Built for: personal brands, small businesses, freelancers, and anyone doing content marketing.
+For the full framework, see the blog post "The Complete GEO Guide (with Prompts)" — this pack is what gets you actually doing it.`,
+    features: [
+      '7 copy-paste prompts in Traditional Chinese, fill in the blanks and go',
+      'Covers the key GEO moves: FAQs, structured data, brand consistency',
+      'Includes a Notion "GEO Content Tracking Sheet" database with examples',
+      'A monthly self-check prompt to track your AI-recommendation visibility',
+      'Free download, pairs with the "Complete GEO Guide" blog post',
+    ],
+    trustBadges: emailGateTrustBadgesEn,
+  },
   'workplace-chatgpt-50-scenarios': {
     fullDescription: `Ever open ChatGPT and have no idea how to talk to it?
 
@@ -273,6 +434,7 @@ Buy it and you can start using it tonight.`,
       'Includes a "make AI sound more human" guide',
       'Lifetime download, free updates forever',
     ],
+    trustBadges: emailGateTrustBadgesEn,
   },
   'short-video-script-pack': {
     fullDescription: `If you don't grab people in the first 3 seconds, nothing after matters.
@@ -329,6 +491,7 @@ Each formula comes with a usage example + the type of account it suits.`,
       'Fits any account type (personal/brand/newcomer)',
       'Drives engagement with no follower base needed',
     ],
+    trustBadges: emailGateTrustBadgesEn,
   },
   'adhd-focus-digital-journal': {
     fullDescription: `Too many things in a day — and just planning eats up your time instead of actually doing.
@@ -363,6 +526,7 @@ Core features:
       'Quick-capture: dump thoughts the moment they appear',
       'Pomodoro integration + auto-logging',
     ],
+    trustBadges: emailGateTrustBadgesEn,
   },
   'freelancer-client-tracker-notion': {
     fullDescription: `Freelancers fear two things most: forgetting to chase payment, and losing track of which project they're on.
@@ -425,6 +589,11 @@ This Canva template set has every layout you'll use on IG:
       'Works with the free version of Canva',
       'Unlimited edits after purchase, commercial license',
     ],
+    trustBadges: [
+      { icon: '🔒', title: 'Secure Payment', desc: 'Encrypted payment via Gumroad, credit cards supported' },
+      { icon: '⚡', title: 'Unlock on Purchase', desc: 'Get the Canva template link instantly after payment' },
+      { icon: '🎨', title: 'Unlimited Edits', desc: 'Edit and reuse endlessly after purchase, commercial license included' },
+    ],
   },
   'short-video-hook-asset-pack': {
     fullDescription: `A short-video asset pack that works in CapCut / Premiere / Final Cut.
@@ -466,13 +635,11 @@ The problem was never that you don't try hard enough — it's that you're missin
 
 This pack prepares everything you need to go "from 0 to a personal brand" — the tools, prompts and steps. You just fill in the blanks, copy, and publish.
 
-────────────────
 🎯 Who it's for
 • People who want to build a personal brand but don't know where to start
 • Creators whose content is slow and directionless, who keep going dark
 • People who want to use AI but don't know how to prompt
 
-────────────────
 📦 What you get (5 parts)
 
 📱 Part 1｜Setting up your IG account
@@ -497,11 +664,9 @@ This pack prepares everything you need to go "from 0 to a personal brand" — th
 • One action per day, a single clear throughline
 • A full roadmap from setting up your account to your first 1,000 followers
 
-────────────────
 💡 Why it works
 The prompts are versions proven in real operation that produce publish-ready content — not vague templates you copy but can't get anything out of. Paired with clear content pillars and a steady posting rhythm, the first 30 days can realistically build 250–500 followers (depending on niche and execution).
 
-────────────────
 📂 How you get it: unlock the online version with a personal serial after purchase — permanent access, prompts copy in one click.`,
     features: [
       'IG account setup: bio prompts + positioning worksheet',
@@ -509,6 +674,11 @@ The prompts are versions proven in real operation that produce publish-ready con
       'Blog prompts ×20 (SEO titles, outlines, CTAs)',
       'Newsletter prompts ×5 (subject lines included)',
       '30-day execution calendar (0→1,000 followers path)',
+    ],
+    trustBadges: [
+      { icon: '🔒', title: 'Secure Payment', desc: 'Encrypted payment via Gumroad, credit cards supported' },
+      { icon: '⚡', title: 'Unlock on Purchase', desc: 'Instantly unlock the online edition with your license key after payment' },
+      { icon: '♾️', title: 'Key Never Expires', desc: 'Log back in anytime with the same license key' },
     ],
   },
   'line-auto-budget-bot': {
@@ -553,7 +723,6 @@ Every time you use a prompt, you're supposed to tell AI your background and cont
 
 That's why I always tell people to download **Typeless** first.
 
-────────────────
 🎙️ The 4-Step Spoken Self-Intro
 
 Open Typeless and speak these four things into your mic:
@@ -564,14 +733,12 @@ Open Typeless and speak these four things into your mic:
 
 Typeless transcribes everything into clean, structured text — no filler words, no mess. Paste that at the top of any prompt, and AI instantly knows who it's talking to. Outputs become more relevant, more on-brand, and need far fewer revisions.
 
-────────────────
 🌏 Why I Love Typeless Abroad
 
 I started using Typeless through a partnership, but I got genuinely hooked — especially for travel. When someone speaks too fast or the audio is bad, Google Translate often can't keep up. Typeless puts their exact words on your screen in real time, so you at least know what's being said — even if you can't respond immediately.
 
 I keep it on both my phone and laptop. It's become a travel essential.
 
-────────────────
 📥 How to Get It
 
 Click the button below to download Typeless free through my link.
@@ -582,6 +749,11 @@ Once installed, speak your 4-step intro once and save the text — paste it at t
       'Pairs with any prompt pack for far more relevant output',
       "Live translation — great when you can't understand someone abroad",
       'Free download, works on mobile and desktop',
+    ],
+    trustBadges: [
+      { icon: '📱', title: 'Free Download', desc: 'Available on phone and desktop, download directly through the link' },
+      { icon: '⚡', title: 'Free to Use', desc: 'Completely free, no payment needed to get started' },
+      { icon: '🌏', title: 'Travel Translator', desc: 'Works abroad too — real-time voice translation' },
     ],
   },
 }
