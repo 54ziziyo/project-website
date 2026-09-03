@@ -81,8 +81,6 @@ export const blogPosts: BlogPost[] = [
 
       <p style="text-align:center;margin:24px 0;"><a href="https://contest.bhuntr.com/tw/y5sf0shclq6c3yn1db/" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">立即報名 2026和泰AI黑客松</a></p>
 
-      <img src="/images/hotai-ai-hackathon/01-theme.png" alt="2026和泰AI黑客松競賽主題：以AI為核心動力，讓創意成為可落地的解決方案，企業挑戰題目包含TOYOTA智能轉型：AI助攻油轉電TOYOTA EV新生活" style="width:100%;border-radius:8px;margin:20px 0;" />
-
       <h2>這次要解什麼題目？</h2>
       <p>本屆總共開出<strong>7道企業挑戰題目</strong>，都是和泰集團旗下品牌真實面對的課題。例如TOYOTA這道題目就是「<strong>智能轉型：AI助攻油轉電TOYOTA EV新生活</strong>」——探討怎麼用AI幫助車主從燃油車過渡到電動車的使用習慣與體驗。詳細題目內容需要點進競賽官網的「企業挑戰題目」查看每一道的完整說明。</p>
 
@@ -246,8 +244,6 @@ export const blogPosts: BlogPost[] = [
       <p><strong>訂閱管家</strong>就是在解決這個問題：把你會用到的影音、音樂、AI熱門訂閱集中在一個地方管理，從挑方案、付款啟用，到到期前提醒、續約協助，全部交給專人處理。</p>
 
       <p style="text-align:center;margin:24px 0;"><a href="https://subsubman.com/?ref=zeona" target="_blank" rel="noopener" style="display:inline-block;background:#10b981;color:#fff;font-weight:700;padding:16px 40px;border-radius:16px;text-decoration:none;font-size:16px;">免費諮詢 訂閱管家</a></p>
-
-      <img src="/images/subsubman/01-homepage.png" alt="訂閱管家官網首頁，你的數位訂閱交給專業管家" style="width:100%;border-radius:8px;margin:20px 0;" />
 
       <h2>有哪些訂閱服務可以選？</h2>
       <p>常見的影音、音樂平台都沒問題：Netflix、Disney+、HBO Max、YouTube Premium、Spotify、KKBOX、iQIYI愛奇藝、ChatGPT、Gemini等熱門品牌一次整理，不確定怎麼選也可以直接告訴管家你的需求，協助你挑合適方案。</p>
