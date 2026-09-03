@@ -96,6 +96,29 @@ function rt(text: string) {
   return { rich_text: [{ text: { content: (text || '').slice(0, 2000) } }] }
 }
 
+interface NotionPageProps {
+  properties: Record<string, { multi_select?: { name: string }[] }>
+}
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
+
+// 建頁時帶的 multi_select 值有機率因為 Notion 端的寫入延遲被悄悄丟掉；
+// 這裡讀回頁面確認筆數，沒對上就重打一次 PATCH，最多重試 2 次。
+async function verifyAndRetryMultiSelect(pageId: string, property: string, expected: string[]) {
+  if (expected.length === 0) return
+  for (let attempt = 0; attempt < 2; attempt++) {
+    await sleep(800)
+    const page = (await api(`/pages/${pageId}`, 'GET')) as NotionPageProps
+    const actual = page.properties[property]?.multi_select?.map((t) => t.name) || []
+    const matches = expected.length === actual.length && expected.every((t) => actual.includes(t))
+    if (matches) return
+    console.log(`⚠️  「${property}」寫入未同步（預期${expected.length}筆，實際${actual.length}筆），重試中…`)
+    await api(`/pages/${pageId}`, 'PATCH', {
+      properties: { [property]: { multi_select: expected.map((t) => ({ name: t })) } },
+    })
+  }
+}
+
 async function main() {
   await ensureSchema()
   await archiveExisting(post!.id)
@@ -117,7 +140,7 @@ async function main() {
     })),
   ]
 
-  await api('/pages', 'POST', {
+  const created = (await api('/pages', 'POST', {
     parent: { database_id: DB },
     cover: post!.coverImage ? { type: 'external', external: { url: post!.coverImage } } : undefined,
     properties: {
@@ -144,7 +167,12 @@ async function main() {
       'SEO Keywords (EN)': rt(post!.seoEn?.keywords || ''),
     },
     children,
-  })
+  })) as { id: string }
+
+  // Notion 在「剛建立/剛第一次使用的 multi_select 屬性」上偶爾會有寫入延遲（eventual consistency）：
+  // 建頁當下帶的新 multi_select 值有機率被悄悄丟掉。這裡建完頁後驗證一次，沒寫進去就重試 PATCH。
+  await verifyAndRetryMultiSelect(created.id, 'Tags', post!.tags)
+  await verifyAndRetryMultiSelect(created.id, 'Tags (EN)', post!.tagsEn || [])
 
   console.log(`🎉 已發布：${post!.title}`)
   console.log(`🔗 /blog/${post!.id}  (英：/en/blog/${post!.id})`)
