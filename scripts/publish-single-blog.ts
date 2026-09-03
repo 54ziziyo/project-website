@@ -53,21 +53,31 @@ interface NotionQueryResult {
   results: { id: string }[]
 }
 
+// 重要：PATCH 資料庫的 select/multi_select 屬性時，若帶空的 `{}`（不含 options），
+// Notion 會把該屬性的選項清單整個清空——等於清掉全資料庫所有頁面在該屬性上的值！
+// 這是先前 Tags (EN) 全站幾乎都是空的根本原因：每次發文都會把「上一篇剛寫入」的
+// Tags (EN) 選項全部清掉。修法：先讀現有 schema，只補「真的還沒有」的欄位，
+// 已存在的欄位完全不再碰，避免任何一次執行意外清空既有資料。
 async function ensureSchema() {
-  await api(`/databases/${DB}`, 'PATCH', {
-    properties: {
-      Featured: { checkbox: {} },
-      'Featured Order': { number: {} },
-      'Title (EN)': { rich_text: {} },
-      'Excerpt (EN)': { rich_text: {} },
-      'Tags (EN)': { multi_select: {} },
-      'SEO Title (EN)': { rich_text: {} },
-      'SEO Description (EN)': { rich_text: {} },
-      'SEO Keywords (EN)': { rich_text: {} },
-      'Cover Image (EN)': { url: {} },
-    },
-  })
-  console.log('✅ 欄位確認/補齊完成')
+  const db = (await api(`/databases/${DB}`, 'GET')) as { properties: Record<string, unknown> }
+  const desired: Record<string, object> = {
+    Featured: { checkbox: {} },
+    'Featured Order': { number: {} },
+    'Title (EN)': { rich_text: {} },
+    'Excerpt (EN)': { rich_text: {} },
+    'Tags (EN)': { multi_select: {} },
+    'SEO Title (EN)': { rich_text: {} },
+    'SEO Description (EN)': { rich_text: {} },
+    'SEO Keywords (EN)': { rich_text: {} },
+    'Cover Image (EN)': { url: {} },
+  }
+  const missing = Object.fromEntries(Object.entries(desired).filter(([name]) => !db.properties[name]))
+  if (Object.keys(missing).length > 0) {
+    await api(`/databases/${DB}`, 'PATCH', { properties: missing })
+    console.log(`✅ 補齊缺少的欄位：${Object.keys(missing).join('、')}`)
+  } else {
+    console.log('✅ 欄位確認完成（都已存在，未動 schema）')
+  }
 }
 
 function splitContent(html: string): string[] {
